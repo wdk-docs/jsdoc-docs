@@ -1,3 +1,6 @@
+@module
+=============================
+
 Syntax
 ------
 
@@ -50,7 +53,7 @@ function that is exported by the module.
 
 {% example “Basic @module use” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @module myModule */
 
@@ -72,7 +75,7 @@ member, “module:bookshelf.Book”, with one instance member,
 
 {% example “Defining exported symbols as a member of ‘this’” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @module bookshelf */
    /** @class */
@@ -89,7 +92,7 @@ In the following example, the two functions have the namepaths
 {% example “Defining exported symbols as a member of ‘module.exports’ or
 ‘exports’” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @module color/mixer */
    module.exports = {

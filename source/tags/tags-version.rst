@@ -1,3 +1,6 @@
+@version
+=============================
+
 Overview
 --------
 
@@ -9,7 +12,7 @@ Examples
 
 {% example “Using the @version tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Solves equations of the form a * x = b. Returns the value

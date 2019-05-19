@@ -1,11 +1,18 @@
-about
+Getting started
 ======================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-   about-tutorials
-   about-plugins
-   about-namepaths
-   about-license-jsdoc3
+   getting-started
+   namepaths
+   commandline
+   configuring-jsdoc
+   configuring-default-template
+   block-inline-tags
+   plugins
+   plugins-markdown
+   tutorials
+   including-package
+   including-readme
+   license-jsdoc3

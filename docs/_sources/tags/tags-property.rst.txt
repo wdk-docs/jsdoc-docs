@@ -1,3 +1,6 @@
+@property
+=============================
+
 Overview
 --------
 
@@ -24,7 +27,7 @@ appear on the same page with the documentation for config.
 
 {% example “A namespace with defaults and nested default properties” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @namespace

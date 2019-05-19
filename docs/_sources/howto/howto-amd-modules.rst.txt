@@ -1,5 +1,8 @@
+Amd Modules
+===================
+
 Overview
---------
+-------------
 
 JSDoc 3 makes it possible to document modules that use the `Asynchronous
 Module Definition (AMD)
@@ -31,7 +34,7 @@ For example, if you want the documentation for the module ``my/pants``
 to link to the module ``my/shirt``, you could use the ```@see``
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Pants module.
@@ -55,7 +58,7 @@ properties are members of the module.
 
 {% example “Function that returns an object literal” %}
 
-.. code:: js
+.. code-block:: js
 
    define('my/shirt', function() {
       /**
@@ -93,7 +96,7 @@ function uses the same longname as the module.
 
 {% example “Function that returns a constructor” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A module representing a jacket.
@@ -130,7 +133,7 @@ object has the same longname as the module.
 
 {% example “Module declared in a return statement” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Module representing a shirt.
@@ -160,7 +163,7 @@ supported in JSDoc 3.3.0 and later.
 
 {% example “Module object passed to a function” %}
 
-.. code:: js
+.. code-block:: js
 
    define('my/jacket', function(
        /**
@@ -189,7 +192,7 @@ object.
 
 {% example “Multiple AMD modules defined in one file” %}
 
-.. code:: js
+.. code-block:: js
 
    // one module
    define('html/utils', function() {

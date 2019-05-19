@@ -1,3 +1,6 @@
+@listens
+=============================
+
 Syntax
 ------
 
@@ -19,7 +22,7 @@ The following example shows how to document an event named
 
 {% example “Documenting an event and its listener” %}
 
-.. code:: js
+.. code-block:: js
 
    define('hurler', [], function () {
        /**

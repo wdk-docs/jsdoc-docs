@@ -1,3 +1,6 @@
+@inherits
+=============================
+
 Overview
 --------
 
@@ -21,7 +24,7 @@ documentation from its parent class:
 
 {% example “Class that inherits from a parent class” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @classdesc Abstract class representing a network connection.
@@ -56,7 +59,7 @@ You can get the same result by omitting the JSDoc comment from
 
 {% example “Inheriting documentation without the ``@inheritdoc`` tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @classdesc Abstract class representing a network connection.

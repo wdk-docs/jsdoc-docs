@@ -1,3 +1,6 @@
+@variation
+=============================
+
 Syntax
 ------
 
@@ -35,7 +38,7 @@ Widget class and the Widget namespace.
 
 {% example “Using the @variation tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The Widget namespace.

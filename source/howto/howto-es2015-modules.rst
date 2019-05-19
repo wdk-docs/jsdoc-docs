@@ -1,3 +1,6 @@
+ECMAScript 2015 Modules
+============================
+
 JSDoc 3 makes it possible to document modules that follow the
 `ECMAScript 2015
 specification <http://www.ecma-international.org/ecma-262/6.0/#sec-modules>`__.
@@ -21,7 +24,7 @@ For example, if you want the documentation for the module ``my/pants``
 to link to the module ``my/shirt``, you could use the ```@see``
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Pants module.
@@ -46,7 +49,7 @@ exported value within its ``export`` block.
 
 {% example “Documenting values exported by a module” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @module color/mixer */
 

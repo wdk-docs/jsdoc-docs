@@ -1,3 +1,6 @@
+@hideconstructor
+=============================
+
 Syntax
 ------
 
@@ -11,7 +14,7 @@ documentation should not display the constructor for a class. This tag
 is available in JSDoc 3.5.0 and later.
 
 For pre-ES2015 classes, use this tag in combination with the ```@class``
-or ``@constructor`` tag <tags-class.html>`__.
+or ``@constructor`` `tag <tags-class.html>`__.
 
 For ES2015 classes, use this tag in the JSDoc comment for your
 constructor. If your class does not have an explicit constructor, use
@@ -20,9 +23,8 @@ this tag in the JSDoc comment for the class.
 Examples
 --------
 
-{% example “@hideconstructor tag with pre-ES2015 class” %}
-
-.. code:: js
+.. code-block:: js
+   :caption: @hideconstructor tag with pre-ES2015 class
 
    /**
     * @classdesc Toaster singleton.
@@ -63,11 +65,8 @@ Examples
        };
    })();
 
-{% endexample %}
-
-{% example “@hideconstructor tag with ES2015 class” %}
-
-.. code:: js
+.. code-block:: js
+   :caption: @hideconstructor tag with ES2015 class
 
    /**
     * Waffle iron singleton.
@@ -105,5 +104,3 @@ Examples
            return new WaffleIron();
        }
    }
-
-{% endexample %}

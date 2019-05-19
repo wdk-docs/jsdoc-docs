@@ -1,3 +1,6 @@
+@mixin
+=============================
+
 Syntax
 ------
 
@@ -16,7 +19,7 @@ Examples
 
 {% example “Using @mixin” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This provides methods used for event handling. It's not meant to

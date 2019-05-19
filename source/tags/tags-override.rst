@@ -1,3 +1,6 @@
+@override
+=============================
+
 Overview
 --------
 
@@ -21,7 +24,7 @@ method in its parent class:
 
 {% example “Method that overrides a parent” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @classdesc Abstract class representing a network connection.

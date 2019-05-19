@@ -1,3 +1,7 @@
+@classdesc
+=============================
+
+
 Syntax
 ------
 
@@ -26,7 +30,7 @@ the function itself, while the other applies to the class in general.
 {% example “A doclet with both a constructor function description and a
 class description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This is a description of the MyClass constructor function.

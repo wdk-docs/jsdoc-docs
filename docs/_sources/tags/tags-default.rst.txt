@@ -1,3 +1,6 @@
+@default
+=============================
+
 Syntax
 ------
 
@@ -21,7 +24,7 @@ added to the documentation.
 
 {% example “Document the number value of a constant” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     *  @constant

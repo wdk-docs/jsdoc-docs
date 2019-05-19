@@ -1,3 +1,6 @@
+@interface
+=============================
+
 Syntax
 ------
 
@@ -38,7 +41,7 @@ that other classes can implement:
 
 {% example “Using the @interface tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Interface for classes that represent a color.
@@ -65,7 +68,7 @@ the ``Color`` interface:
 
 {% example “Virtual comments that define an interface” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Interface for classes that represent a color.

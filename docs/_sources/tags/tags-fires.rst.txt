@@ -1,3 +1,6 @@
+@fires
+=============================
+
 Syntax
 ------
 
@@ -15,7 +18,7 @@ Examples
 
 {% example “Method that fires a ‘drain’ event” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Drink the milkshake.

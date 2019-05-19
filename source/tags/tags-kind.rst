@@ -1,3 +1,6 @@
+@kind
+=============================
+
 Syntax
 ------
 
@@ -34,7 +37,7 @@ Examples
 
 {% example “Using @kind” %}
 
-.. code:: js
+.. code-block:: js
 
    // The following examples produce the same result:
 
@@ -58,7 +61,7 @@ sets the kind to “constant”), the last tag determines the kind.
 
 {% example “Conflicting @kind statements” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This will show up as a constant

@@ -1,3 +1,6 @@
+@typedef
+=============================
+
 Syntax
 ------
 
@@ -23,7 +26,7 @@ numbers or strings that represent numbers.
 
 {% example “Using the @typedef tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A number, or a string containing a number.
@@ -47,7 +50,7 @@ an inner member.
 
 {% example “Using @typedef to document a complex type for a class” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The complete Triforce, or one or more components of the Triforce.

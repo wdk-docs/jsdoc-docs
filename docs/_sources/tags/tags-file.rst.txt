@@ -1,3 +1,6 @@
+@file
+=============================
+
 Overview
 --------
 
@@ -9,7 +12,7 @@ Example
 
 {% example “File description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @file Manages the configuration settings for the widget.

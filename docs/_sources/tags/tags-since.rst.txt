@@ -1,3 +1,6 @@
+@since
+=============================
+
 Syntax
 ------
 
@@ -14,7 +17,7 @@ Examples
 
 {% example “Using the @since tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Provides access to user information.

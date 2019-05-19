@@ -1,3 +1,6 @@
+@description
+=============================
+
 Syntax
 ------
 
@@ -19,7 +22,7 @@ before using any block tags, you may omit the @description tag.
 
 {% example “Describing a symbol without the @description tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Add two numbers.
@@ -38,7 +41,7 @@ the JSDoc comment.
 
 {% example “Describing a symbol with the @description tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {number} a

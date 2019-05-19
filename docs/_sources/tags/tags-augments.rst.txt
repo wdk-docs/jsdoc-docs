@@ -1,3 +1,6 @@
+@augments
+=============================
+
 Syntax
 ------
 
@@ -24,7 +27,7 @@ instances.
 
 {% example “Documenting a class/subclass relationship” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @constructor
@@ -63,7 +66,7 @@ from ``Bird#takeOff``.
 
 {% example “Multiple inheritance with duplicated method names” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Abstract class for things that can fly.

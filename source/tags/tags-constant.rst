@@ -1,3 +1,6 @@
+@constant
+=============================
+
 Syntax
 ------
 
@@ -20,7 +23,7 @@ on ``var`` declarations.
 
 {% example “A string constant representing the color red” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @constant
        @type {string}

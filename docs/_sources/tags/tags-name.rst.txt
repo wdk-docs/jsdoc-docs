@@ -1,3 +1,6 @@
+@name
+=============================
+
 Syntax
 ------
 
@@ -31,7 +34,7 @@ function that JSDoc would not normally recognize.
 
 {% example “Using the @name tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @name highlightSearchTerm

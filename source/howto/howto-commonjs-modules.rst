@@ -1,5 +1,8 @@
+CommonJS Modules
+======================
+
 Overview
---------
+-----------
 
 To help you document `CommonJS
 modules <http://wiki.commonjs.org/wiki/Modules/1.1>`__, JSDoc 3
@@ -36,7 +39,7 @@ For example, if you want the documentation for the module ``my/pants``
 to link to the module ``my/shirt``, you could use the ```@see``
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Pants module.
@@ -63,7 +66,7 @@ module exports these methods.
 
 {% example “Methods added to the exports object” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Shirt module.
@@ -92,7 +95,7 @@ exports a ``wash`` method, and the module itself often calls the
 {% example “Method assigned to a local variable and added to the exports
 object” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Shirt module.
@@ -116,7 +119,7 @@ member of the module ``my/shirt``, so the correct longname is
 
 {% example “Longname defined in an @alias tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Shirt module.
@@ -139,7 +142,7 @@ that ``wash`` is exported by the module ``my/shirt``:
 
 {% example “JSDoc comment immediately before exports.wash” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Shirt module.
@@ -171,7 +174,7 @@ property:
 
 {% example “Object literal assigned to module.exports” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Color mixer.
@@ -208,7 +211,7 @@ You can also use this pattern if you add properties to
 {% example “Assignment to module.exports followed by property
 definition” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Color mixer.
@@ -247,7 +250,7 @@ set the correct longname for the function:
 
 {% example “Function assigned to ‘module.exports’” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Color mixer.
@@ -270,7 +273,7 @@ The same pattern works for constructor functions:
 
 {% example “Constructor assigned to ‘module.exports’” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Color mixer.
@@ -294,7 +297,7 @@ the ```@type`` tag <tags-type.html>`__ in the same JSDoc comment as the
 
 {% example “String assigned to module.exports” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Module representing the word of the day.
@@ -318,7 +321,7 @@ by a module.
 {% example “Object literal assigned to a local variable and
 module.exports” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Color mixer.
@@ -347,7 +350,7 @@ module:
 
 {% example “Properties added to a module’s ‘this’ object” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Module for bookshelf-related utilities.

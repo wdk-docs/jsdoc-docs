@@ -1,3 +1,6 @@
+@license
+=============================
+
 Syntax
 ------
 
@@ -27,7 +30,7 @@ Examples
 {% example “A module that is distributed under the Apache License 2.0”
 %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Utility functions for the foo package.
@@ -39,7 +42,7 @@ Examples
 
 {% example “A standalone JSDoc comment with the complete MIT license” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @license

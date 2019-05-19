@@ -31,6 +31,9 @@ release = '2.0.19'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.extlinks',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.todo',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -42,6 +45,8 @@ templates_path = ['_templates']
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = 'zh_CN'
+locale_dirs = ['locale/']
+gettext_compact = True
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -54,9 +59,20 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+# html_theme_options = {
+#     "rightsidebar": "true",
+#     "relbarbgcolor": "black"
+# }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+extlinks = {
+    'jsdoc': ('https://jsdoc.app/%s', ''),
+}
+
+todo_include_todos = True
+todo_link_only = True

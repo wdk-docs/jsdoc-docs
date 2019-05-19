@@ -1,3 +1,7 @@
+
+@abstract
+=============================
+
 Overview
 --------
 
@@ -10,7 +14,7 @@ Example
 {% example “Parent class with abstract method, and child class that
 implements the method” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Generic dairy product.

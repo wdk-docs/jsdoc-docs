@@ -1,3 +1,6 @@
+@inner
+=============================
+
 Overview
 --------
 
@@ -12,7 +15,7 @@ Examples
 
 {% example “Using @inner to make a virtual doclet an inner member” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace MyNamespace */
    /**
@@ -29,7 +32,7 @@ MyNamespace~myFunction” instead of the @memberof and @inner tags.
 
 {% example “Using @inner” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace */
    var MyNamespace = {

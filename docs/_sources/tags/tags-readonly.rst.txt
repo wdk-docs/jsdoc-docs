@@ -1,3 +1,6 @@
+@read
+=============================
+
 Overview
 --------
 
@@ -10,7 +13,7 @@ Examples
 
 {% example “Using the @readonly tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A constant.
@@ -23,7 +26,7 @@ Examples
 
 {% example “Using the @readonly tag with a getter” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Options for ordering a delicious slice of pie.

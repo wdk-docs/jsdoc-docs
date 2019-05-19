@@ -1,3 +1,7 @@
+@callback
+=============================
+
+
 Syntax
 ------
 
@@ -26,7 +30,7 @@ Examples
 
 {% example “Documenting a class-specific callback” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @class
@@ -52,7 +56,7 @@ Examples
 
 {% example “Documenting a global callback” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @class

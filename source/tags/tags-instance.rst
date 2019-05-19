@@ -1,3 +1,6 @@
+@instance
+=============================
+
 Overview
 --------
 
@@ -16,7 +19,7 @@ MyNamespace#myFunction”:
 {% example “Using @instance to make a virtual doclet an instance member”
 %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace MyNamespace */
    /**
@@ -34,7 +37,7 @@ as an instance member:
 
 {% example “Using @instance to identify an instance member” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace */
    var BaseObject = {

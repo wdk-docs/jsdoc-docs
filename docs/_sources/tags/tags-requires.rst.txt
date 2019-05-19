@@ -1,3 +1,6 @@
+@requires
+=============================
+
 Syntax
 ------
 
@@ -20,7 +23,7 @@ Examples
 
 {% example “Using the @requires tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This class requires the modules {@link module:xyzcorp/helper} and

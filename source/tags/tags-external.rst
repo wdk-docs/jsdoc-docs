@@ -1,3 +1,6 @@
+@external
+=============================
+
 Syntax
 ------
 
@@ -30,7 +33,7 @@ object as an external, along with the new instance method
 
 {% example “Documenting methods added to built-in classes” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The built in string object.
@@ -53,7 +56,7 @@ the external namespace ``"jQuery.fn"``:
 
 {% example “Documenting external namespaces” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The jQuery plugin namespace.
@@ -73,7 +76,7 @@ as a subclass of the built-in class ``XMLHttpRequest``:
 
 {% example “Extending an external.” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The built-in class for sending HTTP requests.
@@ -98,7 +101,7 @@ result, the ``@external`` tag is used to document the external namespace
 
 {% example “Documenting a nested external symbol” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * External namespace for security-related classes.

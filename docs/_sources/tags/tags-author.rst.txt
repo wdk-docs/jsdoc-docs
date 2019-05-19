@@ -1,3 +1,6 @@
+@author
+=============================
+
 Syntax
 ------
 
@@ -16,7 +19,7 @@ Examples
 
 {% example “Documenting the author of an item” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @author Jane Smith &lt;jsmith@example.com>

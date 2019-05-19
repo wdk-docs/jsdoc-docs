@@ -1,3 +1,6 @@
+@implements
+=============================
+
 Syntax
 ------
 
@@ -24,7 +27,7 @@ In the following example, the ``TransparentColor`` class implements the
 
 {% example “Using the @implements tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Interface for classes that represent a color.

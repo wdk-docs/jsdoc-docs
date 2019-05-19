@@ -1,3 +1,6 @@
+@namespace
+=============================
+
 Syntax
 ------
 
@@ -25,7 +28,7 @@ Examples
 
 {% example “Using the @namespace tag with an object” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * My namespace.
@@ -42,7 +45,7 @@ Examples
 
 {% example “Using the @namespace tag for virtual comments” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A namespace.
@@ -64,7 +67,7 @@ with a leading backslash (\).
 
 {% example “Using the @namespace tag with unusual member names” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace window */
 

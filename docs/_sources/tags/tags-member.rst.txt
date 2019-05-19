@@ -1,3 +1,6 @@
+@member
+=============================
+
 Syntax
 ------
 
@@ -15,7 +18,7 @@ Examples
 
 {% example “Using @member with Data#point” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @class */
    function Data() {
@@ -30,7 +33,7 @@ Here is an example of using @var, a synonym of @member, to document a
 
 {% example “Using @var to document a virtual member” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A variable in the global namespace called 'foo'.
@@ -41,7 +44,7 @@ Here is an example of using @var, a synonym of @member, to document a
 
 The above example is equivalent to the following:
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A variable in the global namespace called 'foo'.

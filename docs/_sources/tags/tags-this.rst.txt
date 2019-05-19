@@ -1,3 +1,6 @@
+@this
+=============================
+
 Syntax
 ------
 
@@ -15,7 +18,7 @@ Examples
 In the following example, the @this tag causes “this.name” to be
 documented as “Greeter#name” rather than a global symbol called “name”.
 
-.. code:: js
+.. code-block:: js
 
    /** @constructor */
    function Greeter(name) {

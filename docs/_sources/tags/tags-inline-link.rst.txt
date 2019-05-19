@@ -1,3 +1,6 @@
+@inline-link
+=============================
+
 Syntax
 ------
 
@@ -54,7 +57,7 @@ The following example shows all of the ways to provide link text for the
 
 {% example “Providing link text” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * See {@link MyClass} and [MyClass's foo property]{@link MyClass#foo}.
@@ -69,7 +72,7 @@ By default, the example above produces output similar to the following:
 
 {% example “Output for {@link} tags” %}
 
-.. code:: html
+.. code-block:: html
 
    See &lt;a href="MyClass.html">MyClass&lt;/a> and &lt;a href="MyClass.html#foo">MyClass's foo
    property&lt;/a>. Also, check out &lt;a href="http://www.google.com">Google&lt;/a> and
@@ -82,7 +85,7 @@ If the configuration property ``templates.cleverLinks`` were set to
 
 {% example “Output with clever links enabled” %}
 
-.. code:: html
+.. code-block:: html
 
    See &lt;a href="MyClass.html">&lt;code>MyClass&lt;/code>&lt;/a> and &lt;a href="MyClass.html#foo">
    &lt;code>MyClass's foo property&lt;/code>&lt;/a>. Also, check out

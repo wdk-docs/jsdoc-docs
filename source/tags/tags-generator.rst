@@ -1,3 +1,6 @@
+@generator
+=============================
+
 Syntax
 ------
 
@@ -25,7 +28,7 @@ The following example shows a virtual comment that uses the
 
 {% example “Virtual comment with @generator tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Generate numbers in the Fibonacci sequence.

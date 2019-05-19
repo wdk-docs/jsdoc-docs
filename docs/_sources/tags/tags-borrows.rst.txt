@@ -1,3 +1,6 @@
+@borrows
+=============================
+
 Syntax
 ------
 
@@ -22,7 +25,7 @@ name.
 
 {% example “Duplicate the documentation for trstr as util.trim” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @namespace

@@ -1,4 +1,7 @@
-JSDoc 3 makes it easy to document classes that follow the `ECMAScript
+ECMAScript 2015 Classes
+===========================
+
+SDoc 3 makes it easy to document classes that follow the `ECMAScript
 2015
 specification <http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions>`__.
 You don’t need to use tags such as ``@class`` and ``@constructor`` with
@@ -14,7 +17,7 @@ constructor, two instance methods, and one static method:
 
 {% example “Simple ES 2015 class” %}
 
-.. code:: js
+.. code-block:: js
 
    /** Class representing a point. */
    class Point {
@@ -60,7 +63,7 @@ which assigns the class to a variable or constant:
 
 {% example “ES 2015 class expression” %}
 
-.. code:: js
+.. code-block:: js
 
    /** Class representing a point. */
    const Point = class {
@@ -80,7 +83,7 @@ For example, to extend the ``Point`` class shown above:
 
 {% example “Extending an ES 2015 class” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Class representing a dot.

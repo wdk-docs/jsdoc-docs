@@ -1,38 +1,240 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
-  <head>
-    <meta charset="utf-8" />
-    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>@throws &mdash; jsdoc-docs 2.0.19 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="@todo" href="tags-todo.html" />
+    <link rel="prev" title="@this" href="tags-this.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../index.html" class="icon icon-home"> jsdoc-docs
+          
+
+          
+          </a>
+
+          
             
-  <div class="section" id="syntax">
-<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">标签</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tags-abstract.html">&#64;abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-access.html">&#64;access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-alias.html">&#64;alias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-async.html">&#64;async</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-augments.html">&#64;augments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-copyright.html">&#64;copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-default.html">&#64;default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-deprecated.html">&#64;deprecated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-description.html">&#64;description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-enum.html">&#64;enum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-event.html">&#64;event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-example.html">&#64;example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-exports.html">&#64;exports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-external.html">&#64;external</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-file.html">&#64;file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-fires.html">&#64;fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-function.html">&#64;function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-generator.html">&#64;generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-global.html">&#64;global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-hideconstructor.html">&#64;hideconstructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-ignore.html">&#64;ignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-implements.html">&#64;implements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inheritdoc.html">&#64;inherits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inner.html">&#64;inner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-instance.html">&#64;instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-interface.html">&#64;interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-lends.html">&#64;lends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-license.html">&#64;license</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-listens.html">&#64;listens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-member.html">&#64;member</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-memberof.html">&#64;memberof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-mixes.html">&#64;mixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-mixin.html">&#64;mixin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-module.html">&#64;module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-namespace.html">&#64;namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-override.html">&#64;override</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-package.html">&#64;package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-param.html">&#64;param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-private.html">&#64;private</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-property.html">&#64;property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-protected.html">&#64;protected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-public.html">&#64;public</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-readonly.html">&#64;read</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-requires.html">&#64;requires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-returns.html">&#64;return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-see.html">&#64;see</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-since.html">&#64;since</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-static.html">&#64;static</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-summary.html">&#64;summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-this.html">&#64;this</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;throws</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tags-todo.html">&#64;todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-tutorial.html">&#64;tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-type.html">&#64;type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-typedef.html">&#64;typedef</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">JSDoc示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jsdoc-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">标签</a> &raquo;</li>
+        
+      <li>&#64;throws</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tags/tags-throws.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="throws">
+<h1>&#64;throws<a class="headerlink" href="#throws" title="永久链接至标题">¶</a></h1>
+<div class="section" id="syntax">
+<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">free-form</span> <span class="pre">description</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">{&lt;type&gt;}</span></code></p></li>
@@ -40,13 +242,13 @@
 </ul>
 </div>
 <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>The &#64;throws tag allows you to document an error that a function might
 throw. You can include the &#64;throws tag more than once in a single JSDoc
 comment.</p>
 </div>
 <div class="section" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
 <p>{% example “Using the &#64;throws tag with a type” %}</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @throws {InvalidArgumentException}</span>
@@ -72,68 +274,55 @@ comment.</p>
 </div>
 <p>{% endexample %}</p>
 </div>
+</div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
-
-
-
-
-
-
-
-
-<h3>导航</h3>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="转向" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tags-todo.html" class="btn btn-neutral float-right" title="@todo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tags-this.html" class="btn btn-neutral float-left" title="@this" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2019, BandCap.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/tags/tags-throws.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>

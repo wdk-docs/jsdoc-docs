@@ -1,38 +1,177 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
-  <head>
-    <meta charset="utf-8" />
-    <title>Overview &#8212; jsdoc-docs 2.0.19 文档</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Amd模块 &mdash; jsdoc-docs 2.0.19 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Contribute" href="../contribute.html" />
+    <link rel="prev" title="CommonJS 模块" href="howto-commonjs-modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../index.html" class="icon icon-home"> jsdoc-docs
+          
+
+          
+          </a>
+
+          
             
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">JSDoc示例</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-classes.html">ECMAScript 2015 类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-modules.html">ECMAScript 2015模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html">CommonJS 模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Amd模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-identifiers">模块标识符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-that-returns-an-object-literal">返回对象文字的函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-that-returns-another-function">返回另一个函数的函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-declared-in-a-return-statement">模块在return语句中声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-object-passed-to-a-function">传递给函数的模块对象</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-modules-defined-in-one-file">在一个文件中定义多个模块</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jsdoc-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">JSDoc示例</a> &raquo;</li>
+        
+      <li>Amd模块</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/howto-amd-modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="amd-modules">
+<h1>Amd模块<a class="headerlink" href="#amd-modules" title="永久链接至标题">¶</a></h1>
+<div class="section" id="overview">
+<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>JSDoc 3 makes it possible to document modules that use the <a class="reference external" href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">Asynchronous
 Module Definition (AMD)
 API</a>, which is
@@ -43,7 +182,7 @@ coding conventions that your module uses.</p>
 Modules</a> for instructions.</p>
 </div>
 <div class="section" id="module-identifiers">
-<h1>Module identifiers<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h1>
+<h2>模块标识符<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h2>
 <p>When you document an AMD module, you’ll use an <code class="docutils literal notranslate"><span class="pre">`&#64;exports</span></code>
 tag &lt;tags-exports.html&gt;`__ or <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code> tag &lt;tags-module.html&gt;`__ to
 document the identifier that’s passed to the <code class="docutils literal notranslate"><span class="pre">require()</span></code> function. For
@@ -72,7 +211,7 @@ an instance method named <code class="docutils literal notranslate"><span class=
 <code class="docutils literal notranslate"><span class="pre">module:my/pants.Jeans#hem</span></code>.</p>
 </div>
 <div class="section" id="function-that-returns-an-object-literal">
-<h1>Function that returns an object literal<a class="headerlink" href="#function-that-returns-an-object-literal" title="永久链接至标题">¶</a></h1>
+<h2>返回对象文字的函数<a class="headerlink" href="#function-that-returns-an-object-literal" title="永久链接至标题">¶</a></h2>
 <p>If you define your AMD module as a function that returns an object
 literal, use the <code class="docutils literal notranslate"><span class="pre">`&#64;exports</span></code> tag &lt;tags-exports.html&gt;`__ to document
 the module’s name. JSDoc will automatically detect that the object’s
@@ -105,7 +244,7 @@ properties are members of the module.</p>
 <p>{% endexample %}</p>
 </div>
 <div class="section" id="function-that-returns-another-function">
-<h1>Function that returns another function<a class="headerlink" href="#function-that-returns-another-function" title="永久链接至标题">¶</a></h1>
+<h2>返回另一个函数的函数<a class="headerlink" href="#function-that-returns-another-function" title="永久链接至标题">¶</a></h2>
 <p>If you define your module as a function that exports another function,
 such as a constructor, you can use a standalone comment with a
 <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code> tag &lt;tags-module.html&gt;`__ to document the module. You can
@@ -138,7 +277,7 @@ function uses the same longname as the module.</p>
 <p>{% endexample %}</p>
 </div>
 <div class="section" id="module-declared-in-a-return-statement">
-<h1>Module declared in a return statement<a class="headerlink" href="#module-declared-in-a-return-statement" title="永久链接至标题">¶</a></h1>
+<h2>模块在return语句中声明<a class="headerlink" href="#module-declared-in-a-return-statement" title="永久链接至标题">¶</a></h2>
 <p>If you declare your module object in a function’s <code class="docutils literal notranslate"><span class="pre">return</span></code> statement,
 you can use a standalone comment with a <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code>
 tag &lt;tags-module.html&gt;`__ to document the module. You can then add an
@@ -165,7 +304,7 @@ object has the same longname as the module.</p>
 <p>{% endexample %}</p>
 </div>
 <div class="section" id="module-object-passed-to-a-function">
-<h1>Module object passed to a function<a class="headerlink" href="#module-object-passed-to-a-function" title="永久链接至标题">¶</a></h1>
+<h2>传递给函数的模块对象<a class="headerlink" href="#module-object-passed-to-a-function" title="永久链接至标题">¶</a></h2>
 <p>If the module object is passed into the function that defines your
 module, you can document the module by adding an <code class="docutils literal notranslate"><span class="pre">`&#64;exports</span></code>
 tag &lt;tags-exports.html&gt;`__ to the function parameter. This pattern is
@@ -191,7 +330,7 @@ supported in JSDoc 3.3.0 and later.</p>
 <p>{% endexample %}</p>
 </div>
 <div class="section" id="multiple-modules-defined-in-one-file">
-<h1>Multiple modules defined in one file<a class="headerlink" href="#multiple-modules-defined-in-one-file" title="永久链接至标题">¶</a></h1>
+<h2>在一个文件中定义多个模块<a class="headerlink" href="#multiple-modules-defined-in-one-file" title="永久链接至标题">¶</a></h2>
 <p>If you define more than one AMD module in a single JavaScript file, use
 the <code class="docutils literal notranslate"><span class="pre">`&#64;exports</span></code> tag &lt;tags-exports.html&gt;`__ to document each module
 object.</p>
@@ -244,68 +383,55 @@ object.</p>
 </div>
 <p>{% endexample %}</p>
 </div>
+</div>
 
 
+           </div>
+           
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
-
-
-
-
-
-
-
-
-<h3>导航</h3>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="转向" />
-    </form>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contribute.html" class="btn btn-neutral float-right" title="Contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="howto-commonjs-modules.html" class="btn btn-neutral float-left" title="CommonJS 模块" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
-
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2019, BandCap.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/howto/howto-amd-modules.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>

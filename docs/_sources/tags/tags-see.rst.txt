@@ -1,3 +1,6 @@
+@see
+=============================
+
 Syntax
 ------
 
@@ -17,7 +20,7 @@ Examples
 
 {% example “Using the @see tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Both of these will link to the bar function.

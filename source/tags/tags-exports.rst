@@ -1,3 +1,7 @@
+@exports
+=============================
+
+
 Syntax
 ------
 
@@ -23,7 +27,7 @@ recognizes the special “module.exports” property in Node.js modules.
 
 {% example “CommonJS module” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A module that says hello!
@@ -39,7 +43,7 @@ recognizes the special “module.exports” property in Node.js modules.
 
 {% example “Node.js module” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A module that shouts hello!
@@ -55,7 +59,7 @@ recognizes the special “module.exports” property in Node.js modules.
 
 {% example “AMD module that exports an object literal” %}
 
-.. code:: js
+.. code-block:: js
 
    define(function() {
 
@@ -77,7 +81,7 @@ recognizes the special “module.exports” property in Node.js modules.
 
 {% example “AMD module that exports a constructor” %}
 
-.. code:: js
+.. code-block:: js
 
    define(function() {
        /**
@@ -109,7 +113,7 @@ exported.
 
 {% example “AMD module that exports an object” %}
 
-.. code:: js
+.. code-block:: js
 
    define(function () {
 

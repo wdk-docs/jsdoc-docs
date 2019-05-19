@@ -1,3 +1,6 @@
+@throws
+=============================
+
 Syntax
 ------
 
@@ -17,7 +20,7 @@ Examples
 
 {% example “Using the @throws tag with a type” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @throws {InvalidArgumentException}
@@ -28,7 +31,7 @@ Examples
 
 {% example “Using the @throws tag with a description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @throws Will throw an error if the argument is null.
@@ -39,7 +42,7 @@ Examples
 
 {% example “Using the @throws tag with a type and description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @throws {DivideByZero} Argument x must be non-zero.

@@ -1,3 +1,6 @@
+@lends
+=============================
+
 Syntax
 ------
 
@@ -21,7 +24,7 @@ creation.
 
 {% example “Example class” %}
 
-.. code:: js
+.. code-block:: js
 
    // We want to document this as being a class
    var Person = makeClass(
@@ -49,7 +52,7 @@ The following example gets us closer to what we want:
 
 {% example “Documented as static methods” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @class */
    var Person = makeClass(
@@ -83,7 +86,7 @@ things slightly by lending the methods to the class’s prototype:
 
 {% example “Documented as instance methods” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @class */
    var Person = makeClass(
@@ -117,7 +120,7 @@ does not have its own ``initialize`` method. The solution is to add the
 
 {% example “Documented with a constructor” %}
 
-.. code:: js
+.. code-block:: js
 
    var Person = makeClass(
        /** @lends Person.prototype */

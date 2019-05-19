@@ -1,3 +1,6 @@
+@param
+=============================
+
 Overview
 --------
 
@@ -31,7 +34,7 @@ descriptions in a ``@param`` tag.
 
 {% example “Name only” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param somebody
@@ -44,7 +47,7 @@ descriptions in a ``@param`` tag.
 
 {% example “Name and type” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string} somebody
@@ -57,7 +60,7 @@ descriptions in a ``@param`` tag.
 
 {% example “Name, type, and description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string} somebody Somebody's name.
@@ -74,7 +77,7 @@ sure to include a space before and after the hyphen.
 {% example “Name, type, and description, with a hyphen before the
 description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string} somebody - Somebody's name.
@@ -95,7 +98,7 @@ an ``employee`` parameter is expected to have ``name`` and
 
 {% example “Documenting a parameter’s properties” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Assign the project to an employee.
@@ -114,7 +117,7 @@ the object an appropriate one and document its properties.
 
 {% example “Documenting a destructuring parameter” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Assign the project to an employee.
@@ -134,7 +137,7 @@ project:
 
 {% example “Documenting properties of values in an array” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Assign the project to a list of employees.
@@ -156,7 +159,7 @@ and has a default value.
 
 {% example “An optional parameter (using JSDoc syntax)” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string} [somebody] - Somebody's name.
@@ -173,7 +176,7 @@ and has a default value.
 {% example “An optional parameter (using Google Closure Compiler
 syntax)” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string=} somebody - Somebody's name.
@@ -189,7 +192,7 @@ syntax)” %}
 
 {% example “An optional parameter and default value” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {string} [somebody=John Doe] - Somebody's name.
@@ -214,7 +217,7 @@ that JSDoc supports.
 
 {% example “Allows one type OR another type (type union)” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {(string|string[])} [somebody=John Doe] - Somebody's name, or an array of names.
@@ -232,7 +235,7 @@ that JSDoc supports.
 
 {% example “Allows any type” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @param {*} somebody - Whatever you want.
@@ -245,7 +248,7 @@ that JSDoc supports.
 
 {% example “Allows a parameter to be repeated” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Returns the sum of all numbers passed to the function.
@@ -270,7 +273,7 @@ then include the callback type in the ``@param`` tag.
 
 {% example “Parameters that accept a callback” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This callback type is called `requestCallback` and is displayed as a global symbol.

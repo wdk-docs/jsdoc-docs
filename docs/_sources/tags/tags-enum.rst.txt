@@ -1,3 +1,6 @@
+@enum
+=============================
+
 Syntax
 ------
 
@@ -25,7 +28,7 @@ same type as the enum itself.
 
 {% example “A numeric enum, representing three states” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Enum for tri-state values.

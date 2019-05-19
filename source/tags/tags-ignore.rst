@@ -1,3 +1,6 @@
+@ignore
+=============================
+
 Overview
 --------
 
@@ -23,7 +26,7 @@ appear in the documentation.
 
 {% example “Class with ``@ignore`` tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @class
@@ -43,7 +46,7 @@ and ``Clothes.Jacket``. ``Clothes``, ``Clothes.Jacket``, and
 
 {% example “Namespace with child class” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @namespace

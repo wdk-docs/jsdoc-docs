@@ -1,3 +1,6 @@
+@summary
+=============================
+
 Syntax
 ------
 
@@ -12,7 +15,7 @@ added to any doclet.
 Examples
 --------
 
-.. code:: js
+.. code-block:: js
 
    /**
     * A very long, verbose, wordy, long-winded, tedious, verbacious, tautological,

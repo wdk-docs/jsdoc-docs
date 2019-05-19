@@ -1,3 +1,6 @@
+@return
+=============================
+
 Syntax
 ------
 
@@ -16,7 +19,7 @@ Examples
 
 {% example “Return value with a type” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Returns the sum of a and b
@@ -32,7 +35,7 @@ Examples
 
 {% example “Return value with a type and description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Returns the sum of a and b
@@ -48,7 +51,7 @@ Examples
 
 {% example “Return value with multiple types” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Returns the sum of a and b
@@ -68,7 +71,7 @@ Examples
 
 {% example “Returns a promise” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Returns the sum of a and b

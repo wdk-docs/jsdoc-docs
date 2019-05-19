@@ -1,3 +1,6 @@
+@alias
+=============================
+
 Syntax
 ------
 
@@ -17,7 +20,7 @@ associated with the comment. For example, when JSDoc processes the
 following code, it ignores the fact that the comment for ``bar`` is
 attached to a function:
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Bar function.
@@ -32,7 +35,7 @@ in the documentation:
 
 {% example %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Bar function.
@@ -57,7 +60,7 @@ has the namepath “trackr.CookieManager#value”.
 
 {% example “Using @alias with an anonymous constructor function” %}
 
-.. code:: js
+.. code-block:: js
 
    Klass('trackr.CookieManager',
 
@@ -81,7 +84,7 @@ JSDoc that these members are exposed outside of the IIFE’s scope.
 
 {% example “Using @alias for static members of a namespace” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace */
    var Apple = {};
@@ -107,7 +110,7 @@ For members that are defined within an object literal, you can use the
 
 {% example “Using @alias for an object literal” %}
 
-.. code:: js
+.. code-block:: js
 
    // Documenting objectA with @alias
 

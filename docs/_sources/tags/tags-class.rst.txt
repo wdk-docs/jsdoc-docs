@@ -1,3 +1,6 @@
+@class
+=============================
+
 Syntax
 ------
 
@@ -14,7 +17,7 @@ Examples
 
 {% example “A function that constructs Person instances.” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Creates a new Person.

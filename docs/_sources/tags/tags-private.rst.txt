@@ -1,3 +1,6 @@
+@private
+=============================
+
 Syntax
 ------
 
@@ -35,7 +38,7 @@ appear in the generated documentation, but not ``Documents.Diary``.
 
 {% example “Using the @private tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace */
    var Documents = {

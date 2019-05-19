@@ -1,3 +1,6 @@
+@todo
+=============================
+
 Syntax
 ------
 
@@ -15,7 +18,7 @@ Examples
 
 {% example “Using the @todo tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @todo Write the documentation.

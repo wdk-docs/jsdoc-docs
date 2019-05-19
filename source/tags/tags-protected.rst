@@ -1,3 +1,6 @@
+@protected
+=============================
+
 Syntax
 ------
 
@@ -34,7 +37,7 @@ is protected:
 
 {% example “Using the @protected tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @constructor */
    function Thingy() {

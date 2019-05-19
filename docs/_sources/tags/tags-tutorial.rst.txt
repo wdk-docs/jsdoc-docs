@@ -1,3 +1,6 @@
+@tutorial
+=============================
+
 Syntax
 ------
 
@@ -25,7 +28,7 @@ the tutorials that have the identifiers ``tutorial-1`` and
 
 {% example “Using the @tutorial tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Description

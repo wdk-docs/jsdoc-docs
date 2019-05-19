@@ -1,3 +1,6 @@
+@inline-tutorial
+=============================
+
 Syntax
 ------
 
@@ -27,7 +30,7 @@ The following example shows all of the ways to provide link text for the
 
 {% example “Providing link text” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * See {@tutorial gettingstarted} and [Configuring the Dashboard]{@tutorial dashboard}.
@@ -44,7 +47,7 @@ produces output similar to the following:
 
 {% example “Output for {@link} tags” %}
 
-.. code:: html
+.. code-block:: html
 
    See &lt;a href="tutorial-gettingstarted.html">Getting Started&lt;/a> and
    &lt;a href="tutorial-dashboard.html">Configuring the Dashboard&lt;/a>.

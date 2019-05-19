@@ -1,3 +1,6 @@
+@async
+=============================
+
 Syntax
 ------
 
@@ -27,7 +30,7 @@ tag:
 
 {% example “Virtual comment with @async tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Download data from the specified URL.

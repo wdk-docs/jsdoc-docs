@@ -1,3 +1,6 @@
+@copyright
+=============================
+
 Syntax
 ------
 
@@ -13,7 +16,7 @@ tag]\ `file-tag <tags-file.html>`__.
 Examples
 --------
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @file This is my cool script.

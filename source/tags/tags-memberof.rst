@@ -1,3 +1,6 @@
+@memberof
+=============================
+
 Syntax
 ------
 
@@ -30,7 +33,7 @@ how you wish to document it. The solution is to add a @memberof tag:
 
 {% example “Using @memberof” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace */
    var Tools = {};
@@ -49,7 +52,7 @@ combine “@memberof ClassName” with the “@instance” tag.
 
 {% example “Using @memberof with a class prototype” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @class Observable */
    create(
@@ -96,7 +99,7 @@ rather than a member “y” of “point” of “Data#”.
 
 {% example “Using @memberof! for object properties” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @class */
    function Data() {

@@ -1,3 +1,6 @@
+@type
+=============================
+
 Syntax
 ------
 
@@ -666,7 +669,7 @@ Examples
 
 {% example “Example” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @type {(string|Array.<string>)} */
    var foo;
@@ -680,7 +683,7 @@ rather than including a separate @type tag in your JSDoc comment.
 
 {% example “Type expressions can accompany many tags.” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @type {number}

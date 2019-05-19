@@ -1,3 +1,6 @@
+@function
+=============================
+
 Syntax
 ------
 
@@ -15,7 +18,7 @@ Examples
 
 {% example “Using @function to mark a function.” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @function */
    var paginate = paginateFactory(pages);
@@ -29,7 +32,7 @@ type of value ``paginate`` will hold when it is run.
 
 {% example “Using @function with a name.” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @function myFunction */
 

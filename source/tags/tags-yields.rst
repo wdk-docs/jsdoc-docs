@@ -1,3 +1,6 @@
+@yields
+=============================
+
 Syntax
 ------
 
@@ -17,7 +20,7 @@ Examples
 
 {% example “@yields tag with a type” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Generate the Fibonacci sequence of numbers.
@@ -30,7 +33,7 @@ Examples
 
 {% example “@yields tag with a type and description” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Generate the Fibonacci sequence of numbers.

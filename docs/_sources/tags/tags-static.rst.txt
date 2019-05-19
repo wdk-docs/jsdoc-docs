@@ -1,3 +1,6 @@
+@static
+=============================
+
 Overview
 --------
 
@@ -15,7 +18,7 @@ MyNamespace.myFunction” and omitting the @memberof and @static tags:
 
 {% example “Using @static in a virtual comment” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @namespace MyNamespace */
 
@@ -32,7 +35,7 @@ a static member:
 
 {% example “Using @static to override the default scope” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @module Rollerskate */
 

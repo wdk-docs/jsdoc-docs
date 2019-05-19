@@ -1,75 +1,122 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
-  <head>
-    <meta charset="utf-8" />
-    <title>howto &#8212; jsdoc-docs 2.0.19 文档</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JSDoc示例 &mdash; jsdoc-docs 2.0.19 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="ECMAScript 2015 类" href="howto-es2015-classes.html" />
+    <link rel="prev" title="@inline-tutorial" href="../tags/tags-inline-tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="../index.html" class="icon icon-home"> jsdoc-docs
+          
+
+          
+          </a>
+
+          
             
-  <div class="section" id="howto">
-<h1>howto<a class="headerlink" href="#howto" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-identifiers">Module identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-an-object-literal">Function that returns an object literal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-another-function">Function that returns another function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-declared-in-a-return-statement">Module declared in a return statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-object-passed-to-a-function">Module object passed to a function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#multiple-modules-defined-in-one-file">Multiple modules defined in one file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#module-identifiers">Module identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#properties-of-the-exports-object">Properties of the ‘exports’ object</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports">Values assigned to ‘module.exports’</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#object-literal-assigned-to-module-exports">Object literal assigned to ‘module.exports’</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#function-assigned-to-module-exports">Function assigned to ‘module.exports’</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#string-number-or-boolean-assigned-to-module-exports">String, number, or boolean assigned to ‘module.exports’</a></li>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JSDoc示例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-classes.html">ECMAScript 2015 类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-modules.html">ECMAScript 2015模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html">CommonJS 模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html">Amd模块</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports-and-local-variables">Values assigned to ‘module.exports’ and local variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#properties-added-to-this">Properties added to ‘this’</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-es2015-classes.html">Documenting a simple class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-es2015-classes.html#extending-classes">Extending classes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-es2015-modules.html">Module identifiers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-es2015-modules.html#exported-values">Exported values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
 </ul>
-</div>
-</div>
 
-
-          </div>
+            
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jsdoc-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
 
 
 
@@ -78,51 +125,122 @@
 
 
 
-<h3>导航</h3>
 
-<div class="relations">
-<h3>Related Topics</h3>
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>JSDoc示例</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/howto/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jsdoc-examples">
+<h1>JSDoc示例<a class="headerlink" href="#jsdoc-examples" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
 <ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  </ul></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-classes.html">ECMAScript 2015 类</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-classes.html#documenting-a-simple-class">记录一个简单的类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-classes.html#extending-classes">扩展类</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-modules.html">ECMAScript 2015模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-modules.html#module-identifiers">模块标识符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-es2015-modules.html#exported-values">导出的值</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html">CommonJS 模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#module-identifiers">模块标识符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#properties-of-the-exports-object">‘exports’ 对象的属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports">分配给 ‘module.exports’ 的值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports-and-local-variables">分配给 ‘module.exports’ 和局部变量的值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#properties-added-to-this">添加到 ‘this’ 的属性</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html">Amd模块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#overview">概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#module-identifiers">模块标识符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-an-object-literal">返回对象文字的函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-another-function">返回另一个函数的函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#module-declared-in-a-return-statement">模块在return语句中声明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#module-object-passed-to-a-function">传递给函数的模块对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-amd-modules.html#multiple-modules-defined-in-one-file">在一个文件中定义多个模块</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">快速搜索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="转向" />
-    </form>
-    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
 
 
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="howto-es2015-classes.html" class="btn btn-neutral float-right" title="ECMAScript 2015 类" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tags/tags-inline-tutorial.html" class="btn btn-neutral float-left" title="@inline-tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
+  <hr/>
 
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
 
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-
+</footer>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2019, BandCap.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/howto/index.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
 
-    
+    </section>
 
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
     
-  </body>
+   
+
+</body>
 </html>

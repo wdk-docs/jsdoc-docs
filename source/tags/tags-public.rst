@@ -1,3 +1,6 @@
+@public
+=============================
+
 Overview
 --------
 
@@ -19,7 +22,7 @@ Examples
 
 {% example “Using the @public tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * The Thingy class is available to all.

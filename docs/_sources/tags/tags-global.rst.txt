@@ -1,3 +1,6 @@
+@global
+=============================
+
 Overview
 --------
 
@@ -14,7 +17,7 @@ global.
 
 {% example “Document an inner variable as a global” %}
 
-.. code:: js
+.. code-block:: js
 
    (function() {
        /** @global */

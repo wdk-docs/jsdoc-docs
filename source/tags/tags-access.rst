@@ -1,3 +1,6 @@
+@access
+=============================
+
 Syntax
 ------
 
@@ -35,7 +38,7 @@ Examples
 
 {% example “Using @access as a synonym for other tags” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @constructor */
    function Thingy() {

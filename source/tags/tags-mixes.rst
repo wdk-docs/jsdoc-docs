@@ -1,3 +1,6 @@
+@mixes
+=============================
+
 Syntax
 ------
 
@@ -18,7 +21,7 @@ To start, we document a mixin with the
 
 {% example “Example of a @mixin” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * This provides methods used for event handling. It's not meant to
@@ -55,7 +58,7 @@ FormButton mixes the Eventful functions.
 
 {% example “Using the @mixes tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @constructor FormButton

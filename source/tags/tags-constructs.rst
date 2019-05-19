@@ -1,3 +1,6 @@
+@construct
+=============================
+
 Overview
 --------
 
@@ -15,7 +18,7 @@ Examples
 
 {% example “Using the @constructs tag with @lends” %}
 
-.. code:: js
+.. code-block:: js
 
    var Person = makeClass(
        /** @lends Person.prototype */
@@ -35,7 +38,7 @@ Examples
 
 {% example “Without @lends you must provide the name of the class” %}
 
-.. code:: js
+.. code-block:: js
 
    makeClass('Menu',
        /**

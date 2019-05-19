@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>在JSDoc 3中使用namepath &mdash; jsdoc-docs 2.0.19 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="JSDoc的命令行参数" href="commandline.html" />
+    <link rel="prev" title="JSDoc 3入门" href="getting-started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> jsdoc-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">入门</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">JSDoc 3入门</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">在JSDoc 3中使用namepath</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#namepaths-in-jsdoc-3">JSDoc 3中的Namepaths</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commandline.html">JSDoc的命令行参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring-jsdoc.html">使用配置文件配置JSDoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring-default-template.html">配置JSDoc的默认模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="block-inline-tags.html">块和内联标签</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">JSDoc示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jsdoc-docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">入门</a> &raquo;</li>
+        
+      <li>在JSDoc 3中使用namepath</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/about/namepaths.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-namepaths-with-jsdoc-3">
+<h1>在JSDoc 3中使用namepath<a class="headerlink" href="#using-namepaths-with-jsdoc-3" title="永久链接至标题">¶</a></h1>
+<div class="section" id="namepaths-in-jsdoc-3">
+<h2>JSDoc 3中的Namepaths<a class="headerlink" href="#namepaths-in-jsdoc-3" title="永久链接至标题">¶</a></h2>
+<p>When referring to a JavaScript variable that is elsewhere in your
+documentation, you must provide a unique identifier that maps to that
+variable. A namepath provides a way to do so and disambiguate between
+instance members, static members and inner variables.</p>
+<p>{% example “Basic Syntax Examples of Namepaths in JSDoc 3” %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myFunction</span>
+<span class="n">MyConstructor</span>
+<span class="n">MyConstructor</span><span class="c1">#instanceMember</span>
+<span class="n">MyConstructor</span><span class="o">.</span><span class="n">staticMember</span>
+<span class="n">MyConstructor</span><span class="o">~</span><span class="n">innerMember</span> <span class="o">//</span> <span class="n">note</span> <span class="n">that</span> <span class="n">JSDoc</span> <span class="mi">2</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">dash</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>The example below shows: an <em>instance</em> method named “say,” an <em>inner</em>
+function also named “say,” and a <em>static</em> method also named “say.” These
+are three distinct methods that all exist independently of one another.</p>
+<p>{% example “Use a documentation tag to describe your code.” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
+<span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s2">&quot;I&#39;m an instance.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">function</span> <span class="nx">say</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s2">&quot;I&#39;m inner.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;I&#39;m static.&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+<span class="nx">p</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span>      <span class="c1">// I&#39;m an instance.</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">say</span><span class="p">();</span> <span class="c1">// I&#39;m static.</span>
+<span class="c1">// there is no way to directly access the inner function from here</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>You would use three different namepath syntaxes to refer to the three
+different methods:</p>
+<p>{% example “Use a documentation tag to describe your code.” %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Person</span><span class="c1">#say  // the instance method named &quot;say.&quot;</span>
+<span class="n">Person</span><span class="o">.</span><span class="n">say</span>  <span class="o">//</span> <span class="n">the</span> <span class="n">static</span> <span class="n">method</span> <span class="n">named</span> <span class="s2">&quot;say.&quot;</span>
+<span class="n">Person</span><span class="o">~</span><span class="n">say</span>  <span class="o">//</span> <span class="n">the</span> <span class="n">inner</span> <span class="n">method</span> <span class="n">named</span> <span class="s2">&quot;say.&quot;</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>You might wonder why there is a syntax to refer to an inner method when
+that method isn’t directly accessible from outside the function it is
+defined in. While that is true, and thus the “~” syntax is rarely used,
+it <em>is</em> possible to return a reference to an inner method from another
+method inside that container, so it is possible that some object
+elsewhere in your code might borrow an inner method.</p>
+<p>Note that if a constructor has an instance member that is also a
+constructor, you can simply chain the namepaths together to form a
+longer namepath:</p>
+<p>{% example “Use a documentation tag to describe your code.” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
+<span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/** @constructor */</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">Idea</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">consider</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">return</span> <span class="s2">&quot;hmmm&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">p</span><span class="p">.</span><span class="nx">Idea</span><span class="p">();</span>
+<span class="nx">i</span><span class="p">.</span><span class="nx">consider</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>In this case, to refer to the method named “consider,” you would use the
+following namepath: <code class="docutils literal notranslate"><span class="pre">Person#Idea#consider</span></code></p>
+<p>This chaining can be used with any combination of the connecting
+symbols: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">.</span> <span class="pre">~</span></code></p>
+<p>{% example “Special cases: modules, externals and events.” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** A module. Its name is module:foo/bar.</span>
+<span class="cm"> * @module foo/bar</span>
+<span class="cm"> */</span>
+<span class="cm">/** The built in string object. Its name is external:String.</span>
+<span class="cm"> * @external String</span>
+<span class="cm"> */</span>
+<span class="cm">/** An event. Its name is module:foo/bar.event:MyEvent.</span>
+<span class="cm"> * @event module:foo/bar.event:MyEvent</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>There are some special cases with namepaths:
+[&#64;module]<a class="reference external" href="tags-module.html">module-tag</a> names are prefixed by
+“module:”, [&#64;external]<a class="reference external" href="tags-external.html">external-tag</a> names are
+prefixed by “external:”, and [&#64;event]<a class="reference external" href="tags-event.html">event-tag</a>
+names are prefixed by “event:”.</p>
+<p>{% example “Namepaths of objects with special characters in the name.”
+%}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace */</span>
+<span class="kd">var</span> <span class="nx">chat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Refer to this by {@link chat.&quot;#channel&quot;}.</span>
+<span class="cm">     * @namespace</span>
+<span class="cm">     */</span>
+    <span class="s2">&quot;#channel&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Refer to this by {@link chat.&quot;#channel&quot;.open}.</span>
+<span class="cm">         * @type {boolean}</span>
+<span class="cm">         * @defaultvalue</span>
+<span class="cm">         */</span>
+        <span class="nx">open</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Internal quotes have to be escaped by backslash. This is</span>
+<span class="cm">         * {@link chat.&quot;#channel&quot;.&quot;say-\&quot;hello\&quot;&quot;}.</span>
+<span class="cm">         */</span>
+        <span class="s1">&#39;say-&quot;hello&quot;&#39;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Now we define an event in our {@link chat.&quot;#channel&quot;} namespace.</span>
+<span class="cm"> * @event chat.&quot;#channel&quot;.&quot;op:announce-motd&quot;</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>Above is an example of a namespace with “unusual” characters in its
+member names (the hash character, dashes, even quotes). To refer to
+these you just need quote the names: chat.“#channel”,
+chat.“#channel”.“op:announce-motd”, and so on. Internal quotes in names
+should be escaped with backslashes: chat.“#channel”.“say-“hello””.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commandline.html" class="btn btn-neutral float-right" title="JSDoc的命令行参数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="JSDoc 3入门" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, BandCap
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

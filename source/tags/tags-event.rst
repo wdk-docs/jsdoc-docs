@@ -1,3 +1,6 @@
+@event
+=============================
+
 Syntax
 ------
 
@@ -33,7 +36,7 @@ property.
 
 {% example “Documenting a function call as an event” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Throw a snowball.
@@ -57,7 +60,7 @@ property.
 
 {% example “Using a named doclet to document an event” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Throw a snowball.

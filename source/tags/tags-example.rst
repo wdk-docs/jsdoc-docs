@@ -1,3 +1,6 @@
+@example
+=============================
+
 Overview
 --------
 
@@ -11,7 +14,7 @@ Note that a doclet may have multiple examples.
 
 {% example “Documenting examples” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Solves equations of the form a * x = b
@@ -34,7 +37,7 @@ Examples can also be captioned using ``<caption></caption>`` after the
 
 {% example “Documenting examples with a caption” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * Solves equations of the form a * x = b

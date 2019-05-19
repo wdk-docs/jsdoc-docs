@@ -1,3 +1,6 @@
+@package
+=============================
+
 Syntax
 ------
 
@@ -35,7 +38,7 @@ is package-private:
 
 {% example “Using the @package tag” %}
 
-.. code:: js
+.. code-block:: js
 
    /** @constructor */
    function Thingy() {

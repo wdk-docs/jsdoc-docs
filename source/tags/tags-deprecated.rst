@@ -1,3 +1,6 @@
+@deprecated
+=============================
+
 Syntax
 ------
 
@@ -17,7 +20,7 @@ describes more about the deprecation.
 {% example “Document that the old function has been deprecated since
 version 2.0” %}
 
-.. code:: js
+.. code-block:: js
 
    /**
     * @deprecated since version 2.0
