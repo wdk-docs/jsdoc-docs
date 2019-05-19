@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p>With the JSDoc tag dictionary (enabled by default):</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;interface</span> <span class="pre">[&lt;name&gt;]</span></code></p>
+<p>With the <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure
+Compiler</a>
+tag dictionary:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag marks a symbol as an interface that other symbols
+can implement. For example, your code might define a parent class whose
+methods and properties are stubbed out. You can add the <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code>
+tag to the parent class to indicate that child classes must implement
+the parent class’ methods and properties.</p>
+<p>Add the <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag to the top-level symbol for the interface
+(for example, a constructor function). You do not need to add the
+<code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag to each member of the interface (for example, the
+interface’s instance methods).</p>
+<p>If you are using the JSDoc tag dictionary (enabled by default), you can
+also define an interface with virtual comments, rather than by writing
+code for the interface. See “<a class="reference external" href="#virtual-comments">Virtual comments that define an
+interface</a>” for an example.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>In the following example, the <code class="docutils literal notranslate"><span class="pre">Color</span></code> function represents an interface
+that other classes can implement:</p>
+<p>{% example “Using the &#64;interface tag” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Interface for classes that represent a color.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @interface</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">Color</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Get the color as an array of red, green, and blue values, represented as</span>
+<span class="cm"> * decimal numbers between 0 and 1.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @returns {Array&amp;lt;number&gt;} An array containing the red, green, and blue values,</span>
+<span class="cm"> * in that order.</span>
+<span class="cm"> */</span>
+<span class="nx">Color</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">rgb</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;not implemented&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>The following example uses virtual comments, rather than code, to define
+the <code class="docutils literal notranslate"><span class="pre">Color</span></code> interface:</p>
+<p>{% example “Virtual comments that define an interface” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Interface for classes that represent a color.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @interface Color</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Get the color as an array of red, green, and blue values, represented as</span>
+<span class="cm"> * decimal numbers between 0 and 1.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @function</span>
+<span class="cm"> * @name Color#rgb</span>
+<span class="cm"> * @returns {Array&amp;lt;number&gt;} An array containing the red, green, and blue values,</span>
+<span class="cm"> * in that order.</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-interface.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

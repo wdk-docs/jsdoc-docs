@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;lends</span> <span class="pre">&lt;namepath&gt;</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag allows you to document all the members of an object
+literal as if they were members of a symbol with the given name. You
+might want to do this if you are passing an object literal into a
+function that creates a named class from its members.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>In this example, we want to use a helper function to make a class named
+<code class="docutils literal notranslate"><span class="pre">Person</span></code>, along with instance methods named <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and
+<code class="docutils literal notranslate"><span class="pre">say</span></code>. This is similar to how some popular frameworks handle class
+creation.</p>
+<p>{% example “Example class” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// We want to document this as being a class</span>
+<span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
+    <span class="c1">// We want to document these as being methods</span>
+    <span class="p">{</span>
+        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">say</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; says: &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>Without any comments, JSDoc won’t recognize that this code creates a
+<code class="docutils literal notranslate"><span class="pre">Person</span></code> class with two methods. To document the methods, we must use
+a <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag in a doc comment immediately before the object literal.
+The <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag tells JSDoc that all the member names of that object
+literal are being “loaned” to a variable named <code class="docutils literal notranslate"><span class="pre">Person</span></code>. We must also
+add comments to each of the methods.</p>
+<p>The following example gets us closer to what we want:</p>
+<p>{% example “Documented as static methods” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @class */</span>
+<span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
+    <span class="cm">/** @lends Person */</span>
+    <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Create a `Person` instance.</span>
+<span class="cm">         * @param {string} name - The person&#39;s name.</span>
+<span class="cm">         */</span>
+        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Say something.</span>
+<span class="cm">         * @param {string} message - The message to say.</span>
+<span class="cm">         * @returns {string} The complete message.</span>
+<span class="cm">         */</span>
+        <span class="nx">say</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; says: &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>Now the functions named <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and <code class="docutils literal notranslate"><span class="pre">say</span></code> will be documented,
+but they appear as static methods of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class. That is
+possibly what you meant, but in this case we want <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and
+<code class="docutils literal notranslate"><span class="pre">say</span></code> to belong to the instances of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class. So we change
+things slightly by lending the methods to the class’s prototype:</p>
+<p>{% example “Documented as instance methods” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @class */</span>
+<span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
+    <span class="cm">/** @lends Person.prototype */</span>
+    <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Create a `Person` instance.</span>
+<span class="cm">         * @param {string} name - The person&#39;s name.</span>
+<span class="cm">         */</span>
+        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Say something.</span>
+<span class="cm">         * @param {string} message - The message to say.</span>
+<span class="cm">         * @returns {string} The complete message.</span>
+<span class="cm">         */</span>
+        <span class="nx">say</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; says: &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>One final step: Our class framework uses the loaned <code class="docutils literal notranslate"><span class="pre">initialize</span></code>
+function to construct <code class="docutils literal notranslate"><span class="pre">Person</span></code> instances, but a <code class="docutils literal notranslate"><span class="pre">Person</span></code> instance
+does not have its own <code class="docutils literal notranslate"><span class="pre">initialize</span></code> method. The solution is to add the
+<code class="docutils literal notranslate"><span class="pre">&#64;constructs</span></code> tag to the loaned function. Remember to remove the
+<code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> tag as well, or else two classes will be documented.</p>
+<p>{% example “Documented with a constructor” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
+    <span class="cm">/** @lends Person.prototype */</span>
+    <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Create a `Person` instance.</span>
+<span class="cm">         * @constructs</span>
+<span class="cm">         * @param {string} name - The person&#39;s name.</span>
+<span class="cm">         */</span>
+        <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Say something.</span>
+<span class="cm">         * @param {string} message - The message to say.</span>
+<span class="cm">         * @returns {string} The complete message.</span>
+<span class="cm">         */</span>
+        <span class="nx">say</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot; says: &quot;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-lends.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

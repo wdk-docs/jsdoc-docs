@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p>With the JSDoc tag dictionary (enabled by default):</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span></code></p>
+<p>With the <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure
+Compiler</a>
+tag dictionary:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span> <span class="pre">[{typeExpression}]</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag marks a symbol as package-private. Typically, this
+tag indicates that a symbol is available only to code in the same
+directory as the source file for this symbol. This tag is available in
+JSDoc 3.5.0 and later.</p>
+<p>By default, symbols marked with the <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag will appear in your
+documentation. In JSDoc 3.3.0 and later, you can use the
+<code class="docutils literal notranslate"><span class="pre">`-a/--access</span></code> command-line option &lt;about-commandline.html&gt;`__ to
+change this behavior.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag is equivalent to <code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">package</span></code>.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>In the following example, the instance member <code class="docutils literal notranslate"><span class="pre">Thingy#_bar</span></code> appears in
+the generated documentation, but with an annotation indicating that it
+is package-private:</p>
+<p>{% example “Using the &#64;package tag” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
+<span class="kd">function</span> <span class="nx">Thingy</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/** @package */</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_bar</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-package.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

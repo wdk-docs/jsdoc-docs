@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;moduleName&gt;]</span></code></p>
+<p>In JSDoc 3.3.0 and later, <code class="docutils literal notranslate"><span class="pre">&lt;moduleName&gt;</span></code> may include the <code class="docutils literal notranslate"><span class="pre">module:</span></code>
+prefix. In previous versions, you must omit this prefix.</p>
+<p>Note: If you provide a type, you <em>must</em> also provide a name.</p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The &#64;module tag marks the current file as being its own module. All
+symbols in the file are assumed to be members of the module unless
+documented otherwise.</p>
+<p>Link to a module (e.g. within a
+[&#64;link]<a class="reference external" href="tags-inline-link.html">link-tag</a> or
+[&#64;see]<a class="reference external" href="tags-see.html">see-tag</a> tag) using “module:moduleName”. For
+example, “&#64;module foo/bar” can be linked to using “{&#64;link
+module:foo/bar}”.</p>
+<p>If the module name is not provided, it is derived from the module’s path
+and filename. For example, suppose I have a file <code class="docutils literal notranslate"><span class="pre">test.js</span></code>, located in
+the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory, that contains the block comment
+<code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">&#64;module</span> <span class="pre">*/</span></code>. Here are some scenarios for running JSDoc and the
+resulting module names for test.js:</p>
+<p>{% example “Derived module names if none is provided.” %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># from src/</span>
+<span class="n">jsdoc</span> <span class="o">./</span><span class="n">test</span><span class="o">.</span><span class="n">js</span>   <span class="c1"># module name &#39;test&#39;</span>
+
+<span class="c1"># from src&#39;s parent directory:</span>
+<span class="n">jsdoc</span> <span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">js</span> <span class="c1"># module name &#39;src/test&#39;</span>
+<span class="n">jsdoc</span> <span class="o">-</span><span class="n">r</span> <span class="n">src</span><span class="o">/</span>     <span class="c1"># module name &#39;test&#39;</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>The following example shows the namepaths that are used for symbols in a
+module. The first symbol is a module-private, or “inner,” variable–it
+can be only accessed within the module. The second symbol is a static
+function that is exported by the module.</p>
+<p>{% example “Basic &#64;module use” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module myModule */</span>
+
+<span class="cm">/** will be module:myModule~foo */</span>
+<span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="cm">/** will be module:myModule.bar */</span>
+<span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>When an exported symbol is defined as a member of <code class="docutils literal notranslate"><span class="pre">module.exports</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exports</span></code>, or <code class="docutils literal notranslate"><span class="pre">this</span></code>, JSDoc infers that the symbol is a static
+member of the module.</p>
+<p>In the following example, the Book class is documented as a static
+member, “module:bookshelf.Book”, with one instance member,
+“module:bookshelf.Book#title”.</p>
+<p>{% example “Defining exported symbols as a member of ‘this’” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module bookshelf */</span>
+<span class="cm">/** @class */</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">Book</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/** The title. */</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">title</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>In the following example, the two functions have the namepaths
+“module:color/mixer.blend” and “module:color/mixer.darken”.</p>
+<p>{% example “Defining exported symbols as a member of ‘module.exports’ or
+‘exports’” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module color/mixer */</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cm">/** Blend two colours together. */</span>
+    <span class="nx">blend</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color1</span><span class="p">,</span> <span class="nx">color2</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+<span class="cm">/** Darkens a color. */</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">darken</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">shade</span><span class="p">)</span> <span class="p">{};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>See <a class="reference external" href="howto-commonjs-modules.html">Documenting JavaScript Modules</a> for
+further examples.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-module.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

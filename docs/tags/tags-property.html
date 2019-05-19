@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The &#64;property tag is a way to easily document a list of static
+properties of a class, namespace or other object.</p>
+<p>Normally JSDoc templates would create an entire new page to display
+information about each level of a nested namespace hierarchy. Sometimes
+what you really want is to just list all the properties, including
+nested properties, all together on the same page.</p>
+<p>Note that property tags must be used in doc comments for the thing that
+they are properties of, a namespace or a class for example. This tag is
+intended for simple collections of static properties, it does not allow
+you to provide &#64;examples or similar complex information for each
+property, just the type, name and description.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>In this example we have a namespace named “config.” We want all the
+information about the defaults property, including its nested values, to
+appear on the same page with the documentation for config.</p>
+<p>{% example “A namespace with defaults and nested default properties” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @namespace</span>
+<span class="cm"> * @property {object}  defaults               - The default values for parties.</span>
+<span class="cm"> * @property {number}  defaults.players       - The default number of players.</span>
+<span class="cm"> * @property {string}  defaults.level         - The default level for the party.</span>
+<span class="cm"> * @property {object}  defaults.treasure      - The default treasure.</span>
+<span class="cm"> * @property {number}  defaults.treasure.gold - How much gold the party starts with.</span>
+<span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">defaults</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">players</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nx">level</span><span class="o">:</span>   <span class="s1">&#39;beginner&#39;</span><span class="p">,</span>
+        <span class="nx">treasure</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">gold</span><span class="o">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>The following example shows how to indicate that a property is optional.</p>
+<p>{% example “A type definition with required and optional property” %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+<span class="o">*</span> <span class="n">User</span> <span class="nb">type</span> <span class="n">definition</span>
+<span class="o">*</span> <span class="nd">@typedef</span> <span class="p">{</span><span class="n">Object</span><span class="p">}</span> <span class="n">User</span>
+<span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="n">email</span>
+<span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="p">[</span><span class="n">nickName</span><span class="p">]</span>
+<span class="o">*/</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-property.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

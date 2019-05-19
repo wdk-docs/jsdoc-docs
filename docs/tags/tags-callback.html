@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;callback</span> <span class="pre">&lt;namepath&gt;</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The &#64;callback tag provides information about a callback function that
+can be passed to other functions, including the callback’s parameters
+and return value. You can include any of the tags that you can provide
+for a &#64;method.</p>
+<p>Once you define a callback, you can use it in the same way as a custom
+type defined with the &#64;typedef tag. In particular, you can use the
+callback’s name as a type name. This allows you to indicate that a
+function parameter should contain a certain type of callback.</p>
+<p>If you want a callback to be displayed with the type definitions for a
+specific class, you can give the callback a namepath indicating that it
+is an inner function of that class. You can also define a global
+callback type that is referenced from multiple classes.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>{% example “Documenting a class-specific callback” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @class</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">Requester</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Send a request.</span>
+<span class="cm"> * @param {Requester~requestCallback} cb - The callback that handles the response.</span>
+<span class="cm"> */</span>
+<span class="nx">Requester</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">send</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// code</span>
+<span class="p">};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * This callback is displayed as part of the Requester class.</span>
+<span class="cm"> * @callback Requester~requestCallback</span>
+<span class="cm"> * @param {number} responseCode</span>
+<span class="cm"> * @param {string} responseMessage</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>{% example “Documenting a global callback” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @class</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">Requester</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Send a request.</span>
+<span class="cm"> * @param {requestCallback} cb - The callback that handles the response.</span>
+<span class="cm"> */</span>
+<span class="nx">Requester</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">send</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// code</span>
+<span class="p">};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * This callback is displayed as a global member.</span>
+<span class="cm"> * @callback requestCallback</span>
+<span class="cm"> * @param {number} responseCode</span>
+<span class="cm"> * @param {string} responseMessage</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-callback.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

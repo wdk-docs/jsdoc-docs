@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Module identifiers &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>JSDoc 3 makes it possible to document modules that follow the
+<a class="reference external" href="http://www.ecma-international.org/ecma-262/6.0/#sec-modules">ECMAScript 2015
+specification</a>.
+ES 2015 modules are supported in JSDoc 3.4.0 and later.</p>
+<div class="section" id="module-identifiers">
+<h1>Module identifiers<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h1>
+<p>When you document an ES 2015 module, you’ll use a <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code>
+tag &lt;tags-module.html&gt;`__ to document the identifier for the module. For
+example, if users load the module by calling
+<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span> <span class="pre">as</span> <span class="pre">myShirt</span> <span class="pre">from</span> <span class="pre">'my/shirt'</span></code>, you’ll write a JSDoc comment
+that contains the tag <code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">my/shirt</span></code>.</p>
+<p>If you use the <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag without a value, JSDoc will try to guess
+the correct module identifier based on the filepath.</p>
+<p>When you use a JSDoc <a class="reference external" href="about-namepaths.html">namepath</a> to refer to a
+module from another JSDoc comment, you must add the prefix <code class="docutils literal notranslate"><span class="pre">module:</span></code>.
+For example, if you want the documentation for the module <code class="docutils literal notranslate"><span class="pre">my/pants</span></code>
+to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <code class="docutils literal notranslate"><span class="pre">`&#64;see</span></code>
+tag &lt;tags-see.html&gt;`__ to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Pants module.</span>
+<span class="cm"> * @module my/pants</span>
+<span class="cm"> * @see module:my/shirt</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>Similarly, the namepath for each member of the module will start with
+<code class="docutils literal notranslate"><span class="pre">module:</span></code>, followed by the module name. For example, if your
+<code class="docutils literal notranslate"><span class="pre">my/pants</span></code> module exports a <code class="docutils literal notranslate"><span class="pre">Jeans</span></code> class, and <code class="docutils literal notranslate"><span class="pre">Jeans</span></code> has an
+instance method named <code class="docutils literal notranslate"><span class="pre">hem</span></code>, the instance method’s longname is
+<code class="docutils literal notranslate"><span class="pre">module:my/pants.Jeans#hem</span></code>.</p>
+</div>
+<div class="section" id="exported-values">
+<h1>Exported values<a class="headerlink" href="#exported-values" title="永久链接至标题">¶</a></h1>
+<p>The following example shows how to document different kinds of exported
+values in an ES 2015 module. In most cases, you can simply add a JSDoc
+comment to the <code class="docutils literal notranslate"><span class="pre">export</span></code> statement that defines the exported value. If
+you are exporting a value under another name, you can document the
+exported value within its <code class="docutils literal notranslate"><span class="pre">export</span></code> block.</p>
+<p>{% example “Documenting values exported by a module” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module color/mixer */</span>
+
+<span class="cm">/** The name of the module. */</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;mixer&#39;</span><span class="p">;</span>
+
+<span class="cm">/** The most recent blended color. */</span>
+<span class="kr">export</span> <span class="kd">var</span> <span class="nx">lastColor</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Blend two colors together.</span>
+<span class="cm"> * @param {string} color1 - The first color, in hexadecimal format.</span>
+<span class="cm"> * @param {string} color2 - The second color, in hexadecimal format.</span>
+<span class="cm"> * @return {string} The blended color.</span>
+<span class="cm"> */</span>
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">blend</span><span class="p">(</span><span class="nx">color1</span><span class="p">,</span> <span class="nx">color2</span><span class="p">)</span> <span class="p">{}</span>
+
+<span class="c1">// convert color to array of RGB values (0-255)</span>
+<span class="kd">function</span> <span class="nx">rgbify</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{}</span>
+
+<span class="kr">export</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Get the red, green, and blue values of a color.</span>
+<span class="cm">     * @function</span>
+<span class="cm">     * @param {string} color - A color, in hexadecimal format.</span>
+<span class="cm">     * @returns {Array.&amp;lt;number&gt;} An array of the red, green, and blue values,</span>
+<span class="cm">     * each ranging from 0 to 255.</span>
+<span class="cm">     */</span>
+    <span class="nx">rgbify</span> <span class="nx">as</span> <span class="nx">toRgb</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/howto/howto-es2015-modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

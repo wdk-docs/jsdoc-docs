@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;external</span> <span class="pre">&lt;NameOfExternal&gt;</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;external</span></code> tag identifies a class, namespace, or module that is
+defined outside of the current package. By using this tag, you can
+document your package’s extensions to the external symbol, or you can
+provide information about the external symbol to your package’s users.
+You can also refer to the external symbol’s namepath in any other JSDoc
+tag.</p>
+<p>The namepath for an external symbol always uses the prefix <code class="docutils literal notranslate"><span class="pre">external:</span></code>
+(for example, <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">external:Foo}</span></code> or <code class="docutils literal notranslate"><span class="pre">&#64;augments</span> <span class="pre">external:Foo</span></code>).
+However, you can omit this prefix from the <code class="docutils literal notranslate"><span class="pre">&#64;external</span></code> tag.</p>
+<p><strong>Note</strong>: You should only add the <code class="docutils literal notranslate"><span class="pre">&#64;external</span></code> tag to the highest-level
+symbol that is defined outside of your project. See “<a class="reference external" href="#nested-external-symbol">Documenting a
+nested external symbol</a>” for an example.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>The following example shows how to document the built-in <code class="docutils literal notranslate"><span class="pre">String</span></code>
+object as an external, along with the new instance method
+<code class="docutils literal notranslate"><span class="pre">external:String#rot13</span></code>:</p>
+<p>{% example “Documenting methods added to built-in classes” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * The built in string object.</span>
+<span class="cm"> * @external String</span>
+<span class="cm"> * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String|String}</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Create a ROT13-encoded version of the string. Added by the `foo` package.</span>
+<span class="cm"> * @function external:String#rot13</span>
+<span class="cm"> * @example</span>
+<span class="cm"> * var greeting = new String(&#39;hello world&#39;);</span>
+<span class="cm"> * console.log( greeting.rot13() ); // uryyb jbeyq</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>The following example documents a new <code class="docutils literal notranslate"><span class="pre">starfairy</span></code> function added to
+the external namespace <code class="docutils literal notranslate"><span class="pre">&quot;jQuery.fn&quot;</span></code>:</p>
+<p>{% example “Documenting external namespaces” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * The jQuery plugin namespace.</span>
+<span class="cm"> * @external &quot;jQuery.fn&quot;</span>
+<span class="cm"> * @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * A jQuery plugin to make stars fly around your home page.</span>
+<span class="cm"> * @function external:&quot;jQuery.fn&quot;.starfairy</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>In the following example, the class <code class="docutils literal notranslate"><span class="pre">EncryptedRequest</span></code> is documented
+as a subclass of the built-in class <code class="docutils literal notranslate"><span class="pre">XMLHttpRequest</span></code>:</p>
+<p>{% example “Extending an external.” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * The built-in class for sending HTTP requests.</span>
+<span class="cm"> * @external XMLHttpRequest</span>
+<span class="cm"> * @see https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Extends the built-in `XMLHttpRequest` class to send data encoded with a secret key.</span>
+<span class="cm"> * @class EncodedRequest</span>
+<span class="cm"> * @extends external:XMLHttpRequest</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>You should only add the <code class="docutils literal notranslate"><span class="pre">&#64;external</span></code> tag to the highest-level symbol
+that is defined outside of your project. In the following example, the
+documentation refers to the external class <code class="docutils literal notranslate"><span class="pre">security.TLS</span></code>. As a
+result, the <code class="docutils literal notranslate"><span class="pre">&#64;external</span></code> tag is used to document the external namespace
+<code class="docutils literal notranslate"><span class="pre">external:security</span></code>, but <em>not</em> the external class
+<code class="docutils literal notranslate"><span class="pre">external:security.TLS</span></code>.</p>
+<p>{% example “Documenting a nested external symbol” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * External namespace for security-related classes.</span>
+<span class="cm"> * @external security</span>
+<span class="cm"> * @see http://example.org/docs/security</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * External class that provides Transport Layer Security (TLS) encryption.</span>
+<span class="cm"> * @class TLS</span>
+<span class="cm"> * @memberof external:security</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-external.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

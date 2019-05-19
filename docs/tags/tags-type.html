@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;type</span> <span class="pre">{typeName}</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The &#64;type tag allows you to provide a type expression identifying the
+type of value that a symbol may contain, or the type of value returned
+by a function. You can also include type expressions with many other
+JSDoc tags, such as the [&#64;param tag]<a class="reference external" href="tags-param.html">param-tag</a>.</p>
+<p>A type expression can include the JSDoc namepath to a symbol (for
+example, <code class="docutils literal notranslate"><span class="pre">myNamespace.MyClass</span></code>); a built-in JavaScript type (for
+example, <code class="docutils literal notranslate"><span class="pre">string</span></code>); or a combination of these. You can use any <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#type-expressions">Google
+Closure Compiler type
+expression</a>,
+as well as several other formats that are specific to JSDoc.</p>
+<p>If JSDoc determines that a type expression is invalid, it will display
+an error and stop running. You can turn this error into a warning by
+running JSDoc with the <code class="docutils literal notranslate"><span class="pre">--lenient</span></code> option.</p>
+<p><strong>Note</strong>: Full support for Google Closure Compiler-style type
+expressions is available in JSDoc 3.2 and later. Earlier versions of
+JSDoc included partial support for Closure Compiler type expressions.</p>
+<p>Each type is specified by providing a type expression, using one of the
+formats described below. Where appropriate, JSDoc will automatically
+create links to the documentation for other symbols. For example,
+<code class="docutils literal notranslate"><span class="pre">&#64;type</span> <span class="pre">{MyClass}</span></code> will link to the MyClass documentation if that
+symbol has been documented.</p>
+<table id="jsdoc-types" name="jsdoc-types"><tr><th><p>Type name</p>
+</th><th><p>Syntax examples</p>
+</th><th><p>Description</p>
+</th></tr><tr><td><p>Symbol name (name expression)</p>
+</td><td><p>{% example %}</p>
+<pre class="prettyprint"><code>{boolean}
+{myNamespace.MyClass}
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>Specifies the name of a symbol. If you have documented the symbol, JSDoc
+creates a link to the documentation for that symbol.</p>
+</p></td></tr><tr><td><p>Multiple types (type union)</p>
+</td><td><p>{% example “This can be a number or a boolean.” %}</p>
+<pre class="prettyprint"><code>{(number|boolean)}
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>This means a value can have one of several types, with the entire list
+of types enclosed in parentheses and separated by |.</p>
+</p></td></tr><tr><td><p>Arrays and objects (type applications and record types)</p>
+</td><td><p>{% example “An array of MyClass instances.” %}</p>
+<pre class="prettyprint"><code>{Array.&lt;MyClass&gt;}
+// or:
+{MyClass[]}
+</code></pre><p>{% endexample %}</p>
+<p>{% example “An object with string keys and number values:” %}</p>
+<pre class="prettyprint"><code>{Object.&lt;string, number&gt;}
+</code></pre><p>{% endexample %}</p>
+<p>{% example “An object called ‘myObj’ with properties ‘a’ (a number), ‘b’
+(a string) and ‘c’ (any type).” %}</p>
+<pre class="prettyprint"><code>&#123;{a: number, b: string, c}} myObj
+// or:
+{Object} myObj
+{number} myObj.a
+{string} myObj.b
+{*} myObj.c
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>JSDoc supports Closure Compiler’s syntax for defining array and object
+types.</p>
+<p><p><p>You can also indicate an array by appending [] to the type that is
+contained in the array. For example, the expression string[] indicates
+an array of strings.</p>
+</p><p><p>For objects that have a known set of properties, you can use Closure
+Compiler’s syntax for documenting record types. You can document each
+property individually, which enables you to provide more detailed
+information about each property.</p>
+</p></td></tr><tr><td><p>Nullable type</p>
+</td><td><p>{% example “A number or null.” %}</p>
+<pre class="prettyprint"><code>{?number}
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>This indicates that the type is either the specified type, or null.</p>
+</p></td></tr><tr><td><p>Non-nullable type</p>
+</td><td><p>{% example “A number, but never null.” %}</p>
+<pre class="prettyprint"><code>{!number}
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>Indicates that the value is of the specified type, but cannot be null.</p>
+</p></td></tr><tr><td><p>Variable number of that type</p>
+</td><td><p>{% example “This function accepts a variable number of numeric
+parameters.” %}</p>
+<pre class="prettyprint"><code>@param {...number} num
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>Indicates that the function accepts a variable number of parameters, and
+specifies a type for the parameters. For example:</p>
+</p><p>{% example %}</p>
+<pre class="prettyprint"><code>/**
+ * Returns the sum of all numbers passed to the function.
+ * @param {...number} num A positive or negative number
+ */
+function sum(num) {
+    var i=0, n=arguments.length, t=0;
+    for (; i&lt;n; i++) {
+        t += arguments[i];
+    }
+    return t;
+}
+</code></pre><p>{% endexample %}</p>
+</td></tr><tr><td><p>Optional parameter</p>
+</td><td><p>{% example “An optional parameter named foo.” %}</p>
+<pre class="prettyprint"><code>@param {number} [foo]
+// or:
+@param {number=} foo
+</code></pre><p>{% endexample %}</p>
+<p>{% example “An optional parameter foo with default value 1.” %}</p>
+<pre class="prettyprint"><code>@param {number} [foo=1]
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>Indicates that the parameter is optional. When using JSDoc’s syntax for
+optional parameters, you can also indicate the value that will be used
+if a parameter is omitted.</p>
+</p></td></tr><tr><td><p>Callbacks</p>
+</td><td><p>{% example %}</p>
+<pre class="prettyprint"><code>/**
+ * @callback myCallback
+ * @param {number} x - ...
+ */
+
+/** @type {myCallback} */
+var cb;
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>Document a callback using the &#64;callback tag. The syntax is identical to
+the &#64;typedef tag, except that a callback’s type is always “function.”</p>
+</p></td></tr><tr><td><p>Type definitions</p>
+</td><td><p>{% example “Documenting a type with properties ‘id’, ‘name’, ‘age’.” %}</p>
+<pre class="prettyprint"><code>/**
+ * @typedef PropertiesHash
+ * @type {object}
+ * @property {string} id - an ID.
+ * @property {string} name - your name.
+ * @property {number} age - your age.
+ */
+
+/** @type {PropertiesHash} */
+var props;
+</code></pre><p>{% endexample %}</p>
+</td><td><p><p>You can document complex types using the &#64;typedef tag, then refer to the
+type definition elsewhere in your documentation.</p>
+</p></td></tr></table></div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>{% example “Example” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @type {(string|Array.&lt;string&gt;)} */</span>
+<span class="kd">var</span> <span class="nx">foo</span><span class="p">;</span>
+<span class="cm">/** @type {number} */</span>
+<span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>In many cases, you can include a type expression as part of another tag,
+rather than including a separate &#64;type tag in your JSDoc comment.</p>
+<p>{% example “Type expressions can accompany many tags.” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @type {number}</span>
+<span class="cm"> * @const</span>
+<span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">FOO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">// same as:</span>
+
+<span class="cm">/** @const {number} */</span>
+<span class="kd">var</span> <span class="nx">FOO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-type.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

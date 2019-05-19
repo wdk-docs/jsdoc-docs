@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Examples &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>At its most basic level, JSDoc is used like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="n">yourSourceCodeFile</span><span class="o">.</span><span class="n">js</span> <span class="n">anotherSourceCodeFile</span><span class="o">.</span><span class="n">js</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">...</span></code> are paths to other files to generate documentation for.</p>
+<p>Additionally, one may provide the path to a <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown
+file</a> (ending in “.md”)
+or a file named “README”, and this will be added to the documentation on
+the front page. See <a class="reference external" href="about-including-readme.html">these
+instructions</a>.</p>
+<p>JSDoc supports a number of command-line options, many of which have both
+long and short forms. Alternatively, the command-line options may be
+<a class="reference external" href="about-configuring-jsdoc.html">specified in a configuration file</a>
+given to JSDoc. The command-line options are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-a</span> <span class="pre">&lt;value&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--access</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p>Only display symbols with the given
+<code class="docutils literal notranslate"><span class="pre">access</span></code> property: <code class="docutils literal notranslate"><span class="pre">private</span></code>,
+<code class="docutils literal notranslate"><span class="pre">protected</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">undefined</span></code>, or <code class="docutils literal notranslate"><span class="pre">all</span></code> for all access
+levels. By default, all except <code class="docutils literal notranslate"><span class="pre">private</span></code>
+symbols are shown.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">&lt;value&gt;</span></code>,
+<a href="#id1"><span class="problematic" id="id2">``</span></a>–configure &lt;value&gt;`
+`</p></td>
+<td><p>The path to a JSDoc <a class="reference external" href="about-configuring-jsdoc.html">configuration
+file</a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> or
+<code class="docutils literal notranslate"><span class="pre">conf.json.EXAMPLE</span></code> in the directory
+where JSDoc is installed.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">&lt;value&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--destination</span> <span class="pre">&lt;value</span>
+<span class="pre">&gt;</span></code></p></td>
+<td><p>The path to the output folder for the
+generated documentation. For JSDoc’s
+built-in Haruki template, use <code class="docutils literal notranslate"><span class="pre">console</span></code>
+to dump data to the console. Defaults to
+<code class="docutils literal notranslate"><span class="pre">./out</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--debug</span></code></p></td>
+<td><p>Log information that can help debug issues
+in JSDoc itself.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">&lt;value&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--encoding</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p>Assume this encoding when reading all
+source files. Defaults to <code class="docutils literal notranslate"><span class="pre">utf8</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></p></td>
+<td><p>Display information about JSDoc’s
+command-line options, then exit.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--match</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p>Only run tests whose names contain
+<code class="docutils literal notranslate"><span class="pre">value</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--nocolor</span></code></p></td>
+<td><p>When running tests, do not use color in the
+console output. On Windows, this option is
+enabled by default.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--private</span></code></p></td>
+<td><p>Include symbols marked with the
+<code class="docutils literal notranslate"><span class="pre">`&#64;private</span></code> tag &lt;tags-private.html&gt;`__ in
+the generated documentation. By default,
+private symbols are not included.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--package</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file that contains the
+project name, version, and other details.
+Defaults to the first <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file
+found in the source paths.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--pedantic</span></code></p></td>
+<td><p>Treat errors as fatal errors, and treat
+warnings as errors. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-q</span> <span class="pre">&lt;value&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--query</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p>A query string to parse and store in the
+global variable <code class="docutils literal notranslate"><span class="pre">env.opts.query</span></code>.
+Example: <code class="docutils literal notranslate"><span class="pre">foo=bar&amp;baz=true</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--recurse</span></code></p></td>
+<td><p>Recurse into subdirectories when scanning
+for source files and tutorials.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-R</span></code>, <code class="docutils literal notranslate"><span class="pre">--readme</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file to include in the
+generated documentation. Defaults to the
+first <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file found in the
+source paths.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">&lt;value&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p>The path to the template to use for
+generating output. Defaults to
+<code class="docutils literal notranslate"><span class="pre">templates/default</span></code>, JSDoc’s built-in
+default template.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-T</span></code>, <code class="docutils literal notranslate"><span class="pre">--test</span></code></p></td>
+<td><p>Run JSDoc’s test suite, and print the
+results to the console.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">&lt;value&gt;</span></code>,
+<a href="#id3"><span class="problematic" id="id4">``</span></a>–tutorials &lt;value&gt;`
+`</p></td>
+<td><p>Directory in which JSDoc should search for
+tutorials. If omitted, no tutorial pages
+will be generated. See the <a class="reference external" href="about-tutorials.html">tutorial
+instructions</a> for
+more information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></p></td>
+<td><p>Displays JSDoc’s version number, then
+exits.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p></td>
+<td><p>Log detailed information to the console as
+JSDoc runs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-X</span></code>, <code class="docutils literal notranslate"><span class="pre">--explain</span></code></p></td>
+<td><p>Dump all doclets to the console in JSON
+format, then exit.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>Generate documentation for files in the <code class="docutils literal notranslate"><span class="pre">./src</span></code> directory, using the
+configuration file <code class="docutils literal notranslate"><span class="pre">/path/to/my/conf.json</span></code>, and save the output in the
+<code class="docutils literal notranslate"><span class="pre">./docs</span></code> directory:</p>
+<p>{% example %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="n">src</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="n">docs</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>Run all JSDoc tests whose names include the word <code class="docutils literal notranslate"><span class="pre">tag</span></code>, and log
+information about each test:</p>
+<p>{% example %}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="o">-</span><span class="n">T</span> <span class="o">--</span><span class="n">match</span> <span class="n">tag</span> <span class="o">--</span><span class="n">verbose</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/about/about-commandline.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

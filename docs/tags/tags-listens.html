@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;listens</span> <span class="pre">&lt;eventName&gt;</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;listens</span></code> tag indicates that a symbol listens for the specified
+event. Use the <code class="docutils literal notranslate"><span class="pre">`&#64;event</span> <span class="pre">tag</span></code> &lt;tags-event.html&gt;`__ to document the
+event’s content.</p>
+</div>
+<div class="section" id="example">
+<h1>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h1>
+<p>The following example shows how to document an event named
+<code class="docutils literal notranslate"><span class="pre">module:hurler~event:snowball</span></code>, as well as a method named
+<code class="docutils literal notranslate"><span class="pre">module:playground/monitor.reportThrowage</span></code> that listens for the event.</p>
+<p>{% example “Documenting an event and its listener” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;hurler&#39;</span><span class="p">,</span> <span class="p">[],</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Event reporting that a snowball has been hurled.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @event module:hurler~snowball</span>
+<span class="cm">     * @property {number} velocity - The snowball&#39;s velocity, in meters per second.</span>
+<span class="cm">     */</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Snowball-hurling module.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @module hurler</span>
+<span class="cm">     */</span>
+    <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Attack an innocent (or guilty) person with a snowball.</span>
+<span class="cm">         *</span>
+<span class="cm">         * @method</span>
+<span class="cm">         * @fires module:hurler~snowball</span>
+<span class="cm">         */</span>
+        <span class="nx">attack</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;snowball&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">velocity</span><span class="o">:</span> <span class="mi">10</span> <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">exports</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">define</span><span class="p">(</span><span class="s1">&#39;playground/monitor&#39;</span><span class="p">,</span> <span class="p">[],</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Keeps an eye out for snowball-throwers.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @module playground/monitor</span>
+<span class="cm">     */</span>
+    <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="cm">/**</span>
+<span class="cm">         * Report the throwing of a snowball.</span>
+<span class="cm">         *</span>
+<span class="cm">         * @method</span>
+<span class="cm">         * @param {module:hurler~event:snowball} e - A snowball event.</span>
+<span class="cm">         * @listens module:hurler~event:snowball</span>
+<span class="cm">         */</span>
+        <span class="nx">reportThrowage</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;snowball thrown: velocity &#39;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">velocity</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">exports</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-listens.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

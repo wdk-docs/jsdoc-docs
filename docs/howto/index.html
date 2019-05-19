@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>howto &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="howto">
+<h1>howto<a class="headerlink" href="#howto" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-identifiers">Module identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-an-object-literal">Function that returns an object literal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#function-that-returns-another-function">Function that returns another function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-declared-in-a-return-statement">Module declared in a return statement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#module-object-passed-to-a-function">Module object passed to a function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-amd-modules.html#multiple-modules-defined-in-one-file">Multiple modules defined in one file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#module-identifiers">Module identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#properties-of-the-exports-object">Properties of the ‘exports’ object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports">Values assigned to ‘module.exports’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#object-literal-assigned-to-module-exports">Object literal assigned to ‘module.exports’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#function-assigned-to-module-exports">Function assigned to ‘module.exports’</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howto-commonjs-modules.html#string-number-or-boolean-assigned-to-module-exports">String, number, or boolean assigned to ‘module.exports’</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#values-assigned-to-module-exports-and-local-variables">Values assigned to ‘module.exports’ and local variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-commonjs-modules.html#properties-added-to-this">Properties added to ‘this’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-classes.html">Documenting a simple class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-classes.html#extending-classes">Extending classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-modules.html">Module identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto-es2015-modules.html#exported-values">Exported values</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/howto/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;namespace</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;SomeName&gt;]</span></code></p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The &#64;namespace tag indicates that an object creates a namespace for its
+members. You can also write a virtual JSDoc comment that defines a
+namespace used by your code.</p>
+<p>If a namespace is defined by a symbol other than an object literal, you
+can include a type expression along with the &#64;namespace tag. If the
+&#64;namespace tag includes a type, it must also include a name.</p>
+<p>You may need to document a namespace whose name includes unusual
+characters, such as “#” or “!”. In these cases, when you document or
+link to the namespace, you must add quotation marks around the portion
+of the namespace that includes unusual characters. See the examples
+below for details.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>{% example “Using the &#64;namespace tag with an object” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * My namespace.</span>
+<span class="cm"> * @namespace</span>
+<span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">MyNamespace</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cm">/** documented as MyNamespace.foo */</span>
+    <span class="nx">foo</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="cm">/** documented as MyNamespace.bar */</span>
+    <span class="nx">bar</span><span class="o">:</span> <span class="mi">1</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>{% example “Using the &#64;namespace tag for virtual comments” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * A namespace.</span>
+<span class="cm"> * @namespace MyNamespace</span>
+<span class="cm"> */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * A function in MyNamespace (MyNamespace.myFunction).</span>
+<span class="cm"> * @function myFunction</span>
+<span class="cm"> * @memberof MyNamespace</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>If a &#64;namespace includes a symbol whose name has unusual characters, you
+must enclose the symbol’s name in double quotes. If the symbol’s name
+already contains one or more double quotes, escape the double quotes
+with a leading backslash ().</p>
+<p>{% example “Using the &#64;namespace tag with unusual member names” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace window */</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Shorthand for the alert function.</span>
+<span class="cm"> * Refer to it as {@link window.&quot;!&quot;} (note the double quotes).</span>
+<span class="cm"> */</span>
+<span class="nb">window</span><span class="p">[</span><span class="s2">&quot;!&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-namespace.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

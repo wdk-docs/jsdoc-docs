@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Module identifiers" href="howto/howto-es2015-modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>JSDoc includes a Markdown plugin that automatically converts
+Markdown-formatted text to HTML. You can use this plugin with any JSDoc
+template. In JSDoc 3.2.2 and later, the Markdown plugin uses the <a class="reference external" href="https://github.com/chjj/marked">marked
+Markdown parser</a>.</p>
+<p><strong>Note</strong>: When you enable the Markdown plugin, be sure to include a
+leading asterisk on each line of your JSDoc comments. If you omit the
+leading asterisks, JSDoc’s parser may remove asterisks that are used for
+Markdown formatting.</p>
+<p>By default, JSDoc looks for Markdown-formatted text in the following
+JSDoc tags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;author</span></code> &lt;tags-author.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;classdesc</span></code> &lt;tags-classdesc.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;description</span></code> &lt;tags-description.html&gt;`__ (including untagged
+descriptions at the start of a JSDoc comment)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;param</span></code> &lt;tags-param.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;property</span></code> &lt;tags-property.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;returns</span></code> &lt;tags-returns.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;see</span></code> &lt;tags-see.html&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`&#64;throws</span></code> &lt;tags-throws.html&gt;`__</p></li>
+</ul>
+<div class="section" id="enabling-the-markdown-plugin">
+<h2>Enabling the Markdown plugin<a class="headerlink" href="#enabling-the-markdown-plugin" title="永久链接至标题">¶</a></h2>
+<p>To enable the Markdown plugin, add the string <code class="docutils literal notranslate"><span class="pre">plugins/markdown</span></code> to
+the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> array in your <a class="reference external" href="about-configuring-jsdoc.html">JSDoc configuration
+file</a>:</p>
+<p>{% example “JSON configuration file that enables the Markdown plugin” %}</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;plugins/markdown&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="converting-markdown-in-additional-jsdoc-tags">
+<h2>Converting Markdown in additional JSDoc tags<a class="headerlink" href="#converting-markdown-in-additional-jsdoc-tags" title="永久链接至标题">¶</a></h2>
+<p>By default, the Markdown plugin only processes <a class="reference external" href="#default-tags">specific JSDoc
+tags</a> for Markdown text. You can handle Markdown text
+in other tags by adding a <code class="docutils literal notranslate"><span class="pre">markdown.tags</span></code> property to your JSDoc
+configuration file. The <code class="docutils literal notranslate"><span class="pre">markdown.tags</span></code> property contains an array of
+the additional doclet properties that can contain Markdown text. (In
+most cases, the name of the doclet property is the same as the tag name.
+However, some tags are stored differently; for example, the <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code>
+tag is stored in a doclet’s <code class="docutils literal notranslate"><span class="pre">params</span></code> property. If you’re not sure how
+a tag’s text is stored in a doclet, run JSDoc with the <code class="docutils literal notranslate"><span class="pre">-X/--explain</span></code>
+tag, which prints each doclet to the console.)</p>
+<p>For example, if the <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> tags accept values that are
+stored in a doclet’s <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> properties, you could enable
+Markdown processing of these tags by adding the following settings to
+your JSDoc configuration file:</p>
+<p>{% example “Converting Markdown in ‘foo’ and ‘bar’ tags” %}</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;plugins/markdown&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;markdown&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="excluding-the-default-tags-from-markdown-processing">
+<h2>Excluding the default tags from Markdown processing<a class="headerlink" href="#excluding-the-default-tags-from-markdown-processing" title="永久链接至标题">¶</a></h2>
+<p>To prevent the Markdown plugin from processing any of the <a class="reference external" href="#default-tags">default JSDoc
+tags</a>, add a <code class="docutils literal notranslate"><span class="pre">markdown.excludeTags</span></code> property to your
+JSDoc configuration file. The <code class="docutils literal notranslate"><span class="pre">markdown.excludeTags</span></code> property contains
+an array of the default tags that should not be processed for Markdown
+text.</p>
+<p>For example, to exclude the <code class="docutils literal notranslate"><span class="pre">author</span></code> tag from Markdown processing:</p>
+<p>{% example “Excluding the ‘author’ tag from Markdown processing” %}</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;plugins/markdown&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;markdown&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;excludeTags&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;author&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="hard-wrapping-text-at-line-breaks">
+<h2>Hard-wrapping text at line breaks<a class="headerlink" href="#hard-wrapping-text-at-line-breaks" title="永久链接至标题">¶</a></h2>
+<p>By default, the Markdown plugin does not hard-wrap text at line breaks.
+This is because it’s normal for a JSDoc comment to be wrapped across
+multiple lines. If you prefer to hard-wrap text at line breaks, set your
+JSDoc configuration file’s <code class="docutils literal notranslate"><span class="pre">markdown.hardwrap</span></code> property to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+This property is available in JSDoc 3.4.0 and later.</p>
+</div>
+<div class="section" id="adding-id-attributes-to-headings">
+<h2>Adding ID attributes to headings<a class="headerlink" href="#adding-id-attributes-to-headings" title="永久链接至标题">¶</a></h2>
+<p>By default, the Markdown plugin does not add an <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute to each
+HTML heading. To automatically add <code class="docutils literal notranslate"><span class="pre">id</span></code> attributes based on the
+heading’s text, set your JSDoc configuration file’s
+<code class="docutils literal notranslate"><span class="pre">markdown.idInHeadings</span></code> property to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This property is
+available in JSDoc 3.4.0 and later.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about/index.html">about</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tags/index.html">tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">howto</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enabling-the-markdown-plugin">Enabling the Markdown plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-markdown-in-additional-jsdoc-tags">Converting Markdown in additional JSDoc tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excluding-the-default-tags-from-markdown-processing">Excluding the default tags from Markdown processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hard-wrapping-text-at-line-breaks">Hard-wrapping text at line breaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-id-attributes-to-headings">Adding ID attributes to headings</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="howto/howto-es2015-modules.html" title="上一章">Module identifiers</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/plugins-markdown.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

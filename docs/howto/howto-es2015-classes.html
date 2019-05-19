@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Documenting a simple class &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>JSDoc 3 makes it easy to document classes that follow the <a class="reference external" href="http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions">ECMAScript
+2015
+specification</a>.
+You don’t need to use tags such as <code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;constructor</span></code> with
+ES 2015 classes—JSDoc automatically identifies classes and their
+constructors simply by parsing your code. ES 2015 classes are supported
+in JSDoc 3.4.0 and later.</p>
+<div class="section" id="documenting-a-simple-class">
+<h1>Documenting a simple class<a class="headerlink" href="#documenting-a-simple-class" title="永久链接至标题">¶</a></h1>
+<p>The following example shows how to document a simple class with a
+constructor, two instance methods, and one static method:</p>
+<p>{% example “Simple ES 2015 class” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Class representing a point. */</span>
+<span class="kr">class</span> <span class="nx">Point</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Create a point.</span>
+<span class="cm">     * @param {number} x - The x value.</span>
+<span class="cm">     * @param {number} y - The y value.</span>
+<span class="cm">     */</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Get the x value.</span>
+<span class="cm">     * @return {number} The x value.</span>
+<span class="cm">     */</span>
+    <span class="nx">getX</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Get the y value.</span>
+<span class="cm">     * @return {number} The y value.</span>
+<span class="cm">     */</span>
+    <span class="nx">getY</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Convert a string containing two comma-separated numbers into a point.</span>
+<span class="cm">     * @param {string} str - The string containing two comma-separated numbers.</span>
+<span class="cm">     * @return {Point} A Point object.</span>
+<span class="cm">     */</span>
+    <span class="kr">static</span> <span class="nx">fromString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>You can also document classes that are defined in a class expression,
+which assigns the class to a variable or constant:</p>
+<p>{% example “ES 2015 class expression” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Class representing a point. */</span>
+<span class="kr">const</span> <span class="nx">Point</span> <span class="o">=</span> <span class="kr">class</span> <span class="p">{</span>
+    <span class="c1">// and so on</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="extending-classes">
+<h1>Extending classes<a class="headerlink" href="#extending-classes" title="永久链接至标题">¶</a></h1>
+<p>When you use the <code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword to extend an existing class, you
+also need to tell JSDoc which class you’re extending. You do this with
+the <code class="docutils literal notranslate"><span class="pre">`&#64;augments</span></code> (or <code class="docutils literal notranslate"><span class="pre">&#64;extends</span></code>) tag &lt;tags-augments.html&gt;`__.</p>
+<p>For example, to extend the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class shown above:</p>
+<p>{% example “Extending an ES 2015 class” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Class representing a dot.</span>
+<span class="cm"> * @extends Point</span>
+<span class="cm"> */</span>
+<span class="kr">class</span> <span class="nx">Dot</span> <span class="kr">extends</span> <span class="nx">Point</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Create a dot.</span>
+<span class="cm">     * @param {number} x - The x value.</span>
+<span class="cm">     * @param {number} y - The y value.</span>
+<span class="cm">     * @param {number} width - The width of the dot, in pixels.</span>
+<span class="cm">     */</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Get the dot&#39;s width.</span>
+<span class="cm">     * @return {number} The dot&#39;s width, in pixels.</span>
+<span class="cm">     */</span>
+    <span class="nx">getWidth</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/howto/howto-es2015-classes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

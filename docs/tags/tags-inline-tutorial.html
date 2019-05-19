@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="p">}</span>
+<span class="p">[</span><span class="n">link</span> <span class="n">text</span><span class="p">]{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="p">}</span>
+<span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="o">|</span><span class="n">link</span> <span class="n">text</span><span class="p">}</span>
+<span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span> <span class="n">link</span> <span class="n">text</span> <span class="p">(</span><span class="n">after</span> <span class="n">the</span> <span class="n">first</span> <span class="n">space</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag creates a link to the tutorial identifier
+that you specify. When you use the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag, you can also
+provide link text, using one of several different formats. If you don’t
+provide any link text, JSDoc uses the tutorial’s title as the link text.</p>
+<p>If you need to link to a namepath or a URL, use the <code class="docutils literal notranslate"><span class="pre">`{&#64;link}</span></code> inline
+tag &lt;tags-inline-link.html&gt;`__ instead of the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>The following example shows all of the ways to provide link text for the
+<code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag:</p>
+<p>{% example “Providing link text” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * See {@tutorial gettingstarted} and [Configuring the Dashboard]{@tutorial dashboard}.</span>
+<span class="cm"> * For more information, see {@tutorial create|Creating a Widget} and</span>
+<span class="cm"> * {@tutorial destroy Destroying a Widget}.</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>If all of these tutorials are defined, and the title of the
+<code class="docutils literal notranslate"><span class="pre">gettingstarted</span></code> tutorial is “Getting Started,” the example above
+produces output similar to the following:</p>
+<p>{% example “Output for <a class="reference external" href="mailto:{&#37;&#52;&#48;link">{<span>&#64;</span>link</a>} tags” %}</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>See <span class="ni">&amp;lt;</span>a href=&quot;tutorial-gettingstarted.html&quot;&gt;Getting Started<span class="ni">&amp;lt;</span>/a&gt; and
+<span class="ni">&amp;lt;</span>a href=&quot;tutorial-dashboard.html&quot;&gt;Configuring the Dashboard<span class="ni">&amp;lt;</span>/a&gt;.
+For more information, see <span class="ni">&amp;lt;</span>a href=&quot;tutorial-create.html&quot;&gt;Creating a Widget<span class="ni">&amp;lt;</span>/a&gt; and
+<span class="ni">&amp;lt;</span>a href=&quot;tutorial-destroy.html&quot;&gt;Destroying a Widget<span class="ni">&amp;lt;</span>/a&gt;.
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-inline-tutorial.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

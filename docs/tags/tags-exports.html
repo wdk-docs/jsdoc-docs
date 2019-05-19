@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syntax &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;exports</span> <span class="pre">&lt;moduleName&gt;</span></code></p>
+<p>In JSDoc 3.3.0 and later, <code class="docutils literal notranslate"><span class="pre">&lt;moduleName&gt;</span></code> may include the <code class="docutils literal notranslate"><span class="pre">module:</span></code>
+prefix. In previous versions, you must omit this prefix.</p>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p>Use the &#64;exports tag when documenting JavaScript modules that export
+anything other than the “exports” object or the “module.exports”
+property.</p>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h1>
+<p>In modules where you are using the special “exports” object, the
+&#64;exports tag is never needed. JSDoc automatically recognizes that this
+object’s members are being exported. Similarly, JSDoc automatically
+recognizes the special “module.exports” property in Node.js modules.</p>
+<p>{% example “CommonJS module” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * A module that says hello!</span>
+<span class="cm"> * @module hello/world</span>
+<span class="cm"> */</span>
+
+<span class="cm">/** Say hello. */</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello world&#39;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>{% example “Node.js module” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * A module that shouts hello!</span>
+<span class="cm"> * @module hello/world</span>
+<span class="cm"> */</span>
+
+<span class="cm">/** SAY HELLO. */</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;HELLO WORLD&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>{% example “AMD module that exports an object literal” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * A module that whispers hello!</span>
+<span class="cm">     * @module hello/world</span>
+<span class="cm">     */</span>
+    <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="cm">/** say hello. */</span>
+    <span class="nx">exports</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;hello world&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">exports</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>{% example “AMD module that exports a constructor” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * A module that creates greeters.</span>
+<span class="cm">     * @module greeter</span>
+<span class="cm">     */</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * @constructor</span>
+<span class="cm">     * @param {string} subject - The subject to greet.</span>
+<span class="cm">     */</span>
+    <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">subject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">subject</span> <span class="o">=</span> <span class="nx">subject</span> <span class="o">||</span> <span class="s1">&#39;world&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="cm">/** Say hello to the subject. */</span>
+    <span class="nx">exports</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">subject</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">exports</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+<p>If your module exports an object named anything other than “exports” or
+“module.exports”, use the &#64;exports tag to indicate what is being
+exported.</p>
+<p>{% example “AMD module that exports an object” %}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * A module that says hello!</span>
+<span class="cm">     * @exports hello/world</span>
+<span class="cm">     */</span>
+    <span class="kd">var</span> <span class="nx">ns</span> <span class="o">=</span> <span class="p">{};</span>
+
+    <span class="cm">/** Say hello. */</span>
+    <span class="nx">ns</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;Hello world&#39;</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">ns</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>{% endexample %}</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tags/tags-exports.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Generating pretty-printed source files &#8212; jsdoc-docs 2.0.19 文档</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>JSDoc’s default template provides several options that you can use to
+customize the appearance and content of generated documentation.</p>
+<p>To use these options, you must <a class="reference external" href="about-configuring-jsdoc.html">create a configuration
+file</a> for JSDoc and set the appropriate
+options in the configuration file.</p>
+<div class="section" id="generating-pretty-printed-source-files">
+<h1>Generating pretty-printed source files<a class="headerlink" href="#generating-pretty-printed-source-files" title="永久链接至标题">¶</a></h1>
+<p>By default, JSDoc’s default template generates pretty-printed versions
+of your source files. It also links to these pretty-printed files in the
+documentation.</p>
+<p>To disable pretty-printed files, set the option
+<code class="docutils literal notranslate"><span class="pre">templates.default.outputSourceFiles</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Using this option
+also removes links to your source files from the documentation. This
+option is available in JSDoc 3.3.0 and later.</p>
+</div>
+<div class="section" id="copying-static-files-to-the-output-directory">
+<h1>Copying static files to the output directory<a class="headerlink" href="#copying-static-files-to-the-output-directory" title="永久链接至标题">¶</a></h1>
+<p>JSDoc’s default template automatically copies a few static files, such
+as CSS stylesheets, to the output directory. In JSDoc 3.3.0 and later,
+you can tell the default template to copy additional static files to the
+output directory. For example, you might want to copy a directory of
+images to the output directory so you can display these images in your
+documentation.</p>
+<p>To copy additional static files to the output directory, use the
+following options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.include</span></code>: An array of paths whose
+contents should be copied to the output directory. Subdirectories
+will be copied as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.exclude</span></code>: An array of paths that
+should <em>not</em> be copied to the output directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.includePattern</span></code>: A regular
+expression indicating which files to copy. If this property is not
+defined, all files will be copied.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.excludePattern</span></code>: A regular
+expression indicating which files to skip. If this property is not
+defined, nothing will be skipped.</p></li>
+</ul>
+<p>{% example “Copying a directory of images to the output directory” %}</p>
+<p>To copy all of the static files in <code class="docutils literal notranslate"><span class="pre">./myproject/static</span></code> to the output
+directory:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;staticFiles&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;include&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;./myproject/static&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If your static files directory contains the file
+<code class="docutils literal notranslate"><span class="pre">./myproject/static/img/screen.png</span></code>, you can display the image in your
+docs by using the HTML tag <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;img/screen.png&quot;&gt;</span></code>.</p>
+<p>{% endexample %}</p>
+</div>
+<div class="section" id="showing-the-current-date-in-the-page-footer">
+<h1>Showing the current date in the page footer<a class="headerlink" href="#showing-the-current-date-in-the-page-footer" title="永久链接至标题">¶</a></h1>
+<p>By default, JSDoc’s default template always shows the current date in
+the footer of the generated documentation. In JSDoc 3.3.0 and later, you
+can omit the current date by setting the option
+<code class="docutils literal notranslate"><span class="pre">templates.default.includeDate</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
+<div class="section" id="showing-longnames-in-the-navigation-column">
+<h1>Showing longnames in the navigation column<a class="headerlink" href="#showing-longnames-in-the-navigation-column" title="永久链接至标题">¶</a></h1>
+<p>By default, JSDoc’s default template shows a shortened version of each
+symbol’s name in the navigation column. For example, the symbol
+<code class="docutils literal notranslate"><span class="pre">my.namespace.MyClass</span></code> would be displayed simply as <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>. To
+show the complete longname instead, set the option
+<code class="docutils literal notranslate"><span class="pre">templates.default.useLongnameInNav</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This option is
+available in JSDoc 3.4.0 and later.</p>
+</div>
+<div class="section" id="overriding-the-default-templates-layout-file">
+<h1>Overriding the default template’s layout file<a class="headerlink" href="#overriding-the-default-templates-layout-file" title="永久链接至标题">¶</a></h1>
+<p>The default template uses a file named <code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> to specify the
+header and footer for each page in the generated documentation. In
+particular, this file defines which CSS and JavaScript files are loaded
+for each page. In JSDoc 3.3.0 and later, you can specify your own
+<code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> file to use, which allows you to load your own custom
+CSS and JavaScript files in addition to, or instead of, the standard
+files.</p>
+<p>To use this feature, set the option <code class="docutils literal notranslate"><span class="pre">templates.default.layoutFile</span></code> to
+the path to your customized layout file. Relative paths are resolved
+against the current working directory; the path to the configuration
+file; and the JSDoc directory, in that order.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">jsdoc-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, BandCap.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.0+/23b560a</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/about/about-configuring-default-template.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
