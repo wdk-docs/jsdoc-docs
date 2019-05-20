@@ -17,21 +17,21 @@ Modules <howto-commonjs-modules.html>`__ for instructions.
 Module identifiers
 ------------------
 
-When you document an AMD module, you’ll use an ```@exports``
-tag <tags-exports.html>`__ or ```@module`` tag <tags-module.html>`__ to
+When you document an AMD module, you’ll use an `@exports
+tag <tags-exports.html>`__ or `@module tag <tags-module.html>`__ to
 document the identifier that’s passed to the ``require()`` function. For
 example, if users load the module by calling
 ``require('my/shirt', /* callback */)``, you’ll write a JSDoc comment
 that contains the tag ``@exports my/shirt`` or ``@module my/shirt``. The
 examples below can help you decide which of these tags to use.
 
-If you use the ``@exports`` or ``@module`` tag without a value, JSDoc
+If you use the :rst:dir:`@exports` or :rst:dir:`@module` tag without a value, JSDoc
 will try to guess the correct module identifier based on the filepath.
 
 When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a
 module from another JSDoc comment, you must add the prefix ``module:``.
 For example, if you want the documentation for the module ``my/pants``
-to link to the module ``my/shirt``, you could use the ```@see``
+to link to the module ``my/shirt``, you could use the `@see
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
 .. code-block:: js
@@ -52,13 +52,12 @@ Function that returns an object literal
 ---------------------------------------
 
 If you define your AMD module as a function that returns an object
-literal, use the ```@exports`` tag <tags-exports.html>`__ to document
+literal, use the ``@exports tag <tags-exports.html>`__ to document
 the module’s name. JSDoc will automatically detect that the object’s
 properties are members of the module.
 
-{% example “Function that returns an object literal” %}
-
 .. code-block:: js
+   :caption: Function that returns an object literal
 
    define('my/shirt', function() {
       /**
@@ -83,20 +82,17 @@ properties are members of the module.
        return shirt;
    });
 
-{% endexample %}
-
 Function that returns another function
 --------------------------------------
 
 If you define your module as a function that exports another function,
 such as a constructor, you can use a standalone comment with a
-```@module`` tag <tags-module.html>`__ to document the module. You can
-then use an ```@alias`` tag <tags-alias.html>`__ to tell JSDoc that the
+`@module  tag <tags-module.html>`__ to document the module. You can
+then use an `@alias  tag <tags-alias.html>`__ to tell JSDoc that the
 function uses the same longname as the module.
 
-{% example “Function that returns a constructor” %}
-
 .. code-block:: js
+   :caption: Function that returns a constructor
 
    /**
     * A module representing a jacket.
@@ -120,20 +116,17 @@ function uses the same longname as the module.
        return Jacket;
    });
 
-{% endexample %}
-
 Module declared in a return statement
 -------------------------------------
 
 If you declare your module object in a function’s ``return`` statement,
-you can use a standalone comment with a ```@module``
+you can use a standalone comment with a `@module
 tag <tags-module.html>`__ to document the module. You can then add an
-```@alias`` tag <tags-alias.html>`__ to tell JSDoc that the module
+`@alias tag <tags-alias.html>`__ to tell JSDoc that the module
 object has the same longname as the module.
 
-{% example “Module declared in a return statement” %}
-
 .. code-block:: js
+   :caption: Module declared in a return statement
 
    /**
     * Module representing a shirt.
@@ -151,19 +144,16 @@ object has the same longname as the module.
        };
    });
 
-{% endexample %}
-
 Module object passed to a function
 ----------------------------------
 
 If the module object is passed into the function that defines your
-module, you can document the module by adding an ```@exports``
+module, you can document the module by adding an `@exports
 tag <tags-exports.html>`__ to the function parameter. This pattern is
 supported in JSDoc 3.3.0 and later.
 
-{% example “Module object passed to a function” %}
-
 .. code-block:: js
+   :caption: Module object passed to a function
 
    define('my/jacket', function(
        /**
@@ -181,18 +171,15 @@ supported in JSDoc 3.3.0 and later.
        };
    });
 
-{% endexample %}
-
 Multiple modules defined in one file
 ------------------------------------
 
 If you define more than one AMD module in a single JavaScript file, use
-the ```@exports`` tag <tags-exports.html>`__ to document each module
+the `@exports tag <tags-exports.html>`__ to document each module
 object.
 
-{% example “Multiple AMD modules defined in one file” %}
-
 .. code-block:: js
+   :caption: Multiple AMD modules defined in one file
 
    // one module
    define('html/utils', function() {
@@ -238,5 +225,3 @@ object.
 
        return tag;
    });
-
-{% endexample %}

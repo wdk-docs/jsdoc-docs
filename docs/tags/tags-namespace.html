@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -129,12 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-mixin.html">&#64;mixin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-module.html">&#64;module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;namespace</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-override.html">&#64;override</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-package.html">&#64;package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-param.html">&#64;param</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,27 +226,21 @@
             
   <div class="section" id="namespace">
 <h1>&#64;namespace<a class="headerlink" href="#namespace" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;namespace</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;SomeName&gt;]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;namespace tag indicates that an object creates a namespace for its
-members. You can also write a virtual JSDoc comment that defines a
-namespace used by your code.</p>
-<p>If a namespace is defined by a symbol other than an object literal, you
-can include a type expression along with the &#64;namespace tag. If the
-&#64;namespace tag includes a type, it must also include a name.</p>
-<p>You may need to document a namespace whose name includes unusual
-characters, such as “#” or “!”. In these cases, when you document or
-link to the namespace, you must add quotation marks around the portion
-of the namespace that includes unusual characters. See the examples
-below for details.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Using the &#64;namespace tag with an object” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;namespace">
+<code class="descname">.. &#64;namespace::</code><a class="headerlink" href="#directive-@namespace" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;namespace</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;SomeName&gt;]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;namespace标记表示对象为其成员创建名称空间. 您还可以编写一个虚拟JSDoc注释, 用于定义代码使用的命名空间.</p>
+<p>如果命名空间由对象文字以外的符号定义, 则可以包含类型表达式以及&#64;namespace标记. 如果&#64;namespace标记包含类型, 则它还必须包含名称.</p>
+<p>您可能需要记录名称中包含不常用字符的名称空间, 例如“＃”或“！”. 在这些情况下, 当您记录或链接到命名空间时, 必须在包含不常用字符的命名空间部分周围添加引号. 有关详细信息, 请参阅以下示例</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;namespace tag with an object</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * My namespace.</span>
 <span class="cm"> * @namespace</span>
@@ -266,8 +253,9 @@ below for details.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Using the &#64;namespace tag for virtual comments” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;namespace tag for virtual comments</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * A namespace.</span>
 <span class="cm"> * @namespace MyNamespace</span>
@@ -280,12 +268,10 @@ below for details.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>If a &#64;namespace includes a symbol whose name has unusual characters, you
-must enclose the symbol’s name in double quotes. If the symbol’s name
-already contains one or more double quotes, escape the double quotes
-with a leading backslash ().</p>
-<p>{% example “Using the &#64;namespace tag with unusual member names” %}</p>
+</div>
+<p>如果&#64;namespace包含名称具有异常字符的符号, 则必须将符号的名称括在双引号中. 如果符号的名称已包含一个或多个双引号, 请使用前导反斜杠()转义双引号.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;namespace tag with unusual member names</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace window */</span>
 
 <span class="cm">/**</span>
@@ -295,8 +281,11 @@ with a leading backslash ().</p>
 <span class="nb">window</span><span class="p">[</span><span class="s2">&quot;!&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span> <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

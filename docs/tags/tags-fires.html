@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -108,12 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-exports.html">&#64;exports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-external.html">&#64;external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-file.html">&#64;file</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;fires</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-function.html">&#64;function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-generator.html">&#64;generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-global.html">&#64;global</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,19 +226,19 @@
             
   <div class="section" id="fires">
 <h1>&#64;fires<a class="headerlink" href="#fires" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;fires</span> <span class="pre">&lt;className&gt;#[event:]&lt;eventName&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;fires tag indicates that a method can fire a specified type of
-event when it is called. Use the [&#64;event
-tag]<a class="reference external" href="tags-event.html">event-tag</a> to document the event’s content.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Method that fires a ‘drain’ event” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;fires">
+<code class="descname">.. &#64;fires::</code><a class="headerlink" href="#directive-@fires" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;fires</span> <span class="pre">&lt;className&gt;#[event:]&lt;eventName&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;fires标记表示方法在调用时可以触发指定类型的事件. 使用[&#64;event标记] `event-tag &lt;tags-event.html&gt;`__来记录事件的内容.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Method that fires a ‘drain’ event</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Drink the milkshake.</span>
 <span class="cm"> *</span>
@@ -256,8 +249,11 @@ tag]<a class="reference external" href="tags-event.html">event-tag</a> to docume
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

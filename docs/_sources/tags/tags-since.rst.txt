@@ -1,28 +1,24 @@
 @since
 =============================
 
-Syntax
-------
+.. rst:directive:: @since
 
-``@since <versionDescription>``
+   :Syntax:
 
-Overview
---------
+      ``@since <versionDescription>``
 
-The @since tag indicates that a class, method, or other symbol was added
-in a specific version.
+   :Overview:
 
-Examples
---------
+      The @since tag indicates that a class, method, or other symbol was added
+      in a specific version.
 
-{% example “Using the @since tag” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @since tag
 
-   /**
-    * Provides access to user information.
-    * @since 1.0.1
-    */
-   function UserRecord() {}
-
-{% endexample %}
+         /**
+          * Provides access to user information.
+          * @since 1.0.1
+          */
+         function UserRecord() {}

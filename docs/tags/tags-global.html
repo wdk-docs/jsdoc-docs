@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -111,11 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-fires.html">&#64;fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-function.html">&#64;function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-generator.html">&#64;generator</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;global</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;global</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-hideconstructor.html">&#64;hideconstructor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-ignore.html">&#64;ignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-implements.html">&#64;implements</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,18 +226,17 @@
             
   <div class="section" id="global">
 <h1>&#64;global<a class="headerlink" href="#global" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;global tag specifies that a symbol should appear in the
-documentation as a <em>global</em> symbol. JSDoc ignores the symbol’s actual
-scope within the source file. This tag is especially useful for symbols
-that are defined locally, then assigned to a global symbol.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>Use the &#64;global tag to specify that a symbol should be documented as
-global.</p>
-<p>{% example “Document an inner variable as a global” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;global">
+<code class="descname">.. &#64;global::</code><a class="headerlink" href="#directive-@global" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>&#64;global标记指定符号应作为* global <a href="#id1"><span class="problematic" id="id2">*</span></a>符号出现在文档中.  JSDoc忽略源文件中符号的实际范围. 此标记对于本地定义的符号特别有用, 然后分配给全局符号.</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>使用&#64;global标记指定应将符号记录为全局.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Document an inner variable as a global</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/** @global */</span>
     <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">&#39;hello foo&#39;</span><span class="p">;</span>
@@ -252,8 +245,11 @@ global.</p>
 <span class="p">}).</span><span class="nx">apply</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

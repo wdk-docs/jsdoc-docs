@@ -194,18 +194,18 @@ Module Definition (AMD) modules (also known as “RequireJS modules”), see
 <div class="section" id="module-identifiers">
 <h2>模块标识符<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h2>
 <p>In most cases, your CommonJS or Node.js module should include a
-standalone JSDoc comment that contains a <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code>
-tag &lt;tags-module.html&gt;`__. The <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag’s value should be the
+standalone JSDoc comment that contains a <a class="reference external" href="tags-module.html">&#64;module
+tag</a>. The <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag’s value should be the
 module identifier that’s passed to the <code class="docutils literal notranslate"><span class="pre">require()</span></code> function. For
 example, if users load the module by calling <code class="docutils literal notranslate"><span class="pre">require('my/shirt')</span></code>,
 your JSDoc comment would contain the tag <code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">my/shirt</span></code>.</p>
-<p>If you use the <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag without a value, JSDoc will try to guess
+<p>If you use the <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag without a value, JSDoc will try to guess
 the correct module identifier based on the filepath.</p>
 <p>When you use a JSDoc <a class="reference external" href="about-namepaths.html">namepath</a> to refer to a
 module from another JSDoc comment, you must add the prefix <code class="docutils literal notranslate"><span class="pre">module:</span></code>.
 For example, if you want the documentation for the module <code class="docutils literal notranslate"><span class="pre">my/pants</span></code>
-to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <code class="docutils literal notranslate"><span class="pre">`&#64;see</span></code>
-tag &lt;tags-see.html&gt;`__ to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
+to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <a class="reference external" href="tags-see.html">&#64;see
+tag</a> to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Pants module.</span>
 <span class="cm"> * @module my/pants</span>
@@ -227,7 +227,8 @@ that the module exports these symbols.</p>
 <p>In the following example, the <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code> module exports the methods
 <code class="docutils literal notranslate"><span class="pre">button</span></code> and <code class="docutils literal notranslate"><span class="pre">unbutton</span></code>. JSDoc will automatically detect that the
 module exports these methods.</p>
-<p>{% example “Methods added to the exports object” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Methods added to the exports object</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Shirt module.</span>
 <span class="cm"> * @module my/shirt</span>
@@ -244,14 +245,14 @@ module exports these methods.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>## 分配给局部变量的值</p>
 <p>In some cases, an exported symbol may be assigned to a local variable
 before it’s added to the <code class="docutils literal notranslate"><span class="pre">exports</span></code> object. For example, if your module
 exports a <code class="docutils literal notranslate"><span class="pre">wash</span></code> method, and the module itself often calls the
 <code class="docutils literal notranslate"><span class="pre">wash</span></code> method, you might write the module as follows:</p>
-<p>{% example “Method assigned to a local variable and added to the exports
-object” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Method assigned to a local variable and added to the exports object</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Shirt module.</span>
 <span class="cm"> * @module my/shirt</span>
@@ -263,15 +264,16 @@ object” %}</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>In this case, JSDoc will <em>not</em> automatically document <code class="docutils literal notranslate"><span class="pre">wash</span></code> as an
 exported method, because the JSDoc comment appears immediately before
 the local variable <code class="docutils literal notranslate"><span class="pre">wash</span></code> rather than <code class="docutils literal notranslate"><span class="pre">exports.wash</span></code>. One solution
-is to add an <code class="docutils literal notranslate"><span class="pre">`&#64;alias</span></code> tag &lt;tags-alias.html&gt;`__ that defines the
+is to add an <a class="reference external" href="tags-alias.html">&#64;alias tag</a> that defines the
 correct longname for the method. In this case, the method is a static
 member of the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, so the correct longname is
 <code class="docutils literal notranslate"><span class="pre">module:my/shirt.wash</span></code>:</p>
-<p>{% example “Longname defined in an &#64;alias tag” %}</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Longname defined in an &#64;alias tag</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Shirt module.</span>
 <span class="cm"> * @module my/shirt</span>
@@ -286,11 +288,12 @@ member of the module <code class="docutils literal notranslate"><span class="pre
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>Another solution is to move the method’s JSDoc comment so it comes
 immediately before <code class="docutils literal notranslate"><span class="pre">exports.wash</span></code>. This change allows JSDoc to detect
 that <code class="docutils literal notranslate"><span class="pre">wash</span></code> is exported by the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>:</p>
-<p>{% example “JSDoc comment immediately before exports.wash” %}</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">JSDoc comment immediately before exports.wash</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Shirt module.</span>
 <span class="cm"> * @module my/shirt</span>
@@ -303,7 +306,7 @@ that <code class="docutils literal notranslate"><span class="pre">wash</span></c
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="values-assigned-to-module-exports">
 <h2>分配给 ‘module.exports’ 的值<a class="headerlink" href="#values-assigned-to-module-exports" title="永久链接至标题">¶</a></h2>
@@ -316,7 +319,8 @@ types of values when they are assigned to <code class="docutils literal notransl
 automatically recognizes that the module exports only this value. In
 addition, JSDoc automatically sets the correct longname for each
 property:</p>
-<p>{% example “Object literal assigned to module.exports” %}</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Object literal assigned to module.exports</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Color mixer.</span>
 <span class="cm"> * @module color/mixer</span>
@@ -345,11 +349,11 @@ property:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>You can also use this pattern if you add properties to
 <code class="docutils literal notranslate"><span class="pre">module.exports</span></code> outside of the object literal:</p>
-<p>{% example “Assignment to module.exports followed by property
-definition” %}</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Assignment to module.exports followed by property definition</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Color mixer.</span>
 <span class="cm"> * @module color/mixer</span>
@@ -378,13 +382,14 @@ definition” %}</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="function-assigned-to-module-exports">
 <h3>分配给 ‘module.exports’ 的函数<a class="headerlink" href="#function-assigned-to-module-exports" title="永久链接至标题">¶</a></h3>
 <p>If you assign a function to <code class="docutils literal notranslate"><span class="pre">module.exports</span></code>, JSDoc will automatically
 set the correct longname for the function:</p>
-<p>{% example “Function assigned to ‘module.exports’” %}</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">分配给 ‘module.exports’ 的函数</span><a class="headerlink" href="#id7" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Color mixer.</span>
 <span class="cm"> * @module color/mixer</span>
@@ -401,9 +406,10 @@ set the correct longname for the function:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>相同的模式适用于构造函数:</p>
-<p>{% example “Constructor assigned to ‘module.exports’” %}</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Constructor assigned to ‘module.exports’</span><a class="headerlink" href="#id8" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Color mixer.</span>
 <span class="cm"> * @module color/mixer</span>
@@ -415,15 +421,16 @@ set the correct longname for the function:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="string-number-or-boolean-assigned-to-module-exports">
 <h3>分配给 ‘module.exports’ 的字符串，数字或布尔值<a class="headerlink" href="#string-number-or-boolean-assigned-to-module-exports" title="永久链接至标题">¶</a></h3>
 <p>For value types (strings, numbers, and booleans) assigned to
 <code class="docutils literal notranslate"><span class="pre">module.exports</span></code>, you must document the exported value’s type by using
-the <code class="docutils literal notranslate"><span class="pre">`&#64;type</span></code> tag &lt;tags-type.html&gt;`__ in the same JSDoc comment as the
-<code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag:</p>
-<p>{% example “String assigned to module.exports” %}</p>
+the <a class="reference external" href="tags-type.html">&#64;type tag</a> in the same JSDoc comment as the
+<a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">String assigned to module.exports</span><a class="headerlink" href="#id9" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Module representing the word of the day.</span>
 <span class="cm"> * @module wotd</span>
@@ -433,18 +440,18 @@ the <code class="docutils literal notranslate"><span class="pre">`&#64;type</spa
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="s1">&#39;perniciousness&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 <div class="section" id="values-assigned-to-module-exports-and-local-variables">
 <h2>分配给 ‘module.exports’ 和局部变量的值<a class="headerlink" href="#values-assigned-to-module-exports-and-local-variables" title="永久链接至标题">¶</a></h2>
 <p>If your module exports symbols that are not directly assigned to
-<code class="docutils literal notranslate"><span class="pre">module.exports</span></code>, you can use the <code class="docutils literal notranslate"><span class="pre">`&#64;exports</span></code>
-tag &lt;tags-exports.html&gt;`__ in place of the <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag. The
-<code class="docutils literal notranslate"><span class="pre">&#64;exports</span></code> tag tells JSDoc that a symbol represents the value exported
+<code class="docutils literal notranslate"><span class="pre">module.exports</span></code>, you can use the <a class="reference external" href="tags-exports.html">&#64;exports
+tag</a> in place of the <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag. The
+<a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> tag tells JSDoc that a symbol represents the value exported
 by a module.</p>
-<p>{% example “Object literal assigned to a local variable and
-module.exports” %}</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Object literal assigned to a local variable and module.exports</span><a class="headerlink" href="#id10" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Color mixer.</span>
 <span class="cm"> * @exports color/mixer</span>
@@ -462,14 +469,15 @@ module.exports” %}</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="properties-added-to-this">
 <h2>添加到 ‘this’ 的属性<a class="headerlink" href="#properties-added-to-this" title="永久链接至标题">¶</a></h2>
 <p>When a module adds a property to its <code class="docutils literal notranslate"><span class="pre">this</span></code> object, JSDoc 3
 automatically recognizes that the new property is exported by the
 module:</p>
-<p>{% example “Properties added to a module’s ‘this’ object” %}</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Properties added to a module’s ‘this’ object</span><a class="headerlink" href="#id11" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Module for bookshelf-related utilities.</span>
 <span class="cm"> * @module bookshelf</span>
@@ -486,7 +494,7 @@ module:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 

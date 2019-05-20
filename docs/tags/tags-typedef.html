@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -149,16 +147,11 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-todo.html">&#64;todo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-tutorial.html">&#64;tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-type.html">&#64;type</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;typedef</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;typedef</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,25 +226,21 @@
             
   <div class="section" id="typedef">
 <h1>&#64;typedef<a class="headerlink" href="#typedef" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;typedef</span> <span class="pre">[&lt;type&gt;]</span> <span class="pre">&lt;namepath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;typedef tag is useful for documenting custom types, particularly if
-you wish to refer to them repeatedly. These types can then be used
-within other tags expecting a type, such as
-[&#64;type]<a class="reference external" href="tags-type.html">type-tag</a> or
-[&#64;param]<a class="reference external" href="tags-param.html">param-tag</a>.</p>
-<p>Use the [&#64;callback]<a class="reference external" href="tags-callback.html">callback-tag</a> tag to
-document the type of callback functions.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>This example defines a union type for parameters that can contain either
-numbers or strings that represent numbers.</p>
-<p>{% example “Using the &#64;typedef tag” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;typedef">
+<code class="descname">.. &#64;typedef::</code><a class="headerlink" href="#directive-@typedef" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;typedef</span> <span class="pre">[&lt;type&gt;]</span> <span class="pre">&lt;namepath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;typedef标记对于记录自定义类型很有用, 特别是如果您希望重复引用它们. 然后可以在期望类型的其他标记中使用这些类型, 例如[&#64;type] `type-tag &lt;tags-type.html&gt;`__或[&#64;param] `param-tag &lt;tags-param.  HTML&gt;`__.</p>
+<p>使用[&#64;callback] `callback-tag &lt;tags-callback.html&gt;`__标记来记录回调函数的类型.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>此示例为参数定义联合类型, 该参数可以包含表示数字的数字或字符串.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;typedef tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * A number, or a string containing a number.</span>
 <span class="cm"> * @typedef {(number|string)} NumberLike</span>
@@ -265,13 +254,10 @@ numbers or strings that represent numbers.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>This example defines a more complex type, an object with several
-properties, and sets its namepath so it will be displayed along with the
-class that uses the type. Because the type definition is not actually
-exposed by the class, it is customary to document the type definition as
-an inner member.</p>
-<p>{% example “Using &#64;typedef to document a complex type for a class” %}</p>
+</div>
+<p>此示例定义了一个更复杂的类型, 一个具有多个属性的对象, 并设置其名称路径, 以便它与使用该类型的类一起显示. 因为类实际上没有公开类型定义, 所以习惯上将类型定义记录为内部成员.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using &#64;typedef to document a complex type for a class</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * The complete Triforce, or one or more components of the Triforce.</span>
 <span class="cm"> * @typedef {Object} WishGranter~Triforce</span>
@@ -289,8 +275,11 @@ an inner member.</p>
 <span class="kd">function</span> <span class="nx">WishGranter</span><span class="p">(</span><span class="nx">triforce</span><span class="p">)</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -110,12 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-file.html">&#64;file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-fires.html">&#64;fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-function.html">&#64;function</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;generator</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-global.html">&#64;global</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-hideconstructor.html">&#64;hideconstructor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-ignore.html">&#64;ignore</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,27 +226,21 @@
             
   <div class="section" id="generator">
 <h1>&#64;generator<a class="headerlink" href="#generator" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;generator</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;generator</span></code> tag indicates that a function is a <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">generator
-function</a>,
-meaning that it was declared using the syntax <code class="docutils literal notranslate"><span class="pre">function*</span> <span class="pre">foo()</span> <span class="pre">{}</span></code>.
-This tag is available in JSDoc 3.5.0 and later.</p>
-<p>In general, you do not need to use this tag, because JSDoc automatically
-detects generator functions and identifies them in the generated
-documentation. However, if you are writing a virtual comment for a
-generator function that does not appear in your code, you can use this
-tag to tell JSDoc that the function is a generator function.</p>
-</div>
-<div class="section" id="example">
-<h2>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
-<p>The following example shows a virtual comment that uses the
-<code class="docutils literal notranslate"><span class="pre">&#64;generator</span></code> tag:</p>
-<p>{% example “Virtual comment with &#64;generator tag” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;generator">
+<code class="descname">.. &#64;generator::</code><a class="headerlink" href="#directive-@generator" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;generator</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p><a href="#id1"><span class="problematic" id="id2">``</span></a>&#64;genere``标签表示函数是一个`生成函数&lt;<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*</a>&gt;`__, 意思是它是使用语法``function * foo(){}``声明的. 此标记在JSDoc 3.5.0及更高版本中可用.</p>
+<p>通常, 您不需要使用此标记, 因为JSDoc会自动检测生成器函数并在生成的文档中标识它们. 但是, 如果您正在为代码中未出现的生成器函数编写虚拟注释, 则可以使用此标记告诉JSDoc该函数是生成器函数.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>以下示例显示了使用``&#64;genere``标记的虚拟注释:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Virtual comment with &#64;generator tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Generate numbers in the Fibonacci sequence.</span>
 <span class="cm"> *</span>
@@ -263,8 +250,11 @@ tag to tell JSDoc that the function is a generator function.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

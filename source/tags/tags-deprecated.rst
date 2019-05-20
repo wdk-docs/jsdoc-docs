@@ -1,31 +1,28 @@
 @deprecated
 =============================
 
-Syntax
-------
+.. rst:dir:: @deprecated
 
-``@deprecated [<some text>]``
+   :Syntax:
 
-Overview
---------
+   ``@deprecated [<some text>]``
 
-The @deprecated tag marks a symbol in your code as being deprecated.
+   :Overview:
 
-Examples
---------
+   .. rst:directive:: @deprecated
 
-You can use the @deprecated tag by itself, or include some text that
-describes more about the deprecation.
+      The @deprecated tag marks a symbol in your code as being deprecated.
 
-{% example “Document that the old function has been deprecated since
-version 2.0” %}
+   :Examples:
 
-.. code-block:: js
+      You can use the @deprecated tag by itself, or include some text that
+      describes more about the deprecation.
 
-   /**
-    * @deprecated since version 2.0
-    */
-   function old() {
-   }
+      .. code-block:: js
+         :caption: Document that the old function has been deprecated since version 2.0
 
-{% endexample %}
+         /**
+          * @deprecated since version 2.0
+          */
+         function old() {
+         }

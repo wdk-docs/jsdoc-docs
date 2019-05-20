@@ -99,9 +99,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -176,47 +176,26 @@
             
   <div class="section" id="configuring-jsdoc-s-default-template">
 <h1>配置JSDoc的默认模板<a class="headerlink" href="#configuring-jsdoc-s-default-template" title="永久链接至标题">¶</a></h1>
-<p>JSDoc’s default template provides several options that you can use to
-customize the appearance and content of generated documentation.</p>
-<p>To use these options, you must <a class="reference external" href="about-configuring-jsdoc.html">create a configuration
-file</a> for JSDoc and set the appropriate
-options in the configuration file.</p>
+<p>JSDoc的默认模板提供了几个选项, 您可以使用这些选项来自定义生成的文档的外观和内容.</p>
+<p>要使用这些选项, 您必须为 <a class="reference external" href="configurations-jsdoc.html">JSDoc创建配置文件</a>, 并在配置文件中设置适当的选项.</p>
 <div class="section" id="generating-pretty-printed-source-files">
 <h2>Generating pretty-printed source files<a class="headerlink" href="#generating-pretty-printed-source-files" title="永久链接至标题">¶</a></h2>
-<p>By default, JSDoc’s default template generates pretty-printed versions
-of your source files. It also links to these pretty-printed files in the
-documentation.</p>
-<p>To disable pretty-printed files, set the option
-<code class="docutils literal notranslate"><span class="pre">templates.default.outputSourceFiles</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Using this option
-also removes links to your source files from the documentation. This
-option is available in JSDoc 3.3.0 and later.</p>
+<p>默认情况下, JSDoc的默认模板会生成源文件的精美打印版本. 它还链接到文档中这些漂亮的打印文件.</p>
+<p>要禁用漂亮打印的文件, 请将选项 <code class="docutils literal notranslate"><span class="pre">templates.default.outputSourceFiles</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">false</span></code>. 使用此选项还会从文档中删除指向源文件的链接.  JSDoc 3.3.0及更高版本中提供了此选项.</p>
 </div>
 <div class="section" id="copying-static-files-to-the-output-directory">
 <h2>将静态文件复制到输出目录<a class="headerlink" href="#copying-static-files-to-the-output-directory" title="永久链接至标题">¶</a></h2>
-<p>JSDoc’s default template automatically copies a few static files, such
-as CSS stylesheets, to the output directory. In JSDoc 3.3.0 and later,
-you can tell the default template to copy additional static files to the
-output directory. For example, you might want to copy a directory of
-images to the output directory so you can display these images in your
-documentation.</p>
-<p>To copy additional static files to the output directory, use the
-following options:</p>
+<p>JSDoc的默认模板自动将一些静态文件(如CSS样式表)复制到输出目录. 在JSDoc 3.3.0及更高版本中, 您可以告诉默认模板将其他静态文件复制到输出目录. 例如, 您可能希望将图像目录复制到输出目录, 以便在文档中显示这些图像.</p>
+<p>要将其他静态文件复制到输出目录, 请使用以下选项:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.include</span></code>: An array of paths whose
-contents should be copied to the output directory. Subdirectories
-will be copied as well.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.exclude</span></code>: An array of paths that
-should <em>not</em> be copied to the output directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.includePattern</span></code>: A regular
-expression indicating which files to copy. If this property is not
-defined, all files will be copied.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.excludePattern</span></code>: A regular
-expression indicating which files to skip. If this property is not
-defined, nothing will be skipped.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.include</span></code>: 一组路径, 其内容应复制到输出目录. 子目录也将被复制.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.exclude</span></code>: 应该 <em>不</em> 复制到输出目录的路径数组.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.includePattern</span></code>: 一个正则表达式, 指示要复制的文件. 如果未定义此属性, 则将复制所有文件.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templates.default.staticFiles.excludePattern</span></code>: 一个正则表达式, 指示要跳过的文件. 如果未定义此属性, 则不会跳过任何内容.</p></li>
 </ul>
-<p>{% example “Copying a directory of images to the output directory” %}</p>
-<p>To copy all of the static files in <code class="docutils literal notranslate"><span class="pre">./myproject/static</span></code> to the output
-directory:</p>
+<p>要将 <code class="docutils literal notranslate"><span class="pre">./myproject/static</span></code> 中的所有静态文件复制到输出目录:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Copying a directory of images to the output directory</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -230,40 +209,21 @@ directory:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If your static files directory contains the file
-<code class="docutils literal notranslate"><span class="pre">./myproject/static/img/screen.png</span></code>, you can display the image in your
-docs by using the HTML tag <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;img/screen.png&quot;&gt;</span></code>.</p>
-<p>{% endexample %}</p>
+</div>
+<p>如果你的静态文件目录包含文件 <code class="docutils literal notranslate"><span class="pre">./myproject/static/img/screen.png</span></code>, 你可以使用HTML标签 <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;img/screen.png&quot;&gt;</span></code> 在你的文档中显示图像..</p>
 </div>
 <div class="section" id="showing-the-current-date-in-the-page-footer">
 <h2>在页脚中显示当前日期<a class="headerlink" href="#showing-the-current-date-in-the-page-footer" title="永久链接至标题">¶</a></h2>
-<p>By default, JSDoc’s default template always shows the current date in
-the footer of the generated documentation. In JSDoc 3.3.0 and later, you
-can omit the current date by setting the option
-<code class="docutils literal notranslate"><span class="pre">templates.default.includeDate</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>默认情况下, JSDoc的默认模板始终在生成的文档的页脚中显示当前日期. 在JSDoc 3.3.0及更高版本中, 您可以通过将选项 <code class="docutils literal notranslate"><span class="pre">templates.default.includeDate</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">false</span></code> 来省略当前日期.</p>
 </div>
 <div class="section" id="showing-longnames-in-the-navigation-column">
 <h2>在导航栏中显示长名<a class="headerlink" href="#showing-longnames-in-the-navigation-column" title="永久链接至标题">¶</a></h2>
-<p>By default, JSDoc’s default template shows a shortened version of each
-symbol’s name in the navigation column. For example, the symbol
-<code class="docutils literal notranslate"><span class="pre">my.namespace.MyClass</span></code> would be displayed simply as <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>. To
-show the complete longname instead, set the option
-<code class="docutils literal notranslate"><span class="pre">templates.default.useLongnameInNav</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This option is
-available in JSDoc 3.4.0 and later.</p>
+<p>默认情况下, JSDoc的默认模板在导航列中显示每个符号名称的缩短版本. 例如, 符号 <code class="docutils literal notranslate"><span class="pre">my.namespace.MyClass</span></code> 将简单地显示为 <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>. 要显示完整的长名称, 请将选项 <code class="docutils literal notranslate"><span class="pre">templates.default.useLongnameInNav</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.  JSDoc 3.4.0及更高版本中提供了此选项.</p>
 </div>
 <div class="section" id="overriding-the-default-templates-layout-file">
 <h2>覆盖默认模板的布局文件<a class="headerlink" href="#overriding-the-default-templates-layout-file" title="永久链接至标题">¶</a></h2>
-<p>The default template uses a file named <code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> to specify the
-header and footer for each page in the generated documentation. In
-particular, this file defines which CSS and JavaScript files are loaded
-for each page. In JSDoc 3.3.0 and later, you can specify your own
-<code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> file to use, which allows you to load your own custom
-CSS and JavaScript files in addition to, or instead of, the standard
-files.</p>
-<p>To use this feature, set the option <code class="docutils literal notranslate"><span class="pre">templates.default.layoutFile</span></code> to
-the path to your customized layout file. Relative paths are resolved
-against the current working directory; the path to the configuration
-file; and the JSDoc directory, in that order.</p>
+<p>默认模板使用名为 <code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> 的文件为生成的文档中的每个页面指定页眉和页脚. 特别是, 此文件定义为每个页面加载哪些CSS和JavaScript文件. 在JSDoc 3.3.0及更高版本中, 您可以指定自己的 <code class="docutils literal notranslate"><span class="pre">layout.tmpl</span></code> 文件来使用, 除了标准文件之外, 您还可以加载自己的自定义CSS和JavaScript文件.</p>
+<p>要使用此功能, 请将选项 <code class="docutils literal notranslate"><span class="pre">templates.default.layoutFile</span></code> 设置为自定义布局文件的路径. 根据当前工作目录解析相对路径;配置文件的路径;和JSDoc目录, 按此顺序.</p>
 </div>
 </div>
 

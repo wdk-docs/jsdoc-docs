@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-19 22:31+0800\n"
+"POT-Creation-Date: 2019-05-20 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,27 +31,27 @@ msgstr "JSDoc支持两种不同的标记:"
 
 #: ../../source/about/block-inline-tags.rst:9
 msgid "**Block tags**, which are at the top level of a JSDoc comment."
-msgstr "**Block tags**, 它们位于JSDoc评论的顶层."
+msgstr "**块标签**, 它们位于JSDoc评论的顶层."
 
 #: ../../source/about/block-inline-tags.rst:10
 msgid ""
 "**Inline tags**, which are within the text of a block tag or a "
 "description."
-msgstr ""
+msgstr "**内联标记**, 它们位于块标记或描述的文本中. "
 
 #: ../../source/about/block-inline-tags.rst:13
 msgid ""
 "Block tags usually provide detailed information about your code, such as "
 "the parameters that a function accepts. Inline tags usually link to other"
 " parts of the documentation, similar to the anchor tag (``<a>``) in HTML."
-msgstr ""
+msgstr "块标记通常提供有关代码的详细信息, 例如函数接受的参数. 内联标记通常链接到文档的其他部分, 类似于HTML中的锚标记(``<a>``). "
 
 #: ../../source/about/block-inline-tags.rst:18
 msgid ""
 "Block tags always begin with an at sign (``@``). Each block tag must be "
 "followed by a line break, with the exception of the last block tag in a "
 "JSDoc comment."
-msgstr ""
+msgstr "块标记总是以at符号开头(``@``). 除了JSDoc注释中的最后一个块标记之外, 每个块标记后面必须跟一个换行符. "
 
 #: ../../source/about/block-inline-tags.rst:22
 msgid ""
@@ -62,12 +62,16 @@ msgid ""
 "you must escape it with a leading backslash (``\\``). You do not need to "
 "use a line break after inline tags."
 msgstr ""
+"内联标记也以at符号开头. 但是, 内联标签及其文本必须用大括号括起来(``{`` 和 ``}``). ``{`` 表示内联标记的开头, "
+"``}`` 表示内联标记的结尾. 如果你的标签的文本包含一个结束大括号(``}``), 你必须使用前导反斜杠(``\\``)来转义它. "
+"内联标记后不需要使用换行符. "
 
 #: ../../source/about/block-inline-tags.rst:29
+#, fuzzy
 msgid ""
 "Most JSDoc tags are block tags. In general, when this site refers to "
 "“JSDoc tags,” we really mean “block tags.”"
-msgstr ""
+msgstr "大多数JSDoc标记都是块标记. 一般来说, 当这个站点引用 “JSDoc tags,” 我们的意思是 “block tags.”"
 
 #: ../../source/about/block-inline-tags.rst:33
 #: ../../source/about/commandline.rst:111
@@ -80,75 +84,34 @@ msgstr "示例"
 msgid ""
 "In the following example, ``@param`` is a block tag, and ``{@link}`` is "
 "an inline tag:"
-msgstr ""
+msgstr "在下面的例子中, ``@param`` 是一个块标记, ``{@link}`` 是一个内联标记: "
 
 #: ../../source/about/block-inline-tags.rst:38
-#, python-format
-msgid "{% example “Block and inline tags in JSDoc comments” %}"
-msgstr "{% example “Block and inline tags in JSDoc comments” %}"
+#, fuzzy
+msgid "Block and inline tags in JSDoc comments"
+msgstr "JSDoc注释中的块和内联标记"
 
-#: ../../source/about/block-inline-tags.rst:51
-#: ../../source/about/block-inline-tags.rst:70
-#: ../../source/about/block-inline-tags.rst:89
-#: ../../source/about/commandline.rst:123
-#: ../../source/about/commandline.rst:134
-#: ../../source/about/configuring-default-template.rst:71
-#: ../../source/about/configuring-jsdoc.rst:31
-#: ../../source/about/configuring-jsdoc.rst:43
-#: ../../source/about/configuring-jsdoc.rst:77
-#: ../../source/about/configuring-jsdoc.rst:122
-#: ../../source/about/configuring-jsdoc.rst:150
-#: ../../source/about/configuring-jsdoc.rst:172
-#: ../../source/about/configuring-jsdoc.rst:225
-#: ../../source/about/configuring-jsdoc.rst:242
-#: ../../source/about/configuring-jsdoc.rst:293
-#: ../../source/about/configuring-jsdoc.rst:318
-#: ../../source/about/configuring-jsdoc.rst:348
-#: ../../source/about/configuring-jsdoc.rst:397
-#: ../../source/about/getting-started.rst:31
-#: ../../source/about/getting-started.rst:51
-#: ../../source/about/getting-started.rst:70
-#: ../../source/about/getting-started.rst:88
-#: ../../source/about/including-package.rst:36
-#: ../../source/about/including-package.rst:44
-#: ../../source/about/including-readme.rst:32
-#: ../../source/about/including-readme.rst:40
-#: ../../source/about/namepaths.rst:22 ../../source/about/namepaths.rst:51
-#: ../../source/about/namepaths.rst:64 ../../source/about/namepaths.rst:95
-#: ../../source/about/namepaths.rst:117 ../../source/about/namepaths.rst:156
-#: ../../source/about/plugins-markdown.rst:42
-#: ../../source/about/plugins-markdown.rst:74
-#: ../../source/about/plugins-markdown.rst:98 ../../source/about/plugins.rst:30
-#: ../../source/about/plugins.rst:64 ../../source/about/plugins.rst:135
-#: ../../source/about/plugins.rst:239 ../../source/about/plugins.rst:303
-#: ../../source/about/plugins.rst:363 ../../source/about/plugins.rst:375
-#: ../../source/about/plugins.rst:398 ../../source/about/plugins.rst:475
-#: ../../source/about/tutorials.rst:139 ../../source/about/tutorials.rst:161
-#, python-format
-msgid "{% endexample %}"
-msgstr "{% endexample %}"
-
-#: ../../source/about/block-inline-tags.rst:53
+#: ../../source/about/block-inline-tags.rst:50
 msgid ""
 "You can use inline tags within a description, as shown above, or within a"
 " block tag, as shown below:"
-msgstr ""
+msgstr "您可以在说明中使用内联标记, 如上所示, 也可以在块标记内使用, 如下所示: "
 
-#: ../../source/about/block-inline-tags.rst:56
-#, python-format
-msgid "{% example “Inline tag used within a block tag” %}"
-msgstr "{% example “Inline tag used within a block tag” %}"
+#: ../../source/about/block-inline-tags.rst:53
+#, fuzzy
+msgid "Inline tag used within a block tag"
+msgstr "块标记中使用的内联标记"
 
-#: ../../source/about/block-inline-tags.rst:72
+#: ../../source/about/block-inline-tags.rst:66
 msgid ""
 "When you use multiple block tags in a JSDoc comment, they must be "
 "separated by line breaks:"
-msgstr ""
+msgstr "在JSDoc注释中使用多个块标记时, 它们必须用换行符分隔: "
 
-#: ../../source/about/block-inline-tags.rst:75
-#, python-format
-msgid "{% example “Multiple block tags separated by line breaks” %}"
-msgstr "{% example “Multiple block tags separated by line breaks” %}"
+#: ../../source/about/block-inline-tags.rst:69
+#, fuzzy
+msgid "Multiple block tags separated by line breaks"
+msgstr "由换行符分隔的多个块标签"
 
 #: ../../source/about/commandline.rst:2
 msgid "Command-line arguments to JSDoc"
@@ -156,19 +119,23 @@ msgstr "JSDoc的命令行参数"
 
 #: ../../source/about/commandline.rst:4
 msgid "At its most basic level, JSDoc is used like so:"
-msgstr "At its most basic level, JSDoc is used like so:"
+msgstr "在最基本的层面上, JSDoc就像这样使用: "
 
 #: ../../source/about/commandline.rst:10
 msgid "where ``...`` are paths to other files to generate documentation for."
-msgstr "where ``...`` are paths to other files to generate documentation for."
+msgstr "其中 ``...`` 是生成其他文件的路径. "
 
 #: ../../source/about/commandline.rst:12
+#, fuzzy
 msgid ""
 "Additionally, one may provide the path to a `Markdown file "
 "<http://daringfireball.net/projects/markdown/>`__ (ending in “.md”) or a "
 "file named “README”, and this will be added to the documentation on the "
 "front page. See `these instructions <about-including-readme.html>`__."
 msgstr ""
+"另外, 可以提供 `Markdown文件 <http://daringfireball.net/projects/markdown/>`_ (以 "
+"`.md` 结尾)或名为 `README` 的文件的路径, 这将被添加到首页上的文档. 请参阅 `这些说明 <about-including-"
+"readme.html>`__. "
 
 #: ../../source/about/commandline.rst:18
 msgid ""
@@ -177,6 +144,8 @@ msgid ""
 "`specified in a configuration file <about-configuring-jsdoc.html>`__ "
 "given to JSDoc. The command-line options are:"
 msgstr ""
+"JSDoc支持许多命令行选项, 其中许多选项都有长和短格式. 或者, 可以在给予 `JSDoc的配置文件 <about-"
+"configurations-jsdoc.html>`__ 中指定命令行选项. 命令行选项是: "
 
 #: ../../source/about/commandline.rst:24
 msgid "Option"
@@ -196,10 +165,14 @@ msgid ""
 "``protected``, ``public``, or ``undefined``, or ``all`` for all access "
 "levels. By default, all except ``private`` symbols are shown."
 msgstr ""
+"只显示具有给定 ``access`` 属性的符号: ``private``, ``protected``, "
+"``public``或``undefined``, 或者所有访问级别的``all``. 默认情况下, 显示除 `private "
+"`符号以外的所有符号. "
 
 #: ../../source/about/commandline.rst:33
-msgid "``-c <value>``, ``--configure <value>` `"
-msgstr "``-c <value>``, ``--configure <value>` `"
+#, fuzzy
+msgid "``-c <value>``, ``--configure <value>``"
+msgstr "``-c <value>``, ``--configure <value>``"
 
 #: ../../source/about/commandline.rst:33
 msgid ""
@@ -207,6 +180,8 @@ msgid ""
 "jsdoc.html>`__. Defaults to ``conf.json`` or ``conf.json.EXAMPLE`` in the"
 " directory where JSDoc is installed."
 msgstr ""
+"`JSDoc配置文件 <configurations-jsdoc.html>`_ 的路径. 在安装JSDoc的目录中默认为 "
+"``conf.json`` 或 ``conf.json.EXAMPLE``. "
 
 #: ../../source/about/commandline.rst:39
 msgid "``-d <value>``, ``--destination <value >``"
@@ -218,6 +193,8 @@ msgid ""
 "JSDoc’s built-in Haruki template, use ``console`` to dump data to the "
 "console. Defaults to ``./out``."
 msgstr ""
+"生成的文档的输出文件夹的路径. 对于JSDoc的内置Haruki模板, 使用 ``console`` 将数据转储到控制台. 默认为 "
+"``./out``. "
 
 #: ../../source/about/commandline.rst:45
 msgid "``--debug``"
@@ -233,7 +210,7 @@ msgstr "``-e <value>``, ``--encoding <value>``"
 
 #: ../../source/about/commandline.rst:48
 msgid "Assume this encoding when reading all source files. Defaults to ``utf8``."
-msgstr "在读取所有源文件时假设此编码。默认为 ``utf8``."
+msgstr "在读取所有源文件时假设此编码. 默认为 ``utf8``."
 
 #: ../../source/about/commandline.rst:51
 msgid "``-h``, ``--help``"
@@ -241,7 +218,7 @@ msgstr "``-h``, ``--help``"
 
 #: ../../source/about/commandline.rst:51
 msgid "Display information about JSDoc’s command-line options, then exit."
-msgstr "显示有关JSDoc命令行选项的信息，然后退出."
+msgstr "显示有关JSDoc命令行选项的信息, 然后退出."
 
 #: ../../source/about/commandline.rst:54
 msgid "``--match <value>``"
@@ -259,7 +236,7 @@ msgstr "``--nocolor``"
 msgid ""
 "When running tests, do not use color in the console output. On Windows, "
 "this option is enabled by default."
-msgstr ""
+msgstr "运行测试时, 请勿在控制台输出中使用颜色. 在Windows上, 默认情况下启用此选项. "
 
 #: ../../source/about/commandline.rst:61
 msgid "``-p``, ``--private``"
@@ -267,10 +244,10 @@ msgstr "``-p``, ``--private``"
 
 #: ../../source/about/commandline.rst:61
 msgid ""
-"Include symbols marked with the ```@private`` tag <tags-private.html>`__ "
-"in the generated documentation. By default, private symbols are not "
+"Include symbols marked with the `@private  tag <tags-private.html>`__ in "
+"the generated documentation. By default, private symbols are not "
 "included."
-msgstr ""
+msgstr "在生成的文档中包含标有 `@private 标记 <tags-private.html>`__ 的符号. 默认情况下, 不包括私有符号. "
 
 #: ../../source/about/commandline.rst:66
 msgid "``-P``, ``--package``"
@@ -282,6 +259,8 @@ msgid ""
 "other details. Defaults to the first ``package.json`` file found in the "
 "source paths."
 msgstr ""
+"``package.json`` 文件, 包含项目名称, 版本和其他详细信息. 默认为源路径中找到的第一个 ``package.json`` "
+"文件. "
 
 #: ../../source/about/commandline.rst:71
 msgid "``--pedantic``"
@@ -291,7 +270,7 @@ msgstr "``--pedantic``"
 msgid ""
 "Treat errors as fatal errors, and treat warnings as errors. Defaults to "
 "``false``."
-msgstr ""
+msgstr "将错误视为致命错误, 并将警告视为错误. 默认为 `false`. "
 
 #: ../../source/about/commandline.rst:74
 msgid "``-q <value>``, ``--query <value>``"
@@ -301,7 +280,7 @@ msgstr "``-q <value>``, ``--query <value>``"
 msgid ""
 "A query string to parse and store in the global variable "
 "``env.opts.query``. Example: ``foo=bar&baz=true``."
-msgstr ""
+msgstr "用于解析和存储在全局变量 `env.opts.query` 中的查询字符串. 示例: ``foo = bar＆baz = true``. "
 
 #: ../../source/about/commandline.rst:78
 msgid "``-r``, ``--recurse``"
@@ -309,7 +288,7 @@ msgstr "``-r``, ``--recurse``"
 
 #: ../../source/about/commandline.rst:78
 msgid "Recurse into subdirectories when scanning for source files and tutorials."
-msgstr "Recurse into subdirectories when scanning for source files and tutorials."
+msgstr "扫描源文件和教程时, 递归到子目录. "
 
 #: ../../source/about/commandline.rst:81
 msgid "``-R``, ``--readme``"
@@ -319,7 +298,7 @@ msgstr "``-R``, ``--readme``"
 msgid ""
 "The ``README.md`` file to include in the generated documentation. "
 "Defaults to the first ``README.md`` file found in the source paths."
-msgstr ""
+msgstr "要在生成的文档中包含的 ``README.md`` 文件. 默认为源路径中找到的第一个 ``README.md`` 文件. "
 
 #: ../../source/about/commandline.rst:86
 msgid "``-t <value>``, ``--template <value>``"
@@ -329,7 +308,7 @@ msgstr "``-t <value>``, ``--template <value>``"
 msgid ""
 "The path to the template to use for generating output. Defaults to "
 "``templates/default``, JSDoc’s built-in default template."
-msgstr ""
+msgstr "用于生成输出的模板的路径. 默认为 ``templates/default``, JSDoc的内置默认模板. "
 
 #: ../../source/about/commandline.rst:91
 msgid "``-T``, ``--test``"
@@ -337,11 +316,12 @@ msgstr "``-T``, ``--test``"
 
 #: ../../source/about/commandline.rst:91
 msgid "Run JSDoc’s test suite, and print the results to the console."
-msgstr "Run JSDoc’s test suite, and print the results to the console."
+msgstr "运行JSDoc的测试套件, 并将结果打印到控制台. "
 
 #: ../../source/about/commandline.rst:94
+#, fuzzy
 msgid "``-u <value>``, ``--tutorials <value>` `"
-msgstr "``-u <value>``, ``--tutorials <value>` `"
+msgstr "``-u <value>``, ``--tutorials <value>``"
 
 #: ../../source/about/commandline.rst:94
 msgid ""
@@ -349,6 +329,8 @@ msgid ""
 "tutorial pages will be generated. See the `tutorial instructions <about-"
 "tutorials.html>`__ for more information."
 msgstr ""
+"JSDoc应该搜索教程的目录. 如果省略, 则不会生成任何教程页面. 有关更多信息, 请参阅 `教程说明 <about-"
+"tutorials.html>`__. "
 
 #: ../../source/about/commandline.rst:100
 msgid "``-v``, ``--version``"
@@ -356,7 +338,7 @@ msgstr "``-v``, ``--version``"
 
 #: ../../source/about/commandline.rst:100
 msgid "Displays JSDoc’s version number, then exits."
-msgstr "显示JSDoc的版本号，然后退出。"
+msgstr "显示JSDoc的版本号, 然后退出. "
 
 #: ../../source/about/commandline.rst:103
 msgid "``--verbose``"
@@ -366,7 +348,7 @@ msgstr "``--verbose``"
 msgid ""
 "Log detailed information to the console as JSDoc runs. Defaults to "
 "``false``."
-msgstr ""
+msgstr "在JSDoc运行时将详细信息记录到控制台. 默认为 `false`. "
 
 #: ../../source/about/commandline.rst:106
 msgid "``-X``, ``--explain``"
@@ -374,7 +356,7 @@ msgstr "``-X``, ``--explain``"
 
 #: ../../source/about/commandline.rst:106
 msgid "Dump all doclets to the console in JSON format, then exit."
-msgstr "将所有doclet以JSON格式转储到控制台，然后退出。"
+msgstr "将所有doclet以JSON格式转储到控制台, 然后退出. "
 
 #: ../../source/about/commandline.rst:113
 msgid ""
@@ -382,26 +364,14 @@ msgid ""
 "configuration file ``/path/to/my/conf.json``, and save the output in the "
 "``./docs`` directory:"
 msgstr ""
+"使用配置文件 ``/path/to/my/conf.json`` 为 ``/.src`` 目录中的文件生成文档, 并将输出保存在 "
+"``./docs`` 目录中: "
 
-#: ../../source/about/commandline.rst:117
-#: ../../source/about/commandline.rst:128
-#: ../../source/about/configuring-jsdoc.rst:55
-#: ../../source/about/configuring-jsdoc.rst:142
-#: ../../source/about/configuring-jsdoc.rst:159
-#: ../../source/about/configuring-jsdoc.rst:210
-#: ../../source/about/configuring-jsdoc.rst:229
-#: ../../source/about/configuring-jsdoc.rst:285
-#: ../../source/about/configuring-jsdoc.rst:337
-#: ../../source/about/configuring-jsdoc.rst:386
-#, python-format
-msgid "{% example %}"
-msgstr "{% example %}"
-
-#: ../../source/about/commandline.rst:125
+#: ../../source/about/commandline.rst:121
 msgid ""
 "Run all JSDoc tests whose names include the word ``tag``, and log "
 "information about each test:"
-msgstr ""
+msgstr "运行名称中包含单词 ``tag`` 的所有JSDoc测试, 并记录每个测试的日志信息: "
 
 #: ../../source/about/configuring-default-template.rst:2
 msgid "Configuring JSDoc's default template"
@@ -411,14 +381,14 @@ msgstr "配置JSDoc的默认模板"
 msgid ""
 "JSDoc’s default template provides several options that you can use to "
 "customize the appearance and content of generated documentation."
-msgstr ""
+msgstr "JSDoc的默认模板提供了几个选项, 您可以使用这些选项来自定义生成的文档的外观和内容. "
 
 #: ../../source/about/configuring-default-template.rst:7
 msgid ""
 "To use these options, you must `create a configuration file <about-"
 "configuring-jsdoc.html>`__ for JSDoc and set the appropriate options in "
 "the configuration file."
-msgstr ""
+msgstr "要使用这些选项, 您必须为 `JSDoc创建配置文件 <configurations-jsdoc.html>`_, 并在配置文件中设置适当的选项. "
 
 #: ../../source/about/configuring-default-template.rst:12
 msgid "Generating pretty-printed source files"
@@ -429,7 +399,7 @@ msgid ""
 "By default, JSDoc’s default template generates pretty-printed versions of"
 " your source files. It also links to these pretty-printed files in the "
 "documentation."
-msgstr ""
+msgstr "默认情况下, JSDoc的默认模板会生成源文件的精美打印版本. 它还链接到文档中这些漂亮的打印文件. "
 
 #: ../../source/about/configuring-default-template.rst:18
 msgid ""
@@ -438,6 +408,8 @@ msgid ""
 "also removes links to your source files from the documentation. This "
 "option is available in JSDoc 3.3.0 and later."
 msgstr ""
+"要禁用漂亮打印的文件, 请将选项 ``templates.default.outputSourceFiles`` 设置为 ``false``. "
+"使用此选项还会从文档中删除指向源文件的链接.  JSDoc 3.3.0及更高版本中提供了此选项. "
 
 #: ../../source/about/configuring-default-template.rst:24
 msgid "Copying static files to the output directory"
@@ -452,25 +424,27 @@ msgid ""
 "images to the output directory so you can display these images in your "
 "documentation."
 msgstr ""
+"JSDoc的默认模板自动将一些静态文件(如CSS样式表)复制到输出目录. 在JSDoc 3.3.0及更高版本中, "
+"您可以告诉默认模板将其他静态文件复制到输出目录. 例如, 您可能希望将图像目录复制到输出目录, 以便在文档中显示这些图像. "
 
 #: ../../source/about/configuring-default-template.rst:33
 msgid ""
 "To copy additional static files to the output directory, use the "
 "following options:"
-msgstr ""
+msgstr "要将其他静态文件复制到输出目录, 请使用以下选项: "
 
 #: ../../source/about/configuring-default-template.rst:36
 msgid ""
 "``templates.default.staticFiles.include``: An array of paths whose "
 "contents should be copied to the output directory. Subdirectories will be"
 " copied as well."
-msgstr ""
+msgstr "``templates.default.staticFiles.include``: 一组路径, 其内容应复制到输出目录. 子目录也将被复制. "
 
 #: ../../source/about/configuring-default-template.rst:39
 msgid ""
 "``templates.default.staticFiles.exclude``: An array of paths that should "
 "*not* be copied to the output directory."
-msgstr ""
+msgstr "``templates.default.staticFiles.exclude``: 应该 *不* 复制到输出目录的路径数组. "
 
 #: ../../source/about/configuring-default-template.rst:41
 msgid ""
@@ -478,6 +452,8 @@ msgid ""
 "indicating which files to copy. If this property is not defined, all "
 "files will be copied."
 msgstr ""
+"``templates.default.staticFiles.includePattern``: 一个正则表达式, 指示要复制的文件. "
+"如果未定义此属性, 则将复制所有文件. "
 
 #: ../../source/about/configuring-default-template.rst:44
 msgid ""
@@ -485,42 +461,48 @@ msgid ""
 "indicating which files to skip. If this property is not defined, nothing "
 "will be skipped."
 msgstr ""
-
-#: ../../source/about/configuring-default-template.rst:48
-#, python-format
-msgid "{% example “Copying a directory of images to the output directory” %}"
-msgstr "{% example “Copying a directory of images to the output directory” %}"
+"``templates.default.staticFiles.excludePattern``: 一个正则表达式, 指示要跳过的文件. "
+"如果未定义此属性, 则不会跳过任何内容. "
 
 #: ../../source/about/configuring-default-template.rst:50
 msgid ""
 "To copy all of the static files in ``./myproject/static`` to the output "
 "directory:"
-msgstr ""
+msgstr "要将 ``./myproject/static`` 中的所有静态文件复制到输出目录: "
 
-#: ../../source/about/configuring-default-template.rst:67
+#: ../../source/about/configuring-default-template.rst:53
+#, fuzzy
+msgid "Copying a directory of images to the output directory"
+msgstr "将图像目录复制到输出目录"
+
+#: ../../source/about/configuring-default-template.rst:68
 msgid ""
 "If your static files directory contains the file "
 "``./myproject/static/img/screen.png``, you can display the image in your "
 "docs by using the HTML tag ``<img src=\"img/screen.png\">``."
 msgstr ""
+"如果你的静态文件目录包含文件 ``./myproject/static/img/screen.png``, 你可以使用HTML标签 ``<img "
+"src=\"img/screen.png\">`` 在你的文档中显示图像.. "
 
-#: ../../source/about/configuring-default-template.rst:74
+#: ../../source/about/configuring-default-template.rst:72
 msgid "Showing the current date in the page footer"
 msgstr "在页脚中显示当前日期"
 
-#: ../../source/about/configuring-default-template.rst:76
+#: ../../source/about/configuring-default-template.rst:74
 msgid ""
 "By default, JSDoc’s default template always shows the current date in the"
 " footer of the generated documentation. In JSDoc 3.3.0 and later, you can"
 " omit the current date by setting the option "
 "``templates.default.includeDate`` to ``false``."
 msgstr ""
+"默认情况下, JSDoc的默认模板始终在生成的文档的页脚中显示当前日期. 在JSDoc 3.3.0及更高版本中, 您可以通过将选项 "
+"``templates.default.includeDate`` 设置为 ``false`` 来省略当前日期. "
 
-#: ../../source/about/configuring-default-template.rst:82
+#: ../../source/about/configuring-default-template.rst:80
 msgid "Showing longnames in the navigation column"
 msgstr "在导航栏中显示长名"
 
-#: ../../source/about/configuring-default-template.rst:84
+#: ../../source/about/configuring-default-template.rst:82
 msgid ""
 "By default, JSDoc’s default template shows a shortened version of each "
 "symbol’s name in the navigation column. For example, the symbol "
@@ -529,12 +511,16 @@ msgid ""
 "``templates.default.useLongnameInNav`` to ``true``. This option is "
 "available in JSDoc 3.4.0 and later."
 msgstr ""
+"默认情况下, JSDoc的默认模板在导航列中显示每个符号名称的缩短版本. 例如, 符号 ``my.namespace.MyClass`` "
+"将简单地显示为 ``MyClass``. 要显示完整的长名称, 请将选项 "
+"``templates.default.useLongnameInNav`` 设置为 ``true``.  JSDoc "
+"3.4.0及更高版本中提供了此选项. "
 
-#: ../../source/about/configuring-default-template.rst:92
+#: ../../source/about/configuring-default-template.rst:90
 msgid "Overriding the default template’s layout file"
 msgstr "覆盖默认模板的布局文件"
 
-#: ../../source/about/configuring-default-template.rst:94
+#: ../../source/about/configuring-default-template.rst:92
 msgid ""
 "The default template uses a file named ``layout.tmpl`` to specify the "
 "header and footer for each page in the generated documentation. In "
@@ -543,14 +529,19 @@ msgid ""
 "``layout.tmpl`` file to use, which allows you to load your own custom CSS"
 " and JavaScript files in addition to, or instead of, the standard files."
 msgstr ""
+"默认模板使用名为 ``layout.tmpl`` 的文件为生成的文档中的每个页面指定页眉和页脚. 特别是, "
+"此文件定义为每个页面加载哪些CSS和JavaScript文件. 在JSDoc 3.3.0及更高版本中, 您可以指定自己的 "
+"``layout.tmpl`` 文件来使用, 除了标准文件之外, 您还可以加载自己的自定义CSS和JavaScript文件. "
 
-#: ../../source/about/configuring-default-template.rst:102
+#: ../../source/about/configuring-default-template.rst:100
 msgid ""
 "To use this feature, set the option ``templates.default.layoutFile`` to "
 "the path to your customized layout file. Relative paths are resolved "
 "against the current working directory; the path to the configuration "
 "file; and the JSDoc directory, in that order."
 msgstr ""
+"要使用此功能, 请将选项 ``templates.default.layoutFile`` 设置为自定义布局文件的路径. "
+"根据当前工作目录解析相对路径;配置文件的路径;和JSDoc目录, 按此顺序. "
 
 #: ../../source/about/configuring-jsdoc.rst:2
 msgid "Configuring JSDoc with a configuration file"
@@ -558,198 +549,228 @@ msgstr "使用配置文件配置JSDoc"
 
 #: ../../source/about/configuring-jsdoc.rst:5
 msgid "Configuration file formats"
-msgstr "Configuration file formats"
+msgstr "配置文件格式"
 
 #: ../../source/about/configuring-jsdoc.rst:7
 msgid ""
 "To customize JSDoc’s behavior, you can provide a configuration file to "
 "JSDoc in one of the following formats:"
-msgstr ""
+msgstr "要自定义JSDoc的行为, 您可以使用以下格式之一为JSDoc提供配置文件: "
+
+#: ../../source/about/configuring-jsdoc.rst:9
+msgid "A JSON file. In JSDoc 3.3.0 and later, this file may include comments."
+msgstr "一个JSON文件. 在JSDoc 3.3.0及更高版本中, 此文件可能包含注释. "
 
 #: ../../source/about/configuring-jsdoc.rst:10
-msgid "A JSON file. In JSDoc 3.3.0 and later, this file may include comments."
-msgstr "一个JSON文件。在JSDoc 3.3.0及更高版本中，此文件可能包含注释。"
-
-#: ../../source/about/configuring-jsdoc.rst:12
 msgid ""
 "A CommonJS module that exports a single configuration object. This format"
 " is supported in JSDoc 3.5.0 and later."
-msgstr ""
+msgstr "用于导出单个配置对象的CommonJS模块.  JSDoc 3.5.0及更高版本支持此格式. "
 
-#: ../../source/about/configuring-jsdoc.rst:15
+#: ../../source/about/configuring-jsdoc.rst:12
+#, fuzzy
 msgid ""
-"To run JSDoc with a configuration file, use the ```-c`` command-line "
+"To run JSDoc with a configuration file, use the ``-c`` `command-line "
 "option <about-commandline.html>`__ (for example, ``jsdoc -c "
 "/path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``)."
 msgstr ""
+"要使用配置文件运行JSDoc, 请使用 ``-c`` `命令行选项 <about-commandline.html>`_ (例如, ``jsdoc"
+" -c/path/to/conf.json``或``jsdoc -c/path/to/conf.js``). "
 
-#: ../../source/about/configuring-jsdoc.rst:19
+#: ../../source/about/configuring-jsdoc.rst:15
 msgid ""
 "The following examples show a simple configuration file that enables "
 "JSDoc’s `Markdown plugin <plugins-markdown.html>`__. JSDoc’s "
 "configuration options are explained in detail in the following sections."
 msgstr ""
+"以下示例显示了一个简单的配置文件, 该文件启用了JSDoc的 `Markdown插件 <plugins-markdown.html>`__. "
+"以下各节将详细介绍JSDoc的配置选项. "
 
-#: ../../source/about/configuring-jsdoc.rst:23
-#, python-format
-msgid "{% example “JSON configuration file” %}"
-msgstr "{% example “JSON configuration file” %}"
+#: ../../source/about/configuring-jsdoc.rst:19
+#, fuzzy
+msgid "JSON configuration file"
+msgstr "配置文件格式"
 
-#: ../../source/about/configuring-jsdoc.rst:33
-#, python-format
-msgid "{% example “JavaScript configuration file” %}"
-msgstr "{% example “JavaScript configuration file” %}"
+#: ../../source/about/configuring-jsdoc.rst:26
+#, fuzzy
+msgid "JavaScript configuration file"
+msgstr "JavaScript配置文件"
 
-#: ../../source/about/configuring-jsdoc.rst:45
+#: ../../source/about/configuring-jsdoc.rst:35
 msgid ""
 "For a more comprehensive example of a JSON configuration file, see the "
-"file ```conf.json.EXAMPLE`` "
+"file `conf.json.EXAMPLE "
 "<https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__."
 msgstr ""
+"有关JSON配置文件的更全面示例, 请参阅文件 `conf.json.EXAMPLE "
+"<https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__. "
 
-#: ../../source/about/configuring-jsdoc.rst:50
+#: ../../source/about/configuring-jsdoc.rst:39
 msgid "Default configuration options"
 msgstr "默认配置选项"
 
-#: ../../source/about/configuring-jsdoc.rst:52
+#: ../../source/about/configuring-jsdoc.rst:41
 msgid ""
 "If you do not specify a configuration file, JSDoc uses the following "
 "configuration options:"
-msgstr ""
+msgstr "如果未指定配置文件, JSDoc将使用以下配置选项: "
 
-#: ../../source/about/configuring-jsdoc.rst:79
+#: ../../source/about/configuring-jsdoc.rst:63
 msgid "This means:"
 msgstr "这意味着:"
 
-#: ../../source/about/configuring-jsdoc.rst:81
+#: ../../source/about/configuring-jsdoc.rst:65
 msgid "No plugins are loaded (``plugins``)."
-msgstr "No plugins are loaded (``plugins``)."
+msgstr "没有加载插件(``plugins``)."
 
-#: ../../source/about/configuring-jsdoc.rst:82
+#: ../../source/about/configuring-jsdoc.rst:66
 msgid ""
-"If recursion is enabled with the ```-r`` command-line flag <about-"
+"If recursion is enabled with the ``-r`` `command-line flag <about-"
 "commandline.html>`__, JSDoc will search for files 10 levels deep "
 "(``recurseDepth``)."
 msgstr ""
+"如果使用 ``-r`` `命令行标志 <about-commandline.html>`__ 启用递归, "
+"JSDoc将搜索10级深度的文件(``recurseDepth``). "
 
-#: ../../source/about/configuring-jsdoc.rst:85
+#: ../../source/about/configuring-jsdoc.rst:67
 msgid ""
 "Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be processed "
 "(``source.includePattern``)."
-msgstr ""
+msgstr "只处理以 ``.js``, ``.jsdoc`` 和 ``.jsx`` 结尾的文件(``source.includePattern``). "
 
-#: ../../source/about/configuring-jsdoc.rst:87
+#: ../../source/about/configuring-jsdoc.rst:68
 msgid ""
 "Any file starting with an underscore, or in a directory starting with an "
 "underscore, will be ignored (``source.excludePattern``)."
-msgstr ""
+msgstr "任何以下划线开头的文件或以下划线开头的目录都将被忽略(``source.excludePattern``). "
 
-#: ../../source/about/configuring-jsdoc.rst:89
+#: ../../source/about/configuring-jsdoc.rst:69
 msgid ""
 "JSDoc supports code that uses `ES2015 modules <howto-"
 "es2015-modules.html>`__ (``sourceType``)."
-msgstr ""
+msgstr "JSDoc支持使用 `ES2015模块 <howto-es2015-modules.html>`__(``sourceType``)的代码. "
 
-#: ../../source/about/configuring-jsdoc.rst:91
+#: ../../source/about/configuring-jsdoc.rst:70
 msgid "JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``)."
-msgstr "JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``)."
+msgstr "JSDoc允许您使用无法识别的标签(``tags.allowUnknownTags``). "
 
-#: ../../source/about/configuring-jsdoc.rst:93
+#: ../../source/about/configuring-jsdoc.rst:71
 msgid ""
-"Both standard JSDoc tags and `Closure Compiler tags "
+"Both standard JSDoc tags and `Closure Compilertags "
 "<https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-"
-"for-the-Closure-Compiler#jsdoc-tags>`__ are enabled "
+"for-the-Closure-Compiler#jsdoc-tags>`_ are enabled "
 "(``tags.dictionaries``)."
 msgstr ""
+"内联 `{@link} tag <tags-inline-link.html>`__ "
+"以纯文本形式呈现(``templates.cleverLinks``, ``templates.monospaceLinks``). "
 
-#: ../../source/about/configuring-jsdoc.rst:96
+#: ../../source/about/configuring-jsdoc.rst:72
 msgid ""
-"`Inline ``{@link}`` tags <tags-inline-link.html>`__ are rendered in plain"
+"Inline ``{@link}`` `tags <tags-inline-link.html>`__ are rendered in plain"
 " text (``templates.cleverLinks``, ``templates.monospaceLinks``)."
 msgstr ""
+"内联``{@link}``标签<tags-inline-"
+"link.html>`__以纯文本形式呈现(``templates.cleverLinks``, "
+"`templates.monospaceLinks``). "
 
-#: ../../source/about/configuring-jsdoc.rst:99
+#: ../../source/about/configuring-jsdoc.rst:74
 msgid "These options and others are explained in the following sections."
-msgstr "These options and others are explained in the following sections."
+msgstr "以下各节将介绍这些选项和其他选项. "
 
-#: ../../source/about/configuring-jsdoc.rst:102
+#: ../../source/about/configuring-jsdoc.rst:77
 msgid "Configuring plugins"
-msgstr "Configuring plugins"
+msgstr "配置插件"
 
-#: ../../source/about/configuring-jsdoc.rst:104
+#: ../../source/about/configuring-jsdoc.rst:79
 msgid ""
 "To enable plugins, add their paths (relative to the JSDoc folder) into "
 "the ``plugins`` array."
-msgstr ""
+msgstr "要启用插件, 请将它们的路径(相对于JSDoc文件夹)添加到 ``plugins`` 数组中. "
 
-#: ../../source/about/configuring-jsdoc.rst:107
+#: ../../source/about/configuring-jsdoc.rst:81
+#, fuzzy
 msgid ""
 "For example, the following JSON configuration file will enable the "
 "Markdown plugin, which converts Markdown-formatted text to HTML, and the "
 "“summarize” plugin, which autogenerates a summary for each doclet:"
 msgstr ""
+"例如, 以下JSON配置文件将启用Markdown插件(将Markdown格式的文本转换为HTML)和 `summary` (插件)插件, "
+"该插件会自动生成每个doclet的摘要: "
 
-#: ../../source/about/configuring-jsdoc.rst:111
-#, python-format
-msgid "{% example “JSON configuration file with plugins” %}"
-msgstr "{% example “JSON configuration file with plugins” %}"
+#: ../../source/about/configuring-jsdoc.rst:85
+#, fuzzy
+msgid "JSON configuration file with plugins"
+msgstr "带插件的JSON配置文件"
 
-#: ../../source/about/configuring-jsdoc.rst:124
+#: ../../source/about/configuring-jsdoc.rst:97
 msgid ""
 "See the `plugin reference <about-plugins.html>`__ for further "
-"information, and look in `JSDoc’s ``plugins`` directory "
-"<https://github.com/jsdoc3/jsdoc/tree/master/plugins>`__ for the plugins "
+"information, and look in `JSDoc’s plugins directory "
+"<https://github.com/jsdoc3/jsdoc/tree/master/plugins>`_ for the plugins "
 "built into JSDoc."
 msgstr ""
+"有关详细信息, 请参阅 `plugin reference <about-plugins.html>`__ , 并查看 `JSDoc的插件目录 "
+"<https://github.com/jsdoc3/jsdoc/tree/master/plugins>`_ 以获取构建的插件进入JSDoc. "
 
-#: ../../source/about/configuring-jsdoc.rst:129
+#: ../../source/about/configuring-jsdoc.rst:99
 msgid ""
 "You can configure the Markdown plugin by adding a ``markdown`` object to "
 "your configuration file. See `Configuring the Markdown Plugin <plugins-"
 "markdown.html>`__ for details."
 msgstr ""
+"您可以通过在配置文件中添加 ``markdown`` 对象来配置Markdown插件. 有关详细信息, 请参阅 `配置Markdown插件 "
+"<plugins-markdown.html>`__. "
 
-#: ../../source/about/configuring-jsdoc.rst:134
+#: ../../source/about/configuring-jsdoc.rst:102
 msgid "Specifying recursion depth"
-msgstr "Specifying recursion depth"
+msgstr "指定递归深度"
 
-#: ../../source/about/configuring-jsdoc.rst:136
+#: ../../source/about/configuring-jsdoc.rst:104
 msgid ""
 "The ``recurseDepth`` option controls how many levels deep JSDoc will "
 "recursively search for source files and tutorials. This option is "
 "available in JSDoc 3.5.0 and later. This option is used only if you also "
-"specify the ```-r`` command-line flag <about-commandline.html>`__, which "
+"specify the ``-r`` `command-line flag <about-commandline.html>`__, which "
 "tells JSDoc to recursively search for input files."
 msgstr ""
+"``recurseDepth`` 选项控制深度JSDoc将递归搜索源文件和教程的级别.  JSDoc 3.5.0及更高版本中提供了此选项. "
+"仅当您还指定 ``-r`` `命令行标志 <about-commandline.html>`__ 时, 才使用此选项, "
+"该标志告诉JSDoc以递归方式搜索输入文件. "
 
-#: ../../source/about/configuring-jsdoc.rst:153
+#: ../../source/about/configuring-jsdoc.rst:117
 msgid "Specifying input files"
-msgstr "Specifying input files"
+msgstr "指定输入文件"
 
-#: ../../source/about/configuring-jsdoc.rst:155
+#: ../../source/about/configuring-jsdoc.rst:119
 msgid ""
 "The ``source`` set of options, in combination with paths given to JSDoc "
 "on the command line, determines the set of input files that JSDoc uses to"
 " generate documentation."
-msgstr ""
+msgstr "``source`` 选项集与命令行中给JSDoc的路径相结合, 确定了JSDoc用于生成文档的输入文件集. "
 
-#: ../../source/about/configuring-jsdoc.rst:174
+#: ../../source/about/configuring-jsdoc.rst:136
 msgid ""
 "``source.include``: An optional array of paths that contain files for "
 "which JSDoc should generate documentation. The paths given to JSDoc on "
-"the command line are combined with these paths. You can use the ```-r`` "
-"command-line option <about-commandline.html>`__ to recurse into "
+"the command line are combined with these paths. You can use the ``-r`` "
+"`command-line option <about-commandline.html>`__ to recurse into "
 "subdirectories."
 msgstr ""
+"``source.include``: 一个可选的路径数组, 包含JSDoc应该为其生成文档的文件. "
+"在命令行上给JSDoc的路径与这些路径组合在一起. 您可以使用 ``-r`` `命令行选项 <about-commandline.html>`__"
+" 来递归到子目录中. "
 
-#: ../../source/about/configuring-jsdoc.rst:179
+#: ../../source/about/configuring-jsdoc.rst:141
 msgid ""
 "``source.exclude``: An optional array of paths that JSDoc should ignore. "
 "In JSDoc 3.3.0 and later, this array may include subdirectories of the "
 "paths in ``source.include``."
 msgstr ""
+"``source.exclude``: JSDoc应忽略的可选路径数组. 在JSDoc 3.3.0及更高版本中, 此数组可能包含 "
+"``source.include`` 中路径的子目录. "
 
-#: ../../source/about/configuring-jsdoc.rst:182
+#: ../../source/about/configuring-jsdoc.rst:144
+#, fuzzy
 msgid ""
 "``source.includePattern``: An optional string, interpreted as a regular "
 "expression. If present, all filenames must match this regular expression "
@@ -757,8 +778,11 @@ msgid ""
 "“.+\\.js(doc|x)?$”, meaning that only files with the extensions ``.js``, "
 "``.jsdoc``, and ``.jsx`` will be processed."
 msgstr ""
+"``source.includePattern``: 可选字符串, 解释为正则表达式. 如果存在, "
+"则所有文件名必须与要由JSDoc处理的正则表达式匹配. 默认情况下, 此选项设置为 `.+\\.js(doc|x)?$`, 表示只有扩展名为 "
+"``.js``, ``.jsdoc`` 和 ``.jsx`` 的文件将被处理. "
 
-#: ../../source/about/configuring-jsdoc.rst:187
+#: ../../source/about/configuring-jsdoc.rst:149
 msgid ""
 "``source.excludePattern``: An optional string, interpreted as a regular "
 "expression. If present, any file matching this regular expression will be"
@@ -766,140 +790,151 @@ msgid ""
 "underscore (or anything under a directory beginning with an underscore) "
 "is ignored."
 msgstr ""
+"``source.excludePattern``: 可选字符串, 解释为正则表达式. 如果存在, 则将忽略与此正则表达式匹配的任何文件. "
+"默认情况下, 设置此选项以便忽略以下划线开头的文件(或以下划线开头的任何内容下的任何内容). "
 
-#: ../../source/about/configuring-jsdoc.rst:193
+#: ../../source/about/configuring-jsdoc.rst:155
 msgid "These options are interpreted in the following order:"
 msgstr "这些选项按以下顺序解释:"
 
-#: ../../source/about/configuring-jsdoc.rst:195
+#: ../../source/about/configuring-jsdoc.rst:157
 msgid "Start with all paths given on the command line and in ``source.include``."
-msgstr "Start with all paths given on the command line and in ``source.include``."
+msgstr "从命令行和 ``source.include`` 中给出的所有路径开始. "
 
-#: ../../source/about/configuring-jsdoc.rst:197
+#: ../../source/about/configuring-jsdoc.rst:159
 msgid ""
 "For each file found in Step 1, if the regular expression "
 "``source.includePattern`` is present, the filename must match it, or it "
 "is ignored."
-msgstr ""
+msgstr "对于步骤1中找到的每个文件, 如果存在正则表达式 ``source.includePattern`` , 则文件名必须与之匹配, 否则将被忽略. "
 
-#: ../../source/about/configuring-jsdoc.rst:200
+#: ../../source/about/configuring-jsdoc.rst:162
 msgid ""
 "For each file left from Step 2, if the regular expression "
 "``source.excludePattern`` is present, any filename matching this regular "
 "expression is ignored."
-msgstr ""
+msgstr "对于步骤2中剩下的每个文件, 如果存在正则表达式 ``source.excludePattern`` , 则忽略与该正则表达式匹配的任何文件名. "
 
-#: ../../source/about/configuring-jsdoc.rst:203
+#: ../../source/about/configuring-jsdoc.rst:165
 msgid ""
 "For each file left from Step 3, if the file’s path is in "
 "``source.exclude``, it is ignored."
-msgstr ""
+msgstr "对于步骤3中剩下的每个文件, 如果文件的路径在 ``source.exclude`` 中, 则忽略它. "
+
+#: ../../source/about/configuring-jsdoc.rst:168
+msgid "All remaining files after these four steps are processed by JSDoc."
+msgstr "JSDoc处理这四个步骤之后的所有剩余文件. "
+
+#: ../../source/about/configuring-jsdoc.rst:170
+msgid "As an example, suppose you have the following file structure:"
+msgstr "例如, 假设您具有以下文件结构:"
+
+#: ../../source/about/configuring-jsdoc.rst:189
+msgid "In addition, suppose your ``conf.json`` file looks like this example:"
+msgstr "另外, 假设你的 ``conf.json`` 文件看起来像这个例子:"
 
 #: ../../source/about/configuring-jsdoc.rst:206
-msgid "All remaining files after these four steps are processed by JSDoc."
-msgstr "JSDoc处理这四个步骤之后的所有剩余文件。"
-
-#: ../../source/about/configuring-jsdoc.rst:208
-msgid "As an example, suppose you have the following file structure:"
-msgstr "例如，假设您具有以下文件结构:"
-
-#: ../../source/about/configuring-jsdoc.rst:227
-msgid "In addition, suppose your ``conf.json`` file looks like this example:"
-msgstr "另外，假设你的``conf.json``文件看起来像这个例子:"
-
-#: ../../source/about/configuring-jsdoc.rst:244
+#, fuzzy
 msgid ""
 "If you run ``jsdoc myProject/c.js -c /path/to/my/conf.json -r`` from the "
 "file containing the ``myProject`` folder, JSDoc will generate "
 "documentation for the following files:"
 msgstr ""
+"如果从包含 ``myProject`` 文件夹的文件运行 ``jsdoc myProject/c.js "
+"-c/path/to/my/conf.json -r``, JSDoc将生成以下文件的文档: "
 
-#: ../../source/about/configuring-jsdoc.rst:248
+#: ../../source/about/configuring-jsdoc.rst:210
 msgid "``myProject/a.js``"
 msgstr "``myProject/a.js``"
 
-#: ../../source/about/configuring-jsdoc.rst:249
+#: ../../source/about/configuring-jsdoc.rst:211
 msgid "``myProject/c.js``"
 msgstr "``myProject/c.js``"
 
-#: ../../source/about/configuring-jsdoc.rst:250
+#: ../../source/about/configuring-jsdoc.rst:212
 msgid "``myProject/lib/a.js``"
 msgstr "``myProject/lib/a.js``"
 
-#: ../../source/about/configuring-jsdoc.rst:252
+#: ../../source/about/configuring-jsdoc.rst:214
 msgid "Here’s why:"
-msgstr "Here’s why:"
+msgstr "这就是原因:"
 
-#: ../../source/about/configuring-jsdoc.rst:254
+#: ../../source/about/configuring-jsdoc.rst:216
 msgid ""
 "Given ``source.include`` and the paths given on the command line, JSDoc "
 "starts off with these files:"
-msgstr ""
+msgstr "给定 ``source.include`` 和命令行中给出的路径, JSDoc从这些文件开始: "
 
-#: ../../source/about/configuring-jsdoc.rst:257
+#: ../../source/about/configuring-jsdoc.rst:219
 msgid "``myProject/c.js`` (from the command line)"
-msgstr "``myProject/c.js`` (from the command line)"
+msgstr "``myProject/c.js`` (从命令行)"
 
-#: ../../source/about/configuring-jsdoc.rst:258
+#: ../../source/about/configuring-jsdoc.rst:220
 msgid "``myProject/a.js`` (from ``source.include``)"
-msgstr "``myProject/a.js`` (from ``source.include``)"
+msgstr "``myProject/a.js`` (来自 ``source.include``)"
 
-#: ../../source/about/configuring-jsdoc.rst:259
+#: ../../source/about/configuring-jsdoc.rst:221
 msgid ""
 "``myProject/lib/a.js``, ``myProject/lib/ignore.js``, "
 "``myProject/lib/d.txt`` (from ``source.include`` and using the ``-r`` "
 "option)"
 msgstr ""
+"``myProject/lib/a.js``, ``myProject/lib/ignore.js``, "
+"``myProject/lib/d.txt``(来自 ``source.include`` 并使用 ``-r`` 选项)"
 
-#: ../../source/about/configuring-jsdoc.rst:262
+#: ../../source/about/configuring-jsdoc.rst:224
 msgid "``myProject/_private/a.js`` (from ``source.include``)"
-msgstr "``myProject/_private/a.js`` (from ``source.include``)"
+msgstr "``myProject/_private/a.js`` (从 ``source.include``)"
 
-#: ../../source/about/configuring-jsdoc.rst:264
+#: ../../source/about/configuring-jsdoc.rst:226
 msgid ""
 "JSDoc applies ``source.includePattern``, leaving us with all of the above"
 " files *except* ``myProject/lib/d.txt``, which does not end in ``.js``, "
 "``.jsdoc``, or ``.jsx``."
 msgstr ""
+"JSDoc应用``source.includePattern``, 留下我们所有的上述文件 *除了* "
+"``myProject/lib/d.txt``, 它不以 ``.js``, ``.jsdoc`` 结尾, 或 ``.jsx``. "
 
-#: ../../source/about/configuring-jsdoc.rst:267
+#: ../../source/about/configuring-jsdoc.rst:229
 msgid ""
 "JSDoc applies ``source.excludePattern``, which removes "
 "``myProject/_private/a.js``."
-msgstr ""
+msgstr "JSDoc应用``source.excludePattern``, 删除 ``myProject/_private/a.js``. "
 
-#: ../../source/about/configuring-jsdoc.rst:269
+#: ../../source/about/configuring-jsdoc.rst:231
 msgid ""
 "JSDoc applies ``source.exclude``, which removes "
 "``myProject/lib/ignore.js``."
-msgstr ""
+msgstr "JSDoc应用 ``source.exclude``, 删除 ``myProject/lib/ignore.js``. "
 
-#: ../../source/about/configuring-jsdoc.rst:273
+#: ../../source/about/configuring-jsdoc.rst:235
 msgid "Specifying the source type"
 msgstr "指定源类型"
 
-#: ../../source/about/configuring-jsdoc.rst:275
+#: ../../source/about/configuring-jsdoc.rst:237
 msgid ""
 "The ``sourceType`` option affects how JSDoc parses your JavaScript files."
 " This option is available in JSDoc 3.5.0 and later. This option accepts "
 "the following values:"
 msgstr ""
+"``sourceType``选项影响JSDoc解析JavaScript文件的方式.  JSDoc 3.5.0及更高版本中提供了此选项. "
+"此选项接受以下值: "
 
-#: ../../source/about/configuring-jsdoc.rst:279
+#: ../../source/about/configuring-jsdoc.rst:241
 msgid "``module`` (default): Use this value for most types of JavaScript files."
-msgstr "``module`` (default): Use this value for most types of JavaScript files."
+msgstr "``module`` (default): 将此值用于大多数类型的JavaScript文件. "
 
-#: ../../source/about/configuring-jsdoc.rst:281
+#: ../../source/about/configuring-jsdoc.rst:243
 msgid ""
 "``script``: Use this value if JSDoc logs errors such as ``Delete of an "
 "unqualified identifier in strict mode`` when it parses your code."
-msgstr ""
+msgstr "``script``: 如果JSDoc在解析代码时记录诸如 `在严格模式下删除非限定标识符 `之类的错误, 则使用此值. "
 
-#: ../../source/about/configuring-jsdoc.rst:296
+#: ../../source/about/configuring-jsdoc.rst:258
 msgid "Incorporating command-line options into the configuration file"
 msgstr "将命令行选项合并到配置文件中"
 
-#: ../../source/about/configuring-jsdoc.rst:298
+#: ../../source/about/configuring-jsdoc.rst:260
 msgid ""
 "You can put many of JSDoc’s `command-line options <about-"
 "commandline.html>`__ into the configuration file instead of specifying "
@@ -907,36 +942,38 @@ msgid ""
 "options into an ``opts`` section of the configuration file, with the "
 "value set to the option’s value."
 msgstr ""
+"您可以将许多JSDoc的 `命令行选项 <about-commandline.html>`__ 放入配置文件中, 而不是在命令行中指定它们. "
+"为此, 请将相关选项的长名称添加到配置文件的 ``opts`` 部分, 并将值设置为选项的值. "
 
-#: ../../source/about/configuring-jsdoc.rst:304
-#, python-format
-msgid "{% example “JSON configuration file with command-line options” %}"
-msgstr "{% example “JSON configuration file with command-line options” %}"
+#: ../../source/about/configuring-jsdoc.rst:265
+#, fuzzy
+msgid "JSON configuration file with command-line options"
+msgstr "带命令行选项的JSON配置文件"
 
-#: ../../source/about/configuring-jsdoc.rst:320
+#: ../../source/about/configuring-jsdoc.rst:280
 msgid ""
 "By using the ``source.include`` and ``opts`` options, you can put almost "
 "all of the arguments to JSDoc in a configuration file, so that the "
 "command line reduces to:"
-msgstr ""
+msgstr "通过使用 ``source.include`` 和 ``opts`` 选项, 您可以将几乎所有的JSDoc参数放在配置文件中, 以便命令行减少到: "
 
-#: ../../source/about/configuring-jsdoc.rst:328
+#: ../../source/about/configuring-jsdoc.rst:288
 msgid ""
 "When options are specified on the command line *and* in the configuration"
 " file, the command line takes precedence."
-msgstr ""
+msgstr "在配置文件中的命令行*和*上指定选项时, 命令行优先. "
 
-#: ../../source/about/configuring-jsdoc.rst:332
+#: ../../source/about/configuring-jsdoc.rst:292
 msgid "Configuring tags and tag dictionaries"
 msgstr "配置标签和标签词典"
 
-#: ../../source/about/configuring-jsdoc.rst:334
+#: ../../source/about/configuring-jsdoc.rst:294
 msgid ""
 "The options in ``tags`` control which JSDoc tags are allowed and how each"
 " tag is interpreted."
-msgstr ""
+msgstr "``tags`` 中的选项控制允许哪些JSDoc标记以及如何解释每个标记. "
 
-#: ../../source/about/configuring-jsdoc.rst:350
+#: ../../source/about/configuring-jsdoc.rst:310
 msgid ""
 "The ``tags.allowUnknownTags`` property affects how JSDoc handles "
 "unrecognized tags. If you set this option to ``false``, and JSDoc finds a"
@@ -945,34 +982,45 @@ msgid ""
 "later, you can also set this property to an array of tag names that JSDoc"
 " should allow (for example, ``[\"foo\",\"bar\"]``)."
 msgstr ""
+"``tags.allowUnknownTags`` 属性会影响JSDoc处理无法识别的标记的方式. 如果将此选项设置为 `false `, "
+"并且JSDoc找到它无法识别的标记(例如,  ``@ foo``), JSDoc会记录一个警告. 默认情况下, 此选项设置为 `true `. "
+"在JSDoc 3.4.1及更高版本中, 您还可以将此属性设置为JSDoc应允许的标记名称数组(例如,  "
+"``[\"foo\",\"bar\"]``). "
 
-#: ../../source/about/configuring-jsdoc.rst:357
+#: ../../source/about/configuring-jsdoc.rst:317
 msgid ""
 "The ``tags.dictionaries`` property controls which tags JSDoc recognizes, "
 "as well as how JSDoc interprets the tags that it recognizes. In JSDoc "
 "3.3.0 and later, there are two built-in tag dictionaries:"
 msgstr ""
+"``tags.dictionaries`` 属性控制JSDoc识别的标签, 以及JSDoc如何解释它识别的标签. 在JSDoc "
+"3.3.0及更高版本中, 有两个内置标记字典: "
 
-#: ../../source/about/configuring-jsdoc.rst:361
+#: ../../source/about/configuring-jsdoc.rst:321
 msgid "``jsdoc``: Core JSDoc tags."
-msgstr "``jsdoc``: 核心JSDoc标签。"
+msgstr "``jsdoc``: 核心JSDoc标签. "
 
-#: ../../source/about/configuring-jsdoc.rst:362
+#: ../../source/about/configuring-jsdoc.rst:322
 msgid ""
 "``closure``: `Closure Compiler tags <https://github.com/google/closure-"
 "compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-"
 "tags>`__."
 msgstr ""
+"``closure``: `Closure Compiler标签 <https://github.com/google/closure-"
+"compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-"
+"tags>`__. "
 
-#: ../../source/about/configuring-jsdoc.rst:365
+#: ../../source/about/configuring-jsdoc.rst:324
 msgid ""
 "By default, both dictionaries are enabled. Also, by default, the "
 "``jsdoc`` dictionary is listed first; as a result, if the ``jsdoc`` "
 "dictionary handles a tag differently than the ``closure`` dictionary, the"
 " ``jsdoc`` version of the tag takes precedence."
 msgstr ""
+"默认情况下, 两个词典都已启用. 此外, 默认情况下, 首先列出 ``jsdoc`` 字典;因此, 如果 ``jsdoc`` 字典处理标签的方式与"
+" ``closure`` 字典不同, 则标签的 ``jsdoc`` 版本优先. "
 
-#: ../../source/about/configuring-jsdoc.rst:370
+#: ../../source/about/configuring-jsdoc.rst:329
 msgid ""
 "If you are using JSDoc with a Closure Compiler project, and you want to "
 "avoid using tags that Closure Compiler does not recognize, change the "
@@ -981,12 +1029,16 @@ msgid ""
 "JSDoc tags, but you want to ensure that Closure Compiler-specific tags "
 "are interpreted as Closure Compiler would interpret them."
 msgstr ""
+"如果您正在使用带有Closure Compiler项目的JSDoc, 并且您想避免使用Closure Compiler无法识别的标记, 请将 "
+"``tags.dictionaries`` 设置更改为 ``[\"closure\"]``. 您还可以将此设置更改为 "
+"``[\"closure\",\"jsdoc\"]`` 如果您想允许核心JSDoc标记, 但是您希望确保将Closure "
+"Compiler特定的标记解释为Closure Compiler解释他们. "
 
-#: ../../source/about/configuring-jsdoc.rst:378
+#: ../../source/about/configuring-jsdoc.rst:337
 msgid "Configuring templates"
 msgstr "配置模板"
 
-#: ../../source/about/configuring-jsdoc.rst:380
+#: ../../source/about/configuring-jsdoc.rst:339
 msgid ""
 "The options in ``templates`` affect the appearance and content of "
 "generated documentation. Third-party templates may not implement all of "
@@ -994,26 +1046,33 @@ msgid ""
 "configuring-default-template.html>`__ for additional options that the "
 "default template supports."
 msgstr ""
+" `模板` 中的选项会影响生成的文档的外观和内容. 第三方模板可能无法实现所有这些选项. 有关默认模板支持的其他选项, 请参阅 "
+"`配置JSDoc的默认模板 <about-configurations-default-template.html>`__. "
 
-#: ../../source/about/configuring-jsdoc.rst:399
+#: ../../source/about/configuring-jsdoc.rst:357
 msgid ""
 "If ``templates.monospaceLinks`` is true, all link text from the `inline "
-"``{@link}`` tag <tags-inline-link.html>`__ will be rendered in monospace."
+"{@link} tag <tags-inline-link.html>`__ will be rendered in monospace."
 msgstr ""
+"如果 ``templates.monospaceLinks`` 为真, 那么来自 `inline {@link} 标签 <tags-inline-"
+"link.html>`__ 的所有链接文本都将以等宽字体呈现. "
 
-#: ../../source/about/configuring-jsdoc.rst:403
+#: ../../source/about/configuring-jsdoc.rst:360
 msgid ""
 "If ``templates.cleverLinks`` is true, ``{@link asdf}`` will be rendered "
 "in normal font if ``asdf`` is a URL, and monospace otherwise. For "
 "example, ``{@link http://github.com}`` will render in plain text, but "
 "``{@link MyNamespace.myFunction}`` will be in monospace."
 msgstr ""
+"如果 ``templates.cleverLinks`` 为真, 如果 ``asdf`` 是一个URL, 则 ``{@link asdf}`` "
+"将以普通字体呈现, 否则为monospace. 例如,  ``{@link http://github.com}`` 将以纯文本形式呈现, 但 "
+"``{@link MyNamespace.myFunction}`` 将是等宽的. "
 
-#: ../../source/about/configuring-jsdoc.rst:408
+#: ../../source/about/configuring-jsdoc.rst:365
 msgid ""
 "If ``templates.cleverLinks`` is true, ``templates.monospaceLinks`` is "
 "ignored."
-msgstr ""
+msgstr "如果 ``templates.cleverLinks`` 为真, 则忽略 ``templates.monospaceLinks``. "
 
 #: ../../source/about/getting-started.rst:2
 msgid ":jsdoc:`Getting Started with JSDoc 3 <about-getting-started>`"
@@ -1026,6 +1085,8 @@ msgid ""
 " source code, right alongside the code itself. The JSDoc tool will scan "
 "your source code and generate an HTML documentation website for you."
 msgstr ""
+"JSDoc 3是JavaScript的API文档生成器, 类似于Javadoc或phpDocumentor. 您可以将文档注释直接添加到源代码中,"
+" 与代码本身一起添加.  JSDoc工具将扫描您的源代码并为您生成HTML文档网站. "
 
 #: ../../source/about/getting-started.rst:11
 msgid "Adding documentation comments to your code"
@@ -1036,7 +1097,7 @@ msgid ""
 "JSDoc’s purpose is to document the API of your JavaScript application or "
 "library. It is assumed that you will want to document things like "
 "modules, namespaces, classes, methods, method parameters, and so on."
-msgstr ""
+msgstr "JSDoc的目的是记录JavaScript应用程序或库的API. 假设您需要记录模块, 命名空间, 类, 方法, 方法参数等内容. "
 
 #: ../../source/about/getting-started.rst:17
 msgid ""
@@ -1046,74 +1107,82 @@ msgid ""
 "``/*``, ``/***``, or more than 3 stars will be ignored. This is a feature"
 " to allow you to suppress parsing of comment blocks."
 msgstr ""
+"通常应该在记录代码之前放置JSDoc注释. 每个注释必须以 ``/**`` 序列开头, 以便被JSDoc解析器识别. 以 ``/*``, "
+"``/***`` 或超过3星开头的注释将被忽略. 这是一个允许您禁止解析注释块的功能. "
 
 #: ../../source/about/getting-started.rst:23
-#, python-format
-msgid "{% example “The simplest documentation is just a description” %}"
-msgstr "{% example “The simplest documentation is just a description” %}"
+#, fuzzy
+msgid "The simplest documentation is just a description"
+msgstr "最简单的文档只是一个描述"
 
-#: ../../source/about/getting-started.rst:33
+#: ../../source/about/getting-started.rst:30
 msgid ""
 "Adding a description is simple—just type the description you want in the "
 "documentation comment."
-msgstr ""
+msgstr "添加描述很简单 - 只需在文档注释中键入所需的描述即可. "
 
-#: ../../source/about/getting-started.rst:36
+#: ../../source/about/getting-started.rst:33
+#, fuzzy
 msgid ""
 "Special “JSDoc tags” can be used to give more information. For example, "
 "if the function is a constructor for a class, you can indicate this by "
 "adding a ``@constructor`` tag."
 msgstr ""
+"特殊的 “JSDoc tags” 可用于提供更多信息. 例如, 如果函数是类的构造函数, 则可以通过添加 ``@constructor`` "
+"标记来指示它. "
 
-#: ../../source/about/getting-started.rst:40
-#, python-format
-msgid "{% example “Use a JSDoc tag to describe your code” %}"
-msgstr "{% example “Use a JSDoc tag to describe your code” %}"
+#: ../../source/about/getting-started.rst:37
+#, fuzzy
+msgid "Use a JSDoc tag to describe your code"
+msgstr "使用JSDoc标记来描述您的代码"
 
-#: ../../source/about/getting-started.rst:53
+#: ../../source/about/getting-started.rst:47
 msgid ""
 "More tags can be used to add more information. See the `home page "
 "<index.html#block-tags>`__ for a complete list of tags that are "
 "recognized by JSDoc 3."
-msgstr ""
+msgstr "更多标签可用于添加更多信息. 有关JSDoc 3识别的标记的完整列表, 请参阅 `主页 <index.html＃block-tags>`__. "
 
-#: ../../source/about/getting-started.rst:57
-#, python-format
-msgid "{% example “Adding more information with tags” %}"
-msgstr "{% example “Adding more information with tags” %}"
+#: ../../source/about/getting-started.rst:51
+#, fuzzy
+msgid "Adding more information with tags"
+msgstr "使用标签添加更多信息"
 
-#: ../../source/about/getting-started.rst:73
+#: ../../source/about/getting-started.rst:64
 msgid "Generating a website"
 msgstr "生成一个网站"
 
-#: ../../source/about/getting-started.rst:75
+#: ../../source/about/getting-started.rst:66
 msgid ""
 "Once your code is commented, you can use the JSDoc 3 tool to generate an "
 "HTML website from your source files."
-msgstr ""
+msgstr "一旦您的代码被注释, 您就可以使用JSDoc 3工具从源文件生成HTML网站. "
 
-#: ../../source/about/getting-started.rst:78
+#: ../../source/about/getting-started.rst:69
+#, fuzzy
 msgid ""
 "By default, JSDoc uses the built-in “default” template to turn the "
 "documentation into HTML. You can edit this template to suit your own "
 "needs or create an entirely new template if that is what you prefer."
 msgstr ""
+"默认情况下, JSDoc使用内置的 “default” 模板将文档转换为HTML. 您可以编辑此模板以满足您自己的需要, "
+"或者根据您的喜好创建一个全新的模板. "
 
-#: ../../source/about/getting-started.rst:82
-#, python-format
-msgid "{% example “Running the documentation generator on the command line” %}"
-msgstr "{% example “Running the documentation generator on the command line” %}"
+#: ../../source/about/getting-started.rst:73
+#, fuzzy
+msgid "Running the documentation generator on the command line"
+msgstr "在命令行上运行文档生成器"
 
-#: ../../source/about/getting-started.rst:90
+#: ../../source/about/getting-started.rst:78
 msgid ""
 "This command will create a directory named ``out/`` in the current "
 "working directory. Within that directory, you will find the generated "
 "HTML pages."
-msgstr ""
+msgstr "该命令将在当前工作目录中创建一个名为 ``out/`` 的目录. 在该目录中, 您将找到生成的HTML页面. "
 
 #: ../../source/about/including-package.rst:2
 msgid "Including a Package File"
-msgstr "包括包文件"
+msgstr "引入包文件"
 
 #: ../../source/about/including-package.rst:4
 msgid ""
@@ -1123,12 +1192,14 @@ msgid ""
 "when it generates documentation. For example, the default template shows "
 "the project’s name and version number in the documentation."
 msgstr ""
+"包文件包含对项目文档有用的信息, 例如项目的名称和版本号.  JSDoc在生成文档时可以自动使用项目的 ``package.json`` "
+"文件中的信息. 例如, 默认模板在文档中显示项目的名称和版本号. "
 
 #: ../../source/about/including-package.rst:10
 msgid ""
 "There are two ways to incorporate a ``package.json`` file into your "
 "documentation:"
-msgstr ""
+msgstr "有两种方法可以将 ``package.json`` 文件合并到文档中: "
 
 #: ../../source/about/including-package.rst:13
 msgid ""
@@ -1136,6 +1207,8 @@ msgid ""
 "``package.json`` file. JSDoc will use the first ``package.json`` file "
 "that it finds in your source paths."
 msgstr ""
+"在JavaScript文件的源路径中, 包含 ``package.json`` 文件的路径.  JSDoc将使用它在源路径中找到的第一个 "
+"``package.json`` 文件. "
 
 #: ../../source/about/including-package.rst:16
 msgid ""
@@ -1143,6 +1216,8 @@ msgid ""
 "path to your ``package.json`` file. This option is available in JSDoc "
 "3.3.0 and later."
 msgstr ""
+"使用 ``-P/--package`` 命令行选项运行JSDoc, 指定 ``package.json`` 文件的路径.  JSDoc "
+"3.3.0及更高版本中提供了此选项. "
 
 #: ../../source/about/including-package.rst:20
 msgid ""
@@ -1150,32 +1225,36 @@ msgid ""
 "source paths. If you use the ``-P/--package`` command-line option, JSDoc "
 "will ignore any ``package.json`` files in your source paths."
 msgstr ""
+"``-P/ -  package`` 命令行选项优先于源路径. 如果使用 ``-P/-package`` 命令行选项, "
+"JSDoc将忽略源路径中的任何 ``package.json`` 文件. "
 
 #: ../../source/about/including-package.rst:24
 msgid ""
 "The ``package.json`` file must use `npm’s package format "
 "<https://docs.npmjs.com/files/package.json>`__."
 msgstr ""
+"``package.json`` 文件必须使用 `npm的包格式 "
+"<https://docs.npmjs.com/files/package.json>`__. "
 
 #: ../../source/about/including-package.rst:30
-#, python-format
-msgid "{% example “Including a package file in your source paths” %}"
-msgstr "{% example “Including a package file in your source paths” %}"
+#, fuzzy
+msgid "Including a package file in your source paths"
+msgstr "在源路径中包含包文件"
 
-#: ../../source/about/including-package.rst:38
-#, python-format
-msgid "{% example “Using the -P/–package option” %}"
-msgstr "{% example “Using the -P/–package option” %}"
+#: ../../source/about/including-package.rst:35
+#, fuzzy
+msgid "Using the -P/–package option"
+msgstr "使用 ``-P/-package`` 选项"
 
 #: ../../source/about/including-readme.rst:2
 msgid "Including a README File"
-msgstr "包括README文件"
+msgstr "引入README文件"
 
 #: ../../source/about/including-readme.rst:4
 msgid ""
 "There are two ways to incorporate a ``README`` file into your "
 "documentation:"
-msgstr ""
+msgstr "将 `README` 文件合并到文档中有两种方法: "
 
 #: ../../source/about/including-readme.rst:7
 msgid ""
@@ -1183,6 +1262,8 @@ msgid ""
 "Markdown file named ``README.md``. JSDoc will use the first ``README.md``"
 " file that it finds in your source paths."
 msgstr ""
+"在JavaScript文件的源路径中, 包含名为 ``README.md`` 的Markdown文件的路径.  "
+"JSDoc将使用它在源路径中找到的第一个 ``README.md`` 文件. "
 
 #: ../../source/about/including-readme.rst:10
 msgid ""
@@ -1191,6 +1272,8 @@ msgid ""
 " later. The ``README`` file may have any name and extension, but it must "
 "be in Markdown format."
 msgstr ""
+"使用 ``-R/--readme`` 命令行选项运行JSDoc, 指定 ``README`` 文件的路径.  JSDoc "
+"3.3.0及更高版本中提供了此选项. `README` 文件可以有任何名称和扩展名, 但必须采用Markdown格式. "
 
 #: ../../source/about/including-readme.rst:15
 msgid ""
@@ -1198,6 +1281,8 @@ msgid ""
 " paths. If you use the ``-R/--readme`` command-line option, JSDoc will "
 "ignore any ``README.md`` files in your source paths."
 msgstr ""
+"``-R/--readme`` 命令行选项优先于源路径. 如果使用 ``-R/--readme`` 命令行选项, JSDoc将忽略源路径中的任何 "
+"``README.md`` 文件. "
 
 #: ../../source/about/including-readme.rst:19
 msgid ""
@@ -1205,24 +1290,26 @@ msgid ""
 " will be rendered in HTML in the generated documentation’s ``index.html``"
 " file."
 msgstr ""
+"如果您使用的是JSDoc的默认模板, 那么 ``README`` 文件的内容将在生成的文档 ``index.html`` "
+"文件中以HTML格式呈现. "
 
 #: ../../source/about/including-readme.rst:26
-#, python-format
-msgid "{% example “Including a README file in your source paths” %}"
-msgstr "{% example “Including a README file in your source paths” %}"
+#, fuzzy
+msgid "Including a README file in your source paths"
+msgstr "在源路径中包含包文件"
 
-#: ../../source/about/including-readme.rst:34
-#, python-format
-msgid "{% example “Using the -R/–readme option” %}"
-msgstr "{% example “Using the -R/–readme option” %}"
+#: ../../source/about/including-readme.rst:33
+#, fuzzy
+msgid "Using the -R/–readme option"
+msgstr "使用-P/-package选项"
 
 #: ../../source/about/index.rst:2
 msgid "Getting started"
 msgstr "入门"
 
 #: ../../source/about/license-jsdoc3.rst:2
-msgid "jsdoc3"
-msgstr "jsdoc3"
+msgid "License"
+msgstr ""
 
 #: ../../source/about/license-jsdoc3.rst:4
 msgid ""
@@ -1230,13 +1317,15 @@ msgid ""
 " <http://www.apache.org/licenses/LICENSE-2.0>`__. Commercial and non-"
 "commercial use are permitted in compliance with the License."
 msgstr ""
+"JSDoc 3是免费软件, 根据 `Apache许可证, 版本2.0 "
+"<http://www.apache.org/licenses/LICENSE-2.0>`__ 获得许可. 允许商业和非商业用途符合许可. "
 
 #: ../../source/about/license-jsdoc3.rst:8
 msgid ""
 "In addition, JSDoc 3 includes or depends upon several third-party "
 "software packages, either in whole or in part. Each third-party software "
 "package is provided under its own license."
-msgstr ""
+msgstr "此外, JSDoc 3包括或依赖于多个第三方软件包, 无论是全部还是部分. 每个第三方软件包均在其自己的许可下提供. "
 
 #: ../../source/about/license-jsdoc3.rst:12
 msgid ""
@@ -1244,6 +1333,8 @@ msgid ""
 "<https://github.com/jsdoc3/jsdoc/blob/master/LICENSE.md>`__ for more "
 "details about licensing."
 msgstr ""
+"有关许可的更多详细信息, 请参阅 `LICENSE.md "
+"<https://github.com/jsdoc3/jsdoc/blob/master/LICENSE.md>`__. "
 
 #: ../../source/about/namepaths.rst:2
 msgid "Using namepaths with JSDoc 3"
@@ -1260,32 +1351,38 @@ msgid ""
 "variable. A namepath provides a way to do so and disambiguate between "
 "instance members, static members and inner variables."
 msgstr ""
+"在引用文档中其他位置的JavaScript变量时, 必须提供映射到该变量的唯一标识符. 名称路径提供了一种方法, 并在实例成员, "
+"静态成员和内部变量之间消除歧义. "
 
-#: ../../source/about/namepaths.rst:12
-#, python-format
-msgid "{% example “Basic Syntax Examples of Namepaths in JSDoc 3” %}"
-msgstr "{% example “Basic Syntax Examples of Namepaths in JSDoc 3” %}"
+#: ../../source/about/namepaths.rst:13
+#, fuzzy
+msgid "Basic Syntax Examples of Namepaths in JSDoc 3"
+msgstr "JSDoc 3中Namepath的基本语法示例"
 
-#: ../../source/about/namepaths.rst:24
+#: ../../source/about/namepaths.rst:22
+#, fuzzy
 msgid ""
 "The example below shows: an *instance* method named “say,” an *inner* "
 "function also named “say,” and a *static* method also named “say.” These "
 "are three distinct methods that all exist independently of one another."
 msgstr ""
+"下面的例子显示: 一个 *instance* 方法名为  “say,” 一个 *inner* 函数也命名为 “say,” 一个 *static* "
+"方法也命名为 “say.” 这三种不同的方法都是彼此独立存在的. "
 
-#: ../../source/about/namepaths.rst:28 ../../source/about/namepaths.rst:56
-#: ../../source/about/namepaths.rst:77
-#, python-format
-msgid "{% example “Use a documentation tag to describe your code.” %}"
-msgstr "{% example “Use a documentation tag to describe your code.” %}"
+#: ../../source/about/namepaths.rst:26 ../../source/about/namepaths.rst:52
+#: ../../source/about/namepaths.rst:70
+#, fuzzy
+msgid "Use a documentation tag to describe your code."
+msgstr "使用文档标记来描述您的代码. "
 
-#: ../../source/about/namepaths.rst:53
+#: ../../source/about/namepaths.rst:48
 msgid ""
 "You would use three different namepath syntaxes to refer to the three "
 "different methods:"
-msgstr ""
+msgstr "您将使用三种不同的名称路径语法来引用三种不同的方法: "
 
-#: ../../source/about/namepaths.rst:66
+#: ../../source/about/namepaths.rst:59
+#, fuzzy
 msgid ""
 "You might wonder why there is a syntax to refer to an inner method when "
 "that method isn’t directly accessible from outside the function it is "
@@ -1294,32 +1391,36 @@ msgid ""
 "method inside that container, so it is possible that some object "
 "elsewhere in your code might borrow an inner method."
 msgstr ""
+"您可能想知道为什么有一种语法可以引用内部方法, 因为该方法不能从定义的函数外部直接访问. 虽然这是真的, 因此很少使用 `~ ` 语法, 它 "
+"*是* 可以从该容器内的另一个方法返回对内部方法的引用, 因此代码中其他位置的某个对象可能会借用内部方法. "
 
-#: ../../source/about/namepaths.rst:73
+#: ../../source/about/namepaths.rst:66
 msgid ""
 "Note that if a constructor has an instance member that is also a "
 "constructor, you can simply chain the namepaths together to form a longer"
 " namepath:"
-msgstr ""
+msgstr "请注意, 如果构造函数的实例成员也是构造函数, 则可以将名称路径链接在一起以形成更长的名称路径: "
 
-#: ../../source/about/namepaths.rst:97
+#: ../../source/about/namepaths.rst:87
+#, fuzzy
 msgid ""
 "In this case, to refer to the method named “consider,” you would use the "
 "following namepath: ``Person#Idea#consider``"
-msgstr ""
+msgstr "在这种情况下, 要引用名为 `考虑 `的方法, 您将使用以下名称路径: ``Person＃Idea #care``"
 
-#: ../../source/about/namepaths.rst:100
+#: ../../source/about/namepaths.rst:90
 msgid ""
 "This chaining can be used with any combination of the connecting symbols:"
 " ``# . ~``"
-msgstr ""
+msgstr "这种链接可以与连接符号的任何组合一起使用:  ``# . ~``"
 
-#: ../../source/about/namepaths.rst:103
-#, python-format
-msgid "{% example “Special cases: modules, externals and events.” %}"
-msgstr "{% example “Special cases: modules, externals and events.” %}"
+#: ../../source/about/namepaths.rst:93
+#, fuzzy
+msgid "Special cases: modules, externals and events."
+msgstr "特殊情况: 模块, 外部和事件. "
 
-#: ../../source/about/namepaths.rst:119
+#: ../../source/about/namepaths.rst:106
+#, fuzzy
 msgid ""
 "There are some special cases with namepaths: [@module]\\ `module-tag "
 "<tags-module.html>`__ names are prefixed by “module:”, [@external]\\ "
@@ -1327,13 +1428,17 @@ msgid ""
 "and [@event]\\ `event-tag <tags-event.html>`__ names are prefixed by "
 "“event:”."
 msgstr ""
+"名称路径有一些特殊情况: [@module] \\`module-tag <tags-module.html>`__名称前缀为 `module:"
+"  `, [@ external] \\`external-tag <tags-external .html>`__名称以 `external:"
+"  `为前缀, [@event] \\`event-tag <tags-event.html>`__名称以 `event:  `为前缀. "
 
-#: ../../source/about/namepaths.rst:125
-#, python-format
-msgid "{% example “Namepaths of objects with special characters in the name.” %}"
-msgstr "{% example “Namepaths of objects with special characters in the name.” %}"
+#: ../../source/about/namepaths.rst:112
+#, fuzzy
+msgid "Namepaths of objects with special characters in the name."
+msgstr "名称中包含特殊字符的对象的名称路径. "
 
-#: ../../source/about/namepaths.rst:158
+#: ../../source/about/namepaths.rst:141
+#, fuzzy
 msgid ""
 "Above is an example of a namespace with “unusual” characters in its "
 "member names (the hash character, dashes, even quotes). To refer to these"
@@ -1341,6 +1446,9 @@ msgid ""
 ":announce-motd”, and so on. Internal quotes in names should be escaped "
 "with backslashes: chat.“#channel”.“say-\"hello\"”."
 msgstr ""
+"上面是一个名称空间的示例, 其成员名称中包含 `异常 `字符(哈希字符, 短划线, 偶数引号). 要参考这些, 你只需要引用名称: chat.  "
+"`＃channel `, chat.  `＃channel `.  `op: announce-motd `, 依此类推. "
+"名称中的内部引号应使用反斜杠转义: chat.  `＃channel `.  `say  -  \\ `hello \\ ` `. "
 
 #: ../../source/about/plugins.rst:2
 msgid "About JSDoc plugins"
@@ -1356,7 +1464,7 @@ msgstr "创建和启用新的JSDoc插件需要两个步骤:"
 
 #: ../../source/about/plugins.rst:9
 msgid "Create a JavaScript module to contain your plugin code."
-msgstr "创建一个JavaScript模块以包含您的插件代码。"
+msgstr "创建一个JavaScript模块以包含您的插件代码. "
 
 #: ../../source/about/plugins.rst:10
 msgid ""
@@ -1366,6 +1474,8 @@ msgid ""
 "in the current working directory; the directory where the configuration "
 "file is located; and the JSDoc directory, in that order."
 msgstr ""
+"在 `JSDoc的配置文件 <configurations-jsdoc.html>`_ 的 ``plugins`` 数组中包含该模块. "
+"您可以指定绝对路径或相对路径. 如果使用相对路径, JSDoc将在当前工作目录中搜索插件;配置文件所在的目录;和JSDoc目录, 按此顺序. "
 
 #: ../../source/about/plugins.rst:17
 msgid ""
@@ -1374,131 +1484,142 @@ msgid ""
 "``plugins/shout`` to the ``plugins`` array in your JSDoc configuration "
 "file:"
 msgstr ""
+"例如, 如果您的插件是在当前工作目录的 ``plugins/shout.js`` 文件中定义的, 那么您应该将字符串 "
+"``plugins/shout`` 添加到JSDoc配置中的 ``plugins`` 数组中文件: "
 
-#: ../../source/about/plugins.rst:22
-#, python-format
-msgid "{% example “Adding a plugin to JSDoc’s configuration file” %}"
-msgstr "{% example “Adding a plugin to JSDoc’s configuration file” %}"
+#: ../../source/about/plugins.rst:23
+#, fuzzy
+msgid "Adding a plugin to JSDoc’s configuration file"
+msgstr "将插件添加到JSDoc的配置文件中"
 
-#: ../../source/about/plugins.rst:32
+#: ../../source/about/plugins.rst:30
 msgid ""
 "JSDoc executes plugins in the order that they are listed in the "
 "configuration file."
-msgstr ""
+msgstr "JSDoc按照配置文件中列出的顺序执行插件. "
 
-#: ../../source/about/plugins.rst:36
+#: ../../source/about/plugins.rst:34
 msgid "Authoring JSDoc 3 Plugins"
 msgstr "关于JSDoc插件"
 
-#: ../../source/about/plugins.rst:38
+#: ../../source/about/plugins.rst:36
 msgid ""
 "JSDoc 3’s plugin system offers extensive control over the parsing "
 "process. A plugin can affect the parse results by doing any of the "
 "following:"
-msgstr ""
+msgstr "JSDoc 3的插件系统提供了对解析过程的广泛控制. 插件可以通过执行以下任一操作来影响解析结果: "
 
-#: ../../source/about/plugins.rst:42
+#: ../../source/about/plugins.rst:40
 msgid "Defining event handlers"
 msgstr "定义事件处理程序"
 
-#: ../../source/about/plugins.rst:43
+#: ../../source/about/plugins.rst:41
 msgid "Defining tags"
 msgstr "定义标签"
 
-#: ../../source/about/plugins.rst:44
+#: ../../source/about/plugins.rst:42
 msgid "Defining a visitor for abstract syntax tree nodes"
 msgstr "为抽象语法树节点定义访问者"
 
-#: ../../source/about/plugins.rst:47
+#: ../../source/about/plugins.rst:45
 msgid "Event Handlers"
 msgstr "事件处理程序"
 
-#: ../../source/about/plugins.rst:49
+#: ../../source/about/plugins.rst:47
 msgid ""
 "At the highest level, a plugin may register handlers for specific named "
 "events that JSDoc fires. JSDoc will pass an event object to the handler. "
 "Your plugin module should export a ``handlers`` object that contains your"
 " handler, like so:"
 msgstr ""
+"在最高级别, 插件可以为JSDoc触发的特定命名事件注册处理程序.  JSDoc会将一个事件对象传递给处理程序. "
+"你的插件模块应该导出一个包含你的处理程序的 ``handlers`` 对象, 如下所示: "
 
-#: ../../source/about/plugins.rst:54
-#, python-format
-msgid "{% example “Event-handler plugin for ‘newDoclet’ events” %}"
-msgstr "{% example “Event-handler plugin for ‘newDoclet’ events” %}"
+#: ../../source/about/plugins.rst:52
+#, fuzzy
+msgid "Event-handler plugin for ‘newDoclet’ events"
+msgstr "Event-handler plugin for ‘newDoclet’ events"
 
-#: ../../source/about/plugins.rst:66
+#: ../../source/about/plugins.rst:61
 msgid "JSDoc fires events in the same order as the underlying code."
-msgstr "JSDoc fires events in the same order as the underlying code."
+msgstr "JSDoc以与底层代码相同的顺序触发事件. "
 
-#: ../../source/about/plugins.rst:68
+#: ../../source/about/plugins.rst:63
 msgid ""
 "An event-handler plugin can stop later plugins from running by setting a "
 "``stopPropagation`` property on the event object (``e.stopPropagation = "
 "true``). A plugin can stop the event from firing by setting a "
 "``preventDefault`` property (``e.preventDefault = true``)."
 msgstr ""
+"事件处理程序插件可以通过在事件对象上设置 ``stopPropagation`` 属性(``e.stopPropagation = "
+"true``)来阻止以后的插件运行. 插件可以通过设置 ``preventDefault`` 属性(``e.preventDefault = "
+"true``)来停止触发事件. "
 
-#: ../../source/about/plugins.rst:74
+#: ../../source/about/plugins.rst:69
 msgid "Event: parseBegin"
 msgstr "Event: parseBegin"
 
-#: ../../source/about/plugins.rst:76
+#: ../../source/about/plugins.rst:71
 msgid ""
 "The ``parseBegin`` event is fired before JSDoc starts loading and parsing"
 " the source files. Your plugin can control which files JSDoc will parse "
 "by modifying the event’s contents."
 msgstr ""
+"在JSDoc开始加载和解析源文件之前, 会触发 ``parseBegin`` 事件. "
+"您的插件可以通过修改事件的内容来控制JSDoc将解析哪些文件. "
 
-#: ../../source/about/plugins.rst:80 ../../source/about/plugins.rst:258
+#: ../../source/about/plugins.rst:75 ../../source/about/plugins.rst:247
 msgid "**Note**: This event is fired in JSDoc 3.2 and later."
-msgstr "**Note**: This event is fired in JSDoc 3.2 and later."
+msgstr "**Note**: 此事件在JSDoc 3.2及更高版本中触发. "
 
-#: ../../source/about/plugins.rst:82 ../../source/about/plugins.rst:94
-#: ../../source/about/plugins.rst:106 ../../source/about/plugins.rst:145
-#: ../../source/about/plugins.rst:161 ../../source/about/plugins.rst:187
-#: ../../source/about/plugins.rst:247 ../../source/about/plugins.rst:260
-#: ../../source/about/plugins.rst:275
+#: ../../source/about/plugins.rst:77 ../../source/about/plugins.rst:89
+#: ../../source/about/plugins.rst:101 ../../source/about/plugins.rst:137
+#: ../../source/about/plugins.rst:153 ../../source/about/plugins.rst:179
+#: ../../source/about/plugins.rst:236 ../../source/about/plugins.rst:249
+#: ../../source/about/plugins.rst:264
 msgid "The event object contains the following properties:"
-msgstr "The event object contains the following properties:"
+msgstr "事件对象包含以下属性: "
 
-#: ../../source/about/plugins.rst:84
+#: ../../source/about/plugins.rst:79
 msgid "``sourcefiles``: An array of paths to source files that will be parsed."
-msgstr "``sourcefiles``: An array of paths to source files that will be parsed."
+msgstr "``sourcefiles``: 要解析的源文件的路径数组. "
 
-#: ../../source/about/plugins.rst:88
+#: ../../source/about/plugins.rst:83
 msgid "Event: fileBegin"
 msgstr "Event: fileBegin"
 
-#: ../../source/about/plugins.rst:90
+#: ../../source/about/plugins.rst:85
 msgid ""
 "The ``fileBegin`` event is fired when the parser is about to parse a "
 "file. Your plugin can use this event to trigger per-file initialization "
 "if necessary."
-msgstr ""
+msgstr "解析器即将解析文件时 ``fileBegin`` 事件. 如有必要, 您的插件可以使用此事件触发每个文件的初始化. "
 
-#: ../../source/about/plugins.rst:96 ../../source/about/plugins.rst:108
-#: ../../source/about/plugins.rst:147 ../../source/about/plugins.rst:163
-#: ../../source/about/plugins.rst:249
+#: ../../source/about/plugins.rst:91 ../../source/about/plugins.rst:103
+#: ../../source/about/plugins.rst:139 ../../source/about/plugins.rst:155
+#: ../../source/about/plugins.rst:238
 msgid "``filename``: The name of the file."
-msgstr "``filename``: The name of the file."
+msgstr "``filename``: 文件的名称. "
 
-#: ../../source/about/plugins.rst:99
+#: ../../source/about/plugins.rst:94
 msgid "Event: beforeParse"
 msgstr "Event: beforeParse"
 
-#: ../../source/about/plugins.rst:101
+#: ../../source/about/plugins.rst:96
 msgid ""
 "The ``beforeParse`` event is fired before parsing has begun. Plugins can "
 "use this method to modify the source code that will be parsed. For "
 "instance, your plugin could add a JSDoc comment, or it could remove "
 "preprocessing tags that are not valid JavaScript."
 msgstr ""
+"解析开始之前会触发 ``beforeParse`` 事件. 插件可以使用此方法修改将要解析的源代码. 例如, 您的插件可以添加JSDoc注释, "
+"或者它可以删除非有效JavaScript的预处理标记. "
 
-#: ../../source/about/plugins.rst:109 ../../source/about/plugins.rst:250
+#: ../../source/about/plugins.rst:104 ../../source/about/plugins.rst:239
 msgid "``source``: The contents of the file."
-msgstr "``source``: The contents of the file."
+msgstr "``source``: 文件的内容. "
 
-#: ../../source/about/plugins.rst:111
+#: ../../source/about/plugins.rst:106
 msgid ""
 "Below is an example that adds a virtual comment for a function to the "
 "source so that it will get parsed and added to the documentation. This "
@@ -1506,249 +1627,268 @@ msgid ""
 "might not appear in the source code being documented, such as methods "
 "provided by an external superclass:"
 msgstr ""
+"下面是一个示例, 它将函数的虚拟注释添加到源, 以便将其解析并添加到文档中. 这可以用于记录可供用户使用的方法, "
+"但可能不会出现在所记录的源代码中, 例如外部超类提供的方法: "
 
-#: ../../source/about/plugins.rst:117 ../../source/about/plugins.rst:225
-#: ../../source/about/plugins.rst:295 ../../source/about/plugins.rst:388
-#, python-format
-msgid "{% example “Example” %}"
-msgstr "{% example “Example” %}"
+#: ../../source/about/plugins.rst:112 ../../source/about/plugins.rst:217
+#: ../../source/about/plugins.rst:284 ../../source/about/plugins.rst:368
+#, fuzzy
+msgid "Example"
+msgstr "示例"
 
-#: ../../source/about/plugins.rst:138
+#: ../../source/about/plugins.rst:130
 msgid "Event: jsdocCommentFound"
 msgstr "Event: jsdocCommentFound"
 
-#: ../../source/about/plugins.rst:140
+#: ../../source/about/plugins.rst:132
 msgid ""
 "The ``jsdocCommentFound`` event is fired whenever a JSDoc comment is "
 "found. The comment may or may not be associated with any code. You might "
 "use this event to modify the contents of a comment before it is "
 "processed."
 msgstr ""
+"只要找到JSDoc注释, 就会触发 ``jsdocCommentFound`` 事件. 评论可能与任何代码相关, 也可能不相关. "
+"您可以使用此事件在处理注释之前修改注释的内容. "
 
-#: ../../source/about/plugins.rst:148
+#: ../../source/about/plugins.rst:140
 msgid "``comment``: The text of the JSDoc comment."
-msgstr "``comment``: The text of the JSDoc comment."
+msgstr "``comment``: JSDoc评论的文本. "
 
-#: ../../source/about/plugins.rst:149
+#: ../../source/about/plugins.rst:141
 msgid "``lineno``: The line number on which the comment was found."
-msgstr "``lineno``: The line number on which the comment was found."
+msgstr "``lineno``: 找到评论的行号. "
 
-#: ../../source/about/plugins.rst:150
+#: ../../source/about/plugins.rst:142
 msgid ""
 "``columnno``: The column number on which the comment was found. Available"
 " in JSDoc 3.5.0 and later."
-msgstr ""
+msgstr "``columnno``: 找到评论的列号. 可在JSDoc 3.5.0及更高版本中使用. "
 
-#: ../../source/about/plugins.rst:154
+#: ../../source/about/plugins.rst:146
 msgid "Event: symbolFound"
 msgstr "Event: symbolFound"
 
-#: ../../source/about/plugins.rst:156
+#: ../../source/about/plugins.rst:148
 msgid ""
 "The ``symbolFound`` event is fired when the parser comes across a symbol "
 "in the code that may need to be documented. For example, the parser fires"
 " a ``symbolFound`` event for each variable, function, and object literal "
 "in a source file."
 msgstr ""
+"当解析器遇到可能需要记录的代码中的符号时, 会触发 ``symbolFound`` 事件. 例如, 解析器为源文件中的每个变量, "
+"函数和对象文字触发 ``symbolFound`` 事件. "
 
-#: ../../source/about/plugins.rst:164
+#: ../../source/about/plugins.rst:156
 msgid "``comment``: The text of the comment associated with the symbol, if any."
-msgstr "``comment``: The text of the comment associated with the symbol, if any."
+msgstr "``comment``: 与符号关联的注释文本(如果有). "
 
-#: ../../source/about/plugins.rst:166
+#: ../../source/about/plugins.rst:158
 msgid "``id``: The unique ID of the symbol."
-msgstr "``id``: The unique ID of the symbol."
+msgstr "``id``: 符号的唯一ID. "
 
-#: ../../source/about/plugins.rst:167
+#: ../../source/about/plugins.rst:159
 msgid "``lineno``: The line number on which the symbol was found."
-msgstr "``lineno``: The line number on which the symbol was found."
+msgstr "``lineno``: 找到符号的行号. "
 
-#: ../../source/about/plugins.rst:168
+#: ../../source/about/plugins.rst:160
 msgid ""
 "``columnno``: The column number on which the symbol was found. Available "
 "in JSDoc 3.5.0 and later."
-msgstr ""
+msgstr "``columnno``: 找到符号的列号. 可在JSDoc 3.5.0及更高版本中使用. "
 
-#: ../../source/about/plugins.rst:170
+#: ../../source/about/plugins.rst:162
 msgid ""
 "``range``: An array containing the numeric index of the first and last "
 "characters in the source file that are associated with the symbol."
-msgstr ""
+msgstr "``range``: 一个数组, 包含源文件中与该符号关联的第一个和最后一个字符的数字索引. "
 
-#: ../../source/about/plugins.rst:173
+#: ../../source/about/plugins.rst:165
 msgid "``astnode``: The symbol’s node from the abstract syntax tree."
-msgstr "``astnode``: The symbol’s node from the abstract syntax tree."
+msgstr "``astnode``: 抽象语法树中的符号节点. "
 
-#: ../../source/about/plugins.rst:174
+#: ../../source/about/plugins.rst:166
 msgid ""
 "``code``: Object with detailed information about the code. This object "
 "usually contains ``name``, ``type``, and ``node`` properties. The object "
 "might also have ``value``, ``paramnames``, or ``funcscope`` properties "
 "depending on the symbol."
 msgstr ""
+"``code``: 包含代码详细信息的对象. 该对象通常包含 ``name``, ``type`` 和 ``node`` 属性. 对象可能还有 "
+"``value``, ``paramnames`` 或 ``funcscope`` 属性, 具体取决于符号. "
 
-#: ../../source/about/plugins.rst:180
+#: ../../source/about/plugins.rst:172
 msgid "Event: newDoclet"
 msgstr "Event: newDoclet"
 
-#: ../../source/about/plugins.rst:182
+#: ../../source/about/plugins.rst:174
 msgid ""
 "The ``newDoclet`` event is the highest-level event. It is fired when a "
 "new doclet has been created. This means that a JSDoc comment or a symbol "
 "has been processed, and the actual doclet that will be passed to the "
 "template has been created."
 msgstr ""
+"``newDoclet`` 事件是最高级别的事件. 创建新doclet时会触发它. 这意味着已经处理了JSDoc注释或符号, "
+"并且已经创建了将传递给模板的实际doclet. "
 
-#: ../../source/about/plugins.rst:189
+#: ../../source/about/plugins.rst:181
 msgid "``doclet``: The new doclet that was created."
-msgstr "``doclet``: The new doclet that was created."
+msgstr "``doclet``: 创建的新doclet. "
 
-#: ../../source/about/plugins.rst:191
+#: ../../source/about/plugins.rst:183
 msgid ""
 "The doclet’s properties can vary depending on the comment or symbol that "
 "the doclet represents. Some common properties you’re likely to see "
 "include:"
-msgstr ""
+msgstr "doclet的属性可以根据doclet表示的注释或符号而有所不同. 您可能会看到的一些常见属性包括:"
 
-#: ../../source/about/plugins.rst:195
+#: ../../source/about/plugins.rst:187
 msgid ""
 "``comment``: The text of the JSDoc comment, or an empty string if the "
 "symbol is undocumented."
-msgstr ""
+msgstr "``comment``: JSDoc注释的文本, 如果符号未记录, 则为空字符串. "
 
-#: ../../source/about/plugins.rst:197
+#: ../../source/about/plugins.rst:189
 msgid ""
 "``meta``: Object that describes how the doclet relates to the source file"
 " (for example, the location within the source file)."
-msgstr ""
+msgstr "``meta``: 描述doclet如何与源文件相关的对象(例如, 源文件中的位置). "
 
-#: ../../source/about/plugins.rst:199
+#: ../../source/about/plugins.rst:191
 msgid "``description``: A description of the symbol being documented."
-msgstr "``description``: A description of the symbol being documented."
+msgstr "``description``: 正在记录的符号的描述. "
 
-#: ../../source/about/plugins.rst:200
+#: ../../source/about/plugins.rst:192
 msgid ""
 "``kind``: The kind of symbol being documented (for example, ``class`` or "
 "``function``)."
-msgstr ""
+msgstr "``kind``: 记录的符号类型(例如, ``class`` 或 ``function``). "
 
-#: ../../source/about/plugins.rst:202
+#: ../../source/about/plugins.rst:194
 msgid "``name``: The short name for the symbol (for example, ``myMethod``)."
-msgstr "``name``: The short name for the symbol (for example, ``myMethod``)."
+msgstr "``name``: 符号的简称(例如, ``myMethod``). "
 
-#: ../../source/about/plugins.rst:203
+#: ../../source/about/plugins.rst:195
 msgid ""
 "``longname``: The fully qualified name, including memberof info (for "
 "example, ``MyClass#myMethod``)."
-msgstr ""
+msgstr "``longname``: 完全限定名称, 包括成员信息(例如, ``MyClass #myMethod``). "
 
-#: ../../source/about/plugins.rst:205
+#: ../../source/about/plugins.rst:197
 msgid ""
 "``memberof``: The module, namespace, or class that this symbol belongs to"
 " (for example, ``MyClass``), or an empty string if the symbol does not "
 "have a parent."
-msgstr ""
+msgstr "``memberof``: 此符号所属的模块, 命名空间或类(例如, ``MyClass``), 如果符号没有父符号, 则为空字符串. "
 
-#: ../../source/about/plugins.rst:208
+#: ../../source/about/plugins.rst:200
 msgid ""
 "``scope``: The scope of the symbol within its parent (for example, "
 "``global``, ``static``, ``instance``, or ``inner``)."
 msgstr ""
+"``scope``: 符号在其父级中的范围(例如, ``global``, ``static``, ``instance`` 或 "
+"``inner``). "
 
-#: ../../source/about/plugins.rst:210
+#: ../../source/about/plugins.rst:202
 msgid ""
 "``undocumented``: Set to ``true`` if the symbol did not have a JSDoc "
 "comment."
-msgstr ""
+msgstr "``undocumented``: 如果符号没有JSDoc注释, 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:212
+#: ../../source/about/plugins.rst:204
 msgid "``defaultvalue``: The default value for a symbol."
-msgstr "``defaultvalue``: The default value for a symbol."
+msgstr "``defaultvalue``: 符号的默认值. "
 
-#: ../../source/about/plugins.rst:213
+#: ../../source/about/plugins.rst:205
 msgid "``type``: Object containing details about the symbol’s type."
-msgstr "``type``: Object containing details about the symbol’s type."
+msgstr "``type``: 包含有关符号类型的详细信息的对象. "
 
-#: ../../source/about/plugins.rst:214
+#: ../../source/about/plugins.rst:206
 msgid "``params``: Object containing the list of parameters to a function."
-msgstr "``params``: Object containing the list of parameters to a function."
+msgstr "``params``: 包含函数参数列表的对象. "
 
-#: ../../source/about/plugins.rst:215
+#: ../../source/about/plugins.rst:207
 msgid ""
 "``tags``: Object containing a list of tags that JSDoc did not recognize. "
 "Only available if ``allowUnknownTags`` is set to ``true`` in JSDoc’s "
 "configuration file."
 msgstr ""
+"``tags``: 包含JSDoc无法识别的标签列表的对象. 只有在JSDoc的配置文件中将 ``allowUnknownTags`` 设置为 "
+"``true`` 时才可用. "
 
-#: ../../source/about/plugins.rst:219
+#: ../../source/about/plugins.rst:211
+#, fuzzy
 msgid ""
 "To see the doclets that JSDoc generates for your code, run JSDoc with the"
-" ```-X`` command-line option <about-commandline.html>`__."
-msgstr ""
+" ``-X`` `command-line option <about-commandline.html>`__."
+msgstr "要查看JSDoc为您的代码生成的doclet, 请使用 ``-X`` `命令行选项 <commandline.html>`_ 运行JSDoc. "
 
-#: ../../source/about/plugins.rst:222
+#: ../../source/about/plugins.rst:214
 msgid ""
 "Below is an example of a ``newDoclet`` handler that shouts the "
 "descriptions:"
-msgstr ""
+msgstr "下面是一个 ``newDoclet`` 处理程序的示例, 该处理程序会对描述进行大喊:"
 
-#: ../../source/about/plugins.rst:242
+#: ../../source/about/plugins.rst:231
 msgid "Event: fileComplete"
 msgstr "Event: fileComplete"
 
-#: ../../source/about/plugins.rst:244
+#: ../../source/about/plugins.rst:233
 msgid ""
 "The ``fileComplete`` event is fired when the parser has finished parsing "
 "a file. Your plugin could use this event to trigger per-file cleanup."
-msgstr ""
+msgstr "解析器完成解析文件后会触发 ``fileComplete`` 事件. 您的插件可以使用此事件来触发每个文件的清理. "
 
-#: ../../source/about/plugins.rst:253
+#: ../../source/about/plugins.rst:242
 msgid "Event: parseComplete"
 msgstr "Event: parseComplete"
 
-#: ../../source/about/plugins.rst:255
+#: ../../source/about/plugins.rst:244
 msgid ""
 "The ``parseComplete`` event is fired after JSDoc has parsed all of the "
 "specified source files."
-msgstr ""
+msgstr "在JSDoc解析了所有指定的源文件之后, 会触发 ``parseComplete`` 事件. "
 
-#: ../../source/about/plugins.rst:262
+#: ../../source/about/plugins.rst:251
 msgid "``sourcefiles``: An array of paths to source files that were parsed."
-msgstr "``sourcefiles``: An array of paths to source files that were parsed."
+msgstr "``sourcefiles``: 解析源文件的路径数组. "
 
-#: ../../source/about/plugins.rst:263
+#: ../../source/about/plugins.rst:252
 msgid ""
 "``doclets``: An array of doclet objects. See the ```newDoclet`` event "
 "<#event-newdoclet>`__ for details about the properties that each doclet "
 "can contain. Available in JSDoc 3.2.1 and later."
 msgstr ""
+"``doclets``: 一组doclet对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 ``newDoclet`` `事件 "
+"<＃event-newdoclet>`_. 可在JSDoc 3.2.1及更高版本中使用. "
 
-#: ../../source/about/plugins.rst:268
+#: ../../source/about/plugins.rst:257
 msgid "Event: processingComplete"
 msgstr "Event: processingComplete"
 
-#: ../../source/about/plugins.rst:270
+#: ../../source/about/plugins.rst:259
 msgid ""
 "The ``processingComplete`` event is fired after JSDoc updates the parse "
 "results to reflect inherited and borrowed symbols."
-msgstr ""
+msgstr "在JSDoc更新解析结果以反映继承和借用符号之后, 将触发 ``processingComplete`` 事件. "
 
-#: ../../source/about/plugins.rst:273
+#: ../../source/about/plugins.rst:262
 msgid "**Note**: This event is fired in JSDoc 3.2.1 and later."
-msgstr "**Note**: This event is fired in JSDoc 3.2.1 and later."
+msgstr "**Note**: 此事件在JSDoc 3.2.1及更高版本中触发. "
 
-#: ../../source/about/plugins.rst:277
+#: ../../source/about/plugins.rst:266
 msgid ""
 "``doclets``: An array of doclet objects. See the ```newDoclet`` event "
 "<#event-newdoclet>`__ for details about the properties that each doclet "
 "can contain."
 msgstr ""
+"``doclets``: 一组doclet对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 ``newDoclet`` `事件 "
+"<＃event-newdoclet>`__. "
 
-#: ../../source/about/plugins.rst:282
+#: ../../source/about/plugins.rst:271
 msgid "Tag Definitions"
-msgstr "Tag Definitions"
+msgstr "标签定义"
 
-#: ../../source/about/plugins.rst:284
+#: ../../source/about/plugins.rst:273
 msgid ""
 "Adding tags to the tag dictionary is a mid-level way to affect "
 "documentation generation. Before a ``newDoclet`` event is triggered, "
@@ -1756,147 +1896,166 @@ msgid ""
 "JSDoc tags that may be present. When a tag is found, if it has been "
 "defined in the tag dictionary, it is given a chance to modify the doclet."
 msgstr ""
+"向标记字典添加标记是影响文档生成的中级方法. 在触发 ``newDoclet`` 事件之前, "
+"解析JSDoc注释块以确定描述和可能存在的任何JSDoc标记. 找到标记后, 如果已在标记字典中定义了标记, 则有机会修改doclet. "
 
-#: ../../source/about/plugins.rst:291
+#: ../../source/about/plugins.rst:280
 msgid ""
 "Plugins can define tags by exporting a ``defineTags`` function. That "
 "function will be passed a dictionary that can be used to define tags, "
 "like so:"
-msgstr ""
+msgstr "插件可以通过导出 ``defineTags`` 函数来定义标签. 该函数将传递一个字典, 可用于定义标签, 如此:"
 
-#: ../../source/about/plugins.rst:306
+#: ../../source/about/plugins.rst:292
 msgid "The Dictionary"
-msgstr "The Dictionary"
+msgstr "词典"
 
-#: ../../source/about/plugins.rst:308
+#: ../../source/about/plugins.rst:294
 msgid "The dictionary provides the following methods:"
-msgstr "The dictionary provides the following methods:"
+msgstr "该词典提供以下方法:"
 
-#: ../../source/about/plugins.rst:310
+#: ../../source/about/plugins.rst:296
 msgid ""
 "``defineTag(title, opts)``: Used to define tags. The first parameter is "
 "the name of the tag (for example, ``param`` or ``overview``). The second "
 "is an object containing options for the tag. You can include any of the "
 "following options; the default value for each option is ``false``:"
 msgstr ""
+"``defineTag(title, opts)``: 用于定义标签. 第一个参数是标记的名称(例如, ``param`` 或 "
+"``overview``). 第二个是包含标记选项的对象. 您可以包含以下任何选项;每个选项的默认值是 ``false``:"
 
-#: ../../source/about/plugins.rst:316
+#: ../../source/about/plugins.rst:302
 msgid ""
 "``canHaveType (boolean)``: Set to ``true`` if the tag text can include a "
 "type expression (such as ``{string}`` in ``@param {string} name - "
 "Description``)."
 msgstr ""
+"``canHaveType (boolean)``: 如果标记文本可以包含类型表达式(例如 ``@param {string} name - "
+"Description`` 中的 ``{string}``, 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:319
+#: ../../source/about/plugins.rst:305
 msgid ""
 "``canHaveName (boolean)``: Set to ``true`` if the tag text can include a "
 "name (such as ``name`` in ``@param {string} name - Description``)."
 msgstr ""
+"``canHaveName (boolean)``: 如果标签文本可以包含名称(例如 ``@param {string} name - "
+"Description`` 中的 ``name``), 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:322
+#: ../../source/about/plugins.rst:308
 msgid ""
 "``isNamespace (boolean)``: Set to ``true`` if the tag should be applied "
 "to the doclet’s longname as a namespace. For example, the ``@module`` tag"
 " sets this option to ``true``, and using the tag ``@module myModuleName``"
 " results in the longname ``module:myModuleName``."
 msgstr ""
+"``isNamespace (boolean)``: 如果标记应该作为命名空间应用于doclet的长名称, 则设置为 ``true``. 例如, "
+"``@module`` 标签将此选项设置为 ``true``, 并使用标签 ``@module myModuleName`` 生成长名称 "
+"``module: myModuleName``. "
 
-#: ../../source/about/plugins.rst:327
+#: ../../source/about/plugins.rst:313
 msgid ""
 "``mustHaveValue (boolean)``: Set to ``true`` if the tag must have a value"
 " (such as ``TheName`` in ``@name TheName``)."
 msgstr ""
+"``mustHaveValue (boolean)``: 如果标记必须具有值(例如 ``@name TheName`` 中的 "
+"``TheName``), 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:329
+#: ../../source/about/plugins.rst:315
 msgid ""
 "``mustNotHaveDescription (boolean)``: Set to ``true`` if the tag may have"
 " a value but must not have a description (such as ``TheDescription`` in "
 "``@tag {typeExpr} TheDescription``)."
 msgstr ""
+"``mustNotHaveDescription (boolean)``: 如果标签可能有值但是必须没有描述(例如 ``@tag "
+"{typeExpr} TheDescription`` 中的 ``TheDescription``), 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:332
+#: ../../source/about/plugins.rst:318
 msgid ""
 "``mustNotHaveValue (boolean)``: Set to ``true`` if the tag must not have "
 "a value."
-msgstr ""
+msgstr "``mustNotHaveValue (boolean)``: 如果标记必须没有值, 则设置为 ``true``. "
 
-#: ../../source/about/plugins.rst:334
+#: ../../source/about/plugins.rst:320
 msgid ""
 "``onTagged (function)``: A callback function executed when the tag is "
 "found. The function is passed two parameters: the doclet and the tag "
 "object."
-msgstr ""
+msgstr "``onTagged (function)``: 找到标记时执行的回调函数. 该函数传递两个参数: doclet和标记对象. "
 
-#: ../../source/about/plugins.rst:338
+#: ../../source/about/plugins.rst:324
 msgid ""
 "``lookUp(tagName)``: Retrieve a tag object by name. Returns the tag "
 "object, including its options, or ``false`` if the tag is not defined."
-msgstr ""
+msgstr "``lookUp(tagName)``: 按名称检索标记对象. 返回标记对象, 包括其选项, 如果未定义标记, 则返回 ``false``. "
 
-#: ../../source/about/plugins.rst:341
+#: ../../source/about/plugins.rst:327
 msgid ""
 "``isNamespace(tagName)``: Returns ``true`` if the tag is applied to a "
 "doclet’s longname as a namespace."
-msgstr ""
+msgstr "``isNamespace(tagName)``: 如果标记作为命名空间应用于doclet的longname, 则返回 ``true``. "
 
-#: ../../source/about/plugins.rst:343
+#: ../../source/about/plugins.rst:329
 msgid ""
 "``normalise(tagName)``: Returns the canonical name of a tag. For example,"
 " the ``@const`` tag is a synonym for ``@constant``; as a result, if you "
 "call ``normalise('const')``, it returns the string ``constant``."
 msgstr ""
+"``normalize(tagName)``: 返回标签的规范名称. 例如, ``@ const`` 标签是 ``@ constant`` "
+"的同义词;因此, 如果你调用 ``normalize('const')``, 它会返回字符串 ``constant``. "
 
-#: ../../source/about/plugins.rst:347
+#: ../../source/about/plugins.rst:333
 msgid ""
 "``normalize(tagName)``: Synonym for ``normalise``. Available in JSDoc "
 "3.3.0 and later."
-msgstr ""
+msgstr "``normalize(tagName)``: ``normalise`` 的同义词. 可在JSDoc 3.3.0及更高版本中使用. "
 
-#: ../../source/about/plugins.rst:350
+#: ../../source/about/plugins.rst:336
 msgid ""
 "A tag’s ``onTagged`` callback can modify the contents of the doclet or "
 "tag."
-msgstr ""
+msgstr "标签的 ``onTagged`` 回调可以修改doclet或标签的内容. "
 
-#: ../../source/about/plugins.rst:353
-#, python-format
-msgid "{% example “Defining an onTagged callback” %}"
-msgstr "{% example “Defining an onTagged callback” %}"
+#: ../../source/about/plugins.rst:339
+#, fuzzy
+msgid "Defining an onTagged callback"
+msgstr "定义onTagged回调"
 
-#: ../../source/about/plugins.rst:365
+#: ../../source/about/plugins.rst:348
 msgid ""
 "The ``defineTag`` method returns a ``Tag`` object, which has a "
 "``synonym`` method that can be used to declare a synonym for the tag."
-msgstr ""
+msgstr "``defineTag`` 方法返回一个 ``Tag`` 对象, 它有一个 ``synonym`` 方法, 可以用来声明标签的同义词. "
 
-#: ../../source/about/plugins.rst:368
-#, python-format
-msgid "{% example “Defining a tag synonym” %}"
-msgstr "{% example “Defining a tag synonym” %}"
+#: ../../source/about/plugins.rst:351
+#, fuzzy
+msgid "Defining a tag synonym"
+msgstr "定义标记同义词"
 
-#: ../../source/about/plugins.rst:378
+#: ../../source/about/plugins.rst:358
 msgid "Node Visitors"
-msgstr "Node Visitors"
+msgstr "节点访客"
 
-#: ../../source/about/plugins.rst:380
+#: ../../source/about/plugins.rst:360
 msgid ""
 "At the lowest level, plugin authors can process each node in the abstract"
 " syntax tree (AST) by defining a node visitor that will visit each node. "
 "By using a node-visitor plugin, you can modify comments and trigger "
 "parser events for any arbitrary piece of code."
 msgstr ""
+"在最低级别, 插件作者可以通过定义将访问每个节点的节点访问者来处理抽象语法树(AST)中的每个节点. 通过使用node-visitor插件, "
+"您可以修改注释并触发任意代码段的解析器事件. "
 
-#: ../../source/about/plugins.rst:385
+#: ../../source/about/plugins.rst:365
 msgid ""
 "Plugins can define a node visitor by exporting an ``astNodeVisitor`` "
 "object that contains a ``visitNode`` function, like so:"
-msgstr ""
+msgstr "插件可以通过导出包含 ``visitNode`` 函数的 ``astNodeVisitor`` 对象来定义节点访问者, 就像这样:"
 
-#: ../../source/about/plugins.rst:400
+#: ../../source/about/plugins.rst:377
 msgid "The function is called on each node with the following parameters:"
-msgstr "The function is called on each node with the following parameters:"
+msgstr "使用以下参数在每个节点上调用该函数:"
 
-#: ../../source/about/plugins.rst:402
+#: ../../source/about/plugins.rst:379
 msgid ""
 "``node``: The AST node. AST nodes are JavaScript objects that use the "
 "format defined by the `ESTree spec <https://github.com/estree/estree>`__."
@@ -1905,28 +2064,34 @@ msgid ""
 "uses the current version of the `Babylon "
 "<https://github.com/babel/babylon>`__ parser with all plugins enabled."
 msgstr ""
+"``node``: AST节点.  AST节点是使用 `ESTree spec "
+"<https://github.com/estree/estree>`_ 定义的格式的JavaScript对象. 您可以使用 `AST "
+"Explorer <https://astexplorer.net/>`_ 查看将为您的源代码创建的AST. 从版本3.5.0开始, "
+"JSDoc使用当前版本的 `Babylon <https://github.com/babel/babylon>`_ 解析器并启用所有插件. "
 
-#: ../../source/about/plugins.rst:409
+#: ../../source/about/plugins.rst:386
 msgid ""
 "``e``: The event. If the node is one that the parser handles, the event "
 "object will already be populated with the same things described in the "
 "``symbolFound`` event above. Otherwise, it will be an empty object on "
 "which to set various properties."
 msgstr ""
+"``e``: 事件. 如果节点是解析器处理的节点, 则事件对象将已经填充了上面 ``symbolFound`` 事件中描述的相同内容. 否则, "
+"它将是一个空对象, 可在其上设置各种属性. "
 
-#: ../../source/about/plugins.rst:413
+#: ../../source/about/plugins.rst:390
 msgid "``parser``: The JSDoc parser instance."
-msgstr "``parser``: The JSDoc parser instance."
+msgstr "``parser``: JSDoc解析器实例. "
 
-#: ../../source/about/plugins.rst:414
+#: ../../source/about/plugins.rst:391
 msgid "``currentSourceName``: The name of the file being parsed."
-msgstr "``currentSourceName``: The name of the file being parsed."
+msgstr "``currentSourceName``: 要解析的文件的名称. "
 
-#: ../../source/about/plugins.rst:417
+#: ../../source/about/plugins.rst:394
 msgid "Making things happen"
-msgstr "Making things happen"
+msgstr "让事情发生"
 
-#: ../../source/about/plugins.rst:419
+#: ../../source/about/plugins.rst:396
 msgid ""
 "The primary reasons to implement a node visitor are to be able to "
 "document things that aren’t normally documented (like function calls that"
@@ -1935,8 +2100,10 @@ msgid ""
 " method since it knows that means an event is fired and then generate "
 "documentation for the event."
 msgstr ""
+"实现节点访问者的主要原因是能够记录通常未记录的内容(如创建类的函数调用)或自动生成未记录的代码的文档. 例如, 插件可能会查找对 "
+"``_trigger`` 方法的调用, 因为它知道这意味着事件被触发, 然后生成事件的文档. "
 
-#: ../../source/about/plugins.rst:426
+#: ../../source/about/plugins.rst:403
 msgid ""
 "To make things happen, the ``visitNode`` function should modify "
 "properties of the event parameter. In general the goal is to construct a "
@@ -1947,8 +2114,12 @@ msgid ""
 "usually ``symbolFound`` or ``jsdocCommentFound``, but theoretically, a "
 "plugin could define its own events and handle them."
 msgstr ""
+"为了使事情发生, ``visitNode`` 函数应该修改event参数的属性. 一般来说, 目标是构建注释然后获取要触发的事件. "
+"解析器允许所有节点访问者查看节点后, 它会查看事件对象是否具有 ``comment`` 属性和 ``event`` 属性. 如果两者都有, "
+"则触发事件属性中指定的事件. 事件通常是 ``symbolFound`` 或 ``jsdocCommentFound`` , 但理论上, "
+"插件可以定义自己的事件并处理它们. "
 
-#: ../../source/about/plugins.rst:435
+#: ../../source/about/plugins.rst:412
 msgid ""
 "As with event-handler plugins, a node-visitor plugin can stop later "
 "plugins from running by setting a ``stopPropagation`` property on the "
@@ -1956,58 +2127,64 @@ msgid ""
 "from firing by setting a ``preventDefault`` property (``e.preventDefault "
 "= true``)."
 msgstr ""
+"与事件处理程序插件一样, node-visitor插件可以通过在事件对象(``e.stopPropagation = true``)上设置 "
+"``stopPropagation`` 属性来阻止以后的插件运行. 插件可以通过设置 ``preventDefault`` "
+"属性(``e.preventDefault = true``)来停止触发事件. "
 
-#: ../../source/about/plugins.rst:442
+#: ../../source/about/plugins.rst:419
 msgid "Reporting Errors"
-msgstr "Reporting Errors"
+msgstr "报告错误"
 
-#: ../../source/about/plugins.rst:444
+#: ../../source/about/plugins.rst:421
 msgid ""
 "If your plugin needs to report an error, use one of the following methods"
 " in the ``jsdoc/util/logger`` module:"
-msgstr ""
+msgstr "如果您的插件需要报告错误, 请在 ``jsdoc/util/logger`` 模块中使用以下方法之一: "
 
-#: ../../source/about/plugins.rst:447
+#: ../../source/about/plugins.rst:424
 msgid "``logger.warn``: Warn the user about a possible problem."
-msgstr "``logger.warn``: Warn the user about a possible problem."
+msgstr "``logger.warn``: 警告用户可能出现的问题. "
 
-#: ../../source/about/plugins.rst:448
+#: ../../source/about/plugins.rst:425
 msgid "``logger.error``: Report an error from which the plugin can recover."
-msgstr "``logger.error``: Report an error from which the plugin can recover."
+msgstr "``logger.error``: 报告插件可以恢复的错误. "
 
-#: ../../source/about/plugins.rst:449
+#: ../../source/about/plugins.rst:426
 msgid "``logger.fatal``: Report an error that should cause JSDoc to stop running."
-msgstr "``logger.fatal``: Report an error that should cause JSDoc to stop running."
+msgstr "``logger.fatal``: 报告应该导致JSDoc停止运行的错误. "
 
-#: ../../source/about/plugins.rst:452
+#: ../../source/about/plugins.rst:429
 msgid ""
 "Using these methods creates a better user experience than simply throwing"
 " an error."
-msgstr ""
+msgstr "使用这些方法可以创建比简单地抛出错误更好的用户体验. "
 
-#: ../../source/about/plugins.rst:455
+#: ../../source/about/plugins.rst:432
 msgid ""
 "**Note**: Do not use the ``jsdoc/util/error`` module to report errors. "
 "This module is deprecated and will be removed in a future version of "
 "JSDoc."
-msgstr ""
+msgstr "**注意**: 不要使用 ``jsdoc/util/error`` 模块来报告错误. 此模块已弃用, 将在JSDoc的未来版本中删除. "
 
-#: ../../source/about/plugins.rst:459
-#, python-format
-msgid "{% example “Reporting a non-fatal error” %}"
-msgstr "{% example “Reporting a non-fatal error” %}"
+#: ../../source/about/plugins.rst:436
+#, fuzzy
+msgid "Reporting a non-fatal error"
+msgstr "报告非致命错误"
 
 #: ../../source/about/plugins-markdown.rst:2
 msgid "plugins markdown"
 msgstr "markdown插件"
 
 #: ../../source/about/plugins-markdown.rst:4
+#, fuzzy
 msgid ""
 "JSDoc includes a Markdown plugin that automatically converts Markdown-"
 "formatted text to HTML. You can use this plugin with any JSDoc template. "
 "In JSDoc 3.2.2 and later, the Markdown plugin uses the `marked Markdown "
-"parser <https://github.com/chjj/marked>`__."
+"parser <https://github.com/chjj/marked>`_."
 msgstr ""
+"SDoc包含一个Markdown插件, 可自动将Markdown格式的文本转换为HTML. 您可以将此插件与任何JSDoc模板一起使用. "
+"在JSDoc 3.2.2及更高版本中, `标记的Markdown解析器 <https://github.com/chjj/marked>`_. "
 
 #: ../../source/about/plugins-markdown.rst:9
 msgid ""
@@ -2016,71 +2193,85 @@ msgid ""
 "leading asterisks, JSDoc’s parser may remove asterisks that are used for "
 "Markdown formatting."
 msgstr ""
+"**注意**: 启用Markdown插件时, 请确保在JSDoc注释的每一行上都包含一个前导星号. 如果省略前导星号, "
+"JSDoc的解析器可能会删除用于Markdown格式的星号. "
 
 #: ../../source/about/plugins-markdown.rst:14
 msgid ""
 "By default, JSDoc looks for Markdown-formatted text in the following "
 "JSDoc tags:"
-msgstr ""
+msgstr "默认情况下, JSDoc在以下JSDoc标记中查找Markdown格式的文本:"
 
 #: ../../source/about/plugins-markdown.rst:17
-msgid "```@author`` <tags-author.html>`__"
-msgstr "```@author`` <tags-author.html>`__"
+#, fuzzy
+msgid "`@author <tags-author.html>`_"
+msgstr "`@author <tags-author.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:18
-msgid "```@classdesc`` <tags-classdesc.html>`__"
-msgstr "```@classdesc`` <tags-classdesc.html>`__"
+#, fuzzy
+msgid "`@classdesc <tags-classdesc.html>`_"
+msgstr "`@classdesc <tags-classdesc.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:19
+#, fuzzy
 msgid ""
-"```@description`` <tags-description.html>`__ (including untagged "
-"descriptions at the start of a JSDoc comment)"
-msgstr ""
+"`@description <tags-description.html>`_ (including untagged descriptions "
+"at the start of a JSDoc comment)"
+msgstr "`@description <tags-description.html>`_ (包括JSDoc评论开头的未标记描述)"
+
+#: ../../source/about/plugins-markdown.rst:20
+#, fuzzy
+msgid "`@param <tags-param.html>`_"
+msgstr "`@param <tags-param.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:21
-msgid "```@param`` <tags-param.html>`__"
-msgstr "```@param`` <tags-param.html>`__"
+#, fuzzy
+msgid "`@property <tags-property.html>`_"
+msgstr "`@property <tags-property.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:22
-msgid "```@property`` <tags-property.html>`__"
-msgstr "```@property`` <tags-property.html>`__"
+#, fuzzy
+msgid "`@returns <tags-returns.html>`_"
+msgstr "`@returns <tags-returns.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:23
-msgid "```@returns`` <tags-returns.html>`__"
-msgstr "```@returns`` <tags-returns.html>`__"
+#, fuzzy
+msgid "`@see <tags-see.html>`_"
+msgstr "`@see <tags-see.html>`__"
 
 #: ../../source/about/plugins-markdown.rst:24
-msgid "```@see`` <tags-see.html>`__"
-msgstr "```@see`` <tags-see.html>`__"
+#, fuzzy
+msgid "`@throws <tags-throws.html>`_"
+msgstr "`@throws <tags-throws.html>`__"
 
-#: ../../source/about/plugins-markdown.rst:25
-msgid "```@throws`` <tags-throws.html>`__"
-msgstr "```@throws`` <tags-throws.html>`__"
-
-#: ../../source/about/plugins-markdown.rst:28
+#: ../../source/about/plugins-markdown.rst:27
 msgid "Enabling the Markdown plugin"
-msgstr "Enabling the Markdown plugin"
+msgstr "启用Markdown插件"
 
-#: ../../source/about/plugins-markdown.rst:30
+#: ../../source/about/plugins-markdown.rst:29
+#, fuzzy
 msgid ""
 "To enable the Markdown plugin, add the string ``plugins/markdown`` to the"
 " ``plugins`` array in your `JSDoc configuration file <about-configuring-"
-"jsdoc.html>`__:"
+"jsdoc.html>`_:"
 msgstr ""
+"要启用Markdown插件, 请在 `JSDoc配置文件 <configurations-jsdoc.html>`_ 中的 ``plugins``"
+" 数组中添加字符串 ``plugins/markdown``: "
 
 #: ../../source/about/plugins-markdown.rst:34
-#, python-format
-msgid "{% example “JSON configuration file that enables the Markdown plugin” %}"
-msgstr "{% example “JSON configuration file that enables the Markdown plugin” %}"
+#, fuzzy
+msgid "JSON configuration file that enables the Markdown plugin"
+msgstr "启用Markdown插件的JSON配置文件"
 
-#: ../../source/about/plugins-markdown.rst:45
+#: ../../source/about/plugins-markdown.rst:42
 msgid "Converting Markdown in additional JSDoc tags"
-msgstr "Converting Markdown in additional JSDoc tags"
+msgstr "在其他JSDoc标记中转换Markdown"
 
-#: ../../source/about/plugins-markdown.rst:47
+#: ../../source/about/plugins-markdown.rst:44
+#, fuzzy
 msgid ""
 "By default, the Markdown plugin only processes `specific JSDoc tags "
-"<#default-tags>`__ for Markdown text. You can handle Markdown text in "
+"<#default-tags>`_ for Markdown text. You can handle Markdown text in "
 "other tags by adding a ``markdown.tags`` property to your JSDoc "
 "configuration file. The ``markdown.tags`` property contains an array of "
 "the additional doclet properties that can contain Markdown text. (In most"
@@ -2090,47 +2281,59 @@ msgid ""
 " tag’s text is stored in a doclet, run JSDoc with the ``-X/--explain`` "
 "tag, which prints each doclet to the console.)"
 msgstr ""
+"默认情况下, Markdown插件仅处理Markdown文本的 `特定JSDoc标记 <#default-tags>`_. "
+"您可以通过向JSDoc配置文件添加 ``markdown.tags`` 属性来处理其他标记中的Markdown文本. "
+"``markdown.tags`` 属性包含一个可包含Markdown文本的附加doclet属性数组.  (在大多数情况下, "
+"doclet属性的名称与标记名称相同. 但是, 某些标记的存储方式不同;例如, ``@param`` 标记存储在doclet的 "
+"``params`` 属性中. 如果您不确定标签的文本是如何存储在doclet中的, 请使用 ``-X/-explain`` 标签运行JSDoc,"
+" 该标签将每个doclet打印到控制台. )"
 
-#: ../../source/about/plugins-markdown.rst:58
+#: ../../source/about/plugins-markdown.rst:55
 msgid ""
 "For example, if the ``foo`` and ``bar`` tags accept values that are "
 "stored in a doclet’s ``foo`` and ``bar`` properties, you could enable "
 "Markdown processing of these tags by adding the following settings to "
 "your JSDoc configuration file:"
 msgstr ""
+"例如, 如果 ``foo`` 和 ``bar`` 标签接受存储在doclet的 ``foo`` 和 ``bar`` 属性中的值, "
+"你可以通过添加以下内容来启用这些标签的Markdown处理JSDoc配置文件的设置:"
 
-#: ../../source/about/plugins-markdown.rst:63
-#, python-format
-msgid "{% example “Converting Markdown in ‘foo’ and ‘bar’ tags” %}"
-msgstr "{% example “Converting Markdown in ‘foo’ and ‘bar’ tags” %}"
+#: ../../source/about/plugins-markdown.rst:60
+#, fuzzy
+msgid "Converting Markdown in ‘foo’ and ‘bar’ tags"
+msgstr "在 ‘foo’ 和 ‘bar’ t标签中转换Markdown"
 
-#: ../../source/about/plugins-markdown.rst:77
+#: ../../source/about/plugins-markdown.rst:71
 msgid "Excluding the default tags from Markdown processing"
-msgstr "Excluding the default tags from Markdown processing"
+msgstr "从Markdown处理中排除默认标记"
 
-#: ../../source/about/plugins-markdown.rst:79
+#: ../../source/about/plugins-markdown.rst:73
+#, fuzzy
 msgid ""
 "To prevent the Markdown plugin from processing any of the `default JSDoc "
-"tags <#default-tags>`__, add a ``markdown.excludeTags`` property to your "
+"tags <#default-tags>`_, add a ``markdown.excludeTags`` property to your "
 "JSDoc configuration file. The ``markdown.excludeTags`` property contains "
 "an array of the default tags that should not be processed for Markdown "
 "text."
 msgstr ""
+"为了防止Markdown插件处理任何 `默认JSDoc标记 <#default-tags>`__, 在JSDoc配置文件中添加一个 "
+"``markdown.excludeTags`` 属性. ``markdown.excludeTags`` "
+"属性包含不应为Markdown文本处理的默认标记数组. "
 
-#: ../../source/about/plugins-markdown.rst:85
+#: ../../source/about/plugins-markdown.rst:79
 msgid "For example, to exclude the ``author`` tag from Markdown processing:"
-msgstr "For example, to exclude the ``author`` tag from Markdown processing:"
+msgstr "例如, 从Markdown处理中排除 ``author`` 标记:"
 
-#: ../../source/about/plugins-markdown.rst:87
-#, python-format
-msgid "{% example “Excluding the ‘author’ tag from Markdown processing” %}"
-msgstr "{% example “Excluding the ‘author’ tag from Markdown processing” %}"
+#: ../../source/about/plugins-markdown.rst:82
+#, fuzzy
+msgid "Excluding the ‘author’ tag from Markdown processing"
+msgstr "从Markdown处理中排除默认标记"
 
-#: ../../source/about/plugins-markdown.rst:101
+#: ../../source/about/plugins-markdown.rst:93
 msgid "Hard-wrapping text at line breaks"
-msgstr "Hard-wrapping text at line breaks"
+msgstr "在换行符处硬包装文本"
 
-#: ../../source/about/plugins-markdown.rst:103
+#: ../../source/about/plugins-markdown.rst:95
 msgid ""
 "By default, the Markdown plugin does not hard-wrap text at line breaks. "
 "This is because it’s normal for a JSDoc comment to be wrapped across "
@@ -2138,12 +2341,15 @@ msgid ""
 "JSDoc configuration file’s ``markdown.hardwrap`` property to ``true``. "
 "This property is available in JSDoc 3.4.0 and later."
 msgstr ""
+"默认情况下, Markdown插件不会在换行符处硬包装文本. 这是因为将JSDoc注释包装在多行中是正常的. 如果您更喜欢在换行符处硬包装文本, "
+"请将JSDoc配置文件的 ``markdown.hardwrap`` 属性设置为 ``true``. 此属性在JSDoc "
+"3.4.0及更高版本中可用. "
 
-#: ../../source/about/plugins-markdown.rst:110
+#: ../../source/about/plugins-markdown.rst:102
 msgid "Adding ID attributes to headings"
-msgstr "Adding ID attributes to headings"
+msgstr "将ID属性添加到标题中"
 
-#: ../../source/about/plugins-markdown.rst:112
+#: ../../source/about/plugins-markdown.rst:104
 msgid ""
 "By default, the Markdown plugin does not add an ``id`` attribute to each "
 "HTML heading. To automatically add ``id`` attributes based on the "
@@ -2151,18 +2357,22 @@ msgid ""
 "``markdown.idInHeadings`` property to ``true``. This property is "
 "available in JSDoc 3.4.0 and later."
 msgstr ""
+"默认情况下, Markdown插件不会为每个HTML标题添加 ``id`` 属性. 要根据标题的文本自动添加 ``id`` 属性, "
+"请将JSDoc配置文件的 ``markdown.idInHeadings`` 属性设置为 ``true``. 此属性在JSDoc "
+"3.4.0及更高版本中可用. "
 
 #: ../../source/about/tutorials.rst:2
 msgid "Tutorials"
 msgstr "教程"
 
 #: ../../source/about/tutorials.rst:4
+#, fuzzy
 msgid ""
 "JSDoc allows you to include tutorials alongside your API documentation. "
 "You can use this feature to provide detailed instructions for using your "
 "API, such as a “getting started” guide or a step-by-step process for "
 "implementing a feature."
-msgstr ""
+msgstr "JSDoc允许您在API文档中包含教程. 您可以使用此功能提供有关使用API​​的详细说明, 例如 `入门` 指南或实现功能的分步过程. "
 
 #: ../../source/about/tutorials.rst:10
 msgid "Adding tutorials"
@@ -2174,12 +2384,14 @@ msgid ""
 "``--tutorials`` or ``-u`` option, and provide a directory that JSDoc "
 "should search for tutorials. For example:"
 msgstr ""
+"要在API文档中添加教程, 请使用 ``--tutorials`` 或 ``-u`` 选项运行JSDoc, 并提供JSDoc应搜索教程的目录. "
+"例如:"
 
 #: ../../source/about/tutorials.rst:20
 msgid ""
 "JSDoc searches the tutorials directory for files with the following "
 "extensions:"
-msgstr ""
+msgstr "JSDoc在tutorials目录中搜索具有以下扩展名的文件:"
 
 #: ../../source/about/tutorials.rst:23
 msgid "``.htm``"
@@ -2191,11 +2403,11 @@ msgstr "``.html``"
 
 #: ../../source/about/tutorials.rst:25
 msgid "``.markdown`` (converted from Markdown to HTML)"
-msgstr "``.markdown`` (converted from Markdown to HTML)"
+msgstr "``.markdown`` (从Markdown转换为HTML)"
 
 #: ../../source/about/tutorials.rst:26
 msgid "``.md`` (converted from Markdown to HTML)"
-msgstr "``.md`` (converted from Markdown to HTML)"
+msgstr "``.md`` (从Markdown转换为HTML)"
 
 #: ../../source/about/tutorials.rst:27
 msgid "``.xhtml``"
@@ -2203,14 +2415,14 @@ msgstr "``.xhtml``"
 
 #: ../../source/about/tutorials.rst:28
 msgid "``.xml`` (treated as HTML)"
-msgstr "``.xml`` (treated as HTML)"
+msgstr "``.xml`` (被视为HTML)"
 
 #: ../../source/about/tutorials.rst:30
 msgid ""
 "JSDoc also searches for JSON files that contain information about the "
 "titles, ordering, and hierarchy of your tutorials, as discussed in the "
 "following section."
-msgstr ""
+msgstr "JSDoc还搜索包含有关教程的标题, 顺序和层次结构的信息的JSON文件, 如以下部分所述. "
 
 #: ../../source/about/tutorials.rst:34
 msgid ""
@@ -2218,6 +2430,8 @@ msgid ""
 "filename without its extension. For example, the identifier for "
 "``/path/to/tutorials/overview.md`` is ``overview``."
 msgstr ""
+"JSDoc为每个教程分配一个标识符. 标识符是没有扩展名的文件名. 例如, ``/path/to/tutorials/overview.md`` "
+"的标识符是 ``overview``. "
 
 #: ../../source/about/tutorials.rst:38
 msgid ""
@@ -2226,10 +2440,12 @@ msgid ""
 "tags to link to other parts of the documentation. JSDoc will "
 "automatically resolve the links."
 msgstr ""
+"在教程文件中, 您可以使用 `{@link} <tags-inline-link.html>`__ 和 `{@tutorial} <tags-"
+"inline-tutorial.html>`__ inline标签链接到文档的其他部分. JSDoc将自动解析链接. "
 
 #: ../../source/about/tutorials.rst:45
 msgid "Configuring titles, order, and hierarchy"
-msgstr "配置标题，顺序和层次结构"
+msgstr "配置标题, 顺序和层次结构"
 
 #: ../../source/about/tutorials.rst:47
 msgid ""
@@ -2238,27 +2454,29 @@ msgid ""
 "title for each tutorial and indicates how the tutorials should be sorted "
 "and grouped in the documentation."
 msgstr ""
+"默认情况下, JSDoc使用文件名作为教程的标题, 所有教程都处于同一级别. 您可以使用JSON文件为每个教程提供标题, "
+"并指出教程应如何在文档中进行排序和分组. "
 
 #: ../../source/about/tutorials.rst:52
 msgid ""
 "The JSON file must use the extension ``.json``. In the JSON file, you can"
 " use the tutorial identifiers to provide two properties for each "
 "tutorial:"
-msgstr ""
+msgstr "JSON文件必须使用扩展名 ``.json``. 在JSON文件中, 您可以使用教程标识符为每个教程提供两个属性: "
 
 #: ../../source/about/tutorials.rst:56
 msgid "``title``: The title to display in the documentation."
-msgstr "``title``: 要在文档中显示的标题。"
+msgstr "``title``: 要在文档中显示的标题. "
 
 #: ../../source/about/tutorials.rst:57
 msgid "``children``: The children of the tutorial."
-msgstr "``children``: 教程的孩子们。"
+msgstr "``children``: 教程的孩子们. "
 
 #: ../../source/about/tutorials.rst:59
 msgid ""
 "In JSDoc 3.2.0 and later, you can use the following formats for the JSON "
 "file:"
-msgstr ""
+msgstr "在JSDoc 3.2.0及更高版本中, 您可以对JSON文件使用以下格式: "
 
 #: ../../source/about/tutorials.rst:62
 msgid ""
@@ -2267,6 +2485,8 @@ msgid ""
 " ``childA`` and ``childB``, and ``tutorial2`` is at the same level as "
 "``tutorial1`` and has no children:"
 msgstr ""
+"一个对象树, 在其父级的 ``children`` 属性中定义了子教程. 例如, 如果 ``tutorial1`` 有两个孩子, "
+"``childA`` 和 ``childB``, ``tutorial2`` 与 ``tutorial1`` 处于同一级别并且没有孩子: "
 
 #: ../../source/about/tutorials.rst:86
 msgid ""
@@ -2275,13 +2495,15 @@ msgid ""
 "two children, ``childA`` and ``childB``, and ``tutorial2`` is at the same"
 " level as ``tutorial1`` and has no children:"
 msgstr ""
+"一个顶级对象, 其属性都是教程对象, 其中子教程按名称列在数组中. 例如, 如果 ``tutorial1`` 有两个孩子, ``childA`` "
+"和 ``childB``, ``tutorial2`` 与 ``tutorial1`` 处于同一级别并且没有孩子: "
 
 #: ../../source/about/tutorials.rst:110
 msgid ""
 "You can also provide an individual ``.json`` file for each tutorial, "
 "using the tutorial identifier as the filename. This method is deprecated "
 "and should not be used for new projects."
-msgstr ""
+msgstr "您还可以使用教程标识符作为文件名为每个教程提供单独的 ``.json`` 文件. 不推荐使用此方法, 不应将其用于新项目. "
 
 #: ../../source/about/tutorials.rst:115
 msgid "Linking to tutorials from API documentation"
@@ -2296,30 +2518,42 @@ msgid "@tutorial block tag"
 msgstr "@tutorial 块标签"
 
 #: ../../source/about/tutorials.rst:123
+#, fuzzy
 msgid ""
-"If you include a ```@tutorial`` block tag <tags-tutorial.html>`__ in a "
+"If you include a ``@tutorial`` `block tag <tags-tutorial.html>`__ in a "
 "JSDoc comment, the generated documentation will include a link to the "
 "tutorial you specify."
 msgstr ""
+"如果在JSDoc注释中包含 `@ tutorial 块标记<tags-tutorial.html>`__, "
+"生成的文档将包含指向您指定的教程的链接. "
 
 #: ../../source/about/tutorials.rst:127
-#, python-format
-msgid "{% example “Using the ``@tutorial`` block tag” %}"
-msgstr "{% example “Using the ``@tutorial`` block tag” %}"
+#, fuzzy
+msgid "Using the ``@tutorial`` block tag"
+msgstr "使用 ``@ tutorial`` 块标记"
 
-#: ../../source/about/tutorials.rst:142
+#: ../../source/about/tutorials.rst:139
 msgid "{@tutorial} inline tag"
 msgstr "{@tutorial} 内联标签"
 
-#: ../../source/about/tutorials.rst:144
+#: ../../source/about/tutorials.rst:141
+#, fuzzy
 msgid ""
-"You can also use the ```{@tutorial}`` inline tag <tags-inline-"
+"You can also use the ``{@tutorial}`` `inline tag <tags-inline-"
 "tutorial.html>`__ to link to a tutorial within the text of another tag. "
 "By default, JSDoc will use the tutorial’s title as the link text."
 msgstr ""
+"您还可以使用 `{@tutorial} inline tag <tags-inline-tutorial.html>`__ "
+"链接到另一个标签文本中的教程. 默认情况下, JSDoc将使用教程的标题作为链接文本. "
 
-#: ../../source/about/tutorials.rst:149
-#, python-format
-msgid "{% example “Using the ``{@tutorial}`` inline tag” %}"
-msgstr "{% example “Using the ``{@tutorial}`` inline tag” %}"
+#: ../../source/about/tutorials.rst:146
+#, fuzzy
+msgid "Using the ``{@tutorial}`` inline tag"
+msgstr "使用 ``{@tutorial}`` 内联标签"
+
+#~ msgid "jsdoc3"
+#~ msgstr "jsdoc3"
+
+#~ msgid "caption"
+#~ msgstr "选项"
 

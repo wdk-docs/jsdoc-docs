@@ -24,19 +24,19 @@ Module identifiers
 ------------------
 
 In most cases, your CommonJS or Node.js module should include a
-standalone JSDoc comment that contains a ```@module``
-tag <tags-module.html>`__. The ``@module`` tag’s value should be the
+standalone JSDoc comment that contains a `@module
+tag <tags-module.html>`__. The :rst:dir:`@module` tag’s value should be the
 module identifier that’s passed to the ``require()`` function. For
 example, if users load the module by calling ``require('my/shirt')``,
 your JSDoc comment would contain the tag ``@module my/shirt``.
 
-If you use the ``@module`` tag without a value, JSDoc will try to guess
+If you use the :rst:dir:`@module` tag without a value, JSDoc will try to guess
 the correct module identifier based on the filepath.
 
 When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a
 module from another JSDoc comment, you must add the prefix ``module:``.
 For example, if you want the documentation for the module ``my/pants``
-to link to the module ``my/shirt``, you could use the ```@see``
+to link to the module ``my/shirt``, you could use the `@see
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
 .. code-block:: js
@@ -64,9 +64,8 @@ In the following example, the ``my/shirt`` module exports the methods
 ``button`` and ``unbutton``. JSDoc will automatically detect that the
 module exports these methods.
 
-{% example “Methods added to the exports object” %}
-
 .. code-block:: js
+   :caption: Methods added to the exports object
 
    /**
     * Shirt module.
@@ -83,8 +82,6 @@ module exports these methods.
        // ...
    };
 
-{% endexample %}
-
 ## Values assigned to local variables
 
 In some cases, an exported symbol may be assigned to a local variable
@@ -92,10 +89,8 @@ before it’s added to the ``exports`` object. For example, if your module
 exports a ``wash`` method, and the module itself often calls the
 ``wash`` method, you might write the module as follows:
 
-{% example “Method assigned to a local variable and added to the exports
-object” %}
-
 .. code-block:: js
+   :caption: Method assigned to a local variable and added to the exports object
 
    /**
     * Shirt module.
@@ -107,19 +102,16 @@ object” %}
        // ...
    };
 
-{% endexample %}
-
 In this case, JSDoc will *not* automatically document ``wash`` as an
 exported method, because the JSDoc comment appears immediately before
 the local variable ``wash`` rather than ``exports.wash``. One solution
-is to add an ```@alias`` tag <tags-alias.html>`__ that defines the
+is to add an `@alias tag <tags-alias.html>`__ that defines the
 correct longname for the method. In this case, the method is a static
 member of the module ``my/shirt``, so the correct longname is
 ``module:my/shirt.wash``:
 
-{% example “Longname defined in an @alias tag” %}
-
 .. code-block:: js
+   :caption: Longname defined in an @alias tag
 
    /**
     * Shirt module.
@@ -134,15 +126,12 @@ member of the module ``my/shirt``, so the correct longname is
        // ...
    };
 
-{% endexample %}
-
 Another solution is to move the method’s JSDoc comment so it comes
 immediately before ``exports.wash``. This change allows JSDoc to detect
 that ``wash`` is exported by the module ``my/shirt``:
 
-{% example “JSDoc comment immediately before exports.wash” %}
-
 .. code-block:: js
+   :caption: JSDoc comment immediately before exports.wash
 
    /**
     * Shirt module.
@@ -154,8 +143,6 @@ that ``wash`` is exported by the module ``my/shirt``:
    exports.wash = function() {
        // ...
    };
-
-{% endexample %}
 
 Values assigned to ‘module.exports’
 -----------------------------------
@@ -172,9 +159,8 @@ automatically recognizes that the module exports only this value. In
 addition, JSDoc automatically sets the correct longname for each
 property:
 
-{% example “Object literal assigned to module.exports” %}
-
 .. code-block:: js
+   :caption: Object literal assigned to module.exports
 
    /**
     * Color mixer.
@@ -203,15 +189,11 @@ property:
        }
    };
 
-{% endexample %}
-
 You can also use this pattern if you add properties to
 ``module.exports`` outside of the object literal:
 
-{% example “Assignment to module.exports followed by property
-definition” %}
-
 .. code-block:: js
+   :caption: Assignment to module.exports followed by property definition
 
    /**
     * Color mixer.
@@ -240,17 +222,14 @@ definition” %}
        // ..
    };
 
-{% endexample %}
-
 Function assigned to ‘module.exports’
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you assign a function to ``module.exports``, JSDoc will automatically
 set the correct longname for the function:
 
-{% example “Function assigned to ‘module.exports’” %}
-
 .. code-block:: js
+   :caption: Function assigned to ‘module.exports’
 
    /**
     * Color mixer.
@@ -267,13 +246,10 @@ set the correct longname for the function:
        // ...
    };
 
-{% endexample %}
-
 The same pattern works for constructor functions:
 
-{% example “Constructor assigned to ‘module.exports’” %}
-
 .. code-block:: js
+   :caption: Constructor assigned to ‘module.exports’
 
    /**
     * Color mixer.
@@ -285,19 +261,16 @@ The same pattern works for constructor functions:
        // ...
    };
 
-{% endexample %}
-
 String, number, or boolean assigned to ‘module.exports’
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For value types (strings, numbers, and booleans) assigned to
 ``module.exports``, you must document the exported value’s type by using
-the ```@type`` tag <tags-type.html>`__ in the same JSDoc comment as the
-``@module`` tag:
-
-{% example “String assigned to module.exports” %}
+the `@type tag <tags-type.html>`__ in the same JSDoc comment as the
+:rst:dir:`@module` tag:
 
 .. code-block:: js
+   :caption: String assigned to module.exports
 
    /**
     * Module representing the word of the day.
@@ -307,21 +280,18 @@ the ```@type`` tag <tags-type.html>`__ in the same JSDoc comment as the
 
    module.exports = 'perniciousness';
 
-{% endexample %}
-
 Values assigned to ‘module.exports’ and local variables
 -------------------------------------------------------
 
 If your module exports symbols that are not directly assigned to
-``module.exports``, you can use the ```@exports``
-tag <tags-exports.html>`__ in place of the ``@module`` tag. The
-``@exports`` tag tells JSDoc that a symbol represents the value exported
+``module.exports``, you can use the `@exports
+tag <tags-exports.html>`__ in place of the :rst:dir:`@module` tag. The
+:rst:dir:`@exports` tag tells JSDoc that a symbol represents the value exported
 by a module.
 
-{% example “Object literal assigned to a local variable and
-module.exports” %}
 
 .. code-block:: js
+   :caption: Object literal assigned to a local variable and module.exports
 
    /**
     * Color mixer.
@@ -339,8 +309,6 @@ module.exports” %}
        }
    };
 
-{% endexample %}
-
 Properties added to ‘this’
 --------------------------
 
@@ -348,9 +316,8 @@ When a module adds a property to its ``this`` object, JSDoc 3
 automatically recognizes that the new property is exported by the
 module:
 
-{% example “Properties added to a module’s ‘this’ object” %}
-
 .. code-block:: js
+   :caption: Properties added to a module’s ‘this’ object
 
    /**
     * Module for bookshelf-related utilities.
@@ -366,5 +333,3 @@ module:
        /** The title of the book. */
        this.title = title;
    }
-
-{% endexample %}

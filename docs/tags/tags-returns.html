@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -139,12 +137,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-public.html">&#64;public</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-readonly.html">&#64;read</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-requires.html">&#64;requires</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;return</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;return</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-see.html">&#64;see</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-since.html">&#64;since</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-static.html">&#64;static</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,19 +226,21 @@
             
   <div class="section" id="return">
 <h1>&#64;return<a class="headerlink" href="#return" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;returns</span> <span class="pre">[{type}]</span> <span class="pre">[description]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;returns</span></code> tag documents the value that a function returns.</p>
-<p>If you are documenting a generator function, use the <code class="docutils literal notranslate"><span class="pre">`&#64;yields</span></code>
-tag &lt;tags-yields.html&gt;`__ instead of this tag.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Return value with a type” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;returns">
+<code class="descname">.. &#64;returns::</code><a class="headerlink" href="#directive-@returns" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;returns</span> <span class="pre">[{type}]</span> <span class="pre">[description]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;returns" title="&#64;returns directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;returns</span></code></a> tag documents the value that a function returns.</p>
+<p>If you are documenting a generator function, use the <a class="reference external" href="tags-yields.html">&#64;yields
+tag</a> instead of this tag.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Return value with a type</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Returns the sum of a and b</span>
 <span class="cm"> * @param {number} a</span>
@@ -257,8 +252,9 @@ tag &lt;tags-yields.html&gt;`__ instead of this tag.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Return value with a type and description” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Return value with a type and description</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Returns the sum of a and b</span>
 <span class="cm"> * @param {number} a</span>
@@ -270,8 +266,9 @@ tag &lt;tags-yields.html&gt;`__ instead of this tag.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Return value with multiple types” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Return value with multiple types</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Returns the sum of a and b</span>
 <span class="cm"> * @param {number} a</span>
@@ -287,8 +284,9 @@ tag &lt;tags-yields.html&gt;`__ instead of this tag.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Returns a promise” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Returns a promise</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Returns the sum of a and b</span>
 <span class="cm"> * @param {number} a</span>
@@ -302,8 +300,11 @@ tag &lt;tags-yields.html&gt;`__ instead of this tag.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

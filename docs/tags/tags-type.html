@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -148,17 +146,12 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-throws.html">&#64;throws</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-todo.html">&#64;todo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-tutorial.html">&#64;tutorial</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;type</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-typedef.html">&#64;typedef</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,16 +226,18 @@
             
   <div class="section" id="type">
 <h1>&#64;type<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;type</span> <span class="pre">{typeName}</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;type tag allows you to provide a type expression identifying the
+<dl class="directive">
+<dt id="directive-&#64;type">
+<code class="descname">.. &#64;type::</code><a class="headerlink" href="#directive-@type" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;type</span> <span class="pre">{typeName}</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The &#64;type tag allows you to provide a type expression identifying the
 type of value that a symbol may contain, or the type of value returned
 by a function. You can also include type expressions with many other
-JSDoc tags, such as the [&#64;param tag]<a class="reference external" href="tags-param.html">param-tag</a>.</p>
+JSDoc tags, such as the [&#64;param tag]<code class="xref rst rst-dir docutils literal notranslate"><span class="pre">param</span></code>.</p>
 <p>A type expression can include the JSDoc namepath to a symbol (for
 example, <code class="docutils literal notranslate"><span class="pre">myNamespace.MyClass</span></code>); a built-in JavaScript type (for
 example, <code class="docutils literal notranslate"><span class="pre">string</span></code>); or a combination of these. You can use any <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#type-expressions">Google
@@ -252,140 +247,168 @@ as well as several other formats that are specific to JSDoc.</p>
 <p>If JSDoc determines that a type expression is invalid, it will display
 an error and stop running. You can turn this error into a warning by
 running JSDoc with the <code class="docutils literal notranslate"><span class="pre">--lenient</span></code> option.</p>
-<p><strong>Note</strong>: Full support for Google Closure Compiler-style type
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Full support for Google Closure Compiler-style type
 expressions is available in JSDoc 3.2 and later. Earlier versions of
 JSDoc included partial support for Closure Compiler type expressions.</p>
+</div>
 <p>Each type is specified by providing a type expression, using one of the
 formats described below. Where appropriate, JSDoc will automatically
 create links to the documentation for other symbols. For example,
 <code class="docutils literal notranslate"><span class="pre">&#64;type</span> <span class="pre">{MyClass}</span></code> will link to the MyClass documentation if that
 symbol has been documented.</p>
-<table id="jsdoc-types" name="jsdoc-types"><tr><th><p>Type name</p>
-</th><th><p>Syntax examples</p>
-</th><th><p>Description</p>
-</th></tr><tr><td><p>Symbol name (name expression)</p>
-</td><td><p>{% example %}</p>
-<pre class="prettyprint"><code>{boolean}
-{myNamespace.MyClass}
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>Specifies the name of a symbol. If you have documented the symbol, JSDoc
-creates a link to the documentation for that symbol.</p>
-</p></td></tr><tr><td><p>Multiple types (type union)</p>
-</td><td><p>{% example “This can be a number or a boolean.” %}</p>
-<pre class="prettyprint"><code>{(number|boolean)}
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>This means a value can have one of several types, with the entire list
-of types enclosed in parentheses and separated by |.</p>
-</p></td></tr><tr><td><p>Arrays and objects (type applications and record types)</p>
-</td><td><p>{% example “An array of MyClass instances.” %}</p>
-<pre class="prettyprint"><code>{Array.&lt;MyClass&gt;}
-// or:
-{MyClass[]}
-</code></pre><p>{% endexample %}</p>
-<p>{% example “An object with string keys and number values:” %}</p>
-<pre class="prettyprint"><code>{Object.&lt;string, number&gt;}
-</code></pre><p>{% endexample %}</p>
-<p>{% example “An object called ‘myObj’ with properties ‘a’ (a number), ‘b’
-(a string) and ‘c’ (any type).” %}</p>
-<pre class="prettyprint"><code>&#123;{a: number, b: string, c}} myObj
-// or:
-{Object} myObj
-{number} myObj.a
-{string} myObj.b
-{*} myObj.c
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>JSDoc supports Closure Compiler’s syntax for defining array and object
-types.</p>
-<p><p><p>You can also indicate an array by appending [] to the type that is
-contained in the array. For example, the expression string[] indicates
-an array of strings.</p>
-</p><p><p>For objects that have a known set of properties, you can use Closure
-Compiler’s syntax for documenting record types. You can document each
-property individually, which enables you to provide more detailed
-information about each property.</p>
-</p></td></tr><tr><td><p>Nullable type</p>
-</td><td><p>{% example “A number or null.” %}</p>
-<pre class="prettyprint"><code>{?number}
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>This indicates that the type is either the specified type, or null.</p>
-</p></td></tr><tr><td><p>Non-nullable type</p>
-</td><td><p>{% example “A number, but never null.” %}</p>
-<pre class="prettyprint"><code>{!number}
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>Indicates that the value is of the specified type, but cannot be null.</p>
-</p></td></tr><tr><td><p>Variable number of that type</p>
-</td><td><p>{% example “This function accepts a variable number of numeric
-parameters.” %}</p>
-<pre class="prettyprint"><code>@param {...number} num
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>Indicates that the function accepts a variable number of parameters, and
-specifies a type for the parameters. For example:</p>
-</p><p>{% example %}</p>
-<pre class="prettyprint"><code>/**
- * Returns the sum of all numbers passed to the function.
- * @param {...number} num A positive or negative number
- */
-function sum(num) {
-    var i=0, n=arguments.length, t=0;
-    for (; i&lt;n; i++) {
-        t += arguments[i];
-    }
-    return t;
-}
-</code></pre><p>{% endexample %}</p>
-</td></tr><tr><td><p>Optional parameter</p>
-</td><td><p>{% example “An optional parameter named foo.” %}</p>
-<pre class="prettyprint"><code>@param {number} [foo]
-// or:
-@param {number=} foo
-</code></pre><p>{% endexample %}</p>
-<p>{% example “An optional parameter foo with default value 1.” %}</p>
-<pre class="prettyprint"><code>@param {number} [foo=1]
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>Indicates that the parameter is optional. When using JSDoc’s syntax for
-optional parameters, you can also indicate the value that will be used
-if a parameter is omitted.</p>
-</p></td></tr><tr><td><p>Callbacks</p>
-</td><td><p>{% example %}</p>
-<pre class="prettyprint"><code>/**
- * @callback myCallback
- * @param {number} x - ...
- */
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Type List</span><a class="headerlink" href="#id3" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>输入名称</p></th>
+<th class="head"><p>语法示例</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>符号名称(名称表达式)</p></td>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">boolean</span><span class="p">}</span>
+<span class="p">{</span><span class="n">myNamespace</span><span class="o">.</span><span class="n">MyClass</span><span class="p">}</span>
+</pre></div>
+</div>
+</td>
+<td><p>指定符号的名称. 如果您已记录该符号, JSDoc将创建指向该符号的文档的链接.</p></td>
+</tr>
+<tr class="row-odd"><td><p>多种类型(类型联合)</p></td>
+<td><p>This can be a number or a boolean.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{(</span><span class="n">number</span><span class="o">|</span><span class="n">boolean</span><span class="p">)}</span>
+</pre></div>
+</div>
+</td>
+<td><p>This means a value can have one of several types, with the entire list of types enclosed in parentheses and separated by <a href="#id1"><span class="problematic" id="id2">|</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>数组和对象(类型应用程序和记录类型)</p></td>
+<td><p>An array of MyClass instances:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Array</span><span class="o">.&lt;</span><span class="n">MyClass</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="o">//</span> <span class="ow">or</span><span class="p">:</span>
+<span class="p">{</span><span class="n">MyClass</span><span class="p">[]}</span>
+</pre></div>
+</div>
+<p>An object with string keys and number values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Object</span><span class="o">.&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">number</span><span class="o">&gt;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>An object called ‘myObj’ with properties ‘a’ (a number), ‘b’ (a string) and ‘c’ (any type):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="n">a</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">c</span><span class="p">}}</span> <span class="n">myObj</span>
+<span class="o">//</span> <span class="ow">or</span><span class="p">:</span>
+<span class="p">{</span><span class="n">Object</span><span class="p">}</span> <span class="n">myObj</span>
+<span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">myObj</span><span class="o">.</span><span class="n">a</span>
+<span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="n">myObj</span><span class="o">.</span><span class="n">b</span>
+<span class="p">{</span><span class="o">*</span><span class="p">}</span> <span class="n">myObj</span><span class="o">.</span><span class="n">c</span>
+</pre></div>
+</div>
+</td>
+<td><p>JSDoc supports Closure Compiler’s syntax for defining array and object types.</p>
+<p>您还可以通过将[]附加到数组中包含的类型来指示数组. 例如, 表达式string []表示字符串数组.</p>
+<p>For objects that have a known set of properties, you can use Closure Compiler’s syntax for documenting record types. You can document each property individually, which enables you to provide more detailed information about each property.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>可空类型</p></td>
+<td><p>A number or null:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{?number}
+</pre></div>
+</div>
+</td>
+<td><p>这表示类型是指定的类型, 或者为null.</p></td>
+</tr>
+<tr class="row-even"><td><p>非可空类型</p></td>
+<td><p>A number, but never null:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{!number}
+</pre></div>
+</div>
+</td>
+<td><p>指示该值是指定类型, 但不能为null.</p></td>
+</tr>
+<tr class="row-odd"><td><p>该类型的可变数量</p></td>
+<td><p>This function accepts a variable number of numeric parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@param</span> <span class="p">{</span><span class="o">...</span><span class="n">number</span><span class="p">}</span> <span class="n">num</span>
+</pre></div>
+</div>
+</td>
+<td><p>Indicates that the function accepts a variable number of parameters, and specifies a type for the parameters. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="n">Returns</span> <span class="n">the</span> <span class="nb">sum</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">numbers</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="o">...</span><span class="n">number</span><span class="p">}</span> <span class="n">num</span> <span class="n">A</span> <span class="n">positive</span> <span class="ow">or</span> <span class="n">negative</span> <span class="n">number</span>
+ <span class="o">*/</span>
+<span class="n">function</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">arguments</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">t</span> <span class="o">+=</span> <span class="n">arguments</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>可选参数</p></td>
+<td><p>An optional parameter named foo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="p">[</span><span class="n">foo</span><span class="p">]</span>
+<span class="o">//</span> <span class="ow">or</span><span class="p">:</span>
+<span class="nd">@param</span> <span class="p">{</span><span class="n">number</span><span class="o">=</span><span class="p">}</span> <span class="n">foo</span>
+</pre></div>
+</div>
+<p>An optional parameter foo with default value 1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="p">[</span><span class="n">foo</span><span class="o">=</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</td>
+<td><p>Indicates that the parameter is optional. When using JSDoc’s syntax for optional parameters, you can also indicate the value that will be used if a parameter is omitted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>回调</p></td>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="nd">@callback</span> <span class="n">myCallback</span>
+ <span class="o">*</span> <span class="nd">@param</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">x</span> <span class="o">-</span> <span class="o">...</span>
+ <span class="o">*/</span>
 
-/** @type {myCallback} */
-var cb;
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>Document a callback using the &#64;callback tag. The syntax is identical to
-the &#64;typedef tag, except that a callback’s type is always “function.”</p>
-</p></td></tr><tr><td><p>Type definitions</p>
-</td><td><p>{% example “Documenting a type with properties ‘id’, ‘name’, ‘age’.” %}</p>
-<pre class="prettyprint"><code>/**
- * @typedef PropertiesHash
- * @type {object}
- * @property {string} id - an ID.
- * @property {string} name - your name.
- * @property {number} age - your age.
- */
+<span class="o">/**</span> <span class="nd">@type</span> <span class="p">{</span><span class="n">myCallback</span><span class="p">}</span> <span class="o">*/</span>
+<span class="n">var</span> <span class="n">cb</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+<td><p>Document a callback using the &#64;callback tag. The syntax is identical to the &#64;typedef tag, except that a callback’s type is always “function.”</p></td>
+</tr>
+<tr class="row-even"><td><p>类型定义</p></td>
+<td><p>Documenting a type with properties ‘id’, ‘name’, ‘age’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="nd">@typedef</span> <span class="n">PropertiesHash</span>
+ <span class="o">*</span> <span class="nd">@type</span> <span class="p">{</span><span class="nb">object</span><span class="p">}</span>
+ <span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="nb">id</span> <span class="o">-</span> <span class="n">an</span> <span class="n">ID</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="n">name</span> <span class="o">-</span> <span class="n">your</span> <span class="n">name</span><span class="o">.</span>
+ <span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">number</span><span class="p">}</span> <span class="n">age</span> <span class="o">-</span> <span class="n">your</span> <span class="n">age</span><span class="o">.</span>
+ <span class="o">*/</span>
 
-/** @type {PropertiesHash} */
-var props;
-</code></pre><p>{% endexample %}</p>
-</td><td><p><p>You can document complex types using the &#64;typedef tag, then refer to the
-type definition elsewhere in your documentation.</p>
-</p></td></tr></table></div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Example” %}</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @type {(string|Array.&lt;string&gt;)} */</span>
+<span class="o">/**</span> <span class="nd">@type</span> <span class="p">{</span><span class="n">PropertiesHash</span><span class="p">}</span> <span class="o">*/</span>
+<span class="n">var</span> <span class="n">props</span><span class="p">;</span>
+</pre></div>
+</div>
+</td>
+<td><p>您可以使用&#64;typedef标记记录复杂类型, 然后参考文档中其他位置的类型定义.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list">
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @type {(string|Array.&lt;string&gt;)} */</span>
 <span class="kd">var</span> <span class="nx">foo</span><span class="p">;</span>
 <span class="cm">/** @type {number} */</span>
 <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>In many cases, you can include a type expression as part of another tag,
-rather than including a separate &#64;type tag in your JSDoc comment.</p>
-<p>{% example “Type expressions can accompany many tags.” %}</p>
+<p>在许多情况下, 您可以将类型表达式作为另一个标记的一部分包含在内, 而不是在JSDoc注释中包含单独的&#64;type标记.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Type expressions can accompany many tags.</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @type {number}</span>
 <span class="cm"> * @const</span>
@@ -398,8 +421,13 @@ rather than including a separate &#64;type tag in your JSDoc comment.</p>
 <span class="kd">var</span> <span class="nx">FOO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

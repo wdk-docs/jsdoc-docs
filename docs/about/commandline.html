@@ -95,9 +95,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -172,24 +172,21 @@
             
   <div class="section" id="command-line-arguments-to-jsdoc">
 <h1>JSDoc的命令行参数<a class="headerlink" href="#command-line-arguments-to-jsdoc" title="永久链接至标题">¶</a></h1>
-<p>At its most basic level, JSDoc is used like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="n">yourSourceCodeFile</span><span class="o">.</span><span class="n">js</span> <span class="n">anotherSourceCodeFile</span><span class="o">.</span><span class="n">js</span> <span class="o">...</span>
+<p>在最基本的层面上, JSDoc就像这样使用:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/path/to/jsdoc yourSourceCodeFile.js anotherSourceCodeFile.js ...
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">...</span></code> are paths to other files to generate documentation for.</p>
+<p>其中 <code class="docutils literal notranslate"><span class="pre">...</span></code> 是生成其他文件的路径.</p>
 <p>Additionally, one may provide the path to a <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown
 file</a> (ending in “.md”)
 or a file named “README”, and this will be added to the documentation on
 the front page. See <a class="reference external" href="about-including-readme.html">these
 instructions</a>.</p>
-<p>JSDoc supports a number of command-line options, many of which have both
-long and short forms. Alternatively, the command-line options may be
-<a class="reference external" href="about-configuring-jsdoc.html">specified in a configuration file</a>
-given to JSDoc. The command-line options are:</p>
+<p>JSDoc支持许多命令行选项, 其中许多选项都有长和短格式. 或者, 可以在给予 <a class="reference external" href="about-configurations-jsdoc.html">JSDoc的配置文件</a> 中指定命令行选项. 命令行选项是:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 35%" />
-<col style="width: 65%" />
+<col style="width: 31%" />
+<col style="width: 69%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>选项</p></th>
@@ -199,130 +196,85 @@ given to JSDoc. The command-line options are:</p>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-a</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--access</span> <span class="pre">&lt;value&gt;</span></code></p></td>
-<td><p>Only display symbols with the given
-<code class="docutils literal notranslate"><span class="pre">access</span></code> property: <code class="docutils literal notranslate"><span class="pre">private</span></code>,
-<code class="docutils literal notranslate"><span class="pre">protected</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">undefined</span></code>, or <code class="docutils literal notranslate"><span class="pre">all</span></code> for all access
-levels. By default, all except <code class="docutils literal notranslate"><span class="pre">private</span></code>
-symbols are shown.</p></td>
+<td><p>只显示具有给定 <code class="docutils literal notranslate"><span class="pre">access</span></code> 属性的符号: <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, <code class="docutils literal notranslate"><span class="pre">public``或``undefined</span></code>, 或者所有访问级别的``all``. 默认情况下, 显示除 <a href="#id1"><span class="problematic" id="id2">`</span></a>private <a href="#id3"><span class="problematic" id="id4">`</span></a>符号以外的所有符号.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">&lt;value&gt;</span></code>,
-<a href="#id1"><span class="problematic" id="id2">``</span></a>–configure &lt;value&gt;`
-`</p></td>
-<td><p>The path to a JSDoc <a class="reference external" href="about-configuring-jsdoc.html">configuration
-file</a>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> or
-<code class="docutils literal notranslate"><span class="pre">conf.json.EXAMPLE</span></code> in the directory
-where JSDoc is installed.</p></td>
+<code class="docutils literal notranslate"><span class="pre">--configure</span> <span class="pre">&lt;value&gt;</span></code></p></td>
+<td><p><a class="reference external" href="configurations-jsdoc.html">JSDoc配置文件</a> 的路径. 在安装JSDoc的目录中默认为 <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> 或 <code class="docutils literal notranslate"><span class="pre">conf.json.EXAMPLE</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--destination</span> <span class="pre">&lt;value</span>
 <span class="pre">&gt;</span></code></p></td>
-<td><p>The path to the output folder for the
-generated documentation. For JSDoc’s
-built-in Haruki template, use <code class="docutils literal notranslate"><span class="pre">console</span></code>
-to dump data to the console. Defaults to
-<code class="docutils literal notranslate"><span class="pre">./out</span></code>.</p></td>
+<td><p>生成的文档的输出文件夹的路径. 对于JSDoc的内置Haruki模板, 使用 <code class="docutils literal notranslate"><span class="pre">console</span></code> 将数据转储到控制台. 默认为 <code class="docutils literal notranslate"><span class="pre">./out</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--debug</span></code></p></td>
 <td><p>记录可以帮助调试JSDoc本身问题的信息.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--encoding</span> <span class="pre">&lt;value&gt;</span></code></p></td>
-<td><p>在读取所有源文件时假设此编码。默认为 <code class="docutils literal notranslate"><span class="pre">utf8</span></code>.</p></td>
+<td><p>在读取所有源文件时假设此编码. 默认为 <code class="docutils literal notranslate"><span class="pre">utf8</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-h</span></code>, <code class="docutils literal notranslate"><span class="pre">--help</span></code></p></td>
-<td><p>显示有关JSDoc命令行选项的信息，然后退出.</p></td>
+<td><p>显示有关JSDoc命令行选项的信息, 然后退出.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--match</span> <span class="pre">&lt;value&gt;</span></code></p></td>
 <td><p>只运行名称中包含 <code class="docutils literal notranslate"><span class="pre">value</span></code> 的测试.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--nocolor</span></code></p></td>
-<td><p>When running tests, do not use color in the
-console output. On Windows, this option is
-enabled by default.</p></td>
+<td><p>运行测试时, 请勿在控制台输出中使用颜色. 在Windows上, 默认情况下启用此选项.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--private</span></code></p></td>
-<td><p>Include symbols marked with the
-<code class="docutils literal notranslate"><span class="pre">`&#64;private</span></code> tag &lt;tags-private.html&gt;`__ in
-the generated documentation. By default,
-private symbols are not included.</p></td>
+<td><p>在生成的文档中包含标有 <a class="reference external" href="tags-private.html">&#64;private 标记</a> 的符号. 默认情况下, 不包括私有符号.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--package</span></code></p></td>
-<td><p>The <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file that contains the
-project name, version, and other details.
-Defaults to the first <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file
-found in the source paths.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件, 包含项目名称, 版本和其他详细信息. 默认为源路径中找到的第一个 <code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--pedantic</span></code></p></td>
-<td><p>Treat errors as fatal errors, and treat
-warnings as errors. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></td>
+<td><p>将错误视为致命错误, 并将警告视为错误. 默认为 <cite>false</cite>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-q</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--query</span> <span class="pre">&lt;value&gt;</span></code></p></td>
-<td><p>A query string to parse and store in the
-global variable <code class="docutils literal notranslate"><span class="pre">env.opts.query</span></code>.
-Example: <code class="docutils literal notranslate"><span class="pre">foo=bar&amp;baz=true</span></code>.</p></td>
+<td><p>用于解析和存储在全局变量 <cite>env.opts.query</cite> 中的查询字符串. 示例: <code class="docutils literal notranslate"><span class="pre">foo</span> <span class="pre">=</span> <span class="pre">bar＆baz</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-r</span></code>, <code class="docutils literal notranslate"><span class="pre">--recurse</span></code></p></td>
-<td><p>Recurse into subdirectories when scanning
-for source files and tutorials.</p></td>
+<td><p>扫描源文件和教程时, 递归到子目录.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-R</span></code>, <code class="docutils literal notranslate"><span class="pre">--readme</span></code></p></td>
-<td><p>The <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file to include in the
-generated documentation. Defaults to the
-first <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file found in the
-source paths.</p></td>
+<td><p>要在生成的文档中包含的 <code class="docutils literal notranslate"><span class="pre">README.md</span></code> 文件. 默认为源路径中找到的第一个 <code class="docutils literal notranslate"><span class="pre">README.md</span></code> 文件.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--template</span> <span class="pre">&lt;value&gt;</span></code></p></td>
-<td><p>The path to the template to use for
-generating output. Defaults to
-<code class="docutils literal notranslate"><span class="pre">templates/default</span></code>, JSDoc’s built-in
-default template.</p></td>
+<td><p>用于生成输出的模板的路径. 默认为 <code class="docutils literal notranslate"><span class="pre">templates/default</span></code>, JSDoc的内置默认模板.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-T</span></code>, <code class="docutils literal notranslate"><span class="pre">--test</span></code></p></td>
-<td><p>Run JSDoc’s test suite, and print the
-results to the console.</p></td>
+<td><p>运行JSDoc的测试套件, 并将结果打印到控制台.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">&lt;value&gt;</span></code>,
-<a href="#id3"><span class="problematic" id="id4">``</span></a>–tutorials &lt;value&gt;`
+<a href="#id1"><span class="problematic" id="id2">``</span></a>–tutorials &lt;value&gt;`
 `</p></td>
-<td><p>Directory in which JSDoc should search for
-tutorials. If omitted, no tutorial pages
-will be generated. See the <a class="reference external" href="about-tutorials.html">tutorial
-instructions</a> for
-more information.</p></td>
+<td><p>JSDoc应该搜索教程的目录. 如果省略, 则不会生成任何教程页面. 有关更多信息, 请参阅 <a class="reference external" href="about-tutorials.html">教程说明</a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-v</span></code>, <code class="docutils literal notranslate"><span class="pre">--version</span></code></p></td>
-<td><p>显示JSDoc的版本号，然后退出。</p></td>
+<td><p>显示JSDoc的版本号, 然后退出.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--verbose</span></code></p></td>
-<td><p>Log detailed information to the console as
-JSDoc runs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></td>
+<td><p>在JSDoc运行时将详细信息记录到控制台. 默认为 <cite>false</cite>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-X</span></code>, <code class="docutils literal notranslate"><span class="pre">--explain</span></code></p></td>
-<td><p>将所有doclet以JSON格式转储到控制台，然后退出。</p></td>
+<td><p>将所有doclet以JSON格式转储到控制台, 然后退出.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="examples">
 <h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>Generate documentation for files in the <code class="docutils literal notranslate"><span class="pre">./src</span></code> directory, using the
-configuration file <code class="docutils literal notranslate"><span class="pre">/path/to/my/conf.json</span></code>, and save the output in the
-<code class="docutils literal notranslate"><span class="pre">./docs</span></code> directory:</p>
-<p>{% example %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="n">src</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="n">docs</span>
+<p>使用配置文件 <code class="docutils literal notranslate"><span class="pre">/path/to/my/conf.json</span></code> 为 <code class="docutils literal notranslate"><span class="pre">/.src</span></code> 目录中的文件生成文档, 并将输出保存在 <code class="docutils literal notranslate"><span class="pre">./docs</span></code> 目录中:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/path/to/jsdoc src -r -c /path/to/my/conf.json -d docs
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Run all JSDoc tests whose names include the word <code class="docutils literal notranslate"><span class="pre">tag</span></code>, and log
-information about each test:</p>
-<p>{% example %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">jsdoc</span> <span class="o">-</span><span class="n">T</span> <span class="o">--</span><span class="n">match</span> <span class="n">tag</span> <span class="o">--</span><span class="n">verbose</span>
+<p>运行名称中包含单词 <code class="docutils literal notranslate"><span class="pre">tag</span></code> 的所有JSDoc测试, 并记录每个测试的日志信息:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/path/to/jsdoc -T --match tag --verbose
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
 </div>
 

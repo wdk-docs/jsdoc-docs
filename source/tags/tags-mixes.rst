@@ -1,75 +1,68 @@
 @mixes
 =============================
 
-Syntax
-------
+.. rst:directive:: @mixes
 
-``@mixes <OtherObjectPath>``
+   :Syntax:
 
-Overview
---------
+      ``@mixes <OtherObjectPath>``
 
-The @mixes tag indicates that the current object mixes in all the
-members from ``OtherObjectPath``, which is a
-[@mixin]\ `mixin-tag <tags-mixin.html>`__.
+   :Overview:
 
-Examples
---------
+      The @mixes tag indicates that the current object mixes in all the
+      members from ``OtherObjectPath``, which is a
+      [@mixin]\ `mixin-tag <tags-mixin.html>`__.
 
-To start, we document a mixin with the
-[@mixin]\ `mixin-tag <tags-mixin.html>`__ tag:
+   :Examples:
 
-{% example “Example of a @mixin” %}
+      To start, we document a mixin with the
+      [@mixin]\ `mixin-tag <tags-mixin.html>`__ tag:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Example of a @mixin
 
-   /**
-    * This provides methods used for event handling. It's not meant to
-    * be used directly.
-    *
-    * @mixin
-    */
-   var Eventful = {
-       /**
-        * Register a handler function to be called whenever this event is fired.
-        * @param {string} eventName - Name of the event.
-        * @param {function(Object)} handler - The handler to call.
-        */
-       on: function(eventName, handler) {
-           // code...
-       },
+         /**
+          * This provides methods used for event handling. It's not meant to
+          * be used directly.
+          *
+          * @mixin
+          */
+         var Eventful = {
+             /**
+              * Register a handler function to be called whenever this event is fired.
+              * @param {string} eventName - Name of the event.
+              * @param {function(Object)} handler - The handler to call.
+              */
+             on: function(eventName, handler) {
+                 // code...
+             },
 
-       /**
-        * Fire an event, causing all handlers for that event name to run.
-        * @param {string} eventName - Name of the event.
-        * @param {Object} eventData - The data provided to each handler.
-        */
-       fire: function(eventName, eventData) {
-           // code...
-       }
-   };
+             /**
+              * Fire an event, causing all handlers for that event name to run.
+              * @param {string} eventName - Name of the event.
+              * @param {Object} eventData - The data provided to each handler.
+              */
+             fire: function(eventName, eventData) {
+                 // code...
+             }
+         };
 
-{% endexample %}
+      Now we add a FormButton class and call a “mix” function that mixes all
+      of the Eventful functions into FormButton, so that FormButton can also
+      fire events and have listeners. We use the @mixes tag to indicate that
+      FormButton mixes the Eventful functions.
 
-Now we add a FormButton class and call a “mix” function that mixes all
-of the Eventful functions into FormButton, so that FormButton can also
-fire events and have listeners. We use the @mixes tag to indicate that
-FormButton mixes the Eventful functions.
+      .. code-block:: js
+         :caption: Using the @mixes tag
 
-{% example “Using the @mixes tag” %}
-
-.. code-block:: js
-
-   /**
-    * @constructor FormButton
-    * @mixes Eventful
-    */
-   var FormButton = function() {
-       // code...
-   };
-   FormButton.prototype.press = function() {
-     this.fire('press', {});
-   }
-   mix(Eventful).into(FormButton.prototype);
-
-{% endexample %}
+         /**
+          * @constructor FormButton
+          * @mixes Eventful
+          */
+         var FormButton = function() {
+             // code...
+         };
+         FormButton.prototype.press = function() {
+           this.fire('press', {});
+         }
+         mix(Eventful).into(FormButton.prototype);

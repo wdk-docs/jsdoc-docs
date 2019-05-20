@@ -1,44 +1,40 @@
 @async
 =============================
 
-Syntax
-------
+.. rst:directive:: @async
 
-``@async``
+   :Syntax:
 
-Overview
---------
+      ``@async``
 
-The ``@async`` tag indicates that a function is
-`asynchronous <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>`__,
-meaning that it was declared using the syntax
-``async function foo() {}``. Do not use this tag for other types of
-asynchronous functions, such as functions that provide a callback. This
-tag is available in JSDoc 3.5.0 and later.
+   :Overview:
 
-In general, you do not need to use this tag, because JSDoc automatically
-detects asynchronous functions and identifies them in the generated
-documentation. However, if you are writing a virtual comment for an
-asynchronous function that does not appear in your code, you can use
-this tag to tell JSDoc that the function is asynchronous.
+      The ``@async`` tag indicates that a function is
+      `asynchronous <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>`_,
+      meaning that it was declared using the syntax
+      ``async function foo() {}``. Do not use this tag for other types of
+      asynchronous functions, such as functions that provide a callback. This
+      tag is available in JSDoc 3.5.0 and later.
 
-Example
--------
+      In general, you do not need to use this tag, because JSDoc automatically
+      detects asynchronous functions and identifies them in the generated
+      documentation. However, if you are writing a virtual comment for an
+      asynchronous function that does not appear in your code, you can use
+      this tag to tell JSDoc that the function is asynchronous.
 
-The following example shows a virtual comment that uses the ``@async``
-tag:
+   :Example:
 
-{% example “Virtual comment with @async tag” %}
+      The following example shows a virtual comment that uses the ``@async``
+      tag:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Virtual comment with @async tag
 
-   /**
-    * Download data from the specified URL.
-    *
-    * @async
-    * @function downloadData
-    * @param {string} url - The URL to download from.
-    * @return {Promise&lt;string>} The data from the URL.
-    */
-
-{% endexample %}
+         /**
+          * Download data from the specified URL.
+          *
+          * @async
+          * @function downloadData
+          * @param {string} url - The URL to download from.
+          * @return {Promise&lt;string>} The data from the URL.
+          */

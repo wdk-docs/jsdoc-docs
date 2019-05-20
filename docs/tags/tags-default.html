@@ -93,18 +93,11 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-copyright.html">&#64;copyright</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;default</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;default</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-deprecated.html">&#64;deprecated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-description.html">&#64;description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-enum.html">&#64;enum</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,24 +226,20 @@
             
   <div class="section" id="default">
 <h1>&#64;default<a class="headerlink" href="#default" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;default</span> <span class="pre">[&lt;some</span> <span class="pre">value&gt;]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;default tag allows you to document the assigned value of a symbol.
-You can supply this tag with a value yourself or you can allow JSDoc to
-automatically document the value from the source code – only possible
-when the documented symbol is being assigned a single, simple value that
-is either: a string, a number, a boolean or null.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In this example a constant is documented. The value of the constant is
-<code class="docutils literal notranslate"><span class="pre">0xff0000</span></code>. By adding the &#64;default tag this value is automatically
-added to the documentation.</p>
-<p>{% example “Document the number value of a constant” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;default">
+<code class="descname">.. &#64;default::</code><a class="headerlink" href="#directive-@default" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;default</span> <span class="pre">[&lt;some</span> <span class="pre">value&gt;]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;default标记允许您记录符号的指定值. 您可以自己为此标记提供值, 或者您可以允许JSDoc自动记录源代码中的值 - 只有在为文档化的符号分配一个简单的值时才有可能: 字符串, 数字, 布尔值或者为null.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在此示例中, 记录了常量. 常量的值是``0xff0000``. 通过添加&#64;default标记, 此值将自动添加到文档中.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Document the number value of a constant</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> *  @constant</span>
 <span class="cm"> *  @default</span>
@@ -258,8 +247,11 @@ added to the documentation.</p>
 <span class="kr">const</span> <span class="nx">RED</span> <span class="o">=</span> <span class="mh">0xff0000</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

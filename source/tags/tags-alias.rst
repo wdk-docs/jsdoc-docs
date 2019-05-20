@@ -1,155 +1,141 @@
 @alias
 =============================
 
-Syntax
-------
+.. rst:directive:: @alias
 
-``@alias <aliasNamepath>``
+   :Syntax:
 
-Overview
---------
+      ``@alias <aliasNamepath>``
 
-The @alias tag causes JSDoc to treat all references to a member as if
-the member had a different name. This tag is especially useful if you
-define a class within an inner function; in this case, you can use the
-@alias tag to tell JSDoc how the class is exposed in your app.
+   :Overview:
 
-While the @alias tag may sound similar to the @name tag, these tags
-behave very differently. The @name tag tells JSDoc to ignore any code
-associated with the comment. For example, when JSDoc processes the
-following code, it ignores the fact that the comment for ``bar`` is
-attached to a function:
+      The :rst:dir:`@alias` tag causes JSDoc to treat all references to a member as if
+      the member had a different name. This tag is especially useful if you
+      define a class within an inner function; in this case, you can use the
+      @alias tag to tell JSDoc how the class is exposed in your app.
 
-.. code-block:: js
+      While the @alias tag may sound similar to the @name tag, these tags
+      behave very differently. The @name tag tells JSDoc to ignore any code
+      associated with the comment. For example, when JSDoc processes the
+      following code, it ignores the fact that the comment for ``bar`` is
+      attached to a function:
 
-   /**
-    * Bar function.
-    * @name bar
-    */
-   function foo() {}
+      .. code-block:: js
 
-The @alias tag tells JSDoc to pretend that Member A is actually named
-Member B. For example, when JSDoc processes the following code, it
-recognizes that ``foo`` is a function, then renames ``foo`` to ``bar``
-in the documentation:
+         /**
+          * Bar function.
+          * @name bar
+          */
+         function foo() {}
 
-{% example %}
+      The @alias tag tells JSDoc to pretend that Member A is actually named
+      Member B. For example, when JSDoc processes the following code, it
+      recognizes that ``foo`` is a function, then renames ``foo`` to ``bar``
+      in the documentation:
 
-.. code-block:: js
+      .. code-block:: js
 
-   /**
-    * Bar function.
-    * @alias bar
-    */
-   function foo() {}
+         /**
+          * Bar function.
+          * @alias bar
+          */
+         function foo() {}
 
-{% endexample %}
+   :Examples:
 
-Examples
---------
+      Suppose you are using a class framework that expects you to pass in a
+      constructor function when you define a class. You can use the @alias tag
+      to tell JSDoc how the class will be exposed in your app.
 
-Suppose you are using a class framework that expects you to pass in a
-constructor function when you define a class. You can use the @alias tag
-to tell JSDoc how the class will be exposed in your app.
+      In the following example, the @alias tag tells JSDoc to treat the
+      anonymous function as if it were the constructor for the class
+      “trackr.CookieManager”. Within the function, JSDoc interprets the
+      ``this`` keyword relative to trackr.CookieManager, so the “value” method
+      has the namepath “trackr.CookieManager#value”.
 
-In the following example, the @alias tag tells JSDoc to treat the
-anonymous function as if it were the constructor for the class
-“trackr.CookieManager”. Within the function, JSDoc interprets the
-``this`` keyword relative to trackr.CookieManager, so the “value” method
-has the namepath “trackr.CookieManager#value”.
+      .. code-block:: js
+         :caption: Using @alias with an anonymous constructor function
 
-{% example “Using @alias with an anonymous constructor function” %}
+         Klass('trackr.CookieManager',
 
-.. code-block:: js
+             /**
+              * @class
+              * @alias trackr.CookieManager
+              * @param {Object} kv
+              */
+             function(kv) {
+                 /** The value. */
+                 this.value = kv;
+             }
 
-   Klass('trackr.CookieManager',
+         );
 
-       /**
-        * @class
-        * @alias trackr.CookieManager
-        * @param {Object} kv
-        */
-       function(kv) {
-           /** The value. */
-           this.value = kv;
-       }
+      You can also use the @alias tag with members that are created within an
+      immediately invoked function expression (IIFE). The @alias tag tells
+      JSDoc that these members are exposed outside of the IIFE’s scope.
 
-   );
+      .. code-block:: js
+         :caption: Using @alias for static members of a namespace
 
-{% endexample %}
+         /** @namespace */
+         var Apple = {};
 
-You can also use the @alias tag with members that are created within an
-immediately invoked function expression (IIFE). The @alias tag tells
-JSDoc that these members are exposed outside of the IIFE’s scope.
+         (function(ns) {
+             /**
+              * @namespace
+              * @alias Apple.Core
+              */
+             var core = {};
 
-{% example “Using @alias for static members of a namespace” %}
+             /** Documented as Apple.Core.seed */
+             core.seed = function() {};
 
-.. code-block:: js
+             ns.Core = core;
+         })(Apple);
 
-   /** @namespace */
-   var Apple = {};
+      For members that are defined within an object literal, you can use the
+      @alias tag as an alternative to the
+      [@lends]\ `lends-tag <tags-lends.html>`__ tag.
 
-   (function(ns) {
-       /**
-        * @namespace
-        * @alias Apple.Core
-        */
-       var core = {};
+      .. code-block:: js
+         :caption: Using @alias for an object literal
 
-       /** Documented as Apple.Core.seed */
-       core.seed = function() {};
+         // Documenting objectA with @alias
 
-       ns.Core = core;
-   })(Apple);
+         var objectA = (function() {
 
-{% endexample %}
+             /**
+              * Documented as objectA
+              * @alias objectA
+              * @namespace
+              */
+             var x = {
+                 /**
+                  * Documented as objectA.myProperty
+                  * @member
+                  */
+                 myProperty: 'foo'
+             };
 
-For members that are defined within an object literal, you can use the
-@alias tag as an alternative to the
-[@lends]\ `lends-tag <tags-lends.html>`__ tag.
+             return x;
+         })();
 
-{% example “Using @alias for an object literal” %}
+         // Documenting objectB with @lends
 
-.. code-block:: js
+         /**
+          * Documented as objectB
+          * @namespace
+          */
+         var objectB = (function() {
 
-   // Documenting objectA with @alias
+             /** @lends objectB */
+             var x = {
+                 /**
+                  * Documented as objectB.myProperty
+                  * @member
+                  */
+                 myProperty: 'bar'
+             };
 
-   var objectA = (function() {
-
-       /**
-        * Documented as objectA
-        * @alias objectA
-        * @namespace
-        */
-       var x = {
-           /**
-            * Documented as objectA.myProperty
-            * @member
-            */
-           myProperty: 'foo'
-       };
-
-       return x;
-   })();
-
-   // Documenting objectB with @lends
-
-   /**
-    * Documented as objectB
-    * @namespace
-    */
-   var objectB = (function() {
-
-       /** @lends objectB */
-       var x = {
-           /**
-            * Documented as objectB.myProperty
-            * @member
-            */
-           myProperty: 'bar'
-       };
-
-       return x;
-   })();
-
-{% endexample %}
+             return x;
+         })();

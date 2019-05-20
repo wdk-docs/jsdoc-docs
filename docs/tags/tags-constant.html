@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="@classdesc" href="tags-classdesc.html" />
-    <link rel="prev" title="@class" href="tags-class.html" /> 
+    <link rel="next" title="@construct" href="tags-constructs.html" />
+    <link rel="prev" title="@classdesc" href="tags-classdesc.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,20 +93,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;constant</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;constant</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-copyright.html">&#64;copyright</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-default.html">&#64;default</a></li>
@@ -163,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -238,23 +226,20 @@
             
   <div class="section" id="constant">
 <h1>&#64;constant<a class="headerlink" href="#constant" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;constant</span> <span class="pre">[&lt;type&gt;</span> <span class="pre">&lt;name&gt;]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;constant tag is used to mark the documentation as belonging to a
-symbol that is a constant.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In this example we are documenting a string constant. Note that although
-the code is using the <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword, this is not required by JSDoc.
-If your JavaScript host environment doesn’t yet support constant
-declarations, the &#64;const documentation can just as effectively be used
-on <code class="docutils literal notranslate"><span class="pre">var</span></code> declarations.</p>
-<p>{% example “A string constant representing the color red” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;constant">
+<code class="descname">.. &#64;constant::</code><a class="headerlink" href="#directive-@constant" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;constant</span> <span class="pre">[&lt;type&gt;</span> <span class="pre">&lt;name&gt;]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;constant标记用于将文档标记为属于常量的符号.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在这个例子中, 我们记录了一个字符串常量. 请注意, 尽管代码使用的是``const``关键字, 但JSDoc并不需要这样做. 如果您的JavaScript主机环境还不支持常量声明, 那么&#64;const文档可以有效地用于``var``声明.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">A string constant representing the color red</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constant</span>
 <span class="cm">    @type {string}</span>
 <span class="cm">    @default</span>
@@ -265,12 +250,12 @@ on <code class="docutils literal notranslate"><span class="pre">var</span></code
 <span class="kd">var</span> <span class="nx">ONE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Note that the example provides the type in a &#64;type tag. This is
-optional. Also the optional &#64;default tag is used here too, this will
-automatically add whatever the assigned value is (for example ‘FF0000’)
-to the documentation.</p>
 </div>
+<p>请注意, 该示例提供了&#64;type标记中的类型. 这是可选的. 此外, 此处也使用了可选的&#64;default标记, 这将自动将指定值的任何内容(例如“FF0000”)添加到文档中.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -281,10 +266,10 @@ to the documentation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tags-classdesc.html" class="btn btn-neutral float-right" title="@classdesc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tags-constructs.html" class="btn btn-neutral float-right" title="@construct" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tags-class.html" class="btn btn-neutral float-left" title="@class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tags-classdesc.html" class="btn btn-neutral float-left" title="@classdesc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

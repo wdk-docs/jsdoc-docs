@@ -85,20 +85,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">入门</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">标签</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tags-abstract.html">&#64;abstract</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;access</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-alias.html">&#64;alias</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-async.html">&#64;async</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-augments.html">&#64;augments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,38 +226,40 @@
             
   <div class="section" id="access">
 <h1>&#64;access<a class="headerlink" href="#access" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">&lt;package|private|protected|public&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;access</span></code> tag specifies the access level of a member. You can use
-the <code class="docutils literal notranslate"><span class="pre">&#64;access</span></code> tag as a synonym for other tags:</p>
+<dl class="directive">
+<dt id="directive-&#64;access">
+<code class="descname">.. &#64;access::</code><a class="headerlink" href="#directive-@access" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">&lt;package|private|protected|public&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;access" title="&#64;access directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;access</span></code></a> tag specifies the access level of a member. You can use
+the <a class="reference internal" href="#directive-&#64;access" title="&#64;access directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;access</span></code></a> tag as a synonym for other tags:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">package</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code>. This option is
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">package</span></code> is the same as <a class="reference internal" href="tags-package.html#directive-&#64;package" title="&#64;package directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;package</span></code></a>. This option is
 available in JSDoc 3.5.0 and later.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">private</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">&#64;private</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">protected</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">&#64;protected</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">public</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">&#64;public</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">private</span></code> is the same as <a class="reference internal" href="tags-private.html#directive-&#64;private" title="&#64;private directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;private</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">protected</span></code> is the same as <a class="reference internal" href="tags-protected.html#directive-&#64;protected" title="&#64;protected directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;protected</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">public</span></code> is the same as <a class="reference internal" href="tags-public.html#directive-&#64;public" title="&#64;public directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;public</span></code></a>.</p></li>
 </ul>
 <p>Private members are not shown in the generated output unless JSDoc is
 run with the <code class="docutils literal notranslate"><span class="pre">-p/--private</span></code> command-line option. In JSDoc 3.3.0 and
-later, you can also use the <code class="docutils literal notranslate"><span class="pre">`-a/--access</span></code> command-line
-option &lt;about-commandline.html&gt;`__ to change this behavior.</p>
+later, you can also use the <code class="docutils literal notranslate"><span class="pre">-a/--access</span></code> <a class="reference external" href="about-commandline.html">command-line
+option</a> to change this behavior.</p>
 <p>Note that a doclet’s <em>access level</em> is different from its <em>scope</em>. For
 example, if <code class="docutils literal notranslate"><span class="pre">Parent</span></code> has an inner variable named <code class="docutils literal notranslate"><span class="pre">child</span></code> that is
-documented as <code class="docutils literal notranslate"><span class="pre">&#64;public</span></code>, the <code class="docutils literal notranslate"><span class="pre">child</span></code> variable will still be treated
+documented as <a class="reference internal" href="tags-public.html#directive-&#64;public" title="&#64;public directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;public</span></code></a>, the <code class="docutils literal notranslate"><span class="pre">child</span></code> variable will still be treated
 as an inner variable with the namepath <code class="docutils literal notranslate"><span class="pre">Parent~child</span></code>. In other words,
 the <code class="docutils literal notranslate"><span class="pre">child</span></code> variable will have an inner scope, even though the
 variable is public. To change a doclet’s scope, use the
-<code class="docutils literal notranslate"><span class="pre">`&#64;instance</span></code> &lt;tags-instance.html&gt;`__,
-<code class="docutils literal notranslate"><span class="pre">`&#64;static</span></code> &lt;tags-static.html&gt;`__, and
-<code class="docutils literal notranslate"><span class="pre">`&#64;global</span></code> &lt;tags-global.html&gt;`__ tags.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Using &#64;access as a synonym for other tags” %}</p>
+<a class="reference internal" href="tags-instance.html#directive-&#64;instance" title="&#64;instance directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;instance</span></code></a>,
+<a class="reference internal" href="tags-static.html#directive-&#64;static" title="&#64;static directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;static</span></code></a>, and
+<a class="reference internal" href="tags-global.html#directive-&#64;global" title="&#64;global directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;global</span></code></a> tags.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using &#64;access as a synonym for other tags</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
 <span class="kd">function</span> <span class="nx">Thingy</span><span class="p">()</span> <span class="p">{</span>
 
@@ -302,8 +297,11 @@ variable is public. To change a doclet’s scope, use the
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

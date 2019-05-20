@@ -1,79 +1,75 @@
 @access
 =============================
 
-Syntax
-------
+.. rst:directive:: @access
 
-``@access <package|private|protected|public>``
+   :Syntax:
 
-Overview
---------
+      ``@access <package|private|protected|public>``
 
-The ``@access`` tag specifies the access level of a member. You can use
-the ``@access`` tag as a synonym for other tags:
+   :Overview:
 
--  ``@access package`` is the same as ``@package``. This option is
-   available in JSDoc 3.5.0 and later.
--  ``@access private`` is the same as ``@private``.
--  ``@access protected`` is the same as ``@protected``.
--  ``@access public`` is the same as ``@public``.
+      The :rst:dir:`@access` tag specifies the access level of a member. You can use
+      the :rst:dir:`@access` tag as a synonym for other tags:
 
-Private members are not shown in the generated output unless JSDoc is
-run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and
-later, you can also use the ```-a/--access`` command-line
-option <about-commandline.html>`__ to change this behavior.
+      -  ``@access package`` is the same as :rst:dir:`@package`. This option is
+         available in JSDoc 3.5.0 and later.
+      -  ``@access private`` is the same as :rst:dir:`@private`.
+      -  ``@access protected`` is the same as :rst:dir:`@protected`.
+      -  ``@access public`` is the same as :rst:dir:`@public`.
 
-Note that a doclet’s *access level* is different from its *scope*. For
-example, if ``Parent`` has an inner variable named ``child`` that is
-documented as ``@public``, the ``child`` variable will still be treated
-as an inner variable with the namepath ``Parent~child``. In other words,
-the ``child`` variable will have an inner scope, even though the
-variable is public. To change a doclet’s scope, use the
-```@instance`` <tags-instance.html>`__,
-```@static`` <tags-static.html>`__, and
-```@global`` <tags-global.html>`__ tags.
+      Private members are not shown in the generated output unless JSDoc is
+      run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and
+      later, you can also use the ``-a/--access`` `command-line
+      option <about-commandline.html>`__ to change this behavior.
 
-Examples
---------
+      Note that a doclet’s *access level* is different from its *scope*. For
+      example, if ``Parent`` has an inner variable named ``child`` that is
+      documented as :rst:dir:`@public`, the ``child`` variable will still be treated
+      as an inner variable with the namepath ``Parent~child``. In other words,
+      the ``child`` variable will have an inner scope, even though the
+      variable is public. To change a doclet’s scope, use the
+      :rst:dir:`@instance`,
+      :rst:dir:`@static`, and
+      :rst:dir:`@global` tags.
 
-{% example “Using @access as a synonym for other tags” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using @access as a synonym for other tags
 
-   /** @constructor */
-   function Thingy() {
+         /** @constructor */
+         function Thingy() {
 
-       /** @access private */
-       var foo = 0;
+             /** @access private */
+             var foo = 0;
 
-       /** @access protected */
-       this._bar = 1;
+             /** @access protected */
+             this._bar = 1;
 
-       /** @access package */
-       this.baz = 2;
+             /** @access package */
+             this.baz = 2;
 
-       /** @access public */
-       this.pez = 3;
+             /** @access public */
+             this.pez = 3;
 
-   }
+         }
 
-   // same as...
+         // same as...
 
-   /** @constructor */
-   function OtherThingy() {
+         /** @constructor */
+         function OtherThingy() {
 
-       /** @private */
-       var foo = 0;
+             /** @private */
+             var foo = 0;
 
-       /** @protected */
-       this._bar = 1;
+             /** @protected */
+             this._bar = 1;
 
-       /** @package */
-       this.baz = 2;
+             /** @package */
+             this.baz = 2;
 
-       /** @public */
-       this.pez = 3;
+             /** @public */
+             this.pez = 3;
 
-   }
-
-{% endexample %}
+         }

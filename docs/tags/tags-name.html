@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -128,12 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-mixes.html">&#64;mixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-mixin.html">&#64;mixin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-module.html">&#64;module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;name</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-namespace.html">&#64;namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-override.html">&#64;override</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-package.html">&#64;package</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,32 +226,22 @@
             
   <div class="section" id="name">
 <h1>&#64;name<a class="headerlink" href="#name" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;name</span> <span class="pre">&lt;namePath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;name tag forces JSDoc to associate the remainder of the JSDoc
-comment with the given name, ignoring all surrounding code. This tag is
-best used in “virtual comments” for symbols that are not readily visible
-in the code, such as methods that are generated at runtime.</p>
-<p>When you use the &#64;name tag, you must provide additional tags that tell
-JSDoc what kind of symbol you are documenting; whether the symbol is a
-member of another symbol; and so on. If you do not provide this
-information, the symbol will not be documented correctly.</p>
-<p><strong>Warning</strong>: By using the &#64;name tag, you are telling JSDoc to <em>ignore
-the surrounding code</em> and treat your documentation comment in isolation.
-In many cases, it is best to use the [&#64;alias
-tag]<a class="reference external" href="tags-alias.html">alias-tag</a> instead, which changes a symbol’s
-name in the documentation but preserves other information about the
-symbol.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following example shows how to use the &#64;name tag to document a
-function that JSDoc would not normally recognize.</p>
-<p>{% example “Using the &#64;name tag” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;name">
+<code class="descname">.. &#64;name::</code><a class="headerlink" href="#directive-@name" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;name</span> <span class="pre">&lt;namePath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;name标记强制JSDoc将JSDoc注释的其余部分与给定名称相关联, 忽略所有周围的代码. 对于在代码中不易看到的符号(例如在运行时生成的方法), 此标记最好用于“虚拟注释”.</p>
+<p>当您使用&#64;name标记时, 您必须提供其他标记, 告诉JSDoc您正在记录哪种符号;符号是否是另一个符号的成员;等等. 如果您不提供此信息, 则无法正确记录该符号.</p>
+<p><strong>警告</strong>: 通过使用&#64;name标记, 您告诉JSDoc <a href="#id1"><span class="problematic" id="id2">*</span></a>忽略周围的代码*并单独处理您的文档注释. 在许多情况下, 最好使用[&#64;alias tag] `alias-tag &lt;tags-alias.html&gt;`__代替, 它会更改文档中的符号名称, 但会保留有关该符号的其他信息.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>以下示例显示如何使用&#64;name标记来记录JSDoc通常无法识别的函数.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;name tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @name highlightSearchTerm</span>
 <span class="cm"> * @function</span>
@@ -268,8 +251,11 @@ function that JSDoc would not normally recognize.</p>
 <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;window.highlightSearchTerm = function(term) {};&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

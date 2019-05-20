@@ -90,15 +90,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-async.html">&#64;async</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-augments.html">&#64;augments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;borrows</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,24 +226,21 @@
             
   <div class="section" id="borrows">
 <h1>&#64;borrows<a class="headerlink" href="#borrows" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;borrows</span> <span class="pre">&lt;that</span> <span class="pre">namepath&gt;</span> <span class="pre">as</span> <span class="pre">&lt;this</span> <span class="pre">namepath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;borrows tag allows you to add documentation for another symbol to
-your documentation.</p>
-<p>This tag would be useful if you had more than one way to reference a
-function, but you didn’t want to duplicate the same documentation in two
-places.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In this example there exists documentation for the “trstr” function, but
-“util.trim” is just a reference to that same function by a different
-name.</p>
-<p>{% example “Duplicate the documentation for trstr as util.trim” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;borrows">
+<code class="descname">.. &#64;borrows::</code><a class="headerlink" href="#directive-@borrows" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;borrows</span> <span class="pre">&lt;that</span> <span class="pre">namepath&gt;</span> <span class="pre">as</span> <span class="pre">&lt;this</span> <span class="pre">namepath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;borrows标签允许您将另一个符号的文档添加到文档中.</p>
+<p>如果您有多种方法来引用函数, 那么此标记将非常有用, 但您不希望在两个位置复制相同的文档.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在这个例子中, 存在“trstr”函数的文档, 但“util.trim”只是通过不同的名称引用同一个函数.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Duplicate the documentation for trstr as util.trim</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @namespace</span>
 <span class="cm"> * @borrows trstr as trim</span>
@@ -267,8 +257,11 @@ name.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -145,12 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-static.html">&#64;static</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-summary.html">&#64;summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-this.html">&#64;this</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;throws</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;throws</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-todo.html">&#64;todo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-tutorial.html">&#64;tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-type.html">&#64;type</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,47 +226,54 @@
             
   <div class="section" id="throws">
 <h1>&#64;throws<a class="headerlink" href="#throws" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">free-form</span> <span class="pre">description</span></code></p></li>
+<dl class="directive">
+<dt id="directive-&#64;throws">
+<code class="descname">.. &#64;throws::</code><a class="headerlink" href="#directive-@throws" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">自由形式的描述</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">{&lt;type&gt;}</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">{&lt;type&gt;}</span> <span class="pre">free-form</span> <span class="pre">description</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;throws</span> <span class="pre">{&lt;type&gt;}</span> <span class="pre">自由形式的描述</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;throws tag allows you to document an error that a function might
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The &#64;throws tag allows you to document an error that a function might
 throw. You can include the &#64;throws tag more than once in a single JSDoc
 comment.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Using the &#64;throws tag with a type” %}</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;throws tag with a type</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @throws {InvalidArgumentException}</span>
 <span class="cm"> */</span>
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Using the &#64;throws tag with a description” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;throws tag with a description</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @throws Will throw an error if the argument is null.</span>
 <span class="cm"> */</span>
 <span class="kd">function</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Using the &#64;throws tag with a type and description” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;throws tag with a type and description</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @throws {DivideByZero} Argument x must be non-zero.</span>
 <span class="cm"> */</span>
 <span class="kd">function</span> <span class="nx">baz</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

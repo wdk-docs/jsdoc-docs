@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -103,12 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-deprecated.html">&#64;deprecated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-description.html">&#64;description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-enum.html">&#64;enum</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;event</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;event</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-example.html">&#64;example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-exports.html">&#64;exports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-external.html">&#64;external</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,33 +226,23 @@
             
   <div class="section" id="event">
 <h1>&#64;event<a class="headerlink" href="#event" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;event</span> <span class="pre">&lt;className&gt;#[event:]&lt;eventName&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;event tag allows you to document an event that can be fired. A
-typical event is represented by an object with a defined set of
-properties.</p>
-<p>Once you have used the &#64;event tag to define a specific type of event,
-you can use the &#64;fires tag to indicate that a method can fire that
-event. You can also use the &#64;listens tag to indicate that a symbol
-listens for the event.</p>
-<p>JSDoc automatically prepends the namespace <code class="docutils literal notranslate"><span class="pre">event:</span></code> to each event’s
-name. In general, you must include this namespace when you link to the
-event in another doclet. (The &#64;fires tag is a notable exception; it
-allows you to omit the namespace.)</p>
-<p><strong>Note</strong>: JSDoc 3 uses &#64;event doclets to document the content of an
-event. In contrast, JSDoc Toolkit 2 used &#64;event doclets to identify a
-function that can be fired when an event of the same name occurs.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following examples show how to document an event in the <code class="docutils literal notranslate"><span class="pre">Hurl</span></code>
-class called <code class="docutils literal notranslate"><span class="pre">snowball</span></code>. The event contains an object with a single
-property.</p>
-<p>{% example “Documenting a function call as an event” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;event">
+<code class="descname">.. &#64;event::</code><a class="headerlink" href="#directive-@event" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;event</span> <span class="pre">&lt;className&gt;#[event:]&lt;eventName&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;event标记允许您记录可以触发的事件. 典型事件由具有已定义属性集的对象表示.</p>
+<p>使用&#64;event标记定义特定类型的事件后, 可以使用&#64;fires标记指示方法可以触发该事件. 您还可以使用&#64;listens标记来指示符号侦听事件.</p>
+<p>JSDoc自动为每个事件的名称添加命名空间``event: <a href="#id1"><span class="problematic" id="id2">``</span></a>. 通常, 在链接到另一个doclet中的事件时, 必须包含此命名空间.  (&#64;fires标记是一个值得注意的例外;它允许您省略命名空间. )</p>
+<p><strong>注意</strong>: JSDoc 3使用&#64;event doclets来记录事件的内容. 相比之下, JSDoc Toolkit 2使用&#64;event doclet来标识在发生同名事件时可以触发的函数.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>以下示例显示如何在名为``snowball``的``Hurl``类中记录事件. 该事件包含具有单个属性的对象.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Documenting a function call as an event</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Throw a snowball.</span>
 <span class="cm"> *</span>
@@ -279,8 +262,9 @@ property.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Using a named doclet to document an event” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using a named doclet to document an event</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Throw a snowball.</span>
 <span class="cm"> *</span>
@@ -299,8 +283,11 @@ property.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

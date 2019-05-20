@@ -19,15 +19,13 @@ in the current working directory, you would add the string
 ``plugins/shout`` to the ``plugins`` array in your JSDoc configuration
 file:
 
-{% example “Adding a plugin to JSDoc’s configuration file” %}
 
 .. code-block:: json
+   :caption: Adding a plugin to JSDoc’s configuration file
 
    {
        "plugins": ["plugins/shout"]
    }
-
-{% endexample %}
 
 JSDoc executes plugins in the order that they are listed in the
 configuration file.
@@ -51,17 +49,14 @@ events that JSDoc fires. JSDoc will pass an event object to the handler.
 Your plugin module should export a ``handlers`` object that contains
 your handler, like so:
 
-{% example “Event-handler plugin for ‘newDoclet’ events” %}
-
 .. code-block:: js
+   :caption: Event-handler plugin for ‘newDoclet’ events
 
    exports.handlers = {
        newDoclet: function(e) {
            // Do something when we see a new doclet
        }
    };
-
-{% endexample %}
 
 JSDoc fires events in the same order as the underlying code.
 
@@ -114,9 +109,8 @@ might be done to document methods that will be available to users, but
 might not appear in the source code being documented, such as methods
 provided by an external superclass:
 
-{% example “Example” %}
-
 .. code-block:: js
+   :caption: Example
 
    exports.handlers = {
        beforeParse: function(e) {
@@ -131,8 +125,6 @@ provided by an external superclass:
            e.source += extraDoc.join('\n');
        }
    };
-
-{% endexample %}
 
 Event: jsdocCommentFound
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -217,14 +209,13 @@ include:
    in JSDoc’s configuration file.
 
 To see the doclets that JSDoc generates for your code, run JSDoc with
-the ```-X`` command-line option <about-commandline.html>`__.
+the ``-X`` `command-line option <about-commandline.html>`__.
 
 Below is an example of a ``newDoclet`` handler that shouts the
 descriptions:
 
-{% example “Example” %}
-
 .. code-block:: js
+   :caption: Example
 
    exports.handlers = {
        newDoclet: function(e) {
@@ -235,8 +226,6 @@ descriptions:
            }
        }
    };
-
-{% endexample %}
 
 Event: fileComplete
 ^^^^^^^^^^^^^^^^^^^
@@ -292,15 +281,12 @@ Plugins can define tags by exporting a ``defineTags`` function. That
 function will be passed a dictionary that can be used to define tags,
 like so:
 
-{% example “Example” %}
-
 .. code-block:: js
+   :caption: Example
 
    exports.defineTags = function(dictionary) {
        // define tags here
    };
-
-{% endexample %}
 
 The Dictionary
 ^^^^^^^^^^^^^^
@@ -321,7 +307,7 @@ The dictionary provides the following methods:
       ``@param {string} name - Description``).
    -  ``isNamespace (boolean)``: Set to ``true`` if the tag should be
       applied to the doclet’s longname as a namespace. For example, the
-      ``@module`` tag sets this option to ``true``, and using the tag
+      :rst:dir:`@module` tag sets this option to ``true``, and using the tag
       ``@module myModuleName`` results in the longname
       ``module:myModuleName``.
    -  ``mustHaveValue (boolean)``: Set to ``true`` if the tag must have
@@ -341,7 +327,7 @@ The dictionary provides the following methods:
 -  ``isNamespace(tagName)``: Returns ``true`` if the tag is applied to a
    doclet’s longname as a namespace.
 -  ``normalise(tagName)``: Returns the canonical name of a tag. For
-   example, the ``@const`` tag is a synonym for ``@constant``; as a
+   example, the :rst:dir:`@const` tag is a synonym for :rst:dir:`@constant`; as a
    result, if you call ``normalise('const')``, it returns the string
    ``constant``.
 -  ``normalize(tagName)``: Synonym for ``normalise``. Available in JSDoc
@@ -350,9 +336,8 @@ The dictionary provides the following methods:
 A tag’s ``onTagged`` callback can modify the contents of the doclet or
 tag.
 
-{% example “Defining an onTagged callback” %}
-
 .. code-block:: js
+   :caption: Defining an onTagged callback
 
    dictionary.defineTag('instance', {
        onTagged: function(doclet, tag) {
@@ -360,19 +345,14 @@ tag.
        }
    });
 
-{% endexample %}
-
 The ``defineTag`` method returns a ``Tag`` object, which has a
 ``synonym`` method that can be used to declare a synonym for the tag.
 
-{% example “Defining a tag synonym” %}
-
 .. code-block:: js
+   :caption: Defining a tag synonym
 
    dictionary.defineTag('exception', { /* options for exception tag */ })
        .synonym('throws');
-
-{% endexample %}
 
 Node Visitors
 ~~~~~~~~~~~~~
@@ -385,17 +365,14 @@ trigger parser events for any arbitrary piece of code.
 Plugins can define a node visitor by exporting an ``astNodeVisitor``
 object that contains a ``visitNode`` function, like so:
 
-{% example “Example” %}
-
 .. code-block:: js
+   :caption: Example
 
    exports.astNodeVisitor = {
        visitNode: function(node, e, parser, currentSourceName) {
            // do all sorts of crazy things here
        }
    };
-
-{% endexample %}
 
 The function is called on each node with the following parameters:
 
@@ -456,9 +433,8 @@ throwing an error.
 This module is deprecated and will be removed in a future version of
 JSDoc.
 
-{% example “Reporting a non-fatal error” %}
-
 .. code-block:: js
+   :caption: Reporting a non-fatal error
 
    var logger = require('jsdoc/util/logger');
 
@@ -471,5 +447,3 @@ JSDoc.
            }
        }
    };
-
-{% endexample %}

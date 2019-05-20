@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>包括README文件 &mdash; jsdoc-docs 2.0.19 文档</title>
+  <title>引入README文件 &mdash; jsdoc-docs 2.0.19 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="jsdoc3" href="license-jsdoc3.html" />
-    <link rel="prev" title="包括包文件" href="including-package.html" /> 
+    <link rel="next" title="License" href="license-jsdoc3.html" />
+    <link rel="prev" title="引入包文件" href="including-package.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,12 +92,12 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">包括README文件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">引入README文件</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -151,7 +151,7 @@
         
           <li><a href="index.html">入门</a> &raquo;</li>
         
-      <li>包括README文件</li>
+      <li>引入README文件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -171,36 +171,28 @@
            <div itemprop="articleBody">
             
   <div class="section" id="including-a-readme-file">
-<h1>包括README文件<a class="headerlink" href="#including-a-readme-file" title="永久链接至标题">¶</a></h1>
-<p>There are two ways to incorporate a <code class="docutils literal notranslate"><span class="pre">README</span></code> file into your
-documentation:</p>
+<h1>引入README文件<a class="headerlink" href="#including-a-readme-file" title="永久链接至标题">¶</a></h1>
+<p>将 <cite>README</cite> 文件合并到文档中有两种方法:</p>
 <ol class="arabic simple">
-<li><p>In the source paths to your JavaScript files, include the path to a
-Markdown file named <code class="docutils literal notranslate"><span class="pre">README.md</span></code>. JSDoc will use the first
-<code class="docutils literal notranslate"><span class="pre">README.md</span></code> file that it finds in your source paths.</p></li>
-<li><p>Run JSDoc with the <code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> command-line option, specifying
-the path to your <code class="docutils literal notranslate"><span class="pre">README</span></code> file. This option is available in JSDoc
-3.3.0 and later. The <code class="docutils literal notranslate"><span class="pre">README</span></code> file may have any name and extension,
-but it must be in Markdown format.</p></li>
+<li><p>在JavaScript文件的源路径中, 包含名为 <code class="docutils literal notranslate"><span class="pre">README.md</span></code> 的Markdown文件的路径.  JSDoc将使用它在源路径中找到的第一个 <code class="docutils literal notranslate"><span class="pre">README.md</span></code> 文件.</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> 命令行选项运行JSDoc, 指定 <code class="docutils literal notranslate"><span class="pre">README</span></code> 文件的路径.  JSDoc 3.3.0及更高版本中提供了此选项. <cite>README</cite> 文件可以有任何名称和扩展名, 但必须采用Markdown格式.</p></li>
 </ol>
-<p>The <code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> command-line option takes precedence over your
-source paths. If you use the <code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> command-line option, JSDoc
-will ignore any <code class="docutils literal notranslate"><span class="pre">README.md</span></code> files in your source paths.</p>
-<p>If you are using JSDoc’s default template, the <code class="docutils literal notranslate"><span class="pre">README</span></code> file’s
-contents will be rendered in HTML in the generated documentation’s
-<code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> 命令行选项优先于源路径. 如果使用 <code class="docutils literal notranslate"><span class="pre">-R/--readme</span></code> 命令行选项, JSDoc将忽略源路径中的任何 <code class="docutils literal notranslate"><span class="pre">README.md</span></code> 文件.</p>
+<p>如果您使用的是JSDoc的默认模板, 那么 <code class="docutils literal notranslate"><span class="pre">README</span></code> 文件的内容将在生成的文档 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 文件中以HTML格式呈现.</p>
 <div class="section" id="examples">
 <h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Including a README file in your source paths” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jsdoc</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">js</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">readme</span><span class="o">/</span><span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Including a README file in your source paths</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc path/to/js path/to/readme/README.md
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “Using the -R/–readme option” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jsdoc</span> <span class="o">--</span><span class="n">readme</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">readme</span><span class="o">/</span><span class="n">README</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">js</span>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the -R/–readme option</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc --readme path/to/readme/README path/to/js
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 
@@ -212,10 +204,10 @@ contents will be rendered in HTML in the generated documentation’s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="license-jsdoc3.html" class="btn btn-neutral float-right" title="jsdoc3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="license-jsdoc3.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="including-package.html" class="btn btn-neutral float-left" title="包括包文件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="including-package.html" class="btn btn-neutral float-left" title="引入包文件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

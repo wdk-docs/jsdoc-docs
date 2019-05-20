@@ -1,124 +1,114 @@
 @memberof
 =============================
 
-Syntax
-------
+.. rst:directive:: @memberof
 
--  ``@memberof <parentNamepath>``
--  ``@memberof! <parentNamepath>``
+   :Syntax:
 
-Overview
---------
+      -  ``@memberof <parentNamepath>``
+      -  ``@memberof! <parentNamepath>``
 
-The @memberof tag identifies a member symbol that belongs to a parent
-symbol.
+   :Overview:
 
-By default, the @memberof tag documents member symbols as static
-members. For inner and instance members, you can use scoping punctuation
-after the namepath, or you can add the
-[@inner]\ `inner-tag <tags-inner.html>`__ or
-[@instance]\ `instance-tag <tags-instance.html>`__ tag.
+      The @memberof tag identifies a member symbol that belongs to a parent
+      symbol.
 
-The “forced” @memberof tag, @memberof!, forces the object to be
-documented as belonging to a specific parent even if it appears to have
-a different parent.
+      By default, the @memberof tag documents member symbols as static
+      members. For inner and instance members, you can use scoping punctuation
+      after the namepath, or you can add the
+      [@inner]\ `inner-tag <tags-inner.html>`__ or
+      [@instance]\ `instance-tag <tags-instance.html>`__ tag.
 
-Examples
---------
+      The “forced” @memberof tag, @memberof!, forces the object to be
+      documented as belonging to a specific parent even if it appears to have
+      a different parent.
 
-In the following example, the ``hammer`` function would normally be
-documented as a global function. That’s because, in fact, it is a global
-function, but it is also a member of the ``Tools`` namespace, and that’s
-how you wish to document it. The solution is to add a @memberof tag:
+   :Examples:
 
-{% example “Using @memberof” %}
+      In the following example, the ``hammer`` function would normally be
+      documented as a global function. That’s because, in fact, it is a global
+      function, but it is also a member of the ``Tools`` namespace, and that’s
+      how you wish to document it. The solution is to add a @memberof tag:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using @memberof
 
-   /** @namespace */
-   var Tools = {};
+         /** @namespace */
+         var Tools = {};
 
-   /** @memberof Tools */
-   var hammer = function() {
-   };
+         /** @memberof Tools */
+         var hammer = function() {
+         };
 
-   Tools.hammer = hammer;
+         Tools.hammer = hammer;
 
-{% endexample %}
+      For instance members of a class, use the syntax “@memberof
+      ClassName.prototype” or “@memberof ClassName#”. Alternatively, you can
+      combine “@memberof ClassName” with the “@instance” tag.
 
-For instance members of a class, use the syntax “@memberof
-ClassName.prototype” or “@memberof ClassName#”. Alternatively, you can
-combine “@memberof ClassName” with the “@instance” tag.
+      .. code-block:: js
+         :caption: Using @memberof with a class prototype
 
-{% example “Using @memberof with a class prototype” %}
+         /** @class Observable */
+         create(
+             'Observable',
+             {
+                 /**
+                  * This will be a static member, Observable.cache.
+                  * @memberof Observable
+                  */
+                 cache: [],
 
-.. code-block:: js
+                 /**
+                  * This will be an instance member, Observable#publish.
+                  * @memberof Observable.prototype
+                  */
+                 publish: function(msg) {},
 
-   /** @class Observable */
-   create(
-       'Observable',
-       {
-           /**
-            * This will be a static member, Observable.cache.
-            * @memberof Observable
-            */
-           cache: [],
+                 /**
+                  * This will also be an instance member, Observable#save.
+                  * @memberof Observable#
+                  */
+                 save: function() {},
 
-           /**
-            * This will be an instance member, Observable#publish.
-            * @memberof Observable.prototype
-            */
-           publish: function(msg) {},
+                 /**
+                  * This will also be an instance member, Observable#end.
+                  * @memberof Observable
+                  * @instance
+                  */
+                 end: function() {}
+             }
+         );
 
-           /**
-            * This will also be an instance member, Observable#save.
-            * @memberof Observable#
-            */
-           save: function() {},
+      The following example uses the forced @memberof tag, “@memberof!”, to
+      document a property of an object (Data#point) that is an instance member
+      of a class (Data).
 
-           /**
-            * This will also be an instance member, Observable#end.
-            * @memberof Observable
-            * @instance
-            */
-           end: function() {}
-       }
-   );
+      When you use the @property tag to document a property, you cannot link
+      to the property using its longname. We can force the property to be
+      linkable by using “@alias” and “@memberof!” to tell JSDoc that
+      Data#point.y should be documented as a member “point.y” of “Data#”,
+      rather than a member “y” of “point” of “Data#”.
 
-{% endexample %}
+      .. code-block:: js
+         :caption: Using @memberof! for object properties
 
-The following example uses the forced @memberof tag, “@memberof!”, to
-document a property of an object (Data#point) that is an instance member
-of a class (Data).
-
-When you use the @property tag to document a property, you cannot link
-to the property using its longname. We can force the property to be
-linkable by using “@alias” and “@memberof!” to tell JSDoc that
-Data#point.y should be documented as a member “point.y” of “Data#”,
-rather than a member “y” of “point” of “Data#”.
-
-{% example “Using @memberof! for object properties” %}
-
-.. code-block:: js
-
-   /** @class */
-   function Data() {
-       /**
-        * @type {object}
-        * @property {number} y This will show up as a property of `Data#point`,
-        * but you cannot link to the property as {@link Data#point.y}.
-        */
-       this.point = {
-           /**
-            * The @alias and @memberof! tags force JSDoc to document the
-            * property as `point.x` (rather than `x`) and to be a member of
-            * `Data#`. You can link to the property as {@link Data#point.x}.
-            * @alias point.x
-            * @memberof! Data#
-            */
-           x: 0,
-           y: 1
-       };
-   }
-
-{% endexample %}
+         /** @class */
+         function Data() {
+             /**
+              * @type {object}
+              * @property {number} y This will show up as a property of `Data#point`,
+              * but you cannot link to the property as {@link Data#point.y}.
+              */
+             this.point = {
+                 /**
+                  * The @alias and @memberof! tags force JSDoc to document the
+                  * property as `point.x` (rather than `x`) and to be a member of
+                  * `Data#`. You can link to the property as {@link Data#point.x}.
+                  * @alias point.x
+                  * @memberof! Data#
+                  */
+                 x: 0,
+                 y: 1
+             };
+         }

@@ -1,26 +1,25 @@
 @summary
 =============================
 
-Syntax
-------
+.. rst:directive:: @summary
 
-``@summary Summary goes here.``
+   :Syntax:
 
-Overview
---------
+      ``@summary Summary goes here.``
 
-The @summary tag is a shorter version of the full description. It can be
-added to any doclet.
+   :Overview:
 
-Examples
---------
+      The @summary tag is a shorter version of the full description. It can be
+      added to any doclet.
 
-.. code-block:: js
+   :Examples:
 
-   /**
-    * A very long, verbose, wordy, long-winded, tedious, verbacious, tautological,
-    * profuse, expansive, enthusiastic, redundant, flowery, eloquent, articulate,
-    * loquacious, garrulous, chatty, extended, babbling description.
-    * @summary A concise summary.
-    */
-   function bloviate() {}
+      .. code-block:: js
+
+         /**
+          * A very long, verbose, wordy, long-winded, tedious, verbacious, tautological,
+          * profuse, expansive, enthusiastic, redundant, flowery, eloquent, articulate,
+          * loquacious, garrulous, chatty, extended, babbling description.
+          * @summary A concise summary.
+          */
+         function bloviate() {}

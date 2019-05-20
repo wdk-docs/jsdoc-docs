@@ -1,89 +1,81 @@
 @interface
 =============================
 
-Syntax
-------
+.. rst:directive:: @interface
 
-With the JSDoc tag dictionary (enabled by default):
+   :Syntax:
 
-``@interface [<name>]``
+      With the JSDoc tag dictionary (enabled by default):
 
-With the `Closure
-Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
-tag dictionary:
+      ``@interface [<name>]``
 
-``@interface``
+      With the `Closure
+      Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
+      tag dictionary:
 
-Overview
---------
+      :rst:dir:`@interface`
 
-The ``@interface`` tag marks a symbol as an interface that other symbols
-can implement. For example, your code might define a parent class whose
-methods and properties are stubbed out. You can add the ``@interface``
-tag to the parent class to indicate that child classes must implement
-the parent class’ methods and properties.
+   :Overview:
 
-Add the ``@interface`` tag to the top-level symbol for the interface
-(for example, a constructor function). You do not need to add the
-``@interface`` tag to each member of the interface (for example, the
-interface’s instance methods).
+      The :rst:dir:`@interface` tag marks a symbol as an interface that other symbols
+      can implement. For example, your code might define a parent class whose
+      methods and properties are stubbed out. You can add the :rst:dir:`@interface`
+      tag to the parent class to indicate that child classes must implement
+      the parent class’ methods and properties.
 
-If you are using the JSDoc tag dictionary (enabled by default), you can
-also define an interface with virtual comments, rather than by writing
-code for the interface. See “`Virtual comments that define an
-interface <#virtual-comments>`__” for an example.
+      Add the :rst:dir:`@interface` tag to the top-level symbol for the interface
+      (for example, a constructor function). You do not need to add the
+      :rst:dir:`@interface` tag to each member of the interface (for example, the
+      interface’s instance methods).
 
-Examples
---------
+      If you are using the JSDoc tag dictionary (enabled by default), you can
+      also define an interface with virtual comments, rather than by writing
+      code for the interface. See “`Virtual comments that define an interface <#virtual-comments>`__” for an example.
 
-In the following example, the ``Color`` function represents an interface
-that other classes can implement:
+   :Examples:
 
-{% example “Using the @interface tag” %}
+      In the following example, the ``Color`` function represents an interface
+      that other classes can implement:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @interface tag
 
-   /**
-    * Interface for classes that represent a color.
-    *
-    * @interface
-    */
-   function Color() {}
+         /**
+          * Interface for classes that represent a color.
+          *
+          * @interface
+          */
+         function Color() {}
 
-   /**
-    * Get the color as an array of red, green, and blue values, represented as
-    * decimal numbers between 0 and 1.
-    *
-    * @returns {Array&lt;number>} An array containing the red, green, and blue values,
-    * in that order.
-    */
-   Color.prototype.rgb = function() {
-       throw new Error('not implemented');
-   };
+         /**
+          * Get the color as an array of red, green, and blue values, represented as
+          * decimal numbers between 0 and 1.
+          *
+          * @returns {Array&lt;number>} An array containing the red, green, and blue values,
+          * in that order.
+          */
+         Color.prototype.rgb = function() {
+             throw new Error('not implemented');
+         };
 
-{% endexample %}
+      The following example uses virtual comments, rather than code, to define
+      the ``Color`` interface:
 
-The following example uses virtual comments, rather than code, to define
-the ``Color`` interface:
+      .. code-block:: js
+         :caption: Virtual comments that define an interface
 
-{% example “Virtual comments that define an interface” %}
+         /**
+          * Interface for classes that represent a color.
+          *
+          * @interface Color
+          */
 
-.. code-block:: js
-
-   /**
-    * Interface for classes that represent a color.
-    *
-    * @interface Color
-    */
-
-   /**
-    * Get the color as an array of red, green, and blue values, represented as
-    * decimal numbers between 0 and 1.
-    *
-    * @function
-    * @name Color#rgb
-    * @returns {Array&lt;number>} An array containing the red, green, and blue values,
-    * in that order.
-    */
-
-{% endexample %}
+         /**
+          * Get the color as an array of red, green, and blue values, represented as
+          * decimal numbers between 0 and 1.
+          *
+          * @function
+          * @name Color#rgb
+          * @returns {Array&lt;number>} An array containing the red, green, and blue values,
+          * in that order.
+          */

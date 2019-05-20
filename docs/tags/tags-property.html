@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -134,11 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-package.html">&#64;package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-param.html">&#64;param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-private.html">&#64;private</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;property</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;property</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-protected.html">&#64;protected</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-public.html">&#64;public</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-readonly.html">&#64;read</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,9 +226,12 @@
             
   <div class="section" id="property">
 <h1>&#64;property<a class="headerlink" href="#property" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;property tag is a way to easily document a list of static
+<dl class="directive">
+<dt id="directive-&#64;property">
+<code class="descname">.. &#64;property::</code><a class="headerlink" href="#directive-@property" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>the &#64;property tag is a way to easily document a list of static
 properties of a class, namespace or other object.</p>
 <p>Normally JSDoc templates would create an entire new page to display
 information about each level of a nested namespace hierarchy. Sometimes
@@ -245,13 +242,13 @@ they are properties of, a namespace or a class for example. This tag is
 intended for simple collections of static properties, it does not allow
 you to provide &#64;examples or similar complex information for each
 property, just the type, name and description.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In this example we have a namespace named “config.” We want all the
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>In this example we have a namespace named “config.” We want all the
 information about the defaults property, including its nested values, to
 appear on the same page with the documentation for config.</p>
-<p>{% example “A namespace with defaults and nested default properties” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">A namespace with defaults and nested default properties</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @namespace</span>
 <span class="cm"> * @property {object}  defaults               - The default values for parties.</span>
@@ -271,19 +268,27 @@ appear on the same page with the documentation for config.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>The following example shows how to indicate that a property is optional.</p>
-<p>{% example “A type definition with required and optional property” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
-<span class="o">*</span> <span class="n">User</span> <span class="nb">type</span> <span class="n">definition</span>
-<span class="o">*</span> <span class="nd">@typedef</span> <span class="p">{</span><span class="n">Object</span><span class="p">}</span> <span class="n">User</span>
-<span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="n">email</span>
-<span class="o">*</span> <span class="nd">@property</span> <span class="p">{</span><span class="n">string</span><span class="p">}</span> <span class="p">[</span><span class="n">nickName</span><span class="p">]</span>
-<span class="o">*/</span>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">caption</dt>
+<dd class="field-odd"><p>A type definition with required and optional property</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/**
+* User <span class="nb">type</span> definition
+* @typedef <span class="o">{</span>Object<span class="o">}</span> User
+* @property <span class="o">{</span>string<span class="o">}</span> email
+* @property <span class="o">{</span>string<span class="o">}</span> <span class="o">[</span>nickName<span class="o">]</span>
+*/
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -13,7 +13,7 @@ To add tutorials to your API documentation, run JSDoc with the
 ``--tutorials`` or ``-u`` option, and provide a directory that JSDoc
 should search for tutorials. For example:
 
-::
+.. code-block:: sh
 
    jsdoc -u path/to/tutorials path/to/js/files
 
@@ -120,13 +120,12 @@ documentation:
 @tutorial block tag
 ~~~~~~~~~~~~~~~~~~~
 
-If you include a ```@tutorial`` block tag <tags-tutorial.html>`__ in a
+If you include a :rst:dir:`@tutorial` `block tag <tags-tutorial.html>`__ in a
 JSDoc comment, the generated documentation will include a link to the
 tutorial you specify.
 
-{% example “Using the ``@tutorial`` block tag” %}
-
 .. code-block:: js
+   :caption: Using the :rst:dir:`@tutorial` block tag
 
    /**
     * Class representing a socket connection.
@@ -136,19 +135,16 @@ tutorial you specify.
     */
    function Socket() {}
 
-{% endexample %}
-
 {@tutorial} inline tag
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You can also use the ```{@tutorial}`` inline
+You can also use the ``{@tutorial}`` `inline
 tag <tags-inline-tutorial.html>`__ to link to a tutorial within the text
 of another tag. By default, JSDoc will use the tutorial’s title as the
 link text.
 
-{% example “Using the ``{@tutorial}`` inline tag” %}
-
 .. code-block:: js
+   :caption: Using the ``{@tutorial}`` inline tag
 
    /**
     * Class representing a socket connection. See {@tutorial socket-tutorial}
@@ -157,5 +153,3 @@ link text.
     * @class
     */
    function Socket() {}
-
-{% endexample %}

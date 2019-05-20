@@ -93,18 +93,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#creating-and-enabling-a-plugin">创建和启用插件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#authoring-jsdoc-3-plugins">关于JSDoc插件</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#event-handlers">事件处理程序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tag-definitions">Tag Definitions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#node-visitors">Node Visitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tag-definitions">标签定义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node-visitors">节点访客</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#reporting-errors">Reporting Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reporting-errors">报告错误</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -183,33 +183,23 @@
 <h2>创建和启用插件<a class="headerlink" href="#creating-and-enabling-a-plugin" title="永久链接至标题">¶</a></h2>
 <p>创建和启用新的JSDoc插件需要两个步骤:</p>
 <ol class="arabic simple">
-<li><p>创建一个JavaScript模块以包含您的插件代码。</p></li>
-<li><p>Include that module in the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> array of <a class="reference external" href="about-configuring-jsdoc.html">JSDoc’s
-configuration file</a>. You can specify
-an absolute or relative path. If you use a relative path, JSDoc
-searches for the plugin in the current working directory; the
-directory where the configuration file is located; and the JSDoc
-directory, in that order.</p></li>
+<li><p>创建一个JavaScript模块以包含您的插件代码.</p></li>
+<li><p>在 <a class="reference external" href="configurations-jsdoc.html">JSDoc的配置文件</a> 的 <code class="docutils literal notranslate"><span class="pre">plugins</span></code> 数组中包含该模块. 您可以指定绝对路径或相对路径. 如果使用相对路径, JSDoc将在当前工作目录中搜索插件;配置文件所在的目录;和JSDoc目录, 按此顺序.</p></li>
 </ol>
-<p>For example, if your plugin is defined in the <code class="docutils literal notranslate"><span class="pre">plugins/shout.js</span></code> file
-in the current working directory, you would add the string
-<code class="docutils literal notranslate"><span class="pre">plugins/shout</span></code> to the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> array in your JSDoc configuration
-file:</p>
-<p>{% example “Adding a plugin to JSDoc’s configuration file” %}</p>
+<p>例如, 如果您的插件是在当前工作目录的 <code class="docutils literal notranslate"><span class="pre">plugins/shout.js</span></code> 文件中定义的, 那么您应该将字符串 <code class="docutils literal notranslate"><span class="pre">plugins/shout</span></code> 添加到JSDoc配置中的 <code class="docutils literal notranslate"><span class="pre">plugins</span></code> 数组中文件:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Adding a plugin to JSDoc’s configuration file</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;plugins/shout&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>JSDoc executes plugins in the order that they are listed in the
-configuration file.</p>
+</div>
+<p>JSDoc按照配置文件中列出的顺序执行插件.</p>
 </div>
 <div class="section" id="authoring-jsdoc-3-plugins">
 <h2>关于JSDoc插件<a class="headerlink" href="#authoring-jsdoc-3-plugins" title="永久链接至标题">¶</a></h2>
-<p>JSDoc 3’s plugin system offers extensive control over the parsing
-process. A plugin can affect the parse results by doing any of the
-following:</p>
+<p>JSDoc 3的插件系统提供了对解析过程的广泛控制. 插件可以通过执行以下任一操作来影响解析结果:</p>
 <ul class="simple">
 <li><p>定义事件处理程序</p></li>
 <li><p>定义标签</p></li>
@@ -217,11 +207,9 @@ following:</p>
 </ul>
 <div class="section" id="event-handlers">
 <h3>事件处理程序<a class="headerlink" href="#event-handlers" title="永久链接至标题">¶</a></h3>
-<p>At the highest level, a plugin may register handlers for specific named
-events that JSDoc fires. JSDoc will pass an event object to the handler.
-Your plugin module should export a <code class="docutils literal notranslate"><span class="pre">handlers</span></code> object that contains
-your handler, like so:</p>
-<p>{% example “Event-handler plugin for ‘newDoclet’ events” %}</p>
+<p>在最高级别, 插件可以为JSDoc触发的特定命名事件注册处理程序.  JSDoc会将一个事件对象传递给处理程序. 你的插件模块应该导出一个包含你的处理程序的 <code class="docutils literal notranslate"><span class="pre">handlers</span></code> 对象, 如下所示:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Event-handler plugin for ‘newDoclet’ events</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">handlers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">newDoclet</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Do something when we see a new doclet</span>
@@ -229,51 +217,37 @@ your handler, like so:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>JSDoc fires events in the same order as the underlying code.</p>
-<p>An event-handler plugin can stop later plugins from running by setting a
-<code class="docutils literal notranslate"><span class="pre">stopPropagation</span></code> property on the event object
-(<code class="docutils literal notranslate"><span class="pre">e.stopPropagation</span> <span class="pre">=</span> <span class="pre">true</span></code>). A plugin can stop the event from firing
-by setting a <code class="docutils literal notranslate"><span class="pre">preventDefault</span></code> property (<code class="docutils literal notranslate"><span class="pre">e.preventDefault</span> <span class="pre">=</span> <span class="pre">true</span></code>).</p>
+</div>
+<p>JSDoc以与底层代码相同的顺序触发事件.</p>
+<p>事件处理程序插件可以通过在事件对象上设置 <code class="docutils literal notranslate"><span class="pre">stopPropagation</span></code> 属性(<code class="docutils literal notranslate"><span class="pre">e.stopPropagation</span> <span class="pre">=</span> <span class="pre">true</span></code>)来阻止以后的插件运行. 插件可以通过设置 <code class="docutils literal notranslate"><span class="pre">preventDefault</span></code> 属性(<code class="docutils literal notranslate"><span class="pre">e.preventDefault</span> <span class="pre">=</span> <span class="pre">true</span></code>)来停止触发事件.</p>
 <div class="section" id="event-parsebegin">
 <h4>Event: parseBegin<a class="headerlink" href="#event-parsebegin" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">parseBegin</span></code> event is fired before JSDoc starts loading and
-parsing the source files. Your plugin can control which files JSDoc will
-parse by modifying the event’s contents.</p>
-<p><strong>Note</strong>: This event is fired in JSDoc 3.2 and later.</p>
-<p>The event object contains the following properties:</p>
+<p>在JSDoc开始加载和解析源文件之前, 会触发 <code class="docutils literal notranslate"><span class="pre">parseBegin</span></code> 事件. 您的插件可以通过修改事件的内容来控制JSDoc将解析哪些文件.</p>
+<p><strong>Note</strong>: 此事件在JSDoc 3.2及更高版本中触发.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sourcefiles</span></code>: An array of paths to source files that will be
-parsed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourcefiles</span></code>: 要解析的源文件的路径数组.</p></li>
 </ul>
 </div>
 <div class="section" id="event-filebegin">
 <h4>Event: fileBegin<a class="headerlink" href="#event-filebegin" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">fileBegin</span></code> event is fired when the parser is about to parse a
-file. Your plugin can use this event to trigger per-file initialization
-if necessary.</p>
-<p>The event object contains the following properties:</p>
+<p>解析器即将解析文件时 <code class="docutils literal notranslate"><span class="pre">fileBegin</span></code> 事件. 如有必要, 您的插件可以使用此事件触发每个文件的初始化.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: The name of the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: 文件的名称.</p></li>
 </ul>
 </div>
 <div class="section" id="event-beforeparse">
 <h4>Event: beforeParse<a class="headerlink" href="#event-beforeparse" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">beforeParse</span></code> event is fired before parsing has begun. Plugins can
-use this method to modify the source code that will be parsed. For
-instance, your plugin could add a JSDoc comment, or it could remove
-preprocessing tags that are not valid JavaScript.</p>
-<p>The event object contains the following properties:</p>
+<p>解析开始之前会触发 <code class="docutils literal notranslate"><span class="pre">beforeParse</span></code> 事件. 插件可以使用此方法修改将要解析的源代码. 例如, 您的插件可以添加JSDoc注释, 或者它可以删除非有效JavaScript的预处理标记.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: The name of the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: The contents of the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: 文件的名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: 文件的内容.</p></li>
 </ul>
-<p>Below is an example that adds a virtual comment for a function to the
-source so that it will get parsed and added to the documentation. This
-might be done to document methods that will be available to users, but
-might not appear in the source code being documented, such as methods
-provided by an external superclass:</p>
-<p>{% example “Example” %}</p>
+<p>下面是一个示例, 它将函数的虚拟注释添加到源, 以便将其解析并添加到文档中. 这可以用于记录可供用户使用的方法, 但可能不会出现在所记录的源代码中, 例如外部超类提供的方法:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">handlers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">beforeParse</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">extraDoc</span> <span class="o">=</span> <span class="p">[</span>
@@ -289,91 +263,62 @@ provided by an external superclass:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="event-jsdoccommentfound">
 <h4>Event: jsdocCommentFound<a class="headerlink" href="#event-jsdoccommentfound" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">jsdocCommentFound</span></code> event is fired whenever a JSDoc comment is
-found. The comment may or may not be associated with any code. You might
-use this event to modify the contents of a comment before it is
-processed.</p>
-<p>The event object contains the following properties:</p>
+<p>只要找到JSDoc注释, 就会触发 <code class="docutils literal notranslate"><span class="pre">jsdocCommentFound</span></code> 事件. 评论可能与任何代码相关, 也可能不相关. 您可以使用此事件在处理注释之前修改注释的内容.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: The name of the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: The text of the JSDoc comment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: The line number on which the comment was found.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">columnno</span></code>: The column number on which the comment was found.
-Available in JSDoc 3.5.0 and later.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: 文件的名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: JSDoc评论的文本.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: 找到评论的行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">columnno</span></code>: 找到评论的列号. 可在JSDoc 3.5.0及更高版本中使用.</p></li>
 </ul>
 </div>
 <div class="section" id="event-symbolfound">
 <h4>Event: symbolFound<a class="headerlink" href="#event-symbolfound" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> event is fired when the parser comes across a symbol
-in the code that may need to be documented. For example, the parser
-fires a <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> event for each variable, function, and object
-literal in a source file.</p>
-<p>The event object contains the following properties:</p>
+<p>当解析器遇到可能需要记录的代码中的符号时, 会触发 <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> 事件. 例如, 解析器为源文件中的每个变量, 函数和对象文字触发 <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> 事件.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: The name of the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: The text of the comment associated with the symbol, if
-any.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: The unique ID of the symbol.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: The line number on which the symbol was found.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">columnno</span></code>: The column number on which the symbol was found.
-Available in JSDoc 3.5.0 and later.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>: An array containing the numeric index of the first and
-last characters in the source file that are associated with the
-symbol.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">astnode</span></code>: The symbol’s node from the abstract syntax tree.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: Object with detailed information about the code. This
-object usually contains <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>, and <code class="docutils literal notranslate"><span class="pre">node</span></code> properties.
-The object might also have <code class="docutils literal notranslate"><span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">paramnames</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">funcscope</span></code> properties depending on the symbol.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: 文件的名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: 与符号关联的注释文本(如果有).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: 符号的唯一ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: 找到符号的行号.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">columnno</span></code>: 找到符号的列号. 可在JSDoc 3.5.0及更高版本中使用.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>: 一个数组, 包含源文件中与该符号关联的第一个和最后一个字符的数字索引.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">astnode</span></code>: 抽象语法树中的符号节点.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: 包含代码详细信息的对象. 该对象通常包含 <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code> 和 <code class="docutils literal notranslate"><span class="pre">node</span></code> 属性. 对象可能还有 <code class="docutils literal notranslate"><span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">paramnames</span></code> 或 <code class="docutils literal notranslate"><span class="pre">funcscope</span></code> 属性, 具体取决于符号.</p></li>
 </ul>
 </div>
 <div class="section" id="event-newdoclet">
 <h4>Event: newDoclet<a class="headerlink" href="#event-newdoclet" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> event is the highest-level event. It is fired when a
-new doclet has been created. This means that a JSDoc comment or a symbol
-has been processed, and the actual doclet that will be passed to the
-template has been created.</p>
-<p>The event object contains the following properties:</p>
+<p><code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> 事件是最高级别的事件. 创建新doclet时会触发它. 这意味着已经处理了JSDoc注释或符号, 并且已经创建了将传递给模板的实际doclet.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">doclet</span></code>: The new doclet that was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doclet</span></code>: 创建的新doclet.</p></li>
 </ul>
-<p>The doclet’s properties can vary depending on the comment or symbol that
-the doclet represents. Some common properties you’re likely to see
-include:</p>
+<p>doclet的属性可以根据doclet表示的注释或符号而有所不同. 您可能会看到的一些常见属性包括:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: The text of the JSDoc comment, or an empty string if the
-symbol is undocumented.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code>: Object that describes how the doclet relates to the source
-file (for example, the location within the source file).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: A description of the symbol being documented.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code>: The kind of symbol being documented (for example, <code class="docutils literal notranslate"><span class="pre">class</span></code>
-or <code class="docutils literal notranslate"><span class="pre">function</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The short name for the symbol (for example, <code class="docutils literal notranslate"><span class="pre">myMethod</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">longname</span></code>: The fully qualified name, including memberof info (for
-example, <code class="docutils literal notranslate"><span class="pre">MyClass#myMethod</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memberof</span></code>: The module, namespace, or class that this symbol
-belongs to (for example, <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>), or an empty string if the
-symbol does not have a parent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code>: The scope of the symbol within its parent (for example,
-<code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code>, <code class="docutils literal notranslate"><span class="pre">instance</span></code>, or <code class="docutils literal notranslate"><span class="pre">inner</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">undocumented</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the symbol did not have a JSDoc
-comment.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultvalue</span></code>: The default value for a symbol.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: Object containing details about the symbol’s type.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code>: Object containing the list of parameters to a function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: Object containing a list of tags that JSDoc did not
-recognize. Only available if <code class="docutils literal notranslate"><span class="pre">allowUnknownTags</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>
-in JSDoc’s configuration file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code>: JSDoc注释的文本, 如果符号未记录, 则为空字符串.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code>: 描述doclet如何与源文件相关的对象(例如, 源文件中的位置).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: 正在记录的符号的描述.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code>: 记录的符号类型(例如, <code class="docutils literal notranslate"><span class="pre">class</span></code> 或 <code class="docutils literal notranslate"><span class="pre">function</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: 符号的简称(例如, <code class="docutils literal notranslate"><span class="pre">myMethod</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">longname</span></code>: 完全限定名称, 包括成员信息(例如, <code class="docutils literal notranslate"><span class="pre">MyClass</span> <span class="pre">#myMethod</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memberof</span></code>: 此符号所属的模块, 命名空间或类(例如, <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>), 如果符号没有父符号, 则为空字符串.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code>: 符号在其父级中的范围(例如, <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code>, <code class="docutils literal notranslate"><span class="pre">instance</span></code> 或 <code class="docutils literal notranslate"><span class="pre">inner</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">undocumented</span></code>: 如果符号没有JSDoc注释, 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultvalue</span></code>: 符号的默认值.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: 包含有关符号类型的详细信息的对象.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code>: 包含函数参数列表的对象.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: 包含JSDoc无法识别的标签列表的对象. 只有在JSDoc的配置文件中将 <code class="docutils literal notranslate"><span class="pre">allowUnknownTags</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 时才可用.</p></li>
 </ul>
 <p>To see the doclets that JSDoc generates for your code, run JSDoc with
-the <code class="docutils literal notranslate"><span class="pre">`-X</span></code> command-line option &lt;about-commandline.html&gt;`__.</p>
-<p>Below is an example of a <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> handler that shouts the
-descriptions:</p>
-<p>{% example “Example” %}</p>
+the <code class="docutils literal notranslate"><span class="pre">-X</span></code> <a class="reference external" href="about-commandline.html">command-line option</a>.</p>
+<p>下面是一个 <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> 处理程序的示例, 该处理程序会对描述进行大喊:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">handlers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">newDoclet</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// e.doclet will refer to the newly created doclet</span>
@@ -385,110 +330,79 @@ descriptions:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="event-filecomplete">
 <h4>Event: fileComplete<a class="headerlink" href="#event-filecomplete" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">fileComplete</span></code> event is fired when the parser has finished parsing
-a file. Your plugin could use this event to trigger per-file cleanup.</p>
-<p>The event object contains the following properties:</p>
+<p>解析器完成解析文件后会触发 <code class="docutils literal notranslate"><span class="pre">fileComplete</span></code> 事件. 您的插件可以使用此事件来触发每个文件的清理.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: The name of the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: The contents of the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: 文件的名称.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code>: 文件的内容.</p></li>
 </ul>
 </div>
 <div class="section" id="event-parsecomplete">
 <h4>Event: parseComplete<a class="headerlink" href="#event-parsecomplete" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">parseComplete</span></code> event is fired after JSDoc has parsed all of the
-specified source files.</p>
-<p><strong>Note</strong>: This event is fired in JSDoc 3.2 and later.</p>
-<p>The event object contains the following properties:</p>
+<p>在JSDoc解析了所有指定的源文件之后, 会触发 <code class="docutils literal notranslate"><span class="pre">parseComplete</span></code> 事件.</p>
+<p><strong>Note</strong>: 此事件在JSDoc 3.2及更高版本中触发.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sourcefiles</span></code>: An array of paths to source files that were parsed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">doclets</span></code>: An array of doclet objects. See the <code class="docutils literal notranslate"><span class="pre">`newDoclet</span></code>
-event &lt;#event-newdoclet&gt;`__ for details about the properties that
-each doclet can contain. Available in JSDoc 3.2.1 and later.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourcefiles</span></code>: 解析源文件的路径数组.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doclets</span></code>: 一组doclet对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> <a class="reference external" href="＃event-newdoclet">事件</a>. 可在JSDoc 3.2.1及更高版本中使用.</p></li>
 </ul>
 </div>
 <div class="section" id="event-processingcomplete">
 <h4>Event: processingComplete<a class="headerlink" href="#event-processingcomplete" title="永久链接至标题">¶</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">processingComplete</span></code> event is fired after JSDoc updates the parse
-results to reflect inherited and borrowed symbols.</p>
-<p><strong>Note</strong>: This event is fired in JSDoc 3.2.1 and later.</p>
-<p>The event object contains the following properties:</p>
+<p>在JSDoc更新解析结果以反映继承和借用符号之后, 将触发 <code class="docutils literal notranslate"><span class="pre">processingComplete</span></code> 事件.</p>
+<p><strong>Note</strong>: 此事件在JSDoc 3.2.1及更高版本中触发.</p>
+<p>事件对象包含以下属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">doclets</span></code>: An array of doclet objects. See the <code class="docutils literal notranslate"><span class="pre">`newDoclet</span></code>
-event &lt;#event-newdoclet&gt;`__ for details about the properties that
-each doclet can contain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doclets</span></code>: 一组doclet对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> <a class="reference external" href="＃event-newdoclet">事件</a>.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="tag-definitions">
-<h3>Tag Definitions<a class="headerlink" href="#tag-definitions" title="永久链接至标题">¶</a></h3>
-<p>Adding tags to the tag dictionary is a mid-level way to affect
-documentation generation. Before a <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> event is triggered,
-JSDoc comment blocks are parsed to determine the description and any
-JSDoc tags that may be present. When a tag is found, if it has been
-defined in the tag dictionary, it is given a chance to modify the
-doclet.</p>
-<p>Plugins can define tags by exporting a <code class="docutils literal notranslate"><span class="pre">defineTags</span></code> function. That
-function will be passed a dictionary that can be used to define tags,
-like so:</p>
-<p>{% example “Example” %}</p>
+<h3>标签定义<a class="headerlink" href="#tag-definitions" title="永久链接至标题">¶</a></h3>
+<p>向标记字典添加标记是影响文档生成的中级方法. 在触发 <code class="docutils literal notranslate"><span class="pre">newDoclet</span></code> 事件之前, 解析JSDoc注释块以确定描述和可能存在的任何JSDoc标记. 找到标记后, 如果已在标记字典中定义了标记, 则有机会修改doclet.</p>
+<p>插件可以通过导出 <code class="docutils literal notranslate"><span class="pre">defineTags</span></code> 函数来定义标签. 该函数将传递一个字典, 可用于定义标签, 如此:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">defineTags</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">dictionary</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// define tags here</span>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <div class="section" id="the-dictionary">
-<h4>The Dictionary<a class="headerlink" href="#the-dictionary" title="永久链接至标题">¶</a></h4>
-<p>The dictionary provides the following methods:</p>
+<h4>词典<a class="headerlink" href="#the-dictionary" title="永久链接至标题">¶</a></h4>
+<p>该词典提供以下方法:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defineTag(title,</span> <span class="pre">opts)</span></code>: Used to define tags. The first parameter
-is the name of the tag (for example, <code class="docutils literal notranslate"><span class="pre">param</span></code> or <code class="docutils literal notranslate"><span class="pre">overview</span></code>). The
-second is an object containing options for the tag. You can include
-any of the following options; the default value for each option is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">defineTag(title,</span> <span class="pre">opts)</span></code>: 用于定义标签. 第一个参数是标记的名称(例如, <code class="docutils literal notranslate"><span class="pre">param</span></code> 或 <code class="docutils literal notranslate"><span class="pre">overview</span></code>). 第二个是包含标记选项的对象. 您可以包含以下任何选项;每个选项的默认值是 <code class="docutils literal notranslate"><span class="pre">false</span></code>:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">canHaveType</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag text can
-include a type expression (such as <code class="docutils literal notranslate"><span class="pre">{string}</span></code> in
-<code class="docutils literal notranslate"><span class="pre">&#64;param</span> <span class="pre">{string}</span> <span class="pre">name</span> <span class="pre">-</span> <span class="pre">Description</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">canHaveName</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag text can
-include a name (such as <code class="docutils literal notranslate"><span class="pre">name</span></code> in
-<code class="docutils literal notranslate"><span class="pre">&#64;param</span> <span class="pre">{string}</span> <span class="pre">name</span> <span class="pre">-</span> <span class="pre">Description</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">canHaveType</span> <span class="pre">(boolean)</span></code>: 如果标记文本可以包含类型表达式(例如 <code class="docutils literal notranslate"><span class="pre">&#64;param</span> <span class="pre">{string}</span> <span class="pre">name</span> <span class="pre">-</span> <span class="pre">Description</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">{string}</span></code>, 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">canHaveName</span> <span class="pre">(boolean)</span></code>: 如果标签文本可以包含名称(例如 <code class="docutils literal notranslate"><span class="pre">&#64;param</span> <span class="pre">{string}</span> <span class="pre">name</span> <span class="pre">-</span> <span class="pre">Description</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">name</span></code>), 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isNamespace</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag should be
 applied to the doclet’s longname as a namespace. For example, the
-<code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag sets this option to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and using the tag
+<a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag sets this option to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and using the tag
 <code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">myModuleName</span></code> results in the longname
 <code class="docutils literal notranslate"><span class="pre">module:myModuleName</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mustHaveValue</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag must have
-a value (such as <code class="docutils literal notranslate"><span class="pre">TheName</span></code> in <code class="docutils literal notranslate"><span class="pre">&#64;name</span> <span class="pre">TheName</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mustNotHaveDescription</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag
-may have a value but must not have a description (such as
-<code class="docutils literal notranslate"><span class="pre">TheDescription</span></code> in <code class="docutils literal notranslate"><span class="pre">&#64;tag</span> <span class="pre">{typeExpr}</span> <span class="pre">TheDescription</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mustNotHaveValue</span> <span class="pre">(boolean)</span></code>: Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag must
-not have a value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onTagged</span> <span class="pre">(function)</span></code>: A callback function executed when the tag
-is found. The function is passed two parameters: the doclet and
-the tag object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mustHaveValue</span> <span class="pre">(boolean)</span></code>: 如果标记必须具有值(例如 <code class="docutils literal notranslate"><span class="pre">&#64;name</span> <span class="pre">TheName</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">TheName</span></code>), 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mustNotHaveDescription</span> <span class="pre">(boolean)</span></code>: 如果标签可能有值但是必须没有描述(例如 <code class="docutils literal notranslate"><span class="pre">&#64;tag</span> <span class="pre">{typeExpr}</span> <span class="pre">TheDescription</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">TheDescription</span></code>), 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mustNotHaveValue</span> <span class="pre">(boolean)</span></code>: 如果标记必须没有值, 则设置为 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onTagged</span> <span class="pre">(function)</span></code>: 找到标记时执行的回调函数. 该函数传递两个参数: doclet和标记对象.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lookUp(tagName)</span></code>: Retrieve a tag object by name. Returns the tag
-object, including its options, or <code class="docutils literal notranslate"><span class="pre">false</span></code> if the tag is not
-defined.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isNamespace(tagName)</span></code>: Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tag is applied to a
-doclet’s longname as a namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lookUp(tagName)</span></code>: 按名称检索标记对象. 返回标记对象, 包括其选项, 如果未定义标记, 则返回 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isNamespace(tagName)</span></code>: 如果标记作为命名空间应用于doclet的longname, 则返回 <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">normalise(tagName)</span></code>: Returns the canonical name of a tag. For
-example, the <code class="docutils literal notranslate"><span class="pre">&#64;const</span></code> tag is a synonym for <code class="docutils literal notranslate"><span class="pre">&#64;constant</span></code>; as a
+example, the <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;const</span></code> tag is a synonym for <a class="reference internal" href="../tags/tags-constant.html#directive-&#64;constant" title="&#64;constant directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constant</span></code></a>; as a
 result, if you call <code class="docutils literal notranslate"><span class="pre">normalise('const')</span></code>, it returns the string
 <code class="docutils literal notranslate"><span class="pre">constant</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">normalize(tagName)</span></code>: Synonym for <code class="docutils literal notranslate"><span class="pre">normalise</span></code>. Available in JSDoc
-3.3.0 and later.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">normalize(tagName)</span></code>: <code class="docutils literal notranslate"><span class="pre">normalise</span></code> 的同义词. 可在JSDoc 3.3.0及更高版本中使用.</p></li>
 </ul>
-<p>A tag’s <code class="docutils literal notranslate"><span class="pre">onTagged</span></code> callback can modify the contents of the doclet or
-tag.</p>
-<p>{% example “Defining an onTagged callback” %}</p>
+<p>标签的 <code class="docutils literal notranslate"><span class="pre">onTagged</span></code> 回调可以修改doclet或标签的内容.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Defining an onTagged callback</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">dictionary</span><span class="p">.</span><span class="nx">defineTag</span><span class="p">(</span><span class="s1">&#39;instance&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">onTagged</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">doclet</span><span class="p">,</span> <span class="nx">tag</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">doclet</span><span class="p">.</span><span class="nx">scope</span> <span class="o">=</span> <span class="s2">&quot;instance&quot;</span><span class="p">;</span>
@@ -496,26 +410,23 @@ tag.</p>
 <span class="p">});</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">defineTag</span></code> method returns a <code class="docutils literal notranslate"><span class="pre">Tag</span></code> object, which has a
-<code class="docutils literal notranslate"><span class="pre">synonym</span></code> method that can be used to declare a synonym for the tag.</p>
-<p>{% example “Defining a tag synonym” %}</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">defineTag</span></code> 方法返回一个 <code class="docutils literal notranslate"><span class="pre">Tag</span></code> 对象, 它有一个 <code class="docutils literal notranslate"><span class="pre">synonym</span></code> 方法, 可以用来声明标签的同义词.</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Defining a tag synonym</span><a class="headerlink" href="#id7" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">dictionary</span><span class="p">.</span><span class="nx">defineTag</span><span class="p">(</span><span class="s1">&#39;exception&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* options for exception tag */</span> <span class="p">})</span>
     <span class="p">.</span><span class="nx">synonym</span><span class="p">(</span><span class="s1">&#39;throws&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 <div class="section" id="node-visitors">
-<h3>Node Visitors<a class="headerlink" href="#node-visitors" title="永久链接至标题">¶</a></h3>
-<p>At the lowest level, plugin authors can process each node in the
-abstract syntax tree (AST) by defining a node visitor that will visit
-each node. By using a node-visitor plugin, you can modify comments and
-trigger parser events for any arbitrary piece of code.</p>
-<p>Plugins can define a node visitor by exporting an <code class="docutils literal notranslate"><span class="pre">astNodeVisitor</span></code>
-object that contains a <code class="docutils literal notranslate"><span class="pre">visitNode</span></code> function, like so:</p>
-<p>{% example “Example” %}</p>
+<h3>节点访客<a class="headerlink" href="#node-visitors" title="永久链接至标题">¶</a></h3>
+<p>在最低级别, 插件作者可以通过定义将访问每个节点的节点访问者来处理抽象语法树(AST)中的每个节点. 通过使用node-visitor插件, 您可以修改注释并触发任意代码段的解析器事件.</p>
+<p>插件可以通过导出包含 <code class="docutils literal notranslate"><span class="pre">visitNode</span></code> 函数的 <code class="docutils literal notranslate"><span class="pre">astNodeVisitor</span></code> 对象来定义节点访问者, 就像这样:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Example</span><a class="headerlink" href="#id8" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">astNodeVisitor</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">visitNode</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">parser</span><span class="p">,</span> <span class="nx">currentSourceName</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// do all sorts of crazy things here</span>
@@ -523,63 +434,34 @@ object that contains a <code class="docutils literal notranslate"><span class="p
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>The function is called on each node with the following parameters:</p>
+</div>
+<p>使用以下参数在每个节点上调用该函数:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: The AST node. AST nodes are JavaScript objects that use the
-format defined by the <a class="reference external" href="https://github.com/estree/estree">ESTree
-spec</a>. You can use <a class="reference external" href="https://astexplorer.net/">AST
-Explorer</a> to see the AST that will be
-created for your source code. As of version 3.5.0, JSDoc uses the
-current version of the <a class="reference external" href="https://github.com/babel/babylon">Babylon</a>
-parser with all plugins enabled.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">e</span></code>: The event. If the node is one that the parser handles, the
-event object will already be populated with the same things described
-in the <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> event above. Otherwise, it will be an empty
-object on which to set various properties.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parser</span></code>: The JSDoc parser instance.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">currentSourceName</span></code>: The name of the file being parsed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: AST节点.  AST节点是使用 <a class="reference external" href="https://github.com/estree/estree">ESTree spec</a> 定义的格式的JavaScript对象. 您可以使用 <a class="reference external" href="https://astexplorer.net/">AST Explorer</a> 查看将为您的源代码创建的AST. 从版本3.5.0开始, JSDoc使用当前版本的 <a class="reference external" href="https://github.com/babel/babylon">Babylon</a> 解析器并启用所有插件.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">e</span></code>: 事件. 如果节点是解析器处理的节点, 则事件对象将已经填充了上面 <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> 事件中描述的相同内容. 否则, 它将是一个空对象, 可在其上设置各种属性.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parser</span></code>: JSDoc解析器实例.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">currentSourceName</span></code>: 要解析的文件的名称.</p></li>
 </ul>
 <div class="section" id="making-things-happen">
-<h4>Making things happen<a class="headerlink" href="#making-things-happen" title="永久链接至标题">¶</a></h4>
-<p>The primary reasons to implement a node visitor are to be able to
-document things that aren’t normally documented (like function calls
-that create classes) or to auto generate documentation for code that
-isn’t documented. For instance, a plugin might look for calls to a
-<code class="docutils literal notranslate"><span class="pre">_trigger</span></code> method since it knows that means an event is fired and then
-generate documentation for the event.</p>
-<p>To make things happen, the <code class="docutils literal notranslate"><span class="pre">visitNode</span></code> function should modify
-properties of the event parameter. In general the goal is to construct a
-comment and then get an event to fire. After the parser lets all of the
-node visitors have a look at the node, it looks to see if the event
-object has a <code class="docutils literal notranslate"><span class="pre">comment</span></code> property and an <code class="docutils literal notranslate"><span class="pre">event</span></code> property. If it has
-both, the event named in the event property is fired. The event is
-usually <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> or <code class="docutils literal notranslate"><span class="pre">jsdocCommentFound</span></code>, but theoretically, a
-plugin could define its own events and handle them.</p>
-<p>As with event-handler plugins, a node-visitor plugin can stop later
-plugins from running by setting a <code class="docutils literal notranslate"><span class="pre">stopPropagation</span></code> property on the
-event object (<code class="docutils literal notranslate"><span class="pre">e.stopPropagation</span> <span class="pre">=</span> <span class="pre">true</span></code>). A plugin can stop the event
-from firing by setting a <code class="docutils literal notranslate"><span class="pre">preventDefault</span></code> property
-(<code class="docutils literal notranslate"><span class="pre">e.preventDefault</span> <span class="pre">=</span> <span class="pre">true</span></code>).</p>
+<h4>让事情发生<a class="headerlink" href="#making-things-happen" title="永久链接至标题">¶</a></h4>
+<p>实现节点访问者的主要原因是能够记录通常未记录的内容(如创建类的函数调用)或自动生成未记录的代码的文档. 例如, 插件可能会查找对 <code class="docutils literal notranslate"><span class="pre">_trigger</span></code> 方法的调用, 因为它知道这意味着事件被触发, 然后生成事件的文档.</p>
+<p>为了使事情发生, <code class="docutils literal notranslate"><span class="pre">visitNode</span></code> 函数应该修改event参数的属性. 一般来说, 目标是构建注释然后获取要触发的事件. 解析器允许所有节点访问者查看节点后, 它会查看事件对象是否具有 <code class="docutils literal notranslate"><span class="pre">comment</span></code> 属性和 <code class="docutils literal notranslate"><span class="pre">event</span></code> 属性. 如果两者都有, 则触发事件属性中指定的事件. 事件通常是 <code class="docutils literal notranslate"><span class="pre">symbolFound</span></code> 或 <code class="docutils literal notranslate"><span class="pre">jsdocCommentFound</span></code> , 但理论上, 插件可以定义自己的事件并处理它们.</p>
+<p>与事件处理程序插件一样, node-visitor插件可以通过在事件对象(<code class="docutils literal notranslate"><span class="pre">e.stopPropagation</span> <span class="pre">=</span> <span class="pre">true</span></code>)上设置 <code class="docutils literal notranslate"><span class="pre">stopPropagation</span></code> 属性来阻止以后的插件运行. 插件可以通过设置 <code class="docutils literal notranslate"><span class="pre">preventDefault</span></code> 属性(<code class="docutils literal notranslate"><span class="pre">e.preventDefault</span> <span class="pre">=</span> <span class="pre">true</span></code>)来停止触发事件.</p>
 </div>
 </div>
 </div>
 <div class="section" id="reporting-errors">
-<h2>Reporting Errors<a class="headerlink" href="#reporting-errors" title="永久链接至标题">¶</a></h2>
-<p>If your plugin needs to report an error, use one of the following
-methods in the <code class="docutils literal notranslate"><span class="pre">jsdoc/util/logger</span></code> module:</p>
+<h2>报告错误<a class="headerlink" href="#reporting-errors" title="永久链接至标题">¶</a></h2>
+<p>如果您的插件需要报告错误, 请在 <code class="docutils literal notranslate"><span class="pre">jsdoc/util/logger</span></code> 模块中使用以下方法之一:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logger.warn</span></code>: Warn the user about a possible problem.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logger.error</span></code>: Report an error from which the plugin can recover.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logger.fatal</span></code>: Report an error that should cause JSDoc to stop
-running.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logger.warn</span></code>: 警告用户可能出现的问题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logger.error</span></code>: 报告插件可以恢复的错误.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logger.fatal</span></code>: 报告应该导致JSDoc停止运行的错误.</p></li>
 </ul>
-<p>Using these methods creates a better user experience than simply
-throwing an error.</p>
-<p><strong>Note</strong>: Do not use the <code class="docutils literal notranslate"><span class="pre">jsdoc/util/error</span></code> module to report errors.
-This module is deprecated and will be removed in a future version of
-JSDoc.</p>
-<p>{% example “Reporting a non-fatal error” %}</p>
+<p>使用这些方法可以创建比简单地抛出错误更好的用户体验.</p>
+<p><strong>注意</strong>: 不要使用 <code class="docutils literal notranslate"><span class="pre">jsdoc/util/error</span></code> 模块来报告错误. 此模块已弃用, 将在JSDoc的未来版本中删除.</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Reporting a non-fatal error</span><a class="headerlink" href="#id9" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsdoc/util/logger&#39;</span><span class="p">);</span>
 
 <span class="nx">exports</span><span class="p">.</span><span class="nx">handlers</span> <span class="o">=</span> <span class="p">{</span>
@@ -593,7 +475,7 @@ JSDoc.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 

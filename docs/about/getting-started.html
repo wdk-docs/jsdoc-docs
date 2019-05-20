@@ -96,9 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -173,34 +173,25 @@
             
   <div class="section" id="getting-started-with-jsdoc-3">
 <h1><a class="reference external" href="https://jsdoc.app/about-getting-started">JSDoc 3入门</a><a class="headerlink" href="#getting-started-with-jsdoc-3" title="永久链接至标题">¶</a></h1>
-<p>JSDoc 3 is an API documentation generator for JavaScript, similar to
-Javadoc or phpDocumentor. You add documentation comments directly to
-your source code, right alongside the code itself. The JSDoc tool will
-scan your source code and generate an HTML documentation website for
-you.</p>
+<p>JSDoc 3是JavaScript的API文档生成器, 类似于Javadoc或phpDocumentor. 您可以将文档注释直接添加到源代码中, 与代码本身一起添加.  JSDoc工具将扫描您的源代码并为您生成HTML文档网站.</p>
 <div class="section" id="adding-documentation-comments-to-your-code">
 <h2>在代码中添加文档注释<a class="headerlink" href="#adding-documentation-comments-to-your-code" title="永久链接至标题">¶</a></h2>
-<p>JSDoc’s purpose is to document the API of your JavaScript application or
-library. It is assumed that you will want to document things like
-modules, namespaces, classes, methods, method parameters, and so on.</p>
-<p>JSDoc comments should generally be placed immediately before the code
-being documented. Each comment must start with a <code class="docutils literal notranslate"><span class="pre">/**</span></code> sequence in
-order to be recognized by the JSDoc parser. Comments beginning with
-<code class="docutils literal notranslate"><span class="pre">/*</span></code>, <code class="docutils literal notranslate"><span class="pre">/***</span></code>, or more than 3 stars will be ignored. This is a
-feature to allow you to suppress parsing of comment blocks.</p>
-<p>{% example “The simplest documentation is just a description” %}</p>
+<p>JSDoc的目的是记录JavaScript应用程序或库的API. 假设您需要记录模块, 命名空间, 类, 方法, 方法参数等内容.</p>
+<p>通常应该在记录代码之前放置JSDoc注释. 每个注释必须以 <code class="docutils literal notranslate"><span class="pre">/**</span></code> 序列开头, 以便被JSDoc解析器识别. 以 <code class="docutils literal notranslate"><span class="pre">/*</span></code>, <code class="docutils literal notranslate"><span class="pre">/***</span></code> 或超过3星开头的注释将被忽略. 这是一个允许您禁止解析注释块的功能.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">The simplest documentation is just a description</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** This is a description of the foo function. */</span>
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Adding a description is simple—just type the description you want in the
-documentation comment.</p>
+</div>
+<p>添加描述很简单 - 只需在文档注释中键入所需的描述即可.</p>
 <p>Special “JSDoc tags” can be used to give more information. For example,
 if the function is a constructor for a class, you can indicate this by
 adding a <code class="docutils literal notranslate"><span class="pre">&#64;constructor</span></code> tag.</p>
-<p>{% example “Use a JSDoc tag to describe your code” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Use a JSDoc tag to describe your code</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Represents a book.</span>
 <span class="cm"> * @constructor</span>
@@ -209,11 +200,10 @@ adding a <code class="docutils literal notranslate"><span class="pre">&#64;const
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>More tags can be used to add more information. See the <a class="reference external" href="index.html#block-tags">home
-page</a> for a complete list of tags that are
-recognized by JSDoc 3.</p>
-<p>{% example “Adding more information with tags” %}</p>
+</div>
+<p>更多标签可用于添加更多信息. 有关JSDoc 3识别的标记的完整列表, 请参阅 <a class="reference external" href="index.html＃block-tags">主页</a>.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Adding more information with tags</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Represents a book.</span>
 <span class="cm"> * @constructor</span>
@@ -224,23 +214,21 @@ recognized by JSDoc 3.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="generating-a-website">
 <h2>生成一个网站<a class="headerlink" href="#generating-a-website" title="永久链接至标题">¶</a></h2>
-<p>Once your code is commented, you can use the JSDoc 3 tool to generate an
-HTML website from your source files.</p>
+<p>一旦您的代码被注释, 您就可以使用JSDoc 3工具从源文件生成HTML网站.</p>
 <p>By default, JSDoc uses the built-in “default” template to turn the
 documentation into HTML. You can edit this template to suit your own
 needs or create an entirely new template if that is what you prefer.</p>
-<p>{% example “Running the documentation generator on the command line” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jsdoc</span> <span class="n">book</span><span class="o">.</span><span class="n">js</span>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Running the documentation generator on the command line</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc book.js
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>This command will create a directory named <code class="docutils literal notranslate"><span class="pre">out/</span></code> in the current
-working directory. Within that directory, you will find the generated
-HTML pages.</p>
+</div>
+<p>该命令将在当前工作目录中创建一个名为 <code class="docutils literal notranslate"><span class="pre">out/</span></code> 的目录. 在该目录中, 您将找到生成的HTML页面.</p>
 </div>
 </div>
 

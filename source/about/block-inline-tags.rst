@@ -32,12 +32,11 @@ Most JSDoc tags are block tags. In general, when this site refers to
 Examples
 --------
 
-In the following example, ``@param`` is a block tag, and ``{@link}`` is
+In the following example, :rst:dir:`@param` is a block tag, and ``{@link}`` is
 an inline tag:
 
-{% example “Block and inline tags in JSDoc comments” %}
-
 .. code-block:: js
+   :caption: Block and inline tags in JSDoc comments
 
    /**
     * Set the shoe's color. Use {@link Shoe#setSize} to set the shoe size.
@@ -48,14 +47,11 @@ an inline tag:
        // ...
    };
 
-{% endexample %}
-
 You can use inline tags within a description, as shown above, or within
 a block tag, as shown below:
 
-{% example “Inline tag used within a block tag” %}
-
 .. code-block:: js
+   :caption: Inline tag used within a block tag
 
    /**
     * Set the shoe's color.
@@ -67,14 +63,11 @@ a block tag, as shown below:
        // ...
    };
 
-{% endexample %}
-
 When you use multiple block tags in a JSDoc comment, they must be
 separated by line breaks:
 
-{% example “Multiple block tags separated by line breaks” %}
-
 .. code-block:: js
+   :caption: Multiple block tags separated by line breaks
 
    /**
     * Set the color and type of the shoelaces.
@@ -85,5 +78,3 @@ separated by line breaks:
    Shoe.prototype.setLaceType = function(color, type) {
        // ...
    };
-
-{% endexample %}

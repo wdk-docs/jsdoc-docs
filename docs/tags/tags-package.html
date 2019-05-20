@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -131,12 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-namespace.html">&#64;namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-override.html">&#64;override</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-param.html">&#64;param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-private.html">&#64;private</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-property.html">&#64;property</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,33 +226,35 @@
             
   <div class="section" id="package">
 <h1>&#64;package<a class="headerlink" href="#package" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p>With the JSDoc tag dictionary (enabled by default):</p>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span></code></p>
-<p>With the <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure
+<dl class="directive">
+<dt id="directive-&#64;package">
+<code class="descname">.. &#64;package::</code><a class="headerlink" href="#directive-@package" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p>使用JSDoc标记字典(默认启用):</p>
+<p><a class="reference internal" href="#directive-&#64;package" title="&#64;package directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;package</span></code></a></p>
+<blockquote>
+<div><p>With the <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure
 Compiler</a>
 tag dictionary:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&#64;package</span> <span class="pre">[{typeExpression}]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag marks a symbol as package-private. Typically, this
+</div></blockquote>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;package" title="&#64;package directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;package</span></code></a> tag marks a symbol as package-private. Typically, this
 tag indicates that a symbol is available only to code in the same
 directory as the source file for this symbol. This tag is available in
 JSDoc 3.5.0 and later.</p>
-<p>By default, symbols marked with the <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag will appear in your
+<p>By default, symbols marked with the <a class="reference internal" href="#directive-&#64;package" title="&#64;package directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;package</span></code></a> tag will appear in your
 documentation. In JSDoc 3.3.0 and later, you can use the
-<code class="docutils literal notranslate"><span class="pre">`-a/--access</span></code> command-line option &lt;about-commandline.html&gt;`__ to
+<code class="docutils literal notranslate"><span class="pre">-a/--access</span></code> <a class="reference external" href="about-commandline.html">command-line option</a> to
 change this behavior.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> tag is equivalent to <code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">package</span></code>.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In the following example, the instance member <code class="docutils literal notranslate"><span class="pre">Thingy#_bar</span></code> appears in
-the generated documentation, but with an annotation indicating that it
-is package-private:</p>
-<p>{% example “Using the &#64;package tag” %}</p>
+<p>The <a class="reference internal" href="#directive-&#64;package" title="&#64;package directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;package</span></code></a> tag is equivalent to <code class="docutils literal notranslate"><span class="pre">&#64;access</span> <span class="pre">package</span></code>.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在下面的示例中, 实例成员``Thingy＃_bar``出现在生成的文档中, 但带有一个注释, 表明它是包私有的:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;package tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
 <span class="kd">function</span> <span class="nx">Thingy</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/** @package */</span>
@@ -267,8 +262,11 @@ is package-private:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

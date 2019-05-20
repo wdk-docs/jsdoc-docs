@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -120,12 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-instance.html">&#64;instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-interface.html">&#64;interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;lends</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;lends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-license.html">&#64;license</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-listens.html">&#64;listens</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-member.html">&#64;member</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,24 +226,23 @@
             
   <div class="section" id="lends">
 <h1>&#64;lends<a class="headerlink" href="#lends" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;lends</span> <span class="pre">&lt;namepath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag allows you to document all the members of an object
+<dl class="directive">
+<dt id="directive-&#64;lends">
+<code class="descname">.. &#64;lends::</code><a class="headerlink" href="#directive-@lends" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;lends</span> <span class="pre">&lt;namepath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;lends" title="&#64;lends directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;lends</span></code></a> tag allows you to document all the members of an object
 literal as if they were members of a symbol with the given name. You
 might want to do this if you are passing an object literal into a
 function that creates a named class from its members.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In this example, we want to use a helper function to make a class named
-<code class="docutils literal notranslate"><span class="pre">Person</span></code>, along with instance methods named <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and
-<code class="docutils literal notranslate"><span class="pre">say</span></code>. This is similar to how some popular frameworks handle class
-creation.</p>
-<p>{% example “Example class” %}</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在这个例子中, 我们想要使用一个辅助函数来创建一个名为``Person``的类, 以及名为``initialize``和``say``的实例方法. 这类似于一些流行的框架处理类创建的方式.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Example class</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// We want to document this as being a class</span>
 <span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
     <span class="c1">// We want to document these as being methods</span>
@@ -265,15 +257,16 @@ creation.</p>
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>Without any comments, JSDoc won’t recognize that this code creates a
 <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with two methods. To document the methods, we must use
-a <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag in a doc comment immediately before the object literal.
-The <code class="docutils literal notranslate"><span class="pre">&#64;lends</span></code> tag tells JSDoc that all the member names of that object
+a <a class="reference internal" href="#directive-&#64;lends" title="&#64;lends directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;lends</span></code></a> tag in a doc comment immediately before the object literal.
+The <a class="reference internal" href="#directive-&#64;lends" title="&#64;lends directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;lends</span></code></a> tag tells JSDoc that all the member names of that object
 literal are being “loaned” to a variable named <code class="docutils literal notranslate"><span class="pre">Person</span></code>. We must also
 add comments to each of the methods.</p>
 <p>The following example gets us closer to what we want:</p>
-<p>{% example “Documented as static methods” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Documented as static methods</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @class */</span>
 <span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
     <span class="cm">/** @lends Person */</span>
@@ -297,13 +290,10 @@ add comments to each of the methods.</p>
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Now the functions named <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and <code class="docutils literal notranslate"><span class="pre">say</span></code> will be documented,
-but they appear as static methods of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class. That is
-possibly what you meant, but in this case we want <code class="docutils literal notranslate"><span class="pre">initialize</span></code> and
-<code class="docutils literal notranslate"><span class="pre">say</span></code> to belong to the instances of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class. So we change
-things slightly by lending the methods to the class’s prototype:</p>
-<p>{% example “Documented as instance methods” %}</p>
+</div>
+<p>现在将记录名为``initialize``和``say``的函数, 但它们显示为``Person``类的静态方法. 这可能是你的意思, 但在这种情况下, 我们希望``initialize``和``say``属于``Person``类的实例. 所以我们通过将方法借给类的原型来稍微改变一下:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Documented as instance methods</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @class */</span>
 <span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
     <span class="cm">/** @lends Person.prototype */</span>
@@ -327,13 +317,14 @@ things slightly by lending the methods to the class’s prototype:</p>
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>One final step: Our class framework uses the loaned <code class="docutils literal notranslate"><span class="pre">initialize</span></code>
 function to construct <code class="docutils literal notranslate"><span class="pre">Person</span></code> instances, but a <code class="docutils literal notranslate"><span class="pre">Person</span></code> instance
 does not have its own <code class="docutils literal notranslate"><span class="pre">initialize</span></code> method. The solution is to add the
-<code class="docutils literal notranslate"><span class="pre">&#64;constructs</span></code> tag to the loaned function. Remember to remove the
-<code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> tag as well, or else two classes will be documented.</p>
-<p>{% example “Documented with a constructor” %}</p>
+<code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constructs</span></code> tag to the loaned function. Remember to remove the
+<a class="reference internal" href="tags-class.html#directive-&#64;class" title="&#64;class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;class</span></code></a> tag as well, or else two classes will be documented.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Documented with a constructor</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">makeClass</span><span class="p">(</span>
     <span class="cm">/** @lends Person.prototype */</span>
     <span class="p">{</span>
@@ -357,8 +348,11 @@ does not have its own <code class="docutils literal notranslate"><span class="pr
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

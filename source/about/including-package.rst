@@ -27,18 +27,12 @@ format <https://docs.npmjs.com/files/package.json>`__.
 Examples
 --------
 
-{% example “Including a package file in your source paths” %}
-
-::
+.. code-block:: sh
+   :caption: Including a package file in your source paths
 
    jsdoc path/to/js path/to/package/package.json
 
-{% endexample %}
-
-{% example “Using the -P/–package option” %}
-
-::
+.. code-block:: sh
+   :caption: Using the -P/–package option
 
    jsdoc --package path/to/package/package-docs.json path/to/js
-
-{% endexample %}

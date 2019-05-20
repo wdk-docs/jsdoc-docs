@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -116,11 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-ignore.html">&#64;ignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-implements.html">&#64;implements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inheritdoc.html">&#64;inherits</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;inner</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;inner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-instance.html">&#64;instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-interface.html">&#64;interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,16 +226,17 @@
             
   <div class="section" id="inner">
 <h1>&#64;inner<a class="headerlink" href="#inner" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>Using the &#64;inner tag will mark a symbol as an inner member of its parent
-symbol. This means it can be referred to by “Parent~Child”.</p>
-<p>Using &#64;inner will override a doclet’s default scope (unless it is in the
-global scope, in which case it will remain global).</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Using &#64;inner to make a virtual doclet an inner member” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;inner">
+<code class="descname">.. &#64;inner::</code><a class="headerlink" href="#directive-@inner" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>使用&#64;inner标记会将符号标记为其父符号的内部成员. 这意味着它可以被“Parent-Child”引用.</p>
+<p>使用&#64;inner将覆盖doclet的默认范围(除非它在全局范围内, 在这种情况下它将保持全局).</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using &#64;inner to make a virtual doclet an inner member</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace MyNamespace */</span>
 <span class="cm">/**</span>
 <span class="cm"> * myFunction is now MyNamespace~myFunction.</span>
@@ -251,10 +246,10 @@ global scope, in which case it will remain global).</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Note that in the above we could have used “&#64;function
-MyNamespace~myFunction” instead of the &#64;memberof and &#64;inner tags.</p>
-<p>{% example “Using &#64;inner” %}</p>
+</div>
+<p>请注意, 在上面我们可以使用“&#64;function MyNamespace~myFunction”而不是&#64;memberof和&#64;inner标签.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using &#64;inner</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace */</span>
 <span class="kd">var</span> <span class="nx">MyNamespace</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/**</span>
@@ -265,12 +260,12 @@ MyNamespace~myFunction” instead of the &#64;memberof and &#64;inner tags.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>In the above example, we use &#64;inner to force a member of a namespace to
-be documented as an inner member (by default, it would be a static
-member). This means that <code class="docutils literal notranslate"><span class="pre">foo</span></code> now has the longname
-<code class="docutils literal notranslate"><span class="pre">MyNamespace~foo</span></code> instead of <code class="docutils literal notranslate"><span class="pre">MyNamespace.foo</span></code>.</p>
 </div>
+<p>在上面的示例中, 我们使用&#64;inner强制将命名空间的成员记录为内部成员(默认情况下, 它将是一个静态成员). 这意味着``foo``现在有了长名``MyNamespace~foo``而不是``MyNamespace.foo``.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

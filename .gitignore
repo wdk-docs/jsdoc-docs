@@ -22,3 +22,4 @@ node_modules
 
 # Dotfile detritus
 .DS_Store
+.vscode

@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -125,12 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-listens.html">&#64;listens</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-member.html">&#64;member</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-memberof.html">&#64;memberof</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;mixes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;mixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-mixin.html">&#64;mixin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-module.html">&#64;module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,21 +226,20 @@
             
   <div class="section" id="mixes">
 <h1>&#64;mixes<a class="headerlink" href="#mixes" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;mixes</span> <span class="pre">&lt;OtherObjectPath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;mixes tag indicates that the current object mixes in all the
-members from <code class="docutils literal notranslate"><span class="pre">OtherObjectPath</span></code>, which is a
-[&#64;mixin]<a class="reference external" href="tags-mixin.html">mixin-tag</a>.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>To start, we document a mixin with the
-[&#64;mixin]<a class="reference external" href="tags-mixin.html">mixin-tag</a> tag:</p>
-<p>{% example “Example of a &#64;mixin” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;mixes">
+<code class="descname">.. &#64;mixes::</code><a class="headerlink" href="#directive-@mixes" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;mixes</span> <span class="pre">&lt;OtherObjectPath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;mixes标签表示当前对象混合了``OtherObjectPath``的所有成员, 这是一个[&#64;mixin] `mixin-tag &lt;tags-mixin.html&gt;`__.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>首先, 我们使用[&#64;mixin] `mixin-tag &lt;tags-mixin.html&gt;`__标签记录mixin:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Example of a &#64;mixin</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * This provides methods used for event handling. It&#39;s not meant to</span>
 <span class="cm"> * be used directly.</span>
@@ -275,12 +267,10 @@ members from <code class="docutils literal notranslate"><span class="pre">OtherO
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Now we add a FormButton class and call a “mix” function that mixes all
-of the Eventful functions into FormButton, so that FormButton can also
-fire events and have listeners. We use the &#64;mixes tag to indicate that
-FormButton mixes the Eventful functions.</p>
-<p>{% example “Using the &#64;mixes tag” %}</p>
+</div>
+<p>现在我们添加一个FormButton类并调用一个“混合”函数, 它将所有Eventful函数混合到FormButton中, 这样FormButton也可以触发事件并拥有监听器. 我们使用&#64;mixes标记来指示FormButton混合了Eventful函数.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;mixes tag</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @constructor FormButton</span>
 <span class="cm"> * @mixes Eventful</span>
@@ -294,8 +284,11 @@ FormButton mixes the Eventful functions.</p>
 <span class="nx">mix</span><span class="p">(</span><span class="nx">Eventful</span><span class="p">).</span><span class="nx">into</span><span class="p">(</span><span class="nx">FormButton</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

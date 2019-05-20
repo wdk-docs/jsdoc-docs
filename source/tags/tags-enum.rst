@@ -1,46 +1,42 @@
 @enum
 =============================
 
-Syntax
-------
+.. rst:directive:: @enum
 
-``@enum [<type>]``
+   :Syntax:
 
-Overview
---------
+      ``@enum [<type>]``
 
-The @enum tag documents a collection of static properties whose values
-are all of the same type.
+   :Overview:
 
-An enum is similar a collection of properties, except that an enum is
-documented in its own doc comment, whereas properties are documented
-within the doc comment of their container. Often this tag is used with
-@readonly, as an enum typically represents a collection of constants.
+      The @enum tag documents a collection of static properties whose values
+      are all of the same type.
 
-Examples
---------
+      An enum is similar a collection of properties, except that an enum is
+      documented in its own doc comment, whereas properties are documented
+      within the doc comment of their container. Often this tag is used with
+      @readonly, as an enum typically represents a collection of constants.
 
-This shows how to document an object that represents a value with three
-possible states. Note that the enum members can have optional
-descriptions added if you wish. Also you can override the type, as is
-shown with “MAYBE” – by default enum members will be documented with the
-same type as the enum itself.
+   :Examples:
 
-{% example “A numeric enum, representing three states” %}
+      This shows how to document an object that represents a value with three
+      possible states. Note that the enum members can have optional
+      descriptions added if you wish. Also you can override the type, as is
+      shown with “MAYBE” – by default enum members will be documented with the
+      same type as the enum itself.
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: A numeric enum, representing three states
 
-   /**
-    * Enum for tri-state values.
-    * @readonly
-    * @enum {number}
-    */
-   var triState = {
-       /** The true value */
-       TRUE: 1,
-       FALSE: -1,
-       /** @type {boolean} */
-       MAYBE: true
-   };
-
-{% endexample %}
+         /**
+          * Enum for tri-state values.
+          * @readonly
+          * @enum {number}
+          */
+         var triState = {
+             /** The true value */
+             TRUE: 1,
+             FALSE: -1,
+             /** @type {boolean} */
+             MAYBE: true
+         };

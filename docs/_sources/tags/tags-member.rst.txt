@@ -1,53 +1,46 @@
 @member
 =============================
 
-Syntax
-------
+.. rst:directive:: @member
 
-``@member [<type>] [<name>]``
+   :Syntax:
 
-Overview
---------
+      ``@member [<type>] [<name>]``
 
-The @member tag identifies any member that does not have a more
-specialized kind, such as “class”, “function”, or “constant”. A member
-can optionally have a type as well as a name.
+   :Overview:
 
-Examples
---------
+      The @member tag identifies any member that does not have a more
+      specialized kind, such as “class”, “function”, or “constant”. A member
+      can optionally have a type as well as a name.
 
-{% example “Using @member with Data#point” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using @member with Data#point
 
-   /** @class */
-   function Data() {
-       /** @member {Object} */
-       this.point = {};
-   }
+         /** @class */
+         function Data() {
+             /** @member {Object} */
+             this.point = {};
+         }
 
-{% endexample %}
+      Here is an example of using @var, a synonym of @member, to document a
+      (virtual) variable ‘foo’.
 
-Here is an example of using @var, a synonym of @member, to document a
-(virtual) variable ‘foo’.
+      .. code-block:: js
+         :caption: Using @var to document a virtual member
 
-{% example “Using @var to document a virtual member” %}
+         /**
+          * A variable in the global namespace called 'foo'.
+          * @var {number} foo
+          */
 
-.. code-block:: js
+      The above example is equivalent to the following:
 
-   /**
-    * A variable in the global namespace called 'foo'.
-    * @var {number} foo
-    */
+      .. code-block:: js
 
-{% endexample %}
-
-The above example is equivalent to the following:
-
-.. code-block:: js
-
-   /**
-    * A variable in the global namespace called 'foo'.
-    * @type {number}
-    */
-   var foo;
+         /**
+          * A variable in the global namespace called 'foo'.
+          * @type {number}
+          */
+         var foo;

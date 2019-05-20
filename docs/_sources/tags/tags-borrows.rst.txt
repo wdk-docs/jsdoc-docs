@@ -1,45 +1,41 @@
 @borrows
 =============================
 
-Syntax
-------
+.. rst:directive:: @borrows
 
-``@borrows <that namepath> as <this namepath>``
+   :Syntax:
 
-Overview
---------
+      ``@borrows <that namepath> as <this namepath>``
 
-The @borrows tag allows you to add documentation for another symbol to
-your documentation.
+   :Overview:
 
-This tag would be useful if you had more than one way to reference a
-function, but you didn’t want to duplicate the same documentation in two
-places.
+      The @borrows tag allows you to add documentation for another symbol to
+      your documentation.
 
-Examples
---------
+      This tag would be useful if you had more than one way to reference a
+      function, but you didn’t want to duplicate the same documentation in two
+      places.
 
-In this example there exists documentation for the “trstr” function, but
-“util.trim” is just a reference to that same function by a different
-name.
+   :Examples:
 
-{% example “Duplicate the documentation for trstr as util.trim” %}
+      In this example there exists documentation for the “trstr” function, but
+      “util.trim” is just a reference to that same function by a different
+      name.
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Duplicate the documentation for trstr as util.trim
 
-   /**
-    * @namespace
-    * @borrows trstr as trim
-    */
-   var util = {
-       trim: trstr
-   };
+         /**
+          * @namespace
+          * @borrows trstr as trim
+          */
+         var util = {
+             trim: trstr
+         };
 
-   /**
-    * Remove whitespace from around a string.
-    * @param {string} str
-    */
-   function trstr(str) {
-   }
-
-{% endexample %}
+         /**
+          * Remove whitespace from around a string.
+          * @param {string} str
+          */
+         function trstr(str) {
+         }

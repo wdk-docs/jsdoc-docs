@@ -168,7 +168,7 @@
 <p>SDoc 3 makes it easy to document classes that follow the <a class="reference external" href="http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions">ECMAScript
 2015
 specification</a>.
-You don’t need to use tags such as <code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;constructor</span></code> with
+You don’t need to use tags such as <a class="reference internal" href="../tags/tags-class.html#directive-&#64;class" title="&#64;class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;class</span></code></a> and <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constructor</span></code> with
 ES 2015 classes—JSDoc automatically identifies classes and their
 constructors simply by parsing your code. ES 2015 classes are supported
 in JSDoc 3.4.0 and later.</p>
@@ -176,7 +176,8 @@ in JSDoc 3.4.0 and later.</p>
 <h2>记录一个简单的类<a class="headerlink" href="#documenting-a-simple-class" title="永久链接至标题">¶</a></h2>
 <p>The following example shows how to document a simple class with a
 constructor, two instance methods, and one static method:</p>
-<p>{% example “Simple ES 2015 class” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Simple ES 2015 class</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Class representing a point. */</span>
 <span class="kr">class</span> <span class="nx">Point</span> <span class="p">{</span>
     <span class="cm">/**</span>
@@ -215,25 +216,27 @@ constructor, two instance methods, and one static method:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>You can also document classes that are defined in a class expression,
 which assigns the class to a variable or constant:</p>
-<p>{% example “ES 2015 class expression” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">ES 2015 class expression</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Class representing a point. */</span>
 <span class="kr">const</span> <span class="nx">Point</span> <span class="o">=</span> <span class="kr">class</span> <span class="p">{</span>
     <span class="c1">// and so on</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="extending-classes">
 <h2>扩展类<a class="headerlink" href="#extending-classes" title="永久链接至标题">¶</a></h2>
 <p>When you use the <code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword to extend an existing class, you
 also need to tell JSDoc which class you’re extending. You do this with
-the <code class="docutils literal notranslate"><span class="pre">`&#64;augments</span></code> (or <code class="docutils literal notranslate"><span class="pre">&#64;extends</span></code>) tag &lt;tags-augments.html&gt;`__.</p>
+the <cite>&#64;augments  (or :rst:dir:`&#64;extends</cite>) tag &lt;tags-augments.html&gt;`__.</p>
 <p>例如，扩展上面显示的 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类:</p>
-<p>{% example “Extending an ES 2015 class” %}</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Extending an ES 2015 class</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Class representing a dot.</span>
 <span class="cm"> * @extends Point</span>
@@ -259,7 +262,7 @@ the <code class="docutils literal notranslate"><span class="pre">`&#64;augments<
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 

@@ -1,5 +1,5 @@
 :jsdoc:`Getting Started with JSDoc 3 <about-getting-started>`
-==========================================================
+===============================================================
 
 JSDoc 3 is an API documentation generator for JavaScript, similar to
 Javadoc or phpDocumentor. You add documentation comments directly to
@@ -20,15 +20,12 @@ order to be recognized by the JSDoc parser. Comments beginning with
 ``/*``, ``/***``, or more than 3 stars will be ignored. This is a
 feature to allow you to suppress parsing of comment blocks.
 
-{% example “The simplest documentation is just a description” %}
-
 .. code-block:: js
+   :caption: The simplest documentation is just a description
 
    /** This is a description of the foo function. */
    function foo() {
    }
-
-{% endexample %}
 
 Adding a description is simple—just type the description you want in the
 documentation comment.
@@ -37,9 +34,8 @@ Special “JSDoc tags” can be used to give more information. For example,
 if the function is a constructor for a class, you can indicate this by
 adding a ``@constructor`` tag.
 
-{% example “Use a JSDoc tag to describe your code” %}
-
 .. code-block:: js
+   :caption: Use a JSDoc tag to describe your code
 
    /**
     * Represents a book.
@@ -48,15 +44,12 @@ adding a ``@constructor`` tag.
    function Book(title, author) {
    }
 
-{% endexample %}
-
 More tags can be used to add more information. See the `home
 page <index.html#block-tags>`__ for a complete list of tags that are
 recognized by JSDoc 3.
 
-{% example “Adding more information with tags” %}
-
 .. code-block:: js
+   :caption: Adding more information with tags
 
    /**
     * Represents a book.
@@ -66,8 +59,6 @@ recognized by JSDoc 3.
     */
    function Book(title, author) {
    }
-
-{% endexample %}
 
 Generating a website
 --------------------
@@ -79,13 +70,10 @@ By default, JSDoc uses the built-in “default” template to turn the
 documentation into HTML. You can edit this template to suit your own
 needs or create an entirely new template if that is what you prefer.
 
-{% example “Running the documentation generator on the command line” %}
-
-::
+.. code-block:: sh
+   :caption: Running the documentation generator on the command line
 
    jsdoc book.js
-
-{% endexample %}
 
 This command will create a directory named ``out/`` in the current
 working directory. Within that directory, you will find the generated

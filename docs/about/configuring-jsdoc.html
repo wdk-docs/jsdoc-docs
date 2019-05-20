@@ -87,11 +87,11 @@
 <li class="toctree-l2"><a class="reference internal" href="namepaths.html">在JSDoc 3中使用namepath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="commandline.html">JSDoc的命令行参数</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">使用配置文件配置JSDoc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-file-formats">Configuration file formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-file-formats">配置文件格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#default-configuration-options">默认配置选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-plugins">Configuring plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#specifying-recursion-depth">Specifying recursion depth</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#specifying-input-files">Specifying input files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-plugins">配置插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#specifying-recursion-depth">指定递归深度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#specifying-input-files">指定输入文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#specifying-the-source-type">指定源类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#incorporating-command-line-options-into-the-configuration-file">将命令行选项合并到配置文件中</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configuring-tags-and-tag-dictionaries">配置标签和标签词典</a></li>
@@ -103,9 +103,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -181,28 +181,25 @@
   <div class="section" id="configuring-jsdoc-with-a-configuration-file">
 <h1>使用配置文件配置JSDoc<a class="headerlink" href="#configuring-jsdoc-with-a-configuration-file" title="永久链接至标题">¶</a></h1>
 <div class="section" id="configuration-file-formats">
-<h2>Configuration file formats<a class="headerlink" href="#configuration-file-formats" title="永久链接至标题">¶</a></h2>
-<p>To customize JSDoc’s behavior, you can provide a configuration file to
-JSDoc in one of the following formats:</p>
+<h2>配置文件格式<a class="headerlink" href="#configuration-file-formats" title="永久链接至标题">¶</a></h2>
+<p>要自定义JSDoc的行为, 您可以使用以下格式之一为JSDoc提供配置文件:</p>
 <ul class="simple">
-<li><p>一个JSON文件。在JSDoc 3.3.0及更高版本中，此文件可能包含注释。</p></li>
-<li><p>A CommonJS module that exports a single configuration object. This
-format is supported in JSDoc 3.5.0 and later.</p></li>
+<li><p>一个JSON文件. 在JSDoc 3.3.0及更高版本中, 此文件可能包含注释.</p></li>
+<li><p>用于导出单个配置对象的CommonJS模块.  JSDoc 3.5.0及更高版本支持此格式.</p></li>
 </ul>
-<p>To run JSDoc with a configuration file, use the <code class="docutils literal notranslate"><span class="pre">`-c</span></code> command-line
-option &lt;about-commandline.html&gt;`__ (for example,
+<p>To run JSDoc with a configuration file, use the <code class="docutils literal notranslate"><span class="pre">-c</span></code> <a class="reference external" href="about-commandline.html">command-line option</a> (for example,
 <code class="docutils literal notranslate"><span class="pre">jsdoc</span> <span class="pre">-c</span> <span class="pre">/path/to/conf.json</span></code> or <code class="docutils literal notranslate"><span class="pre">jsdoc</span> <span class="pre">-c</span> <span class="pre">/path/to/conf.js</span></code>).</p>
-<p>The following examples show a simple configuration file that enables
-JSDoc’s <a class="reference external" href="plugins-markdown.html">Markdown plugin</a>. JSDoc’s
-configuration options are explained in detail in the following sections.</p>
-<p>{% example “JSON configuration file” %}</p>
+<p>以下示例显示了一个简单的配置文件, 该文件启用了JSDoc的 <a class="reference external" href="plugins-markdown.html">Markdown插件</a>. 以下各节将详细介绍JSDoc的配置选项.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">JSON configuration file</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;plugins&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;plugins/markdown&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “JavaScript configuration file” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">JavaScript configuration file</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
@@ -210,16 +207,12 @@ configuration options are explained in detail in the following sections.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>For a more comprehensive example of a JSON configuration file, see the
-file
-<code class="docutils literal notranslate"><span class="pre">`conf.json.EXAMPLE</span></code> &lt;<a class="reference external" href="https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE">https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE</a>&gt;`__.</p>
+</div>
+<p>有关JSON配置文件的更全面示例, 请参阅文件 <a class="reference external" href="https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE">conf.json.EXAMPLE</a>.</p>
 </div>
 <div class="section" id="default-configuration-options">
 <h2>默认配置选项<a class="headerlink" href="#default-configuration-options" title="永久链接至标题">¶</a></h2>
-<p>If you do not specify a configuration file, JSDoc uses the following
-configuration options:</p>
-<p>{% example %}</p>
+<p>如果未指定配置文件, JSDoc将使用以下配置选项:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;plugins&quot;</span><span class="o">:</span> <span class="p">[],</span>
     <span class="s2">&quot;recurseDepth&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
@@ -239,75 +232,51 @@ configuration options:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 <p>这意味着:</p>
 <ul class="simple">
-<li><p>No plugins are loaded (<code class="docutils literal notranslate"><span class="pre">plugins</span></code>).</p></li>
-<li><p>If recursion is enabled with the <code class="docutils literal notranslate"><span class="pre">`-r</span></code> command-line
-flag &lt;about-commandline.html&gt;`__, JSDoc will search for files 10
-levels deep (<code class="docutils literal notranslate"><span class="pre">recurseDepth</span></code>).</p></li>
-<li><p>Only files ending in <code class="docutils literal notranslate"><span class="pre">.js</span></code>, <code class="docutils literal notranslate"><span class="pre">.jsdoc</span></code>, and <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> will be
-processed (<code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code>).</p></li>
-<li><p>Any file starting with an underscore, or in a directory starting with
-an underscore, will be ignored (<code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code>).</p></li>
-<li><p>JSDoc supports code that uses <a class="reference external" href="howto-es2015-modules.html">ES2015
-modules</a> (<code class="docutils literal notranslate"><span class="pre">sourceType</span></code>).</p></li>
-<li><p>JSDoc allows you to use unrecognized tags
-(<code class="docutils literal notranslate"><span class="pre">tags.allowUnknownTags</span></code>).</p></li>
-<li><p>Both standard JSDoc tags and <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure Compiler
-tags</a>
-are enabled (<code class="docutils literal notranslate"><span class="pre">tags.dictionaries</span></code>).</p></li>
-<li><p><cite>Inline ``{&#64;link}`</cite> tags &lt;tags-inline-link.html&gt;`__ are rendered in
-plain text (<code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code>, <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code>).</p></li>
+<li><p>没有加载插件(<code class="docutils literal notranslate"><span class="pre">plugins</span></code>).</p></li>
+<li><p>如果使用 <code class="docutils literal notranslate"><span class="pre">-r</span></code> <a class="reference external" href="about-commandline.html">命令行标志</a> 启用递归, JSDoc将搜索10级深度的文件(<code class="docutils literal notranslate"><span class="pre">recurseDepth</span></code>).</p></li>
+<li><p>只处理以 <code class="docutils literal notranslate"><span class="pre">.js</span></code>, <code class="docutils literal notranslate"><span class="pre">.jsdoc</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> 结尾的文件(<code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code>).</p></li>
+<li><p>任何以下划线开头的文件或以下划线开头的目录都将被忽略(<code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code>).</p></li>
+<li><p>JSDoc支持使用 <cite>ES2015模块 &lt;howto-es2015-modules.html&gt;`__(``sourceType`</cite>)的代码.</p></li>
+<li><p>JSDoc允许您使用无法识别的标签(<code class="docutils literal notranslate"><span class="pre">tags.allowUnknownTags</span></code>).</p></li>
+<li><p>内联 <a class="reference external" href="tags-inline-link.html">{&#64;link} tag</a> 以纯文本形式呈现(<code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code>, <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code>).</p></li>
+<li><p>内联``{&#64;link}``标签&lt;tags-inline-link.html&gt;`__以纯文本形式呈现(<code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code>, <cite>templates.monospaceLinks`</cite>).</p></li>
 </ul>
-<p>These options and others are explained in the following sections.</p>
+<p>以下各节将介绍这些选项和其他选项.</p>
 </div>
 <div class="section" id="configuring-plugins">
-<h2>Configuring plugins<a class="headerlink" href="#configuring-plugins" title="永久链接至标题">¶</a></h2>
-<p>To enable plugins, add their paths (relative to the JSDoc folder) into
-the <code class="docutils literal notranslate"><span class="pre">plugins</span></code> array.</p>
-<p>For example, the following JSON configuration file will enable the
-Markdown plugin, which converts Markdown-formatted text to HTML, and the
-“summarize” plugin, which autogenerates a summary for each doclet:</p>
-<p>{% example “JSON configuration file with plugins” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
+<h2>配置插件<a class="headerlink" href="#configuring-plugins" title="永久链接至标题">¶</a></h2>
+<p>要启用插件, 请将它们的路径(相对于JSDoc文件夹)添加到 <code class="docutils literal notranslate"><span class="pre">plugins</span></code> 数组中.</p>
+<p>For example, the following JSON configuration file will enable the Markdown plugin,
+which converts Markdown-formatted text to HTML,
+and the “summarize” plugin, which autogenerates a summary for each doclet:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">JSON configuration file with plugins</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;plugins/markdown&quot;</span><span class="p">,</span>
         <span class="s2">&quot;plugins/summarize&quot;</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>See the <a class="reference external" href="about-plugins.html">plugin reference</a> for further
-information, and look in <cite>JSDoc’s ``plugins`</cite>
-directory &lt;<a class="reference external" href="https://github.com/jsdoc3/jsdoc/tree/master/plugins">https://github.com/jsdoc3/jsdoc/tree/master/plugins</a>&gt;`__ for
-the plugins built into JSDoc.</p>
-<p>You can configure the Markdown plugin by adding a <code class="docutils literal notranslate"><span class="pre">markdown</span></code> object to
-your configuration file. See <a class="reference external" href="plugins-markdown.html">Configuring the Markdown
-Plugin</a> for details.</p>
+</div>
+<p>有关详细信息, 请参阅 <a class="reference external" href="about-plugins.html">plugin reference</a> , 并查看 <a class="reference external" href="https://github.com/jsdoc3/jsdoc/tree/master/plugins">JSDoc的插件目录</a> 以获取构建的插件进入JSDoc.</p>
+<p>您可以通过在配置文件中添加 <code class="docutils literal notranslate"><span class="pre">markdown</span></code> 对象来配置Markdown插件. 有关详细信息, 请参阅 <a class="reference external" href="plugins-markdown.html">配置Markdown插件</a>.</p>
 </div>
 <div class="section" id="specifying-recursion-depth">
-<h2>Specifying recursion depth<a class="headerlink" href="#specifying-recursion-depth" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">recurseDepth</span></code> option controls how many levels deep JSDoc will
-recursively search for source files and tutorials. This option is
-available in JSDoc 3.5.0 and later. This option is used only if you also
-specify the <code class="docutils literal notranslate"><span class="pre">`-r</span></code> command-line flag &lt;about-commandline.html&gt;`__, which
-tells JSDoc to recursively search for input files.</p>
-<p>{% example %}</p>
+<h2>指定递归深度<a class="headerlink" href="#specifying-recursion-depth" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">recurseDepth</span></code> 选项控制深度JSDoc将递归搜索源文件和教程的级别.  JSDoc 3.5.0及更高版本中提供了此选项. 仅当您还指定 <code class="docutils literal notranslate"><span class="pre">-r</span></code> <a class="reference external" href="about-commandline.html">命令行标志</a> 时, 才使用此选项, 该标志告诉JSDoc以递归方式搜索输入文件.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;recurseDepth&quot;</span><span class="o">:</span> <span class="mi">10</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
 <div class="section" id="specifying-input-files">
-<h2>Specifying input files<a class="headerlink" href="#specifying-input-files" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">source</span></code> set of options, in combination with paths given to JSDoc
-on the command line, determines the set of input files that JSDoc uses
-to generate documentation.</p>
-<p>{% example %}</p>
+<h2>指定输入文件<a class="headerlink" href="#specifying-input-files" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">source</span></code> 选项集与命令行中给JSDoc的路径相结合, 确定了JSDoc用于生成文档的输入文件集.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;include&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="cm">/* array of paths to files to generate documentation for */</span> <span class="p">],</span>
@@ -318,58 +287,38 @@ to generate documentation.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">source.include</span></code>: An optional array of paths that contain files for
-which JSDoc should generate documentation. The paths given to JSDoc
-on the command line are combined with these paths. You can use the
-<code class="docutils literal notranslate"><span class="pre">`-r</span></code> command-line option &lt;about-commandline.html&gt;`__ to recurse
-into subdirectories.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source.exclude</span></code>: An optional array of paths that JSDoc should
-ignore. In JSDoc 3.3.0 and later, this array may include
-subdirectories of the paths in <code class="docutils literal notranslate"><span class="pre">source.include</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source.include</span></code>: 一个可选的路径数组, 包含JSDoc应该为其生成文档的文件. 在命令行上给JSDoc的路径与这些路径组合在一起. 您可以使用 <code class="docutils literal notranslate"><span class="pre">-r</span></code> <a class="reference external" href="about-commandline.html">命令行选项</a> 来递归到子目录中.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source.exclude</span></code>: JSDoc应忽略的可选路径数组. 在JSDoc 3.3.0及更高版本中, 此数组可能包含 <code class="docutils literal notranslate"><span class="pre">source.include</span></code> 中路径的子目录.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code>: An optional string, interpreted as a
 regular expression. If present, all filenames must match this regular
 expression to be processed by JSDoc. By default, this option is set
 to “.+.js(doc|x)?$”, meaning that only files with the extensions
 <code class="docutils literal notranslate"><span class="pre">.js</span></code>, <code class="docutils literal notranslate"><span class="pre">.jsdoc</span></code>, and <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> will be processed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code>: An optional string, interpreted as a
-regular expression. If present, any file matching this regular
-expression will be ignored. By default, this option is set so that
-files beginning with an underscore (or anything under a directory
-beginning with an underscore) is ignored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code>: 可选字符串, 解释为正则表达式. 如果存在, 则将忽略与此正则表达式匹配的任何文件. 默认情况下, 设置此选项以便忽略以下划线开头的文件(或以下划线开头的任何内容下的任何内容).</p></li>
 </ul>
 <p>这些选项按以下顺序解释:</p>
 <ol class="arabic simple">
-<li><p>Start with all paths given on the command line and in
-<code class="docutils literal notranslate"><span class="pre">source.include</span></code>.</p></li>
-<li><p>For each file found in Step 1, if the regular expression
-<code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code> is present, the filename must match it, or
-it is ignored.</p></li>
-<li><p>For each file left from Step 2, if the regular expression
-<code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code> is present, any filename matching this
-regular expression is ignored.</p></li>
-<li><p>For each file left from Step 3, if the file’s path is in
-<code class="docutils literal notranslate"><span class="pre">source.exclude</span></code>, it is ignored.</p></li>
+<li><p>从命令行和 <code class="docutils literal notranslate"><span class="pre">source.include</span></code> 中给出的所有路径开始.</p></li>
+<li><p>对于步骤1中找到的每个文件, 如果存在正则表达式 <code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code> , 则文件名必须与之匹配, 否则将被忽略.</p></li>
+<li><p>对于步骤2中剩下的每个文件, 如果存在正则表达式 <code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code> , 则忽略与该正则表达式匹配的任何文件名.</p></li>
+<li><p>对于步骤3中剩下的每个文件, 如果文件的路径在 <code class="docutils literal notranslate"><span class="pre">source.exclude</span></code> 中, 则忽略它.</p></li>
 </ol>
-<p>JSDoc处理这四个步骤之后的所有剩余文件。</p>
-<p>例如，假设您具有以下文件结构:</p>
-<p>{% example %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myProject</span><span class="o">/</span>
-<span class="o">|-</span> <span class="n">a</span><span class="o">.</span><span class="n">js</span>
-<span class="o">|-</span> <span class="n">b</span><span class="o">.</span><span class="n">js</span>
-<span class="o">|-</span> <span class="n">c</span><span class="o">.</span><span class="n">js</span>
-<span class="o">|-</span> <span class="n">_private</span>
-<span class="o">|</span>  <span class="o">|-</span> <span class="n">a</span><span class="o">.</span><span class="n">js</span>
-<span class="o">|-</span> <span class="n">lib</span><span class="o">/</span>
-   <span class="o">|-</span> <span class="n">a</span><span class="o">.</span><span class="n">js</span>
-   <span class="o">|-</span> <span class="n">ignore</span><span class="o">.</span><span class="n">js</span>
-   <span class="o">|-</span> <span class="n">d</span><span class="o">.</span><span class="n">txt</span>
+<p>JSDoc处理这四个步骤之后的所有剩余文件.</p>
+<p>例如, 假设您具有以下文件结构:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>myProject/
+<span class="p">|</span>- a.js
+<span class="p">|</span>- b.js
+<span class="p">|</span>- c.js
+<span class="p">|</span>- _private
+<span class="p">|</span>  <span class="p">|</span>- a.js
+<span class="p">|</span>- lib/
+   <span class="p">|</span>- a.js
+   <span class="p">|</span>- ignore.js
+   <span class="p">|</span>- d.txt
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>另外，假设你的``conf.json``文件看起来像这个例子:</p>
-<p>{% example %}</p>
+<p>另外, 假设你的 <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> 文件看起来像这个例子:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;include&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;myProject/a.js&quot;</span><span class="p">,</span> <span class="s2">&quot;myProject/lib&quot;</span><span class="p">,</span> <span class="s2">&quot;myProject/_private&quot;</span><span class="p">],</span>
@@ -380,7 +329,6 @@ regular expression is ignored.</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 <p>If you run <code class="docutils literal notranslate"><span class="pre">jsdoc</span> <span class="pre">myProject/c.js</span> <span class="pre">-c</span> <span class="pre">/path/to/my/conf.json</span> <span class="pre">-r</span></code> from the
 file containing the <code class="docutils literal notranslate"><span class="pre">myProject</span></code> folder, JSDoc will generate
 documentation for the following files:</p>
@@ -389,56 +337,39 @@ documentation for the following files:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">myProject/c.js</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">myProject/lib/a.js</span></code></p></li>
 </ul>
-<p>Here’s why:</p>
+<p>这就是原因:</p>
 <ol class="arabic simple">
-<li><p>Given <code class="docutils literal notranslate"><span class="pre">source.include</span></code> and the paths given on the command line,
-JSDoc starts off with these files:</p>
+<li><p>给定 <code class="docutils literal notranslate"><span class="pre">source.include</span></code> 和命令行中给出的路径, JSDoc从这些文件开始:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">myProject/c.js</span></code> (from the command line)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">myProject/a.js</span></code> (from <code class="docutils literal notranslate"><span class="pre">source.include</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">myProject/lib/a.js</span></code>, <code class="docutils literal notranslate"><span class="pre">myProject/lib/ignore.js</span></code>,
-<code class="docutils literal notranslate"><span class="pre">myProject/lib/d.txt</span></code> (from <code class="docutils literal notranslate"><span class="pre">source.include</span></code> and using the
-<code class="docutils literal notranslate"><span class="pre">-r</span></code> option)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">myProject/_private/a.js</span></code> (from <code class="docutils literal notranslate"><span class="pre">source.include</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myProject/c.js</span></code> (从命令行)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myProject/a.js</span></code> (来自 <code class="docutils literal notranslate"><span class="pre">source.include</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myProject/lib/a.js</span></code>, <code class="docutils literal notranslate"><span class="pre">myProject/lib/ignore.js</span></code>, <code class="docutils literal notranslate"><span class="pre">myProject/lib/d.txt``(来自</span> <span class="pre">``source.include</span></code> 并使用 <code class="docutils literal notranslate"><span class="pre">-r</span></code> 选项)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myProject/_private/a.js</span></code> (从 <code class="docutils literal notranslate"><span class="pre">source.include</span></code>)</p></li>
 </ul>
 </li>
-<li><p>JSDoc applies <code class="docutils literal notranslate"><span class="pre">source.includePattern</span></code>, leaving us with all of the
-above files <em>except</em> <code class="docutils literal notranslate"><span class="pre">myProject/lib/d.txt</span></code>, which does not end in
-<code class="docutils literal notranslate"><span class="pre">.js</span></code>, <code class="docutils literal notranslate"><span class="pre">.jsdoc</span></code>, or <code class="docutils literal notranslate"><span class="pre">.jsx</span></code>.</p></li>
-<li><p>JSDoc applies <code class="docutils literal notranslate"><span class="pre">source.excludePattern</span></code>, which removes
-<code class="docutils literal notranslate"><span class="pre">myProject/_private/a.js</span></code>.</p></li>
-<li><p>JSDoc applies <code class="docutils literal notranslate"><span class="pre">source.exclude</span></code>, which removes
-<code class="docutils literal notranslate"><span class="pre">myProject/lib/ignore.js</span></code>.</p></li>
+<li><p>JSDoc应用``source.includePattern``, 留下我们所有的上述文件 <em>除了</em> <code class="docutils literal notranslate"><span class="pre">myProject/lib/d.txt</span></code>, 它不以 <code class="docutils literal notranslate"><span class="pre">.js</span></code>, <code class="docutils literal notranslate"><span class="pre">.jsdoc</span></code> 结尾, 或 <code class="docutils literal notranslate"><span class="pre">.jsx</span></code>.</p></li>
+<li><p>JSDoc应用``source.excludePattern``, 删除 <code class="docutils literal notranslate"><span class="pre">myProject/_private/a.js</span></code>.</p></li>
+<li><p>JSDoc应用 <code class="docutils literal notranslate"><span class="pre">source.exclude</span></code>, 删除 <code class="docutils literal notranslate"><span class="pre">myProject/lib/ignore.js</span></code>.</p></li>
 </ol>
 </div>
 <div class="section" id="specifying-the-source-type">
 <h2>指定源类型<a class="headerlink" href="#specifying-the-source-type" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">sourceType</span></code> option affects how JSDoc parses your JavaScript
-files. This option is available in JSDoc 3.5.0 and later. This option
-accepts the following values:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>sourceType``选项影响JSDoc解析JavaScript文件的方式.  JSDoc 3.5.0及更高版本中提供了此选项. 此选项接受以下值:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">module</span></code> (default): Use this value for most types of JavaScript
-files.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code>: Use this value if JSDoc logs errors such as
-<code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">unqualified</span> <span class="pre">identifier</span> <span class="pre">in</span> <span class="pre">strict</span> <span class="pre">mode</span></code> when it parses
-your code.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span></code> (default): 将此值用于大多数类型的JavaScript文件.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code>: 如果JSDoc在解析代码时记录诸如 <a href="#id1"><span class="problematic" id="id2">`</span></a>在严格模式下删除非限定标识符 <a href="#id3"><span class="problematic" id="id4">`</span></a>之类的错误, 则使用此值.</p></li>
 </ul>
-<p>{% example %}</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;sourceType&quot;</span><span class="o">:</span> <span class="s2">&quot;module&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
 <div class="section" id="incorporating-command-line-options-into-the-configuration-file">
 <h2>将命令行选项合并到配置文件中<a class="headerlink" href="#incorporating-command-line-options-into-the-configuration-file" title="永久链接至标题">¶</a></h2>
-<p>You can put many of JSDoc’s <a class="reference external" href="about-commandline.html">command-line
-options</a> into the configuration file instead
-of specifying them on the command line. To do this, add the long names
-of the relevant options into an <code class="docutils literal notranslate"><span class="pre">opts</span></code> section of the configuration
-file, with the value set to the option’s value.</p>
-<p>{% example “JSON configuration file with command-line options” %}</p>
+<p>您可以将许多JSDoc的 <a class="reference external" href="about-commandline.html">命令行选项</a> 放入配置文件中, 而不是在命令行中指定它们. 为此, 请将相关选项的长名称添加到配置文件的 <code class="docutils literal notranslate"><span class="pre">opts</span></code> 部分, 并将值设置为选项的值.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">JSON configuration file with command-line options</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;opts&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;template&quot;</span><span class="o">:</span> <span class="s2">&quot;templates/default&quot;</span><span class="p">,</span>  <span class="c1">// same as -t templates/default</span>
@@ -450,21 +381,16 @@ file, with the value set to the option’s value.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>By using the <code class="docutils literal notranslate"><span class="pre">source.include</span></code> and <code class="docutils literal notranslate"><span class="pre">opts</span></code> options, you can put almost
-all of the arguments to JSDoc in a configuration file, so that the
-command line reduces to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jsdoc</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">json</span>
+</div>
+<p>通过使用 <code class="docutils literal notranslate"><span class="pre">source.include</span></code> 和 <code class="docutils literal notranslate"><span class="pre">opts</span></code> 选项, 您可以将几乎所有的JSDoc参数放在配置文件中, 以便命令行减少到:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc -c /path/to/conf.json
 </pre></div>
 </div>
-<p>When options are specified on the command line <em>and</em> in the
-configuration file, the command line takes precedence.</p>
+<p>在配置文件中的命令行*和*上指定选项时, 命令行优先.</p>
 </div>
 <div class="section" id="configuring-tags-and-tag-dictionaries">
 <h2>配置标签和标签词典<a class="headerlink" href="#configuring-tags-and-tag-dictionaries" title="永久链接至标题">¶</a></h2>
-<p>The options in <code class="docutils literal notranslate"><span class="pre">tags</span></code> control which JSDoc tags are allowed and how
-each tag is interpreted.</p>
-<p>{% example %}</p>
+<p><code class="docutils literal notranslate"><span class="pre">tags</span></code> 中的选项控制允许哪些JSDoc标记以及如何解释每个标记.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;tags&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;allowUnknownTags&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -473,40 +399,26 @@ each tag is interpreted.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">tags.allowUnknownTags</span></code> property affects how JSDoc handles
 unrecognized tags. If you set this option to <code class="docutils literal notranslate"><span class="pre">false</span></code>, and JSDoc finds
-a tag that it does not recognize (for example, <code class="docutils literal notranslate"><span class="pre">&#64;foo</span></code>), JSDoc logs a
+a tag that it does not recognize (for example, <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;foo</span></code>), JSDoc logs a
 warning. By default, this option is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. In JSDoc 3.4.1 and
 later, you can also set this property to an array of tag names that
 JSDoc should allow (for example, <code class="docutils literal notranslate"><span class="pre">[&quot;foo&quot;,&quot;bar&quot;]</span></code>).</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">tags.dictionaries</span></code> property controls which tags JSDoc recognizes,
-as well as how JSDoc interprets the tags that it recognizes. In JSDoc
-3.3.0 and later, there are two built-in tag dictionaries:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tags.dictionaries</span></code> 属性控制JSDoc识别的标签, 以及JSDoc如何解释它识别的标签. 在JSDoc 3.3.0及更高版本中, 有两个内置标记字典:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jsdoc</span></code>: 核心JSDoc标签。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">closure</span></code>: <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure Compiler
-tags</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jsdoc</span></code>: 核心JSDoc标签.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">closure</span></code>: <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure Compiler标签</a>.</p></li>
 </ul>
-<p>By default, both dictionaries are enabled. Also, by default, the
-<code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> dictionary is listed first; as a result, if the <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code>
-dictionary handles a tag differently than the <code class="docutils literal notranslate"><span class="pre">closure</span></code> dictionary,
-the <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> version of the tag takes precedence.</p>
-<p>If you are using JSDoc with a Closure Compiler project, and you want to
-avoid using tags that Closure Compiler does not recognize, change the
-<code class="docutils literal notranslate"><span class="pre">tags.dictionaries</span></code> setting to <code class="docutils literal notranslate"><span class="pre">[&quot;closure&quot;]</span></code>. You can also change
-this setting to <code class="docutils literal notranslate"><span class="pre">[&quot;closure&quot;,&quot;jsdoc&quot;]</span></code> if you want to allow core JSDoc
-tags, but you want to ensure that Closure Compiler-specific tags are
-interpreted as Closure Compiler would interpret them.</p>
+<p>默认情况下, 两个词典都已启用. 此外, 默认情况下, 首先列出 <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> 字典;因此, 如果 <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> 字典处理标签的方式与 <code class="docutils literal notranslate"><span class="pre">closure</span></code> 字典不同, 则标签的 <code class="docutils literal notranslate"><span class="pre">jsdoc</span></code> 版本优先.</p>
+<p>如果您正在使用带有Closure Compiler项目的JSDoc, 并且您想避免使用Closure Compiler无法识别的标记, 请将 <code class="docutils literal notranslate"><span class="pre">tags.dictionaries</span></code> 设置更改为 <code class="docutils literal notranslate"><span class="pre">[&quot;closure&quot;]</span></code>. 您还可以将此设置更改为 <code class="docutils literal notranslate"><span class="pre">[&quot;closure&quot;,&quot;jsdoc&quot;]</span></code> 如果您想允许核心JSDoc标记, 但是您希望确保将Closure Compiler特定的标记解释为Closure Compiler解释他们.</p>
 </div>
 <div class="section" id="configuring-templates">
 <h2>配置模板<a class="headerlink" href="#configuring-templates" title="永久链接至标题">¶</a></h2>
 <p>The options in <code class="docutils literal notranslate"><span class="pre">templates</span></code> affect the appearance and content of
 generated documentation. Third-party templates may not implement all of
-these options. See <a class="reference external" href="about-configuring-default-template.html">Configuring JSDoc’s Default
-Template</a> for additional
+these options. See <a class="reference external" href="about-configuring-default-template.html">Configuring JSDoc’s Default Template</a> for additional
 options that the default template supports.</p>
-<p>{% example %}</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;templates&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;cleverLinks&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -515,16 +427,9 @@ options that the default template supports.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code> is true, all link text from the <cite>inline
-``{&#64;link}`</cite> tag &lt;tags-inline-link.html&gt;`__ will be rendered in
-monospace.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code> is true, <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">asdf}</span></code> will be rendered
-in normal font if <code class="docutils literal notranslate"><span class="pre">asdf</span></code> is a URL, and monospace otherwise. For
-example, <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">http://github.com}</span></code> will render in plain text, but
-<code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">MyNamespace.myFunction}</span></code> will be in monospace.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code> is true, <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code> is
-ignored.</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code> 为真, 那么来自 <a class="reference external" href="tags-inline-link.html">inline {&#64;link} 标签</a> 的所有链接文本都将以等宽字体呈现.</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code> 为真, 如果 <code class="docutils literal notranslate"><span class="pre">asdf</span></code> 是一个URL, 则 <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">asdf}</span></code> 将以普通字体呈现, 否则为monospace. 例如,  <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">http://github.com}</span></code> 将以纯文本形式呈现, 但 <code class="docutils literal notranslate"><span class="pre">{&#64;link</span> <span class="pre">MyNamespace.myFunction}</span></code> 将是等宽的.</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">templates.cleverLinks</span></code> 为真, 则忽略 <code class="docutils literal notranslate"><span class="pre">templates.monospaceLinks</span></code>.</p>
 </div>
 </div>
 

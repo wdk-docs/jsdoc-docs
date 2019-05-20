@@ -1,29 +1,26 @@
 @global
 =============================
 
-Overview
---------
+.. rst:directive:: @global
 
-The @global tag specifies that a symbol should appear in the
-documentation as a *global* symbol. JSDoc ignores the symbol’s actual
-scope within the source file. This tag is especially useful for symbols
-that are defined locally, then assigned to a global symbol.
+   :Overview:
 
-Examples
---------
+         The @global tag specifies that a symbol should appear in the
+         documentation as a *global* symbol. JSDoc ignores the symbol’s actual
+         scope within the source file. This tag is especially useful for symbols
+         that are defined locally, then assigned to a global symbol.
 
-Use the @global tag to specify that a symbol should be documented as
-global.
+   :Examples:
 
-{% example “Document an inner variable as a global” %}
+      Use the @global tag to specify that a symbol should be documented as
+      global.
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Document an inner variable as a global
 
-   (function() {
-       /** @global */
-       var foo = 'hello foo';
+         (function() {
+             /** @global */
+             var foo = 'hello foo';
 
-       this.foo = foo;
-   }).apply(window);
-
-{% endexample %}
+             this.foo = foo;
+         }).apply(window);

@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -140,12 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-readonly.html">&#64;read</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-requires.html">&#64;requires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-returns.html">&#64;return</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;see</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;see</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-since.html">&#64;since</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-static.html">&#64;static</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-summary.html">&#64;summary</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,23 +226,25 @@
             
   <div class="section" id="see">
 <h1>&#64;see<a class="headerlink" href="#see" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<ul class="simple">
+<dl class="directive">
+<dt id="directive-&#64;see">
+<code class="descname">.. &#64;see::</code><a class="headerlink" href="#directive-@see" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;see</span> <span class="pre">&lt;namepath&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;see</span> <span class="pre">&lt;text&gt;</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;see tag allows you to refer to another symbol or resource that may
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The &#64;see tag allows you to refer to another symbol or resource that may
 be related to the one being documented. You can provide either a
 symbol’s namepath or free-form text. If you provide a namepath, JSDoc’s
 default template automatically converts the namepath to a link.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “Using the &#64;see tag” %}</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;see tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Both of these will link to the bar function.</span>
 <span class="cm"> * @see {@link bar}</span>
@@ -265,8 +260,11 @@ default template automatically converts the namepath to a link.</p>
 <span class="kd">function</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

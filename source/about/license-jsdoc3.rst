@@ -1,4 +1,4 @@
-jsdoc3
+License
 =================================
 
 JSDoc 3 is free software, licensed under the `Apache License, Version

@@ -1,24 +1,23 @@
 @copyright
 =============================
 
-Syntax
-------
+.. rst:directive:: @copyright
 
-``@copyright <some copyright text>``
+   :Syntax:
 
-Overview
---------
+      ``@copyright <some copyright text>``
 
-The @copyright tag is used to document copyright information in a file
-overview comment. Use this tag in combination with the [@file
-tag]\ `file-tag <tags-file.html>`__.
+   :Overview:
 
-Examples
---------
+      The @copyright tag is used to document copyright information in a file
+      overview comment. Use this tag in combination with the [@file
+      tag]\ `file-tag <tags-file.html>`__.
 
-.. code-block:: js
+   :Examples:
 
-   /**
-    * @file This is my cool script.
-    * @copyright Michael Mathews 2011
-    */
+      .. code-block:: js
+
+         /**
+          * @file This is my cool script.
+          * @copyright Michael Mathews 2011
+          */

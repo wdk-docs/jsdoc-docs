@@ -1,39 +1,35 @@
 @see
 =============================
 
-Syntax
-------
+.. rst:directive:: @see
 
--  ``@see <namepath>``
--  ``@see <text>``
+   :Syntax:
 
-Overview
---------
+      -  ``@see <namepath>``
+      -  ``@see <text>``
 
-The @see tag allows you to refer to another symbol or resource that may
-be related to the one being documented. You can provide either a
-symbol’s namepath or free-form text. If you provide a namepath, JSDoc’s
-default template automatically converts the namepath to a link.
+   :Overview:
 
-Examples
---------
+      The @see tag allows you to refer to another symbol or resource that may
+      be related to the one being documented. You can provide either a
+      symbol’s namepath or free-form text. If you provide a namepath, JSDoc’s
+      default template automatically converts the namepath to a link.
 
-{% example “Using the @see tag” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @see tag
 
-   /**
-    * Both of these will link to the bar function.
-    * @see {@link bar}
-    * @see bar
-    */
-   function foo() {}
+         /**
+          * Both of these will link to the bar function.
+          * @see {@link bar}
+          * @see bar
+          */
+         function foo() {}
 
-   // Use the inline {@link} tag to include a link within a free-form description.
-   /**
-    * @see {@link foo} for further information.
-    * @see {@link http://github.com|GitHub}
-    */
-   function bar() {}
-
-{% endexample %}
+         // Use the inline {@link} tag to include a link within a free-form description.
+         /**
+          * @see {@link foo} for further information.
+          * @see {@link http://github.com|GitHub}
+          */
+         function bar() {}

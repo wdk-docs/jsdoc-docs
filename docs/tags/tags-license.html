@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -121,12 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-interface.html">&#64;interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-lends.html">&#64;lends</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;license</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;license</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-listens.html">&#64;listens</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-member.html">&#64;member</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-memberof.html">&#64;memberof</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,29 +226,27 @@
             
   <div class="section" id="license">
 <h1>&#64;license<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;license</span> <span class="pre">&lt;identifier&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;license</span></code> tag identifies the software license that applies to any
+<dl class="directive">
+<dt id="directive-&#64;license">
+<code class="descname">.. &#64;license::</code><a class="headerlink" href="#directive-@license" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;license</span> <span class="pre">&lt;identifier&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;license" title="&#64;license directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;license</span></code></a> tag identifies the software license that applies to any
 portion of your code.</p>
-<p>You can use any text to identify the license you are using. If your code
-uses a standard open-source license, consider using the appropriate
-identifier from the <a class="reference external" href="https://spdx.org/licenses/">Software Package Data Exchange (SPDX) License
-List</a>.</p>
+<p>您可以使用任何文本来标识您正在使用的许可证. 如果您的代码使用标准的开源许可证, 请考虑使用“软件包数据交换(SPDX)许可证列表&lt;<a class="reference external" href="https://spdx.org/licenses/">https://spdx.org/licenses/</a>&gt;`__中的相应标识符.</p>
 <p>Some JavaScript processing tools, such as Google’s Closure Compiler,
 will automatically preserve any JSDoc comment that includes a
-<code class="docutils literal notranslate"><span class="pre">&#64;license</span></code> tag. If you are using one of these tools, you may wish to
-add a standalone JSDoc comment that includes the <code class="docutils literal notranslate"><span class="pre">&#64;license</span></code> tag, along
+<a class="reference internal" href="#directive-&#64;license" title="&#64;license directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;license</span></code></a> tag. If you are using one of these tools, you may wish to
+add a standalone JSDoc comment that includes the <a class="reference internal" href="#directive-&#64;license" title="&#64;license directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;license</span></code></a> tag, along
 with the entire text of the license, so that the license text will be
 included in generated JavaScript files.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “A module that is distributed under the Apache License 2.0”
-%}</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">A module that is distributed under the Apache License 2.0</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Utility functions for the foo package.</span>
 <span class="cm"> * @module foo/util</span>
@@ -263,8 +254,9 @@ included in generated JavaScript files.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “A standalone JSDoc comment with the complete MIT license” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">A standalone JSDoc comment with the complete MIT license</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @license</span>
 <span class="cm"> * Copyright (c) 2015 Example Corporation Inc.</span>
@@ -289,8 +281,11 @@ included in generated JavaScript files.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -1,57 +1,50 @@
 @instance
 =============================
 
-Overview
---------
+.. rst:directive:: @instance
 
-Using the @instance tag will mark a symbol as an instance member of its
-parent symbol. This means it can be referred to by “Parent#Child”.
+   :Overview:
 
-Using @instance will override a doclet’s default scope (unless it is in
-the global scope, in which case it will remain global).
+      Using the @instance tag will mark a symbol as an instance member of its
+      parent symbol. This means it can be referred to by “Parent#Child”.
 
-Examples
---------
+      Using @instance will override a doclet’s default scope (unless it is in
+      the global scope, in which case it will remain global).
 
-The following example is a longhand way of writing “@function
-MyNamespace#myFunction”:
+   :Examples:
 
-{% example “Using @instance to make a virtual doclet an instance member”
-%}
+      The following example is a longhand way of writing “@function
+      MyNamespace#myFunction”:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using @instance to make a virtual doclet an instance member
 
-   /** @namespace MyNamespace */
-   /**
-    * myFunction is now MyNamespace#myFunction.
-    * @function myFunction
-    * @memberof MyNamespace
-    * @instance
-    */
+         /** @namespace MyNamespace */
+         /**
+          * myFunction is now MyNamespace#myFunction.
+          * @function myFunction
+          * @memberof MyNamespace
+          * @instance
+          */
 
-{% endexample %}
+      More usefully, you can use the @instance tag to override the scope that
+      JSDoc infers. For example, you can indicate that a static member is used
+      as an instance member:
 
-More usefully, you can use the @instance tag to override the scope that
-JSDoc infers. For example, you can indicate that a static member is used
-as an instance member:
+      .. code-block:: js
+         :caption: Using @instance to identify an instance member
 
-{% example “Using @instance to identify an instance member” %}
+         /** @namespace */
+         var BaseObject = {
+             /**
+              * foo is now BaseObject#foo rather than BaseObject.foo.
+              * @instance
+              */
+             foo: null
+         };
 
-.. code-block:: js
-
-   /** @namespace */
-   var BaseObject = {
-       /**
-        * foo is now BaseObject#foo rather than BaseObject.foo.
-        * @instance
-        */
-       foo: null
-   };
-
-   /** Generates BaseObject instances. */
-   function fooFactory(fooValue) {
-       var props = { foo: fooValue };
-       return Object.create(BaseObject, props);
-   }
-
-{% endexample %}
+         /** Generates BaseObject instances. */
+         function fooFactory(fooValue) {
+             var props = { foo: fooValue };
+             return Object.create(BaseObject, props);
+         }

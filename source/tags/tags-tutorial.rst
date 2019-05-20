@@ -1,41 +1,36 @@
 @tutorial
 =============================
 
-Syntax
-------
+.. rst:directive:: @tutorial
 
-::
+   :Syntax:
 
-   @tutorial <tutorialID>
+      .. code-block:: sh
 
-Overview
---------
+         @tutorial <tutorialID>
 
-The ``@tutorial`` tag inserts a link to a tutorial file that is provided
-as part of the documentation. See the `tutorials
-overview <about-tutorials.html>`__ for instructions on creating
-tutorials.
+   :Overview:
 
-You can use the ``@tutorial`` tag more than once in a single JSDoc
-comment.
+      The :rst:dir:`@tutorial` tag inserts a link to a tutorial file that is provided
+      as part of the documentation. See the `tutorials
+      overview <about-tutorials.html>`__ for instructions on creating
+      tutorials.
 
-Examples
---------
+      You can use the :rst:dir:`@tutorial` tag more than once in a single JSDoc
+      comment.
 
-In the following example, the documentation for ``MyClass`` will link to
-the tutorials that have the identifiers ``tutorial-1`` and
-``tutorial-2``:
+   :Examples:
 
-{% example “Using the @tutorial tag” %}
+      In the following example, the documentation for ``MyClass`` will link to
+      the tutorials that have the identifiers ``tutorial-1`` and ``tutorial-2``:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @tutorial tag
 
-   /**
-    * Description
-    * @class
-    * @tutorial tutorial-1
-    * @tutorial tutorial-2
-    */
-   function MyClass() {}
-
-{% endexample %}
+         /**
+          * Description
+          * @class
+          * @tutorial tutorial-1
+          * @tutorial tutorial-2
+          */
+         function MyClass() {}

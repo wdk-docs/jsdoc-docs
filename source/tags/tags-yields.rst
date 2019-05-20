@@ -1,45 +1,38 @@
 @yields
 =============================
 
-Syntax
-------
+.. rst:directive:: @yields
 
-``@yields [{type}] [description]``
+   :Syntax:
 
-Overview
---------
+      ``@yields [{type}] [description]``
 
-The ``@yields`` tag documents the value that is yielded by a generator
-function. This tag is available in JSDoc 3.5.0 and later.
+   :Overview:
 
-If you are documenting a regular function, use the ```@returns``
-tag <tags-returns.html>`__ instead of this tag.
+      The :rst:dir:`@yields` tag documents the value that is yielded by a generator
+      function. This tag is available in JSDoc 3.5.0 and later.
 
-Examples
---------
+      If you are documenting a regular function, use the `@returns
+      tag <tags-returns.html>`__ instead of this tag.
 
-{% example “@yields tag with a type” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: @yields tag with a type
 
-   /**
-    * Generate the Fibonacci sequence of numbers.
-    *
-    * @yields {number}
-    */
-   function* fibonacci() {}
+         /**
+          * Generate the Fibonacci sequence of numbers.
+          *
+          * @yields {number}
+          */
+         function* fibonacci() {}
 
-{% endexample %}
+      .. code-block:: js
+         :caption: @yields tag with a type and description
 
-{% example “@yields tag with a type and description” %}
-
-.. code-block:: js
-
-   /**
-    * Generate the Fibonacci sequence of numbers.
-    *
-    * @yields {number} The next number in the Fibonacci sequence.
-    */
-   function* fibonacci() {}
-
-{% endexample %}
+         /**
+          * Generate the Fibonacci sequence of numbers.
+          *
+          * @yields {number} The next number in the Fibonacci sequence.
+          */
+         function* fibonacci() {}

@@ -9,9 +9,9 @@ documentation, you must provide a unique identifier that maps to that
 variable. A namepath provides a way to do so and disambiguate between
 instance members, static members and inner variables.
 
-{% example “Basic Syntax Examples of Namepaths in JSDoc 3” %}
 
-::
+.. code-block:: sh
+   :caption: Basic Syntax Examples of Namepaths in JSDoc 3
 
    myFunction
    MyConstructor
@@ -19,15 +19,12 @@ instance members, static members and inner variables.
    MyConstructor.staticMember
    MyConstructor~innerMember // note that JSDoc 2 uses a dash
 
-{% endexample %}
-
 The example below shows: an *instance* method named “say,” an *inner*
 function also named “say,” and a *static* method also named “say.” These
 are three distinct methods that all exist independently of one another.
 
-{% example “Use a documentation tag to describe your code.” %}
-
 .. code-block:: js
+   :caption: Use a documentation tag to describe your code.
 
    /** @constructor */
    Person = function() {
@@ -48,20 +45,16 @@ are three distinct methods that all exist independently of one another.
    Person.say(); // I'm static.
    // there is no way to directly access the inner function from here
 
-{% endexample %}
-
 You would use three different namepath syntaxes to refer to the three
 different methods:
 
-{% example “Use a documentation tag to describe your code.” %}
 
-::
+.. code-block:: sh
+   :caption: Use a documentation tag to describe your code.
 
    Person#say  // the instance method named "say."
    Person.say  // the static method named "say."
    Person~say  // the inner method named "say."
-
-{% endexample %}
 
 You might wonder why there is a syntax to refer to an inner method when
 that method isn’t directly accessible from outside the function it is
@@ -74,9 +67,8 @@ Note that if a constructor has an instance member that is also a
 constructor, you can simply chain the namepaths together to form a
 longer namepath:
 
-{% example “Use a documentation tag to describe your code.” %}
-
 .. code-block:: js
+   :caption: Use a documentation tag to describe your code.
 
    /** @constructor */
    Person = function() {
@@ -92,17 +84,14 @@ longer namepath:
    var i = new p.Idea();
    i.consider();
 
-{% endexample %}
-
 In this case, to refer to the method named “consider,” you would use the
 following namepath: ``Person#Idea#consider``
 
 This chaining can be used with any combination of the connecting
 symbols: ``# . ~``
 
-{% example “Special cases: modules, externals and events.” %}
-
 .. code-block:: js
+   :caption: Special cases: modules, externals and events.
 
    /** A module. Its name is module:foo/bar.
     * @module foo/bar
@@ -114,18 +103,14 @@ symbols: ``# . ~``
     * @event module:foo/bar.event:MyEvent
     */
 
-{% endexample %}
-
 There are some special cases with namepaths:
 [@module]\ `module-tag <tags-module.html>`__ names are prefixed by
 “module:”, [@external]\ `external-tag <tags-external.html>`__ names are
 prefixed by “external:”, and [@event]\ `event-tag <tags-event.html>`__
 names are prefixed by “event:”.
 
-{% example “Namepaths of objects with special characters in the name.”
-%}
-
 .. code-block:: js
+   :caption: Namepaths of objects with special characters in the name.
 
    /** @namespace */
    var chat = {
@@ -152,8 +137,6 @@ names are prefixed by “event:”.
     * Now we define an event in our {@link chat."#channel"} namespace.
     * @event chat."#channel"."op:announce-motd"
     */
-
-{% endexample %}
 
 Above is an example of a namespace with “unusual” characters in its
 member names (the hash character, dashes, even quotes). To refer to

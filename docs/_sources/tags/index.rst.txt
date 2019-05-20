@@ -1,6 +1,10 @@
 Tags
 ======================================
 
+.. rst:role:: tag
+
+   jsdoc 的标签 以 @ 开头 如 @access
+
 .. toctree::
    :maxdepth: 1
    :caption: Block Tags
@@ -13,8 +17,6 @@ Tags
    tags-author
    tags-borrows
    tags-callback
-   tags-class
-   tags-constant
    tags-class
    tags-classdesc
    tags-constant
@@ -85,4 +87,4 @@ Tags
 
 .. todo::
 
-   清理 {% example “Adding a plugin to JSDoc’s configuration file” %}
+   清理    :caption: Adding a plugin to JSDoc’s configuration file

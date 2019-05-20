@@ -1,88 +1,75 @@
 @return
 =============================
 
-Syntax
-------
+.. rst:directive:: @returns
 
-``@returns [{type}] [description]``
+   :Syntax:
 
-Overview
---------
+      ``@returns [{type}] [description]``
 
-The ``@returns`` tag documents the value that a function returns.
+   :Overview:
 
-If you are documenting a generator function, use the ```@yields``
-tag <tags-yields.html>`__ instead of this tag.
+      The :rst:dir:`@returns` tag documents the value that a function returns.
 
-Examples
---------
+      If you are documenting a generator function, use the `@yields
+      tag <tags-yields.html>`__ instead of this tag.
 
-{% example “Return value with a type” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Return value with a type
 
-   /**
-    * Returns the sum of a and b
-    * @param {number} a
-    * @param {number} b
-    * @returns {number}
-    */
-   function sum(a, b) {
-       return a + b;
-   }
+         /**
+          * Returns the sum of a and b
+          * @param {number} a
+          * @param {number} b
+          * @returns {number}
+          */
+         function sum(a, b) {
+             return a + b;
+         }
 
-{% endexample %}
+      .. code-block:: js
+         :caption: Return value with a type and description
 
-{% example “Return value with a type and description” %}
+         /**
+          * Returns the sum of a and b
+          * @param {number} a
+          * @param {number} b
+          * @returns {number} Sum of a and b
+          */
+         function sum(a, b) {
+             return a + b;
+         }
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Return value with multiple types
 
-   /**
-    * Returns the sum of a and b
-    * @param {number} a
-    * @param {number} b
-    * @returns {number} Sum of a and b
-    */
-   function sum(a, b) {
-       return a + b;
-   }
+         /**
+          * Returns the sum of a and b
+          * @param {number} a
+          * @param {number} b
+          * @param {boolean} retArr If set to true, the function will return an array
+          * @returns {(number|Array)} Sum of a and b or an array that contains a, b and the sum of a and b.
+          */
+         function sum(a, b, retArr) {
+             if (retArr) {
+                 return [a, b, a + b];
+             }
+             return a + b;
+         }
 
-{% endexample %}
+      .. code-block:: js
+         :caption: Returns a promise
 
-{% example “Return value with multiple types” %}
-
-.. code-block:: js
-
-   /**
-    * Returns the sum of a and b
-    * @param {number} a
-    * @param {number} b
-    * @param {boolean} retArr If set to true, the function will return an array
-    * @returns {(number|Array)} Sum of a and b or an array that contains a, b and the sum of a and b.
-    */
-   function sum(a, b, retArr) {
-       if (retArr) {
-           return [a, b, a + b];
-       }
-       return a + b;
-   }
-
-{% endexample %}
-
-{% example “Returns a promise” %}
-
-.. code-block:: js
-
-   /**
-    * Returns the sum of a and b
-    * @param {number} a
-    * @param {number} b
-    * @returns {Promise<number>} Promise object represents the sum of a and b
-    */
-   function sumAsync(a, b) {
-       return new Promise(function(resolve, reject) {
-           resolve(a + b);
-       });
-   }
-
-{% endexample %}
+         /**
+          * Returns the sum of a and b
+          * @param {number} a
+          * @param {number} b
+          * @returns {Promise<number>} Promise object represents the sum of a and b
+          */
+         function sumAsync(a, b) {
+             return new Promise(function(resolve, reject) {
+                 resolve(a + b);
+             });
+         }

@@ -1,49 +1,45 @@
 @package
 =============================
 
-Syntax
-------
+.. rst:directive:: @package
 
-With the JSDoc tag dictionary (enabled by default):
+   :Syntax:
 
-``@package``
+      With the JSDoc tag dictionary (enabled by default):
 
-With the `Closure
-Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
-tag dictionary:
+      :rst:dir:`@package`
 
-``@package [{typeExpression}]``
+       With the `Closure
+       Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
+       tag dictionary:
 
-Overview
---------
+       ``@package [{typeExpression}]``
 
-The ``@package`` tag marks a symbol as package-private. Typically, this
-tag indicates that a symbol is available only to code in the same
-directory as the source file for this symbol. This tag is available in
-JSDoc 3.5.0 and later.
+   :Overview:
 
-By default, symbols marked with the ``@package`` tag will appear in your
-documentation. In JSDoc 3.3.0 and later, you can use the
-```-a/--access`` command-line option <about-commandline.html>`__ to
-change this behavior.
+      The :rst:dir:`@package` tag marks a symbol as package-private. Typically, this
+      tag indicates that a symbol is available only to code in the same
+      directory as the source file for this symbol. This tag is available in
+      JSDoc 3.5.0 and later.
 
-The ``@package`` tag is equivalent to ``@access package``.
+      By default, symbols marked with the :rst:dir:`@package` tag will appear in your
+      documentation. In JSDoc 3.3.0 and later, you can use the
+      ``-a/--access`` `command-line option <about-commandline.html>`__ to
+      change this behavior.
 
-Examples
---------
+      The :rst:dir:`@package` tag is equivalent to ``@access package``.
 
-In the following example, the instance member ``Thingy#_bar`` appears in
-the generated documentation, but with an annotation indicating that it
-is package-private:
+   :Examples:
 
-{% example “Using the @package tag” %}
+      In the following example, the instance member ``Thingy#_bar`` appears in
+      the generated documentation, but with an annotation indicating that it
+      is package-private:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @package tag
 
-   /** @constructor */
-   function Thingy() {
-       /** @package */
-       this._bar = 1;
-   }
-
-{% endexample %}
+         /** @constructor */
+         function Thingy() {
+             /** @package */
+             this._bar = 1;
+         }

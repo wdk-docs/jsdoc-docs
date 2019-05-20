@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="包括包文件" href="including-package.html" />
+    <link rel="next" title="引入包文件" href="including-package.html" />
     <link rel="prev" title="markdown插件" href="plugins-markdown.html" /> 
 </head>
 
@@ -93,7 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">教程</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#adding-tutorials">添加教程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-titles-order-and-hierarchy">配置标题，顺序和层次结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-titles-order-and-hierarchy">配置标题, 顺序和层次结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#linking-to-tutorials-from-api-documentation">链接API文档中的教程</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-block-tag">&#64;tutorial 块标签</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-inline-tag">{&#64;tutorial} 内联标签</a></li>
@@ -101,9 +101,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -184,54 +184,34 @@ API, such as a “getting started” guide or a step-by-step process for
 implementing a feature.</p>
 <div class="section" id="adding-tutorials">
 <h2>添加教程<a class="headerlink" href="#adding-tutorials" title="永久链接至标题">¶</a></h2>
-<p>To add tutorials to your API documentation, run JSDoc with the
-<code class="docutils literal notranslate"><span class="pre">--tutorials</span></code> or <code class="docutils literal notranslate"><span class="pre">-u</span></code> option, and provide a directory that JSDoc
-should search for tutorials. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jsdoc</span> <span class="o">-</span><span class="n">u</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">tutorials</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">js</span><span class="o">/</span><span class="n">files</span>
+<p>要在API文档中添加教程, 请使用 <code class="docutils literal notranslate"><span class="pre">--tutorials</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-u</span></code> 选项运行JSDoc, 并提供JSDoc应搜索教程的目录. 例如:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc -u path/to/tutorials path/to/js/files
 </pre></div>
 </div>
-<p>JSDoc searches the tutorials directory for files with the following
-extensions:</p>
+<p>JSDoc在tutorials目录中搜索具有以下扩展名的文件:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.htm</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.html</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.markdown</span></code> (converted from Markdown to HTML)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.md</span></code> (converted from Markdown to HTML)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.markdown</span></code> (从Markdown转换为HTML)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.md</span></code> (从Markdown转换为HTML)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.xhtml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">.xml</span></code> (treated as HTML)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.xml</span></code> (被视为HTML)</p></li>
 </ul>
-<p>JSDoc also searches for JSON files that contain information about the
-titles, ordering, and hierarchy of your tutorials, as discussed in the
-following section.</p>
-<p>JSDoc assigns an identifier to each tutorial. The identifier is the
-filename without its extension. For example, the identifier for
-<code class="docutils literal notranslate"><span class="pre">/path/to/tutorials/overview.md</span></code> is <code class="docutils literal notranslate"><span class="pre">overview</span></code>.</p>
-<p>In tutorial files, you can use the
-<code class="docutils literal notranslate"><span class="pre">`{&#64;link}</span></code> &lt;tags-inline-link.html&gt;`__ and
-<code class="docutils literal notranslate"><span class="pre">`{&#64;tutorial}</span></code> &lt;tags-inline-tutorial.html&gt;`__ inline tags to link to
-other parts of the documentation. JSDoc will automatically resolve the
-links.</p>
+<p>JSDoc还搜索包含有关教程的标题, 顺序和层次结构的信息的JSON文件, 如以下部分所述.</p>
+<p>JSDoc为每个教程分配一个标识符. 标识符是没有扩展名的文件名. 例如, <code class="docutils literal notranslate"><span class="pre">/path/to/tutorials/overview.md</span></code> 的标识符是 <code class="docutils literal notranslate"><span class="pre">overview</span></code>.</p>
+<p>在教程文件中, 您可以使用 <a class="reference external" href="tags-inline-link.html">{&#64;link}</a> 和 <a class="reference external" href="tags-inline-tutorial.html">{&#64;tutorial}</a> inline标签链接到文档的其他部分. JSDoc将自动解析链接.</p>
 </div>
 <div class="section" id="configuring-titles-order-and-hierarchy">
-<h2>配置标题，顺序和层次结构<a class="headerlink" href="#configuring-titles-order-and-hierarchy" title="永久链接至标题">¶</a></h2>
-<p>By default, JSDoc uses the filename as the tutorial’s title, and all
-tutorials are at the same level. You can use a JSON file to provide a
-title for each tutorial and indicates how the tutorials should be sorted
-and grouped in the documentation.</p>
-<p>The JSON file must use the extension <code class="docutils literal notranslate"><span class="pre">.json</span></code>. In the JSON file, you
-can use the tutorial identifiers to provide two properties for each
-tutorial:</p>
+<h2>配置标题, 顺序和层次结构<a class="headerlink" href="#configuring-titles-order-and-hierarchy" title="永久链接至标题">¶</a></h2>
+<p>默认情况下, JSDoc使用文件名作为教程的标题, 所有教程都处于同一级别. 您可以使用JSON文件为每个教程提供标题, 并指出教程应如何在文档中进行排序和分组.</p>
+<p>JSON文件必须使用扩展名 <code class="docutils literal notranslate"><span class="pre">.json</span></code>. 在JSON文件中, 您可以使用教程标识符为每个教程提供两个属性:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: 要在文档中显示的标题。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">children</span></code>: 教程的孩子们。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>: 要在文档中显示的标题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">children</span></code>: 教程的孩子们.</p></li>
 </ul>
-<p>In JSDoc 3.2.0 and later, you can use the following formats for the JSON
-file:</p>
+<p>在JSDoc 3.2.0及更高版本中, 您可以对JSON文件使用以下格式:</p>
 <ol class="arabic">
-<li><p>A tree of objects, with child tutorials defined in the <code class="docutils literal notranslate"><span class="pre">children</span></code>
-property of their parent. For example, if <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> has two
-children, <code class="docutils literal notranslate"><span class="pre">childA</span></code> and <code class="docutils literal notranslate"><span class="pre">childB</span></code>, and <code class="docutils literal notranslate"><span class="pre">tutorial2</span></code> is at the same
-level as <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> and has no children:</p>
+<li><p>一个对象树, 在其父级的 <code class="docutils literal notranslate"><span class="pre">children</span></code> 属性中定义了子教程. 例如, 如果 <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> 有两个孩子, <code class="docutils literal notranslate"><span class="pre">childA</span></code> 和 <code class="docutils literal notranslate"><span class="pre">childB</span></code>, <code class="docutils literal notranslate"><span class="pre">tutorial2</span></code> 与 <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> 处于同一级别并且没有孩子:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;tutorial1&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Tutorial One&quot;</span><span class="p">,</span>
@@ -251,11 +231,7 @@ level as <code class="docutils literal notranslate"><span class="pre">tutorial1<
 </pre></div>
 </div>
 </li>
-<li><p>A top-level object whose properties are all tutorial objects, with
-child tutorials listed by name in an array. For example, if
-<code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> has two children, <code class="docutils literal notranslate"><span class="pre">childA</span></code> and <code class="docutils literal notranslate"><span class="pre">childB</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">tutorial2</span></code> is at the same level as <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> and has no
-children:</p>
+<li><p>一个顶级对象, 其属性都是教程对象, 其中子教程按名称列在数组中. 例如, 如果 <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> 有两个孩子, <code class="docutils literal notranslate"><span class="pre">childA</span></code> 和 <code class="docutils literal notranslate"><span class="pre">childB</span></code>, <code class="docutils literal notranslate"><span class="pre">tutorial2</span></code> 与 <code class="docutils literal notranslate"><span class="pre">tutorial1</span></code> 处于同一级别并且没有孩子:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;tutorial1&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Tutorial One&quot;</span><span class="p">,</span>
@@ -275,19 +251,18 @@ children:</p>
 </div>
 </li>
 </ol>
-<p>You can also provide an individual <code class="docutils literal notranslate"><span class="pre">.json</span></code> file for each tutorial,
-using the tutorial identifier as the filename. This method is deprecated
-and should not be used for new projects.</p>
+<p>您还可以使用教程标识符作为文件名为每个教程提供单独的 <code class="docutils literal notranslate"><span class="pre">.json</span></code> 文件. 不推荐使用此方法, 不应将其用于新项目.</p>
 </div>
 <div class="section" id="linking-to-tutorials-from-api-documentation">
 <h2>链接API文档中的教程<a class="headerlink" href="#linking-to-tutorials-from-api-documentation" title="永久链接至标题">¶</a></h2>
 <p>有多种方法可以从API文档链接到教程:</p>
 <div class="section" id="tutorial-block-tag">
 <h3>&#64;tutorial 块标签<a class="headerlink" href="#tutorial-block-tag" title="永久链接至标题">¶</a></h3>
-<p>If you include a <code class="docutils literal notranslate"><span class="pre">`&#64;tutorial</span></code> block tag &lt;tags-tutorial.html&gt;`__ in a
+<p>If you include a <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> <a class="reference external" href="tags-tutorial.html">block tag</a> in a
 JSDoc comment, the generated documentation will include a link to the
 tutorial you specify.</p>
-<p>{% example “Using the <code class="docutils literal notranslate"><span class="pre">&#64;tutorial</span></code> block tag” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> block tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Class representing a socket connection.</span>
 <span class="cm"> *</span>
@@ -297,15 +272,16 @@ tutorial you specify.</p>
 <span class="kd">function</span> <span class="nx">Socket</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 <div class="section" id="tutorial-inline-tag">
 <h3><a class="reference external" href="mailto:{&#37;&#52;&#48;tutorial">{<span>&#64;</span>tutorial</a>} 内联标签<a class="headerlink" href="#tutorial-inline-tag" title="永久链接至标题">¶</a></h3>
-<p>You can also use the <code class="docutils literal notranslate"><span class="pre">`{&#64;tutorial}</span></code> inline
-tag &lt;tags-inline-tutorial.html&gt;`__ to link to a tutorial within the text
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> <a class="reference external" href="tags-inline-tutorial.html">inline
+tag</a> to link to a tutorial within the text
 of another tag. By default, JSDoc will use the tutorial’s title as the
 link text.</p>
-<p>{% example “Using the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Class representing a socket connection. See {@tutorial socket-tutorial}</span>
 <span class="cm"> * for an overview.</span>
@@ -315,7 +291,7 @@ link text.</p>
 <span class="kd">function</span> <span class="nx">Socket</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 </div>
@@ -328,7 +304,7 @@ link text.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="including-package.html" class="btn btn-neutral float-right" title="包括包文件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="including-package.html" class="btn btn-neutral float-right" title="引入包文件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="plugins-markdown.html" class="btn btn-neutral float-left" title="markdown插件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

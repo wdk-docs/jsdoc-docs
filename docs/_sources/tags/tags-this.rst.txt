@@ -1,32 +1,31 @@
 @this
 =============================
 
-Syntax
-------
+.. rst:directive:: @this
 
-``@this <namePath>``
+   :Syntax:
 
-Overview
---------
+      ``@this <namePath>``
 
-The @this tag indicates what the ``this`` keyword refers to when used
-within another symbol.
+   :Overview:
 
-Examples
---------
+      The @this tag indicates what the ``this`` keyword refers to when used
+      within another symbol.
 
-In the following example, the @this tag causes “this.name” to be
-documented as “Greeter#name” rather than a global symbol called “name”.
+   :Examples:
 
-.. code-block:: js
+      In the following example, the @this tag causes “this.name” to be
+      documented as “Greeter#name” rather than a global symbol called “name”.
 
-   /** @constructor */
-   function Greeter(name) {
-       setName.apply(this, name);
-   }
+      .. code-block:: js
 
-   /** @this Greeter */
-   function setName(name) {
-       /** document me */
-       this.name = name;
-   }
+         /** @constructor */
+         function Greeter(name) {
+             setName.apply(this, name);
+         }
+
+         /** @this Greeter */
+         function setName(name) {
+             /** document me */
+             this.name = name;
+         }

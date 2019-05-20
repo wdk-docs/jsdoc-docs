@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -143,12 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-see.html">&#64;see</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-since.html">&#64;since</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-static.html">&#64;static</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;summary</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-this.html">&#64;this</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-throws.html">&#64;throws</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-todo.html">&#64;todo</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,18 +226,19 @@
             
   <div class="section" id="summary">
 <h1>&#64;summary<a class="headerlink" href="#summary" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;summary</span> <span class="pre">Summary</span> <span class="pre">goes</span> <span class="pre">here.</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;summary tag is a shorter version of the full description. It can be
+<dl class="directive">
+<dt id="directive-&#64;summary">
+<code class="descname">.. &#64;summary::</code><a class="headerlink" href="#directive-@summary" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><a href="#id1"><span class="problematic" id="id2">``</span></a>&#64;summary 总结就在这里. ``</p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The &#64;summary tag is a shorter version of the full description. It can be
 added to any doclet.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * A very long, verbose, wordy, long-winded, tedious, verbacious, tautological,</span>
 <span class="cm"> * profuse, expansive, enthusiastic, redundant, flowery, eloquent, articulate,</span>
 <span class="cm"> * loquacious, garrulous, chatty, extended, babbling description.</span>
@@ -253,7 +247,10 @@ added to any doclet.</p>
 <span class="kd">function</span> <span class="nx">bloviate</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

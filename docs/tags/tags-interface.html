@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -118,12 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-inheritdoc.html">&#64;inherits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inner.html">&#64;inner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-instance.html">&#64;instance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;interface</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-lends.html">&#64;lends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-license.html">&#64;license</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,36 +226,32 @@
             
   <div class="section" id="interface">
 <h1>&#64;interface<a class="headerlink" href="#interface" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p>With the JSDoc tag dictionary (enabled by default):</p>
+<dl class="directive">
+<dt id="directive-&#64;interface">
+<code class="descname">.. &#64;interface::</code><a class="headerlink" href="#directive-@interface" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p>使用JSDoc标记字典(默认启用):</p>
 <p><code class="docutils literal notranslate"><span class="pre">&#64;interface</span> <span class="pre">[&lt;name&gt;]</span></code></p>
-<p>With the <a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">Closure
-Compiler</a>
-tag dictionary:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag marks a symbol as an interface that other symbols
+<p>使用`Closure Compiler &lt;<a class="reference external" href="https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags">https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags</a>&gt;`__标签字典:</p>
+<p><a class="reference internal" href="#directive-&#64;interface" title="&#64;interface directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;interface</span></code></a></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;interface" title="&#64;interface directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;interface</span></code></a> tag marks a symbol as an interface that other symbols
 can implement. For example, your code might define a parent class whose
-methods and properties are stubbed out. You can add the <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code>
+methods and properties are stubbed out. You can add the <a class="reference internal" href="#directive-&#64;interface" title="&#64;interface directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;interface</span></code></a>
 tag to the parent class to indicate that child classes must implement
 the parent class’ methods and properties.</p>
-<p>Add the <code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag to the top-level symbol for the interface
+<p>Add the <a class="reference internal" href="#directive-&#64;interface" title="&#64;interface directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;interface</span></code></a> tag to the top-level symbol for the interface
 (for example, a constructor function). You do not need to add the
-<code class="docutils literal notranslate"><span class="pre">&#64;interface</span></code> tag to each member of the interface (for example, the
+<a class="reference internal" href="#directive-&#64;interface" title="&#64;interface directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;interface</span></code></a> tag to each member of the interface (for example, the
 interface’s instance methods).</p>
-<p>If you are using the JSDoc tag dictionary (enabled by default), you can
-also define an interface with virtual comments, rather than by writing
-code for the interface. See “<a class="reference external" href="#virtual-comments">Virtual comments that define an
-interface</a>” for an example.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In the following example, the <code class="docutils literal notranslate"><span class="pre">Color</span></code> function represents an interface
-that other classes can implement:</p>
-<p>{% example “Using the &#64;interface tag” %}</p>
+<p>如果您使用的是JSDoc标记字典(默认情况下已启用), 您还可以使用虚拟注释定义接口, 而不是通过编写接口的代码. 有关示例, 请参阅“<a href="#id3"><span class="problematic" id="id4">`定义接口的虚拟注释&lt;#virtual-comments&gt;`__</span></a>”.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在下面的示例中, <a href="#id1"><span class="problematic" id="id2">``</span></a>Color``函数表示其他类可以实现的接口:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the &#64;interface tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Interface for classes that represent a color.</span>
 <span class="cm"> *</span>
@@ -282,10 +271,10 @@ that other classes can implement:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>The following example uses virtual comments, rather than code, to define
-the <code class="docutils literal notranslate"><span class="pre">Color</span></code> interface:</p>
-<p>{% example “Virtual comments that define an interface” %}</p>
+</div>
+<p>以下示例使用虚拟注释而不是代码来定义“Color”接口:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Virtual comments that define an interface</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Interface for classes that represent a color.</span>
 <span class="cm"> *</span>
@@ -303,8 +292,11 @@ the <code class="docutils literal notranslate"><span class="pre">Color</span></c
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

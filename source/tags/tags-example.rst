@@ -1,53 +1,47 @@
 @example
 =============================
 
-Overview
---------
+.. rst:directive:: @example
 
-Provide an example of how to use a documented item. The text that
-follows this tag will be displayed as highlighted code.
+   :Overview:
 
-Examples
---------
+      Provide an example of how to use a documented item. The text that
+      follows this tag will be displayed as highlighted code.
 
-Note that a doclet may have multiple examples.
+   :Examples:
 
-{% example “Documenting examples” %}
+      Note that a doclet may have multiple examples.
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Documenting examples
 
-   /**
-    * Solves equations of the form a * x = b
-    * @example
-    * // returns 2
-    * globalNS.method1(5, 10);
-    * @example
-    * // returns 3
-    * globalNS.method(5, 15);
-    * @returns {Number} Returns the value of x for the equation.
-    */
-   globalNS.method1 = function (a, b) {
-       return b / a;
-   };
+         /**
+          * Solves equations of the form a * x = b
+          * @example
+          * // returns 2
+          * globalNS.method1(5, 10);
+          * @example
+          * // returns 3
+          * globalNS.method(5, 15);
+          * @returns {Number} Returns the value of x for the equation.
+          */
+         globalNS.method1 = function (a, b) {
+             return b / a;
+         };
 
-{% endexample %}
+      Examples can also be captioned using ``<caption></caption>`` after the
+      @example tag.
 
-Examples can also be captioned using ``<caption></caption>`` after the
-@example tag.
+      .. code-block:: js
+         :caption: Documenting examples with a caption
 
-{% example “Documenting examples with a caption” %}
-
-.. code-block:: js
-
-   /**
-    * Solves equations of the form a * x = b
-    * @example &lt;caption>Example usage of method1.&lt;/caption>
-    * // returns 2
-    * globalNS.method1(5, 10);
-    * @returns {Number} Returns the value of x for the equation.
-    */
-   globalNS.method1 = function (a, b) {
-       return b / a;
-   };
-
-{% endexample %}
+         /**
+          * Solves equations of the form a * x = b
+          * @example &lt;caption>Example usage of method1.&lt;/caption>
+          * // returns 2
+          * globalNS.method1(5, 10);
+          * @returns {Number} Returns the value of x for the equation.
+          */
+         globalNS.method1 = function (a, b) {
+             return b / a;
+         };

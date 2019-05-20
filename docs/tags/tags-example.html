@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -104,11 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-description.html">&#64;description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-enum.html">&#64;enum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-event.html">&#64;event</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-exports.html">&#64;exports</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-external.html">&#64;external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-file.html">&#64;file</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,15 +226,17 @@
             
   <div class="section" id="example">
 <h1>&#64;example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>Provide an example of how to use a documented item. The text that
-follows this tag will be displayed as highlighted code.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>Note that a doclet may have multiple examples.</p>
-<p>{% example “Documenting examples” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;example">
+<code class="descname">.. &#64;example::</code><a class="headerlink" href="#directive-@example" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>提供如何使用记录的项目的示例. 此标记后面的文本将显示为突出显示的代码.</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>请注意, doclet可能有多个示例.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Documenting examples</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Solves equations of the form a * x = b</span>
 <span class="cm"> * @example</span>
@@ -256,10 +252,10 @@ follows this tag will be displayed as highlighted code.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>Examples can also be captioned using <code class="docutils literal notranslate"><span class="pre">&lt;caption&gt;&lt;/caption&gt;</span></code> after the
-&#64;example tag.</p>
-<p>{% example “Documenting examples with a caption” %}</p>
+</div>
+<p>在&#64;example标记之后, 也可以使用``&lt;caption&gt; &lt;/ caption&gt;``来标注示例.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Documenting examples with a caption</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Solves equations of the form a * x = b</span>
 <span class="cm"> * @example &amp;lt;caption&gt;Example usage of method1.&amp;lt;/caption&gt;</span>
@@ -272,8 +268,11 @@ follows this tag will be displayed as highlighted code.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

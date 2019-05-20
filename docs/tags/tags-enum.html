@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -102,12 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-default.html">&#64;default</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-deprecated.html">&#64;deprecated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-description.html">&#64;description</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;enum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;enum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-event.html">&#64;event</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-example.html">&#64;example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-exports.html">&#64;exports</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,27 +226,21 @@
             
   <div class="section" id="enum">
 <h1>&#64;enum<a class="headerlink" href="#enum" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;enum</span> <span class="pre">[&lt;type&gt;]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;enum tag documents a collection of static properties whose values
-are all of the same type.</p>
-<p>An enum is similar a collection of properties, except that an enum is
-documented in its own doc comment, whereas properties are documented
-within the doc comment of their container. Often this tag is used with
-&#64;readonly, as an enum typically represents a collection of constants.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>This shows how to document an object that represents a value with three
-possible states. Note that the enum members can have optional
-descriptions added if you wish. Also you can override the type, as is
-shown with “MAYBE” – by default enum members will be documented with the
-same type as the enum itself.</p>
-<p>{% example “A numeric enum, representing three states” %}</p>
+<dl class="directive">
+<dt id="directive-&#64;enum">
+<code class="descname">.. &#64;enum::</code><a class="headerlink" href="#directive-@enum" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;enum</span> <span class="pre">[&lt;type&gt;]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;enum标记记录了一组静态属性, 这些属性的值都是相同的类型.</p>
+<p>枚举类似于属性集合, 除了枚举在其自己的doc注释中记录, 而属性记录在其容器的doc注释中. 这个标签通常与&#64;readonly一起使用, 因为枚举通常代表一组常量.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>这显示了如何记录表示具有三种可能状态的值的对象. 请注意, 如果您愿意, 枚举成员可以添加可选说明. 您也可以覆盖类型, 如“MAYBE”所示 - 默认情况下, 枚举成员将记录与枚举本身相同的类型.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">A numeric enum, representing three states</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Enum for tri-state values.</span>
 <span class="cm"> * @readonly</span>
@@ -268,8 +255,11 @@ same type as the enum itself.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

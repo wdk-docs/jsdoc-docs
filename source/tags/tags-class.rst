@@ -1,31 +1,25 @@
 @class
 =============================
 
-Syntax
-------
+.. rst:directive:: @class
 
-``@class [<type> <name>]``
+   :Syntax:
 
-Overview
---------
+      ``@class [<type> <name>]``
 
-The @class tag marks a function as being a constructor, meant to be
-called with the new keyword to return an instance.
+   :Overview: The @class tag marks a function as being a constructor, meant to be
+      called with the new keyword to return an instance.
 
-Examples
---------
+   :Examples:
 
-{% example “A function that constructs Person instances.” %}
+      .. code-block:: js
+        :caption: A function that constructs Person instances.
 
-.. code-block:: js
+        /**
+            * Creates a new Person.
+            * @class
+            */
+        function Person() {
+        }
 
-   /**
-    * Creates a new Person.
-    * @class
-    */
-   function Person() {
-   }
-
-   var p = new Person();
-
-{% endexample %}
+        var p = new Person();

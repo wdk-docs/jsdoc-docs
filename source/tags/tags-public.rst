@@ -1,41 +1,36 @@
 @public
 =============================
 
-Overview
---------
+.. rst:directive:: @public
 
-The ``@public`` tag indicates that a symbol should be documented as if
-it were public.
+   :Overview:
 
-By default, JSDoc treats all symbols as public, so using this tag does
-not normally affect the generated documentation. However, you may prefer
-to use the ``@public`` tag explicitly so it is clear to others that you
-intended to make the symbol public.
+      The :rst:dir:`@public` tag indicates that a symbol should be documented as if
+      it were public.
 
-In JSDoc 3, the ``@public`` tag does *not* affect a symbol’s scope. Use
-the ```@instance`` <tags-instance.html>`__,
-```@static`` <tags-static.html>`__, and
-```@global`` <tags-global.html>`__ tags to change a symbol’s scope.
+      By default, JSDoc treats all symbols as public, so using this tag does
+      not normally affect the generated documentation. However, you may prefer
+      to use the :rst:dir:`@public` tag explicitly so it is clear to others that you
+      intended to make the symbol public.
 
-Examples
---------
+      In JSDoc 3, the :rst:dir:`@public` tag does *not* affect a symbol’s scope. Use
+      the :rst:dir:`@instance`, :rst:dir:`@static`, and :rst:dir:`@global` tags to change a symbol’s scope.
 
-{% example “Using the @public tag” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @public tag
 
-   /**
-    * The Thingy class is available to all.
-    * @public
-    * @class
-    */
-   function Thingy() {
-       /**
-        * The Thingy~foo member. Note that 'foo' is still an inner member
-        * of 'Thingy', in spite of the @public tag.
-        * @public
-        */
-       var foo = 0;
-   }
-
-{% endexample %}
+         /**
+          * The Thingy class is available to all.
+          * @public
+          * @class
+          */
+         function Thingy() {
+             /**
+              * The Thingy~foo member. Note that 'foo' is still an inner member
+              * of 'Thingy', in spite of the @public tag.
+              * @public
+              */
+             var foo = 0;
+         }

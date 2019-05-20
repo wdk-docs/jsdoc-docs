@@ -1,49 +1,43 @@
 @read
 =============================
 
-Overview
---------
+.. rst:directive:: @readonly
 
-The @readonly tag indicates that a symbol is intended to be read-only.
-Note this is for the purpose of documentation only - JSDoc won’t check
-whether you’ve *actually* treated the symbol as read-only in your code.
+   :Overview:
 
-Examples
---------
+      The @readonly tag indicates that a symbol is intended to be read-only.
+      Note this is for the purpose of documentation only - JSDoc won’t check
+      whether you’ve *actually* treated the symbol as read-only in your code.
 
-{% example “Using the @readonly tag” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @readonly tag
 
-   /**
-    * A constant.
-    * @readonly
-    * @const {number}
-    */
-   const FOO = 1;
+         /**
+          * A constant.
+          * @readonly
+          * @const {number}
+          */
+         const FOO = 1;
 
-{% endexample %}
+      .. code-block:: js
+         :caption: Using the @readonly tag with a getter
 
-{% example “Using the @readonly tag with a getter” %}
-
-.. code-block:: js
-
-   /**
-    * Options for ordering a delicious slice of pie.
-    * @namespace
-    */
-   var pieOptions = {
-       /**
-        * Plain.
-        */
-       plain: 'pie',
-       /**
-        * A la mode.
-        * @readonly
-        */
-       get aLaMode() {
-           return this.plain + ' with ice cream';
-       }
-   };
-
-{% endexample %}
+         /**
+          * Options for ordering a delicious slice of pie.
+          * @namespace
+          */
+         var pieOptions = {
+             /**
+              * Plain.
+              */
+             plain: 'pie',
+             /**
+              * A la mode.
+              * @readonly
+              */
+             get aLaMode() {
+                 return this.plain + ' with ice cream';
+             }
+         };

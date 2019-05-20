@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="@inline-link" href="tags-inline-link.html" />
+    <link rel="next" title="@link" href="tags-inline-link.html" />
     <link rel="prev" title="@version" href="tags-version.html" /> 
 </head>
 
@@ -92,8 +92,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
@@ -152,13 +150,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-typedef.html">&#64;typedef</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;yields</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;yields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,20 +226,21 @@
             
   <div class="section" id="yields">
 <h1>&#64;yields<a class="headerlink" href="#yields" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;yields</span> <span class="pre">[{type}]</span> <span class="pre">[description]</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;yields</span></code> tag documents the value that is yielded by a generator
+<dl class="directive">
+<dt id="directive-&#64;yields">
+<code class="descname">.. &#64;yields::</code><a class="headerlink" href="#directive-@yields" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;yields</span> <span class="pre">[{type}]</span> <span class="pre">[description]</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;yields" title="&#64;yields directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;yields</span></code></a> tag documents the value that is yielded by a generator
 function. This tag is available in JSDoc 3.5.0 and later.</p>
-<p>If you are documenting a regular function, use the <code class="docutils literal notranslate"><span class="pre">`&#64;returns</span></code>
-tag &lt;tags-returns.html&gt;`__ instead of this tag.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>{% example “&#64;yields tag with a type” %}</p>
+<p>如果要记录常规函数, 请使用`&#64;returns标记&lt;tags-returns.html&gt;`__而不是此标记.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">&#64;yields tag with a type</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Generate the Fibonacci sequence of numbers.</span>
 <span class="cm"> *</span>
@@ -255,8 +249,9 @@ tag &lt;tags-returns.html&gt;`__ instead of this tag.</p>
 <span class="kd">function</span><span class="o">*</span> <span class="nx">fibonacci</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>{% example “&#64;yields tag with a type and description” %}</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">&#64;yields tag with a type and description</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Generate the Fibonacci sequence of numbers.</span>
 <span class="cm"> *</span>
@@ -265,8 +260,11 @@ tag &lt;tags-returns.html&gt;`__ instead of this tag.</p>
 <span class="kd">function</span><span class="o">*</span> <span class="nx">fibonacci</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -277,7 +275,7 @@ tag &lt;tags-returns.html&gt;`__ instead of this tag.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tags-inline-link.html" class="btn btn-neutral float-right" title="@inline-link" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tags-inline-link.html" class="btn btn-neutral float-right" title="@link" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tags-version.html" class="btn btn-neutral float-left" title="@version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -1,48 +1,44 @@
 @protected
 =============================
 
-Syntax
-------
+.. rst:directive:: @protected
 
-With the JSDoc tag dictionary (enabled by default):
+   :Syntax:
 
-``@protected``
+      With the JSDoc tag dictionary (enabled by default):
 
-With the `Closure
-Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
-tag dictionary:
+      :rst:dir:`@protected`
 
-``@protected [{typeExpression}]``
+      With the `Closure
+      Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
+      tag dictionary:
 
-Overview
---------
+      ``@protected [{typeExpression}]``
 
-The ``@protected`` tag marks a symbol as protected. Typically, this tag
-indicates that a symbol is only available, or should only be used,
-within the current module.
+   :Overview:
 
-By default, symbols marked with the ``@protected`` tag will appear in
-your documentation. In JSDoc 3.3.0 and later, you can use the
-```-a/--access`` command-line option <about-commandline.html>`__ to
-change this behavior.
+      The :rst:dir:`@protected` tag marks a symbol as protected. Typically, this tag
+      indicates that a symbol is only available, or should only be used,
+      within the current module.
 
-The ``@protected`` tag is equivalent to ``@access protected``.
+      By default, symbols marked with the :rst:dir:`@protected` tag will appear in
+      your documentation. In JSDoc 3.3.0 and later, you can use the
+      ``-a/--access``  `command-line option <about-commandline.html>`__ to
+      change this behavior.
 
-Examples
---------
+      The :rst:dir:`@protected` tag is equivalent to ``@access protected``.
 
-In the following example, the instance member ``Thingy#_bar`` appears in
-the generated documentation, but with an annotation indicating that it
-is protected:
+   :Examples:
 
-{% example “Using the @protected tag” %}
+      In the following example, the instance member ``Thingy#_bar`` appears in
+      the generated documentation, but with an annotation indicating that it
+      is protected:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @protected tag
 
-   /** @constructor */
-   function Thingy() {
-       /** @protected */
-       this._bar = 1;
-   }
-
-{% endexample %}
+         /** @constructor */
+         function Thingy() {
+             /** @protected */
+             this._bar = 1;
+         }

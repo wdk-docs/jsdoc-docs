@@ -1,89 +1,83 @@
 @inherits
 =============================
 
-Overview
---------
+.. rst:directive:: @inheritdoc
 
-The ``@inheritdoc`` tag indicates that a symbol should inherit its
-documentation from its parent class. Any other tags that you include in
-the JSDoc comment will be ignored.
+   :Overview:
 
-This tag is provided for compatibility with `Closure
-Compiler <https://developers.google.com/closure/compiler/>`__. By
-default, if you do not add a JSDoc comment to a symbol, the symbol will
-inherit documentation from its parent.
+      The :rst:dir:`@inheritdoc` tag indicates that a symbol should inherit its
+      documentation from its parent class. Any other tags that you include in
+      the JSDoc comment will be ignored.
 
-The presence of the ``@inheritdoc`` tag implies the presence of the
-```@override`` tag <tags-override.html>`__.
+      This tag is provided for compatibility with `Closure
+      Compiler <https://developers.google.com/closure/compiler/>`__. By
+      default, if you do not add a JSDoc comment to a symbol, the symbol will
+      inherit documentation from its parent.
 
-Examples
---------
+      The presence of the :rst:dir:`@inheritdoc` tag implies the presence of the
+      `@override  tag <tags-override.html>`__.
 
-The following example shows how a class can indicate that it inherits
-documentation from its parent class:
+   :Examples:
 
-{% example “Class that inherits from a parent class” %}
+      The following example shows how a class can indicate that it inherits
+      documentation from its parent class:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Class that inherits from a parent class
 
-   /**
-    * @classdesc Abstract class representing a network connection.
-    * @class
-    */
-   function Connection() {}
+         /**
+          * @classdesc Abstract class representing a network connection.
+          * @class
+          */
+         function Connection() {}
 
-   /**
-    * Open the connection.
-    */
-   Connection.prototype.open = function() {
-       // ...
-   };
-
-
-   /**
-    * @classdesc Class representing a socket connection.
-    * @class
-    * @augments Connection
-    */
-   function Socket() {}
-
-   /** @inheritdoc */
-   Socket.prototype.open = function() {
-       // ...
-   };
-
-{% endexample %}
-
-You can get the same result by omitting the JSDoc comment from
-``Socket#open``:
-
-{% example “Inheriting documentation without the ``@inheritdoc`` tag” %}
-
-.. code-block:: js
-
-   /**
-    * @classdesc Abstract class representing a network connection.
-    * @class
-    */
-   function Connection() {}
-
-   /**
-    * Open the connection.
-    */
-   Connection.prototype.open = function() {
-       // ...
-   };
+         /**
+          * Open the connection.
+          */
+         Connection.prototype.open = function() {
+             // ...
+         };
 
 
-   /**
-    * @classdesc Class representing a socket connection.
-    * @class
-    * @augments Connection
-    */
-   function Socket() {}
+         /**
+          * @classdesc Class representing a socket connection.
+          * @class
+          * @augments Connection
+          */
+         function Socket() {}
 
-   Socket.prototype.open = function() {
-       // ...
-   };
+         /** @inheritdoc */
+         Socket.prototype.open = function() {
+             // ...
+         };
 
-{% endexample %}
+      You can get the same result by omitting the JSDoc comment from
+      ``Socket#open``:
+
+      .. code-block:: js
+         :caption: Inheriting documentation without the :rst:dir:`@inheritdoc` tag
+
+         /**
+          * @classdesc Abstract class representing a network connection.
+          * @class
+          */
+         function Connection() {}
+
+         /**
+          * Open the connection.
+          */
+         Connection.prototype.open = function() {
+             // ...
+         };
+
+
+         /**
+          * @classdesc Class representing a socket connection.
+          * @class
+          * @augments Connection
+          */
+         function Socket() {}
+
+         Socket.prototype.open = function() {
+             // ...
+         };

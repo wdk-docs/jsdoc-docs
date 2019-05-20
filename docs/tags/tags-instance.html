@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -117,11 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-implements.html">&#64;implements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inheritdoc.html">&#64;inherits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inner.html">&#64;inner</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;instance</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-interface.html">&#64;interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-kind.html">&#64;kind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-lends.html">&#64;lends</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,19 +226,18 @@
             
   <div class="section" id="instance">
 <h1>&#64;instance<a class="headerlink" href="#instance" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>Using the &#64;instance tag will mark a symbol as an instance member of its
-parent symbol. This means it can be referred to by “Parent#Child”.</p>
-<p>Using &#64;instance will override a doclet’s default scope (unless it is in
-the global scope, in which case it will remain global).</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following example is a longhand way of writing “&#64;function
-MyNamespace#myFunction”:</p>
-<p>{% example “Using &#64;instance to make a virtual doclet an instance member”
-%}</p>
+<dl class="directive">
+<dt id="directive-&#64;instance">
+<code class="descname">.. &#64;instance::</code><a class="headerlink" href="#directive-@instance" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>使用&#64;instance标记会将符号标记为其父符号的实例成员. 这意味着它可以被“Parent＃Child”引用.</p>
+<p>使用&#64;instance将覆盖doclet的默认范围(除非它在全局范围内, 在这种情况下它将保持全局).</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>以下示例是编写“&#64;function MyNamespace＃myFunction”的简便方法:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using &#64;instance to make a virtual doclet an instance member</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace MyNamespace */</span>
 <span class="cm">/**</span>
 <span class="cm"> * myFunction is now MyNamespace#myFunction.</span>
@@ -254,11 +247,10 @@ MyNamespace#myFunction”:</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>More usefully, you can use the &#64;instance tag to override the scope that
-JSDoc infers. For example, you can indicate that a static member is used
-as an instance member:</p>
-<p>{% example “Using &#64;instance to identify an instance member” %}</p>
+</div>
+<p>更有用的是, 您可以使用&#64;instance标记来覆盖JSDoc推断的范围. 例如, 您可以指示静态成员用作实例成员:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using &#64;instance to identify an instance member</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace */</span>
 <span class="kd">var</span> <span class="nx">BaseObject</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/**</span>
@@ -275,8 +267,11 @@ as an instance member:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

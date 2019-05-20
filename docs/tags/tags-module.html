@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -127,12 +125,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-memberof.html">&#64;memberof</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-mixes.html">&#64;mixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-mixin.html">&#64;mixin</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-namespace.html">&#64;namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-override.html">&#64;override</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,46 +226,35 @@
             
   <div class="section" id="module">
 <h1>&#64;module<a class="headerlink" href="#module" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;moduleName&gt;]</span></code></p>
-<p>In JSDoc 3.3.0 and later, <code class="docutils literal notranslate"><span class="pre">&lt;moduleName&gt;</span></code> may include the <code class="docutils literal notranslate"><span class="pre">module:</span></code>
-prefix. In previous versions, you must omit this prefix.</p>
+<dl class="directive">
+<dt id="directive-&#64;module">
+<code class="descname">.. &#64;module::</code><a class="headerlink" href="#directive-@module" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">[[{&lt;type&gt;}]</span> <span class="pre">&lt;moduleName&gt;]</span></code></p>
+<p>在JSDoc 3.3.0及更高版本中, <a href="#id1"><span class="problematic" id="id2">``</span></a>&lt;moduleName&gt;``可能包含``module: <a href="#id3"><span class="problematic" id="id4">``</span></a>前缀. 在以前的版本中, 您必须省略此前缀.</p>
 <p>Note: If you provide a type, you <em>must</em> also provide a name.</p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The &#64;module tag marks the current file as being its own module. All
-symbols in the file are assumed to be members of the module unless
-documented otherwise.</p>
-<p>Link to a module (e.g. within a
-[&#64;link]<a class="reference external" href="tags-inline-link.html">link-tag</a> or
-[&#64;see]<a class="reference external" href="tags-see.html">see-tag</a> tag) using “module:moduleName”. For
-example, “&#64;module foo/bar” can be linked to using “{&#64;link
-module:foo/bar}”.</p>
-<p>If the module name is not provided, it is derived from the module’s path
-and filename. For example, suppose I have a file <code class="docutils literal notranslate"><span class="pre">test.js</span></code>, located in
-the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory, that contains the block comment
-<code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">&#64;module</span> <span class="pre">*/</span></code>. Here are some scenarios for running JSDoc and the
-resulting module names for test.js:</p>
-<p>{% example “Derived module names if none is provided.” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># from src/</span>
-<span class="n">jsdoc</span> <span class="o">./</span><span class="n">test</span><span class="o">.</span><span class="n">js</span>   <span class="c1"># module name &#39;test&#39;</span>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>&#64;module标记将当前文件标记为自己的模块. 除非另有说明, 否则假定文件中的所有符号都是模块的成员.</p>
+<p>链接到模块(例如在[&#64;link] `link-tag &lt;tags-inline-link.html&gt;`__或[&#64;see] `see-tag &lt;tags-see.html&gt;`__ tag中)使用“module: moduleName”. 例如, “&#64; module foo/ bar”可以链接到使用“<a class="reference external" href="mailto:{&#37;&#52;&#48;link">{<span>&#64;</span>link</a> module: foo/ bar}”.</p>
+<p>如果未提供模块名称, 则它是从模块的路径和文件名派生的. 例如, 假设我有一个位于``src``目录下的文件``test.js``, 它包含块注释``/ ** &#64;module <a href="#id1"><span class="problematic" id="id2">*</span></a>/<a href="#id3"><span class="problematic" id="id4">``</span></a>. 以下是运行JSDoc的一些场景以及test.js的结果模块名称:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Derived module names if none is provided.</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># from src/</span>
+jsdoc ./test.js   <span class="c1"># module name &#39;test&#39;</span>
 
 <span class="c1"># from src&#39;s parent directory:</span>
-<span class="n">jsdoc</span> <span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">js</span> <span class="c1"># module name &#39;src/test&#39;</span>
-<span class="n">jsdoc</span> <span class="o">-</span><span class="n">r</span> <span class="n">src</span><span class="o">/</span>     <span class="c1"># module name &#39;test&#39;</span>
+jsdoc src/test.js <span class="c1"># module name &#39;src/test&#39;</span>
+jsdoc -r src/     <span class="c1"># module name &#39;test&#39;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following example shows the namepaths that are used for symbols in a
-module. The first symbol is a module-private, or “inner,” variable–it
-can be only accessed within the module. The second symbol is a static
-function that is exported by the module.</p>
-<p>{% example “Basic &#64;module use” %}</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>以下示例显示了用于模块中符号的名称路径. 第一个符号是模块私有或“内部”变量 - 它只能在模块中访问. 第二个符号是由模块导出的静态函数.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Basic &#64;module use</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module myModule */</span>
 
 <span class="cm">/** will be module:myModule~foo */</span>
@@ -282,14 +264,11 @@ function that is exported by the module.</p>
 <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>When an exported symbol is defined as a member of <code class="docutils literal notranslate"><span class="pre">module.exports</span></code>,
-<code class="docutils literal notranslate"><span class="pre">exports</span></code>, or <code class="docutils literal notranslate"><span class="pre">this</span></code>, JSDoc infers that the symbol is a static
-member of the module.</p>
-<p>In the following example, the Book class is documented as a static
-member, “module:bookshelf.Book”, with one instance member,
-“module:bookshelf.Book#title”.</p>
-<p>{% example “Defining exported symbols as a member of ‘this’” %}</p>
+</div>
+<p>当导出的符号被定义为``module.exports``, <a href="#id1"><span class="problematic" id="id2">``</span></a>exports``或``this``的成员时, JSDoc推断符号是模块的静态成员.</p>
+<p>在下面的示例中, Book类被记录为静态成员“module: bookshelf.Book”, 其中包含一个实例成员“module: bookshelf.Book＃title”.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Defining exported symbols as a member of ‘this’</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module bookshelf */</span>
 <span class="cm">/** @class */</span>
 <span class="k">this</span><span class="p">.</span><span class="nx">Book</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
@@ -298,11 +277,10 @@ member, “module:bookshelf.Book”, with one instance member,
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>In the following example, the two functions have the namepaths
-“module:color/mixer.blend” and “module:color/mixer.darken”.</p>
-<p>{% example “Defining exported symbols as a member of ‘module.exports’ or
-‘exports’” %}</p>
+</div>
+<p>在以下示例中, 这两个函数的名称路径为“module: color/ mixer.blend”和“module: color/ mixer.darken”.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Defining exported symbols as a member of ‘module.exports’ or ‘exports’</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module color/mixer */</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/** Blend two colours together. */</span>
@@ -312,10 +290,12 @@ member, “module:bookshelf.Book”, with one instance member,
 <span class="nx">exports</span><span class="p">.</span><span class="nx">darken</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">shade</span><span class="p">)</span> <span class="p">{};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>See <a class="reference external" href="howto-commonjs-modules.html">Documenting JavaScript Modules</a> for
-further examples.</p>
 </div>
+<p>有关更多示例, 请参阅`记录JavaScript模块&lt;howto-commonjs-modules.html&gt;`__.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

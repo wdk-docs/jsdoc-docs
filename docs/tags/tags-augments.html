@@ -88,17 +88,10 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-access.html">&#64;access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-alias.html">&#64;alias</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-async.html">&#64;async</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;augments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;augments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
@@ -158,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -233,26 +226,23 @@
             
   <div class="section" id="augments">
 <h1>&#64;augments<a class="headerlink" href="#augments" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;augments</span> <span class="pre">&lt;namepath&gt;</span></code></p>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;augments</span></code> or<code class="docutils literal notranslate"><span class="pre">&#64;extends</span></code> tag indicates that a symbol inherits
+<dl class="directive">
+<dt id="directive-&#64;augments">
+<code class="descname">.. &#64;augments::</code><a class="headerlink" href="#directive-@augments" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&#64;augments</span> <span class="pre">&lt;namepath&gt;</span></code></p>
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#directive-&#64;augments" title="&#64;augments directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;augments</span></code></a> or<code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;extends</span></code> tag indicates that a symbol inherits
 from, and potentially adds to, a parent symbol. You can use this tag to
 document both class-based and prototype-based inheritance.</p>
-<p>In JSDoc 3.3.0 and later, if a symbol inherits from multiple parents,
-and both parents have identically named members, JSDoc uses the
-documentation from the last parent that is listed in the JSDoc comment.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In the following example, the <code class="docutils literal notranslate"><span class="pre">Duck</span></code> class is defined as a subclass of
-<code class="docutils literal notranslate"><span class="pre">Animal</span></code>. <code class="docutils literal notranslate"><span class="pre">Duck</span></code> instances have the same properties as <code class="docutils literal notranslate"><span class="pre">Animal</span></code>
-instances, as well as a <code class="docutils literal notranslate"><span class="pre">speak</span></code> method that is unique to <code class="docutils literal notranslate"><span class="pre">Duck</span></code>
-instances.</p>
-<p>{% example “Documenting a class/subclass relationship” %}</p>
+<p>在JSDoc 3.3.0及更高版本中, 如果符号继承自多个父项, 并且两个父项具有相同名称的成员, 则JSDoc使用JSDoc注释中列出的最后一个父项的文档.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在下面的例子中, <code class="docutils literal notranslate"><span class="pre">Duck</span></code> 类被定义为 <code class="docutils literal notranslate"><span class="pre">Animal</span></code> 的子类. <code class="docutils literal notranslate"><span class="pre">Duck</span></code> 实例与 <code class="docutils literal notranslate"><span class="pre">Animal</span></code> 实例具有相同的属性, 以及 <code class="docutils literal notranslate"><span class="pre">duck</span></code> 实例独有的 <code class="docutils literal notranslate"><span class="pre">speak</span></code> 方法.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Documenting a class/subclass relationship</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @constructor</span>
 <span class="cm"> */</span>
@@ -281,13 +271,10 @@ instances.</p>
 <span class="nx">d</span><span class="p">.</span><span class="nx">speak</span><span class="p">();</span> <span class="c1">// (nothing)</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>In the following example, the <code class="docutils literal notranslate"><span class="pre">Duck</span></code> class inherits from both the
-<code class="docutils literal notranslate"><span class="pre">Flyable</span></code> and <code class="docutils literal notranslate"><span class="pre">Bird</span></code> classes, both of which define a <code class="docutils literal notranslate"><span class="pre">takeOff</span></code>
-method. Because the documentation for <code class="docutils literal notranslate"><span class="pre">Duck</span></code> lists <code class="docutils literal notranslate"><span class="pre">&#64;augments</span> <span class="pre">Bird</span></code>
-last, JSDoc automatically documents <code class="docutils literal notranslate"><span class="pre">Duck#takeOff</span></code> using the comment
-from <code class="docutils literal notranslate"><span class="pre">Bird#takeOff</span></code>.</p>
-<p>{% example “Multiple inheritance with duplicated method names” %}</p>
+</div>
+<p>在下面的例子中, <code class="docutils literal notranslate"><span class="pre">Duck</span></code> 类继承了 <code class="docutils literal notranslate"><span class="pre">Flyable</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Bird</span></code> 类, 它们都定义了一个 <code class="docutils literal notranslate"><span class="pre">takeOff</span></code> 方法. 因为 <code class="docutils literal notranslate"><span class="pre">Duck</span></code> 的文档最后列出 <code class="docutils literal notranslate"><span class="pre">&#64;augments</span> <span class="pre">Bird</span></code>, 所以JSDoc使用 <code class="docutils literal notranslate"><span class="pre">Bird＃takeOff</span></code> 中的注释自动记录 <code class="docutils literal notranslate"><span class="pre">Duck＃takeOff</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Multiple inheritance with duplicated method names</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Abstract class for things that can fly.</span>
 <span class="cm"> * @class</span>
@@ -332,8 +319,11 @@ from <code class="docutils literal notranslate"><span class="pre">Bird#takeOff</
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

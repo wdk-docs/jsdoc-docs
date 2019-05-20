@@ -1,31 +1,27 @@
 @todo
 =============================
 
-Syntax
-------
+.. rst:directive:: @todo
 
-``@todo text describing thing to do.``
+   :Syntax:
 
-Overview
---------
+      ``@todo`` text describing thing to do.
 
-The @todo tag allows you to document tasks to be completed for some part
-of your code. You can use the @todo tag more than once in a single JSDoc
-comment.
+   :Overview:
 
-Examples
---------
+      The @todo tag allows you to document tasks to be completed for some part
+      of your code. You can use the @todo tag more than once in a single JSDoc
+      comment.
 
-{% example “Using the @todo tag” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @todo tag
 
-   /**
-    * @todo Write the documentation.
-    * @todo Implement this function.
-    */
-   function foo() {
-       // write me
-   }
-
-{% endexample %}
+         /**
+          * @todo Write the documentation.
+          * @todo Implement this function.
+          */
+         function foo() {
+             // write me
+         }

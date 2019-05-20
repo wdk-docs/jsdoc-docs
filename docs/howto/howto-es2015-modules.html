@@ -171,18 +171,18 @@ specification</a>.
 ES 2015 modules are supported in JSDoc 3.4.0 and later.</p>
 <div class="section" id="module-identifiers">
 <h2>模块标识符<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h2>
-<p>When you document an ES 2015 module, you’ll use a <code class="docutils literal notranslate"><span class="pre">`&#64;module</span></code>
-tag &lt;tags-module.html&gt;`__ to document the identifier for the module. For
+<p>When you document an ES 2015 module, you’ll use a <a class="reference external" href="tags-module.html">&#64;module
+tag</a> to document the identifier for the module. For
 example, if users load the module by calling
 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span> <span class="pre">as</span> <span class="pre">myShirt</span> <span class="pre">from</span> <span class="pre">'my/shirt'</span></code>, you’ll write a JSDoc comment
 that contains the tag <code class="docutils literal notranslate"><span class="pre">&#64;module</span> <span class="pre">my/shirt</span></code>.</p>
-<p>If you use the <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code> tag without a value, JSDoc will try to guess
+<p>If you use the <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag without a value, JSDoc will try to guess
 the correct module identifier based on the filepath.</p>
 <p>When you use a JSDoc <a class="reference external" href="about-namepaths.html">namepath</a> to refer to a
 module from another JSDoc comment, you must add the prefix <code class="docutils literal notranslate"><span class="pre">module:</span></code>.
 For example, if you want the documentation for the module <code class="docutils literal notranslate"><span class="pre">my/pants</span></code>
-to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <code class="docutils literal notranslate"><span class="pre">`&#64;see</span></code>
-tag &lt;tags-see.html&gt;`__ to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
+to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <a class="reference external" href="tags-see.html">&#64;see
+tag</a> to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Pants module.</span>
 <span class="cm"> * @module my/pants</span>
@@ -203,7 +203,8 @@ values in an ES 2015 module. In most cases, you can simply add a JSDoc
 comment to the <code class="docutils literal notranslate"><span class="pre">export</span></code> statement that defines the exported value. If
 you are exporting a value under another name, you can document the
 exported value within its <code class="docutils literal notranslate"><span class="pre">export</span></code> block.</p>
-<p>{% example “Documenting values exported by a module” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Documenting values exported by a module</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @module color/mixer */</span>
 
 <span class="cm">/** The name of the module. */</span>
@@ -235,7 +236,7 @@ exported value within its <code class="docutils literal notranslate"><span class
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 

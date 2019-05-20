@@ -96,9 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -177,31 +177,21 @@
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>JSDoc支持两种不同的标记:</p>
 <ul class="simple">
-<li><p><strong>Block tags</strong>, 它们位于JSDoc评论的顶层.</p></li>
-<li><p><strong>Inline tags</strong>, which are within the text of a block tag or a
-description.</p></li>
+<li><p><strong>块标签</strong>, 它们位于JSDoc评论的顶层.</p></li>
+<li><p><strong>内联标记</strong>, 它们位于块标记或描述的文本中.</p></li>
 </ul>
-<p>Block tags usually provide detailed information about your code, such as
-the parameters that a function accepts. Inline tags usually link to
-other parts of the documentation, similar to the anchor tag (<code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>) in
-HTML.</p>
-<p>Block tags always begin with an at sign (<code class="docutils literal notranslate"><span class="pre">&#64;</span></code>). Each block tag must be
-followed by a line break, with the exception of the last block tag in a
-JSDoc comment.</p>
-<p>Inline tags also begin with an at sign. However, inline tags and their
-text must be enclosed in curly braces (<code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>). The <code class="docutils literal notranslate"><span class="pre">{</span></code>
-denotes the start of the inline tag, and the <code class="docutils literal notranslate"><span class="pre">}</span></code> denotes the end of
-the inline tag. If your tag’s text includes a closing curly brace
-(<code class="docutils literal notranslate"><span class="pre">}</span></code>), you must escape it with a leading backslash (<code class="docutils literal notranslate"><span class="pre">\</span></code>). You do not
-need to use a line break after inline tags.</p>
+<p>块标记通常提供有关代码的详细信息, 例如函数接受的参数. 内联标记通常链接到文档的其他部分, 类似于HTML中的锚标记(<code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>).</p>
+<p>块标记总是以at符号开头(<code class="docutils literal notranslate"><span class="pre">&#64;</span></code>). 除了JSDoc注释中的最后一个块标记之外, 每个块标记后面必须跟一个换行符.</p>
+<p>内联标记也以at符号开头. 但是, 内联标签及其文本必须用大括号括起来(<code class="docutils literal notranslate"><span class="pre">{</span></code> 和 <code class="docutils literal notranslate"><span class="pre">}</span></code>). <code class="docutils literal notranslate"><span class="pre">{</span></code> 表示内联标记的开头, <code class="docutils literal notranslate"><span class="pre">}</span></code> 表示内联标记的结尾. 如果你的标签的文本包含一个结束大括号(<code class="docutils literal notranslate"><span class="pre">}</span></code>), 你必须使用前导反斜杠(<code class="docutils literal notranslate"><span class="pre">\</span></code>)来转义它. 内联标记后不需要使用换行符.</p>
 <p>Most JSDoc tags are block tags. In general, when this site refers to
 “JSDoc tags,” we really mean “block tags.”</p>
 </div>
 <div class="section" id="examples">
 <h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In the following example, <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> is a block tag, and <code class="docutils literal notranslate"><span class="pre">{&#64;link}</span></code> is
+<p>In the following example, <a class="reference internal" href="../tags/tags-param.html#directive-&#64;param" title="&#64;param directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;param</span></code></a> is a block tag, and <code class="docutils literal notranslate"><span class="pre">{&#64;link}</span></code> is
 an inline tag:</p>
-<p>{% example “Block and inline tags in JSDoc comments” %}</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Block and inline tags in JSDoc comments</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Set the shoe&#39;s color. Use {@link Shoe#setSize} to set the shoe size.</span>
 <span class="cm"> *</span>
@@ -212,10 +202,10 @@ an inline tag:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>You can use inline tags within a description, as shown above, or within
-a block tag, as shown below:</p>
-<p>{% example “Inline tag used within a block tag” %}</p>
+</div>
+<p>您可以在说明中使用内联标记, 如上所示, 也可以在块标记内使用, 如下所示:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Inline tag used within a block tag</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Set the shoe&#39;s color.</span>
 <span class="cm"> *</span>
@@ -227,10 +217,10 @@ a block tag, as shown below:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>When you use multiple block tags in a JSDoc comment, they must be
-separated by line breaks:</p>
-<p>{% example “Multiple block tags separated by line breaks” %}</p>
+</div>
+<p>在JSDoc注释中使用多个块标记时, 它们必须用换行符分隔:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Multiple block tags separated by line breaks</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Set the color and type of the shoelaces.</span>
 <span class="cm"> *</span>
@@ -242,7 +232,7 @@ separated by line breaks:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 </div>
 </div>
 

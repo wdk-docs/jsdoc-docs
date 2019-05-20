@@ -1,32 +1,28 @@
 @fires
 =============================
 
-Syntax
-------
+.. rst:directive:: @fires
 
-``@fires <className>#[event:]<eventName>``
+   :Syntax:
 
-Overview
---------
+         ``@fires <className>#[event:]<eventName>``
 
-The @fires tag indicates that a method can fire a specified type of
-event when it is called. Use the [@event
-tag]\ `event-tag <tags-event.html>`__ to document the event’s content.
+   :Overview:
 
-Examples
---------
+      The @fires tag indicates that a method can fire a specified type of
+      event when it is called. Use the [@event
+      tag]\ `event-tag <tags-event.html>`__ to document the event’s content.
 
-{% example “Method that fires a ‘drain’ event” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Method that fires a ‘drain’ event
 
-   /**
-    * Drink the milkshake.
-    *
-    * @fires Milkshake#drain
-    */
-   Milkshake.prototype.drink = function() {
-       // ...
-   };
-
-{% endexample %}
+         /**
+          * Drink the milkshake.
+          *
+          * @fires Milkshake#drain
+          */
+         Milkshake.prototype.drink = function() {
+             // ...
+         };

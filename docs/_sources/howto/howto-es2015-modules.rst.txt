@@ -9,19 +9,19 @@ ES 2015 modules are supported in JSDoc 3.4.0 and later.
 Module identifiers
 ------------------
 
-When you document an ES 2015 module, you’ll use a ```@module``
+When you document an ES 2015 module, you’ll use a `@module
 tag <tags-module.html>`__ to document the identifier for the module. For
 example, if users load the module by calling
 ``import * as myShirt from 'my/shirt'``, you’ll write a JSDoc comment
 that contains the tag ``@module my/shirt``.
 
-If you use the ``@module`` tag without a value, JSDoc will try to guess
+If you use the :rst:dir:`@module` tag without a value, JSDoc will try to guess
 the correct module identifier based on the filepath.
 
 When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a
 module from another JSDoc comment, you must add the prefix ``module:``.
 For example, if you want the documentation for the module ``my/pants``
-to link to the module ``my/shirt``, you could use the ```@see``
+to link to the module ``my/shirt``, you could use the `@see
 tag <tags-see.html>`__ to document ``my/pants`` as follows:
 
 .. code-block:: js
@@ -47,9 +47,8 @@ comment to the ``export`` statement that defines the exported value. If
 you are exporting a value under another name, you can document the
 exported value within its ``export`` block.
 
-{% example “Documenting values exported by a module” %}
-
 .. code-block:: js
+   :caption: Documenting values exported by a module
 
    /** @module color/mixer */
 
@@ -80,5 +79,3 @@ exported value within its ``export`` block.
         */
        rgbify as toRgb
    }
-
-{% endexample %}

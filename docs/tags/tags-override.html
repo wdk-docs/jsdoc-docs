@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -130,11 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-module.html">&#64;module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-name.html">&#64;name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-namespace.html">&#64;namespace</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;override</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;override</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-package.html">&#64;package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-param.html">&#64;param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-private.html">&#64;private</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,23 +226,23 @@
             
   <div class="section" id="override">
 <h1>&#64;override<a class="headerlink" href="#override" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;override</span></code> tag indicates that a symbol overrides a symbol with
+<dl class="directive">
+<dt id="directive-&#64;override">
+<code class="descname">.. &#64;override::</code><a class="headerlink" href="#directive-@override" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#directive-&#64;override" title="&#64;override directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;override</span></code></a> tag indicates that a symbol overrides a symbol with
 the same name in a parent class.</p>
-<p>This tag is provided for compatibility with <a class="reference external" href="https://developers.google.com/closure/compiler/">Closure
-Compiler</a>. By
-default, JSDoc automatically identifies symbols that override a parent.</p>
-<p>If your JSDoc comment includes the <code class="docutils literal notranslate"><span class="pre">`&#64;inheritdoc</span></code>
-tag &lt;tags-inheritdoc.html&gt;`__, you do not need to include the
-<code class="docutils literal notranslate"><span class="pre">&#64;override</span></code> tag. The presence of the <code class="docutils literal notranslate"><span class="pre">&#64;inheritdoc</span></code> tag implies the
-presence of the <code class="docutils literal notranslate"><span class="pre">&#64;override</span></code> tag.</p>
-</div>
-<div class="section" id="example">
-<h2>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
-<p>The following example shows how to indicate that a method overrides a
-method in its parent class:</p>
-<p>{% example “Method that overrides a parent” %}</p>
+<p>提供此标记是为了与“Closure Compiler &lt;<a class="reference external" href="https://developers.google.com/closure/compiler/">https://developers.google.com/closure/compiler/</a>&gt;`__兼容. 默认情况下, JSDoc会自动识别覆盖父级的符号.</p>
+<p>If your JSDoc comment includes the <a class="reference external" href="tags-inheritdoc.html">&#64;inheritdoc
+tag</a>, you do not need to include the
+<a class="reference internal" href="#directive-&#64;override" title="&#64;override directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;override</span></code></a> tag. The presence of the <a class="reference internal" href="tags-inheritdoc.html#directive-&#64;inheritdoc" title="&#64;inheritdoc directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;inheritdoc</span></code></a> tag implies the
+presence of the <a class="reference internal" href="#directive-&#64;override" title="&#64;override directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;override</span></code></a> tag.</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>以下示例显示如何指示方法覆盖其父类中的方法:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Method that overrides a parent</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @classdesc Abstract class representing a network connection.</span>
 <span class="cm"> * @class</span>
@@ -279,8 +273,11 @@ method in its parent class:</p>
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

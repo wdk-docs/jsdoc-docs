@@ -4,35 +4,27 @@ Configuring JSDoc with a configuration file
 Configuration file formats
 --------------------------
 
-To customize JSDoc’s behavior, you can provide a configuration file to
-JSDoc in one of the following formats:
+To customize JSDoc’s behavior, you can provide a configuration file to JSDoc in one of the following formats:
 
--  A JSON file. In JSDoc 3.3.0 and later, this file may include
-   comments.
--  A CommonJS module that exports a single configuration object. This
-   format is supported in JSDoc 3.5.0 and later.
+-  A JSON file. In JSDoc 3.3.0 and later, this file may include comments.
+-  A CommonJS module that exports a single configuration object. This format is supported in JSDoc 3.5.0 and later.
 
-To run JSDoc with a configuration file, use the ```-c`` command-line
-option <about-commandline.html>`__ (for example,
+To run JSDoc with a configuration file, use the ``-c`` `command-line option <about-commandline.html>`__ (for example,
 ``jsdoc -c /path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``).
 
-The following examples show a simple configuration file that enables
-JSDoc’s `Markdown plugin <plugins-markdown.html>`__. JSDoc’s
-configuration options are explained in detail in the following sections.
+The following examples show a simple configuration file that enables JSDoc’s `Markdown plugin <plugins-markdown.html>`__.
+JSDoc’s configuration options are explained in detail in the following sections.
 
-{% example “JSON configuration file” %}
 
 .. code-block:: js
+   :caption: JSON configuration file
 
    {
        "plugins": ["plugins/markdown"]
    }
 
-{% endexample %}
-
-{% example “JavaScript configuration file” %}
-
 .. code-block:: js
+   :caption: JavaScript configuration file
 
    'use strict';
 
@@ -40,19 +32,13 @@ configuration options are explained in detail in the following sections.
        plugins: ['plugins/markdown']
    };
 
-{% endexample %}
-
-For a more comprehensive example of a JSON configuration file, see the
-file
-```conf.json.EXAMPLE`` <https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__.
+For a more comprehensive example of a JSON configuration file,
+see the file `conf.json.EXAMPLE <https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__.
 
 Default configuration options
 -----------------------------
 
-If you do not specify a configuration file, JSDoc uses the following
-configuration options:
-
-{% example %}
+If you do not specify a configuration file, JSDoc uses the following configuration options:
 
 .. code-block:: js
 
@@ -74,43 +60,30 @@ configuration options:
        }
    }
 
-{% endexample %}
-
 This means:
 
 -  No plugins are loaded (``plugins``).
--  If recursion is enabled with the ```-r`` command-line
-   flag <about-commandline.html>`__, JSDoc will search for files 10
-   levels deep (``recurseDepth``).
--  Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be
-   processed (``source.includePattern``).
--  Any file starting with an underscore, or in a directory starting with
-   an underscore, will be ignored (``source.excludePattern``).
--  JSDoc supports code that uses `ES2015
-   modules <howto-es2015-modules.html>`__ (``sourceType``).
--  JSDoc allows you to use unrecognized tags
-   (``tags.allowUnknownTags``).
--  Both standard JSDoc tags and `Closure Compiler
-   tags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
-   are enabled (``tags.dictionaries``).
--  `Inline ``{@link}`` tags <tags-inline-link.html>`__ are rendered in
-   plain text (``templates.cleverLinks``, ``templates.monospaceLinks``).
+-  If recursion is enabled with the ``-r`` `command-line flag <about-commandline.html>`__, JSDoc will search for files 10 levels deep (``recurseDepth``).
+-  Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be processed (``source.includePattern``).
+-  Any file starting with an underscore, or in a directory starting with an underscore, will be ignored (``source.excludePattern``).
+-  JSDoc supports code that uses `ES2015 modules <howto-es2015-modules.html>`__ (``sourceType``).
+-  JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``).
+-  Both standard JSDoc tags and `Closure Compilertags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ are enabled (``tags.dictionaries``).
+-  Inline ``{@link}`` `tags <tags-inline-link.html>`__ are rendered in plain text (``templates.cleverLinks``, ``templates.monospaceLinks``).
 
 These options and others are explained in the following sections.
 
 Configuring plugins
 -------------------
 
-To enable plugins, add their paths (relative to the JSDoc folder) into
-the ``plugins`` array.
+To enable plugins, add their paths (relative to the JSDoc folder) into the ``plugins`` array.
 
-For example, the following JSON configuration file will enable the
-Markdown plugin, which converts Markdown-formatted text to HTML, and the
-“summarize” plugin, which autogenerates a summary for each doclet:
+For example, the following JSON configuration file will enable the Markdown plugin,
+which converts Markdown-formatted text to HTML,
+and the “summarize” plugin, which autogenerates a summary for each doclet:
 
-{% example “JSON configuration file with plugins” %}
-
-::
+.. code-block:: json
+   :caption: JSON configuration file with plugins
 
    {
        "plugins": [
@@ -119,16 +92,11 @@ Markdown plugin, which converts Markdown-formatted text to HTML, and the
        ]
    }
 
-{% endexample %}
 
-See the `plugin reference <about-plugins.html>`__ for further
-information, and look in `JSDoc’s ``plugins``
-directory <https://github.com/jsdoc3/jsdoc/tree/master/plugins>`__ for
-the plugins built into JSDoc.
 
-You can configure the Markdown plugin by adding a ``markdown`` object to
-your configuration file. See `Configuring the Markdown
-Plugin <plugins-markdown.html>`__ for details.
+See the `plugin reference <about-plugins.html>`__ for further information, and look in `JSDoc’s plugins directory <https://github.com/jsdoc3/jsdoc/tree/master/plugins>`_ for the plugins built into JSDoc.
+
+You can configure the Markdown plugin by adding a ``markdown`` object to your configuration file. See `Configuring the Markdown Plugin <plugins-markdown.html>`__ for details.
 
 Specifying recursion depth
 --------------------------
@@ -136,10 +104,8 @@ Specifying recursion depth
 The ``recurseDepth`` option controls how many levels deep JSDoc will
 recursively search for source files and tutorials. This option is
 available in JSDoc 3.5.0 and later. This option is used only if you also
-specify the ```-r`` command-line flag <about-commandline.html>`__, which
+specify the ``-r`` `command-line flag <about-commandline.html>`__, which
 tells JSDoc to recursively search for input files.
-
-{% example %}
 
 .. code-block:: js
 
@@ -147,16 +113,12 @@ tells JSDoc to recursively search for input files.
        "recurseDepth": 10
    }
 
-{% endexample %}
-
 Specifying input files
 ----------------------
 
 The ``source`` set of options, in combination with paths given to JSDoc
 on the command line, determines the set of input files that JSDoc uses
 to generate documentation.
-
-{% example %}
 
 .. code-block:: js
 
@@ -169,12 +131,12 @@ to generate documentation.
        }
    }
 
-{% endexample %}
+
 
 -  ``source.include``: An optional array of paths that contain files for
    which JSDoc should generate documentation. The paths given to JSDoc
    on the command line are combined with these paths. You can use the
-   ```-r`` command-line option <about-commandline.html>`__ to recurse
+   ``-r`` `command-line option <about-commandline.html>`__ to recurse
    into subdirectories.
 -  ``source.exclude``: An optional array of paths that JSDoc should
    ignore. In JSDoc 3.3.0 and later, this array may include
@@ -207,9 +169,9 @@ All remaining files after these four steps are processed by JSDoc.
 
 As an example, suppose you have the following file structure:
 
-{% example %}
 
-::
+
+.. code-block:: sh
 
    myProject/
    |- a.js
@@ -222,11 +184,11 @@ As an example, suppose you have the following file structure:
       |- ignore.js
       |- d.txt
 
-{% endexample %}
+
 
 In addition, suppose your ``conf.json`` file looks like this example:
 
-{% example %}
+
 
 .. code-block:: js
 
@@ -239,7 +201,7 @@ In addition, suppose your ``conf.json`` file looks like this example:
        }
    }
 
-{% endexample %}
+
 
 If you run ``jsdoc myProject/c.js -c /path/to/my/conf.json -r`` from the
 file containing the ``myProject`` folder, JSDoc will generate
@@ -282,7 +244,7 @@ accepts the following values:
    ``Delete of an unqualified identifier in strict mode`` when it parses
    your code.
 
-{% example %}
+
 
 .. code-block:: js
 
@@ -290,20 +252,18 @@ accepts the following values:
        "sourceType": "module"
    }
 
-{% endexample %}
+
 
 Incorporating command-line options into the configuration file
 --------------------------------------------------------------
 
-You can put many of JSDoc’s `command-line
-options <about-commandline.html>`__ into the configuration file instead
+You can put many of JSDoc’s `command-line options <about-commandline.html>`__ into the configuration file instead
 of specifying them on the command line. To do this, add the long names
 of the relevant options into an ``opts`` section of the configuration
 file, with the value set to the option’s value.
 
-{% example “JSON configuration file with command-line options” %}
-
 .. code-block:: js
+   :caption: JSON configuration file with command-line options
 
    {
        "opts": {
@@ -315,13 +275,13 @@ file, with the value set to the option’s value.
        }
    }
 
-{% endexample %}
+
 
 By using the ``source.include`` and ``opts`` options, you can put almost
 all of the arguments to JSDoc in a configuration file, so that the
 command line reduces to:
 
-::
+.. code-block:: sh
 
    jsdoc -c /path/to/conf.json
 
@@ -334,7 +294,7 @@ Configuring tags and tag dictionaries
 The options in ``tags`` control which JSDoc tags are allowed and how
 each tag is interpreted.
 
-{% example %}
+
 
 .. code-block:: js
 
@@ -345,11 +305,11 @@ each tag is interpreted.
        }
    }
 
-{% endexample %}
+
 
 The ``tags.allowUnknownTags`` property affects how JSDoc handles
 unrecognized tags. If you set this option to ``false``, and JSDoc finds
-a tag that it does not recognize (for example, ``@foo``), JSDoc logs a
+a tag that it does not recognize (for example, :rst:dir:`@foo`), JSDoc logs a
 warning. By default, this option is set to ``true``. In JSDoc 3.4.1 and
 later, you can also set this property to an array of tag names that
 JSDoc should allow (for example, ``["foo","bar"]``).
@@ -359,8 +319,7 @@ as well as how JSDoc interprets the tags that it recognizes. In JSDoc
 3.3.0 and later, there are two built-in tag dictionaries:
 
 -  ``jsdoc``: Core JSDoc tags.
--  ``closure``: `Closure Compiler
-   tags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__.
+-  ``closure``: `Closure Compiler tags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__.
 
 By default, both dictionaries are enabled. Also, by default, the
 ``jsdoc`` dictionary is listed first; as a result, if the ``jsdoc``
@@ -379,11 +338,10 @@ Configuring templates
 
 The options in ``templates`` affect the appearance and content of
 generated documentation. Third-party templates may not implement all of
-these options. See `Configuring JSDoc’s Default
-Template <about-configuring-default-template.html>`__ for additional
+these options. See `Configuring JSDoc’s Default Template <about-configuring-default-template.html>`__ for additional
 options that the default template supports.
 
-{% example %}
+
 
 .. code-block:: js
 
@@ -394,10 +352,9 @@ options that the default template supports.
        }
    }
 
-{% endexample %}
 
-If ``templates.monospaceLinks`` is true, all link text from the `inline
-``{@link}`` tag <tags-inline-link.html>`__ will be rendered in
+
+If ``templates.monospaceLinks`` is true, all link text from the `inline {@link} tag <tags-inline-link.html>`__ will be rendered in
 monospace.
 
 If ``templates.cleverLinks`` is true, ``{@link asdf}`` will be rendered

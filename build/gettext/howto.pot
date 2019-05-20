@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-19 22:31+0800\n"
+"POT-Creation-Date: 2019-05-20 18:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgid "Module identifiers"
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:20
-msgid "When you document an AMD module, you’ll use an ```@exports`` tag <tags-exports.html>`__ or ```@module`` tag <tags-module.html>`__ to document the identifier that’s passed to the ``require()`` function. For example, if users load the module by calling ``require('my/shirt', /* callback */)``, you’ll write a JSDoc comment that contains the tag ``@exports my/shirt`` or ``@module my/shirt``. The examples below can help you decide which of these tags to use."
+msgid "When you document an AMD module, you’ll use an `@exports tag <tags-exports.html>`__ or `@module tag <tags-module.html>`__ to document the identifier that’s passed to the ``require()`` function. For example, if users load the module by calling ``require('my/shirt', /* callback */)``, you’ll write a JSDoc comment that contains the tag ``@exports my/shirt`` or ``@module my/shirt``. The examples below can help you decide which of these tags to use."
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:28
@@ -50,7 +50,7 @@ msgstr ""
 #: ../../source/howto/howto-amd-modules.rst:31
 #: ../../source/howto/howto-commonjs-modules.rst:36
 #: ../../source/howto/howto-es2015-modules.rst:21
-msgid "When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a module from another JSDoc comment, you must add the prefix ``module:``. For example, if you want the documentation for the module ``my/pants`` to link to the module ``my/shirt``, you could use the ```@see`` tag <tags-see.html>`__ to document ``my/pants`` as follows:"
+msgid "When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a module from another JSDoc comment, you must add the prefix ``module:``. For example, if you want the documentation for the module ``my/pants`` to link to the module ``my/shirt``, you could use the `@see tag <tags-see.html>`__ to document ``my/pants`` as follows:"
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:45
@@ -59,86 +59,54 @@ msgid "Similarly, the namepath for each member of the module will start with ``m
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:52
+#: ../../source/howto/howto-amd-modules.rst:59
 msgid "Function that returns an object literal"
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:54
-msgid "If you define your AMD module as a function that returns an object literal, use the ```@exports`` tag <tags-exports.html>`__ to document the module’s name. JSDoc will automatically detect that the object’s properties are members of the module."
-msgstr ""
-
-#: ../../source/howto/howto-amd-modules.rst:59
-msgid "{% example “Function that returns an object literal” %}"
+msgid "If you define your AMD module as a function that returns an object literal, use the ``@exports tag <tags-exports.html>`__ to document the module’s name. JSDoc will automatically detect that the object’s properties are members of the module."
 msgstr ""
 
 #: ../../source/howto/howto-amd-modules.rst:86
-#: ../../source/howto/howto-amd-modules.rst:123
-#: ../../source/howto/howto-amd-modules.rst:154
-#: ../../source/howto/howto-amd-modules.rst:184
-#: ../../source/howto/howto-amd-modules.rst:242
-#: ../../source/howto/howto-commonjs-modules.rst:86
-#: ../../source/howto/howto-commonjs-modules.rst:110
-#: ../../source/howto/howto-commonjs-modules.rst:137
-#: ../../source/howto/howto-commonjs-modules.rst:158
-#: ../../source/howto/howto-commonjs-modules.rst:206
-#: ../../source/howto/howto-commonjs-modules.rst:243
-#: ../../source/howto/howto-commonjs-modules.rst:270
-#: ../../source/howto/howto-commonjs-modules.rst:288
-#: ../../source/howto/howto-commonjs-modules.rst:310
-#: ../../source/howto/howto-commonjs-modules.rst:342
-#: ../../source/howto/howto-commonjs-modules.rst:370
-#: ../../source/howto/howto-es2015-classes.rst:59
-#: ../../source/howto/howto-es2015-classes.rst:73
-#: ../../source/howto/howto-es2015-classes.rst:112
-#: ../../source/howto/howto-es2015-modules.rst:84
-msgid "{% endexample %}"
-msgstr ""
-
-#: ../../source/howto/howto-amd-modules.rst:89
 msgid "Function that returns another function"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:91
-msgid "If you define your module as a function that exports another function, such as a constructor, you can use a standalone comment with a ```@module`` tag <tags-module.html>`__ to document the module. You can then use an ```@alias`` tag <tags-alias.html>`__ to tell JSDoc that the function uses the same longname as the module."
+#: ../../source/howto/howto-amd-modules.rst:88
+msgid "If you define your module as a function that exports another function, such as a constructor, you can use a standalone comment with a `@module  tag <tags-module.html>`__ to document the module. You can then use an `@alias  tag <tags-alias.html>`__ to tell JSDoc that the function uses the same longname as the module."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:97
-msgid "{% example “Function that returns a constructor” %}"
+#: ../../source/howto/howto-amd-modules.rst:94
+msgid "Function that returns a constructor"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:126
+#: ../../source/howto/howto-amd-modules.rst:120
+#: ../../source/howto/howto-amd-modules.rst:128
 msgid "Module declared in a return statement"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:128
-msgid "If you declare your module object in a function’s ``return`` statement, you can use a standalone comment with a ```@module`` tag <tags-module.html>`__ to document the module. You can then add an ```@alias`` tag <tags-alias.html>`__ to tell JSDoc that the module object has the same longname as the module."
+#: ../../source/howto/howto-amd-modules.rst:122
+msgid "If you declare your module object in a function’s ``return`` statement, you can use a standalone comment with a `@module tag <tags-module.html>`__ to document the module. You can then add an `@alias tag <tags-alias.html>`__ to tell JSDoc that the module object has the same longname as the module."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:134
-msgid "{% example “Module declared in a return statement” %}"
-msgstr ""
-
-#: ../../source/howto/howto-amd-modules.rst:157
+#: ../../source/howto/howto-amd-modules.rst:148
+#: ../../source/howto/howto-amd-modules.rst:155
 msgid "Module object passed to a function"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:159
-msgid "If the module object is passed into the function that defines your module, you can document the module by adding an ```@exports`` tag <tags-exports.html>`__ to the function parameter. This pattern is supported in JSDoc 3.3.0 and later."
+#: ../../source/howto/howto-amd-modules.rst:150
+msgid "If the module object is passed into the function that defines your module, you can document the module by adding an `@exports tag <tags-exports.html>`__ to the function parameter. This pattern is supported in JSDoc 3.3.0 and later."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:164
-msgid "{% example “Module object passed to a function” %}"
-msgstr ""
-
-#: ../../source/howto/howto-amd-modules.rst:187
+#: ../../source/howto/howto-amd-modules.rst:175
 msgid "Multiple modules defined in one file"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:189
-msgid "If you define more than one AMD module in a single JavaScript file, use the ```@exports`` tag <tags-exports.html>`__ to document each module object."
+#: ../../source/howto/howto-amd-modules.rst:177
+msgid "If you define more than one AMD module in a single JavaScript file, use the `@exports tag <tags-exports.html>`__ to document each module object."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:193
-msgid "{% example “Multiple AMD modules defined in one file” %}"
+#: ../../source/howto/howto-amd-modules.rst:181
+msgid "Multiple AMD modules defined in one file"
 msgstr ""
 
 #: ../../source/howto/howto-commonjs-modules.rst:2
@@ -154,7 +122,7 @@ msgid "This page explains how to document CommonJS and Node.js modules that use 
 msgstr ""
 
 #: ../../source/howto/howto-commonjs-modules.rst:26
-msgid "In most cases, your CommonJS or Node.js module should include a standalone JSDoc comment that contains a ```@module`` tag <tags-module.html>`__. The ``@module`` tag’s value should be the module identifier that’s passed to the ``require()`` function. For example, if users load the module by calling ``require('my/shirt')``, your JSDoc comment would contain the tag ``@module my/shirt``."
+msgid "In most cases, your CommonJS or Node.js module should include a standalone JSDoc comment that contains a `@module tag <tags-module.html>`__. The ``@module`` tag’s value should be the module identifier that’s passed to the ``require()`` function. For example, if users load the module by calling ``require('my/shirt')``, your JSDoc comment would contain the tag ``@module my/shirt``."
 msgstr ""
 
 #: ../../source/howto/howto-commonjs-modules.rst:33
@@ -175,119 +143,116 @@ msgid "In the following example, the ``my/shirt`` module exports the methods ``b
 msgstr ""
 
 #: ../../source/howto/howto-commonjs-modules.rst:67
-msgid "{% example “Methods added to the exports object” %}"
+msgid "Methods added to the exports object"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:88
+#: ../../source/howto/howto-commonjs-modules.rst:85
 msgid "## Values assigned to local variables"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:90
+#: ../../source/howto/howto-commonjs-modules.rst:87
 msgid "In some cases, an exported symbol may be assigned to a local variable before it’s added to the ``exports`` object. For example, if your module exports a ``wash`` method, and the module itself often calls the ``wash`` method, you might write the module as follows:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:95
-msgid "{% example “Method assigned to a local variable and added to the exports object” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:92
+msgid "Method assigned to a local variable and added to the exports object"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:112
-msgid "In this case, JSDoc will *not* automatically document ``wash`` as an exported method, because the JSDoc comment appears immediately before the local variable ``wash`` rather than ``exports.wash``. One solution is to add an ```@alias`` tag <tags-alias.html>`__ that defines the correct longname for the method. In this case, the method is a static member of the module ``my/shirt``, so the correct longname is ``module:my/shirt.wash``:"
+#: ../../source/howto/howto-commonjs-modules.rst:105
+msgid "In this case, JSDoc will *not* automatically document ``wash`` as an exported method, because the JSDoc comment appears immediately before the local variable ``wash`` rather than ``exports.wash``. One solution is to add an `@alias tag <tags-alias.html>`__ that defines the correct longname for the method. In this case, the method is a static member of the module ``my/shirt``, so the correct longname is ``module:my/shirt.wash``:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:120
-msgid "{% example “Longname defined in an @alias tag” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:113
+msgid "Longname defined in an @alias tag"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:139
+#: ../../source/howto/howto-commonjs-modules.rst:129
 msgid "Another solution is to move the method’s JSDoc comment so it comes immediately before ``exports.wash``. This change allows JSDoc to detect that ``wash`` is exported by the module ``my/shirt``:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:143
-msgid "{% example “JSDoc comment immediately before exports.wash” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:133
+msgid "JSDoc comment immediately before exports.wash"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:161
+#: ../../source/howto/howto-commonjs-modules.rst:148
 msgid "Values assigned to ‘module.exports’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:163
+#: ../../source/howto/howto-commonjs-modules.rst:150
 msgid "In a Node.js module, you can assign a value directly to ``module.exports``. This section explains how to document different types of values when they are assigned to ``module.exports``."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:168
+#: ../../source/howto/howto-commonjs-modules.rst:155
 msgid "Object literal assigned to ‘module.exports’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:170
+#: ../../source/howto/howto-commonjs-modules.rst:157
 msgid "If a module assigns an object literal to ``module.exports``. JSDoc automatically recognizes that the module exports only this value. In addition, JSDoc automatically sets the correct longname for each property:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:175
-msgid "{% example “Object literal assigned to module.exports” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:162
+msgid "Object literal assigned to module.exports"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:208
+#: ../../source/howto/howto-commonjs-modules.rst:192
 msgid "You can also use this pattern if you add properties to ``module.exports`` outside of the object literal:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:211
-msgid "{% example “Assignment to module.exports followed by property definition” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:195
+msgid "Assignment to module.exports followed by property definition"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:246
+#: ../../source/howto/howto-commonjs-modules.rst:226
+#: ../../source/howto/howto-commonjs-modules.rst:231
 msgid "Function assigned to ‘module.exports’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:248
+#: ../../source/howto/howto-commonjs-modules.rst:228
 msgid "If you assign a function to ``module.exports``, JSDoc will automatically set the correct longname for the function:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:251
-msgid "{% example “Function assigned to ‘module.exports’” %}"
-msgstr ""
-
-#: ../../source/howto/howto-commonjs-modules.rst:272
+#: ../../source/howto/howto-commonjs-modules.rst:249
 msgid "The same pattern works for constructor functions:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:274
-msgid "{% example “Constructor assigned to ‘module.exports’” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:251
+msgid "Constructor assigned to ‘module.exports’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:291
+#: ../../source/howto/howto-commonjs-modules.rst:265
 msgid "String, number, or boolean assigned to ‘module.exports’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:293
-msgid "For value types (strings, numbers, and booleans) assigned to ``module.exports``, you must document the exported value’s type by using the ```@type`` tag <tags-type.html>`__ in the same JSDoc comment as the ``@module`` tag:"
+#: ../../source/howto/howto-commonjs-modules.rst:267
+msgid "For value types (strings, numbers, and booleans) assigned to ``module.exports``, you must document the exported value’s type by using the `@type tag <tags-type.html>`__ in the same JSDoc comment as the ``@module`` tag:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:298
-msgid "{% example “String assigned to module.exports” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:272
+msgid "String assigned to module.exports"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:313
+#: ../../source/howto/howto-commonjs-modules.rst:284
 msgid "Values assigned to ‘module.exports’ and local variables"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:315
-msgid "If your module exports symbols that are not directly assigned to ``module.exports``, you can use the ```@exports`` tag <tags-exports.html>`__ in place of the ``@module`` tag. The ``@exports`` tag tells JSDoc that a symbol represents the value exported by a module."
+#: ../../source/howto/howto-commonjs-modules.rst:286
+msgid "If your module exports symbols that are not directly assigned to ``module.exports``, you can use the `@exports tag <tags-exports.html>`__ in place of the ``@module`` tag. The ``@exports`` tag tells JSDoc that a symbol represents the value exported by a module."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:321
-msgid "{% example “Object literal assigned to a local variable and module.exports” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:293
+msgid "Object literal assigned to a local variable and module.exports"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:345
+#: ../../source/howto/howto-commonjs-modules.rst:313
 msgid "Properties added to ‘this’"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:347
+#: ../../source/howto/howto-commonjs-modules.rst:315
 msgid "When a module adds a property to its ``this`` object, JSDoc 3 automatically recognizes that the new property is exported by the module:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:351
-msgid "{% example “Properties added to a module’s ‘this’ object” %}"
+#: ../../source/howto/howto-commonjs-modules.rst:319
+msgid "Properties added to a module’s ‘this’ object"
 msgstr ""
 
 #: ../../source/howto/howto-es2015-classes.rst:2
@@ -307,31 +272,31 @@ msgid "The following example shows how to document a simple class with a constru
 msgstr ""
 
 #: ../../source/howto/howto-es2015-classes.rst:18
-msgid "{% example “Simple ES 2015 class” %}"
+msgid "Simple ES 2015 class"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:61
+#: ../../source/howto/howto-es2015-classes.rst:58
 msgid "You can also document classes that are defined in a class expression, which assigns the class to a variable or constant:"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:64
-msgid "{% example “ES 2015 class expression” %}"
+#: ../../source/howto/howto-es2015-classes.rst:61
+msgid "ES 2015 class expression"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:76
+#: ../../source/howto/howto-es2015-classes.rst:70
 msgid "Extending classes"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:78
-msgid "When you use the ``extends`` keyword to extend an existing class, you also need to tell JSDoc which class you’re extending. You do this with the ```@augments`` (or ``@extends``) tag <tags-augments.html>`__."
+#: ../../source/howto/howto-es2015-classes.rst:72
+msgid "When you use the ``extends`` keyword to extend an existing class, you also need to tell JSDoc which class you’re extending. You do this with the `@augments  (or ``@extends``) tag <tags-augments.html>`__."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:82
+#: ../../source/howto/howto-es2015-classes.rst:76
 msgid "For example, to extend the ``Point`` class shown above:"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:84
-msgid "{% example “Extending an ES 2015 class” %}"
+#: ../../source/howto/howto-es2015-classes.rst:78
+msgid "Extending an ES 2015 class"
 msgstr ""
 
 #: ../../source/howto/howto-es2015-modules.rst:2
@@ -343,7 +308,7 @@ msgid "JSDoc 3 makes it possible to document modules that follow the `ECMAScript
 msgstr ""
 
 #: ../../source/howto/howto-es2015-modules.rst:12
-msgid "When you document an ES 2015 module, you’ll use a ```@module`` tag <tags-module.html>`__ to document the identifier for the module. For example, if users load the module by calling ``import * as myShirt from 'my/shirt'``, you’ll write a JSDoc comment that contains the tag ``@module my/shirt``."
+msgid "When you document an ES 2015 module, you’ll use a `@module tag <tags-module.html>`__ to document the identifier for the module. For example, if users load the module by calling ``import * as myShirt from 'my/shirt'``, you’ll write a JSDoc comment that contains the tag ``@module my/shirt``."
 msgstr ""
 
 #: ../../source/howto/howto-es2015-modules.rst:35
@@ -359,7 +324,7 @@ msgid "The following example shows how to document different kinds of exported v
 msgstr ""
 
 #: ../../source/howto/howto-es2015-modules.rst:50
-msgid "{% example “Documenting values exported by a module” %}"
+msgid "Documenting values exported by a module"
 msgstr ""
 
 #: ../../source/howto/index.rst:2

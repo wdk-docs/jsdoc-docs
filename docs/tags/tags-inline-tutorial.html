@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="JSDoc示例" href="../howto/index.html" />
-    <link rel="prev" title="@inline-link" href="tags-inline-link.html" /> 
+    <link rel="prev" title="@link" href="tags-inline-link.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,8 +92,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-author.html">&#64;author</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
@@ -153,13 +151,8 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;inline-tutorial</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#syntax">语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;inline-tutorial</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../howto/index.html">JSDoc示例</a></li>
@@ -233,29 +226,31 @@
             
   <div class="section" id="inline-tutorial">
 <h1>&#64;inline-tutorial<a class="headerlink" href="#inline-tutorial" title="永久链接至标题">¶</a></h1>
-<div class="section" id="syntax">
-<h2>语法<a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="p">}</span>
+<dl class="directive">
+<dt id="directive-&#64;inline-tutorial">
+<code class="descname">.. &#64;inline-tutorial::</code><a class="headerlink" href="#directive-@inline-tutorial" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">语法</dt>
+<dd class="field-odd"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="p">}</span>
 <span class="p">[</span><span class="n">link</span> <span class="n">text</span><span class="p">]{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="p">}</span>
 <span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span><span class="o">|</span><span class="n">link</span> <span class="n">text</span><span class="p">}</span>
 <span class="p">{</span><span class="nd">@tutorial</span> <span class="n">tutorialID</span> <span class="n">link</span> <span class="n">text</span> <span class="p">(</span><span class="n">after</span> <span class="n">the</span> <span class="n">first</span> <span class="n">space</span><span class="p">)}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag creates a link to the tutorial identifier
-that you specify. When you use the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag, you can also
+</dd>
+<dt class="field-even">概述</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> inline tag creates a link to the tutorial identifier
+that you specify. When you use the <a class="reference internal" href="tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> tag, you can also
 provide link text, using one of several different formats. If you don’t
 provide any link text, JSDoc uses the tutorial’s title as the link text.</p>
-<p>If you need to link to a namepath or a URL, use the <code class="docutils literal notranslate"><span class="pre">`{&#64;link}</span></code> inline
-tag &lt;tags-inline-link.html&gt;`__ instead of the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag.</p>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>The following example shows all of the ways to provide link text for the
-<code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> tag:</p>
-<p>{% example “Providing link text” %}</p>
+<p>If you need to link to a namepath or a URL,
+use the <a class="reference internal" href="tags-inline-link.html#directive-&#64;link" title="&#64;link directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;link</span></code></a> <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;inline</span></code> instead of the <a class="reference internal" href="tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> tag.</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>The following example shows all of the ways to provide link text for the
+<a class="reference internal" href="tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> tag:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Providing link text</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * See {@tutorial gettingstarted} and [Configuring the Dashboard]{@tutorial dashboard}.</span>
 <span class="cm"> * For more information, see {@tutorial create|Creating a Widget} and</span>
@@ -264,19 +259,21 @@ tag &lt;tags-inline-link.html&gt;`__ instead of the <code class="docutils litera
 <span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>If all of these tutorials are defined, and the title of the
-<code class="docutils literal notranslate"><span class="pre">gettingstarted</span></code> tutorial is “Getting Started,” the example above
-produces output similar to the following:</p>
-<p>{% example “Output for <a class="reference external" href="mailto:{&#37;&#52;&#48;link">{<span>&#64;</span>link</a>} tags” %}</p>
+</div>
+<p>如果定义了所有这些教程, 并且``gettingstarted``教程的标题是“Getting Started”, 则上面的示例将生成类似于以下内容的输出:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Output for <a class="reference internal" href="tags-inline-link.html#directive-&#64;link" title="&#64;link directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;link</span></code></a> tags</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>See <span class="ni">&amp;lt;</span>a href=&quot;tutorial-gettingstarted.html&quot;&gt;Getting Started<span class="ni">&amp;lt;</span>/a&gt; and
 <span class="ni">&amp;lt;</span>a href=&quot;tutorial-dashboard.html&quot;&gt;Configuring the Dashboard<span class="ni">&amp;lt;</span>/a&gt;.
 For more information, see <span class="ni">&amp;lt;</span>a href=&quot;tutorial-create.html&quot;&gt;Creating a Widget<span class="ni">&amp;lt;</span>/a&gt; and
 <span class="ni">&amp;lt;</span>a href=&quot;tutorial-destroy.html&quot;&gt;Destroying a Widget<span class="ni">&amp;lt;</span>/a&gt;.
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -290,7 +287,7 @@ For more information, see <span class="ni">&amp;lt;</span>a href=&quot;tutorial-
         <a href="../howto/index.html" class="btn btn-neutral float-right" title="JSDoc示例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tags-inline-link.html" class="btn btn-neutral float-left" title="@inline-link" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tags-inline-link.html" class="btn btn-neutral float-left" title="@link" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

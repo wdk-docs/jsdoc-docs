@@ -23,18 +23,14 @@ contents will be rendered in HTML in the generated documentation’s
 Examples
 --------
 
-{% example “Including a README file in your source paths” %}
-
-::
+.. code-block:: sh
+   :caption: Including a README file in your source paths
 
    jsdoc path/to/js path/to/readme/README.md
 
-{% endexample %}
 
-{% example “Using the -R/–readme option” %}
 
-::
+.. code-block:: sh
+   :caption: Using the -R/–readme option
 
    jsdoc --readme path/to/readme/README path/to/js
-
-{% endexample %}

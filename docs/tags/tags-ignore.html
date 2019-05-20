@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-borrows.html">&#64;borrows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-callback.html">&#64;callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-class.html">&#64;class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-classdesc.html">&#64;classdesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constant.html">&#64;constant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-constructs.html">&#64;construct</a></li>
@@ -113,11 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-generator.html">&#64;generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-global.html">&#64;global</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-hideconstructor.html">&#64;hideconstructor</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;ignore</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">示例</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;ignore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-implements.html">&#64;implements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inheritdoc.html">&#64;inherits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inner.html">&#64;inner</a></li>
@@ -157,7 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tags-variation.html">&#64;variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-version.html">&#64;version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-yields.html">&#64;yields</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;inline-link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tags-inline-link.html">&#64;link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tags-inline-tutorial.html">&#64;inline-tutorial</a></li>
 </ul>
 </li>
@@ -232,27 +226,29 @@
             
   <div class="section" id="ignore">
 <h1>&#64;ignore<a class="headerlink" href="#ignore" title="永久链接至标题">¶</a></h1>
-<div class="section" id="overview">
-<h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag indicates that a symbol in your code should never
+<dl class="directive">
+<dt id="directive-&#64;ignore">
+<code class="descname">.. &#64;ignore::</code><a class="headerlink" href="#directive-@ignore" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">概述</dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag indicates that a symbol in your code should never
 appear in the documentation. This tag takes precedence over all others.</p>
 <p>For most JSDoc templates, including the default template, the
-<code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag has the following effects:</p>
+<a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag has the following effects:</p>
 <ul class="simple">
-<li><p>If you use the <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag with the <code class="docutils literal notranslate"><span class="pre">&#64;class</span></code> or <code class="docutils literal notranslate"><span class="pre">&#64;module</span></code>
+<li><p>If you use the <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag with the <a class="reference internal" href="tags-class.html#directive-&#64;class" title="&#64;class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;class</span></code></a> or <a class="reference internal" href="tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a>
 tag, the entire class or module will be omitted from the
 documentation.</p></li>
-<li><p>If you use the <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag with the <code class="docutils literal notranslate"><span class="pre">&#64;namespace</span></code> tag, you must
-also add the <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag to any child classes and namespaces.
+<li><p>If you use the <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag with the <a class="reference internal" href="tags-namespace.html#directive-&#64;namespace" title="&#64;namespace directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;namespace</span></code></a> tag, you must
+also add the <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag to any child classes and namespaces.
 Otherwise, your documentation will show the child classes and
 namespaces, but with incomplete names.</p></li>
 </ul>
-</div>
-<div class="section" id="examples">
-<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
-<p>In the following example, <code class="docutils literal notranslate"><span class="pre">Jacket</span></code> and <code class="docutils literal notranslate"><span class="pre">Jacket#color</span></code> will not
-appear in the documentation.</p>
-<p>{% example “Class with <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag” %}</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>在下面的例子中, <a href="#id1"><span class="problematic" id="id2">``</span></a>Jacket``和``Jacket #color``将不会出现在文档中.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Class with <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @class</span>
 <span class="cm"> * @ignore</span>
@@ -263,12 +259,13 @@ appear in the documentation.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>In the following example, the <code class="docutils literal notranslate"><span class="pre">Clothes</span></code> namespace contains a
-<code class="docutils literal notranslate"><span class="pre">Jacket</span></code> class. The <code class="docutils literal notranslate"><span class="pre">&#64;ignore</span></code> tag must be added to both <code class="docutils literal notranslate"><span class="pre">Clothes</span></code>
+<code class="docutils literal notranslate"><span class="pre">Jacket</span></code> class. The <a class="reference internal" href="#directive-&#64;ignore" title="&#64;ignore directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;ignore</span></code></a> tag must be added to both <code class="docutils literal notranslate"><span class="pre">Clothes</span></code>
 and <code class="docutils literal notranslate"><span class="pre">Clothes.Jacket</span></code>. <code class="docutils literal notranslate"><span class="pre">Clothes</span></code>, <code class="docutils literal notranslate"><span class="pre">Clothes.Jacket</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">Clothes.Jacket#color</span></code> will not appear in the documentation.</p>
-<p>{% example “Namespace with child class” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Namespace with child class</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @namespace</span>
 <span class="cm"> * @ignore</span>
@@ -285,8 +282,11 @@ and <code class="docutils literal notranslate"><span class="pre">Clothes.Jacket<
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

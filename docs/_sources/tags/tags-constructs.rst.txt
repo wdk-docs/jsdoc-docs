@@ -1,56 +1,49 @@
 @construct
 =============================
 
-Overview
---------
+.. rst:directive:: @construct
 
-When using an object literal to define a class (for example with the
-``@lends`` tag) the ``@constructs`` tag allows you to document that a
-particular function will be used to construct instances of that class.
+   :Overview:
 
-Syntax
-------
+      When using an object literal to define a class (for example with the
+      :rst:dir:`@lends` tag) the :rst:dir:`@constructs` tag allows you to document that a
+      particular function will be used to construct instances of that class.
 
-``@constructs [<name>]``
+   :Syntax:
 
-Examples
---------
+      ``@constructs [<name>]``
 
-{% example “Using the @constructs tag with @lends” %}
+   :Examples:
 
-.. code-block:: js
+      .. code-block:: js
+         :caption: Using the @constructs tag with @lends
 
-   var Person = makeClass(
-       /** @lends Person.prototype */
-       {
-           /** @constructs */
-           initialize: function(name) {
-               this.name = name;
-           },
-           /** Describe me. */
-           say: function(message) {
-               return this.name + " says: " + message;
-           }
-       }
-   );
+         var Person = makeClass(
+             /** @lends Person.prototype */
+             {
+                 /** @constructs */
+                 initialize: function(name) {
+                     this.name = name;
+                 },
+                 /** Describe me. */
+                 say: function(message) {
+                     return this.name + " says: " + message;
+                 }
+             }
+         );
 
-{% endexample %}
+      .. code-block:: js
+         :caption: Without @lends you must provide the name of the class
 
-{% example “Without @lends you must provide the name of the class” %}
-
-.. code-block:: js
-
-   makeClass('Menu',
-       /**
-        * @constructs Menu
-        * @param items
-        */
-       function (items) { },
-       {
-           /** @memberof Menu# */
-           show: function(){
-           }
-       }
-   );
-
-{% endexample %}
+         makeClass('Menu',
+             /**
+              * @constructs Menu
+              * @param items
+              */
+             function (items) { },
+             {
+                 /** @memberof Menu# */
+                 show: function(){
+                 }
+             }
+         );

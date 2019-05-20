@@ -1,106 +1,105 @@
 @hideconstructor
 =============================
 
-Syntax
-------
+.. rst:directive:: @hideconstructor
 
-``@hideconstructor``
+   :Syntax:
 
-Overview
---------
+         ``@hideconstructor``
 
-The ``@hideconstructor`` tag tells JSDoc that the generated
-documentation should not display the constructor for a class. This tag
-is available in JSDoc 3.5.0 and later.
+   :Overview:
 
-For pre-ES2015 classes, use this tag in combination with the ```@class``
-or ``@constructor`` `tag <tags-class.html>`__.
+      The ``@hideconstructor`` tag tells JSDoc that the generated
+      documentation should not display the constructor for a class. This tag
+      is available in JSDoc 3.5.0 and later.
 
-For ES2015 classes, use this tag in the JSDoc comment for your
-constructor. If your class does not have an explicit constructor, use
-this tag in the JSDoc comment for the class.
+      For pre-ES2015 classes, use this tag in combination with the `@class
+      or ``@constructor`` `tag <tags-class.html>`__.
 
-Examples
---------
+      For ES2015 classes, use this tag in the JSDoc comment for your
+      constructor. If your class does not have an explicit constructor, use
+      this tag in the JSDoc comment for the class.
 
-.. code-block:: js
-   :caption: @hideconstructor tag with pre-ES2015 class
+      :Examples:
 
-   /**
-    * @classdesc Toaster singleton.
-    * @class
-    * @hideconstructor
-    */
-   var Toaster = (function() {
-       var instance = null;
+      .. code-block:: js
+         :caption: @hideconstructor tag with pre-ES2015 class
 
-       function Toaster() {}
+         /**
+          * @classdesc Toaster singleton.
+          * @class
+          * @hideconstructor
+          */
+         var Toaster = (function() {
+             var instance = null;
 
-       /**
-        * Toast an item.
-        *
-        * @alias toast
-        * @memberof Toaster
-        * @instance
-        * @param {BreadyThing} item - The item to toast.
-        * @return {Toast} A toasted bready thing.
-        */
-       Toaster.prototype.toast = function(item) {};
+             function Toaster() {}
 
-       return {
-           /**
-            * Get the Toaster instance.
-            *
-            * @alias Toaster.getInstance
-            * @returns {Toaster} The Toaster instance.
-            */
-           getInstance: function() {
-               if (instance === null) {
-                   instance = new Toaster();
-                   delete instance.constructor;
-               }
+             /**
+              * Toast an item.
+              *
+              * @alias toast
+              * @memberof Toaster
+              * @instance
+              * @param {BreadyThing} item - The item to toast.
+              * @return {Toast} A toasted bready thing.
+              */
+             Toaster.prototype.toast = function(item) {};
 
-               return instance;
-           }
-       };
-   })();
+             return {
+                 /**
+                  * Get the Toaster instance.
+                  *
+                  * @alias Toaster.getInstance
+                  * @returns {Toaster} The Toaster instance.
+                  */
+                 getInstance: function() {
+                     if (instance === null) {
+                         instance = new Toaster();
+                         delete instance.constructor;
+                     }
 
-.. code-block:: js
-   :caption: @hideconstructor tag with ES2015 class
+                     return instance;
+                 }
+             };
+         })();
 
-   /**
-    * Waffle iron singleton.
-    */
-   class WaffleIron {
-       #instance = null;
+      .. code-block:: js
+         :caption: @hideconstructor tag with ES2015 class
 
-       /**
-        * Create the waffle iron.
-        *
-        * @hideconstructor
-        */
-       constructor() {
-           if (#instance) {
-               return #instance;
-           }
+         /**
+          * Waffle iron singleton.
+          */
+         class WaffleIron {
+             #instance = null;
 
-           /**
-            * Cook a waffle.
-            *
-            * @param {Batter} batter - The waffle batter.
-            * @return {Waffle} The cooked waffle.
-            */
-           this.cook = function(batter) {};
+             /**
+              * Create the waffle iron.
+              *
+              * @hideconstructor
+              */
+             constructor() {
+                 if (#instance) {
+                     return #instance;
+                 }
 
-           this.#instance = this;
-       }
+                 /**
+                  * Cook a waffle.
+                  *
+                  * @param {Batter} batter - The waffle batter.
+                  * @return {Waffle} The cooked waffle.
+                  */
+                 this.cook = function(batter) {};
 
-       /**
-        * Get the WaffleIron instance.
-        *
-        * @return {WaffleIron} The WaffleIron instance.
-        */
-       getInstance() {
-           return new WaffleIron();
-       }
-   }
+                 this.#instance = this;
+             }
+
+             /**
+              * Get the WaffleIron instance.
+              *
+              * @return {WaffleIron} The WaffleIron instance.
+              */
+             getInstance() {
+                 return new WaffleIron();
+             }
+         }

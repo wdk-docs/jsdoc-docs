@@ -95,9 +95,9 @@
 <li class="toctree-l2"><a class="reference internal" href="plugins.html">关于JSDoc插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins-markdown.html">markdown插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-package.html">包括包文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="including-readme.html">包括README文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">jsdoc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-package.html">引入包文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="including-readme.html">引入README文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license-jsdoc3.html">License</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
@@ -174,23 +174,22 @@
 <h1>在JSDoc 3中使用namepath<a class="headerlink" href="#using-namepaths-with-jsdoc-3" title="永久链接至标题">¶</a></h1>
 <div class="section" id="namepaths-in-jsdoc-3">
 <h2>JSDoc 3中的Namepaths<a class="headerlink" href="#namepaths-in-jsdoc-3" title="永久链接至标题">¶</a></h2>
-<p>When referring to a JavaScript variable that is elsewhere in your
-documentation, you must provide a unique identifier that maps to that
-variable. A namepath provides a way to do so and disambiguate between
-instance members, static members and inner variables.</p>
-<p>{% example “Basic Syntax Examples of Namepaths in JSDoc 3” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myFunction</span>
-<span class="n">MyConstructor</span>
-<span class="n">MyConstructor</span><span class="c1">#instanceMember</span>
-<span class="n">MyConstructor</span><span class="o">.</span><span class="n">staticMember</span>
-<span class="n">MyConstructor</span><span class="o">~</span><span class="n">innerMember</span> <span class="o">//</span> <span class="n">note</span> <span class="n">that</span> <span class="n">JSDoc</span> <span class="mi">2</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">dash</span>
+<p>在引用文档中其他位置的JavaScript变量时, 必须提供映射到该变量的唯一标识符. 名称路径提供了一种方法, 并在实例成员, 静态成员和内部变量之间消除歧义.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Basic Syntax Examples of Namepaths in JSDoc 3</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>myFunction
+MyConstructor
+MyConstructor#instanceMember
+MyConstructor.staticMember
+MyConstructor~innerMember // note that JSDoc <span class="m">2</span> uses a dash
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>The example below shows: an <em>instance</em> method named “say,” an <em>inner</em>
 function also named “say,” and a <em>static</em> method also named “say.” These
 are three distinct methods that all exist independently of one another.</p>
-<p>{% example “Use a documentation tag to describe your code.” %}</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Use a documentation tag to describe your code.</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
 <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">say</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -211,26 +210,25 @@ are three distinct methods that all exist independently of one another.</p>
 <span class="c1">// there is no way to directly access the inner function from here</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
-<p>You would use three different namepath syntaxes to refer to the three
-different methods:</p>
-<p>{% example “Use a documentation tag to describe your code.” %}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Person</span><span class="c1">#say  // the instance method named &quot;say.&quot;</span>
-<span class="n">Person</span><span class="o">.</span><span class="n">say</span>  <span class="o">//</span> <span class="n">the</span> <span class="n">static</span> <span class="n">method</span> <span class="n">named</span> <span class="s2">&quot;say.&quot;</span>
-<span class="n">Person</span><span class="o">~</span><span class="n">say</span>  <span class="o">//</span> <span class="n">the</span> <span class="n">inner</span> <span class="n">method</span> <span class="n">named</span> <span class="s2">&quot;say.&quot;</span>
+</div>
+<p>您将使用三种不同的名称路径语法来引用三种不同的方法:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Use a documentation tag to describe your code.</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Person#say  // the instance method named <span class="s2">&quot;say.&quot;</span>
+Person.say  // the static method named <span class="s2">&quot;say.&quot;</span>
+Person~say  // the inner method named <span class="s2">&quot;say.&quot;</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>You might wonder why there is a syntax to refer to an inner method when
 that method isn’t directly accessible from outside the function it is
 defined in. While that is true, and thus the “~” syntax is rarely used,
 it <em>is</em> possible to return a reference to an inner method from another
 method inside that container, so it is possible that some object
 elsewhere in your code might borrow an inner method.</p>
-<p>Note that if a constructor has an instance member that is also a
-constructor, you can simply chain the namepaths together to form a
-longer namepath:</p>
-<p>{% example “Use a documentation tag to describe your code.” %}</p>
+<p>请注意, 如果构造函数的实例成员也是构造函数, 则可以将名称路径链接在一起以形成更长的名称路径:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Use a documentation tag to describe your code.</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @constructor */</span>
 <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/** @constructor */</span>
@@ -246,12 +244,12 @@ longer namepath:</p>
 <span class="nx">i</span><span class="p">.</span><span class="nx">consider</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>In this case, to refer to the method named “consider,” you would use the
 following namepath: <code class="docutils literal notranslate"><span class="pre">Person#Idea#consider</span></code></p>
-<p>This chaining can be used with any combination of the connecting
-symbols: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">.</span> <span class="pre">~</span></code></p>
-<p>{% example “Special cases: modules, externals and events.” %}</p>
+<p>这种链接可以与连接符号的任何组合一起使用:  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">.</span> <span class="pre">~</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Special cases: modules, externals and events.</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** A module. Its name is module:foo/bar.</span>
 <span class="cm"> * @module foo/bar</span>
 <span class="cm"> */</span>
@@ -263,14 +261,14 @@ symbols: <code class="docutils literal notranslate"><span class="pre">#</span> <
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>There are some special cases with namepaths:
 [&#64;module]<a class="reference external" href="tags-module.html">module-tag</a> names are prefixed by
 “module:”, [&#64;external]<a class="reference external" href="tags-external.html">external-tag</a> names are
 prefixed by “external:”, and [&#64;event]<a class="reference external" href="tags-event.html">event-tag</a>
 names are prefixed by “event:”.</p>
-<p>{% example “Namepaths of objects with special characters in the name.”
-%}</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Namepaths of objects with special characters in the name.</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace */</span>
 <span class="kd">var</span> <span class="nx">chat</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/**</span>
@@ -298,7 +296,7 @@ names are prefixed by “event:”.</p>
 <span class="cm"> */</span>
 </pre></div>
 </div>
-<p>{% endexample %}</p>
+</div>
 <p>Above is an example of a namespace with “unusual” characters in its
 member names (the hash character, dashes, even quotes). To refer to
 these you just need quote the names: chat.“#channel”,
