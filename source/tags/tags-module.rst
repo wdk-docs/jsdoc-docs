@@ -3,26 +3,21 @@
 
 .. rst:directive:: @module
 
-   :Syntax:
-
-      ``@module [[{<type>}] <moduleName>]``
+   :Syntax: ``@module [[{<type>}] <moduleName>]``
+   :Overview:
 
       In JSDoc 3.3.0 and later, ``<moduleName>`` may include the ``module:``
       prefix. In previous versions, you must omit this prefix.
 
-      Note: If you provide a type, you *must* also provide a name.
-
-   :Overview:
+      .. attention:: If you provide a type, you *must* also provide a name.
 
       The @module tag marks the current file as being its own module. All
       symbols in the file are assumed to be members of the module unless
       documented otherwise.
 
-      Link to a module (e.g. within a
-      [@link]\ `link-tag <tags-inline-link.html>`__ or
-      [@see]\ `see-tag <tags-see.html>`__ tag) using “module:moduleName”. For
-      example, “@module foo/bar” can be linked to using “{@link
-      module:foo/bar}”.
+      Link to a module (e.g. within a [@link]\ :rst:dir:`link` or
+      [@see]\ :rst:dir:`see` tag) using “module:moduleName”. For
+      example, “@module foo/bar” can be linked to using “{@link module:foo/bar}”.
 
       If the module name is not provided, it is derived from the module’s path
       and filename. For example, suppose I have a file ``test.js``, located in

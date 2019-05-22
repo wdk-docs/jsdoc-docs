@@ -1,3 +1,5 @@
+.. _plugins:
+
 About JSDoc plugins
 =================================
 
@@ -7,8 +9,7 @@ Creating and Enabling a Plugin
 There are two steps required to create and enable a new JSDoc plugin:
 
 1. Create a JavaScript module to contain your plugin code.
-2. Include that module in the ``plugins`` array of `JSDoc’s
-   configuration file <about-configuring-jsdoc.html>`__. You can specify
+2. Include that module in the ``plugins`` array of :ref:`configuring-jsdoc`. You can specify
    an absolute or relative path. If you use a relative path, JSDoc
    searches for the plugin in the current working directory; the
    directory where the configuration file is located; and the JSDoc
@@ -76,8 +77,7 @@ parse by modifying the event’s contents.
 
 The event object contains the following properties:
 
--  ``sourcefiles``: An array of paths to source files that will be
-   parsed.
+-  ``sourcefiles``: An array of paths to source files that will be parsed.
 
 Event: fileBegin
 ^^^^^^^^^^^^^^^^
@@ -208,8 +208,7 @@ include:
    recognize. Only available if ``allowUnknownTags`` is set to ``true``
    in JSDoc’s configuration file.
 
-To see the doclets that JSDoc generates for your code, run JSDoc with
-the ``-X`` `command-line option <about-commandline.html>`__.
+To see the doclets that JSDoc generates for your code, run JSDoc with the ``-X`` :ref:`command-line`.
 
 Below is an example of a ``newDoclet`` handler that shouts the
 descriptions:
@@ -249,9 +248,7 @@ specified source files.
 The event object contains the following properties:
 
 -  ``sourcefiles``: An array of paths to source files that were parsed.
--  ``doclets``: An array of doclet objects. See the ```newDoclet``
-   event <#event-newdoclet>`__ for details about the properties that
-   each doclet can contain. Available in JSDoc 3.2.1 and later.
+-  ``doclets``: An array of doclet objects. See the `newDoclet event <#event-newdoclet>`_ for details about the properties that each doclet can contain. Available in JSDoc 3.2.1 and later.
 
 Event: processingComplete
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -263,9 +260,7 @@ results to reflect inherited and borrowed symbols.
 
 The event object contains the following properties:
 
--  ``doclets``: An array of doclet objects. See the ```newDoclet``
-   event <#event-newdoclet>`__ for details about the properties that
-   each doclet can contain.
+-  ``doclets``: An array of doclet objects. See the `newDoclet event <#event-newdoclet>`_ for details about the properties that each doclet can contain.
 
 Tag Definitions
 ~~~~~~~~~~~~~~~
@@ -376,13 +371,9 @@ object that contains a ``visitNode`` function, like so:
 
 The function is called on each node with the following parameters:
 
--  ``node``: The AST node. AST nodes are JavaScript objects that use the
-   format defined by the `ESTree
-   spec <https://github.com/estree/estree>`__. You can use `AST
-   Explorer <https://astexplorer.net/>`__ to see the AST that will be
-   created for your source code. As of version 3.5.0, JSDoc uses the
-   current version of the `Babylon <https://github.com/babel/babylon>`__
-   parser with all plugins enabled.
+-  ``node``: The AST node. AST nodes are JavaScript objects that use the format defined by the `ESTree spec`_.
+   You can use `AST Explorer`_ to see the AST that will be created for your source code.
+   As of version 3.5.0, JSDoc uses the current version of the `Babylon`_ parser with all plugins enabled.
 -  ``e``: The event. If the node is one that the parser handles, the
    event object will already be populated with the same things described
    in the ``symbolFound`` event above. Otherwise, it will be an empty
@@ -447,3 +438,7 @@ JSDoc.
            }
        }
    };
+
+.. _ESTree spec: https://github.com/estree/estree
+.. _AST Explorer: https://astexplorer.net/
+.. _Babylon: https://github.com/babel/babylon

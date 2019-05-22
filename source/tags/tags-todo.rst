@@ -3,10 +3,7 @@
 
 .. rst:directive:: @todo
 
-   :Syntax:
-
-      ``@todo`` text describing thing to do.
-
+   :Syntax: ``@todo`` text describing thing to do.
    :Overview:
 
       The @todo tag allows you to document tasks to be completed for some part

@@ -3,19 +3,13 @@
 
 .. rst:directive:: @interface
 
-   :Syntax:
+   :Syntax: ``@interface [<name>]``
+   :Overview:
 
       With the JSDoc tag dictionary (enabled by default):
 
-      ``@interface [<name>]``
-
-      With the `Closure
-      Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__
+      With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
       tag dictionary:
-
-      :rst:dir:`@interface`
-
-   :Overview:
 
       The :rst:dir:`@interface` tag marks a symbol as an interface that other symbols
       can implement. For example, your code might define a parent class whose

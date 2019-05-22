@@ -1,11 +1,12 @@
+.. _configuring-default-template:
+
 Configuring JSDoc's default template
 ===========================================
 
 JSDoc’s default template provides several options that you can use to
 customize the appearance and content of generated documentation.
 
-To use these options, you must `create a configuration
-file <about-configuring-jsdoc.html>`__ for JSDoc and set the appropriate
+To use these options, you must :ref:`configuring-jsdoc` for JSDoc and set the appropriate
 options in the configuration file.
 
 Generating pretty-printed source files
@@ -47,8 +48,7 @@ following options:
 
 
 
-To copy all of the static files in ``./myproject/static`` to the output
-directory:
+To copy all of the static files in ``./myproject/static`` to the output directory:
 
 .. code-block:: json
    :caption: Copying a directory of images to the output directory
@@ -65,8 +65,8 @@ directory:
      }
    }
 
-If your static files directory contains the file ``./myproject/static/img/screen.png``, you can display the image in your
-docs by using the HTML tag ``<img src="img/screen.png">``.
+If your static files directory contains the file ``./myproject/static/img/screen.png``,
+you can display the image in your docs by using the HTML tag ``<img src="img/screen.png">``.
 
 Showing the current date in the page footer
 -------------------------------------------

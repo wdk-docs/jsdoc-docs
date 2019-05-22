@@ -3,10 +3,7 @@
 
 .. rst:directive:: @generator
 
-   :Syntax:
-
-         ``@generator``
-
+   :Syntax: ``@generator``
    :Overview:
 
       The ``@generator`` tag indicates that a function is a `generator
@@ -22,8 +19,7 @@
 
    :Example:
 
-      The following example shows a virtual comment that uses the
-      ``@generator`` tag:
+      The following example shows a virtual comment that uses the ``@generator`` tag:
 
       .. code-block:: js
          :caption: Virtual comment with @generator tag

@@ -3,10 +3,7 @@
 
 .. rst:directive:: @enum
 
-   :Syntax:
-
-      ``@enum [<type>]``
-
+   :Syntax: ``@enum [<type>]``
    :Overview:
 
       The @enum tag documents a collection of static properties whose values

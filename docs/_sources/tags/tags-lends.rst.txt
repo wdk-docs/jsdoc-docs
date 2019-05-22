@@ -3,10 +3,7 @@
 
 .. rst:directive:: @lends
 
-   :Syntax:
-
-      ``@lends <namepath>``
-
+   :Syntax: ``@lends <namepath>``
    :Overview:
 
       The :rst:dir:`@lends` tag allows you to document all the members of an object

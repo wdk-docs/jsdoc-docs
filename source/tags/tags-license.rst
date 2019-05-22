@@ -3,10 +3,7 @@
 
 .. rst:directive:: @license
 
-   :Syntax:
-
-      ``@license <identifier>``
-
+   :Syntax: ``@license <identifier>``
    :Overview:
 
       The :rst:dir:`@license` tag identifies the software license that applies to any

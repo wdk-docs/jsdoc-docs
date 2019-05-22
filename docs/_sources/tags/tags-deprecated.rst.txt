@@ -3,16 +3,8 @@
 
 .. rst:dir:: @deprecated
 
-   :Syntax:
-
-   ``@deprecated [<some text>]``
-
-   :Overview:
-
-   .. rst:directive:: @deprecated
-
-      The @deprecated tag marks a symbol in your code as being deprecated.
-
+   :Syntax: ``@deprecated [<some text>]``
+   :Overview: The @deprecated tag marks a symbol in your code as being deprecated.
    :Examples:
 
       You can use the @deprecated tag by itself, or include some text that

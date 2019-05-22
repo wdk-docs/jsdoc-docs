@@ -3,15 +3,11 @@
 
 .. rst:directive:: @listens
 
-   :Syntax:
-
-      `@listens <eventName>`
-
+   :Syntax: `@listens <eventName>`
    :Overview:
 
       The :rst:dir:`@listens` tag indicates that a symbol listens for the specified
-      event. Use the `@event tag <tags-event.html>`_ to document the
-      event’s content.
+      event. Use the :rst:dir:`@event` to document the event’s content.
 
    :Example:
 

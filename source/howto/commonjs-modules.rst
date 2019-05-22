@@ -1,31 +1,27 @@
+.. _commonjs-modules:
+
 CommonJS Modules
 ======================
 
 Overview
 -----------
 
-To help you document `CommonJS
-modules <http://wiki.commonjs.org/wiki/Modules/1.1>`__, JSDoc 3
+To help you document `CommonJS modules <http://wiki.commonjs.org/wiki/Modules/1.1>`_, JSDoc 3
 understands many of the conventions used in the CommonJS specification
 (for example, adding properties to the ``exports`` object). In addition,
-JSDoc recognizes the conventions of `Node.js
-modules <http://nodejs.org/api/modules.html>`__, which extend the
-CommonJS standard (for example, assigning a value to
-``module.exports``). Depending on the coding conventions you follow, you
-may need to provide some additional tags to help JSDoc understand your
-code.
+JSDoc recognizes the conventions of `Node.js modules <http://nodejs.org/api/modules.html>`_, which extend the
+CommonJS standard (for example, assigning a value to ``module.exports``). Depending on the coding conventions you follow,
+you may need to provide some additional tags to help JSDoc understand your code.
 
 This page explains how to document CommonJS and Node.js modules that use
 several different coding conventions. If you’re documenting Asynchronous
-Module Definition (AMD) modules (also known as “RequireJS modules”), see
-`AMD Modules <howto-amd-modules.html>`__.
+Module Definition (AMD) modules (also known as “RequireJS modules”), see :rst:dir:`amd-modules`.
 
 Module identifiers
 ------------------
 
 In most cases, your CommonJS or Node.js module should include a
-standalone JSDoc comment that contains a `@module
-tag <tags-module.html>`__. The :rst:dir:`@module` tag’s value should be the
+standalone JSDoc comment that contains a :rst:dir:`@module`. The :rst:dir:`@module` tag’s value should be the
 module identifier that’s passed to the ``require()`` function. For
 example, if users load the module by calling ``require('my/shirt')``,
 your JSDoc comment would contain the tag ``@module my/shirt``.
@@ -33,11 +29,10 @@ your JSDoc comment would contain the tag ``@module my/shirt``.
 If you use the :rst:dir:`@module` tag without a value, JSDoc will try to guess
 the correct module identifier based on the filepath.
 
-When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a
+When you use a JSDoc :ref:`namepaths` to refer to a
 module from another JSDoc comment, you must add the prefix ``module:``.
 For example, if you want the documentation for the module ``my/pants``
-to link to the module ``my/shirt``, you could use the `@see
-tag <tags-see.html>`__ to document ``my/pants`` as follows:
+to link to the module ``my/shirt``, you could use the :rst:dir:`@see` to document ``my/pants`` as follows:
 
 .. code-block:: js
 
@@ -105,7 +100,7 @@ exports a ``wash`` method, and the module itself often calls the
 In this case, JSDoc will *not* automatically document ``wash`` as an
 exported method, because the JSDoc comment appears immediately before
 the local variable ``wash`` rather than ``exports.wash``. One solution
-is to add an `@alias tag <tags-alias.html>`__ that defines the
+is to add an :rst:dir:`@alias` that defines the
 correct longname for the method. In this case, the method is a static
 member of the module ``my/shirt``, so the correct longname is
 ``module:my/shirt.wash``:
@@ -189,8 +184,7 @@ property:
        }
    };
 
-You can also use this pattern if you add properties to
-``module.exports`` outside of the object literal:
+You can also use this pattern if you add properties to ``module.exports`` outside of the object literal:
 
 .. code-block:: js
    :caption: Assignment to module.exports followed by property definition
@@ -264,10 +258,8 @@ The same pattern works for constructor functions:
 String, number, or boolean assigned to ‘module.exports’
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For value types (strings, numbers, and booleans) assigned to
-``module.exports``, you must document the exported value’s type by using
-the `@type tag <tags-type.html>`__ in the same JSDoc comment as the
-:rst:dir:`@module` tag:
+For value types (strings, numbers, and booleans) assigned to ``module.exports``,
+you must document the exported value’s type by using the :rst:dir:`@type` in the same JSDoc comment as the :rst:dir:`@module` tag:
 
 .. code-block:: js
    :caption: String assigned to module.exports
@@ -283,11 +275,9 @@ the `@type tag <tags-type.html>`__ in the same JSDoc comment as the
 Values assigned to ‘module.exports’ and local variables
 -------------------------------------------------------
 
-If your module exports symbols that are not directly assigned to
-``module.exports``, you can use the `@exports
-tag <tags-exports.html>`__ in place of the :rst:dir:`@module` tag. The
-:rst:dir:`@exports` tag tells JSDoc that a symbol represents the value exported
-by a module.
+If your module exports symbols that are not directly assigned to ``module.exports``,
+you can use the :rst:dir:`@exports` in place of the :rst:dir:`@module` tag.
+The :rst:dir:`@exports` tag tells JSDoc that a symbol represents the value exported by a module.
 
 
 .. code-block:: js
@@ -312,9 +302,8 @@ by a module.
 Properties added to ‘this’
 --------------------------
 
-When a module adds a property to its ``this`` object, JSDoc 3
-automatically recognizes that the new property is exported by the
-module:
+When a module adds a property to its ``this`` object,
+JSDoc 3 automatically recognizes that the new property is exported by the module:
 
 .. code-block:: js
    :caption: Properties added to a module’s ‘this’ object

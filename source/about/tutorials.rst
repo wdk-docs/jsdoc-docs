@@ -1,3 +1,5 @@
+.. _tutorials:
+
 Tutorials
 =================
 
@@ -35,11 +37,9 @@ JSDoc assigns an identifier to each tutorial. The identifier is the
 filename without its extension. For example, the identifier for
 ``/path/to/tutorials/overview.md`` is ``overview``.
 
-In tutorial files, you can use the
-```{@link}`` <tags-inline-link.html>`__ and
-```{@tutorial}`` <tags-inline-tutorial.html>`__ inline tags to link to
-other parts of the documentation. JSDoc will automatically resolve the
-links.
+In tutorial files, you can use the :rst:dir:`{@link} <@link>` and :rst:dir:`{@tutorial} <@tutorial>`
+inline tags to link to other parts of the documentation.
+JSDoc will automatically resolve the links.
 
 Configuring titles, order, and hierarchy
 ----------------------------------------
@@ -120,9 +120,8 @@ documentation:
 @tutorial block tag
 ~~~~~~~~~~~~~~~~~~~
 
-If you include a :rst:dir:`@tutorial` `block tag <tags-tutorial.html>`__ in a
-JSDoc comment, the generated documentation will include a link to the
-tutorial you specify.
+If you include a :rst:dir:`@tutorial` in a JSDoc comment,
+the generated documentation will include a link to the tutorial you specify.
 
 .. code-block:: js
    :caption: Using the :rst:dir:`@tutorial` block tag
@@ -135,13 +134,11 @@ tutorial you specify.
     */
    function Socket() {}
 
-{@tutorial} inline tag
-~~~~~~~~~~~~~~~~~~~~~~
+``{@tutorial}`` inline tag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also use the ``{@tutorial}`` `inline
-tag <tags-inline-tutorial.html>`__ to link to a tutorial within the text
-of another tag. By default, JSDoc will use the tutorial’s title as the
-link text.
+You can also use the :rst:dir:`{@tutorial} <@tutorial>` to link to a tutorial within the text of another tag.
+By default, JSDoc will use the tutorial’s title as the link text.
 
 .. code-block:: js
    :caption: Using the ``{@tutorial}`` inline tag

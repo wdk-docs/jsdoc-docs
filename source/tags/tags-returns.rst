@@ -1,18 +1,16 @@
-@return
+@return (synonyms: @return)
 =============================
 
 .. rst:directive:: @returns
 
-   :Syntax:
-
-      ``@returns [{type}] [description]``
+   :Synonyms: :rst:dir:`@return`
+   :Syntax: ``@returns [{type}] [description]``
 
    :Overview:
 
       The :rst:dir:`@returns` tag documents the value that a function returns.
 
-      If you are documenting a generator function, use the `@yields
-      tag <tags-yields.html>`__ instead of this tag.
+      If you are documenting a generator function, use the :rst:dir:`@yields` instead of this tag.
 
    :Examples:
 
@@ -73,3 +71,7 @@
                  resolve(a + b);
              });
          }
+
+.. rst:directive:: @return
+
+   :Synonyms: :rst:dir:`@returns`

@@ -3,8 +3,8 @@
 
 .. rst:directive:: @version
 
+   :Syntax: ``@version``
    :Overview:
-
 
       Documents the version of an item. The text following the @version tag
       will be used to denote the version of the item.

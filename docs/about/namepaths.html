@@ -171,7 +171,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-namepaths-with-jsdoc-3">
-<h1>在JSDoc 3中使用namepath<a class="headerlink" href="#using-namepaths-with-jsdoc-3" title="永久链接至标题">¶</a></h1>
+<span id="namepaths"></span><h1>在JSDoc 3中使用namepath<a class="headerlink" href="#using-namepaths-with-jsdoc-3" title="永久链接至标题">¶</a></h1>
 <div class="section" id="namepaths-in-jsdoc-3">
 <h2>JSDoc 3中的Namepaths<a class="headerlink" href="#namepaths-in-jsdoc-3" title="永久链接至标题">¶</a></h2>
 <p>在引用文档中其他位置的JavaScript变量时, 必须提供映射到该变量的唯一标识符. 名称路径提供了一种方法, 并在实例成员, 静态成员和内部变量之间消除歧义.</p>
@@ -245,8 +245,8 @@ elsewhere in your code might borrow an inner method.</p>
 </pre></div>
 </div>
 </div>
-<p>In this case, to refer to the method named “consider,” you would use the
-following namepath: <code class="docutils literal notranslate"><span class="pre">Person#Idea#consider</span></code></p>
+<p>In this case, to refer to the method named “consider,”
+you would use the following namepath: <code class="docutils literal notranslate"><span class="pre">Person#Idea#consider</span></code></p>
 <p>这种链接可以与连接符号的任何组合一起使用:  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">.</span> <span class="pre">~</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">Special cases: modules, externals and events.</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
@@ -263,10 +263,9 @@ following namepath: <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <p>There are some special cases with namepaths:
-[&#64;module]<a class="reference external" href="tags-module.html">module-tag</a> names are prefixed by
-“module:”, [&#64;external]<a class="reference external" href="tags-external.html">external-tag</a> names are
-prefixed by “external:”, and [&#64;event]<a class="reference external" href="tags-event.html">event-tag</a>
-names are prefixed by “event:”.</p>
+[<a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a>]module names are prefixed by “module:”,
+[<a class="reference internal" href="../tags/tags-external.html#directive-&#64;external" title="&#64;external directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;external</span></code></a>]external names are prefixed by “external:”,
+and [<a class="reference internal" href="../tags/tags-event.html#directive-&#64;event" title="&#64;event directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;event</span></code></a>]event names are prefixed by “event:”.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-text">Namepaths of objects with special characters in the name.</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** @namespace */</span>

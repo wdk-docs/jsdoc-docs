@@ -3,6 +3,7 @@
 
 .. rst:directive:: @static
 
+   :Syntax: ``@static``
    :Overview:
 
       The @static tag indicates that a symbol is contained within a parent and

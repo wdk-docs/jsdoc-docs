@@ -3,18 +3,15 @@
 
 .. rst:directive:: @hideconstructor
 
-   :Syntax:
-
-         ``@hideconstructor``
-
+   :Syntax: ``@hideconstructor``
    :Overview:
 
       The ``@hideconstructor`` tag tells JSDoc that the generated
       documentation should not display the constructor for a class. This tag
       is available in JSDoc 3.5.0 and later.
 
-      For pre-ES2015 classes, use this tag in combination with the `@class
-      or ``@constructor`` `tag <tags-class.html>`__.
+      For pre-ES2015 classes, use this tag in combination with the :rst:dir:`@class`
+      or :rst:dir:`@constructor`.
 
       For ES2015 classes, use this tag in the JSDoc comment for your
       constructor. If your class does not have an explicit constructor, use
@@ -64,7 +61,7 @@
              };
          })();
 
-      .. code-block:: js
+      .. code-block::
          :caption: @hideconstructor tag with ES2015 class
 
          /**

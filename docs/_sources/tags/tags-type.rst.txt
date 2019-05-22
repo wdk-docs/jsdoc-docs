@@ -16,9 +16,8 @@
 
       A type expression can include the JSDoc namepath to a symbol (for
       example, ``myNamespace.MyClass``); a built-in JavaScript type (for
-      example, ``string``); or a combination of these. You can use any `Google
-      Closure Compiler type
-      expression <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#type-expressions>`__,
+      example, ``string``); or a combination of these. You can use any
+      `Google Closure Compiler type expression <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#type-expressions>`__,
       as well as several other formats that are specific to JSDoc.
 
       If JSDoc determines that a type expression is invalid, it will display

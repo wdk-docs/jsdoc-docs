@@ -96,7 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#configuring-titles-order-and-hierarchy">配置标题, 顺序和层次结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#linking-to-tutorials-from-api-documentation">链接API文档中的教程</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-block-tag">&#64;tutorial 块标签</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tutorial-inline-tag">{&#64;tutorial} 内联标签</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tutorial-inline-tag"><code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag</a></li>
 </ul>
 </li>
 </ul>
@@ -177,7 +177,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="tutorials">
-<h1>教程<a class="headerlink" href="#tutorials" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>教程<a class="headerlink" href="#tutorials" title="永久链接至标题">¶</a></h1>
 <p>JSDoc allows you to include tutorials alongside your API documentation.
 You can use this feature to provide detailed instructions for using your
 API, such as a “getting started” guide or a step-by-step process for
@@ -199,7 +199,9 @@ implementing a feature.</p>
 </ul>
 <p>JSDoc还搜索包含有关教程的标题, 顺序和层次结构的信息的JSON文件, 如以下部分所述.</p>
 <p>JSDoc为每个教程分配一个标识符. 标识符是没有扩展名的文件名. 例如, <code class="docutils literal notranslate"><span class="pre">/path/to/tutorials/overview.md</span></code> 的标识符是 <code class="docutils literal notranslate"><span class="pre">overview</span></code>.</p>
-<p>在教程文件中, 您可以使用 <a class="reference external" href="tags-inline-link.html">{&#64;link}</a> 和 <a class="reference external" href="tags-inline-tutorial.html">{&#64;tutorial}</a> inline标签链接到文档的其他部分. JSDoc将自动解析链接.</p>
+<p>In tutorial files, you can use the <a class="reference internal" href="../tags/tags-inline-link.html#directive-&#64;link" title="&#64;link directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">{&#64;link}</span></code></a> and <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code></a>
+inline tags to link to other parts of the documentation.
+JSDoc will automatically resolve the links.</p>
 </div>
 <div class="section" id="configuring-titles-order-and-hierarchy">
 <h2>配置标题, 顺序和层次结构<a class="headerlink" href="#configuring-titles-order-and-hierarchy" title="永久链接至标题">¶</a></h2>
@@ -258,11 +260,10 @@ implementing a feature.</p>
 <p>有多种方法可以从API文档链接到教程:</p>
 <div class="section" id="tutorial-block-tag">
 <h3>&#64;tutorial 块标签<a class="headerlink" href="#tutorial-block-tag" title="永久链接至标题">¶</a></h3>
-<p>If you include a <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> <a class="reference external" href="tags-tutorial.html">block tag</a> in a
-JSDoc comment, the generated documentation will include a link to the
-tutorial you specify.</p>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Using the <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> block tag</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<p>If you include a <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> in a JSDoc comment,
+the generated documentation will include a link to the tutorial you specify.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Using the <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;tutorial</span></code></a> block tag</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Class representing a socket connection.</span>
 <span class="cm"> *</span>
@@ -275,13 +276,11 @@ tutorial you specify.</p>
 </div>
 </div>
 <div class="section" id="tutorial-inline-tag">
-<h3><a class="reference external" href="mailto:{&#37;&#52;&#48;tutorial">{<span>&#64;</span>tutorial</a>} 内联标签<a class="headerlink" href="#tutorial-inline-tag" title="永久链接至标题">¶</a></h3>
-<p>You can also use the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> <a class="reference external" href="tags-inline-tutorial.html">inline
-tag</a> to link to a tutorial within the text
-of another tag. By default, JSDoc will use the tutorial’s title as the
-link text.</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Using the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<h3><code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag<a class="headerlink" href="#tutorial-inline-tag" title="永久链接至标题">¶</a></h3>
+<p>You can also use the <a class="reference internal" href="../tags/tags-tutorial.html#directive-&#64;tutorial" title="&#64;tutorial directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code></a> to link to a tutorial within the text of another tag.
+By default, JSDoc will use the tutorial’s title as the link text.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Using the <code class="docutils literal notranslate"><span class="pre">{&#64;tutorial}</span></code> inline tag</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Class representing a socket connection. See {@tutorial socket-tutorial}</span>
 <span class="cm"> * for an overview.</span>

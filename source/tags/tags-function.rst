@@ -1,12 +1,12 @@
-@function
-=============================
+@function (synonyms: @func, @method)
+========================================
 
 .. rst:directive:: @function
 
+   :Synonyms: :rst:dir:`@func`, :rst:dir:`@method`
    :Syntax: ``@function [<FunctionName>]``
    :Overview: This marks an object as being a function, even though it may not appear
-      to be one to the parser. It sets the doclet’s
-      :rst:dir:`@kind` to ‘function’.
+      to be one to the parser. It sets the doclet’s :rst:dir:`@kind` to ‘function’.
 
    :Examples:
 
@@ -29,3 +29,11 @@
          // the above is the same as:
          /** @function
           * @name myFunction */
+
+.. rst:directive:: @func
+
+   :Synonyms: :rst:dir:`@function`
+
+.. rst:directive:: @method
+
+   :Synonyms: :rst:dir:`@function`

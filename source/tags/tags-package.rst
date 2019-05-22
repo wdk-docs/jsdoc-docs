@@ -3,19 +3,14 @@
 
 .. rst:directive:: @package
 
-   :Syntax:
+   :Syntax: ``@package [{typeExpression}]``
+   :Overview:
 
       With the JSDoc tag dictionary (enabled by default):
 
-      :rst:dir:`@package`
-
-       With the `Closure
-       Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
+      :rst:dir:`@package` With the
+      `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
        tag dictionary:
-
-       ``@package [{typeExpression}]``
-
-   :Overview:
 
       The :rst:dir:`@package` tag marks a symbol as package-private. Typically, this
       tag indicates that a symbol is available only to code in the same
@@ -24,7 +19,7 @@
 
       By default, symbols marked with the :rst:dir:`@package` tag will appear in your
       documentation. In JSDoc 3.3.0 and later, you can use the
-      ``-a/--access`` `command-line option <about-commandline.html>`__ to
+      ``-a/--access`` :ref:`command-line` to
       change this behavior.
 
       The :rst:dir:`@package` tag is equivalent to ``@access package``.

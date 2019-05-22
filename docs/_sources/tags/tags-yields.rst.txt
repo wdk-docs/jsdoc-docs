@@ -1,19 +1,16 @@
-@yields
+@yields (synonyms: @yield)
 =============================
 
 .. rst:directive:: @yields
 
-   :Syntax:
-
-      ``@yields [{type}] [description]``
-
+   :Synonyms: :rst:dir:`@yield`
+   :Syntax: ``@yields [{type}] [description]``
    :Overview:
 
       The :rst:dir:`@yields` tag documents the value that is yielded by a generator
       function. This tag is available in JSDoc 3.5.0 and later.
 
-      If you are documenting a regular function, use the `@returns
-      tag <tags-returns.html>`__ instead of this tag.
+      If you are documenting a regular function, use the :rst:dir:`@returns` instead of this tag.
 
    :Examples:
 
@@ -36,3 +33,7 @@
           * @yields {number} The next number in the Fibonacci sequence.
           */
          function* fibonacci() {}
+
+.. rst:directive:: @yield
+
+   :Synonyms: :rst:dir:`@yields`

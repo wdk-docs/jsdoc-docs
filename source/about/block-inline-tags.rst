@@ -1,3 +1,5 @@
+.. _block-inline-tags:
+
 Block and inline tags
 =================================
 
@@ -7,8 +9,7 @@ Overview
 JSDoc supports two different kinds of tags:
 
 -  **Block tags**, which are at the top level of a JSDoc comment.
--  **Inline tags**, which are within the text of a block tag or a
-   description.
+-  **Inline tags**, which are within the text of a block tag or a description.
 
 Block tags usually provide detailed information about your code, such as
 the parameters that a function accepts. Inline tags usually link to
@@ -32,8 +33,7 @@ Most JSDoc tags are block tags. In general, when this site refers to
 Examples
 --------
 
-In the following example, :rst:dir:`@param` is a block tag, and ``{@link}`` is
-an inline tag:
+In the following example, :rst:dir:`@param` is a block tag, and :rst:dir:`{@link} <@link>` is an inline tag:
 
 .. code-block:: js
    :caption: Block and inline tags in JSDoc comments
@@ -47,8 +47,7 @@ an inline tag:
        // ...
    };
 
-You can use inline tags within a description, as shown above, or within
-a block tag, as shown below:
+You can use inline tags within a description, as shown above, or within a block tag, as shown below:
 
 .. code-block:: js
    :caption: Inline tag used within a block tag
@@ -63,8 +62,7 @@ a block tag, as shown below:
        // ...
    };
 
-When you use multiple block tags in a JSDoc comment, they must be
-separated by line breaks:
+When you use multiple block tags in a JSDoc comment, they must be separated by line breaks:
 
 .. code-block:: js
    :caption: Multiple block tags separated by line breaks

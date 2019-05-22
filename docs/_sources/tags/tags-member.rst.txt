@@ -1,11 +1,10 @@
-@member
+@member (synonyms: @var)
 =============================
 
 .. rst:directive:: @member
 
-   :Syntax:
-
-      ``@member [<type>] [<name>]``
+   :Synonyms: :rst:dir:`@var`
+   :Syntax: ``@member [<type>] [<name>]``
 
    :Overview:
 
@@ -44,3 +43,7 @@
           * @type {number}
           */
          var foo;
+
+.. rst:directive:: @var
+
+   :Synonyms: :rst:dir:`@member`

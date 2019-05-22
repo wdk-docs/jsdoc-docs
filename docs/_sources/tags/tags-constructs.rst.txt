@@ -1,17 +1,14 @@
-@construct
+@constructs
 =============================
 
-.. rst:directive:: @construct
+.. rst:directive:: @constructs
 
+   :Syntax: ``@constructs [<name>]``
    :Overview:
 
       When using an object literal to define a class (for example with the
       :rst:dir:`@lends` tag) the :rst:dir:`@constructs` tag allows you to document that a
       particular function will be used to construct instances of that class.
-
-   :Syntax:
-
-      ``@constructs [<name>]``
 
    :Examples:
 

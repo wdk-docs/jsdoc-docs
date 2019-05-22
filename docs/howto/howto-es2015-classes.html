@@ -164,18 +164,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ecmascript-2015-classes">
-<h1>ECMAScript 2015 类<a class="headerlink" href="#ecmascript-2015-classes" title="永久链接至标题">¶</a></h1>
-<p>SDoc 3 makes it easy to document classes that follow the <a class="reference external" href="http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions">ECMAScript
-2015
-specification</a>.
-You don’t need to use tags such as <a class="reference internal" href="../tags/tags-class.html#directive-&#64;class" title="&#64;class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;class</span></code></a> and <code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constructor</span></code> with
-ES 2015 classes—JSDoc automatically identifies classes and their
-constructors simply by parsing your code. ES 2015 classes are supported
-in JSDoc 3.4.0 and later.</p>
+<span id="es2015-classes"></span><h1>ECMAScript 2015 类<a class="headerlink" href="#ecmascript-2015-classes" title="永久链接至标题">¶</a></h1>
+<p>SDoc 3 makes it easy to document classes that follow the
+<a class="reference external" href="http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions">ECMAScript 2015 specification</a>.
+You don’t need to use tags such as <a class="reference internal" href="../tags/tags-class.html#directive-&#64;class" title="&#64;class directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;class</span></code></a> and <a class="reference internal" href="../tags/tags-class.html#directive-&#64;constructor" title="&#64;constructor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constructor</span></code></a> with
+ES 2015 classes—JSDoc automatically identifies classes and their constructors simply by parsing your code.
+ES 2015 classes are supported in JSDoc 3.4.0 and later.</p>
 <div class="section" id="documenting-a-simple-class">
 <h2>记录一个简单的类<a class="headerlink" href="#documenting-a-simple-class" title="永久链接至标题">¶</a></h2>
-<p>The following example shows how to document a simple class with a
-constructor, two instance methods, and one static method:</p>
+<p>The following example shows how to document a simple class with a constructor, two instance methods, and one static method:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Simple ES 2015 class</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Class representing a point. */</span>
@@ -233,7 +230,7 @@ which assigns the class to a variable or constant:</p>
 <h2>扩展类<a class="headerlink" href="#extending-classes" title="永久链接至标题">¶</a></h2>
 <p>When you use the <code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword to extend an existing class, you
 also need to tell JSDoc which class you’re extending. You do this with
-the <cite>&#64;augments  (or :rst:dir:`&#64;extends</cite>) tag &lt;tags-augments.html&gt;`__.</p>
+the <a class="reference internal" href="../tags/tags-augments.html#directive-&#64;augments" title="&#64;augments directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;augments</span></code></a> (or <a class="reference internal" href="../tags/tags-augments.html#directive-&#64;extends" title="&#64;extends directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;extends</span></code></a>)。</p>
 <p>例如，扩展上面显示的 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Extending an ES 2015 class</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>

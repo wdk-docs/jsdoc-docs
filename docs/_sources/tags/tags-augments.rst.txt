@@ -3,10 +3,8 @@
 
 .. rst:directive:: @augments
 
-   :Syntax:
-
-      ``@augments <namepath>``
-
+   :Syntax: ``@augments <namepath>``
+   :Synonyms: :rst:dir:`@extends`
    :Overview:
 
       The :rst:dir:`@augments` or\ :rst:dir:`@extends` tag indicates that a symbol inherits
@@ -16,6 +14,8 @@
       In JSDoc 3.3.0 and later, if a symbol inherits from multiple parents,
       and both parents have identically named members, JSDoc uses the
       documentation from the last parent that is listed in the JSDoc comment.
+
+
 
    :Examples:
 
@@ -105,3 +105,7 @@
          Duck.prototype.takeOff = function() {
              // ...
          };
+
+.. rst:directive:: @extends
+
+   :synonyms: :rst:dir:`@augments`

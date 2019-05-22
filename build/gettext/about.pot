@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 18:28+0800\n"
+"POT-Creation-Date: 2019-05-21 23:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,51 +16,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../source/about/block-inline-tags.rst:2
+#: ../../source/about/block-inline-tags.rst:4
 msgid "Block and inline tags"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:5
+#: ../../source/about/block-inline-tags.rst:7
 msgid "Overview"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:7
+#: ../../source/about/block-inline-tags.rst:9
 msgid "JSDoc supports two different kinds of tags:"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:9
+#: ../../source/about/block-inline-tags.rst:11
 msgid "**Block tags**, which are at the top level of a JSDoc comment."
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:10
+#: ../../source/about/block-inline-tags.rst:12
 msgid "**Inline tags**, which are within the text of a block tag or a description."
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:13
+#: ../../source/about/block-inline-tags.rst:14
 msgid "Block tags usually provide detailed information about your code, such as the parameters that a function accepts. Inline tags usually link to other parts of the documentation, similar to the anchor tag (``<a>``) in HTML."
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:18
+#: ../../source/about/block-inline-tags.rst:19
 msgid "Block tags always begin with an at sign (``@``). Each block tag must be followed by a line break, with the exception of the last block tag in a JSDoc comment."
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:22
+#: ../../source/about/block-inline-tags.rst:23
 msgid "Inline tags also begin with an at sign. However, inline tags and their text must be enclosed in curly braces (``{`` and ``}``). The ``{`` denotes the start of the inline tag, and the ``}`` denotes the end of the inline tag. If your tag’s text includes a closing curly brace (``}``), you must escape it with a leading backslash (``\\``). You do not need to use a line break after inline tags."
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:29
+#: ../../source/about/block-inline-tags.rst:30
 msgid "Most JSDoc tags are block tags. In general, when this site refers to “JSDoc tags,” we really mean “block tags.”"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:33
-#: ../../source/about/commandline.rst:111
-#: ../../source/about/including-package.rst:28
-#: ../../source/about/including-readme.rst:24
+#: ../../source/about/block-inline-tags.rst:34
+#: ../../source/about/commandline.rst:110
+#: ../../source/about/including-package.rst:29
+#: ../../source/about/including-readme.rst:26
 msgid "Examples"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:35
-msgid "In the following example, ``@param`` is a block tag, and ``{@link}`` is an inline tag:"
+#: ../../source/about/block-inline-tags.rst:36
+msgid "In the following example, :rst:dir:`@param` is a block tag, and :rst:dir:`{@link} <@link>` is an inline tag:"
 msgstr ""
 
 #: ../../source/about/block-inline-tags.rst:38
@@ -71,267 +71,267 @@ msgstr ""
 msgid "You can use inline tags within a description, as shown above, or within a block tag, as shown below:"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:53
+#: ../../source/about/block-inline-tags.rst:52
 msgid "Inline tag used within a block tag"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:66
+#: ../../source/about/block-inline-tags.rst:65
 msgid "When you use multiple block tags in a JSDoc comment, they must be separated by line breaks:"
 msgstr ""
 
-#: ../../source/about/block-inline-tags.rst:69
+#: ../../source/about/block-inline-tags.rst:67
 msgid "Multiple block tags separated by line breaks"
 msgstr ""
 
-#: ../../source/about/commandline.rst:2
+#: ../../source/about/commandline.rst:4
 msgid "Command-line arguments to JSDoc"
 msgstr ""
 
-#: ../../source/about/commandline.rst:4
+#: ../../source/about/commandline.rst:6
 msgid "At its most basic level, JSDoc is used like so:"
 msgstr ""
 
-#: ../../source/about/commandline.rst:10
+#: ../../source/about/commandline.rst:12
 msgid "where ``...`` are paths to other files to generate documentation for."
 msgstr ""
 
-#: ../../source/about/commandline.rst:12
-msgid "Additionally, one may provide the path to a `Markdown file <http://daringfireball.net/projects/markdown/>`__ (ending in “.md”) or a file named “README”, and this will be added to the documentation on the front page. See `these instructions <about-including-readme.html>`__."
+#: ../../source/about/commandline.rst:14
+msgid "Additionally, one may provide the path to a `Markdown file`_ (ending in “.md”) or a file named “README”, and this will be added to the documentation on the front page. See :ref:`including-readme`."
 msgstr ""
 
 #: ../../source/about/commandline.rst:18
-msgid "JSDoc supports a number of command-line options, many of which have both long and short forms. Alternatively, the command-line options may be `specified in a configuration file <about-configuring-jsdoc.html>`__ given to JSDoc. The command-line options are:"
+msgid "JSDoc supports a number of command-line options, many of which have both long and short forms. Alternatively, the command-line options may be :rst:dir:`configuring-jsdoc` given to JSDoc. The command-line options are:"
 msgstr ""
 
-#: ../../source/about/commandline.rst:24
+#: ../../source/about/commandline.rst:23
 msgid "Option"
 msgstr ""
 
-#: ../../source/about/commandline.rst:24
+#: ../../source/about/commandline.rst:23
 msgid "Description"
 msgstr ""
 
-#: ../../source/about/commandline.rst:26
+#: ../../source/about/commandline.rst:25
 msgid "``-a <value>``, ``--access <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:26
+#: ../../source/about/commandline.rst:25
 msgid "Only display symbols with the given ``access`` property: ``private``, ``protected``, ``public``, or ``undefined``, or ``all`` for all access levels. By default, all except ``private`` symbols are shown."
 msgstr ""
 
-#: ../../source/about/commandline.rst:33
+#: ../../source/about/commandline.rst:32
 msgid "``-c <value>``, ``--configure <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:33
-msgid "The path to a JSDoc `configuration file <about-configuring-jsdoc.html>`__. Defaults to ``conf.json`` or ``conf.json.EXAMPLE`` in the directory where JSDoc is installed."
+#: ../../source/about/commandline.rst:32
+msgid "The path to a JSDoc :ref:`configuring-jsdoc`. Defaults to ``conf.json`` or ``conf.json.EXAMPLE`` in the directory where JSDoc is installed."
 msgstr ""
 
-#: ../../source/about/commandline.rst:39
+#: ../../source/about/commandline.rst:38
 msgid "``-d <value>``, ``--destination <value >``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:39
+#: ../../source/about/commandline.rst:38
 msgid "The path to the output folder for the generated documentation. For JSDoc’s built-in Haruki template, use ``console`` to dump data to the console. Defaults to ``./out``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:45
+#: ../../source/about/commandline.rst:44
 msgid "``--debug``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:45
+#: ../../source/about/commandline.rst:44
 msgid "Log information that can help debug issues in JSDoc itself."
 msgstr ""
 
-#: ../../source/about/commandline.rst:48
+#: ../../source/about/commandline.rst:47
 msgid "``-e <value>``, ``--encoding <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:48
+#: ../../source/about/commandline.rst:47
 msgid "Assume this encoding when reading all source files. Defaults to ``utf8``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:51
+#: ../../source/about/commandline.rst:50
 msgid "``-h``, ``--help``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:51
+#: ../../source/about/commandline.rst:50
 msgid "Display information about JSDoc’s command-line options, then exit."
 msgstr ""
 
-#: ../../source/about/commandline.rst:54
+#: ../../source/about/commandline.rst:53
 msgid "``--match <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:54
+#: ../../source/about/commandline.rst:53
 msgid "Only run tests whose names contain ``value``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:57
+#: ../../source/about/commandline.rst:56
 msgid "``--nocolor``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:57
+#: ../../source/about/commandline.rst:56
 msgid "When running tests, do not use color in the console output. On Windows, this option is enabled by default."
 msgstr ""
 
-#: ../../source/about/commandline.rst:61
+#: ../../source/about/commandline.rst:60
 msgid "``-p``, ``--private``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:61
-msgid "Include symbols marked with the `@private  tag <tags-private.html>`__ in the generated documentation. By default, private symbols are not included."
+#: ../../source/about/commandline.rst:60
+msgid "Include symbols marked with the :rst:dir:`@private` in the generated documentation. By default, private symbols are not included."
 msgstr ""
 
-#: ../../source/about/commandline.rst:66
+#: ../../source/about/commandline.rst:65
 msgid "``-P``, ``--package``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:66
+#: ../../source/about/commandline.rst:65
 msgid "The ``package.json`` file that contains the project name, version, and other details. Defaults to the first ``package.json`` file found in the source paths."
 msgstr ""
 
-#: ../../source/about/commandline.rst:71
+#: ../../source/about/commandline.rst:70
 msgid "``--pedantic``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:71
+#: ../../source/about/commandline.rst:70
 msgid "Treat errors as fatal errors, and treat warnings as errors. Defaults to ``false``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:74
+#: ../../source/about/commandline.rst:73
 msgid "``-q <value>``, ``--query <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:74
+#: ../../source/about/commandline.rst:73
 msgid "A query string to parse and store in the global variable ``env.opts.query``. Example: ``foo=bar&baz=true``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:78
+#: ../../source/about/commandline.rst:77
 msgid "``-r``, ``--recurse``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:78
+#: ../../source/about/commandline.rst:77
 msgid "Recurse into subdirectories when scanning for source files and tutorials."
 msgstr ""
 
-#: ../../source/about/commandline.rst:81
+#: ../../source/about/commandline.rst:80
 msgid "``-R``, ``--readme``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:81
+#: ../../source/about/commandline.rst:80
 msgid "The ``README.md`` file to include in the generated documentation. Defaults to the first ``README.md`` file found in the source paths."
 msgstr ""
 
-#: ../../source/about/commandline.rst:86
+#: ../../source/about/commandline.rst:85
 msgid "``-t <value>``, ``--template <value>``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:86
+#: ../../source/about/commandline.rst:85
 msgid "The path to the template to use for generating output. Defaults to ``templates/default``, JSDoc’s built-in default template."
 msgstr ""
 
-#: ../../source/about/commandline.rst:91
+#: ../../source/about/commandline.rst:90
 msgid "``-T``, ``--test``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:91
+#: ../../source/about/commandline.rst:90
 msgid "Run JSDoc’s test suite, and print the results to the console."
 msgstr ""
 
-#: ../../source/about/commandline.rst:94
+#: ../../source/about/commandline.rst:93
 msgid "``-u <value>``, ``--tutorials <value>` `"
 msgstr ""
 
-#: ../../source/about/commandline.rst:94
+#: ../../source/about/commandline.rst:93
 msgid "Directory in which JSDoc should search for tutorials. If omitted, no tutorial pages will be generated. See the `tutorial instructions <about-tutorials.html>`__ for more information."
 msgstr ""
 
-#: ../../source/about/commandline.rst:100
+#: ../../source/about/commandline.rst:99
 msgid "``-v``, ``--version``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:100
+#: ../../source/about/commandline.rst:99
 msgid "Displays JSDoc’s version number, then exits."
 msgstr ""
 
-#: ../../source/about/commandline.rst:103
+#: ../../source/about/commandline.rst:102
 msgid "``--verbose``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:103
+#: ../../source/about/commandline.rst:102
 msgid "Log detailed information to the console as JSDoc runs. Defaults to ``false``."
 msgstr ""
 
-#: ../../source/about/commandline.rst:106
+#: ../../source/about/commandline.rst:105
 msgid "``-X``, ``--explain``"
 msgstr ""
 
-#: ../../source/about/commandline.rst:106
+#: ../../source/about/commandline.rst:105
 msgid "Dump all doclets to the console in JSON format, then exit."
 msgstr ""
 
-#: ../../source/about/commandline.rst:113
+#: ../../source/about/commandline.rst:112
 msgid "Generate documentation for files in the ``./src`` directory, using the configuration file ``/path/to/my/conf.json``, and save the output in the ``./docs`` directory:"
 msgstr ""
 
-#: ../../source/about/commandline.rst:121
+#: ../../source/about/commandline.rst:120
 msgid "Run all JSDoc tests whose names include the word ``tag``, and log information about each test:"
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:2
+#: ../../source/about/configuring-default-template.rst:4
 msgid "Configuring JSDoc's default template"
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:4
+#: ../../source/about/configuring-default-template.rst:6
 msgid "JSDoc’s default template provides several options that you can use to customize the appearance and content of generated documentation."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:7
-msgid "To use these options, you must `create a configuration file <about-configuring-jsdoc.html>`__ for JSDoc and set the appropriate options in the configuration file."
+#: ../../source/about/configuring-default-template.rst:9
+msgid "To use these options, you must :ref:`configuring-jsdoc` for JSDoc and set the appropriate options in the configuration file."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:12
+#: ../../source/about/configuring-default-template.rst:13
 msgid "Generating pretty-printed source files"
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:14
+#: ../../source/about/configuring-default-template.rst:15
 msgid "By default, JSDoc’s default template generates pretty-printed versions of your source files. It also links to these pretty-printed files in the documentation."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:18
+#: ../../source/about/configuring-default-template.rst:19
 msgid "To disable pretty-printed files, set the option ``templates.default.outputSourceFiles`` to ``false``. Using this option also removes links to your source files from the documentation. This option is available in JSDoc 3.3.0 and later."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:24
+#: ../../source/about/configuring-default-template.rst:25
 msgid "Copying static files to the output directory"
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:26
+#: ../../source/about/configuring-default-template.rst:27
 msgid "JSDoc’s default template automatically copies a few static files, such as CSS stylesheets, to the output directory. In JSDoc 3.3.0 and later, you can tell the default template to copy additional static files to the output directory. For example, you might want to copy a directory of images to the output directory so you can display these images in your documentation."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:33
+#: ../../source/about/configuring-default-template.rst:34
 msgid "To copy additional static files to the output directory, use the following options:"
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:36
+#: ../../source/about/configuring-default-template.rst:37
 msgid "``templates.default.staticFiles.include``: An array of paths whose contents should be copied to the output directory. Subdirectories will be copied as well."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:39
+#: ../../source/about/configuring-default-template.rst:40
 msgid "``templates.default.staticFiles.exclude``: An array of paths that should *not* be copied to the output directory."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:41
+#: ../../source/about/configuring-default-template.rst:42
 msgid "``templates.default.staticFiles.includePattern``: A regular expression indicating which files to copy. If this property is not defined, all files will be copied."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:44
+#: ../../source/about/configuring-default-template.rst:45
 msgid "``templates.default.staticFiles.excludePattern``: A regular expression indicating which files to skip. If this property is not defined, nothing will be skipped."
 msgstr ""
 
-#: ../../source/about/configuring-default-template.rst:50
+#: ../../source/about/configuring-default-template.rst:51
 msgid "To copy all of the static files in ``./myproject/static`` to the output directory:"
 msgstr ""
 
@@ -371,509 +371,509 @@ msgstr ""
 msgid "To use this feature, set the option ``templates.default.layoutFile`` to the path to your customized layout file. Relative paths are resolved against the current working directory; the path to the configuration file; and the JSDoc directory, in that order."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:2
+#: ../../source/about/configuring-jsdoc.rst:4
 msgid "Configuring JSDoc with a configuration file"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:5
+#: ../../source/about/configuring-jsdoc.rst:7
 msgid "Configuration file formats"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:7
+#: ../../source/about/configuring-jsdoc.rst:9
 msgid "To customize JSDoc’s behavior, you can provide a configuration file to JSDoc in one of the following formats:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:9
+#: ../../source/about/configuring-jsdoc.rst:11
 msgid "A JSON file. In JSDoc 3.3.0 and later, this file may include comments."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:10
+#: ../../source/about/configuring-jsdoc.rst:12
 msgid "A CommonJS module that exports a single configuration object. This format is supported in JSDoc 3.5.0 and later."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:12
-msgid "To run JSDoc with a configuration file, use the ``-c`` `command-line option <about-commandline.html>`__ (for example, ``jsdoc -c /path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``)."
+#: ../../source/about/configuring-jsdoc.rst:14
+msgid "To run JSDoc with a configuration file, use the ``-c`` :ref:`command-line` (for example, ``jsdoc -c /path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``)."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:15
-msgid "The following examples show a simple configuration file that enables JSDoc’s `Markdown plugin <plugins-markdown.html>`__. JSDoc’s configuration options are explained in detail in the following sections."
+#: ../../source/about/configuring-jsdoc.rst:16
+msgid "The following examples show a simple configuration file that enables JSDoc’s :ref:`plugins-markdown`. JSDoc’s configuration options are explained in detail in the following sections."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:19
+#: ../../source/about/configuring-jsdoc.rst:20
 msgid "JSON configuration file"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:26
+#: ../../source/about/configuring-jsdoc.rst:27
 msgid "JavaScript configuration file"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:35
-msgid "For a more comprehensive example of a JSON configuration file, see the file `conf.json.EXAMPLE <https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__."
+#: ../../source/about/configuring-jsdoc.rst:36
+msgid "For a more comprehensive example of a JSON configuration file, see the file `conf.json.EXAMPLE`_."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:39
+#: ../../source/about/configuring-jsdoc.rst:40
 msgid "Default configuration options"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:41
+#: ../../source/about/configuring-jsdoc.rst:42
 msgid "If you do not specify a configuration file, JSDoc uses the following configuration options:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:63
+#: ../../source/about/configuring-jsdoc.rst:64
 msgid "This means:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:65
+#: ../../source/about/configuring-jsdoc.rst:66
 msgid "No plugins are loaded (``plugins``)."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:66
-msgid "If recursion is enabled with the ``-r`` `command-line flag <about-commandline.html>`__, JSDoc will search for files 10 levels deep (``recurseDepth``)."
-msgstr ""
-
 #: ../../source/about/configuring-jsdoc.rst:67
-msgid "Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be processed (``source.includePattern``)."
+msgid "If recursion is enabled with the ``-r`` :ref:`command-line`, JSDoc will search for files 10 levels deep (``recurseDepth``)."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:68
-msgid "Any file starting with an underscore, or in a directory starting with an underscore, will be ignored (``source.excludePattern``)."
+msgid "Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be processed (``source.includePattern``)."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:69
-msgid "JSDoc supports code that uses `ES2015 modules <howto-es2015-modules.html>`__ (``sourceType``)."
+msgid "Any file starting with an underscore, or in a directory starting with an underscore, will be ignored (``source.excludePattern``)."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:70
-msgid "JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``)."
+msgid "JSDoc supports code that uses :ref:`es2015-modules` (``sourceType``)."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:71
-msgid "Both standard JSDoc tags and `Closure Compilertags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ are enabled (``tags.dictionaries``)."
+msgid "JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``)."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:72
-msgid "Inline ``{@link}`` `tags <tags-inline-link.html>`__ are rendered in plain text (``templates.cleverLinks``, ``templates.monospaceLinks``)."
+msgid "Both standard JSDoc tags and `Closure Compiler tags`_ are enabled (``tags.dictionaries``)."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:74
+#: ../../source/about/configuring-jsdoc.rst:73
+msgid "Inline :rst:dir:`{@link} <@link>` are rendered in plain text (``templates.cleverLinks``, ``templates.monospaceLinks``)."
+msgstr ""
+
+#: ../../source/about/configuring-jsdoc.rst:75
 msgid "These options and others are explained in the following sections."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:77
+#: ../../source/about/configuring-jsdoc.rst:78
 msgid "Configuring plugins"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:79
+#: ../../source/about/configuring-jsdoc.rst:80
 msgid "To enable plugins, add their paths (relative to the JSDoc folder) into the ``plugins`` array."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:81
+#: ../../source/about/configuring-jsdoc.rst:82
 msgid "For example, the following JSON configuration file will enable the Markdown plugin, which converts Markdown-formatted text to HTML, and the “summarize” plugin, which autogenerates a summary for each doclet:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:85
+#: ../../source/about/configuring-jsdoc.rst:86
 msgid "JSON configuration file with plugins"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:97
-msgid "See the `plugin reference <about-plugins.html>`__ for further information, and look in `JSDoc’s plugins directory <https://github.com/jsdoc3/jsdoc/tree/master/plugins>`_ for the plugins built into JSDoc."
+#: ../../source/about/configuring-jsdoc.rst:98
+msgid "See the :ref:`plugins` for further information, and look in `JSDoc’s plugins directory`_ for the plugins built into JSDoc."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:99
-msgid "You can configure the Markdown plugin by adding a ``markdown`` object to your configuration file. See `Configuring the Markdown Plugin <plugins-markdown.html>`__ for details."
+#: ../../source/about/configuring-jsdoc.rst:101
+msgid "You can configure the Markdown plugin by adding a ``markdown`` object to your configuration file. See :ref:`plugins-markdown` for details."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:102
+#: ../../source/about/configuring-jsdoc.rst:105
 msgid "Specifying recursion depth"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:104
-msgid "The ``recurseDepth`` option controls how many levels deep JSDoc will recursively search for source files and tutorials. This option is available in JSDoc 3.5.0 and later. This option is used only if you also specify the ``-r`` `command-line flag <about-commandline.html>`__, which tells JSDoc to recursively search for input files."
+#: ../../source/about/configuring-jsdoc.rst:107
+msgid "The ``recurseDepth`` option controls how many levels deep JSDoc will recursively search for source files and tutorials. This option is available in JSDoc 3.5.0 and later. This option is used only if you also specify the ``-r`` :ref:`command-line`, which tells JSDoc to recursively search for input files."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:117
+#: ../../source/about/configuring-jsdoc.rst:118
 msgid "Specifying input files"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:119
+#: ../../source/about/configuring-jsdoc.rst:120
 msgid "The ``source`` set of options, in combination with paths given to JSDoc on the command line, determines the set of input files that JSDoc uses to generate documentation."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:136
-msgid "``source.include``: An optional array of paths that contain files for which JSDoc should generate documentation. The paths given to JSDoc on the command line are combined with these paths. You can use the ``-r`` `command-line option <about-commandline.html>`__ to recurse into subdirectories."
+#: ../../source/about/configuring-jsdoc.rst:137
+msgid "``source.include``: An optional array of paths that contain files for which JSDoc should generate documentation. The paths given to JSDoc on the command line are combined with these paths. You can use the ``-r`` :ref:`command-line` to recurse into subdirectories."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:141
+#: ../../source/about/configuring-jsdoc.rst:142
 msgid "``source.exclude``: An optional array of paths that JSDoc should ignore. In JSDoc 3.3.0 and later, this array may include subdirectories of the paths in ``source.include``."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:144
+#: ../../source/about/configuring-jsdoc.rst:145
 msgid "``source.includePattern``: An optional string, interpreted as a regular expression. If present, all filenames must match this regular expression to be processed by JSDoc. By default, this option is set to “.+\\.js(doc|x)?$”, meaning that only files with the extensions ``.js``, ``.jsdoc``, and ``.jsx`` will be processed."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:149
+#: ../../source/about/configuring-jsdoc.rst:150
 msgid "``source.excludePattern``: An optional string, interpreted as a regular expression. If present, any file matching this regular expression will be ignored. By default, this option is set so that files beginning with an underscore (or anything under a directory beginning with an underscore) is ignored."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:155
+#: ../../source/about/configuring-jsdoc.rst:156
 msgid "These options are interpreted in the following order:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:157
+#: ../../source/about/configuring-jsdoc.rst:158
 msgid "Start with all paths given on the command line and in ``source.include``."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:159
+#: ../../source/about/configuring-jsdoc.rst:160
 msgid "For each file found in Step 1, if the regular expression ``source.includePattern`` is present, the filename must match it, or it is ignored."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:162
+#: ../../source/about/configuring-jsdoc.rst:163
 msgid "For each file left from Step 2, if the regular expression ``source.excludePattern`` is present, any filename matching this regular expression is ignored."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:165
+#: ../../source/about/configuring-jsdoc.rst:166
 msgid "For each file left from Step 3, if the file’s path is in ``source.exclude``, it is ignored."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:168
+#: ../../source/about/configuring-jsdoc.rst:169
 msgid "All remaining files after these four steps are processed by JSDoc."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:170
+#: ../../source/about/configuring-jsdoc.rst:171
 msgid "As an example, suppose you have the following file structure:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:189
+#: ../../source/about/configuring-jsdoc.rst:190
 msgid "In addition, suppose your ``conf.json`` file looks like this example:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:206
+#: ../../source/about/configuring-jsdoc.rst:207
 msgid "If you run ``jsdoc myProject/c.js -c /path/to/my/conf.json -r`` from the file containing the ``myProject`` folder, JSDoc will generate documentation for the following files:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:210
+#: ../../source/about/configuring-jsdoc.rst:211
 msgid "``myProject/a.js``"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:211
+#: ../../source/about/configuring-jsdoc.rst:212
 msgid "``myProject/c.js``"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:212
+#: ../../source/about/configuring-jsdoc.rst:213
 msgid "``myProject/lib/a.js``"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:214
+#: ../../source/about/configuring-jsdoc.rst:215
 msgid "Here’s why:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:216
+#: ../../source/about/configuring-jsdoc.rst:217
 msgid "Given ``source.include`` and the paths given on the command line, JSDoc starts off with these files:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:219
+#: ../../source/about/configuring-jsdoc.rst:220
 msgid "``myProject/c.js`` (from the command line)"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:220
+#: ../../source/about/configuring-jsdoc.rst:221
 msgid "``myProject/a.js`` (from ``source.include``)"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:221
+#: ../../source/about/configuring-jsdoc.rst:222
 msgid "``myProject/lib/a.js``, ``myProject/lib/ignore.js``, ``myProject/lib/d.txt`` (from ``source.include`` and using the ``-r`` option)"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:224
+#: ../../source/about/configuring-jsdoc.rst:225
 msgid "``myProject/_private/a.js`` (from ``source.include``)"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:226
+#: ../../source/about/configuring-jsdoc.rst:227
 msgid "JSDoc applies ``source.includePattern``, leaving us with all of the above files *except* ``myProject/lib/d.txt``, which does not end in ``.js``, ``.jsdoc``, or ``.jsx``."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:229
+#: ../../source/about/configuring-jsdoc.rst:230
 msgid "JSDoc applies ``source.excludePattern``, which removes ``myProject/_private/a.js``."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:231
+#: ../../source/about/configuring-jsdoc.rst:232
 msgid "JSDoc applies ``source.exclude``, which removes ``myProject/lib/ignore.js``."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:235
+#: ../../source/about/configuring-jsdoc.rst:236
 msgid "Specifying the source type"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:237
+#: ../../source/about/configuring-jsdoc.rst:238
 msgid "The ``sourceType`` option affects how JSDoc parses your JavaScript files. This option is available in JSDoc 3.5.0 and later. This option accepts the following values:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:241
+#: ../../source/about/configuring-jsdoc.rst:242
 msgid "``module`` (default): Use this value for most types of JavaScript files."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:243
+#: ../../source/about/configuring-jsdoc.rst:244
 msgid "``script``: Use this value if JSDoc logs errors such as ``Delete of an unqualified identifier in strict mode`` when it parses your code."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:258
+#: ../../source/about/configuring-jsdoc.rst:259
 msgid "Incorporating command-line options into the configuration file"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:260
-msgid "You can put many of JSDoc’s `command-line options <about-commandline.html>`__ into the configuration file instead of specifying them on the command line. To do this, add the long names of the relevant options into an ``opts`` section of the configuration file, with the value set to the option’s value."
+#: ../../source/about/configuring-jsdoc.rst:261
+msgid "You can put many of JSDoc’s :ref:`command-line` into the configuration file instead of specifying them on the command line. To do this, add the long names of the relevant options into an ``opts`` section of the configuration file, with the value set to the option’s value."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:265
+#: ../../source/about/configuring-jsdoc.rst:266
 msgid "JSON configuration file with command-line options"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:280
+#: ../../source/about/configuring-jsdoc.rst:281
 msgid "By using the ``source.include`` and ``opts`` options, you can put almost all of the arguments to JSDoc in a configuration file, so that the command line reduces to:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:288
+#: ../../source/about/configuring-jsdoc.rst:289
 msgid "When options are specified on the command line *and* in the configuration file, the command line takes precedence."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:292
+#: ../../source/about/configuring-jsdoc.rst:293
 msgid "Configuring tags and tag dictionaries"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:294
+#: ../../source/about/configuring-jsdoc.rst:295
 msgid "The options in ``tags`` control which JSDoc tags are allowed and how each tag is interpreted."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:310
-msgid "The ``tags.allowUnknownTags`` property affects how JSDoc handles unrecognized tags. If you set this option to ``false``, and JSDoc finds a tag that it does not recognize (for example, ``@foo``), JSDoc logs a warning. By default, this option is set to ``true``. In JSDoc 3.4.1 and later, you can also set this property to an array of tag names that JSDoc should allow (for example, ``[\"foo\",\"bar\"]``)."
+#: ../../source/about/configuring-jsdoc.rst:311
+msgid "The ``tags.allowUnknownTags`` property affects how JSDoc handles unrecognized tags. If you set this option to ``false``, and JSDoc finds a tag that it does not recognize (for example, :rst:dir:`@foo`), JSDoc logs a warning. By default, this option is set to ``true``. In JSDoc 3.4.1 and later, you can also set this property to an array of tag names that JSDoc should allow (for example, ``[\"foo\",\"bar\"]``)."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:317
+#: ../../source/about/configuring-jsdoc.rst:318
 msgid "The ``tags.dictionaries`` property controls which tags JSDoc recognizes, as well as how JSDoc interprets the tags that it recognizes. In JSDoc 3.3.0 and later, there are two built-in tag dictionaries:"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:321
+#: ../../source/about/configuring-jsdoc.rst:322
 msgid "``jsdoc``: Core JSDoc tags."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:322
-msgid "``closure``: `Closure Compiler tags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__."
+#: ../../source/about/configuring-jsdoc.rst:323
+msgid "``closure``: `Closure Compiler tags`_."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:324
+#: ../../source/about/configuring-jsdoc.rst:325
 msgid "By default, both dictionaries are enabled. Also, by default, the ``jsdoc`` dictionary is listed first; as a result, if the ``jsdoc`` dictionary handles a tag differently than the ``closure`` dictionary, the ``jsdoc`` version of the tag takes precedence."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:329
+#: ../../source/about/configuring-jsdoc.rst:330
 msgid "If you are using JSDoc with a Closure Compiler project, and you want to avoid using tags that Closure Compiler does not recognize, change the ``tags.dictionaries`` setting to ``[\"closure\"]``. You can also change this setting to ``[\"closure\",\"jsdoc\"]`` if you want to allow core JSDoc tags, but you want to ensure that Closure Compiler-specific tags are interpreted as Closure Compiler would interpret them."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:337
+#: ../../source/about/configuring-jsdoc.rst:338
 msgid "Configuring templates"
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:339
-msgid "The options in ``templates`` affect the appearance and content of generated documentation. Third-party templates may not implement all of these options. See `Configuring JSDoc’s Default Template <about-configuring-default-template.html>`__ for additional options that the default template supports."
+#: ../../source/about/configuring-jsdoc.rst:340
+msgid "The options in ``templates`` affect the appearance and content of generated documentation. Third-party templates may not implement all of these options. See :ref:`configuring-default-template` for additional options that the default template supports."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:357
-msgid "If ``templates.monospaceLinks`` is true, all link text from the `inline {@link} tag <tags-inline-link.html>`__ will be rendered in monospace."
+#: ../../source/about/configuring-jsdoc.rst:358
+msgid "If ``templates.monospaceLinks`` is true, all link text from the inline will be rendered in monospace."
 msgstr ""
 
 #: ../../source/about/configuring-jsdoc.rst:360
 msgid "If ``templates.cleverLinks`` is true, ``{@link asdf}`` will be rendered in normal font if ``asdf`` is a URL, and monospace otherwise. For example, ``{@link http://github.com}`` will render in plain text, but ``{@link MyNamespace.myFunction}`` will be in monospace."
 msgstr ""
 
-#: ../../source/about/configuring-jsdoc.rst:365
+#: ../../source/about/configuring-jsdoc.rst:363
 msgid "If ``templates.cleverLinks`` is true, ``templates.monospaceLinks`` is ignored."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:2
+#: ../../source/about/getting-started.rst:4
 msgid ":jsdoc:`Getting Started with JSDoc 3 <about-getting-started>`"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:4
+#: ../../source/about/getting-started.rst:6
 msgid "JSDoc 3 is an API documentation generator for JavaScript, similar to Javadoc or phpDocumentor. You add documentation comments directly to your source code, right alongside the code itself. The JSDoc tool will scan your source code and generate an HTML documentation website for you."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:11
+#: ../../source/about/getting-started.rst:13
 msgid "Adding documentation comments to your code"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:13
+#: ../../source/about/getting-started.rst:15
 msgid "JSDoc’s purpose is to document the API of your JavaScript application or library. It is assumed that you will want to document things like modules, namespaces, classes, methods, method parameters, and so on."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:17
+#: ../../source/about/getting-started.rst:19
 msgid "JSDoc comments should generally be placed immediately before the code being documented. Each comment must start with a ``/**`` sequence in order to be recognized by the JSDoc parser. Comments beginning with ``/*``, ``/***``, or more than 3 stars will be ignored. This is a feature to allow you to suppress parsing of comment blocks."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:23
+#: ../../source/about/getting-started.rst:25
 msgid "The simplest documentation is just a description"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:30
+#: ../../source/about/getting-started.rst:32
 msgid "Adding a description is simple—just type the description you want in the documentation comment."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:33
-msgid "Special “JSDoc tags” can be used to give more information. For example, if the function is a constructor for a class, you can indicate this by adding a ``@constructor`` tag."
+#: ../../source/about/getting-started.rst:35
+msgid "Special “JSDoc tags” can be used to give more information. For example, if the function is a constructor for a class, you can indicate this by adding a :rst:dir:`@constructor` tag."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:37
+#: ../../source/about/getting-started.rst:39
 msgid "Use a JSDoc tag to describe your code"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:47
-msgid "More tags can be used to add more information. See the `home page <index.html#block-tags>`__ for a complete list of tags that are recognized by JSDoc 3."
+#: ../../source/about/getting-started.rst:49
+msgid "More tags can be used to add more information. See the `home page <index#block-tags>` for a complete list of tags that are recognized by JSDoc 3."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:51
+#: ../../source/about/getting-started.rst:52
 msgid "Adding more information with tags"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:64
+#: ../../source/about/getting-started.rst:65
 msgid "Generating a website"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:66
+#: ../../source/about/getting-started.rst:67
 msgid "Once your code is commented, you can use the JSDoc 3 tool to generate an HTML website from your source files."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:69
+#: ../../source/about/getting-started.rst:70
 msgid "By default, JSDoc uses the built-in “default” template to turn the documentation into HTML. You can edit this template to suit your own needs or create an entirely new template if that is what you prefer."
 msgstr ""
 
-#: ../../source/about/getting-started.rst:73
+#: ../../source/about/getting-started.rst:74
 msgid "Running the documentation generator on the command line"
 msgstr ""
 
-#: ../../source/about/getting-started.rst:78
+#: ../../source/about/getting-started.rst:79
 msgid "This command will create a directory named ``out/`` in the current working directory. Within that directory, you will find the generated HTML pages."
 msgstr ""
 
-#: ../../source/about/including-package.rst:2
+#: ../../source/about/including-package.rst:4
 msgid "Including a Package File"
 msgstr ""
 
-#: ../../source/about/including-package.rst:4
+#: ../../source/about/including-package.rst:6
 msgid "Package files contain information that can be useful for your project’s documentation, such as the project’s name and version number. JSDoc can automatically use information from your project’s ``package.json`` file when it generates documentation. For example, the default template shows the project’s name and version number in the documentation."
 msgstr ""
 
-#: ../../source/about/including-package.rst:10
+#: ../../source/about/including-package.rst:12
 msgid "There are two ways to incorporate a ``package.json`` file into your documentation:"
 msgstr ""
 
-#: ../../source/about/including-package.rst:13
+#: ../../source/about/including-package.rst:15
 msgid "In the source paths to your JavaScript files, include the path to a ``package.json`` file. JSDoc will use the first ``package.json`` file that it finds in your source paths."
 msgstr ""
 
-#: ../../source/about/including-package.rst:16
+#: ../../source/about/including-package.rst:18
 msgid "Run JSDoc with the ``-P/--package`` command-line option, specifying the path to your ``package.json`` file. This option is available in JSDoc 3.3.0 and later."
 msgstr ""
 
-#: ../../source/about/including-package.rst:20
+#: ../../source/about/including-package.rst:22
 msgid "The ``-P/--package`` command-line option takes precedence over your source paths. If you use the ``-P/--package`` command-line option, JSDoc will ignore any ``package.json`` files in your source paths."
 msgstr ""
 
-#: ../../source/about/including-package.rst:24
-msgid "The ``package.json`` file must use `npm’s package format <https://docs.npmjs.com/files/package.json>`__."
+#: ../../source/about/including-package.rst:26
+msgid "The ``package.json`` file must use `npm’s package format`_."
 msgstr ""
 
-#: ../../source/about/including-package.rst:30
+#: ../../source/about/including-package.rst:31
 msgid "Including a package file in your source paths"
 msgstr ""
 
-#: ../../source/about/including-package.rst:35
+#: ../../source/about/including-package.rst:36
 msgid "Using the -P/–package option"
 msgstr ""
 
-#: ../../source/about/including-readme.rst:2
+#: ../../source/about/including-readme.rst:4
 msgid "Including a README File"
 msgstr ""
 
-#: ../../source/about/including-readme.rst:4
+#: ../../source/about/including-readme.rst:6
 msgid "There are two ways to incorporate a ``README`` file into your documentation:"
 msgstr ""
 
-#: ../../source/about/including-readme.rst:7
+#: ../../source/about/including-readme.rst:9
 msgid "In the source paths to your JavaScript files, include the path to a Markdown file named ``README.md``. JSDoc will use the first ``README.md`` file that it finds in your source paths."
 msgstr ""
 
-#: ../../source/about/including-readme.rst:10
+#: ../../source/about/including-readme.rst:12
 msgid "Run JSDoc with the ``-R/--readme`` command-line option, specifying the path to your ``README`` file. This option is available in JSDoc 3.3.0 and later. The ``README`` file may have any name and extension, but it must be in Markdown format."
 msgstr ""
 
-#: ../../source/about/including-readme.rst:15
+#: ../../source/about/including-readme.rst:17
 msgid "The ``-R/--readme`` command-line option takes precedence over your source paths. If you use the ``-R/--readme`` command-line option, JSDoc will ignore any ``README.md`` files in your source paths."
 msgstr ""
 
-#: ../../source/about/including-readme.rst:19
+#: ../../source/about/including-readme.rst:21
 msgid "If you are using JSDoc’s default template, the ``README`` file’s contents will be rendered in HTML in the generated documentation’s ``index.html`` file."
 msgstr ""
 
-#: ../../source/about/including-readme.rst:26
+#: ../../source/about/including-readme.rst:28
 msgid "Including a README file in your source paths"
 msgstr ""
 
-#: ../../source/about/including-readme.rst:33
+#: ../../source/about/including-readme.rst:35
 msgid "Using the -R/–readme option"
 msgstr ""
 
-#: ../../source/about/index.rst:2
+#: ../../source/about/index.rst:4
 msgid "Getting started"
 msgstr ""
 
-#: ../../source/about/license-jsdoc3.rst:2
+#: ../../source/about/license-jsdoc3.rst:4
 msgid "License"
 msgstr ""
 
-#: ../../source/about/license-jsdoc3.rst:4
-msgid "JSDoc 3 is free software, licensed under the `Apache License, Version 2.0 <http://www.apache.org/licenses/LICENSE-2.0>`__. Commercial and non-commercial use are permitted in compliance with the License."
+#: ../../source/about/license-jsdoc3.rst:6
+msgid "JSDoc 3 is free software, licensed under the `Apache License, Version 2.0`_. Commercial and non-commercial use are permitted in compliance with the License."
 msgstr ""
 
-#: ../../source/about/license-jsdoc3.rst:8
+#: ../../source/about/license-jsdoc3.rst:9
 msgid "In addition, JSDoc 3 includes or depends upon several third-party software packages, either in whole or in part. Each third-party software package is provided under its own license."
 msgstr ""
 
-#: ../../source/about/license-jsdoc3.rst:12
-msgid "See `LICENSE.md <https://github.com/jsdoc3/jsdoc/blob/master/LICENSE.md>`__ for more details about licensing."
+#: ../../source/about/license-jsdoc3.rst:13
+msgid "See `LICENSE.md`_ for more details about licensing."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:2
+#: ../../source/about/namepaths.rst:4
 msgid "Using namepaths with JSDoc 3"
 msgstr ""
 
-#: ../../source/about/namepaths.rst:5
+#: ../../source/about/namepaths.rst:7
 msgid "Namepaths in JSDoc 3"
 msgstr ""
 
-#: ../../source/about/namepaths.rst:7
+#: ../../source/about/namepaths.rst:9
 msgid "When referring to a JavaScript variable that is elsewhere in your documentation, you must provide a unique identifier that maps to that variable. A namepath provides a way to do so and disambiguate between instance members, static members and inner variables."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:13
+#: ../../source/about/namepaths.rst:15
 msgid "Basic Syntax Examples of Namepaths in JSDoc 3"
 msgstr ""
 
-#: ../../source/about/namepaths.rst:22
+#: ../../source/about/namepaths.rst:24
 msgid "The example below shows: an *instance* method named “say,” an *inner* function also named “say,” and a *static* method also named “say.” These are three distinct methods that all exist independently of one another."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:26
-#: ../../source/about/namepaths.rst:52
+#: ../../source/about/namepaths.rst:28
+#: ../../source/about/namepaths.rst:53
 #: ../../source/about/namepaths.rst:70
 msgid "Use a documentation tag to describe your code."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:48
+#: ../../source/about/namepaths.rst:50
 msgid "You would use three different namepath syntaxes to refer to the three different methods:"
 msgstr ""
 
-#: ../../source/about/namepaths.rst:59
+#: ../../source/about/namepaths.rst:60
 msgid "You might wonder why there is a syntax to refer to an inner method when that method isn’t directly accessible from outside the function it is defined in. While that is true, and thus the “~” syntax is rarely used, it *is* possible to return a reference to an inner method from another method inside that container, so it is possible that some object elsewhere in your code might borrow an inner method."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:66
+#: ../../source/about/namepaths.rst:67
 msgid "Note that if a constructor has an instance member that is also a constructor, you can simply chain the namepaths together to form a longer namepath:"
 msgstr ""
 
@@ -885,120 +885,120 @@ msgstr ""
 msgid "This chaining can be used with any combination of the connecting symbols: ``# . ~``"
 msgstr ""
 
-#: ../../source/about/namepaths.rst:93
+#: ../../source/about/namepaths.rst:92
 msgid "Special cases: modules, externals and events."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:106
-msgid "There are some special cases with namepaths: [@module]\\ `module-tag <tags-module.html>`__ names are prefixed by “module:”, [@external]\\ `external-tag <tags-external.html>`__ names are prefixed by “external:”, and [@event]\\ `event-tag <tags-event.html>`__ names are prefixed by “event:”."
+#: ../../source/about/namepaths.rst:105
+msgid "There are some special cases with namepaths: [:rst:dir:`@module`]\\ module names are prefixed by “module:”, [:rst:dir:`@external`]\\ external names are prefixed by “external:”, and [:rst:dir:`@event`]\\ event names are prefixed by “event:”."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:112
+#: ../../source/about/namepaths.rst:110
 msgid "Namepaths of objects with special characters in the name."
 msgstr ""
 
-#: ../../source/about/namepaths.rst:141
+#: ../../source/about/namepaths.rst:139
 msgid "Above is an example of a namespace with “unusual” characters in its member names (the hash character, dashes, even quotes). To refer to these you just need quote the names: chat.“#channel”, chat.“#channel”.“op:announce-motd”, and so on. Internal quotes in names should be escaped with backslashes: chat.“#channel”.“say-\"hello\"”."
 msgstr ""
 
-#: ../../source/about/plugins.rst:2
+#: ../../source/about/plugins.rst:4
 msgid "About JSDoc plugins"
 msgstr ""
 
-#: ../../source/about/plugins.rst:5
+#: ../../source/about/plugins.rst:7
 msgid "Creating and Enabling a Plugin"
 msgstr ""
 
-#: ../../source/about/plugins.rst:7
+#: ../../source/about/plugins.rst:9
 msgid "There are two steps required to create and enable a new JSDoc plugin:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:9
+#: ../../source/about/plugins.rst:11
 msgid "Create a JavaScript module to contain your plugin code."
 msgstr ""
 
-#: ../../source/about/plugins.rst:10
-msgid "Include that module in the ``plugins`` array of `JSDoc’s configuration file <about-configuring-jsdoc.html>`__. You can specify an absolute or relative path. If you use a relative path, JSDoc searches for the plugin in the current working directory; the directory where the configuration file is located; and the JSDoc directory, in that order."
+#: ../../source/about/plugins.rst:12
+msgid "Include that module in the ``plugins`` array of :ref:`configuring-jsdoc`. You can specify an absolute or relative path. If you use a relative path, JSDoc searches for the plugin in the current working directory; the directory where the configuration file is located; and the JSDoc directory, in that order."
 msgstr ""
 
-#: ../../source/about/plugins.rst:17
+#: ../../source/about/plugins.rst:18
 msgid "For example, if your plugin is defined in the ``plugins/shout.js`` file in the current working directory, you would add the string ``plugins/shout`` to the ``plugins`` array in your JSDoc configuration file:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:23
+#: ../../source/about/plugins.rst:24
 msgid "Adding a plugin to JSDoc’s configuration file"
 msgstr ""
 
-#: ../../source/about/plugins.rst:30
+#: ../../source/about/plugins.rst:31
 msgid "JSDoc executes plugins in the order that they are listed in the configuration file."
 msgstr ""
 
-#: ../../source/about/plugins.rst:34
+#: ../../source/about/plugins.rst:35
 msgid "Authoring JSDoc 3 Plugins"
 msgstr ""
 
-#: ../../source/about/plugins.rst:36
+#: ../../source/about/plugins.rst:37
 msgid "JSDoc 3’s plugin system offers extensive control over the parsing process. A plugin can affect the parse results by doing any of the following:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:40
+#: ../../source/about/plugins.rst:41
 msgid "Defining event handlers"
 msgstr ""
 
-#: ../../source/about/plugins.rst:41
+#: ../../source/about/plugins.rst:42
 msgid "Defining tags"
 msgstr ""
 
-#: ../../source/about/plugins.rst:42
+#: ../../source/about/plugins.rst:43
 msgid "Defining a visitor for abstract syntax tree nodes"
 msgstr ""
 
-#: ../../source/about/plugins.rst:45
+#: ../../source/about/plugins.rst:46
 msgid "Event Handlers"
 msgstr ""
 
-#: ../../source/about/plugins.rst:47
+#: ../../source/about/plugins.rst:48
 msgid "At the highest level, a plugin may register handlers for specific named events that JSDoc fires. JSDoc will pass an event object to the handler. Your plugin module should export a ``handlers`` object that contains your handler, like so:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:52
+#: ../../source/about/plugins.rst:53
 msgid "Event-handler plugin for ‘newDoclet’ events"
 msgstr ""
 
-#: ../../source/about/plugins.rst:61
+#: ../../source/about/plugins.rst:62
 msgid "JSDoc fires events in the same order as the underlying code."
 msgstr ""
 
-#: ../../source/about/plugins.rst:63
+#: ../../source/about/plugins.rst:64
 msgid "An event-handler plugin can stop later plugins from running by setting a ``stopPropagation`` property on the event object (``e.stopPropagation = true``). A plugin can stop the event from firing by setting a ``preventDefault`` property (``e.preventDefault = true``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:69
+#: ../../source/about/plugins.rst:70
 msgid "Event: parseBegin"
 msgstr ""
 
-#: ../../source/about/plugins.rst:71
+#: ../../source/about/plugins.rst:72
 msgid "The ``parseBegin`` event is fired before JSDoc starts loading and parsing the source files. Your plugin can control which files JSDoc will parse by modifying the event’s contents."
 msgstr ""
 
-#: ../../source/about/plugins.rst:75
-#: ../../source/about/plugins.rst:247
+#: ../../source/about/plugins.rst:76
+#: ../../source/about/plugins.rst:246
 msgid "**Note**: This event is fired in JSDoc 3.2 and later."
 msgstr ""
 
-#: ../../source/about/plugins.rst:77
+#: ../../source/about/plugins.rst:78
 #: ../../source/about/plugins.rst:89
 #: ../../source/about/plugins.rst:101
 #: ../../source/about/plugins.rst:137
 #: ../../source/about/plugins.rst:153
 #: ../../source/about/plugins.rst:179
-#: ../../source/about/plugins.rst:236
-#: ../../source/about/plugins.rst:249
-#: ../../source/about/plugins.rst:264
+#: ../../source/about/plugins.rst:235
+#: ../../source/about/plugins.rst:248
+#: ../../source/about/plugins.rst:261
 msgid "The event object contains the following properties:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:79
+#: ../../source/about/plugins.rst:80
 msgid "``sourcefiles``: An array of paths to source files that will be parsed."
 msgstr ""
 
@@ -1014,7 +1014,7 @@ msgstr ""
 #: ../../source/about/plugins.rst:103
 #: ../../source/about/plugins.rst:139
 #: ../../source/about/plugins.rst:155
-#: ../../source/about/plugins.rst:238
+#: ../../source/about/plugins.rst:237
 msgid "``filename``: The name of the file."
 msgstr ""
 
@@ -1027,7 +1027,7 @@ msgid "The ``beforeParse`` event is fired before parsing has begun. Plugins can 
 msgstr ""
 
 #: ../../source/about/plugins.rst:104
-#: ../../source/about/plugins.rst:239
+#: ../../source/about/plugins.rst:238
 msgid "``source``: The contents of the file."
 msgstr ""
 
@@ -1036,9 +1036,9 @@ msgid "Below is an example that adds a virtual comment for a function to the sou
 msgstr ""
 
 #: ../../source/about/plugins.rst:112
-#: ../../source/about/plugins.rst:217
-#: ../../source/about/plugins.rst:284
-#: ../../source/about/plugins.rst:368
+#: ../../source/about/plugins.rst:216
+#: ../../source/about/plugins.rst:279
+#: ../../source/about/plugins.rst:363
 msgid "Example"
 msgstr ""
 
@@ -1167,271 +1167,271 @@ msgid "``tags``: Object containing a list of tags that JSDoc did not recognize. 
 msgstr ""
 
 #: ../../source/about/plugins.rst:211
-msgid "To see the doclets that JSDoc generates for your code, run JSDoc with the ``-X`` `command-line option <about-commandline.html>`__."
+msgid "To see the doclets that JSDoc generates for your code, run JSDoc with the ``-X`` :ref:`command-line`."
 msgstr ""
 
-#: ../../source/about/plugins.rst:214
+#: ../../source/about/plugins.rst:213
 msgid "Below is an example of a ``newDoclet`` handler that shouts the descriptions:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:231
+#: ../../source/about/plugins.rst:230
 msgid "Event: fileComplete"
 msgstr ""
 
-#: ../../source/about/plugins.rst:233
+#: ../../source/about/plugins.rst:232
 msgid "The ``fileComplete`` event is fired when the parser has finished parsing a file. Your plugin could use this event to trigger per-file cleanup."
 msgstr ""
 
-#: ../../source/about/plugins.rst:242
+#: ../../source/about/plugins.rst:241
 msgid "Event: parseComplete"
 msgstr ""
 
-#: ../../source/about/plugins.rst:244
+#: ../../source/about/plugins.rst:243
 msgid "The ``parseComplete`` event is fired after JSDoc has parsed all of the specified source files."
 msgstr ""
 
-#: ../../source/about/plugins.rst:251
+#: ../../source/about/plugins.rst:250
 msgid "``sourcefiles``: An array of paths to source files that were parsed."
 msgstr ""
 
-#: ../../source/about/plugins.rst:252
-msgid "``doclets``: An array of doclet objects. See the ```newDoclet`` event <#event-newdoclet>`__ for details about the properties that each doclet can contain. Available in JSDoc 3.2.1 and later."
+#: ../../source/about/plugins.rst:251
+msgid "``doclets``: An array of doclet objects. See the `newDoclet event <#event-newdoclet>`_ for details about the properties that each doclet can contain. Available in JSDoc 3.2.1 and later."
 msgstr ""
 
-#: ../../source/about/plugins.rst:257
+#: ../../source/about/plugins.rst:254
 msgid "Event: processingComplete"
 msgstr ""
 
-#: ../../source/about/plugins.rst:259
+#: ../../source/about/plugins.rst:256
 msgid "The ``processingComplete`` event is fired after JSDoc updates the parse results to reflect inherited and borrowed symbols."
 msgstr ""
 
-#: ../../source/about/plugins.rst:262
+#: ../../source/about/plugins.rst:259
 msgid "**Note**: This event is fired in JSDoc 3.2.1 and later."
 msgstr ""
 
-#: ../../source/about/plugins.rst:266
-msgid "``doclets``: An array of doclet objects. See the ```newDoclet`` event <#event-newdoclet>`__ for details about the properties that each doclet can contain."
+#: ../../source/about/plugins.rst:263
+msgid "``doclets``: An array of doclet objects. See the `newDoclet event <#event-newdoclet>`_ for details about the properties that each doclet can contain."
 msgstr ""
 
-#: ../../source/about/plugins.rst:271
+#: ../../source/about/plugins.rst:266
 msgid "Tag Definitions"
 msgstr ""
 
-#: ../../source/about/plugins.rst:273
+#: ../../source/about/plugins.rst:268
 msgid "Adding tags to the tag dictionary is a mid-level way to affect documentation generation. Before a ``newDoclet`` event is triggered, JSDoc comment blocks are parsed to determine the description and any JSDoc tags that may be present. When a tag is found, if it has been defined in the tag dictionary, it is given a chance to modify the doclet."
 msgstr ""
 
-#: ../../source/about/plugins.rst:280
+#: ../../source/about/plugins.rst:275
 msgid "Plugins can define tags by exporting a ``defineTags`` function. That function will be passed a dictionary that can be used to define tags, like so:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:292
+#: ../../source/about/plugins.rst:287
 msgid "The Dictionary"
 msgstr ""
 
-#: ../../source/about/plugins.rst:294
+#: ../../source/about/plugins.rst:289
 msgid "The dictionary provides the following methods:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:296
+#: ../../source/about/plugins.rst:291
 msgid "``defineTag(title, opts)``: Used to define tags. The first parameter is the name of the tag (for example, ``param`` or ``overview``). The second is an object containing options for the tag. You can include any of the following options; the default value for each option is ``false``:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:302
+#: ../../source/about/plugins.rst:297
 msgid "``canHaveType (boolean)``: Set to ``true`` if the tag text can include a type expression (such as ``{string}`` in ``@param {string} name - Description``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:305
+#: ../../source/about/plugins.rst:300
 msgid "``canHaveName (boolean)``: Set to ``true`` if the tag text can include a name (such as ``name`` in ``@param {string} name - Description``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:308
-msgid "``isNamespace (boolean)``: Set to ``true`` if the tag should be applied to the doclet’s longname as a namespace. For example, the ``@module`` tag sets this option to ``true``, and using the tag ``@module myModuleName`` results in the longname ``module:myModuleName``."
+#: ../../source/about/plugins.rst:303
+msgid "``isNamespace (boolean)``: Set to ``true`` if the tag should be applied to the doclet’s longname as a namespace. For example, the :rst:dir:`@module` tag sets this option to ``true``, and using the tag ``@module myModuleName`` results in the longname ``module:myModuleName``."
 msgstr ""
 
-#: ../../source/about/plugins.rst:313
+#: ../../source/about/plugins.rst:308
 msgid "``mustHaveValue (boolean)``: Set to ``true`` if the tag must have a value (such as ``TheName`` in ``@name TheName``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:315
+#: ../../source/about/plugins.rst:310
 msgid "``mustNotHaveDescription (boolean)``: Set to ``true`` if the tag may have a value but must not have a description (such as ``TheDescription`` in ``@tag {typeExpr} TheDescription``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:318
+#: ../../source/about/plugins.rst:313
 msgid "``mustNotHaveValue (boolean)``: Set to ``true`` if the tag must not have a value."
 msgstr ""
 
-#: ../../source/about/plugins.rst:320
+#: ../../source/about/plugins.rst:315
 msgid "``onTagged (function)``: A callback function executed when the tag is found. The function is passed two parameters: the doclet and the tag object."
 msgstr ""
 
-#: ../../source/about/plugins.rst:324
+#: ../../source/about/plugins.rst:319
 msgid "``lookUp(tagName)``: Retrieve a tag object by name. Returns the tag object, including its options, or ``false`` if the tag is not defined."
 msgstr ""
 
-#: ../../source/about/plugins.rst:327
+#: ../../source/about/plugins.rst:322
 msgid "``isNamespace(tagName)``: Returns ``true`` if the tag is applied to a doclet’s longname as a namespace."
 msgstr ""
 
-#: ../../source/about/plugins.rst:329
-msgid "``normalise(tagName)``: Returns the canonical name of a tag. For example, the ``@const`` tag is a synonym for ``@constant``; as a result, if you call ``normalise('const')``, it returns the string ``constant``."
+#: ../../source/about/plugins.rst:324
+msgid "``normalise(tagName)``: Returns the canonical name of a tag. For example, the :rst:dir:`@const` tag is a synonym for :rst:dir:`@constant`; as a result, if you call ``normalise('const')``, it returns the string ``constant``."
 msgstr ""
 
-#: ../../source/about/plugins.rst:333
+#: ../../source/about/plugins.rst:328
 msgid "``normalize(tagName)``: Synonym for ``normalise``. Available in JSDoc 3.3.0 and later."
 msgstr ""
 
-#: ../../source/about/plugins.rst:336
+#: ../../source/about/plugins.rst:331
 msgid "A tag’s ``onTagged`` callback can modify the contents of the doclet or tag."
 msgstr ""
 
-#: ../../source/about/plugins.rst:339
+#: ../../source/about/plugins.rst:334
 msgid "Defining an onTagged callback"
 msgstr ""
 
-#: ../../source/about/plugins.rst:348
+#: ../../source/about/plugins.rst:343
 msgid "The ``defineTag`` method returns a ``Tag`` object, which has a ``synonym`` method that can be used to declare a synonym for the tag."
 msgstr ""
 
-#: ../../source/about/plugins.rst:351
+#: ../../source/about/plugins.rst:346
 msgid "Defining a tag synonym"
 msgstr ""
 
-#: ../../source/about/plugins.rst:358
+#: ../../source/about/plugins.rst:353
 msgid "Node Visitors"
 msgstr ""
 
-#: ../../source/about/plugins.rst:360
+#: ../../source/about/plugins.rst:355
 msgid "At the lowest level, plugin authors can process each node in the abstract syntax tree (AST) by defining a node visitor that will visit each node. By using a node-visitor plugin, you can modify comments and trigger parser events for any arbitrary piece of code."
 msgstr ""
 
-#: ../../source/about/plugins.rst:365
+#: ../../source/about/plugins.rst:360
 msgid "Plugins can define a node visitor by exporting an ``astNodeVisitor`` object that contains a ``visitNode`` function, like so:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:377
+#: ../../source/about/plugins.rst:372
 msgid "The function is called on each node with the following parameters:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:379
-msgid "``node``: The AST node. AST nodes are JavaScript objects that use the format defined by the `ESTree spec <https://github.com/estree/estree>`__. You can use `AST Explorer <https://astexplorer.net/>`__ to see the AST that will be created for your source code. As of version 3.5.0, JSDoc uses the current version of the `Babylon <https://github.com/babel/babylon>`__ parser with all plugins enabled."
+#: ../../source/about/plugins.rst:374
+msgid "``node``: The AST node. AST nodes are JavaScript objects that use the format defined by the `ESTree spec`_. You can use `AST Explorer`_ to see the AST that will be created for your source code. As of version 3.5.0, JSDoc uses the current version of the `Babylon`_ parser with all plugins enabled."
 msgstr ""
 
-#: ../../source/about/plugins.rst:386
+#: ../../source/about/plugins.rst:377
 msgid "``e``: The event. If the node is one that the parser handles, the event object will already be populated with the same things described in the ``symbolFound`` event above. Otherwise, it will be an empty object on which to set various properties."
 msgstr ""
 
-#: ../../source/about/plugins.rst:390
+#: ../../source/about/plugins.rst:381
 msgid "``parser``: The JSDoc parser instance."
 msgstr ""
 
-#: ../../source/about/plugins.rst:391
+#: ../../source/about/plugins.rst:382
 msgid "``currentSourceName``: The name of the file being parsed."
 msgstr ""
 
-#: ../../source/about/plugins.rst:394
+#: ../../source/about/plugins.rst:385
 msgid "Making things happen"
 msgstr ""
 
-#: ../../source/about/plugins.rst:396
+#: ../../source/about/plugins.rst:387
 msgid "The primary reasons to implement a node visitor are to be able to document things that aren’t normally documented (like function calls that create classes) or to auto generate documentation for code that isn’t documented. For instance, a plugin might look for calls to a ``_trigger`` method since it knows that means an event is fired and then generate documentation for the event."
 msgstr ""
 
-#: ../../source/about/plugins.rst:403
+#: ../../source/about/plugins.rst:394
 msgid "To make things happen, the ``visitNode`` function should modify properties of the event parameter. In general the goal is to construct a comment and then get an event to fire. After the parser lets all of the node visitors have a look at the node, it looks to see if the event object has a ``comment`` property and an ``event`` property. If it has both, the event named in the event property is fired. The event is usually ``symbolFound`` or ``jsdocCommentFound``, but theoretically, a plugin could define its own events and handle them."
 msgstr ""
 
-#: ../../source/about/plugins.rst:412
+#: ../../source/about/plugins.rst:403
 msgid "As with event-handler plugins, a node-visitor plugin can stop later plugins from running by setting a ``stopPropagation`` property on the event object (``e.stopPropagation = true``). A plugin can stop the event from firing by setting a ``preventDefault`` property (``e.preventDefault = true``)."
 msgstr ""
 
-#: ../../source/about/plugins.rst:419
+#: ../../source/about/plugins.rst:410
 msgid "Reporting Errors"
 msgstr ""
 
-#: ../../source/about/plugins.rst:421
+#: ../../source/about/plugins.rst:412
 msgid "If your plugin needs to report an error, use one of the following methods in the ``jsdoc/util/logger`` module:"
 msgstr ""
 
-#: ../../source/about/plugins.rst:424
+#: ../../source/about/plugins.rst:415
 msgid "``logger.warn``: Warn the user about a possible problem."
 msgstr ""
 
-#: ../../source/about/plugins.rst:425
+#: ../../source/about/plugins.rst:416
 msgid "``logger.error``: Report an error from which the plugin can recover."
 msgstr ""
 
-#: ../../source/about/plugins.rst:426
+#: ../../source/about/plugins.rst:417
 msgid "``logger.fatal``: Report an error that should cause JSDoc to stop running."
 msgstr ""
 
-#: ../../source/about/plugins.rst:429
+#: ../../source/about/plugins.rst:420
 msgid "Using these methods creates a better user experience than simply throwing an error."
 msgstr ""
 
-#: ../../source/about/plugins.rst:432
+#: ../../source/about/plugins.rst:423
 msgid "**Note**: Do not use the ``jsdoc/util/error`` module to report errors. This module is deprecated and will be removed in a future version of JSDoc."
 msgstr ""
 
-#: ../../source/about/plugins.rst:436
+#: ../../source/about/plugins.rst:427
 msgid "Reporting a non-fatal error"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:2
+#: ../../source/about/plugins-markdown.rst:4
 msgid "plugins markdown"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:4
-msgid "JSDoc includes a Markdown plugin that automatically converts Markdown-formatted text to HTML. You can use this plugin with any JSDoc template. In JSDoc 3.2.2 and later, the Markdown plugin uses the `marked Markdown parser <https://github.com/chjj/marked>`_."
+#: ../../source/about/plugins-markdown.rst:6
+msgid "JSDoc includes a Markdown plugin that automatically converts Markdown-formatted text to HTML. You can use this plugin with any JSDoc template. In JSDoc 3.2.2 and later, the Markdown plugin uses the `marked Markdown parser`_."
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:9
-msgid "**Note**: When you enable the Markdown plugin, be sure to include a leading asterisk on each line of your JSDoc comments. If you omit the leading asterisks, JSDoc’s parser may remove asterisks that are used for Markdown formatting."
+#: ../../source/about/plugins-markdown.rst:11
+msgid "When you enable the Markdown plugin, be sure to include a leading asterisk on each line of your JSDoc comments. If you omit the leading asterisks, JSDoc’s parser may remove asterisks that are used for Markdown formatting."
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:14
+#: ../../source/about/plugins-markdown.rst:16
 msgid "By default, JSDoc looks for Markdown-formatted text in the following JSDoc tags:"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:17
-msgid "`@author <tags-author.html>`_"
-msgstr ""
-
 #: ../../source/about/plugins-markdown.rst:18
-msgid "`@classdesc <tags-classdesc.html>`_"
+msgid ":rst:dir:`@author`"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:19
-msgid "`@description <tags-description.html>`_ (including untagged descriptions at the start of a JSDoc comment)"
+msgid ":rst:dir:`@classdesc`"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:20
-msgid "`@param <tags-param.html>`_"
+msgid ":rst:dir:`@description` (including untagged descriptions at the start of a JSDoc comment)"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:21
-msgid "`@property <tags-property.html>`_"
+msgid ":rst:dir:`@param`"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:22
-msgid "`@returns <tags-returns.html>`_"
+msgid ":rst:dir:`@property`"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:23
-msgid "`@see <tags-see.html>`_"
+msgid ":rst:dir:`@returns`"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:24
-msgid "`@throws <tags-throws.html>`_"
+msgid ":rst:dir:`@see`"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:27
+#: ../../source/about/plugins-markdown.rst:25
+msgid ":rst:dir:`@throws`"
+msgstr ""
+
+#: ../../source/about/plugins-markdown.rst:28
 msgid "Enabling the Markdown plugin"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:29
-msgid "To enable the Markdown plugin, add the string ``plugins/markdown`` to the ``plugins`` array in your `JSDoc configuration file <about-configuring-jsdoc.html>`_:"
+#: ../../source/about/plugins-markdown.rst:30
+msgid "To enable the Markdown plugin, add the string ``plugins/markdown`` to the ``plugins`` array in your :ref:`configuring-jsdoc`:"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:34
@@ -1443,103 +1443,103 @@ msgid "Converting Markdown in additional JSDoc tags"
 msgstr ""
 
 #: ../../source/about/plugins-markdown.rst:44
-msgid "By default, the Markdown plugin only processes `specific JSDoc tags <#default-tags>`_ for Markdown text. You can handle Markdown text in other tags by adding a ``markdown.tags`` property to your JSDoc configuration file. The ``markdown.tags`` property contains an array of the additional doclet properties that can contain Markdown text. (In most cases, the name of the doclet property is the same as the tag name. However, some tags are stored differently; for example, the ``@param`` tag is stored in a doclet’s ``params`` property. If you’re not sure how a tag’s text is stored in a doclet, run JSDoc with the ``-X/--explain`` tag, which prints each doclet to the console.)"
+msgid "By default, the Markdown plugin only processes `specific JSDoc tags <#default-tags>`_ for Markdown text. You can handle Markdown text in other tags by adding a ``markdown.tags`` property to your JSDoc configuration file. The ``markdown.tags`` property contains an array of the additional doclet properties that can contain Markdown text. (In most cases, the name of the doclet property is the same as the tag name. However, some tags are stored differently; for example, the :rst:dir:`@param` tag is stored in a doclet’s ``params`` property. If you’re not sure how a tag’s text is stored in a doclet, run JSDoc with the ``-X/--explain`` tag, which prints each doclet to the console.)"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:55
+#: ../../source/about/plugins-markdown.rst:51
 msgid "For example, if the ``foo`` and ``bar`` tags accept values that are stored in a doclet’s ``foo`` and ``bar`` properties, you could enable Markdown processing of these tags by adding the following settings to your JSDoc configuration file:"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:60
+#: ../../source/about/plugins-markdown.rst:54
 msgid "Converting Markdown in ‘foo’ and ‘bar’ tags"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:71
+#: ../../source/about/plugins-markdown.rst:65
 msgid "Excluding the default tags from Markdown processing"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:73
+#: ../../source/about/plugins-markdown.rst:67
 msgid "To prevent the Markdown plugin from processing any of the `default JSDoc tags <#default-tags>`_, add a ``markdown.excludeTags`` property to your JSDoc configuration file. The ``markdown.excludeTags`` property contains an array of the default tags that should not be processed for Markdown text."
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:79
+#: ../../source/about/plugins-markdown.rst:71
 msgid "For example, to exclude the ``author`` tag from Markdown processing:"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:82
+#: ../../source/about/plugins-markdown.rst:74
 msgid "Excluding the ‘author’ tag from Markdown processing"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:93
+#: ../../source/about/plugins-markdown.rst:85
 msgid "Hard-wrapping text at line breaks"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:95
+#: ../../source/about/plugins-markdown.rst:87
 msgid "By default, the Markdown plugin does not hard-wrap text at line breaks. This is because it’s normal for a JSDoc comment to be wrapped across multiple lines. If you prefer to hard-wrap text at line breaks, set your JSDoc configuration file’s ``markdown.hardwrap`` property to ``true``. This property is available in JSDoc 3.4.0 and later."
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:102
+#: ../../source/about/plugins-markdown.rst:94
 msgid "Adding ID attributes to headings"
 msgstr ""
 
-#: ../../source/about/plugins-markdown.rst:104
+#: ../../source/about/plugins-markdown.rst:96
 msgid "By default, the Markdown plugin does not add an ``id`` attribute to each HTML heading. To automatically add ``id`` attributes based on the heading’s text, set your JSDoc configuration file’s ``markdown.idInHeadings`` property to ``true``. This property is available in JSDoc 3.4.0 and later."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:2
+#: ../../source/about/tutorials.rst:4
 msgid "Tutorials"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:4
+#: ../../source/about/tutorials.rst:6
 msgid "JSDoc allows you to include tutorials alongside your API documentation. You can use this feature to provide detailed instructions for using your API, such as a “getting started” guide or a step-by-step process for implementing a feature."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:10
+#: ../../source/about/tutorials.rst:12
 msgid "Adding tutorials"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:12
+#: ../../source/about/tutorials.rst:14
 msgid "To add tutorials to your API documentation, run JSDoc with the ``--tutorials`` or ``-u`` option, and provide a directory that JSDoc should search for tutorials. For example:"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:20
+#: ../../source/about/tutorials.rst:22
 msgid "JSDoc searches the tutorials directory for files with the following extensions:"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:23
+#: ../../source/about/tutorials.rst:25
 msgid "``.htm``"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:24
+#: ../../source/about/tutorials.rst:26
 msgid "``.html``"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:25
+#: ../../source/about/tutorials.rst:27
 msgid "``.markdown`` (converted from Markdown to HTML)"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:26
+#: ../../source/about/tutorials.rst:28
 msgid "``.md`` (converted from Markdown to HTML)"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:27
+#: ../../source/about/tutorials.rst:29
 msgid "``.xhtml``"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:28
+#: ../../source/about/tutorials.rst:30
 msgid "``.xml`` (treated as HTML)"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:30
+#: ../../source/about/tutorials.rst:32
 msgid "JSDoc also searches for JSON files that contain information about the titles, ordering, and hierarchy of your tutorials, as discussed in the following section."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:34
+#: ../../source/about/tutorials.rst:36
 msgid "JSDoc assigns an identifier to each tutorial. The identifier is the filename without its extension. For example, the identifier for ``/path/to/tutorials/overview.md`` is ``overview``."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:38
-msgid "In tutorial files, you can use the ```{@link}`` <tags-inline-link.html>`__ and ```{@tutorial}`` <tags-inline-tutorial.html>`__ inline tags to link to other parts of the documentation. JSDoc will automatically resolve the links."
+#: ../../source/about/tutorials.rst:40
+msgid "In tutorial files, you can use the :rst:dir:`{@link} <@link>` and :rst:dir:`{@tutorial} <@tutorial>` inline tags to link to other parts of the documentation. JSDoc will automatically resolve the links."
 msgstr ""
 
 #: ../../source/about/tutorials.rst:45
@@ -1591,22 +1591,22 @@ msgid "@tutorial block tag"
 msgstr ""
 
 #: ../../source/about/tutorials.rst:123
-msgid "If you include a ``@tutorial`` `block tag <tags-tutorial.html>`__ in a JSDoc comment, the generated documentation will include a link to the tutorial you specify."
+msgid "If you include a :rst:dir:`@tutorial` in a JSDoc comment, the generated documentation will include a link to the tutorial you specify."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:127
-msgid "Using the ``@tutorial`` block tag"
+#: ../../source/about/tutorials.rst:126
+msgid "Using the :rst:dir:`@tutorial` block tag"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:139
-msgid "{@tutorial} inline tag"
+#: ../../source/about/tutorials.rst:138
+msgid "``{@tutorial}`` inline tag"
 msgstr ""
 
-#: ../../source/about/tutorials.rst:141
-msgid "You can also use the ``{@tutorial}`` `inline tag <tags-inline-tutorial.html>`__ to link to a tutorial within the text of another tag. By default, JSDoc will use the tutorial’s title as the link text."
+#: ../../source/about/tutorials.rst:140
+msgid "You can also use the :rst:dir:`{@tutorial} <@tutorial>` to link to a tutorial within the text of another tag. By default, JSDoc will use the tutorial’s title as the link text."
 msgstr ""
 
-#: ../../source/about/tutorials.rst:146
+#: ../../source/about/tutorials.rst:143
 msgid "Using the ``{@tutorial}`` inline tag"
 msgstr ""
 

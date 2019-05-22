@@ -1,12 +1,10 @@
-@default
+@default (synonyms: @defaultvalue)
 =============================
 
 .. rst:directive:: @default
 
-   :Syntax:
-
-      ``@default [<some value>]``
-
+   :Synonyms: @defaultvalue
+   :Syntax: ``@default [<some value>]``
    :Overview:
 
       The @default tag allows you to document the assigned value of a symbol.
@@ -29,3 +27,7 @@
           *  @default
           */
          const RED = 0xff0000;
+
+.. rst:directive:: @defaultvalue
+
+   :Synonyms: @default

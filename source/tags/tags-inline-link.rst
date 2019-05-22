@@ -1,8 +1,9 @@
-@link
-=============================
+@link (synonyms: {@linkcode}, {@linkplain})
+================================================
 
 .. rst:directive:: @link
 
+   :Synonyms: :rst:dir:`@linkcode`, :rst:dir:`@linkplain`
    :Syntax:
 
       .. code-block:: sh
@@ -19,8 +20,7 @@
       text, using one of several different formats. If you don’t provide any
       link text, JSDoc uses the namepath or URL as the link text.
 
-      If you need to link to a tutorial,
-      use the :rst:dir:`@tutorial` ``@inline-link`` instead of the ``@link`` tag.
+      If you need to link to a tutorial, use the :rst:dir:`@tutorial`  instead of the ``@link`` tag.
 
    :Link formatting:
 
@@ -84,3 +84,12 @@
          See &lt;a href="MyClass.html">&lt;code>MyClass&lt;/code>&lt;/a> and &lt;a href="MyClass.html#foo">
          &lt;code>MyClass's foo property&lt;/code>&lt;/a>. Also, check out
          &lt;a href="http://www.google.com">Google&lt;/a> and &lt;a href="https://github.com">GitHub&lt;/a>.
+
+
+.. rst:directive:: @linkcode
+
+   :Synonyms: :rst:dir:`@link`
+
+.. rst:directive:: @linkplain
+
+   :Synonyms: :rst:dir:`@link`

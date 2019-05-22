@@ -1,3 +1,5 @@
+.. _configuring-jsdoc:
+
 Configuring JSDoc with a configuration file
 ======================================================
 
@@ -9,10 +11,9 @@ To customize JSDoc’s behavior, you can provide a configuration file to JSDoc i
 -  A JSON file. In JSDoc 3.3.0 and later, this file may include comments.
 -  A CommonJS module that exports a single configuration object. This format is supported in JSDoc 3.5.0 and later.
 
-To run JSDoc with a configuration file, use the ``-c`` `command-line option <about-commandline.html>`__ (for example,
-``jsdoc -c /path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``).
+To run JSDoc with a configuration file, use the ``-c`` :ref:`command-line` (for example, ``jsdoc -c /path/to/conf.json`` or ``jsdoc -c /path/to/conf.js``).
 
-The following examples show a simple configuration file that enables JSDoc’s `Markdown plugin <plugins-markdown.html>`__.
+The following examples show a simple configuration file that enables JSDoc’s :ref:`plugins-markdown`.
 JSDoc’s configuration options are explained in detail in the following sections.
 
 
@@ -33,7 +34,7 @@ JSDoc’s configuration options are explained in detail in the following section
    };
 
 For a more comprehensive example of a JSON configuration file,
-see the file `conf.json.EXAMPLE <https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE>`__.
+see the file `conf.json.EXAMPLE`_.
 
 Default configuration options
 -----------------------------
@@ -63,13 +64,13 @@ If you do not specify a configuration file, JSDoc uses the following configurati
 This means:
 
 -  No plugins are loaded (``plugins``).
--  If recursion is enabled with the ``-r`` `command-line flag <about-commandline.html>`__, JSDoc will search for files 10 levels deep (``recurseDepth``).
+-  If recursion is enabled with the ``-r`` :ref:`command-line`, JSDoc will search for files 10 levels deep (``recurseDepth``).
 -  Only files ending in ``.js``, ``.jsdoc``, and ``.jsx`` will be processed (``source.includePattern``).
 -  Any file starting with an underscore, or in a directory starting with an underscore, will be ignored (``source.excludePattern``).
--  JSDoc supports code that uses `ES2015 modules <howto-es2015-modules.html>`__ (``sourceType``).
+-  JSDoc supports code that uses :ref:`es2015-modules` (``sourceType``).
 -  JSDoc allows you to use unrecognized tags (``tags.allowUnknownTags``).
--  Both standard JSDoc tags and `Closure Compilertags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ are enabled (``tags.dictionaries``).
--  Inline ``{@link}`` `tags <tags-inline-link.html>`__ are rendered in plain text (``templates.cleverLinks``, ``templates.monospaceLinks``).
+-  Both standard JSDoc tags and `Closure Compiler tags`_ are enabled (``tags.dictionaries``).
+-  Inline :rst:dir:`{@link} <@link>` are rendered in plain text (``templates.cleverLinks``, ``templates.monospaceLinks``).
 
 These options and others are explained in the following sections.
 
@@ -94,18 +95,18 @@ and the “summarize” plugin, which autogenerates a summary for each doclet:
 
 
 
-See the `plugin reference <about-plugins.html>`__ for further information, and look in `JSDoc’s plugins directory <https://github.com/jsdoc3/jsdoc/tree/master/plugins>`_ for the plugins built into JSDoc.
+See the :ref:`plugins` for further information,
+and look in `JSDoc’s plugins directory`_ for the plugins built into JSDoc.
 
-You can configure the Markdown plugin by adding a ``markdown`` object to your configuration file. See `Configuring the Markdown Plugin <plugins-markdown.html>`__ for details.
+You can configure the Markdown plugin by adding a ``markdown`` object to your configuration file.
+See :ref:`plugins-markdown` for details.
 
 Specifying recursion depth
 --------------------------
 
-The ``recurseDepth`` option controls how many levels deep JSDoc will
-recursively search for source files and tutorials. This option is
-available in JSDoc 3.5.0 and later. This option is used only if you also
-specify the ``-r`` `command-line flag <about-commandline.html>`__, which
-tells JSDoc to recursively search for input files.
+The ``recurseDepth`` option controls how many levels deep JSDoc will recursively search for source files and tutorials.
+This option is available in JSDoc 3.5.0 and later.
+This option is used only if you also specify the ``-r`` :ref:`command-line`, which tells JSDoc to recursively search for input files.
 
 .. code-block:: js
 
@@ -136,7 +137,7 @@ to generate documentation.
 -  ``source.include``: An optional array of paths that contain files for
    which JSDoc should generate documentation. The paths given to JSDoc
    on the command line are combined with these paths. You can use the
-   ``-r`` `command-line option <about-commandline.html>`__ to recurse
+   ``-r`` :ref:`command-line` to recurse
    into subdirectories.
 -  ``source.exclude``: An optional array of paths that JSDoc should
    ignore. In JSDoc 3.3.0 and later, this array may include
@@ -257,7 +258,7 @@ accepts the following values:
 Incorporating command-line options into the configuration file
 --------------------------------------------------------------
 
-You can put many of JSDoc’s `command-line options <about-commandline.html>`__ into the configuration file instead
+You can put many of JSDoc’s :ref:`command-line` into the configuration file instead
 of specifying them on the command line. To do this, add the long names
 of the relevant options into an ``opts`` section of the configuration
 file, with the value set to the option’s value.
@@ -319,7 +320,7 @@ as well as how JSDoc interprets the tags that it recognizes. In JSDoc
 3.3.0 and later, there are two built-in tag dictionaries:
 
 -  ``jsdoc``: Core JSDoc tags.
--  ``closure``: `Closure Compiler tags <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__.
+-  ``closure``: `Closure Compiler tags`_.
 
 By default, both dictionaries are enabled. Also, by default, the
 ``jsdoc`` dictionary is listed first; as a result, if the ``jsdoc``
@@ -338,7 +339,7 @@ Configuring templates
 
 The options in ``templates`` affect the appearance and content of
 generated documentation. Third-party templates may not implement all of
-these options. See `Configuring JSDoc’s Default Template <about-configuring-default-template.html>`__ for additional
+these options. See :ref:`configuring-default-template` for additional
 options that the default template supports.
 
 
@@ -354,13 +355,14 @@ options that the default template supports.
 
 
 
-If ``templates.monospaceLinks`` is true, all link text from the `inline {@link} tag <tags-inline-link.html>`__ will be rendered in
-monospace.
+If ``templates.monospaceLinks`` is true, all link text from the inline will be rendered in monospace.
 
-If ``templates.cleverLinks`` is true, ``{@link asdf}`` will be rendered
-in normal font if ``asdf`` is a URL, and monospace otherwise. For
-example, ``{@link http://github.com}`` will render in plain text, but
-``{@link MyNamespace.myFunction}`` will be in monospace.
+If ``templates.cleverLinks`` is true, ``{@link asdf}`` will be rendered in normal font if ``asdf`` is a URL, and monospace otherwise.
+For example, ``{@link http://github.com}`` will render in plain text, but ``{@link MyNamespace.myFunction}`` will be in monospace.
 
-If ``templates.cleverLinks`` is true, ``templates.monospaceLinks`` is
-ignored.
+If ``templates.cleverLinks`` is true, ``templates.monospaceLinks`` is ignored.
+
+
+.. _conf.json.EXAMPLE: https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE
+.. _JSDoc’s plugins directory: https://github.com/jsdoc3/jsdoc/tree/master/plugins
+.. _Closure Compiler tags: https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags

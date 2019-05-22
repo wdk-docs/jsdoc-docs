@@ -3,6 +3,7 @@
 
 .. rst:directive:: @inner
 
+   :Syntax: ``@inner``
    :Overview:
 
       Using the @inner tag will mark a symbol as an inner member of its parent

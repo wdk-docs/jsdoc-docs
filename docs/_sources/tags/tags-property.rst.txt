@@ -1,8 +1,9 @@
-@property
+@property (synonyms: @prop)
 =============================
 
 .. rst:directive:: @property
 
+   :synonyms: :rst:dir:`@prop`
    :Overview:
 
       the @property tag is a way to easily document a list of static
@@ -58,3 +59,7 @@
          * @property {string} email
          * @property {string} [nickName]
          */
+
+.. rst:directive:: @prop
+
+   :synonyms: :rst:dir:`@property`

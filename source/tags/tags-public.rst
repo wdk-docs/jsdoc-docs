@@ -3,6 +3,7 @@
 
 .. rst:directive:: @public
 
+   :Syntax: ``@public``
    :Overview:
 
       The :rst:dir:`@public` tag indicates that a symbol should be documented as if

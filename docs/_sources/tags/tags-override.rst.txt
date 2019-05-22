@@ -3,17 +3,16 @@
 
 .. rst:directive:: @override
 
+   :Syntax: ``@override``
    :Overview:
 
       The :rst:dir:`@override` tag indicates that a symbol overrides a symbol with
       the same name in a parent class.
 
-      This tag is provided for compatibility with `Closure
-      Compiler <https://developers.google.com/closure/compiler/>`__. By
-      default, JSDoc automatically identifies symbols that override a parent.
+      This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`_.
+      By default, JSDoc automatically identifies symbols that override a parent.
 
-      If your JSDoc comment includes the `@inheritdoc
-      tag <tags-inheritdoc.html>`__, you do not need to include the
+      If your JSDoc comment includes the :rst:dir:`@inheritdoc`, you do not need to include the
       :rst:dir:`@override` tag. The presence of the :rst:dir:`@inheritdoc` tag implies the
       presence of the :rst:dir:`@override` tag.
 

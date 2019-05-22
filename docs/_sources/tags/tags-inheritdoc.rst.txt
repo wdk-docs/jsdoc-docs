@@ -3,19 +3,19 @@
 
 .. rst:directive:: @inheritdoc
 
+   :Syntax: ``@inheritdoc``
    :Overview:
 
       The :rst:dir:`@inheritdoc` tag indicates that a symbol should inherit its
       documentation from its parent class. Any other tags that you include in
       the JSDoc comment will be ignored.
 
-      This tag is provided for compatibility with `Closure
-      Compiler <https://developers.google.com/closure/compiler/>`__. By
-      default, if you do not add a JSDoc comment to a symbol, the symbol will
+      This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`_.
+      By default, if you do not add a JSDoc comment to a symbol, the symbol will
       inherit documentation from its parent.
 
       The presence of the :rst:dir:`@inheritdoc` tag implies the presence of the
-      `@override  tag <tags-override.html>`__.
+      :rst:dir:`@override`.
 
    :Examples:
 

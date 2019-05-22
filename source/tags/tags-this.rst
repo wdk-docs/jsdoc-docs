@@ -3,14 +3,10 @@
 
 .. rst:directive:: @this
 
-   :Syntax:
-
-      ``@this <namePath>``
-
+   :Syntax: ``@this <namePath>``
    :Overview:
 
-      The @this tag indicates what the ``this`` keyword refers to when used
-      within another symbol.
+      The @this tag indicates what the ``this`` keyword refers to when used within another symbol.
 
    :Examples:
 

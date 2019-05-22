@@ -3,10 +3,7 @@
 
 .. rst:directive:: @namespace
 
-   :Syntax:
-
-      ``@namespace [[{<type>}] <SomeName>]``
-
+   :Syntax: ``@namespace [[{<type>}] <SomeName>]``
    :Overview:
 
       The @namespace tag indicates that an object creates a namespace for its

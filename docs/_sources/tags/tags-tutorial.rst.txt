@@ -3,21 +3,14 @@
 
 .. rst:directive:: @tutorial
 
-   :Syntax:
-
-      .. code-block:: sh
-
-         @tutorial <tutorialID>
-
+   :Syntax: ``@tutorial <tutorialID>``
    :Overview:
 
       The :rst:dir:`@tutorial` tag inserts a link to a tutorial file that is provided
-      as part of the documentation. See the `tutorials
-      overview <about-tutorials.html>`__ for instructions on creating
-      tutorials.
+      as part of the documentation.
+      See the :ref:`tutorials` for instructions on creating tutorials.
 
-      You can use the :rst:dir:`@tutorial` tag more than once in a single JSDoc
-      comment.
+      You can use the :rst:dir:`@tutorial` tag more than once in a single JSDoc comment.
 
    :Examples:
 

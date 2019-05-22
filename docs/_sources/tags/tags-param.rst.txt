@@ -1,8 +1,9 @@
-@param
-=============================
+@param (synonyms: @arg, @argument)
+=====================================
 
 .. rst:directive:: @param
 
+   :Synonyms: :rst:dir:`@arg`, :rst:dir:`@argument`
    :Overview:
 
 
@@ -14,12 +15,12 @@
       curly brackets, and a description of the parameter.
 
       The parameter type can be a built-in JavaScript type, such as ``string``
-      or ``Object``, or a `JSDoc namepath <about-namepaths.html>`__ to another
+      or ``Object``, or a :ref:`namepaths` to another
       symbol in your code. If you have written documentation for the symbol at
       that namepath, JSDoc will automatically link to the documentation for
       that symbol. You can also use a type expression to indicate, for
       example, that a parameter is not nullable or can accept any type; see
-      the `@type  tag documentation <tags-type.html>`__ for details.
+      the :rst:dir:`@type` for details.
 
       If you provide a description, you can make the JSDoc comment more
       readable by inserting a hyphen before the description. Be sure to
@@ -27,11 +28,9 @@
 
    :Examples:
 
-      Names, types, and descriptions
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      **Names, types, and descriptions**
 
-      The following examples show how to include names, types, and
-      descriptions in a :rst:dir:`@param` tag.
+      The following examples show how to include names, types, and descriptions in a :rst:dir:`@param` tag.
 
       .. code-block:: js
          :caption: Name only
@@ -76,8 +75,7 @@
              alert('Hello ' + somebody);
          }
 
-      Parameters with properties
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      **Parameters with properties**
 
       If a parameter is expected to have a specific property, you can document
       that property by providing an additional :rst:dir:`@param` tag. For example, if
@@ -130,8 +128,7 @@
              // ...
          };
 
-      Optional parameters and default values
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      **Optional parameters and default values**
 
       The following examples show how to indicate that a parameter is optional
       and has a default value.
@@ -175,13 +172,11 @@
              alert('Hello ' + somebody);
          }
 
-      Multiple types and repeatable parameters
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      **Multiple types and repeatable parameters**
 
       The following examples show how to use type expressions to indicate that
       a parameter can accept multiple types (or any type), and that a
-      parameter can be provided more than once. See the `@type  tag
-      documentation <tags-type.html>`__ for details about the type expressions
+      parameter can be provided more than once. See the :rst:dir:`@type` for details about the type expressions
       that JSDoc supports.
 
       .. code-block:: js
@@ -224,11 +219,10 @@
              return t;
          }
 
-      Callback functions
-      ~~~~~~~~~~~~~~~~~~
+      **Callback functions**
 
       If a parameter accepts a callback function, you can use the
-      `@callback  tag <tags-callback.html>`__ to define a callback type,
+      :rst:dir:`@callback` to define a callback type,
       then include the callback type in the :rst:dir:`@param` tag.
 
       .. code-block:: js
@@ -249,3 +243,11 @@
          function doSomethingAsynchronously(cb) {
              // code
          };
+
+.. rst:directive:: @arg
+
+   :Synonyms: :rst:dir:`@param`
+
+.. rst:directive:: @argument
+
+   :Synonyms: :rst:dir:`@param`

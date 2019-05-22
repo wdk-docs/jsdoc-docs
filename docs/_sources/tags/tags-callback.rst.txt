@@ -3,10 +3,7 @@
 
 .. rst:directive:: @callback
 
-   :Syntax:
-
-      ``@callback <namepath>``
-
+   :Syntax: ``@callback <namepath>``
    :Overview:
 
       The @callback tag provides information about a callback function that

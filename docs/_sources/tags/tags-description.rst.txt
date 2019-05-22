@@ -1,18 +1,15 @@
-@description
-=============================
+@description (synonyms: @desc)
+================================
 
 .. rst:directive:: @description
 
-   :Syntax:
-
-      ``@description <some description>``
-
+   :Synonyms: :rst:dir:`@desc`
+   :Syntax: ``@description <some description>``
    :Overview:
 
       The @description tag allows you to provide a general description of the
       symbol you are documenting. The description may include HTML markup. It
-      may also include Markdown formatting if the `Markdown
-      plugin <plugins-markdown.html>`__ is enabled.
+      may also include Markdown formatting if the :ref:`plugins-markdown` is enabled.
 
    :Examples:
 
@@ -52,3 +49,7 @@
       description provided with the @description tag, the description
       specified with the @description will override the description at the
       beginning of the comment.
+
+.. rst:directive:: @desc
+
+   :Synonyms: :rst:dir:`@description`

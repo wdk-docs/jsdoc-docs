@@ -1,3 +1,5 @@
+.. _including-readme:
+
 Including a README File
 =================================
 

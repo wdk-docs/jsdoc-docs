@@ -15,9 +15,7 @@
 
       By default, the @memberof tag documents member symbols as static
       members. For inner and instance members, you can use scoping punctuation
-      after the namepath, or you can add the
-      [@inner]\ `inner-tag <tags-inner.html>`__ or
-      [@instance]\ `instance-tag <tags-instance.html>`__ tag.
+      after the namepath, or you can add the :rst:dir:`@inner` or :rst:dir:`@instance` tag.
 
       The “forced” @memberof tag, @memberof!, forces the object to be
       documented as belonging to a specific parent even if it appears to have

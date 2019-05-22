@@ -3,10 +3,7 @@
 
 .. rst:directive:: @event
 
-   :Syntax:
-
-      ``@event <className>#[event:]<eventName>``
-
+   :Syntax: ``@event <className>#[event:]<eventName>``
    :Overview:
 
       The @event tag allows you to document an event that can be fired. A
@@ -23,9 +20,10 @@
       event in another doclet. (The @fires tag is a notable exception; it
       allows you to omit the namespace.)
 
-      **Note**: JSDoc 3 uses @event doclets to document the content of an
-      event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a
-      function that can be fired when an event of the same name occurs.
+      .. attention::
+         JSDoc 3 uses @event doclets to document the content of an
+         event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a
+         function that can be fired when an event of the same name occurs.
 
    :Examples:
 

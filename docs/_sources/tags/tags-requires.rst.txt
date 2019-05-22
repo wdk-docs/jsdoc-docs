@@ -3,10 +3,7 @@
 
 .. rst:directive:: @requires
 
-   :Syntax:
-
-      ``@requires <someModuleName>``
-
+   :Syntax: ``@requires <someModuleName>``
    :Overview:
 
       The @requires tag allows you to document that a module is needed to use

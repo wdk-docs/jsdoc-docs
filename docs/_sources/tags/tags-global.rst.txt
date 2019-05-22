@@ -3,6 +3,7 @@
 
 .. rst:directive:: @global
 
+   :Syntax: ``@global``
    :Overview:
 
          The @global tag specifies that a symbol should appear in the
@@ -12,8 +13,7 @@
 
    :Examples:
 
-      Use the @global tag to specify that a symbol should be documented as
-      global.
+      Use the @global tag to specify that a symbol should be documented as global.
 
       .. code-block:: js
          :caption: Document an inner variable as a global

@@ -3,10 +3,7 @@
 
 .. rst:directive:: @borrows
 
-   :Syntax:
-
-      ``@borrows <that namepath> as <this namepath>``
-
+   :Syntax: ``@borrows <that namepath> as <this namepath>``
    :Overview:
 
       The @borrows tag allows you to add documentation for another symbol to
@@ -19,8 +16,7 @@
    :Examples:
 
       In this example there exists documentation for the “trstr” function, but
-      “util.trim” is just a reference to that same function by a different
-      name.
+      “util.trim” is just a reference to that same function by a different name.
 
       .. code-block:: js
          :caption: Duplicate the documentation for trstr as util.trim

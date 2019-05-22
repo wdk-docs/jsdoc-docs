@@ -169,7 +169,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="amd-modules">
-<h1>Amd模块<a class="headerlink" href="#amd-modules" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>Amd模块<a class="headerlink" href="#amd-modules" title="永久链接至标题">¶</a></h1>
 <div class="section" id="overview">
 <h2>概述<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h2>
 <p>JSDoc 3 makes it possible to document modules that use the <a class="reference external" href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">Asynchronous
@@ -178,13 +178,11 @@ API</a>, which is
 implemented by libraries such as <a class="reference external" href="http://requirejs.org/">RequireJS</a>.
 This page explains how to document an AMD module for JSDoc, based on the
 coding conventions that your module uses.</p>
-<p>If you’re documenting CommonJS or Node.js modules, see <a class="reference external" href="howto-commonjs-modules.html">CommonJS
-Modules</a> for instructions.</p>
+<p>If you’re documenting CommonJS or Node.js modules, see <a class="reference internal" href="howto-commonjs-modules.html#commonjs-modules"><span class="std std-ref">CommonJS 模块</span></a> for instructions.</p>
 </div>
 <div class="section" id="module-identifiers">
 <h2>模块标识符<a class="headerlink" href="#module-identifiers" title="永久链接至标题">¶</a></h2>
-<p>When you document an AMD module, you’ll use an <a class="reference external" href="tags-exports.html">&#64;exports
-tag</a> or <a class="reference external" href="tags-module.html">&#64;module tag</a> to
+<p>When you document an AMD module, you’ll use an <a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> or <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> to
 document the identifier that’s passed to the <code class="docutils literal notranslate"><span class="pre">require()</span></code> function. For
 example, if users load the module by calling
 <code class="docutils literal notranslate"><span class="pre">require('my/shirt',</span> <span class="pre">/*</span> <span class="pre">callback</span> <span class="pre">*/)</span></code>, you’ll write a JSDoc comment
@@ -192,11 +190,10 @@ that contains the tag <code class="docutils literal notranslate"><span class="pr
 examples below can help you decide which of these tags to use.</p>
 <p>If you use the <a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> or <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> tag without a value, JSDoc
 will try to guess the correct module identifier based on the filepath.</p>
-<p>When you use a JSDoc <a class="reference external" href="about-namepaths.html">namepath</a> to refer to a
+<p>When you use a JSDoc <span class="xref std std-ref">namepath</span> to refer to a
 module from another JSDoc comment, you must add the prefix <code class="docutils literal notranslate"><span class="pre">module:</span></code>.
 For example, if you want the documentation for the module <code class="docutils literal notranslate"><span class="pre">my/pants</span></code>
-to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <a class="reference external" href="tags-see.html">&#64;see
-tag</a> to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
+to link to the module <code class="docutils literal notranslate"><span class="pre">my/shirt</span></code>, you could use the <a class="reference internal" href="../tags/tags-see.html#directive-&#64;see" title="&#64;see directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;see</span></code></a> to document <code class="docutils literal notranslate"><span class="pre">my/pants</span></code> as follows:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Pants module.</span>
 <span class="cm"> * @module my/pants</span>
@@ -212,9 +209,12 @@ an instance method named <code class="docutils literal notranslate"><span class=
 </div>
 <div class="section" id="function-that-returns-an-object-literal">
 <h2>返回对象文字的函数<a class="headerlink" href="#function-that-returns-an-object-literal" title="永久链接至标题">¶</a></h2>
-<p>如果将AMD模块定义为返回对象文字的函数，请使用 <a href="#id1"><span class="problematic" id="id2">``</span></a>&#64;exports tag &lt;tags-exports.html&gt;`__ 来记录模块的名称。 JSDoc将自动检测对象的属性是否为模块的成员。</p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">返回对象文字的函数</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<p>If you define your AMD module as a function that returns an object
+literal, use the <a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> to document
+the module’s name. JSDoc will automatically detect that the object’s
+properties are members of the module.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">返回对象文字的函数</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;my/shirt&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
    <span class="cm">/**</span>
 <span class="cm">    * A module representing a shirt.</span>
@@ -245,11 +245,11 @@ an instance method named <code class="docutils literal notranslate"><span class=
 <h2>返回另一个函数的函数<a class="headerlink" href="#function-that-returns-another-function" title="永久链接至标题">¶</a></h2>
 <p>If you define your module as a function that exports another function,
 such as a constructor, you can use a standalone comment with a
-<a class="reference external" href="tags-module.html">&#64;module  tag</a> to document the module. You can
-then use an <a class="reference external" href="tags-alias.html">&#64;alias  tag</a> to tell JSDoc that the
+<a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> to document the module. You can
+then use an <a class="reference internal" href="../tags/tags-alias.html#directive-&#64;alias" title="&#64;alias directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;alias</span></code></a> to tell JSDoc that the
 function uses the same longname as the module.</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Function that returns a constructor</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Function that returns a constructor</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * A module representing a jacket.</span>
 <span class="cm"> * @module my/jacket</span>
@@ -278,12 +278,10 @@ function uses the same longname as the module.</p>
 <div class="section" id="module-declared-in-a-return-statement">
 <h2>模块在return语句中声明<a class="headerlink" href="#module-declared-in-a-return-statement" title="永久链接至标题">¶</a></h2>
 <p>If you declare your module object in a function’s <code class="docutils literal notranslate"><span class="pre">return</span></code> statement,
-you can use a standalone comment with a <a class="reference external" href="tags-module.html">&#64;module
-tag</a> to document the module. You can then add an
-<a class="reference external" href="tags-alias.html">&#64;alias tag</a> to tell JSDoc that the module
-object has the same longname as the module.</p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">模块在return语句中声明</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
+you can use a standalone comment with a <a class="reference internal" href="../tags/tags-module.html#directive-&#64;module" title="&#64;module directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;module</span></code></a> to document the module.
+You can then add an <a class="reference internal" href="../tags/tags-alias.html#directive-&#64;alias" title="&#64;alias directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;alias</span></code></a> to tell JSDoc that the module object has the same longname as the module.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">模块在return语句中声明</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Module representing a shirt.</span>
 <span class="cm"> * @module my/shirt</span>
@@ -306,11 +304,10 @@ object has the same longname as the module.</p>
 <div class="section" id="module-object-passed-to-a-function">
 <h2>传递给函数的模块对象<a class="headerlink" href="#module-object-passed-to-a-function" title="永久链接至标题">¶</a></h2>
 <p>If the module object is passed into the function that defines your
-module, you can document the module by adding an <a class="reference external" href="tags-exports.html">&#64;exports
-tag</a> to the function parameter. This pattern is
+module, you can document the module by adding an <a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> to the function parameter. This pattern is
 supported in JSDoc 3.3.0 and later.</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">传递给函数的模块对象</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">传递给函数的模块对象</span><a class="headerlink" href="#id5" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;my/jacket&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span>
     <span class="cm">/**</span>
 <span class="cm">     * Utility functions for jackets.</span>
@@ -333,10 +330,9 @@ supported in JSDoc 3.3.0 and later.</p>
 <div class="section" id="multiple-modules-defined-in-one-file">
 <h2>在一个文件中定义多个模块<a class="headerlink" href="#multiple-modules-defined-in-one-file" title="永久链接至标题">¶</a></h2>
 <p>If you define more than one AMD module in a single JavaScript file, use
-the <a class="reference external" href="tags-exports.html">&#64;exports tag</a> to document each module
-object.</p>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Multiple AMD modules defined in one file</span><a class="headerlink" href="#id7" title="永久链接至代码">¶</a></div>
+the <a class="reference internal" href="../tags/tags-exports.html#directive-&#64;exports" title="&#64;exports directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;exports</span></code></a> to document each module object.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Multiple AMD modules defined in one file</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// one module</span>
 <span class="nx">define</span><span class="p">(</span><span class="s1">&#39;html/utils&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="cm">/**</span>

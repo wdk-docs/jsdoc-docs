@@ -1,3 +1,5 @@
+.. _getting-started:
+
 :jsdoc:`Getting Started with JSDoc 3 <about-getting-started>`
 ===============================================================
 
@@ -32,7 +34,7 @@ documentation comment.
 
 Special “JSDoc tags” can be used to give more information. For example,
 if the function is a constructor for a class, you can indicate this by
-adding a ``@constructor`` tag.
+adding a :rst:dir:`@constructor` tag.
 
 .. code-block:: js
    :caption: Use a JSDoc tag to describe your code
@@ -44,9 +46,8 @@ adding a ``@constructor`` tag.
    function Book(title, author) {
    }
 
-More tags can be used to add more information. See the `home
-page <index.html#block-tags>`__ for a complete list of tags that are
-recognized by JSDoc 3.
+More tags can be used to add more information.
+See the `home page <index#block-tags>` for a complete list of tags that are recognized by JSDoc 3.
 
 .. code-block:: js
    :caption: Adding more information with tags

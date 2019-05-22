@@ -3,6 +3,7 @@
 
 .. rst:directive:: @ignore
 
+   :Syntax: ``@ignore``
    :Overview:
 
       The :rst:dir:`@ignore` tag indicates that a symbol in your code should never

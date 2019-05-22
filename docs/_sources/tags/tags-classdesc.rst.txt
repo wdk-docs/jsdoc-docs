@@ -3,16 +3,13 @@
 
 .. rst:directive:: @classdesc
 
-:Syntax:
-
-   ``@classdesc <some description>``
-
+:Syntax: ``@classdesc <some description>``
 :Overview:
 
    The @classdesc tag is used to provide a description for a class,
    separate from the constructor function’s description. Use the @classdesc
    tag in combination with the [@class (or @constructor)
-   tag]\ `class-tag <tags-class.html>`__.
+   tag]\ :rst:dir:`class`.
 
    The functionality of the @classdesc tag in JSDoc 3 duplicates that of
    the @class in previous versions. As of version 3, the syntax and

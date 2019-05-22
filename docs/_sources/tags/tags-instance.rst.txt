@@ -3,6 +3,7 @@
 
 .. rst:directive:: @instance
 
+   :Syntax: ``@instance``
    :Overview:
 
       Using the @instance tag will mark a symbol as an instance member of its

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 18:28+0800\n"
+"POT-Creation-Date: 2019-05-21 23:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../source/tags/index.rst:4
-#: ../../source/tags/index.rst:4
+#: ../../source/tags/index.rst:8
+#: ../../source/tags/index.rst:8
 msgid "Block Tags"
 msgstr ""
 
-#: ../../source/tags/index.rst:76
-#: ../../source/tags/index.rst:76
+#: ../../source/tags/index.rst:80
+#: ../../source/tags/index.rst:80
 msgid "Inline Tags"
 msgstr ""
 
@@ -30,87 +30,132 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: ../../source/tags/index.rst:84
+#: ../../source/tags/index.rst:6
+msgid "jsdoc 的标签 以 @ 开头 如 @access"
+msgstr ""
+
+#: ../../source/tags/index.rst:88
 msgid "待处理"
 msgstr ""
 
-#: ../../source/tags/index.rst:86
+#: ../../source/tags/index.rst:90
 msgid "清理    :caption: Adding a plugin to JSDoc’s configuration file"
 msgstr ""
 
 #: ../../source/tags/tags-abstract.rst:3
-msgid "@abstract"
+msgid "@abstract (synonyms: @virtual)"
 msgstr ""
 
-#: ../../source/tags/tags-abstract.rst:6
-#: ../../source/tags/tags-access.rst:10
-#: ../../source/tags/tags-alias.rst:10
-#: ../../source/tags/tags-async.rst:10
-#: ../../source/tags/tags-augments.rst:10
-#: ../../source/tags/tags-author.rst:10
-#: ../../source/tags/tags-borrows.rst:10
-#: ../../source/tags/tags-callback.rst:11
-#: ../../source/tags/tags-class.rst:10
-#: ../../source/tags/tags-classdesc.rst:11
-#: ../../source/tags/tags-constant.rst:10
-#: ../../source/tags/tags-constructs.rst:5
-#: ../../source/tags/tags-copyright.rst:10
-#: ../../source/tags/tags-default.rst:10
-#: ../../source/tags/tags-deprecated.rst:10
-#: ../../source/tags/tags-description.rst:10
-#: ../../source/tags/tags-enum.rst:10
-#: ../../source/tags/tags-event.rst:10
-#: ../../source/tags/tags-example.rst:5
-#: ../../source/tags/tags-exports.rst:14
-#: ../../source/tags/tags-external.rst:10
-#: ../../source/tags/tags-file.rst:5
-#: ../../source/tags/tags-fires.rst:10
-#: ../../source/tags/tags-function.rst:10
-#: ../../source/tags/tags-generator.rst:10
-#: ../../source/tags/tags-global.rst:5
-#: ../../source/tags/tags-hideconstructor.rst:10
-#: ../../source/tags/tags-ignore.rst:5
-#: ../../source/tags/tags-implements.rst:10
-#: ../../source/tags/tags-inheritdoc.rst:5
-#: ../../source/tags/tags-inline-link.rst:15
-#: ../../source/tags/tags-inline-tutorial.rst:15
-#: ../../source/tags/tags-inner.rst:5
-#: ../../source/tags/tags-instance.rst:5
-#: ../../source/tags/tags-interface.rst:18
-#: ../../source/tags/tags-kind.rst:24
-#: ../../source/tags/tags-lends.rst:10
-#: ../../source/tags/tags-license.rst:10
-#: ../../source/tags/tags-listens.rst:10
-#: ../../source/tags/tags-member.rst:10
-#: ../../source/tags/tags-memberof.rst:11
-#: ../../source/tags/tags-mixes.rst:10
-#: ../../source/tags/tags-mixin.rst:10
-#: ../../source/tags/tags-module.rst:15
-#: ../../source/tags/tags-name.rst:10
-#: ../../source/tags/tags-namespace.rst:10
-#: ../../source/tags/tags-override.rst:5
-#: ../../source/tags/tags-package.rst:18
-#: ../../source/tags/tags-param.rst:5
-#: ../../source/tags/tags-private.rst:18
-#: ../../source/tags/tags-property.rst:5
-#: ../../source/tags/tags-protected.rst:18
-#: ../../source/tags/tags-public.rst:5
-#: ../../source/tags/tags-readonly.rst:5
-#: ../../source/tags/tags-requires.rst:10
-#: ../../source/tags/tags-returns.rst:10
-#: ../../source/tags/tags-see.rst:11
-#: ../../source/tags/tags-since.rst:10
-#: ../../source/tags/tags-static.rst:5
-#: ../../source/tags/tags-summary.rst:10
-#: ../../source/tags/tags-this.rst:10
-#: ../../source/tags/tags-throws.rst:12
-#: ../../source/tags/tags-todo.rst:10
-#: ../../source/tags/tags-tutorial.rst:12
-#: ../../source/tags/tags-type.rst:10
-#: ../../source/tags/tags-typedef.rst:10
-#: ../../source/tags/tags-variation.rst:10
-#: ../../source/tags/tags-version.rst:5
-#: ../../source/tags/tags-yields.rst:10
+#: ../../source/tags/tags-abstract.rst:0
+#: ../../source/tags/tags-abstract.rst:0
+#: ../../source/tags/tags-augments.rst:0
+#: ../../source/tags/tags-class.rst:0
+#: ../../source/tags/tags-class.rst:0
+#: ../../source/tags/tags-constant.rst:0
+#: ../../source/tags/tags-constant.rst:0
+#: ../../source/tags/tags-default.rst:0
+#: ../../source/tags/tags-default.rst:0
+#: ../../source/tags/tags-description.rst:0
+#: ../../source/tags/tags-description.rst:0
+#: ../../source/tags/tags-external.rst:0
+#: ../../source/tags/tags-external.rst:0
+#: ../../source/tags/tags-file.rst:0
+#: ../../source/tags/tags-file.rst:0
+#: ../../source/tags/tags-file.rst:0
+#: ../../source/tags/tags-fires.rst:0
+#: ../../source/tags/tags-fires.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-member.rst:0
+#: ../../source/tags/tags-member.rst:0
+#: ../../source/tags/tags-param.rst:0
+#: ../../source/tags/tags-param.rst:0
+#: ../../source/tags/tags-param.rst:0
+#: ../../source/tags/tags-returns.rst:0
+#: ../../source/tags/tags-returns.rst:0
+#: ../../source/tags/tags-throws.rst:0
+#: ../../source/tags/tags-throws.rst:0
+#: ../../source/tags/tags-yields.rst:0
+#: ../../source/tags/tags-yields.rst:0
+msgid "Synonyms"
+msgstr ""
+
+#: ../../source/tags/tags-abstract.rst:7
+msgid ":rst:dir:`@virtual`"
+msgstr ""
+
+#: ../../source/tags/tags-abstract.rst:0
+#: ../../source/tags/tags-access.rst:0
+#: ../../source/tags/tags-alias.rst:0
+#: ../../source/tags/tags-async.rst:0
+#: ../../source/tags/tags-augments.rst:0
+#: ../../source/tags/tags-author.rst:0
+#: ../../source/tags/tags-borrows.rst:0
+#: ../../source/tags/tags-callback.rst:0
+#: ../../source/tags/tags-class.rst:0
+#: ../../source/tags/tags-classdesc.rst:0
+#: ../../source/tags/tags-constant.rst:0
+#: ../../source/tags/tags-constructs.rst:0
+#: ../../source/tags/tags-copyright.rst:0
+#: ../../source/tags/tags-default.rst:0
+#: ../../source/tags/tags-description.rst:0
+#: ../../source/tags/tags-enum.rst:0
+#: ../../source/tags/tags-event.rst:0
+#: ../../source/tags/tags-example.rst:0
+#: ../../source/tags/tags-exports.rst:0
+#: ../../source/tags/tags-external.rst:0
+#: ../../source/tags/tags-file.rst:0
+#: ../../source/tags/tags-fires.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-generator.rst:0
+#: ../../source/tags/tags-global.rst:0
+#: ../../source/tags/tags-hideconstructor.rst:0
+#: ../../source/tags/tags-ignore.rst:0
+#: ../../source/tags/tags-implements.rst:0
+#: ../../source/tags/tags-inheritdoc.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-inline-tutorial.rst:0
+#: ../../source/tags/tags-inner.rst:0
+#: ../../source/tags/tags-instance.rst:0
+#: ../../source/tags/tags-interface.rst:0
+#: ../../source/tags/tags-kind.rst:0
+#: ../../source/tags/tags-lends.rst:0
+#: ../../source/tags/tags-license.rst:0
+#: ../../source/tags/tags-listens.rst:0
+#: ../../source/tags/tags-member.rst:0
+#: ../../source/tags/tags-memberof.rst:0
+#: ../../source/tags/tags-mixes.rst:0
+#: ../../source/tags/tags-mixin.rst:0
+#: ../../source/tags/tags-module.rst:0
+#: ../../source/tags/tags-name.rst:0
+#: ../../source/tags/tags-namespace.rst:0
+#: ../../source/tags/tags-override.rst:0
+#: ../../source/tags/tags-package.rst:0
+#: ../../source/tags/tags-param.rst:0
+#: ../../source/tags/tags-private.rst:0
+#: ../../source/tags/tags-property.rst:0
+#: ../../source/tags/tags-protected.rst:0
+#: ../../source/tags/tags-public.rst:0
+#: ../../source/tags/tags-readonly.rst:0
+#: ../../source/tags/tags-requires.rst:0
+#: ../../source/tags/tags-returns.rst:0
+#: ../../source/tags/tags-see.rst:0
+#: ../../source/tags/tags-since.rst:0
+#: ../../source/tags/tags-static.rst:0
+#: ../../source/tags/tags-summary.rst:0
+#: ../../source/tags/tags-this.rst:0
+#: ../../source/tags/tags-throws.rst:0
+#: ../../source/tags/tags-todo.rst:0
+#: ../../source/tags/tags-tutorial.rst:0
+#: ../../source/tags/tags-type.rst:0
+#: ../../source/tags/tags-typedef.rst:0
+#: ../../source/tags/tags-variation.rst:0
+#: ../../source/tags/tags-version.rst:0
+#: ../../source/tags/tags-yields.rst:0
 msgid "Overview"
 msgstr ""
 
@@ -118,179 +163,192 @@ msgstr ""
 msgid "The @abstract tag identifies members that must be implemented (or overridden) by objects that inherit the member."
 msgstr ""
 
-#: ../../source/tags/tags-abstract.rst:12
-#: ../../source/tags/tags-async.rst:26
-#: ../../source/tags/tags-file.rst:11
-#: ../../source/tags/tags-generator.rst:24
-#: ../../source/tags/tags-listens.rst:17
-#: ../../source/tags/tags-override.rst:20
+#: ../../source/tags/tags-abstract.rst:0
+#: ../../source/tags/tags-async.rst:0
+#: ../../source/tags/tags-file.rst:0
+#: ../../source/tags/tags-generator.rst:0
+#: ../../source/tags/tags-listens.rst:0
+#: ../../source/tags/tags-override.rst:0
 msgid "Example"
 msgstr ""
 
-#: ../../source/tags/tags-abstract.rst:14
+#: ../../source/tags/tags-abstract.rst:11
 msgid "Parent class with abstract method, and child class that implements the method"
+msgstr ""
+
+#: ../../source/tags/tags-abstract.rst:46
+msgid ":rst:dir:`@abstract`"
 msgstr ""
 
 #: ../../source/tags/tags-access.rst:2
 msgid "@access"
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:5
-#: ../../source/tags/tags-alias.rst:5
-#: ../../source/tags/tags-async.rst:5
-#: ../../source/tags/tags-augments.rst:5
-#: ../../source/tags/tags-author.rst:5
-#: ../../source/tags/tags-borrows.rst:5
-#: ../../source/tags/tags-callback.rst:6
-#: ../../source/tags/tags-class.rst:5
-#: ../../source/tags/tags-classdesc.rst:6
-#: ../../source/tags/tags-constant.rst:5
-#: ../../source/tags/tags-constructs.rst:12
-#: ../../source/tags/tags-copyright.rst:5
-#: ../../source/tags/tags-default.rst:5
-#: ../../source/tags/tags-deprecated.rst:5
-#: ../../source/tags/tags-description.rst:5
-#: ../../source/tags/tags-enum.rst:5
-#: ../../source/tags/tags-event.rst:5
-#: ../../source/tags/tags-exports.rst:6
-#: ../../source/tags/tags-external.rst:5
-#: ../../source/tags/tags-fires.rst:5
-#: ../../source/tags/tags-function.rst:5
-#: ../../source/tags/tags-generator.rst:5
-#: ../../source/tags/tags-hideconstructor.rst:5
-#: ../../source/tags/tags-implements.rst:5
-#: ../../source/tags/tags-inline-link.rst:5
-#: ../../source/tags/tags-inline-tutorial.rst:5
-#: ../../source/tags/tags-interface.rst:5
-#: ../../source/tags/tags-kind.rst:5
-#: ../../source/tags/tags-lends.rst:5
-#: ../../source/tags/tags-license.rst:5
-#: ../../source/tags/tags-listens.rst:5
-#: ../../source/tags/tags-member.rst:5
-#: ../../source/tags/tags-memberof.rst:5
-#: ../../source/tags/tags-mixes.rst:5
-#: ../../source/tags/tags-mixin.rst:5
-#: ../../source/tags/tags-module.rst:5
-#: ../../source/tags/tags-name.rst:5
-#: ../../source/tags/tags-namespace.rst:5
-#: ../../source/tags/tags-package.rst:5
-#: ../../source/tags/tags-private.rst:5
-#: ../../source/tags/tags-protected.rst:5
-#: ../../source/tags/tags-requires.rst:5
-#: ../../source/tags/tags-returns.rst:5
-#: ../../source/tags/tags-see.rst:5
-#: ../../source/tags/tags-since.rst:5
-#: ../../source/tags/tags-summary.rst:5
-#: ../../source/tags/tags-this.rst:5
-#: ../../source/tags/tags-throws.rst:5
-#: ../../source/tags/tags-todo.rst:5
-#: ../../source/tags/tags-tutorial.rst:5
-#: ../../source/tags/tags-type.rst:5
-#: ../../source/tags/tags-typedef.rst:5
-#: ../../source/tags/tags-variation.rst:5
-#: ../../source/tags/tags-yields.rst:5
+#: ../../source/tags/tags-access.rst:0
+#: ../../source/tags/tags-alias.rst:0
+#: ../../source/tags/tags-async.rst:0
+#: ../../source/tags/tags-augments.rst:0
+#: ../../source/tags/tags-author.rst:0
+#: ../../source/tags/tags-borrows.rst:0
+#: ../../source/tags/tags-callback.rst:0
+#: ../../source/tags/tags-class.rst:0
+#: ../../source/tags/tags-classdesc.rst:0
+#: ../../source/tags/tags-constant.rst:0
+#: ../../source/tags/tags-constructs.rst:0
+#: ../../source/tags/tags-copyright.rst:0
+#: ../../source/tags/tags-default.rst:0
+#: ../../source/tags/tags-description.rst:0
+#: ../../source/tags/tags-enum.rst:0
+#: ../../source/tags/tags-event.rst:0
+#: ../../source/tags/tags-example.rst:0
+#: ../../source/tags/tags-exports.rst:0
+#: ../../source/tags/tags-external.rst:0
+#: ../../source/tags/tags-fires.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-generator.rst:0
+#: ../../source/tags/tags-global.rst:0
+#: ../../source/tags/tags-hideconstructor.rst:0
+#: ../../source/tags/tags-ignore.rst:0
+#: ../../source/tags/tags-implements.rst:0
+#: ../../source/tags/tags-inheritdoc.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-inline-tutorial.rst:0
+#: ../../source/tags/tags-inner.rst:0
+#: ../../source/tags/tags-instance.rst:0
+#: ../../source/tags/tags-interface.rst:0
+#: ../../source/tags/tags-kind.rst:0
+#: ../../source/tags/tags-lends.rst:0
+#: ../../source/tags/tags-license.rst:0
+#: ../../source/tags/tags-listens.rst:0
+#: ../../source/tags/tags-member.rst:0
+#: ../../source/tags/tags-memberof.rst:0
+#: ../../source/tags/tags-mixes.rst:0
+#: ../../source/tags/tags-mixin.rst:0
+#: ../../source/tags/tags-module.rst:0
+#: ../../source/tags/tags-name.rst:0
+#: ../../source/tags/tags-namespace.rst:0
+#: ../../source/tags/tags-override.rst:0
+#: ../../source/tags/tags-package.rst:0
+#: ../../source/tags/tags-private.rst:0
+#: ../../source/tags/tags-protected.rst:0
+#: ../../source/tags/tags-public.rst:0
+#: ../../source/tags/tags-readonly.rst:0
+#: ../../source/tags/tags-requires.rst:0
+#: ../../source/tags/tags-returns.rst:0
+#: ../../source/tags/tags-see.rst:0
+#: ../../source/tags/tags-since.rst:0
+#: ../../source/tags/tags-static.rst:0
+#: ../../source/tags/tags-summary.rst:0
+#: ../../source/tags/tags-this.rst:0
+#: ../../source/tags/tags-throws.rst:0
+#: ../../source/tags/tags-todo.rst:0
+#: ../../source/tags/tags-tutorial.rst:0
+#: ../../source/tags/tags-type.rst:0
+#: ../../source/tags/tags-typedef.rst:0
+#: ../../source/tags/tags-variation.rst:0
+#: ../../source/tags/tags-version.rst:0
+#: ../../source/tags/tags-yields.rst:0
 msgid "Syntax"
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:7
+#: ../../source/tags/tags-access.rst:6
 msgid "``@access <package|private|protected|public>``"
 msgstr ""
 
+#: ../../source/tags/tags-access.rst:9
+msgid "The :rst:dir:`@access` tag specifies the access level of a member. You can use the :rst:dir:`@access` tag as a synonym for other tags:"
+msgstr ""
+
 #: ../../source/tags/tags-access.rst:12
-msgid "The ``@access`` tag specifies the access level of a member. You can use the ``@access`` tag as a synonym for other tags:"
+msgid "``@access package`` is the same as :rst:dir:`@package`. This option is available in JSDoc 3.5.0 and later."
+msgstr ""
+
+#: ../../source/tags/tags-access.rst:14
+msgid "``@access private`` is the same as :rst:dir:`@private`."
 msgstr ""
 
 #: ../../source/tags/tags-access.rst:15
-msgid "``@access package`` is the same as ``@package``. This option is available in JSDoc 3.5.0 and later."
+msgid "``@access protected`` is the same as :rst:dir:`@protected`."
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:17
-msgid "``@access private`` is the same as ``@private``."
+#: ../../source/tags/tags-access.rst:16
+msgid "``@access public`` is the same as :rst:dir:`@public`."
 msgstr ""
 
 #: ../../source/tags/tags-access.rst:18
-msgid "``@access protected`` is the same as ``@protected``."
+msgid "Private members are not shown in the generated output unless JSDoc is run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and later, you can also use the ``-a/--access`` :ref:`command-line` to change this behavior."
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:19
-msgid "``@access public`` is the same as ``@public``."
+#: ../../source/tags/tags-access.rst:22
+msgid "Note that a doclet’s *access level* is different from its *scope*. For example, if ``Parent`` has an inner variable named ``child`` that is documented as :rst:dir:`@public`, the ``child`` variable will still be treated as an inner variable with the namepath ``Parent~child``. In other words, the ``child`` variable will have an inner scope, even though the variable is public. To change a doclet’s scope, use the :rst:dir:`@instance`, :rst:dir:`@static`, and :rst:dir:`@global` tags."
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:21
-msgid "Private members are not shown in the generated output unless JSDoc is run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and later, you can also use the ```-a/--access`` command-line option <about-commandline.html>`__ to change this behavior."
-msgstr ""
-
-#: ../../source/tags/tags-access.rst:26
-msgid "Note that a doclet’s *access level* is different from its *scope*. For example, if ``Parent`` has an inner variable named ``child`` that is documented as ``@public``, the ``child`` variable will still be treated as an inner variable with the namepath ``Parent~child``. In other words, the ``child`` variable will have an inner scope, even though the variable is public. To change a doclet’s scope, use the `@instance  <tags-instance.html>`__, `@static  <tags-static.html>`__, and `@global  <tags-global.html>`__ tags."
-msgstr ""
-
-#: ../../source/tags/tags-access.rst:37
-#: ../../source/tags/tags-alias.rst:45
-#: ../../source/tags/tags-augments.rst:21
-#: ../../source/tags/tags-author.rst:18
-#: ../../source/tags/tags-borrows.rst:20
-#: ../../source/tags/tags-callback.rst:29
-#: ../../source/tags/tags-class.rst:16
-#: ../../source/tags/tags-classdesc.rst:25
-#: ../../source/tags/tags-constant.rst:16
-#: ../../source/tags/tags-constructs.rst:17
-#: ../../source/tags/tags-copyright.rst:17
-#: ../../source/tags/tags-default.rst:19
-#: ../../source/tags/tags-deprecated.rst:15
-#: ../../source/tags/tags-description.rst:18
-#: ../../source/tags/tags-enum.rst:21
-#: ../../source/tags/tags-event.rst:31
-#: ../../source/tags/tags-example.rst:11
-#: ../../source/tags/tags-exports.rst:21
-#: ../../source/tags/tags-external.rst:28
-#: ../../source/tags/tags-fires.rst:17
-#: ../../source/tags/tags-function.rst:17
-#: ../../source/tags/tags-global.rst:13
-#: ../../source/tags/tags-hideconstructor.rst:24
-#: ../../source/tags/tags-ignore.rst:22
-#: ../../source/tags/tags-implements.rst:23
-#: ../../source/tags/tags-inheritdoc.rst:20
-#: ../../source/tags/tags-inline-link.rst:53
-#: ../../source/tags/tags-inline-tutorial.rst:26
-#: ../../source/tags/tags-inner.rst:14
-#: ../../source/tags/tags-instance.rst:14
-#: ../../source/tags/tags-interface.rst:37
-#: ../../source/tags/tags-kind.rst:36
-#: ../../source/tags/tags-lends.rst:18
-#: ../../source/tags/tags-license.rst:28
-#: ../../source/tags/tags-member.rst:17
-#: ../../source/tags/tags-memberof.rst:27
-#: ../../source/tags/tags-mixes.rst:17
-#: ../../source/tags/tags-mixin.rst:18
-#: ../../source/tags/tags-module.rst:45
-#: ../../source/tags/tags-name.rst:30
-#: ../../source/tags/tags-namespace.rst:27
-#: ../../source/tags/tags-package.rst:33
-#: ../../source/tags/tags-param.rst:27
-#: ../../source/tags/tags-private.rst:34
-#: ../../source/tags/tags-property.rst:22
-#: ../../source/tags/tags-protected.rst:32
-#: ../../source/tags/tags-public.rst:21
-#: ../../source/tags/tags-readonly.rst:12
-#: ../../source/tags/tags-requires.rst:22
-#: ../../source/tags/tags-returns.rst:18
-#: ../../source/tags/tags-see.rst:19
-#: ../../source/tags/tags-since.rst:16
-#: ../../source/tags/tags-static.rst:14
-#: ../../source/tags/tags-summary.rst:16
-#: ../../source/tags/tags-this.rst:16
-#: ../../source/tags/tags-throws.rst:19
-#: ../../source/tags/tags-todo.rst:17
-#: ../../source/tags/tags-tutorial.rst:23
-#: ../../source/tags/tags-type.rst:634
-#: ../../source/tags/tags-typedef.rst:22
-#: ../../source/tags/tags-variation.rst:34
-#: ../../source/tags/tags-version.rst:11
-#: ../../source/tags/tags-yields.rst:19
+#: ../../source/tags/tags-access.rst:0
+#: ../../source/tags/tags-alias.rst:0
+#: ../../source/tags/tags-augments.rst:0
+#: ../../source/tags/tags-author.rst:0
+#: ../../source/tags/tags-borrows.rst:0
+#: ../../source/tags/tags-callback.rst:0
+#: ../../source/tags/tags-class.rst:0
+#: ../../source/tags/tags-classdesc.rst:0
+#: ../../source/tags/tags-constant.rst:0
+#: ../../source/tags/tags-constructs.rst:0
+#: ../../source/tags/tags-copyright.rst:0
+#: ../../source/tags/tags-default.rst:0
+#: ../../source/tags/tags-description.rst:0
+#: ../../source/tags/tags-enum.rst:0
+#: ../../source/tags/tags-event.rst:0
+#: ../../source/tags/tags-example.rst:0
+#: ../../source/tags/tags-exports.rst:0
+#: ../../source/tags/tags-external.rst:0
+#: ../../source/tags/tags-fires.rst:0
+#: ../../source/tags/tags-function.rst:0
+#: ../../source/tags/tags-global.rst:0
+#: ../../source/tags/tags-hideconstructor.rst:0
+#: ../../source/tags/tags-ignore.rst:0
+#: ../../source/tags/tags-implements.rst:0
+#: ../../source/tags/tags-inheritdoc.rst:0
+#: ../../source/tags/tags-inline-link.rst:0
+#: ../../source/tags/tags-inline-tutorial.rst:0
+#: ../../source/tags/tags-inner.rst:0
+#: ../../source/tags/tags-instance.rst:0
+#: ../../source/tags/tags-interface.rst:0
+#: ../../source/tags/tags-kind.rst:0
+#: ../../source/tags/tags-lends.rst:0
+#: ../../source/tags/tags-license.rst:0
+#: ../../source/tags/tags-member.rst:0
+#: ../../source/tags/tags-memberof.rst:0
+#: ../../source/tags/tags-mixes.rst:0
+#: ../../source/tags/tags-mixin.rst:0
+#: ../../source/tags/tags-module.rst:0
+#: ../../source/tags/tags-name.rst:0
+#: ../../source/tags/tags-namespace.rst:0
+#: ../../source/tags/tags-package.rst:0
+#: ../../source/tags/tags-param.rst:0
+#: ../../source/tags/tags-private.rst:0
+#: ../../source/tags/tags-property.rst:0
+#: ../../source/tags/tags-protected.rst:0
+#: ../../source/tags/tags-public.rst:0
+#: ../../source/tags/tags-readonly.rst:0
+#: ../../source/tags/tags-requires.rst:0
+#: ../../source/tags/tags-returns.rst:0
+#: ../../source/tags/tags-see.rst:0
+#: ../../source/tags/tags-since.rst:0
+#: ../../source/tags/tags-static.rst:0
+#: ../../source/tags/tags-summary.rst:0
+#: ../../source/tags/tags-this.rst:0
+#: ../../source/tags/tags-throws.rst:0
+#: ../../source/tags/tags-todo.rst:0
+#: ../../source/tags/tags-tutorial.rst:0
+#: ../../source/tags/tags-type.rst:0
+#: ../../source/tags/tags-typedef.rst:0
+#: ../../source/tags/tags-variation.rst:0
+#: ../../source/tags/tags-version.rst:0
+#: ../../source/tags/tags-yields.rst:0
 msgid "Examples"
 msgstr ""
 
-#: ../../source/tags/tags-access.rst:39
+#: ../../source/tags/tags-access.rst:34
 msgid "Using @access as a synonym for other tags"
 msgstr ""
 
@@ -298,47 +356,47 @@ msgstr ""
 msgid "@alias"
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:7
+#: ../../source/tags/tags-alias.rst:6
 msgid "``@alias <aliasNamepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:12
-msgid "The @alias tag causes JSDoc to treat all references to a member as if the member had a different name. This tag is especially useful if you define a class within an inner function; in this case, you can use the @alias tag to tell JSDoc how the class is exposed in your app."
+#: ../../source/tags/tags-alias.rst:9
+msgid "The :rst:dir:`@alias` tag causes JSDoc to treat all references to a member as if the member had a different name. This tag is especially useful if you define a class within an inner function; in this case, you can use the :rst:dir:`@alias` tag to tell JSDoc how the class is exposed in your app."
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:17
-msgid "While the @alias tag may sound similar to the @name tag, these tags behave very differently. The @name tag tells JSDoc to ignore any code associated with the comment. For example, when JSDoc processes the following code, it ignores the fact that the comment for ``bar`` is attached to a function:"
+#: ../../source/tags/tags-alias.rst:14
+msgid "While the :rst:dir:`@alias` tag may sound similar to the :rst:dir:`@name` tag, these tags behave very differently. The :rst:dir:`@name` tag tells JSDoc to ignore any code associated with the comment. For example, when JSDoc processes the following code, it ignores the fact that the comment for ``bar`` is attached to a function:"
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:31
-msgid "The @alias tag tells JSDoc to pretend that Member A is actually named Member B. For example, when JSDoc processes the following code, it recognizes that ``foo`` is a function, then renames ``foo`` to ``bar`` in the documentation:"
+#: ../../source/tags/tags-alias.rst:28
+msgid "The :rst:dir:`@alias` tag tells JSDoc to pretend that Member A is actually named Member B. For example, when JSDoc processes the following code, it recognizes that ``foo`` is a function, then renames ``foo`` to ``bar`` in the documentation:"
+msgstr ""
+
+#: ../../source/tags/tags-alias.rst:43
+msgid "Suppose you are using a class framework that expects you to pass in a constructor function when you define a class. You can use the :rst:dir:`@alias` tag to tell JSDoc how the class will be exposed in your app."
 msgstr ""
 
 #: ../../source/tags/tags-alias.rst:47
-msgid "Suppose you are using a class framework that expects you to pass in a constructor function when you define a class. You can use the @alias tag to tell JSDoc how the class will be exposed in your app."
+msgid "In the following example, the :rst:dir:`@alias` tag tells JSDoc to treat the anonymous function as if it were the constructor for the class “trackr.CookieManager”. Within the function, JSDoc interprets the ``this`` keyword relative to trackr.CookieManager, so the “value” method has the namepath “trackr.CookieManager#value”."
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:51
-msgid "In the following example, the @alias tag tells JSDoc to treat the anonymous function as if it were the constructor for the class “trackr.CookieManager”. Within the function, JSDoc interprets the ``this`` keyword relative to trackr.CookieManager, so the “value” method has the namepath “trackr.CookieManager#value”."
+#: ../../source/tags/tags-alias.rst:53
+msgid "Using :rst:dir:`@alias` with an anonymous constructor function"
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:57
-msgid "Using @alias with an anonymous constructor function"
+#: ../../source/tags/tags-alias.rst:70
+msgid "You can also use the :rst:dir:`@alias` tag with members that are created within an immediately invoked function expression (IIFE). The :rst:dir:`@alias` tag tells JSDoc that these members are exposed outside of the IIFE’s scope."
 msgstr ""
 
 #: ../../source/tags/tags-alias.rst:74
-msgid "You can also use the @alias tag with members that are created within an immediately invoked function expression (IIFE). The @alias tag tells JSDoc that these members are exposed outside of the IIFE’s scope."
+msgid "Using :rst:dir:`@alias` for static members of a namespace"
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:78
-msgid "Using @alias for static members of a namespace"
+#: ../../source/tags/tags-alias.rst:93
+msgid "For members that are defined within an object literal, you can use the :rst:dir:`@alias` tag as an alternative to the [@lends]\\ :rst:dir:`lends` tag."
 msgstr ""
 
-#: ../../source/tags/tags-alias.rst:97
-msgid "For members that are defined within an object literal, you can use the @alias tag as an alternative to the [@lends]\\ `lends-tag <tags-lends.html>`__ tag."
-msgstr ""
-
-#: ../../source/tags/tags-alias.rst:101
+#: ../../source/tags/tags-alias.rst:96
 msgid "Using @alias for an object literal"
 msgstr ""
 
@@ -346,63 +404,77 @@ msgstr ""
 msgid "@async"
 msgstr ""
 
-#: ../../source/tags/tags-async.rst:7
+#: ../../source/tags/tags-async.rst:6
 msgid "``@async``"
 msgstr ""
 
-#: ../../source/tags/tags-async.rst:12
-msgid "The ``@async`` tag indicates that a function is `asynchronous <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>`__, meaning that it was declared using the syntax ``async function foo() {}``. Do not use this tag for other types of asynchronous functions, such as functions that provide a callback. This tag is available in JSDoc 3.5.0 and later."
+#: ../../source/tags/tags-async.rst:9
+msgid "The :rst:dir:`@async` tag indicates that a function is `asynchronous <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>`_, meaning that it was declared using the syntax ``async function foo() {}``. Do not use this tag for other types of asynchronous functions, such as functions that provide a callback. This tag is available in JSDoc 3.5.0 and later."
 msgstr ""
 
-#: ../../source/tags/tags-async.rst:19
+#: ../../source/tags/tags-async.rst:16
 msgid "In general, you do not need to use this tag, because JSDoc automatically detects asynchronous functions and identifies them in the generated documentation. However, if you are writing a virtual comment for an asynchronous function that does not appear in your code, you can use this tag to tell JSDoc that the function is asynchronous."
 msgstr ""
 
-#: ../../source/tags/tags-async.rst:28
-msgid "The following example shows a virtual comment that uses the ``@async`` tag:"
+#: ../../source/tags/tags-async.rst:24
+msgid "The following example shows a virtual comment that uses the :rst:dir:`@async` tag:"
 msgstr ""
 
-#: ../../source/tags/tags-async.rst:31
-msgid "Virtual comment with @async tag"
+#: ../../source/tags/tags-async.rst:26
+msgid "Virtual comment with :rst:dir:`@async` tag"
 msgstr ""
 
 #: ../../source/tags/tags-augments.rst:2
 msgid "@augments"
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:7
+#: ../../source/tags/tags-augments.rst:6
 msgid "``@augments <namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:12
-msgid "The ``@augments`` or\\ ``@extends`` tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance."
+#: ../../source/tags/tags-augments.rst:7
+msgid ":rst:dir:`@extends`"
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:16
+#: ../../source/tags/tags-augments.rst:10
+msgid "The :rst:dir:`@augments` or\\ :rst:dir:`@extends` tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance."
+msgstr ""
+
+#: ../../source/tags/tags-augments.rst:14
 msgid "In JSDoc 3.3.0 and later, if a symbol inherits from multiple parents, and both parents have identically named members, JSDoc uses the documentation from the last parent that is listed in the JSDoc comment."
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:23
+#: ../../source/tags/tags-augments.rst:22
 msgid "In the following example, the ``Duck`` class is defined as a subclass of ``Animal``. ``Duck`` instances have the same properties as ``Animal`` instances, as well as a ``speak`` method that is unique to ``Duck`` instances."
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:28
+#: ../../source/tags/tags-augments.rst:27
 msgid "Documenting a class/subclass relationship"
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:58
+#: ../../source/tags/tags-augments.rst:57
 msgid "In the following example, the ``Duck`` class inherits from both the ``Flyable`` and ``Bird`` classes, both of which define a ``takeOff`` method. Because the documentation for ``Duck`` lists ``@augments Bird`` last, JSDoc automatically documents ``Duck#takeOff`` using the comment from ``Bird#takeOff``."
 msgstr ""
 
-#: ../../source/tags/tags-augments.rst:64
+#: ../../source/tags/tags-augments.rst:63
 msgid "Multiple inheritance with duplicated method names"
+msgstr ""
+
+#: ../../source/tags/tags-augments.rst:0
+#: ../../source/tags/tags-property.rst:0
+#: ../../source/tags/tags-property.rst:0
+msgid "synonyms"
+msgstr ""
+
+#: ../../source/tags/tags-augments.rst:111
+msgid ":rst:dir:`@augments`"
 msgstr ""
 
 #: ../../source/tags/tags-author.rst:2
 msgid "@author"
 msgstr ""
 
-#: ../../source/tags/tags-author.rst:7
+#: ../../source/tags/tags-author.rst:8
 msgid "``@author <name> [<emailAddress>]``"
 msgstr ""
 
@@ -410,7 +482,7 @@ msgstr ""
 msgid "The @author tag identifies the author of an item. In JSDoc 3.2 and later, if the author’s name is followed by an email address enclosed in angle brackets, the default template will convert the email address to a ``mailto:`` link."
 msgstr ""
 
-#: ../../source/tags/tags-author.rst:20
+#: ../../source/tags/tags-author.rst:19
 msgid "Documenting the author of an item"
 msgstr ""
 
@@ -418,23 +490,23 @@ msgstr ""
 msgid "@borrows"
 msgstr ""
 
-#: ../../source/tags/tags-borrows.rst:7
+#: ../../source/tags/tags-borrows.rst:6
 msgid "``@borrows <that namepath> as <this namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-borrows.rst:12
+#: ../../source/tags/tags-borrows.rst:9
 msgid "The @borrows tag allows you to add documentation for another symbol to your documentation."
 msgstr ""
 
-#: ../../source/tags/tags-borrows.rst:15
+#: ../../source/tags/tags-borrows.rst:12
 msgid "This tag would be useful if you had more than one way to reference a function, but you didn’t want to duplicate the same documentation in two places."
 msgstr ""
 
-#: ../../source/tags/tags-borrows.rst:22
+#: ../../source/tags/tags-borrows.rst:18
 msgid "In this example there exists documentation for the “trstr” function, but “util.trim” is just a reference to that same function by a different name."
 msgstr ""
 
-#: ../../source/tags/tags-borrows.rst:26
+#: ../../source/tags/tags-borrows.rst:21
 msgid "Duplicate the documentation for trstr as util.trim"
 msgstr ""
 
@@ -442,111 +514,127 @@ msgstr ""
 msgid "@callback"
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:8
+#: ../../source/tags/tags-callback.rst:6
 msgid "``@callback <namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:13
+#: ../../source/tags/tags-callback.rst:9
 msgid "The @callback tag provides information about a callback function that can be passed to other functions, including the callback’s parameters and return value. You can include any of the tags that you can provide for a @method."
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:18
+#: ../../source/tags/tags-callback.rst:14
 msgid "Once you define a callback, you can use it in the same way as a custom type defined with the @typedef tag. In particular, you can use the callback’s name as a type name. This allows you to indicate that a function parameter should contain a certain type of callback."
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:23
+#: ../../source/tags/tags-callback.rst:19
 msgid "If you want a callback to be displayed with the type definitions for a specific class, you can give the callback a namepath indicating that it is an inner function of that class. You can also define a global callback type that is referenced from multiple classes."
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:31
+#: ../../source/tags/tags-callback.rst:26
 msgid "Documenting a class-specific callback"
 msgstr ""
 
-#: ../../source/tags/tags-callback.rst:54
+#: ../../source/tags/tags-callback.rst:49
 msgid "Documenting a global callback"
 msgstr ""
 
 #: ../../source/tags/tags-class.rst:2
-msgid "@class"
+msgid "@class (synonyms: @constructor)"
+msgstr ""
+
+#: ../../source/tags/tags-class.rst:6
+msgid ":rst:dir:`@constructor`"
 msgstr ""
 
 #: ../../source/tags/tags-class.rst:7
 msgid "``@class [<type> <name>]``"
 msgstr ""
 
-#: ../../source/tags/tags-class.rst:12
+#: ../../source/tags/tags-class.rst:9
 msgid "The @class tag marks a function as being a constructor, meant to be called with the new keyword to return an instance."
 msgstr ""
 
-#: ../../source/tags/tags-class.rst:18
+#: ../../source/tags/tags-class.rst:14
 msgid "A function that constructs Person instances."
+msgstr ""
+
+#: ../../source/tags/tags-class.rst:28
+msgid ":rst:dir:`@class`"
 msgstr ""
 
 #: ../../source/tags/tags-classdesc.rst:2
 msgid "@classdesc"
 msgstr ""
 
-#: ../../source/tags/tags-classdesc.rst:8
+#: ../../source/tags/tags-classdesc.rst:6
 msgid "``@classdesc <some description>``"
 msgstr ""
 
-#: ../../source/tags/tags-classdesc.rst:13
-msgid "The @classdesc tag is used to provide a description for a class, separate from the constructor function’s description. Use the @classdesc tag in combination with the [@class (or @constructor) tag]\\ `class-tag <tags-class.html>`__."
+#: ../../source/tags/tags-classdesc.rst:9
+msgid "The @classdesc tag is used to provide a description for a class, separate from the constructor function’s description. Use the @classdesc tag in combination with the [@class (or @constructor) tag]\\ :rst:dir:`class`."
 msgstr ""
 
-#: ../../source/tags/tags-classdesc.rst:18
+#: ../../source/tags/tags-classdesc.rst:14
 msgid "The functionality of the @classdesc tag in JSDoc 3 duplicates that of the @class in previous versions. As of version 3, the syntax and functionality of the @class tag now exactly matches the @constructor tag, and the @classdesc tag more explicitly communicates its purpose: to document a class’s description."
 msgstr ""
 
-#: ../../source/tags/tags-classdesc.rst:27
+#: ../../source/tags/tags-classdesc.rst:22
 msgid "As shown below, a class has places for two descriptions, one applies to the function itself, while the other applies to the class in general."
 msgstr ""
 
-#: ../../source/tags/tags-classdesc.rst:30
+#: ../../source/tags/tags-classdesc.rst:25
 msgid "A doclet with both a constructor function description and a class description"
 msgstr ""
 
 #: ../../source/tags/tags-constant.rst:2
-msgid "@constant"
+msgid "@constant (synonyms: @const)"
+msgstr ""
+
+#: ../../source/tags/tags-constant.rst:6
+msgid ":rst:dir:`@const`"
 msgstr ""
 
 #: ../../source/tags/tags-constant.rst:7
 msgid "``@constant [<type> <name>]``"
 msgstr ""
 
-#: ../../source/tags/tags-constant.rst:12
+#: ../../source/tags/tags-constant.rst:10
 msgid "The @constant tag is used to mark the documentation as belonging to a symbol that is a constant."
 msgstr ""
 
-#: ../../source/tags/tags-constant.rst:18
+#: ../../source/tags/tags-constant.rst:15
 msgid "In this example we are documenting a string constant. Note that although the code is using the ``const`` keyword, this is not required by JSDoc. If your JavaScript host environment doesn’t yet support constant declarations, the @const documentation can just as effectively be used on ``var`` declarations."
 msgstr ""
 
-#: ../../source/tags/tags-constant.rst:24
+#: ../../source/tags/tags-constant.rst:21
 msgid "A string constant representing the color red"
 msgstr ""
 
-#: ../../source/tags/tags-constant.rst:36
+#: ../../source/tags/tags-constant.rst:33
 msgid "Note that the example provides the type in a @type tag. This is optional. Also the optional @default tag is used here too, this will automatically add whatever the assigned value is (for example ‘FF0000’) to the documentation."
 msgstr ""
 
+#: ../../source/tags/tags-constant.rst:40
+msgid ":rst:dir:`@constant`"
+msgstr ""
+
 #: ../../source/tags/tags-constructs.rst:2
-msgid "@construct"
+msgid "@constructs"
 msgstr ""
 
-#: ../../source/tags/tags-constructs.rst:7
-msgid "When using an object literal to define a class (for example with the ``@lends`` tag) the ``@constructs`` tag allows you to document that a particular function will be used to construct instances of that class."
-msgstr ""
-
-#: ../../source/tags/tags-constructs.rst:14
+#: ../../source/tags/tags-constructs.rst:6
 msgid "``@constructs [<name>]``"
 msgstr ""
 
-#: ../../source/tags/tags-constructs.rst:19
+#: ../../source/tags/tags-constructs.rst:9
+msgid "When using an object literal to define a class (for example with the :rst:dir:`@lends` tag) the :rst:dir:`@constructs` tag allows you to document that a particular function will be used to construct instances of that class."
+msgstr ""
+
+#: ../../source/tags/tags-constructs.rst:15
 msgid "Using the @constructs tag with @lends"
 msgstr ""
 
-#: ../../source/tags/tags-constructs.rst:36
+#: ../../source/tags/tags-constructs.rst:32
 msgid "Without @lends you must provide the name of the class"
 msgstr ""
 
@@ -554,107 +642,107 @@ msgstr ""
 msgid "@copyright"
 msgstr ""
 
-#: ../../source/tags/tags-copyright.rst:7
+#: ../../source/tags/tags-copyright.rst:6
 msgid "``@copyright <some copyright text>``"
 msgstr ""
 
-#: ../../source/tags/tags-copyright.rst:12
-msgid "The @copyright tag is used to document copyright information in a file overview comment. Use this tag in combination with the [@file tag]\\ `file-tag <tags-file.html>`__."
+#: ../../source/tags/tags-copyright.rst:9
+msgid "The @copyright tag is used to document copyright information in a file overview comment. Use this tag in combination with the [@file tag]\\ :rst:dir:`file`."
 msgstr ""
 
 #: ../../source/tags/tags-default.rst:2
-msgid "@default"
+msgid "@default (synonyms: @defaultvalue)"
+msgstr ""
+
+#: ../../source/tags/tags-default.rst:6
+msgid "@defaultvalue"
 msgstr ""
 
 #: ../../source/tags/tags-default.rst:7
 msgid "``@default [<some value>]``"
 msgstr ""
 
-#: ../../source/tags/tags-default.rst:12
+#: ../../source/tags/tags-default.rst:10
 msgid "The @default tag allows you to document the assigned value of a symbol. You can supply this tag with a value yourself or you can allow JSDoc to automatically document the value from the source code – only possible when the documented symbol is being assigned a single, simple value that is either: a string, a number, a boolean or null."
 msgstr ""
 
-#: ../../source/tags/tags-default.rst:21
+#: ../../source/tags/tags-default.rst:18
 msgid "In this example a constant is documented. The value of the constant is ``0xff0000``. By adding the @default tag this value is automatically added to the documentation."
 msgstr ""
 
-#: ../../source/tags/tags-default.rst:25
+#: ../../source/tags/tags-default.rst:22
 msgid "Document the number value of a constant"
+msgstr ""
+
+#: ../../source/tags/tags-default.rst:33
+msgid "@default"
 msgstr ""
 
 #: ../../source/tags/tags-deprecated.rst:2
 msgid "@deprecated"
 msgstr ""
 
-#: ../../source/tags/tags-deprecated.rst:7
-msgid "``@deprecated [<some text>]``"
-msgstr ""
-
-#: ../../source/tags/tags-deprecated.rst:12
-msgid "The @deprecated tag marks a symbol in your code as being deprecated."
-msgstr ""
-
-#: ../../source/tags/tags-deprecated.rst:17
-msgid "You can use the @deprecated tag by itself, or include some text that describes more about the deprecation."
-msgstr ""
-
-#: ../../source/tags/tags-deprecated.rst:20
-msgid "Document that the old function has been deprecated since version 2.0"
-msgstr ""
-
 #: ../../source/tags/tags-description.rst:2
-msgid "@description"
+msgid "@description (synonyms: @desc)"
+msgstr ""
+
+#: ../../source/tags/tags-description.rst:6
+msgid ":rst:dir:`@desc`"
 msgstr ""
 
 #: ../../source/tags/tags-description.rst:7
 msgid "``@description <some description>``"
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:12
-msgid "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the `Markdown plugin <plugins-markdown.html>`__ is enabled."
+#: ../../source/tags/tags-description.rst:10
+msgid "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the :ref:`plugins-markdown` is enabled."
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:20
+#: ../../source/tags/tags-description.rst:16
 msgid "If you describe a symbol at the very beginning of a JSDoc comment, before using any block tags, you may omit the @description tag."
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:23
+#: ../../source/tags/tags-description.rst:19
 msgid "Describing a symbol without the @description tag"
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:36
+#: ../../source/tags/tags-description.rst:32
 msgid "By using the @description tag, you can place the description anywhere in the JSDoc comment."
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:39
+#: ../../source/tags/tags-description.rst:35
 msgid "Describing a symbol with the @description tag"
 msgstr ""
 
-#: ../../source/tags/tags-description.rst:52
+#: ../../source/tags/tags-description.rst:48
 msgid "If there’s both a description at the beginning of a JSDoc comment and a description provided with the @description tag, the description specified with the @description will override the description at the beginning of the comment."
+msgstr ""
+
+#: ../../source/tags/tags-description.rst:55
+msgid ":rst:dir:`@description`"
 msgstr ""
 
 #: ../../source/tags/tags-enum.rst:2
 msgid "@enum"
 msgstr ""
 
-#: ../../source/tags/tags-enum.rst:7
+#: ../../source/tags/tags-enum.rst:6
 msgid "``@enum [<type>]``"
 msgstr ""
 
-#: ../../source/tags/tags-enum.rst:12
+#: ../../source/tags/tags-enum.rst:9
 msgid "The @enum tag documents a collection of static properties whose values are all of the same type."
 msgstr ""
 
-#: ../../source/tags/tags-enum.rst:15
+#: ../../source/tags/tags-enum.rst:12
 msgid "An enum is similar a collection of properties, except that an enum is documented in its own doc comment, whereas properties are documented within the doc comment of their container. Often this tag is used with @readonly, as an enum typically represents a collection of constants."
 msgstr ""
 
-#: ../../source/tags/tags-enum.rst:23
+#: ../../source/tags/tags-enum.rst:19
 msgid "This shows how to document an object that represents a value with three possible states. Note that the enum members can have optional descriptions added if you wish. Also you can override the type, as is shown with “MAYBE” – by default enum members will be documented with the same type as the enum itself."
 msgstr ""
 
-#: ../../source/tags/tags-enum.rst:29
+#: ../../source/tags/tags-enum.rst:25
 msgid "A numeric enum, representing three states"
 msgstr ""
 
@@ -662,35 +750,35 @@ msgstr ""
 msgid "@event"
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:7
+#: ../../source/tags/tags-event.rst:6
 msgid "``@event <className>#[event:]<eventName>``"
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:12
+#: ../../source/tags/tags-event.rst:9
 msgid "The @event tag allows you to document an event that can be fired. A typical event is represented by an object with a defined set of properties."
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:16
+#: ../../source/tags/tags-event.rst:13
 msgid "Once you have used the @event tag to define a specific type of event, you can use the @fires tag to indicate that a method can fire that event. You can also use the @listens tag to indicate that a symbol listens for the event."
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:21
+#: ../../source/tags/tags-event.rst:18
 msgid "JSDoc automatically prepends the namespace ``event:`` to each event’s name. In general, you must include this namespace when you link to the event in another doclet. (The @fires tag is a notable exception; it allows you to omit the namespace.)"
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:26
-msgid "**Note**: JSDoc 3 uses @event doclets to document the content of an event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a function that can be fired when an event of the same name occurs."
+#: ../../source/tags/tags-event.rst:24
+msgid "JSDoc 3 uses @event doclets to document the content of an event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a function that can be fired when an event of the same name occurs."
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:33
+#: ../../source/tags/tags-event.rst:30
 msgid "The following examples show how to document an event in the ``Hurl`` class called ``snowball``. The event contains an object with a single property."
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:37
+#: ../../source/tags/tags-event.rst:34
 msgid "Documenting a function call as an event"
 msgstr ""
 
-#: ../../source/tags/tags-event.rst:58
+#: ../../source/tags/tags-event.rst:55
 msgid "Using a named doclet to document an event"
 msgstr ""
 
@@ -698,19 +786,23 @@ msgstr ""
 msgid "@example"
 msgstr ""
 
-#: ../../source/tags/tags-example.rst:7
+#: ../../source/tags/tags-example.rst:6
+msgid "``@example``"
+msgstr ""
+
+#: ../../source/tags/tags-example.rst:9
 msgid "Provide an example of how to use a documented item. The text that follows this tag will be displayed as highlighted code."
 msgstr ""
 
-#: ../../source/tags/tags-example.rst:13
+#: ../../source/tags/tags-example.rst:14
 msgid "Note that a doclet may have multiple examples."
 msgstr ""
 
-#: ../../source/tags/tags-example.rst:15
+#: ../../source/tags/tags-example.rst:16
 msgid "Documenting examples"
 msgstr ""
 
-#: ../../source/tags/tags-example.rst:32
+#: ../../source/tags/tags-example.rst:33
 msgid "Examples can also be captioned using ``<caption></caption>`` after the @example tag."
 msgstr ""
 
@@ -722,172 +814,206 @@ msgstr ""
 msgid "@exports"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:8
+#: ../../source/tags/tags-exports.rst:6
 msgid "``@exports <moduleName>``"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:10
+#: ../../source/tags/tags-exports.rst:9
 #: ../../source/tags/tags-module.rst:9
 msgid "In JSDoc 3.3.0 and later, ``<moduleName>`` may include the ``module:`` prefix. In previous versions, you must omit this prefix."
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:16
+#: ../../source/tags/tags-exports.rst:12
 msgid "Use the @exports tag when documenting JavaScript modules that export anything other than the “exports” object or the “module.exports” property."
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:23
+#: ../../source/tags/tags-exports.rst:18
 msgid "In modules where you are using the special “exports” object, the @exports tag is never needed. JSDoc automatically recognizes that this object’s members are being exported. Similarly, JSDoc automatically recognizes the special “module.exports” property in Node.js modules."
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:28
+#: ../../source/tags/tags-exports.rst:23
 msgid "CommonJS module"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:41
+#: ../../source/tags/tags-exports.rst:36
 msgid "Node.js module"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:54
+#: ../../source/tags/tags-exports.rst:49
 msgid "AMD module that exports an object literal"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:73
+#: ../../source/tags/tags-exports.rst:68
 msgid "AMD module that exports a constructor"
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:98
+#: ../../source/tags/tags-exports.rst:93
 msgid "If your module exports an object named anything other than “exports” or “module.exports”, use the @exports tag to indicate what is being exported."
 msgstr ""
 
-#: ../../source/tags/tags-exports.rst:102
+#: ../../source/tags/tags-exports.rst:97
 msgid "AMD module that exports an object"
 msgstr ""
 
 #: ../../source/tags/tags-external.rst:2
-msgid "@external"
+msgid "@external (synonyms: @host)"
+msgstr ""
+
+#: ../../source/tags/tags-external.rst:6
+msgid ":rst:dir:`@host`"
 msgstr ""
 
 #: ../../source/tags/tags-external.rst:7
 msgid "``@external <NameOfExternal>``"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:12
-msgid "The ``@external`` tag identifies a class, namespace, or module that is defined outside of the current package. By using this tag, you can document your package’s extensions to the external symbol, or you can provide information about the external symbol to your package’s users. You can also refer to the external symbol’s namepath in any other JSDoc tag."
+#: ../../source/tags/tags-external.rst:10
+msgid "The :rst:dir:`@external` tag identifies a class, namespace, or module that is defined outside of the current package. By using this tag, you can document your package’s extensions to the external symbol, or you can provide information about the external symbol to your package’s users. You can also refer to the external symbol’s namepath in any other JSDoc tag."
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:19
-msgid "The namepath for an external symbol always uses the prefix ``external:`` (for example, ``{@link external:Foo}`` or ``@augments external:Foo``). However, you can omit this prefix from the ``@external`` tag."
+#: ../../source/tags/tags-external.rst:17
+msgid "The namepath for an external symbol always uses the prefix ``external:`` (for example, ``{@link external:Foo}`` or ``@augments external:Foo``). However, you can omit this prefix from the :rst:dir:`@external` tag."
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:23
-msgid "**Note**: You should only add the ``@external`` tag to the highest-level symbol that is defined outside of your project. See “`Documenting a nested external symbol <#nested-external-symbol>`__” for an example."
+#: ../../source/tags/tags-external.rst:22
+msgid "You should only add the :rst:dir:`@external` tag to the highest-level symbol that is defined outside of your project. See “`Documenting a nested external symbol <#nested-external-symbol>`__” for an example."
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:30
+#: ../../source/tags/tags-external.rst:28
 msgid "The following example shows how to document the built-in ``String`` object as an external, along with the new instance method ``external:String#rot13``:"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:34
+#: ../../source/tags/tags-external.rst:31
 msgid "Documenting methods added to built-in classes"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:51
+#: ../../source/tags/tags-external.rst:48
 msgid "The following example documents a new ``starfairy`` function added to the external namespace ``\"jQuery.fn\"``:"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:54
+#: ../../source/tags/tags-external.rst:50
 msgid "Documenting external namespaces"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:68
+#: ../../source/tags/tags-external.rst:64
 msgid "In the following example, the class ``EncryptedRequest`` is documented as a subclass of the built-in class ``XMLHttpRequest``:"
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:71
+#: ../../source/tags/tags-external.rst:67
 msgid "Extending an external."
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:86
-msgid "You should only add the ``@external`` tag to the highest-level symbol that is defined outside of your project. In the following example, the documentation refers to the external class ``security.TLS``. As a result, the ``@external`` tag is used to document the external namespace ``external:security``, but *not* the external class ``external:security.TLS``."
+#: ../../source/tags/tags-external.rst:82
+msgid "You should only add the :rst:dir:`@external` tag to the highest-level symbol that is defined outside of your project. In the following example, the documentation refers to the external class ``security.TLS``. As a result, the :rst:dir:`@external` tag is used to document the external namespace ``external:security``, but *not* the external class ``external:security.TLS``."
 msgstr ""
 
-#: ../../source/tags/tags-external.rst:93
+#: ../../source/tags/tags-external.rst:88
 msgid "Documenting a nested external symbol"
 msgstr ""
 
-#: ../../source/tags/tags-file.rst:2
-msgid "@file"
+#: ../../source/tags/tags-external.rst:105
+msgid ":rst:dir:`@external`"
 msgstr ""
 
-#: ../../source/tags/tags-file.rst:7
+#: ../../source/tags/tags-file.rst:2
+msgid "@file (synonyms: @fileoverview, @overview)"
+msgstr ""
+
+#: ../../source/tags/tags-file.rst:6
 msgid "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file."
 msgstr ""
 
-#: ../../source/tags/tags-file.rst:13
+#: ../../source/tags/tags-file.rst:7
+msgid ":rst:dir:`@fileoverview`, :rst:dir:`@overview`"
+msgstr ""
+
+#: ../../source/tags/tags-file.rst:10
 msgid "File description"
 msgstr ""
 
+#: ../../source/tags/tags-file.rst:20
+#: ../../source/tags/tags-file.rst:24
+msgid ":rst:dir:`@file`"
+msgstr ""
+
 #: ../../source/tags/tags-fires.rst:2
-msgid "@fires"
+msgid "@fires (synonyms: @emits)"
+msgstr ""
+
+#: ../../source/tags/tags-fires.rst:6
+msgid ":rst:dir:`@emits`"
 msgstr ""
 
 #: ../../source/tags/tags-fires.rst:7
 msgid "``@fires <className>#[event:]<eventName>``"
 msgstr ""
 
-#: ../../source/tags/tags-fires.rst:12
+#: ../../source/tags/tags-fires.rst:10
 msgid "The @fires tag indicates that a method can fire a specified type of event when it is called. Use the [@event tag]\\ `event-tag <tags-event.html>`__ to document the event’s content."
 msgstr ""
 
-#: ../../source/tags/tags-fires.rst:19
+#: ../../source/tags/tags-fires.rst:16
 msgid "Method that fires a ‘drain’ event"
 msgstr ""
 
+#: ../../source/tags/tags-fires.rst:30
+msgid ":rst:dir:`@fires`"
+msgstr ""
+
 #: ../../source/tags/tags-function.rst:2
-msgid "@function"
+msgid "@function (synonyms: @func, @method)"
+msgstr ""
+
+#: ../../source/tags/tags-function.rst:6
+msgid ":rst:dir:`@func`, :rst:dir:`@method`"
 msgstr ""
 
 #: ../../source/tags/tags-function.rst:7
 msgid "``@function [<FunctionName>]``"
 msgstr ""
 
-#: ../../source/tags/tags-function.rst:12
-msgid "This marks an object as being a function, even though it may not appear to be one to the parser. It sets the doclet’s [@kind]\\ `kind-tag <tags-kind.html>`__ to ‘function’."
+#: ../../source/tags/tags-function.rst:8
+msgid "This marks an object as being a function, even though it may not appear to be one to the parser. It sets the doclet’s :rst:dir:`@kind` to ‘function’."
 msgstr ""
 
-#: ../../source/tags/tags-function.rst:19
+#: ../../source/tags/tags-function.rst:13
 msgid "Using @function to mark a function."
 msgstr ""
 
-#: ../../source/tags/tags-function.rst:25
-msgid "Without the @function tag, the ``paginate`` object would be documented as a generic object (a [@member]\\ `member-tag <tags-member.html>`__), because it isn’t possible to tell from examining the line of code what type of value ``paginate`` will hold when it is run."
+#: ../../source/tags/tags-function.rst:19
+msgid "Without the @function tag, the ``paginate`` object would be documented as a generic object (a :rst:dir:`@member`), because it isn’t possible to tell from examining the line of code what type of value ``paginate`` will hold when it is run."
 msgstr ""
 
-#: ../../source/tags/tags-function.rst:30
+#: ../../source/tags/tags-function.rst:24
 msgid "Using @function with a name."
+msgstr ""
+
+#: ../../source/tags/tags-function.rst:35
+#: ../../source/tags/tags-function.rst:39
+msgid ":rst:dir:`@function`"
 msgstr ""
 
 #: ../../source/tags/tags-generator.rst:2
 msgid "@generator"
 msgstr ""
 
-#: ../../source/tags/tags-generator.rst:7
+#: ../../source/tags/tags-generator.rst:6
 msgid "``@generator``"
 msgstr ""
 
-#: ../../source/tags/tags-generator.rst:12
+#: ../../source/tags/tags-generator.rst:9
 msgid "The ``@generator`` tag indicates that a function is a `generator function <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*>`__, meaning that it was declared using the syntax ``function* foo() {}``. This tag is available in JSDoc 3.5.0 and later."
 msgstr ""
 
-#: ../../source/tags/tags-generator.rst:17
+#: ../../source/tags/tags-generator.rst:14
 msgid "In general, you do not need to use this tag, because JSDoc automatically detects generator functions and identifies them in the generated documentation. However, if you are writing a virtual comment for a generator function that does not appear in your code, you can use this tag to tell JSDoc that the function is a generator function."
 msgstr ""
 
-#: ../../source/tags/tags-generator.rst:26
+#: ../../source/tags/tags-generator.rst:22
 msgid "The following example shows a virtual comment that uses the ``@generator`` tag:"
 msgstr ""
 
-#: ../../source/tags/tags-generator.rst:29
+#: ../../source/tags/tags-generator.rst:24
 msgid "Virtual comment with @generator tag"
 msgstr ""
 
@@ -895,11 +1021,15 @@ msgstr ""
 msgid "@global"
 msgstr ""
 
-#: ../../source/tags/tags-global.rst:7
+#: ../../source/tags/tags-global.rst:6
+msgid "``@global``"
+msgstr ""
+
+#: ../../source/tags/tags-global.rst:9
 msgid "The @global tag specifies that a symbol should appear in the documentation as a *global* symbol. JSDoc ignores the symbol’s actual scope within the source file. This tag is especially useful for symbols that are defined locally, then assigned to a global symbol."
 msgstr ""
 
-#: ../../source/tags/tags-global.rst:15
+#: ../../source/tags/tags-global.rst:16
 msgid "Use the @global tag to specify that a symbol should be documented as global."
 msgstr ""
 
@@ -911,27 +1041,27 @@ msgstr ""
 msgid "@hideconstructor"
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:7
+#: ../../source/tags/tags-hideconstructor.rst:6
 msgid "``@hideconstructor``"
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:12
+#: ../../source/tags/tags-hideconstructor.rst:9
 msgid "The ``@hideconstructor`` tag tells JSDoc that the generated documentation should not display the constructor for a class. This tag is available in JSDoc 3.5.0 and later."
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:16
-msgid "For pre-ES2015 classes, use this tag in combination with the `@class or ``@constructor`` `tag <tags-class.html>`__."
+#: ../../source/tags/tags-hideconstructor.rst:13
+msgid "For pre-ES2015 classes, use this tag in combination with the :rst:dir:`@class` or :rst:dir:`@constructor`."
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:19
+#: ../../source/tags/tags-hideconstructor.rst:16
 msgid "For ES2015 classes, use this tag in the JSDoc comment for your constructor. If your class does not have an explicit constructor, use this tag in the JSDoc comment for the class."
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:26
+#: ../../source/tags/tags-hideconstructor.rst:22
 msgid "@hideconstructor tag with pre-ES2015 class"
 msgstr ""
 
-#: ../../source/tags/tags-hideconstructor.rst:68
+#: ../../source/tags/tags-hideconstructor.rst:64
 msgid "@hideconstructor tag with ES2015 class"
 msgstr ""
 
@@ -939,35 +1069,39 @@ msgstr ""
 msgid "@ignore"
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:7
-msgid "The ``@ignore`` tag indicates that a symbol in your code should never appear in the documentation. This tag takes precedence over all others."
+#: ../../source/tags/tags-ignore.rst:6
+msgid "``@ignore``"
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:10
-msgid "For most JSDoc templates, including the default template, the ``@ignore`` tag has the following effects:"
+#: ../../source/tags/tags-ignore.rst:9
+msgid "The :rst:dir:`@ignore` tag indicates that a symbol in your code should never appear in the documentation. This tag takes precedence over all others."
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:13
-msgid "If you use the ``@ignore`` tag with the ``@class`` or ``@module`` tag, the entire class or module will be omitted from the documentation."
+#: ../../source/tags/tags-ignore.rst:12
+msgid "For most JSDoc templates, including the default template, the :rst:dir:`@ignore` tag has the following effects:"
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:16
-msgid "If you use the ``@ignore`` tag with the ``@namespace`` tag, you must also add the ``@ignore`` tag to any child classes and namespaces. Otherwise, your documentation will show the child classes and namespaces, but with incomplete names."
+#: ../../source/tags/tags-ignore.rst:15
+msgid "If you use the :rst:dir:`@ignore` tag with the :rst:dir:`@class` or :rst:dir:`@module` tag, the entire class or module will be omitted from the documentation."
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:24
+#: ../../source/tags/tags-ignore.rst:18
+msgid "If you use the :rst:dir:`@ignore` tag with the :rst:dir:`@namespace` tag, you must also add the :rst:dir:`@ignore` tag to any child classes and namespaces. Otherwise, your documentation will show the child classes and namespaces, but with incomplete names."
+msgstr ""
+
+#: ../../source/tags/tags-ignore.rst:25
 msgid "In the following example, ``Jacket`` and ``Jacket#color`` will not appear in the documentation."
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:27
-msgid "Class with ``@ignore`` tag"
+#: ../../source/tags/tags-ignore.rst:28
+msgid "Class with :rst:dir:`@ignore` tag"
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:39
-msgid "In the following example, the ``Clothes`` namespace contains a ``Jacket`` class. The ``@ignore`` tag must be added to both ``Clothes`` and ``Clothes.Jacket``. ``Clothes``, ``Clothes.Jacket``, and ``Clothes.Jacket#color`` will not appear in the documentation."
+#: ../../source/tags/tags-ignore.rst:40
+msgid "In the following example, the ``Clothes`` namespace contains a ``Jacket`` class. The :rst:dir:`@ignore` tag must be added to both ``Clothes`` and ``Clothes.Jacket``. ``Clothes``, ``Clothes.Jacket``, and ``Clothes.Jacket#color`` will not appear in the documentation."
 msgstr ""
 
-#: ../../source/tags/tags-ignore.rst:44
+#: ../../source/tags/tags-ignore.rst:45
 msgid "Namespace with child class"
 msgstr ""
 
@@ -975,27 +1109,27 @@ msgstr ""
 msgid "@implements"
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:7
+#: ../../source/tags/tags-implements.rst:6
 msgid "``@implements {typeExpression}``"
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:12
-msgid "The ``@implements`` tag indicates that a symbol implements an interface."
+#: ../../source/tags/tags-implements.rst:9
+msgid "The :rst:dir:`@implements` tag indicates that a symbol implements an interface."
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:14
-msgid "Add the ``@implements`` tag to the top-level symbol that implements the interface (for example, a constructor function). You do not need to add the ``@implements`` tag to each member of the implementation (for example, the implementation’s instance methods)."
+#: ../../source/tags/tags-implements.rst:11
+msgid "Add the :rst:dir:`@implements` tag to the top-level symbol that implements the interface (for example, a constructor function). You do not need to add the :rst:dir:`@implements` tag to each member of the implementation (for example, the implementation’s instance methods)."
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:19
+#: ../../source/tags/tags-implements.rst:16
 msgid "If you do not document one of the symbols in the implementation, JSDoc will automatically use the interface’s documentation for that symbol."
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:25
+#: ../../source/tags/tags-implements.rst:21
 msgid "In the following example, the ``TransparentColor`` class implements the ``Color`` interface and adds a ``TransparentColor#rgba`` method."
 msgstr ""
 
-#: ../../source/tags/tags-implements.rst:28
+#: ../../source/tags/tags-implements.rst:24
 msgid "Using the @implements tag"
 msgstr ""
 
@@ -1003,16 +1137,20 @@ msgstr ""
 msgid "@inherits"
 msgstr ""
 
-#: ../../source/tags/tags-inheritdoc.rst:7
-msgid "The ``@inheritdoc`` tag indicates that a symbol should inherit its documentation from its parent class. Any other tags that you include in the JSDoc comment will be ignored."
+#: ../../source/tags/tags-inheritdoc.rst:6
+msgid "``@inheritdoc``"
 msgstr ""
 
-#: ../../source/tags/tags-inheritdoc.rst:11
-msgid "This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`__. By default, if you do not add a JSDoc comment to a symbol, the symbol will inherit documentation from its parent."
+#: ../../source/tags/tags-inheritdoc.rst:9
+msgid "The :rst:dir:`@inheritdoc` tag indicates that a symbol should inherit its documentation from its parent class. Any other tags that you include in the JSDoc comment will be ignored."
 msgstr ""
 
-#: ../../source/tags/tags-inheritdoc.rst:16
-msgid "The presence of the ``@inheritdoc`` tag implies the presence of the `@override  tag <tags-override.html>`__."
+#: ../../source/tags/tags-inheritdoc.rst:13
+msgid "This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`_. By default, if you do not add a JSDoc comment to a symbol, the symbol will inherit documentation from its parent."
+msgstr ""
+
+#: ../../source/tags/tags-inheritdoc.rst:17
+msgid "The presence of the :rst:dir:`@inheritdoc` tag implies the presence of the :rst:dir:`@override`."
 msgstr ""
 
 #: ../../source/tags/tags-inheritdoc.rst:22
@@ -1028,85 +1166,91 @@ msgid "You can get the same result by omitting the JSDoc comment from ``Socket#o
 msgstr ""
 
 #: ../../source/tags/tags-inheritdoc.rst:57
-msgid "Inheriting documentation without the ``@inheritdoc`` tag"
+msgid "Inheriting documentation without the :rst:dir:`@inheritdoc` tag"
 msgstr ""
 
 #: ../../source/tags/tags-inline-link.rst:2
-msgid "@inline-link"
+msgid "@link (synonyms: {@linkcode}, {@linkplain})"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:17
-msgid "The ``{@link}`` inline tag creates a link to the namepath or URL that you specify. When you use the ``{@link}`` tag, you can also provide link text, using one of several different formats. If you don’t provide any link text, JSDoc uses the namepath or URL as the link text."
+#: ../../source/tags/tags-inline-link.rst:6
+msgid ":rst:dir:`@linkcode`, :rst:dir:`@linkplain`"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:22
-msgid "If you need to link to a tutorial, use the ```{@tutorial}`` inline tag <tags-inline-tutorial.html>`__ instead of the ``{@link}`` tag."
+#: ../../source/tags/tags-inline-link.rst:18
+msgid "The :rst:dir:`@link` inline tag creates a link to the namepath or URL that you specify. When you use the :rst:dir:`@link` tag, you can also provide link text, using one of several different formats. If you don’t provide any link text, JSDoc uses the namepath or URL as the link text."
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:26
+#: ../../source/tags/tags-inline-link.rst:23
+msgid "If you need to link to a tutorial, use the :rst:dir:`@tutorial`  instead of the ``@link`` tag."
+msgstr ""
+
+#: ../../source/tags/tags-inline-link.rst:0
 msgid "Link formatting"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:28
-msgid "By default, ``{@link}`` generates standard HTML anchor tags. However, you may prefer to render certain links in a monospace font, or to specify the format of individual links. You can use the following synonyms for the ``{@link}`` tag to control the formatting of links:"
+#: ../../source/tags/tags-inline-link.rst:27
+msgid "By default, :rst:dir:`@link` generates standard HTML anchor tags. However, you may prefer to render certain links in a monospace font, or to specify the format of individual links. You can use the following synonyms for the :rst:dir:`@link` tag to control the formatting of links:"
+msgstr ""
+
+#: ../../source/tags/tags-inline-link.rst:32
+msgid ":rst:dir:`@linkcode`: Forces the link’s text to use a monospace font."
 msgstr ""
 
 #: ../../source/tags/tags-inline-link.rst:33
-msgid "``{@linkcode}``: Forces the link’s text to use a monospace font."
+msgid ":rst:dir:`@linkplain`: Forces the link’s text to appear as normal text, without a monospace font."
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:34
-msgid "``{@linkplain}``: Forces the link’s text to appear as normal text, without a monospace font."
-msgstr ""
-
-#: ../../source/tags/tags-inline-link.rst:37
+#: ../../source/tags/tags-inline-link.rst:36
 msgid "You can also set one of the following options in JSDoc’s configuration file; see `Configuring JSDoc <about-configuring-jsdoc.html>`__ for more details:"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:41
+#: ../../source/tags/tags-inline-link.rst:40
 msgid "``templates.cleverLinks``: When set to ``true``, links to URLs use normal text, and links to code use a monospace font."
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:43
-msgid "``templates.monospaceLinks``: When set to ``true``, all links use a monospace font, except for links created with the ``{@linkplain}`` tag."
+#: ../../source/tags/tags-inline-link.rst:42
+msgid "``templates.monospaceLinks``: When set to ``true``, all links use a monospace font, except for links created with the :rst:dir:`@linkplain` tag."
 msgstr ""
 
 #: ../../source/tags/tags-inline-link.rst:47
-msgid "**Note**: Although the default JSDoc template renders all of these tags correctly, other templates may not recognize the ``{@linkcode}`` and ``{@linkplain}`` tags. In addition, other templates may ignore the configuration options for link rendering."
+msgid "Although the default JSDoc template renders all of these tags correctly, other templates may not recognize the :rst:dir:`@linkcode` and :rst:dir:`@linkplain` tags. In addition, other templates may ignore the configuration options for link rendering."
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:55
-msgid "The following example shows all of the ways to provide link text for the ``{@link}`` tag:"
+#: ../../source/tags/tags-inline-link.rst:54
+msgid "The following example shows all of the ways to provide link text for the :rst:dir:`@link` tag:"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:58
-#: ../../source/tags/tags-inline-tutorial.rst:31
+#: ../../source/tags/tags-inline-link.rst:57
+#: ../../source/tags/tags-inline-tutorial.rst:30
 msgid "Providing link text"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:68
+#: ../../source/tags/tags-inline-link.rst:67
 msgid "By default, the example above produces output similar to the following:"
 msgstr ""
 
 #: ../../source/tags/tags-inline-link.rst:0
 #: ../../source/tags/tags-inline-link.rst:0
-#: ../../source/tags/tags-inline-tutorial.rst:0
-#: ../../source/tags/tags-module.rst:0
 #: ../../source/tags/tags-property.rst:0
 msgid "caption"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:70
-#: ../../source/tags/tags-inline-tutorial.rst:45
+#: ../../source/tags/tags-inline-link.rst:69
 msgid "Output for {@link} tags"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:78
+#: ../../source/tags/tags-inline-link.rst:77
 msgid "If the configuration property ``templates.cleverLinks`` were set to ``true``, the example above would produce the following output:"
 msgstr ""
 
-#: ../../source/tags/tags-inline-link.rst:81
+#: ../../source/tags/tags-inline-link.rst:80
 msgid "Output with clever links enabled"
+msgstr ""
+
+#: ../../source/tags/tags-inline-link.rst:91
+#: ../../source/tags/tags-inline-link.rst:95
+msgid ":rst:dir:`@link`"
 msgstr ""
 
 #: ../../source/tags/tags-inline-tutorial.rst:2
@@ -1114,46 +1258,54 @@ msgid "@inline-tutorial"
 msgstr ""
 
 #: ../../source/tags/tags-inline-tutorial.rst:17
-msgid "The ``{@tutorial}`` inline tag creates a link to the tutorial identifier that you specify. When you use the ``{@tutorial}`` tag, you can also provide link text, using one of several different formats. If you don’t provide any link text, JSDoc uses the tutorial’s title as the link text."
+msgid "The :rst:dir:`@tutorial` inline tag creates a link to the tutorial identifier that you specify. When you use the :rst:dir:`@tutorial` tag, you can also provide link text, using one of several different formats. If you don’t provide any link text, JSDoc uses the tutorial’s title as the link text."
 msgstr ""
 
 #: ../../source/tags/tags-inline-tutorial.rst:22
-msgid "If you need to link to a namepath or a URL, use the ```{@link}`` inline tag <tags-inline-link.html>`__ instead of the ``{@tutorial}`` tag."
+msgid "If you need to link to a namepath or a URL, use the :rst:dir:`@link` :rst:dir:`@inline` instead of the :rst:dir:`@tutorial` tag."
 msgstr ""
 
-#: ../../source/tags/tags-inline-tutorial.rst:28
-msgid "The following example shows all of the ways to provide link text for the ``{@tutorial}`` tag:"
+#: ../../source/tags/tags-inline-tutorial.rst:27
+msgid "The following example shows all of the ways to provide link text for the :rst:dir:`@tutorial` tag:"
 msgstr ""
 
-#: ../../source/tags/tags-inline-tutorial.rst:41
+#: ../../source/tags/tags-inline-tutorial.rst:40
 msgid "If all of these tutorials are defined, and the title of the ``gettingstarted`` tutorial is “Getting Started,” the example above produces output similar to the following:"
+msgstr ""
+
+#: ../../source/tags/tags-inline-tutorial.rst:46
+msgid "Output for :rst:dir:`@link` tags"
 msgstr ""
 
 #: ../../source/tags/tags-inner.rst:2
 msgid "@inner"
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:7
+#: ../../source/tags/tags-inner.rst:6
+msgid "``@inner``"
+msgstr ""
+
+#: ../../source/tags/tags-inner.rst:9
 msgid "Using the @inner tag will mark a symbol as an inner member of its parent symbol. This means it can be referred to by “Parent~Child”."
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:10
+#: ../../source/tags/tags-inner.rst:12
 msgid "Using @inner will override a doclet’s default scope (unless it is in the global scope, in which case it will remain global)."
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:16
+#: ../../source/tags/tags-inner.rst:17
 msgid "Using @inner to make a virtual doclet an inner member"
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:27
+#: ../../source/tags/tags-inner.rst:28
 msgid "Note that in the above we could have used “@function MyNamespace~myFunction” instead of the @memberof and @inner tags."
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:30
+#: ../../source/tags/tags-inner.rst:31
 msgid "Using @inner"
 msgstr ""
 
-#: ../../source/tags/tags-inner.rst:42
+#: ../../source/tags/tags-inner.rst:43
 msgid "In the above example, we use @inner to force a member of a namespace to be documented as an inner member (by default, it would be a static member). This means that ``foo`` now has the longname ``MyNamespace~foo`` instead of ``MyNamespace.foo``."
 msgstr ""
 
@@ -1161,27 +1313,31 @@ msgstr ""
 msgid "@instance"
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:7
+#: ../../source/tags/tags-instance.rst:6
+msgid "``@instance``"
+msgstr ""
+
+#: ../../source/tags/tags-instance.rst:9
 msgid "Using the @instance tag will mark a symbol as an instance member of its parent symbol. This means it can be referred to by “Parent#Child”."
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:10
+#: ../../source/tags/tags-instance.rst:12
 msgid "Using @instance will override a doclet’s default scope (unless it is in the global scope, in which case it will remain global)."
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:16
+#: ../../source/tags/tags-instance.rst:17
 msgid "The following example is a longhand way of writing “@function MyNamespace#myFunction”:"
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:19
+#: ../../source/tags/tags-instance.rst:20
 msgid "Using @instance to make a virtual doclet an instance member"
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:30
+#: ../../source/tags/tags-instance.rst:31
 msgid "More usefully, you can use the @instance tag to override the scope that JSDoc infers. For example, you can indicate that a static member is used as an instance member:"
 msgstr ""
 
-#: ../../source/tags/tags-instance.rst:34
+#: ../../source/tags/tags-instance.rst:35
 msgid "Using @instance to identify an instance member"
 msgstr ""
 
@@ -1189,53 +1345,45 @@ msgstr ""
 msgid "@interface"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:7
-#: ../../source/tags/tags-package.rst:7
-#: ../../source/tags/tags-private.rst:7
-#: ../../source/tags/tags-protected.rst:7
-msgid "With the JSDoc tag dictionary (enabled by default):"
-msgstr ""
-
-#: ../../source/tags/tags-interface.rst:9
+#: ../../source/tags/tags-interface.rst:6
 msgid "``@interface [<name>]``"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:11
-#: ../../source/tags/tags-package.rst:11
-#: ../../source/tags/tags-private.rst:11
-#: ../../source/tags/tags-protected.rst:11
-msgid "With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`__ tag dictionary:"
+#: ../../source/tags/tags-interface.rst:9
+#: ../../source/tags/tags-package.rst:9
+#: ../../source/tags/tags-private.rst:9
+msgid "With the JSDoc tag dictionary (enabled by default):"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:15
-msgid "``@interface``"
+#: ../../source/tags/tags-interface.rst:11
+msgid "With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ tag dictionary:"
+msgstr ""
+
+#: ../../source/tags/tags-interface.rst:14
+msgid "The :rst:dir:`@interface` tag marks a symbol as an interface that other symbols can implement. For example, your code might define a parent class whose methods and properties are stubbed out. You can add the :rst:dir:`@interface` tag to the parent class to indicate that child classes must implement the parent class’ methods and properties."
 msgstr ""
 
 #: ../../source/tags/tags-interface.rst:20
-msgid "The ``@interface`` tag marks a symbol as an interface that other symbols can implement. For example, your code might define a parent class whose methods and properties are stubbed out. You can add the ``@interface`` tag to the parent class to indicate that child classes must implement the parent class’ methods and properties."
+msgid "Add the :rst:dir:`@interface` tag to the top-level symbol for the interface (for example, a constructor function). You do not need to add the :rst:dir:`@interface` tag to each member of the interface (for example, the interface’s instance methods)."
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:26
-msgid "Add the ``@interface`` tag to the top-level symbol for the interface (for example, a constructor function). You do not need to add the ``@interface`` tag to each member of the interface (for example, the interface’s instance methods)."
-msgstr ""
-
-#: ../../source/tags/tags-interface.rst:31
+#: ../../source/tags/tags-interface.rst:25
 msgid "If you are using the JSDoc tag dictionary (enabled by default), you can also define an interface with virtual comments, rather than by writing code for the interface. See “`Virtual comments that define an interface <#virtual-comments>`__” for an example."
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:39
+#: ../../source/tags/tags-interface.rst:31
 msgid "In the following example, the ``Color`` function represents an interface that other classes can implement:"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:42
+#: ../../source/tags/tags-interface.rst:34
 msgid "Using the @interface tag"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:63
+#: ../../source/tags/tags-interface.rst:55
 msgid "The following example uses virtual comments, rather than code, to define the ``Color`` interface:"
 msgstr ""
 
-#: ../../source/tags/tags-interface.rst:66
+#: ../../source/tags/tags-interface.rst:58
 msgid "Virtual comments that define an interface"
 msgstr ""
 
@@ -1243,75 +1391,75 @@ msgstr ""
 msgid "@kind"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:7
+#: ../../source/tags/tags-kind.rst:6
 msgid "``@kind <kindName>``"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:9
+#: ../../source/tags/tags-kind.rst:8
 msgid "where ``<kindName>`` is one of:"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:11
+#: ../../source/tags/tags-kind.rst:10
 msgid "class"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:12
+#: ../../source/tags/tags-kind.rst:11
 msgid "constant"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:13
+#: ../../source/tags/tags-kind.rst:12
 msgid "event"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:14
+#: ../../source/tags/tags-kind.rst:13
 msgid "external"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:15
+#: ../../source/tags/tags-kind.rst:14
 msgid "file"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:16
+#: ../../source/tags/tags-kind.rst:15
 msgid "function"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:17
+#: ../../source/tags/tags-kind.rst:16
 msgid "member"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:18
+#: ../../source/tags/tags-kind.rst:17
 msgid "mixin"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:19
+#: ../../source/tags/tags-kind.rst:18
 msgid "module"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:20
+#: ../../source/tags/tags-kind.rst:19
 msgid "namespace"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:21
+#: ../../source/tags/tags-kind.rst:20
 msgid "typedef"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:26
+#: ../../source/tags/tags-kind.rst:24
 msgid "The @kind tag is used to document what *kind* of symbol is being documented (for example, a class or a module). The *kind* of symbol differs from a symbol’s *type* (for example, string or boolean)."
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:30
-msgid "Usually you do not need the @kind tag, because the symbol’s kind is determined by other tags in the doclet. For example, using the @class tag automatically implies “@kind class”, and using the @namespace tag implies “@kind namespace”."
+#: ../../source/tags/tags-kind.rst:28
+msgid "Usually you do not need the @kind tag, because the symbol’s kind is determined by other tags in the doclet. For example, using the :rst:dir:`@class` tag automatically implies “@kind class”, and using the :rst:dir:`@namespace` tag implies “@kind namespace”."
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:38
+#: ../../source/tags/tags-kind.rst:35
 msgid "Using @kind"
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:55
-msgid "In the case of tags with conflicting kinds (for example, using both @module, which sets the kind to “module”, and “@kind constant” which sets the kind to “constant”), the last tag determines the kind."
+#: ../../source/tags/tags-kind.rst:52
+msgid "In the case of tags with conflicting kinds (for example, using both :rst:dir:`@module`, which sets the kind to “module”, and “@kind constant” which sets the kind to “constant”), the last tag determines the kind."
 msgstr ""
 
-#: ../../source/tags/tags-kind.rst:59
+#: ../../source/tags/tags-kind.rst:56
 msgid "Conflicting @kind statements"
 msgstr ""
 
@@ -1319,47 +1467,47 @@ msgstr ""
 msgid "@lends"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:7
+#: ../../source/tags/tags-lends.rst:6
 msgid "``@lends <namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:12
-msgid "The ``@lends`` tag allows you to document all the members of an object literal as if they were members of a symbol with the given name. You might want to do this if you are passing an object literal into a function that creates a named class from its members."
+#: ../../source/tags/tags-lends.rst:9
+msgid "The :rst:dir:`@lends` tag allows you to document all the members of an object literal as if they were members of a symbol with the given name. You might want to do this if you are passing an object literal into a function that creates a named class from its members."
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:20
+#: ../../source/tags/tags-lends.rst:16
 msgid "In this example, we want to use a helper function to make a class named ``Person``, along with instance methods named ``initialize`` and ``say``. This is similar to how some popular frameworks handle class creation."
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:25
+#: ../../source/tags/tags-lends.rst:21
 msgid "Example class"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:41
-msgid "Without any comments, JSDoc won’t recognize that this code creates a ``Person`` class with two methods. To document the methods, we must use a ``@lends`` tag in a doc comment immediately before the object literal. The ``@lends`` tag tells JSDoc that all the member names of that object literal are being “loaned” to a variable named ``Person``. We must also add comments to each of the methods."
+#: ../../source/tags/tags-lends.rst:37
+msgid "Without any comments, JSDoc won’t recognize that this code creates a ``Person`` class with two methods. To document the methods, we must use a :rst:dir:`@lends` tag in a doc comment immediately before the object literal. The :rst:dir:`@lends` tag tells JSDoc that all the member names of that object literal are being “loaned” to a variable named ``Person``. We must also add comments to each of the methods."
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:48
+#: ../../source/tags/tags-lends.rst:44
 msgid "The following example gets us closer to what we want:"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:50
+#: ../../source/tags/tags-lends.rst:46
 msgid "Documented as static methods"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:75
+#: ../../source/tags/tags-lends.rst:71
 msgid "Now the functions named ``initialize`` and ``say`` will be documented, but they appear as static methods of the ``Person`` class. That is possibly what you meant, but in this case we want ``initialize`` and ``say`` to belong to the instances of the ``Person`` class. So we change things slightly by lending the methods to the class’s prototype:"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:81
+#: ../../source/tags/tags-lends.rst:77
 msgid "Documented as instance methods"
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:106
-msgid "One final step: Our class framework uses the loaned ``initialize`` function to construct ``Person`` instances, but a ``Person`` instance does not have its own ``initialize`` method. The solution is to add the ``@constructs`` tag to the loaned function. Remember to remove the ``@class`` tag as well, or else two classes will be documented."
+#: ../../source/tags/tags-lends.rst:102
+msgid "One final step: Our class framework uses the loaned ``initialize`` function to construct ``Person`` instances, but a ``Person`` instance does not have its own ``initialize`` method. The solution is to add the :rst:dir:`@constructs` tag to the loaned function. Remember to remove the :rst:dir:`@class` tag as well, or else two classes will be documented."
 msgstr ""
 
-#: ../../source/tags/tags-lends.rst:112
+#: ../../source/tags/tags-lends.rst:108
 msgid "Documented with a constructor"
 msgstr ""
 
@@ -1367,27 +1515,27 @@ msgstr ""
 msgid "@license"
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:7
+#: ../../source/tags/tags-license.rst:6
 msgid "``@license <identifier>``"
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:12
-msgid "The ``@license`` tag identifies the software license that applies to any portion of your code."
+#: ../../source/tags/tags-license.rst:9
+msgid "The :rst:dir:`@license` tag identifies the software license that applies to any portion of your code."
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:15
+#: ../../source/tags/tags-license.rst:12
 msgid "You can use any text to identify the license you are using. If your code uses a standard open-source license, consider using the appropriate identifier from the `Software Package Data Exchange (SPDX) License List <https://spdx.org/licenses/>`__."
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:20
-msgid "Some JavaScript processing tools, such as Google’s Closure Compiler, will automatically preserve any JSDoc comment that includes a ``@license`` tag. If you are using one of these tools, you may wish to add a standalone JSDoc comment that includes the ``@license`` tag, along with the entire text of the license, so that the license text will be included in generated JavaScript files."
+#: ../../source/tags/tags-license.rst:17
+msgid "Some JavaScript processing tools, such as Google’s Closure Compiler, will automatically preserve any JSDoc comment that includes a :rst:dir:`@license` tag. If you are using one of these tools, you may wish to add a standalone JSDoc comment that includes the :rst:dir:`@license` tag, along with the entire text of the license, so that the license text will be included in generated JavaScript files."
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:30
+#: ../../source/tags/tags-license.rst:26
 msgid "A module that is distributed under the Apache License 2.0"
 msgstr ""
 
-#: ../../source/tags/tags-license.rst:39
+#: ../../source/tags/tags-license.rst:35
 msgid "A standalone JSDoc comment with the complete MIT license"
 msgstr ""
 
@@ -1395,59 +1543,67 @@ msgstr ""
 msgid "@listens"
 msgstr ""
 
-#: ../../source/tags/tags-listens.rst:7
-msgid "``@listens <eventName>``"
+#: ../../source/tags/tags-listens.rst:6
+msgid "`@listens <eventName>`"
 msgstr ""
 
-#: ../../source/tags/tags-listens.rst:12
-msgid "The ``@listens`` tag indicates that a symbol listens for the specified event. Use the ```@event tag`` <tags-event.html>`__ to document the event’s content."
+#: ../../source/tags/tags-listens.rst:9
+msgid "The :rst:dir:`@listens` tag indicates that a symbol listens for the specified event. Use the :rst:dir:`@event` to document the event’s content."
 msgstr ""
 
-#: ../../source/tags/tags-listens.rst:19
+#: ../../source/tags/tags-listens.rst:14
 msgid "The following example shows how to document an event named ``module:hurler~event:snowball``, as well as a method named ``module:playground/monitor.reportThrowage`` that listens for the event."
 msgstr ""
 
-#: ../../source/tags/tags-listens.rst:23
+#: ../../source/tags/tags-listens.rst:18
 msgid "Documenting an event and its listener"
 msgstr ""
 
 #: ../../source/tags/tags-member.rst:2
-msgid "@member"
+msgid "@member (synonyms: @var)"
+msgstr ""
+
+#: ../../source/tags/tags-member.rst:6
+msgid ":rst:dir:`@var`"
 msgstr ""
 
 #: ../../source/tags/tags-member.rst:7
 msgid "``@member [<type>] [<name>]``"
 msgstr ""
 
-#: ../../source/tags/tags-member.rst:12
+#: ../../source/tags/tags-member.rst:11
 msgid "The @member tag identifies any member that does not have a more specialized kind, such as “class”, “function”, or “constant”. A member can optionally have a type as well as a name."
 msgstr ""
 
-#: ../../source/tags/tags-member.rst:19
+#: ../../source/tags/tags-member.rst:17
 msgid "Using @member with Data#point"
 msgstr ""
 
-#: ../../source/tags/tags-member.rst:28
+#: ../../source/tags/tags-member.rst:26
 msgid "Here is an example of using @var, a synonym of @member, to document a (virtual) variable ‘foo’."
 msgstr ""
 
-#: ../../source/tags/tags-member.rst:31
+#: ../../source/tags/tags-member.rst:29
 msgid "Using @var to document a virtual member"
 msgstr ""
 
-#: ../../source/tags/tags-member.rst:39
+#: ../../source/tags/tags-member.rst:37
 msgid "The above example is equivalent to the following:"
+msgstr ""
+
+#: ../../source/tags/tags-member.rst:49
+msgid ":rst:dir:`@member`"
 msgstr ""
 
 #: ../../source/tags/tags-memberof.rst:2
 msgid "@memberof"
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:7
+#: ../../source/tags/tags-memberof.rst:8
 msgid "``@memberof <parentNamepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:8
+#: ../../source/tags/tags-memberof.rst:9
 msgid "``@memberof! <parentNamepath>``"
 msgstr ""
 
@@ -1456,38 +1612,38 @@ msgid "The @memberof tag identifies a member symbol that belongs to a parent sym
 msgstr ""
 
 #: ../../source/tags/tags-memberof.rst:16
-msgid "By default, the @memberof tag documents member symbols as static members. For inner and instance members, you can use scoping punctuation after the namepath, or you can add the [@inner]\\ `inner-tag <tags-inner.html>`__ or [@instance]\\ `instance-tag <tags-instance.html>`__ tag."
+msgid "By default, the @memberof tag documents member symbols as static members. For inner and instance members, you can use scoping punctuation after the namepath, or you can add the :rst:dir:`@inner` or :rst:dir:`@instance` tag."
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:22
+#: ../../source/tags/tags-memberof.rst:20
 msgid "The “forced” @memberof tag, @memberof!, forces the object to be documented as belonging to a specific parent even if it appears to have a different parent."
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:29
+#: ../../source/tags/tags-memberof.rst:26
 msgid "In the following example, the ``hammer`` function would normally be documented as a global function. That’s because, in fact, it is a global function, but it is also a member of the ``Tools`` namespace, and that’s how you wish to document it. The solution is to add a @memberof tag:"
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:34
+#: ../../source/tags/tags-memberof.rst:31
 msgid "Using @memberof"
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:46
+#: ../../source/tags/tags-memberof.rst:43
 msgid "For instance members of a class, use the syntax “@memberof ClassName.prototype” or “@memberof ClassName#”. Alternatively, you can combine “@memberof ClassName” with the “@instance” tag."
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:50
+#: ../../source/tags/tags-memberof.rst:47
 msgid "Using @memberof with a class prototype"
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:84
+#: ../../source/tags/tags-memberof.rst:81
 msgid "The following example uses the forced @memberof tag, “@memberof!”, to document a property of an object (Data#point) that is an instance member of a class (Data)."
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:88
+#: ../../source/tags/tags-memberof.rst:85
 msgid "When you use the @property tag to document a property, you cannot link to the property using its longname. We can force the property to be linkable by using “@alias” and “@memberof!” to tell JSDoc that Data#point.y should be documented as a member “point.y” of “Data#”, rather than a member “y” of “point” of “Data#”."
 msgstr ""
 
-#: ../../source/tags/tags-memberof.rst:94
+#: ../../source/tags/tags-memberof.rst:91
 msgid "Using @memberof! for object properties"
 msgstr ""
 
@@ -1495,103 +1651,103 @@ msgstr ""
 msgid "@mixes"
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:7
+#: ../../source/tags/tags-mixes.rst:6
 msgid "``@mixes <OtherObjectPath>``"
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:12
-msgid "The @mixes tag indicates that the current object mixes in all the members from ``OtherObjectPath``, which is a [@mixin]\\ `mixin-tag <tags-mixin.html>`__."
+#: ../../source/tags/tags-mixes.rst:9
+msgid "The @mixes tag indicates that the current object mixes in all the members from ``OtherObjectPath``, which is a :rst:dir:`@mixin`."
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:19
-msgid "To start, we document a mixin with the [@mixin]\\ `mixin-tag <tags-mixin.html>`__ tag:"
+#: ../../source/tags/tags-mixes.rst:14
+msgid "To start, we document a mixin with the :rst:dir:`@mixin` tag:"
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:22
-msgid "Example of a @mixin"
+#: ../../source/tags/tags-mixes.rst:16
+msgid "Example of a :rst:dir:`@mixin`"
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:51
-msgid "Now we add a FormButton class and call a “mix” function that mixes all of the Eventful functions into FormButton, so that FormButton can also fire events and have listeners. We use the @mixes tag to indicate that FormButton mixes the Eventful functions."
+#: ../../source/tags/tags-mixes.rst:45
+msgid "Now we add a FormButton class and call a “mix” function that mixes all of the Eventful functions into FormButton, so that FormButton can also fire events and have listeners. We use the :rst:dir:`@mixes` tag to indicate that FormButton mixes the Eventful functions."
 msgstr ""
 
-#: ../../source/tags/tags-mixes.rst:56
-msgid "Using the @mixes tag"
+#: ../../source/tags/tags-mixes.rst:50
+msgid "Using the :rst:dir:`@mixes` tag"
 msgstr ""
 
 #: ../../source/tags/tags-mixin.rst:2
 msgid "@mixin"
 msgstr ""
 
-#: ../../source/tags/tags-mixin.rst:7
+#: ../../source/tags/tags-mixin.rst:6
 msgid "``@mixin [<MixinName>]``"
 msgstr ""
 
-#: ../../source/tags/tags-mixin.rst:12
-msgid "A mixin provides functionality that is intended to be added to other objects. If desired, you can use the @mixin tag to indicate that an object is a mixin. You can then add the @mixes tag to objects that use the mixin."
+#: ../../source/tags/tags-mixin.rst:9
+msgid "A mixin provides functionality that is intended to be added to other objects. If desired, you can use the @mixin tag to indicate that an object is a mixin. You can then add the :rst:dir:`@mixes` tag to objects that use the mixin."
 msgstr ""
 
-#: ../../source/tags/tags-mixin.rst:20
-msgid "Using @mixin"
+#: ../../source/tags/tags-mixin.rst:16
+msgid "Using :rst:dir:`@mixin`"
 msgstr ""
 
 #: ../../source/tags/tags-module.rst:2
 msgid "@module"
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:7
+#: ../../source/tags/tags-module.rst:6
 msgid "``@module [[{<type>}] <moduleName>]``"
 msgstr ""
 
 #: ../../source/tags/tags-module.rst:12
-msgid "Note: If you provide a type, you *must* also provide a name."
+msgid "If you provide a type, you *must* also provide a name."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:17
+#: ../../source/tags/tags-module.rst:14
 msgid "The @module tag marks the current file as being its own module. All symbols in the file are assumed to be members of the module unless documented otherwise."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:21
-msgid "Link to a module (e.g. within a [@link]\\ `link-tag <tags-inline-link.html>`__ or [@see]\\ `see-tag <tags-see.html>`__ tag) using “module:moduleName”. For example, “@module foo/bar” can be linked to using “{@link module:foo/bar}”."
+#: ../../source/tags/tags-module.rst:18
+msgid "Link to a module (e.g. within a [@link]\\ :rst:dir:`link` or [@see]\\ :rst:dir:`see` tag) using “module:moduleName”. For example, “@module foo/bar” can be linked to using “{@link module:foo/bar}”."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:27
+#: ../../source/tags/tags-module.rst:22
 msgid "If the module name is not provided, it is derived from the module’s path and filename. For example, suppose I have a file ``test.js``, located in the ``src`` directory, that contains the block comment ``/** @module */``. Here are some scenarios for running JSDoc and the resulting module names for test.js:"
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:33
+#: ../../source/tags/tags-module.rst:30
 msgid "Derived module names if none is provided."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:47
+#: ../../source/tags/tags-module.rst:42
 msgid "The following example shows the namepaths that are used for symbols in a module. The first symbol is a module-private, or “inner,” variable–it can be only accessed within the module. The second symbol is a static function that is exported by the module."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:52
+#: ../../source/tags/tags-module.rst:47
 msgid "Basic @module use"
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:63
+#: ../../source/tags/tags-module.rst:58
 msgid "When an exported symbol is defined as a member of ``module.exports``, ``exports``, or ``this``, JSDoc infers that the symbol is a static member of the module."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:67
+#: ../../source/tags/tags-module.rst:62
 msgid "In the following example, the Book class is documented as a static member, “module:bookshelf.Book”, with one instance member, “module:bookshelf.Book#title”."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:71
+#: ../../source/tags/tags-module.rst:66
 msgid "Defining exported symbols as a member of ‘this’"
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:81
+#: ../../source/tags/tags-module.rst:76
 msgid "In the following example, the two functions have the namepaths “module:color/mixer.blend” and “module:color/mixer.darken”."
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:84
+#: ../../source/tags/tags-module.rst:79
 msgid "Defining exported symbols as a member of ‘module.exports’ or ‘exports’"
 msgstr ""
 
-#: ../../source/tags/tags-module.rst:95
+#: ../../source/tags/tags-module.rst:90
 msgid "See `Documenting JavaScript Modules <howto-commonjs-modules.html>`__ for further examples."
 msgstr ""
 
@@ -1599,27 +1755,27 @@ msgstr ""
 msgid "@name"
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:7
+#: ../../source/tags/tags-name.rst:6
 msgid "``@name <namePath>``"
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:12
+#: ../../source/tags/tags-name.rst:9
 msgid "The @name tag forces JSDoc to associate the remainder of the JSDoc comment with the given name, ignoring all surrounding code. This tag is best used in “virtual comments” for symbols that are not readily visible in the code, such as methods that are generated at runtime."
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:17
+#: ../../source/tags/tags-name.rst:14
 msgid "When you use the @name tag, you must provide additional tags that tell JSDoc what kind of symbol you are documenting; whether the symbol is a member of another symbol; and so on. If you do not provide this information, the symbol will not be documented correctly."
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:22
-msgid "**Warning**: By using the @name tag, you are telling JSDoc to *ignore the surrounding code* and treat your documentation comment in isolation. In many cases, it is best to use the [@alias tag]\\ `alias-tag <tags-alias.html>`__ instead, which changes a symbol’s name in the documentation but preserves other information about the symbol."
+#: ../../source/tags/tags-name.rst:20
+msgid "By using the @name tag, you are telling JSDoc to *ignore the surrounding code* and treat your documentation comment in isolation. In many cases, it is best to use the [@alias tag]\\ :rst:dir:`alias` instead, which changes a symbol’s name in the documentation but preserves other information about the symbol."
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:32
+#: ../../source/tags/tags-name.rst:28
 msgid "The following example shows how to use the @name tag to document a function that JSDoc would not normally recognize."
 msgstr ""
 
-#: ../../source/tags/tags-name.rst:35
+#: ../../source/tags/tags-name.rst:31
 msgid "Using the @name tag"
 msgstr ""
 
@@ -1627,35 +1783,35 @@ msgstr ""
 msgid "@namespace"
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:7
+#: ../../source/tags/tags-namespace.rst:6
 msgid "``@namespace [[{<type>}] <SomeName>]``"
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:12
+#: ../../source/tags/tags-namespace.rst:9
 msgid "The @namespace tag indicates that an object creates a namespace for its members. You can also write a virtual JSDoc comment that defines a namespace used by your code."
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:16
+#: ../../source/tags/tags-namespace.rst:13
 msgid "If a namespace is defined by a symbol other than an object literal, you can include a type expression along with the @namespace tag. If the @namespace tag includes a type, it must also include a name."
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:20
+#: ../../source/tags/tags-namespace.rst:17
 msgid "You may need to document a namespace whose name includes unusual characters, such as “#” or “!”. In these cases, when you document or link to the namespace, you must add quotation marks around the portion of the namespace that includes unusual characters. See the examples below for details."
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:29
+#: ../../source/tags/tags-namespace.rst:25
 msgid "Using the @namespace tag with an object"
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:43
+#: ../../source/tags/tags-namespace.rst:39
 msgid "Using the @namespace tag for virtual comments"
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:57
+#: ../../source/tags/tags-namespace.rst:53
 msgid "If a @namespace includes a symbol whose name has unusual characters, you must enclose the symbol’s name in double quotes. If the symbol’s name already contains one or more double quotes, escape the double quotes with a leading backslash (\\)."
 msgstr ""
 
-#: ../../source/tags/tags-namespace.rst:62
+#: ../../source/tags/tags-namespace.rst:58
 msgid "Using the @namespace tag with unusual member names"
 msgstr ""
 
@@ -1663,23 +1819,27 @@ msgstr ""
 msgid "@override"
 msgstr ""
 
-#: ../../source/tags/tags-override.rst:7
-msgid "The ``@override`` tag indicates that a symbol overrides a symbol with the same name in a parent class."
+#: ../../source/tags/tags-override.rst:6
+msgid "``@override``"
 msgstr ""
 
-#: ../../source/tags/tags-override.rst:10
-msgid "This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`__. By default, JSDoc automatically identifies symbols that override a parent."
+#: ../../source/tags/tags-override.rst:9
+msgid "The :rst:dir:`@override` tag indicates that a symbol overrides a symbol with the same name in a parent class."
 msgstr ""
 
-#: ../../source/tags/tags-override.rst:14
-msgid "If your JSDoc comment includes the `@inheritdoc tag <tags-inheritdoc.html>`__, you do not need to include the ``@override`` tag. The presence of the ``@inheritdoc`` tag implies the presence of the ``@override`` tag."
+#: ../../source/tags/tags-override.rst:12
+msgid "This tag is provided for compatibility with `Closure Compiler <https://developers.google.com/closure/compiler/>`_. By default, JSDoc automatically identifies symbols that override a parent."
 msgstr ""
 
-#: ../../source/tags/tags-override.rst:22
+#: ../../source/tags/tags-override.rst:15
+msgid "If your JSDoc comment includes the :rst:dir:`@inheritdoc`, you do not need to include the :rst:dir:`@override` tag. The presence of the :rst:dir:`@inheritdoc` tag implies the presence of the :rst:dir:`@override` tag."
+msgstr ""
+
+#: ../../source/tags/tags-override.rst:21
 msgid "The following example shows how to indicate that a method overrides a method in its parent class:"
 msgstr ""
 
-#: ../../source/tags/tags-override.rst:25
+#: ../../source/tags/tags-override.rst:24
 msgid "Method that overrides a parent"
 msgstr ""
 
@@ -1687,60 +1847,68 @@ msgstr ""
 msgid "@package"
 msgstr ""
 
-#: ../../source/tags/tags-package.rst:9
-msgid "``@package``"
-msgstr ""
-
-#: ../../source/tags/tags-package.rst:15
+#: ../../source/tags/tags-package.rst:6
 msgid "``@package [{typeExpression}]``"
 msgstr ""
 
+#: ../../source/tags/tags-package.rst:11
+msgid ":rst:dir:`@package` With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_"
+msgstr ""
+
+#: ../../source/tags/tags-package.rst:13
+msgid "tag dictionary:"
+msgstr ""
+
+#: ../../source/tags/tags-package.rst:15
+msgid "The :rst:dir:`@package` tag marks a symbol as package-private. Typically, this tag indicates that a symbol is available only to code in the same directory as the source file for this symbol. This tag is available in JSDoc 3.5.0 and later."
+msgstr ""
+
 #: ../../source/tags/tags-package.rst:20
-msgid "The ``@package`` tag marks a symbol as package-private. Typically, this tag indicates that a symbol is available only to code in the same directory as the source file for this symbol. This tag is available in JSDoc 3.5.0 and later."
+msgid "By default, symbols marked with the :rst:dir:`@package` tag will appear in your documentation. In JSDoc 3.3.0 and later, you can use the ``-a/--access`` :ref:`command-line` to change this behavior."
 msgstr ""
 
 #: ../../source/tags/tags-package.rst:25
-msgid "By default, symbols marked with the ``@package`` tag will appear in your documentation. In JSDoc 3.3.0 and later, you can use the ```-a/--access`` command-line option <about-commandline.html>`__ to change this behavior."
+msgid "The :rst:dir:`@package` tag is equivalent to ``@access package``."
 msgstr ""
 
-#: ../../source/tags/tags-package.rst:30
-msgid "The ``@package`` tag is equivalent to ``@access package``."
-msgstr ""
-
-#: ../../source/tags/tags-package.rst:35
+#: ../../source/tags/tags-package.rst:29
 msgid "In the following example, the instance member ``Thingy#_bar`` appears in the generated documentation, but with an annotation indicating that it is package-private:"
 msgstr ""
 
-#: ../../source/tags/tags-package.rst:39
+#: ../../source/tags/tags-package.rst:33
 msgid "Using the @package tag"
 msgstr ""
 
 #: ../../source/tags/tags-param.rst:2
-msgid "@param"
+msgid "@param (synonyms: @arg, @argument)"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:7
-msgid "The ``@param`` tag provides the name, type, and description of a function parameter."
+#: ../../source/tags/tags-param.rst:6
+msgid ":rst:dir:`@arg`, :rst:dir:`@argument`"
 msgstr ""
 
 #: ../../source/tags/tags-param.rst:10
-msgid "The ``@param`` tag requires you to specify the name of the parameter you are documenting. You can also include the parameter’s type, enclosed in curly brackets, and a description of the parameter."
+msgid "The :rst:dir:`@param` tag provides the name, type, and description of a function parameter."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:14
-msgid "The parameter type can be a built-in JavaScript type, such as ``string`` or ``Object``, or a `JSDoc namepath <about-namepaths.html>`__ to another symbol in your code. If you have written documentation for the symbol at that namepath, JSDoc will automatically link to the documentation for that symbol. You can also use a type expression to indicate, for example, that a parameter is not nullable or can accept any type; see the `@type  tag documentation <tags-type.html>`__ for details."
+#: ../../source/tags/tags-param.rst:13
+msgid "The :rst:dir:`@param` tag requires you to specify the name of the parameter you are documenting. You can also include the parameter’s type, enclosed in curly brackets, and a description of the parameter."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:22
+#: ../../source/tags/tags-param.rst:17
+msgid "The parameter type can be a built-in JavaScript type, such as ``string`` or ``Object``, or a :ref:`namepaths` to another symbol in your code. If you have written documentation for the symbol at that namepath, JSDoc will automatically link to the documentation for that symbol. You can also use a type expression to indicate, for example, that a parameter is not nullable or can accept any type; see the :rst:dir:`@type` for details."
+msgstr ""
+
+#: ../../source/tags/tags-param.rst:25
 msgid "If you provide a description, you can make the JSDoc comment more readable by inserting a hyphen before the description. Be sure to include a space before and after the hyphen."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:30
-msgid "Names, types, and descriptions"
+#: ../../source/tags/tags-param.rst:31
+msgid "**Names, types, and descriptions**"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:32
-msgid "The following examples show how to include names, types, and descriptions in a ``@param`` tag."
+#: ../../source/tags/tags-param.rst:33
+msgid "The following examples show how to include names, types, and descriptions in a :rst:dir:`@param` tag."
 msgstr ""
 
 #: ../../source/tags/tags-param.rst:35
@@ -1763,179 +1931,193 @@ msgstr ""
 msgid "Name, type, and description, with a hyphen before the description"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:79
-msgid "Parameters with properties"
+#: ../../source/tags/tags-param.rst:78
+msgid "**Parameters with properties**"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:81
-msgid "If a parameter is expected to have a specific property, you can document that property by providing an additional ``@param`` tag. For example, if an ``employee`` parameter is expected to have ``name`` and ``department`` properties, you can document it as follows:"
+#: ../../source/tags/tags-param.rst:80
+msgid "If a parameter is expected to have a specific property, you can document that property by providing an additional :rst:dir:`@param` tag. For example, if an ``employee`` parameter is expected to have ``name`` and ``department`` properties, you can document it as follows:"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:86
+#: ../../source/tags/tags-param.rst:85
 msgid "Documenting a parameter’s properties"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:99
+#: ../../source/tags/tags-param.rst:98
 msgid "If a parameter is destructured without an explicit name, you can give the object an appropriate one and document its properties."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:102
+#: ../../source/tags/tags-param.rst:101
 msgid "Documenting a destructuring parameter"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:115
+#: ../../source/tags/tags-param.rst:114
 msgid "You can also combine this syntax with JSDoc’s syntax for array parameters. For example, if multiple employees can be assigned to a project:"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:119
+#: ../../source/tags/tags-param.rst:118
 msgid "Documenting properties of values in an array"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:133
-msgid "Optional parameters and default values"
+#: ../../source/tags/tags-param.rst:131
+msgid "**Optional parameters and default values**"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:135
+#: ../../source/tags/tags-param.rst:133
 msgid "The following examples show how to indicate that a parameter is optional and has a default value."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:138
+#: ../../source/tags/tags-param.rst:136
 msgid "An optional parameter (using JSDoc syntax)"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:151
+#: ../../source/tags/tags-param.rst:149
 msgid "An optional parameter (using Google Closure Compiler syntax)"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:164
+#: ../../source/tags/tags-param.rst:162
 msgid "An optional parameter and default value"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:178
-msgid "Multiple types and repeatable parameters"
+#: ../../source/tags/tags-param.rst:175
+msgid "**Multiple types and repeatable parameters**"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:180
-msgid "The following examples show how to use type expressions to indicate that a parameter can accept multiple types (or any type), and that a parameter can be provided more than once. See the `@type  tag documentation <tags-type.html>`__ for details about the type expressions that JSDoc supports."
+#: ../../source/tags/tags-param.rst:177
+msgid "The following examples show how to use type expressions to indicate that a parameter can accept multiple types (or any type), and that a parameter can be provided more than once. See the :rst:dir:`@type` for details about the type expressions that JSDoc supports."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:186
+#: ../../source/tags/tags-param.rst:182
 msgid "Allows one type OR another type (type union)"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:201
+#: ../../source/tags/tags-param.rst:197
 msgid "Allows any type"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:211
+#: ../../source/tags/tags-param.rst:207
 msgid "Allows a parameter to be repeated"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:227
-msgid "Callback functions"
+#: ../../source/tags/tags-param.rst:222
+msgid "**Callback functions**"
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:229
-msgid "If a parameter accepts a callback function, you can use the `@callback  tag <tags-callback.html>`__ to define a callback type, then include the callback type in the ``@param`` tag."
+#: ../../source/tags/tags-param.rst:224
+msgid "If a parameter accepts a callback function, you can use the :rst:dir:`@callback` to define a callback type, then include the callback type in the :rst:dir:`@param` tag."
 msgstr ""
 
-#: ../../source/tags/tags-param.rst:233
+#: ../../source/tags/tags-param.rst:228
 msgid "Parameters that accept a callback"
+msgstr ""
+
+#: ../../source/tags/tags-param.rst:249
+#: ../../source/tags/tags-param.rst:253
+msgid ":rst:dir:`@param`"
 msgstr ""
 
 #: ../../source/tags/tags-private.rst:2
 msgid "@private"
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:9
-msgid "``@private``"
-msgstr ""
-
-#: ../../source/tags/tags-private.rst:15
+#: ../../source/tags/tags-private.rst:6
 msgid "``@private [{typeExpression}]``"
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:20
-msgid "The ``@private`` tag marks a symbol as private, or not meant for general use. Private members are not shown in the generated output unless JSDoc is run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and later, you can also use the ```-a/--access`` command-line option <about-commandline.html>`__ to change this behavior."
+#: ../../source/tags/tags-private.rst:11
+msgid ":rst:dir:`@private` With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ tag dictionary:"
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:26
-msgid "The ``@private`` tag is not inherited by child members. For example, if the ``@private`` tag is added to a namespace, members of the namespace can still appear in the generated output; because the namespace is private, the members’ namepath will not include the namespace."
+#: ../../source/tags/tags-private.rst:14
+msgid "The :rst:dir:`@private` tag marks a symbol as private, or not meant for general use. Private members are not shown in the generated output unless JSDoc is run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and later, you can also use the ``-a/--access`` `command-line`_ to change this behavior."
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:31
-msgid "The ``@private`` tag is equivalent to ``@access private``."
+#: ../../source/tags/tags-private.rst:19
+msgid "The :rst:dir:`@private` tag is not inherited by child members. For example, if the :rst:dir:`@private` tag is added to a namespace, members of the namespace can still appear in the generated output; because the namespace is private, the members’ namepath will not include the namespace."
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:36
+#: ../../source/tags/tags-private.rst:24
+msgid "The :rst:dir:`@private` tag is equivalent to ``@access private``."
+msgstr ""
+
+#: ../../source/tags/tags-private.rst:28
 msgid "In the following example, ``Documents`` and ``Documents.Newspaper`` appear in the generated documentation, but not ``Documents.Diary``."
 msgstr ""
 
-#: ../../source/tags/tags-private.rst:39
+#: ../../source/tags/tags-private.rst:31
 msgid "Using the @private tag"
 msgstr ""
 
 #: ../../source/tags/tags-property.rst:2
-msgid "@property"
+msgid "@property (synonyms: @prop)"
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:7
-msgid "The @property tag is a way to easily document a list of static properties of a class, namespace or other object."
+#: ../../source/tags/tags-property.rst:6
+msgid ":rst:dir:`@prop`"
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:10
+#: ../../source/tags/tags-property.rst:9
+msgid "the @property tag is a way to easily document a list of static properties of a class, namespace or other object."
+msgstr ""
+
+#: ../../source/tags/tags-property.rst:12
 msgid "Normally JSDoc templates would create an entire new page to display information about each level of a nested namespace hierarchy. Sometimes what you really want is to just list all the properties, including nested properties, all together on the same page."
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:15
+#: ../../source/tags/tags-property.rst:17
 msgid "Note that property tags must be used in doc comments for the thing that they are properties of, a namespace or a class for example. This tag is intended for simple collections of static properties, it does not allow you to provide @examples or similar complex information for each property, just the type, name and description."
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:24
+#: ../../source/tags/tags-property.rst:25
 msgid "In this example we have a namespace named “config.” We want all the information about the defaults property, including its nested values, to appear on the same page with the documentation for config."
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:28
+#: ../../source/tags/tags-property.rst:29
 msgid "A namespace with defaults and nested default properties"
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:49
+#: ../../source/tags/tags-property.rst:50
 msgid "The following example shows how to indicate that a property is optional."
 msgstr ""
 
-#: ../../source/tags/tags-property.rst:51
+#: ../../source/tags/tags-property.rst:52
 msgid "A type definition with required and optional property"
+msgstr ""
+
+#: ../../source/tags/tags-property.rst:65
+msgid ":rst:dir:`@property`"
 msgstr ""
 
 #: ../../source/tags/tags-protected.rst:2
 msgid "@protected"
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:9
-msgid "``@protected``"
-msgstr ""
-
-#: ../../source/tags/tags-protected.rst:15
+#: ../../source/tags/tags-protected.rst:6
+#: ../../source/tags/tags-readonly.rst:6
 msgid "``@protected [{typeExpression}]``"
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:20
-msgid "The ``@protected`` tag marks a symbol as protected. Typically, this tag indicates that a symbol is only available, or should only be used, within the current module."
+#: ../../source/tags/tags-protected.rst:9
+msgid "With the JSDoc tag dictionary (enabled by default): @protected With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_ tag dictionary:"
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:24
-msgid "By default, symbols marked with the ``@protected`` tag will appear in your documentation. In JSDoc 3.3.0 and later, you can use the ```-a/--access`` command-line option <about-commandline.html>`__ to change this behavior."
+#: ../../source/tags/tags-protected.rst:12
+msgid "The :rst:dir:`@protected` tag marks a symbol as protected. Typically, this tag indicates that a symbol is only available, or should only be used, within the current module."
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:29
-msgid "The ``@protected`` tag is equivalent to ``@access protected``."
+#: ../../source/tags/tags-protected.rst:16
+msgid "By default, symbols marked with the :rst:dir:`@protected` tag will appear in your documentation. In JSDoc 3.3.0 and later, you can use the ``-a/--access`` :ref:`command-line` to change this behavior."
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:34
+#: ../../source/tags/tags-protected.rst:21
+msgid "The :rst:dir:`@protected` tag is equivalent to ``@access protected``."
+msgstr ""
+
+#: ../../source/tags/tags-protected.rst:25
 msgid "In the following example, the instance member ``Thingy#_bar`` appears in the generated documentation, but with an annotation indicating that it is protected:"
 msgstr ""
 
-#: ../../source/tags/tags-protected.rst:38
+#: ../../source/tags/tags-protected.rst:29
 msgid "Using the @protected tag"
 msgstr ""
 
@@ -1943,19 +2125,23 @@ msgstr ""
 msgid "@public"
 msgstr ""
 
-#: ../../source/tags/tags-public.rst:7
-msgid "The ``@public`` tag indicates that a symbol should be documented as if it were public."
+#: ../../source/tags/tags-public.rst:6
+msgid "``@public``"
 msgstr ""
 
-#: ../../source/tags/tags-public.rst:10
-msgid "By default, JSDoc treats all symbols as public, so using this tag does not normally affect the generated documentation. However, you may prefer to use the ``@public`` tag explicitly so it is clear to others that you intended to make the symbol public."
+#: ../../source/tags/tags-public.rst:9
+msgid "The :rst:dir:`@public` tag indicates that a symbol should be documented as if it were public."
 msgstr ""
 
-#: ../../source/tags/tags-public.rst:15
-msgid "In JSDoc 3, the ``@public`` tag does *not* affect a symbol’s scope. Use the `@instance  <tags-instance.html>`__, `@static  <tags-static.html>`__, and `@global  <tags-global.html>`__ tags to change a symbol’s scope."
+#: ../../source/tags/tags-public.rst:12
+msgid "By default, JSDoc treats all symbols as public, so using this tag does not normally affect the generated documentation. However, you may prefer to use the :rst:dir:`@public` tag explicitly so it is clear to others that you intended to make the symbol public."
 msgstr ""
 
-#: ../../source/tags/tags-public.rst:23
+#: ../../source/tags/tags-public.rst:17
+msgid "In JSDoc 3, the :rst:dir:`@public` tag does *not* affect a symbol’s scope. Use the :rst:dir:`@instance`, :rst:dir:`@static`, and :rst:dir:`@global` tags to change a symbol’s scope."
+msgstr ""
+
+#: ../../source/tags/tags-public.rst:22
 msgid "Using the @public tag"
 msgstr ""
 
@@ -1963,15 +2149,15 @@ msgstr ""
 msgid "@read"
 msgstr ""
 
-#: ../../source/tags/tags-readonly.rst:7
+#: ../../source/tags/tags-readonly.rst:9
 msgid "The @readonly tag indicates that a symbol is intended to be read-only. Note this is for the purpose of documentation only - JSDoc won’t check whether you’ve *actually* treated the symbol as read-only in your code."
 msgstr ""
 
-#: ../../source/tags/tags-readonly.rst:14
+#: ../../source/tags/tags-readonly.rst:15
 msgid "Using the @readonly tag"
 msgstr ""
 
-#: ../../source/tags/tags-readonly.rst:24
+#: ../../source/tags/tags-readonly.rst:25
 msgid "Using the @readonly tag with a getter"
 msgstr ""
 
@@ -1979,63 +2165,71 @@ msgstr ""
 msgid "@requires"
 msgstr ""
 
-#: ../../source/tags/tags-requires.rst:7
+#: ../../source/tags/tags-requires.rst:6
 msgid "``@requires <someModuleName>``"
 msgstr ""
 
-#: ../../source/tags/tags-requires.rst:12
+#: ../../source/tags/tags-requires.rst:9
 msgid "The @requires tag allows you to document that a module is needed to use this code. A JSDoc comment can have multiple @require tags. The module name can be specified as “moduleName” or “module:moduleName”; both forms will be interpreted as modules."
 msgstr ""
 
-#: ../../source/tags/tags-requires.rst:17
+#: ../../source/tags/tags-requires.rst:14
 msgid "JSDoc does not attempt to process the module that is being included. If you want the module to be included in the documentation, you must include the module in the list of JavaScript files to process."
 msgstr ""
 
-#: ../../source/tags/tags-requires.rst:24
+#: ../../source/tags/tags-requires.rst:20
 msgid "Using the @requires tag"
 msgstr ""
 
 #: ../../source/tags/tags-returns.rst:2
-msgid "@return"
+msgid "@return (synonyms: @return)"
+msgstr ""
+
+#: ../../source/tags/tags-returns.rst:6
+msgid ":rst:dir:`@return`"
 msgstr ""
 
 #: ../../source/tags/tags-returns.rst:7
 msgid "``@returns [{type}] [description]``"
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:12
-msgid "The ``@returns`` tag documents the value that a function returns."
+#: ../../source/tags/tags-returns.rst:11
+msgid "The :rst:dir:`@returns` tag documents the value that a function returns."
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:14
-msgid "If you are documenting a generator function, use the `@yields tag <tags-yields.html>`__ instead of this tag."
+#: ../../source/tags/tags-returns.rst:13
+msgid "If you are documenting a generator function, use the :rst:dir:`@yields` instead of this tag."
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:20
+#: ../../source/tags/tags-returns.rst:17
 msgid "Return value with a type"
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:33
+#: ../../source/tags/tags-returns.rst:30
 msgid "Return value with a type and description"
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:46
+#: ../../source/tags/tags-returns.rst:43
 msgid "Return value with multiple types"
 msgstr ""
 
-#: ../../source/tags/tags-returns.rst:63
+#: ../../source/tags/tags-returns.rst:60
 msgid "Returns a promise"
+msgstr ""
+
+#: ../../source/tags/tags-returns.rst:77
+msgid ":rst:dir:`@returns`"
 msgstr ""
 
 #: ../../source/tags/tags-see.rst:2
 msgid "@see"
 msgstr ""
 
-#: ../../source/tags/tags-see.rst:7
+#: ../../source/tags/tags-see.rst:8
 msgid "``@see <namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-see.rst:8
+#: ../../source/tags/tags-see.rst:9
 msgid "``@see <text>``"
 msgstr ""
 
@@ -2043,7 +2237,7 @@ msgstr ""
 msgid "The @see tag allows you to refer to another symbol or resource that may be related to the one being documented. You can provide either a symbol’s namepath or free-form text. If you provide a namepath, JSDoc’s default template automatically converts the namepath to a link."
 msgstr ""
 
-#: ../../source/tags/tags-see.rst:21
+#: ../../source/tags/tags-see.rst:20
 msgid "Using the @see tag"
 msgstr ""
 
@@ -2051,15 +2245,15 @@ msgstr ""
 msgid "@since"
 msgstr ""
 
-#: ../../source/tags/tags-since.rst:7
+#: ../../source/tags/tags-since.rst:6
 msgid "``@since <versionDescription>``"
 msgstr ""
 
-#: ../../source/tags/tags-since.rst:12
+#: ../../source/tags/tags-since.rst:9
 msgid "The @since tag indicates that a class, method, or other symbol was added in a specific version."
 msgstr ""
 
-#: ../../source/tags/tags-since.rst:18
+#: ../../source/tags/tags-since.rst:14
 msgid "Using the @since tag"
 msgstr ""
 
@@ -2067,27 +2261,31 @@ msgstr ""
 msgid "@static"
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:7
+#: ../../source/tags/tags-static.rst:6
+msgid "``@static``"
+msgstr ""
+
+#: ../../source/tags/tags-static.rst:9
 msgid "The @static tag indicates that a symbol is contained within a parent and can be accessed without instantiating the parent."
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:10
+#: ../../source/tags/tags-static.rst:12
 msgid "Using the @static tag will override a symbol’s default scope, with one exception: Symbols in global scope will remain global."
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:16
+#: ../../source/tags/tags-static.rst:17
 msgid "The following example has the same effect as writing “@function MyNamespace.myFunction” and omitting the @memberof and @static tags:"
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:19
+#: ../../source/tags/tags-static.rst:20
 msgid "Using @static in a virtual comment"
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:30
+#: ../../source/tags/tags-static.rst:31
 msgid "The following example forces a module’s inner member to be documented as a static member:"
 msgstr ""
 
-#: ../../source/tags/tags-static.rst:33
+#: ../../source/tags/tags-static.rst:34
 msgid "Using @static to override the default scope"
 msgstr ""
 
@@ -2095,11 +2293,11 @@ msgstr ""
 msgid "@summary"
 msgstr ""
 
-#: ../../source/tags/tags-summary.rst:7
+#: ../../source/tags/tags-summary.rst:6
 msgid "``@summary Summary goes here.``"
 msgstr ""
 
-#: ../../source/tags/tags-summary.rst:12
+#: ../../source/tags/tags-summary.rst:9
 msgid "The @summary tag is a shorter version of the full description. It can be added to any doclet."
 msgstr ""
 
@@ -2107,35 +2305,39 @@ msgstr ""
 msgid "@this"
 msgstr ""
 
-#: ../../source/tags/tags-this.rst:7
+#: ../../source/tags/tags-this.rst:6
 msgid "``@this <namePath>``"
 msgstr ""
 
-#: ../../source/tags/tags-this.rst:12
+#: ../../source/tags/tags-this.rst:9
 msgid "The @this tag indicates what the ``this`` keyword refers to when used within another symbol."
 msgstr ""
 
-#: ../../source/tags/tags-this.rst:18
+#: ../../source/tags/tags-this.rst:13
 msgid "In the following example, the @this tag causes “this.name” to be documented as “Greeter#name” rather than a global symbol called “name”."
 msgstr ""
 
 #: ../../source/tags/tags-throws.rst:2
-msgid "@throws"
+msgid "@throws (synonyms: @exception)"
 msgstr ""
 
-#: ../../source/tags/tags-throws.rst:7
-msgid "``@throws free-form description``"
-msgstr ""
-
-#: ../../source/tags/tags-throws.rst:8
-msgid "``@throws {<type>}``"
+#: ../../source/tags/tags-throws.rst:6
+msgid ":rst:dir:`@exception`"
 msgstr ""
 
 #: ../../source/tags/tags-throws.rst:9
+msgid "``@throws free-form description``"
+msgstr ""
+
+#: ../../source/tags/tags-throws.rst:10
+msgid "``@throws {<type>}``"
+msgstr ""
+
+#: ../../source/tags/tags-throws.rst:11
 msgid "``@throws {<type>} free-form description``"
 msgstr ""
 
-#: ../../source/tags/tags-throws.rst:14
+#: ../../source/tags/tags-throws.rst:15
 msgid "The @throws tag allows you to document an error that a function might throw. You can include the @throws tag more than once in a single JSDoc comment."
 msgstr ""
 
@@ -2151,19 +2353,23 @@ msgstr ""
 msgid "Using the @throws tag with a type and description"
 msgstr ""
 
+#: ../../source/tags/tags-throws.rst:48
+msgid ":rst:dir:`@throws`"
+msgstr ""
+
 #: ../../source/tags/tags-todo.rst:2
 msgid "@todo"
 msgstr ""
 
-#: ../../source/tags/tags-todo.rst:7
-msgid "``@todo text describing thing to do.``"
+#: ../../source/tags/tags-todo.rst:6
+msgid "``@todo`` text describing thing to do."
 msgstr ""
 
-#: ../../source/tags/tags-todo.rst:12
+#: ../../source/tags/tags-todo.rst:9
 msgid "The @todo tag allows you to document tasks to be completed for some part of your code. You can use the @todo tag more than once in a single JSDoc comment."
 msgstr ""
 
-#: ../../source/tags/tags-todo.rst:19
+#: ../../source/tags/tags-todo.rst:15
 msgid "Using the @todo tag"
 msgstr ""
 
@@ -2171,19 +2377,23 @@ msgstr ""
 msgid "@tutorial"
 msgstr ""
 
-#: ../../source/tags/tags-tutorial.rst:14
-msgid "The ``@tutorial`` tag inserts a link to a tutorial file that is provided as part of the documentation. See the `tutorials overview <about-tutorials.html>`__ for instructions on creating tutorials."
+#: ../../source/tags/tags-tutorial.rst:6
+msgid "``@tutorial <tutorialID>``"
 msgstr ""
 
-#: ../../source/tags/tags-tutorial.rst:19
-msgid "You can use the ``@tutorial`` tag more than once in a single JSDoc comment."
+#: ../../source/tags/tags-tutorial.rst:9
+msgid "The :rst:dir:`@tutorial` tag inserts a link to a tutorial file that is provided as part of the documentation. See the :ref:`tutorials` for instructions on creating tutorials."
 msgstr ""
 
-#: ../../source/tags/tags-tutorial.rst:25
+#: ../../source/tags/tags-tutorial.rst:13
+msgid "You can use the :rst:dir:`@tutorial` tag more than once in a single JSDoc comment."
+msgstr ""
+
+#: ../../source/tags/tags-tutorial.rst:17
 msgid "In the following example, the documentation for ``MyClass`` will link to the tutorials that have the identifiers ``tutorial-1`` and ``tutorial-2``:"
 msgstr ""
 
-#: ../../source/tags/tags-tutorial.rst:29
+#: ../../source/tags/tags-tutorial.rst:20
 msgid "Using the @tutorial tag"
 msgstr ""
 
@@ -2191,199 +2401,203 @@ msgstr ""
 msgid "@type"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:7
+#: ../../source/tags/tags-type.rst:8
 msgid "``@type {typeName}``"
 msgstr ""
 
 #: ../../source/tags/tags-type.rst:12
-msgid "The @type tag allows you to provide a type expression identifying the type of value that a symbol may contain, or the type of value returned by a function. You can also include type expressions with many other JSDoc tags, such as the [@param tag]\\ `param-tag <tags-param.html>`__."
+msgid "The @type tag allows you to provide a type expression identifying the type of value that a symbol may contain, or the type of value returned by a function. You can also include type expressions with many other JSDoc tags, such as the [@param tag]\\ :rst:dir:`param`."
 msgstr ""
 
 #: ../../source/tags/tags-type.rst:17
 msgid "A type expression can include the JSDoc namepath to a symbol (for example, ``myNamespace.MyClass``); a built-in JavaScript type (for example, ``string``); or a combination of these. You can use any `Google Closure Compiler type expression <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#type-expressions>`__, as well as several other formats that are specific to JSDoc."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:24
+#: ../../source/tags/tags-type.rst:23
 msgid "If JSDoc determines that a type expression is invalid, it will display an error and stop running. You can turn this error into a warning by running JSDoc with the ``--lenient`` option."
 msgstr ""
 
 #: ../../source/tags/tags-type.rst:28
-msgid "**Note**: Full support for Google Closure Compiler-style type expressions is available in JSDoc 3.2 and later. Earlier versions of JSDoc included partial support for Closure Compiler type expressions."
+msgid "Full support for Google Closure Compiler-style type expressions is available in JSDoc 3.2 and later. Earlier versions of JSDoc included partial support for Closure Compiler type expressions."
 msgstr ""
 
 #: ../../source/tags/tags-type.rst:32
 msgid "Each type is specified by providing a type expression, using one of the formats described below. Where appropriate, JSDoc will automatically create links to the documentation for other symbols. For example, ``@type {MyClass}`` will link to the MyClass documentation if that symbol has been documented."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:50
+#: ../../source/tags/tags-type.rst:39
+msgid "Type List"
+msgstr ""
+
+#: ../../source/tags/tags-type.rst:43
 msgid "Type name"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:60
+#: ../../source/tags/tags-type.rst:44
 msgid "Syntax examples"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:70
+#: ../../source/tags/tags-type.rst:45
 msgid "Description"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:88
+#: ../../source/tags/tags-type.rst:46
 msgid "Symbol name (name expression)"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:116
+#: ../../source/tags/tags-type.rst:52
 msgid "Specifies the name of a symbol. If you have documented the symbol, JSDoc creates a link to the documentation for that symbol."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:139
+#: ../../source/tags/tags-type.rst:53
 msgid "Multiple types (type union)"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:149
-msgid "** This can be a number or a boolean.**"
+#: ../../source/tags/tags-type.rst:54
+msgid "This can be a number or a boolean."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:168
-msgid "This means a value can have one of several types, with the entire list of types enclosed in parentheses and separated by \\|."
+#: ../../source/tags/tags-type.rst:60
+msgid "This means a value can have one of several types, with the entire list of types enclosed in parentheses and separated by |."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:191
+#: ../../source/tags/tags-type.rst:61
 msgid "Arrays and objects (type applications and record types)"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:201
-msgid "** An array of MyClass instances.**"
+#: ../../source/tags/tags-type.rst:62
+msgid "An array of MyClass instances::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:210
-msgid "** An object with string keys and number values:**"
+#: ../../source/tags/tags-type.rst:68
+msgid "An object with string keys and number values::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:217
-msgid "** An object called ‘myObj’ with properties ‘a’ (a number), ‘b’ (a string) and ‘c’ (any type).**"
+#: ../../source/tags/tags-type.rst:72
+msgid "An object called 'myObj' with properties 'a' (a number), 'b' (a string) and 'c' (any type)::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:241
-msgid "JSDoc supports Closure Compiler’s syntax for defining array and object types."
+#: ../../source/tags/tags-type.rst:81
+msgid "JSDoc supports Closure Compiler's syntax for defining array and object types."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:252
+#: ../../source/tags/tags-type.rst:83
 msgid "You can also indicate an array by appending [] to the type that is contained in the array. For example, the expression string[] indicates an array of strings."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:264
-msgid "For objects that have a known set of properties, you can use Closure Compiler’s syntax for documenting record types. You can document each property individually, which enables you to provide more detailed information about each property."
+#: ../../source/tags/tags-type.rst:85
+msgid "For objects that have a known set of properties, you can use Closure Compiler's syntax for documenting record types. You can document each property individually, which enables you to provide more detailed information about each property."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:289
+#: ../../source/tags/tags-type.rst:86
 msgid "Nullable type"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:299
-msgid "** A number or null.**"
+#: ../../source/tags/tags-type.rst:87
+msgid "A number or null::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:318
+#: ../../source/tags/tags-type.rst:91
 msgid "This indicates that the type is either the specified type, or null."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:340
+#: ../../source/tags/tags-type.rst:92
 msgid "Non-nullable type"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:350
-msgid "** A number, but never null.**"
+#: ../../source/tags/tags-type.rst:93
+msgid "A number, but never null::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:369
+#: ../../source/tags/tags-type.rst:97
 msgid "Indicates that the value is of the specified type, but cannot be null."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:391
+#: ../../source/tags/tags-type.rst:98
 msgid "Variable number of that type"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:401
-msgid "**This function accepts a variable number of numeric parameters.**"
+#: ../../source/tags/tags-type.rst:99
+msgid "This function accepts a variable number of numeric parameters::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:420
-msgid "Indicates that the function accepts a variable number of parameters, and specifies a type for the parameters. For example:"
+#: ../../source/tags/tags-type.rst:103
+msgid "Indicates that the function accepts a variable number of parameters, and specifies a type for the parameters. For example::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:458
+#: ../../source/tags/tags-type.rst:117
 msgid "Optional parameter"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:468
-msgid "** An optional parameter named foo.**"
+#: ../../source/tags/tags-type.rst:118
+msgid "An optional parameter named foo::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:477
-msgid "** An optional parameter foo with default value 1.**"
+#: ../../source/tags/tags-type.rst:124
+msgid "An optional parameter foo with default value 1::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:496
-msgid "Indicates that the parameter is optional. When using JSDoc’s syntax for optional parameters, you can also indicate the value that will be used if a parameter is omitted."
+#: ../../source/tags/tags-type.rst:128
+msgid "Indicates that the parameter is optional. When using JSDoc's syntax for optional parameters, you can also indicate the value that will be used if a parameter is omitted."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:520
+#: ../../source/tags/tags-type.rst:129
 msgid "Callbacks"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:553
-msgid "Document a callback using the @callback tag. The syntax is identical to the @typedef tag, except that a callback’s type is always “function.”"
+#: ../../source/tags/tags-type.rst:140
+msgid "Document a callback using the @callback tag. The syntax is identical to the @typedef tag, except that a callback's type is always \"function.\""
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:576
+#: ../../source/tags/tags-type.rst:141
 msgid "Type definitions"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:586
-msgid "** Documenting a type with properties ‘id’, ‘name’, ‘age’.**"
+#: ../../source/tags/tags-type.rst:142
+msgid "Documenting a type with properties 'id', 'name', 'age'::"
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:614
+#: ../../source/tags/tags-type.rst:155
 msgid "You can document complex types using the @typedef tag, then refer to the type definition elsewhere in your documentation."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:643
+#: ../../source/tags/tags-type.rst:166
 msgid "In many cases, you can include a type expression as part of another tag, rather than including a separate @type tag in your JSDoc comment."
 msgstr ""
 
-#: ../../source/tags/tags-type.rst:646
-msgid "** Type expressions can accompany many tags.**"
+#: ../../source/tags/tags-type.rst:169
+msgid "Type expressions can accompany many tags."
 msgstr ""
 
 #: ../../source/tags/tags-typedef.rst:2
 msgid "@typedef"
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:7
+#: ../../source/tags/tags-typedef.rst:6
 msgid "``@typedef [<type>] <namepath>``"
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:12
-msgid "The @typedef tag is useful for documenting custom types, particularly if you wish to refer to them repeatedly. These types can then be used within other tags expecting a type, such as [@type]\\ `type-tag <tags-type.html>`__ or [@param]\\ `param-tag <tags-param.html>`__."
+#: ../../source/tags/tags-typedef.rst:9
+msgid "The @typedef tag is useful for documenting custom types, particularly if you wish to refer to them repeatedly. These types can then be used within other tags expecting a type, such as [@type]\\ :rst:dir:`type` or [@param]\\ :rst:dir:`param`."
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:18
-msgid "Use the [@callback]\\ `callback-tag <tags-callback.html>`__ tag to document the type of callback functions."
+#: ../../source/tags/tags-typedef.rst:14
+msgid "Use the [@callback]\\ :rst:dir:`callback` tag to document the type of callback functions."
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:24
+#: ../../source/tags/tags-typedef.rst:19
 msgid "This example defines a union type for parameters that can contain either numbers or strings that represent numbers."
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:27
+#: ../../source/tags/tags-typedef.rst:22
 msgid "Using the @typedef tag"
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:42
+#: ../../source/tags/tags-typedef.rst:37
 msgid "This example defines a more complex type, an object with several properties, and sets its namepath so it will be displayed along with the class that uses the type. Because the type definition is not actually exposed by the class, it is customary to document the type definition as an inner member."
 msgstr ""
 
-#: ../../source/tags/tags-typedef.rst:48
+#: ../../source/tags/tags-typedef.rst:43
 msgid "Using @typedef to document a complex type for a class"
 msgstr ""
 
@@ -2391,27 +2605,27 @@ msgstr ""
 msgid "@variation"
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:7
+#: ../../source/tags/tags-variation.rst:6
 msgid "``@variation <variationNumber>``"
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:12
+#: ../../source/tags/tags-variation.rst:9
 msgid "Sometimes your code may include multiple symbols with the same longname. For example, you might have both a global class and a top-level namespace called ``Widget``. In cases such as these, what does “{@link Widget}” or “@memberof Widget” mean? The global namespace, or the global class?"
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:18
-msgid "Variations help JSDoc distinguish between different symbols with the same longname. For example, if “@variation 2” is added to the JSDoc comment for the Widget class, “{@link Widget(2)}” will refer to the class, and “{@link Widget}” will refer to the namespace. Alternatively, you can include the variation when you specify the symbol’s with tags such as [@alias]\\ `alias-tag <tags-alias.html>`__ or [@name]\\ `name-tag <tags-name.html>`__ (for example, “@alias Widget(2)”)."
+#: ../../source/tags/tags-variation.rst:15
+msgid "Variations help JSDoc distinguish between different symbols with the same longname. For example, if “@variation 2” is added to the JSDoc comment for the Widget class, “{@link Widget(2)}” will refer to the class, and “{@link Widget}” will refer to the namespace. Alternatively, you can include the variation when you specify the symbol’s with tags such as [@alias]\\ :rst:dir:`alias` or [@name]\\ :rst:dir:`name` (for example, “@alias Widget(2)”)."
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:27
+#: ../../source/tags/tags-variation.rst:23
 msgid "You can provide any value with the @variation tag, as long as the combination of the value and the longname results in a globally unique version of the longname. As a best practice, use a predictable pattern for choosing the values, which will make it easier for you to document your code."
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:36
+#: ../../source/tags/tags-variation.rst:31
 msgid "The following example uses the @variation tag to distinguish between the Widget class and the Widget namespace."
 msgstr ""
 
-#: ../../source/tags/tags-variation.rst:39
+#: ../../source/tags/tags-variation.rst:34
 msgid "Using the @variation tag"
 msgstr ""
 
@@ -2419,35 +2633,47 @@ msgstr ""
 msgid "@version"
 msgstr ""
 
-#: ../../source/tags/tags-version.rst:7
+#: ../../source/tags/tags-version.rst:6
+msgid "``@version``"
+msgstr ""
+
+#: ../../source/tags/tags-version.rst:9
 msgid "Documents the version of an item. The text following the @version tag will be used to denote the version of the item."
 msgstr ""
 
-#: ../../source/tags/tags-version.rst:13
+#: ../../source/tags/tags-version.rst:14
 msgid "Using the @version tag"
 msgstr ""
 
 #: ../../source/tags/tags-yields.rst:2
-msgid "@yields"
+msgid "@yields (synonyms: @yield)"
+msgstr ""
+
+#: ../../source/tags/tags-yields.rst:6
+msgid ":rst:dir:`@yield`"
 msgstr ""
 
 #: ../../source/tags/tags-yields.rst:7
 msgid "``@yields [{type}] [description]``"
 msgstr ""
 
-#: ../../source/tags/tags-yields.rst:12
-msgid "The ``@yields`` tag documents the value that is yielded by a generator function. This tag is available in JSDoc 3.5.0 and later."
+#: ../../source/tags/tags-yields.rst:10
+msgid "The :rst:dir:`@yields` tag documents the value that is yielded by a generator function. This tag is available in JSDoc 3.5.0 and later."
 msgstr ""
 
-#: ../../source/tags/tags-yields.rst:15
-msgid "If you are documenting a regular function, use the `@returns tag <tags-returns.html>`__ instead of this tag."
+#: ../../source/tags/tags-yields.rst:13
+msgid "If you are documenting a regular function, use the :rst:dir:`@returns` instead of this tag."
 msgstr ""
 
-#: ../../source/tags/tags-yields.rst:21
+#: ../../source/tags/tags-yields.rst:17
 msgid "@yields tag with a type"
 msgstr ""
 
-#: ../../source/tags/tags-yields.rst:31
+#: ../../source/tags/tags-yields.rst:27
 msgid "@yields tag with a type and description"
+msgstr ""
+
+#: ../../source/tags/tags-yields.rst:39
+msgid ":rst:dir:`@yields`"
 msgstr ""
 

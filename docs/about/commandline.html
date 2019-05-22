@@ -171,22 +171,22 @@
            <div itemprop="articleBody">
             
   <div class="section" id="command-line-arguments-to-jsdoc">
-<h1>JSDoc的命令行参数<a class="headerlink" href="#command-line-arguments-to-jsdoc" title="永久链接至标题">¶</a></h1>
+<span id="command-line"></span><h1>JSDoc的命令行参数<a class="headerlink" href="#command-line-arguments-to-jsdoc" title="永久链接至标题">¶</a></h1>
 <p>在最基本的层面上, JSDoc就像这样使用:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>/path/to/jsdoc yourSourceCodeFile.js anotherSourceCodeFile.js ...
 </pre></div>
 </div>
 <p>其中 <code class="docutils literal notranslate"><span class="pre">...</span></code> 是生成其他文件的路径.</p>
-<p>Additionally, one may provide the path to a <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown
-file</a> (ending in “.md”)
+<p>Additionally, one may provide the path to a <a class="reference external" href="http://daringfireball.net/projects/markdown/">Markdown file</a> (ending in “.md”)
 or a file named “README”, and this will be added to the documentation on
-the front page. See <a class="reference external" href="about-including-readme.html">these
-instructions</a>.</p>
-<p>JSDoc支持许多命令行选项, 其中许多选项都有长和短格式. 或者, 可以在给予 <a class="reference external" href="about-configurations-jsdoc.html">JSDoc的配置文件</a> 中指定命令行选项. 命令行选项是:</p>
+the front page. See <a class="reference internal" href="including-readme.html#including-readme"><span class="std std-ref">引入README文件</span></a>.</p>
+<p>JSDoc supports a number of command-line options, many of which have both
+long and short forms. Alternatively, the command-line options may be <a class="reference internal" href="configuring-jsdoc.html#configuring-jsdoc"><span class="std std-ref">使用配置文件配置JSDoc</span></a>
+given to JSDoc. The command-line options are:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
+<col style="width: 36%" />
+<col style="width: 64%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>选项</p></th>
@@ -200,7 +200,11 @@ instructions</a>.</p>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--configure</span> <span class="pre">&lt;value&gt;</span></code></p></td>
-<td><p><a class="reference external" href="configurations-jsdoc.html">JSDoc配置文件</a> 的路径. 在安装JSDoc的目录中默认为 <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> 或 <code class="docutils literal notranslate"><span class="pre">conf.json.EXAMPLE</span></code>.</p></td>
+<td><p>The path to a JSDoc
+<a class="reference internal" href="configuring-jsdoc.html#configuring-jsdoc"><span class="std std-ref">使用配置文件配置JSDoc</span></a>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">conf.json</span></code> or
+<code class="docutils literal notranslate"><span class="pre">conf.json.EXAMPLE</span></code> in the directory
+where JSDoc is installed.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-d</span> <span class="pre">&lt;value&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">--destination</span> <span class="pre">&lt;value</span>
@@ -224,7 +228,10 @@ instructions</a>.</p>
 <td><p>运行测试时, 请勿在控制台输出中使用颜色. 在Windows上, 默认情况下启用此选项.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">--private</span></code></p></td>
-<td><p>在生成的文档中包含标有 <a class="reference external" href="tags-private.html">&#64;private 标记</a> 的符号. 默认情况下, 不包括私有符号.</p></td>
+<td><p>Include symbols marked with the
+<a class="reference internal" href="../tags/tags-private.html#directive-&#64;private" title="&#64;private directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;private</span></code></a> in
+the generated documentation. By default,
+private symbols are not included.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span></code>, <code class="docutils literal notranslate"><span class="pre">--package</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件, 包含项目名称, 版本和其他详细信息. 默认为源路径中找到的第一个 <code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件.</p></td>

@@ -3,6 +3,7 @@
 
 .. rst:directive:: @readonly
 
+   :Syntax: ``@protected [{typeExpression}]``
    :Overview:
 
       The @readonly tag indicates that a symbol is intended to be read-only.

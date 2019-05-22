@@ -3,10 +3,7 @@
 
 .. rst:directive:: @implements
 
-   :Syntax:
-
-         ``@implements {typeExpression}``
-
+   :Syntax: ``@implements {typeExpression}``
    :Overview:
 
       The :rst:dir:`@implements` tag indicates that a symbol implements an interface.

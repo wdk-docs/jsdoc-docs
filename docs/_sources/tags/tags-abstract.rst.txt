@@ -1,14 +1,11 @@
 
-@abstract
-=============================
+@abstract (synonyms: @virtual)
+================================
 
 .. rst:directive:: @abstract
 
-   :Overview:
-
-      The @abstract tag identifies members that must be implemented (or
-      overridden) by objects that inherit the member.
-
+   :Synonyms: :rst:dir:`@virtual`
+   :Overview: The @abstract tag identifies members that must be implemented (or overridden) by objects that inherit the member.
    :Example:
 
       .. code-block:: js
@@ -43,3 +40,7 @@
          Milk.prototype.isSolid = function() {
              return false;
          };
+
+.. rst:directive:: @virtual
+
+   :Synonyms: :rst:dir:`@abstract`

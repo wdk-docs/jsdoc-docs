@@ -3,23 +3,18 @@
 
 .. rst:directive:: @mixes
 
-   :Syntax:
-
-      ``@mixes <OtherObjectPath>``
-
+   :Syntax: ``@mixes <OtherObjectPath>``
    :Overview:
 
       The @mixes tag indicates that the current object mixes in all the
-      members from ``OtherObjectPath``, which is a
-      [@mixin]\ `mixin-tag <tags-mixin.html>`__.
+      members from ``OtherObjectPath``, which is a :rst:dir:`@mixin`.
 
    :Examples:
 
-      To start, we document a mixin with the
-      [@mixin]\ `mixin-tag <tags-mixin.html>`__ tag:
+      To start, we document a mixin with the :rst:dir:`@mixin` tag:
 
       .. code-block:: js
-         :caption: Example of a @mixin
+         :caption: Example of a :rst:dir:`@mixin`
 
          /**
           * This provides methods used for event handling. It's not meant to
@@ -49,11 +44,11 @@
 
       Now we add a FormButton class and call a “mix” function that mixes all
       of the Eventful functions into FormButton, so that FormButton can also
-      fire events and have listeners. We use the @mixes tag to indicate that
+      fire events and have listeners. We use the :rst:dir:`@mixes` tag to indicate that
       FormButton mixes the Eventful functions.
 
       .. code-block:: js
-         :caption: Using the @mixes tag
+         :caption: Using the :rst:dir:`@mixes` tag
 
          /**
           * @constructor FormButton

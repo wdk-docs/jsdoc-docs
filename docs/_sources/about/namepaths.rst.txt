@@ -1,3 +1,5 @@
+.. _namepaths:
+
 Using namepaths with JSDoc 3
 =================================
 
@@ -45,8 +47,7 @@ are three distinct methods that all exist independently of one another.
    Person.say(); // I'm static.
    // there is no way to directly access the inner function from here
 
-You would use three different namepath syntaxes to refer to the three
-different methods:
+You would use three different namepath syntaxes to refer to the three different methods:
 
 
 .. code-block:: sh
@@ -63,9 +64,8 @@ it *is* possible to return a reference to an inner method from another
 method inside that container, so it is possible that some object
 elsewhere in your code might borrow an inner method.
 
-Note that if a constructor has an instance member that is also a
-constructor, you can simply chain the namepaths together to form a
-longer namepath:
+Note that if a constructor has an instance member that is also a constructor,
+you can simply chain the namepaths together to form a longer namepath:
 
 .. code-block:: js
    :caption: Use a documentation tag to describe your code.
@@ -84,11 +84,10 @@ longer namepath:
    var i = new p.Idea();
    i.consider();
 
-In this case, to refer to the method named “consider,” you would use the
-following namepath: ``Person#Idea#consider``
+In this case, to refer to the method named “consider,”
+you would use the following namepath: ``Person#Idea#consider``
 
-This chaining can be used with any combination of the connecting
-symbols: ``# . ~``
+This chaining can be used with any combination of the connecting symbols: ``# . ~``
 
 .. code-block:: js
    :caption: Special cases: modules, externals and events.
@@ -104,10 +103,9 @@ symbols: ``# . ~``
     */
 
 There are some special cases with namepaths:
-[@module]\ `module-tag <tags-module.html>`__ names are prefixed by
-“module:”, [@external]\ `external-tag <tags-external.html>`__ names are
-prefixed by “external:”, and [@event]\ `event-tag <tags-event.html>`__
-names are prefixed by “event:”.
+[:rst:dir:`@module`]\ module names are prefixed by “module:”,
+[:rst:dir:`@external`]\ external names are prefixed by “external:”,
+and [:rst:dir:`@event`]\ event names are prefixed by “event:”.
 
 .. code-block:: js
    :caption: Namepaths of objects with special characters in the name.

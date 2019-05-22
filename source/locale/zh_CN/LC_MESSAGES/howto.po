@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 16:58+0800\n"
+"POT-Creation-Date: 2019-05-21 23:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../../source/howto/howto-amd-modules.rst:2
+#: ../../source/howto/amd-modules.rst:4
 msgid "Amd Modules"
 msgstr "Amd模块"
 
-#: ../../source/howto/howto-amd-modules.rst:5
-#: ../../source/howto/howto-commonjs-modules.rst:5
+#: ../../source/howto/amd-modules.rst:7
+#: ../../source/howto/commonjs-modules.rst:7
 msgid "Overview"
 msgstr "概述"
 
-#: ../../source/howto/howto-amd-modules.rst:7
+#: ../../source/howto/amd-modules.rst:9
 msgid ""
 "JSDoc 3 makes it possible to document modules that use the `Asynchronous "
 "Module Definition (AMD) API <https://github.com/amdjs/amdjs-"
@@ -36,48 +36,47 @@ msgid ""
 "module uses."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:14
+#: ../../source/howto/amd-modules.rst:16
 msgid ""
-"If you’re documenting CommonJS or Node.js modules, see `CommonJS Modules "
-"<howto-commonjs-modules.html>`__ for instructions."
+"If you’re documenting CommonJS or Node.js modules, see :ref:`commonjs-"
+"modules` for instructions."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:18
-#: ../../source/howto/howto-commonjs-modules.rst:24
-#: ../../source/howto/howto-es2015-modules.rst:10
+#: ../../source/howto/amd-modules.rst:19
+#: ../../source/howto/commonjs-modules.rst:21
+#: ../../source/howto/es2015-modules.rst:12
 msgid "Module identifiers"
 msgstr "模块标识符"
 
-#: ../../source/howto/howto-amd-modules.rst:20
+#: ../../source/howto/amd-modules.rst:21
 msgid ""
-"When you document an AMD module, you’ll use an `@exports tag <tags-"
-"exports.html>`__ or `@module tag <tags-module.html>`__ to document the "
-"identifier that’s passed to the ``require()`` function. For example, if "
-"users load the module by calling ``require('my/shirt', /* callback */)``,"
-" you’ll write a JSDoc comment that contains the tag ``@exports my/shirt``"
-" or ``@module my/shirt``. The examples below can help you decide which of"
-" these tags to use."
+"When you document an AMD module, you’ll use an :rst:dir:`@exports` or "
+":rst:dir:`@module` to document the identifier that’s passed to the "
+"``require()`` function. For example, if users load the module by calling "
+"``require('my/shirt', /* callback */)``, you’ll write a JSDoc comment "
+"that contains the tag ``@exports my/shirt`` or ``@module my/shirt``. The "
+"examples below can help you decide which of these tags to use."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:28
+#: ../../source/howto/amd-modules.rst:28
 msgid ""
-"If you use the ``@exports`` or ``@module`` tag without a value, JSDoc "
-"will try to guess the correct module identifier based on the filepath."
+"If you use the :rst:dir:`@exports` or :rst:dir:`@module` tag without a "
+"value, JSDoc will try to guess the correct module identifier based on the"
+" filepath."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:31
-#: ../../source/howto/howto-commonjs-modules.rst:36
-#: ../../source/howto/howto-es2015-modules.rst:21
+#: ../../source/howto/amd-modules.rst:31
+#: ../../source/howto/es2015-modules.rst:20
 msgid ""
-"When you use a JSDoc `namepath <about-namepaths.html>`__ to refer to a "
-"module from another JSDoc comment, you must add the prefix ``module:``. "
-"For example, if you want the documentation for the module ``my/pants`` to"
-" link to the module ``my/shirt``, you could use the `@see tag <tags-"
-"see.html>`__ to document ``my/pants`` as follows:"
+"When you use a JSDoc :rst:dir:`@namepath` to refer to a module from "
+"another JSDoc comment, you must add the prefix ``module:``. For example, "
+"if you want the documentation for the module ``my/pants`` to link to the "
+"module ``my/shirt``, you could use the :rst:dir:`@see` to document "
+"``my/pants`` as follows:"
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:45
-#: ../../source/howto/howto-commonjs-modules.rst:50
+#: ../../source/howto/amd-modules.rst:44
+#: ../../source/howto/commonjs-modules.rst:45
 msgid ""
 "Similarly, the namepath for each member of the module will start with "
 "``module:``, followed by the module name. For example, if your "
@@ -86,149 +85,159 @@ msgid ""
 "``module:my/pants.Jeans#hem``."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:52
-#: ../../source/howto/howto-amd-modules.rst:59
+#: ../../source/howto/amd-modules.rst:51 ../../source/howto/amd-modules.rst:58
 msgid "Function that returns an object literal"
 msgstr "返回对象文字的函数"
 
-#: ../../source/howto/howto-amd-modules.rst:54
+#: ../../source/howto/amd-modules.rst:53
+#, fuzzy
 msgid ""
 "If you define your AMD module as a function that returns an object "
-"literal, use the ``@exports tag <tags-exports.html>`__ to document the "
-"module’s name. JSDoc will automatically detect that the object’s "
-"properties are members of the module."
-msgstr "如果将AMD模块定义为返回对象文字的函数，请使用 ``@exports tag <tags-exports.html>`__ 来记录模块的名称。 JSDoc将自动检测对象的属性是否为模块的成员。"
+"literal, use the :rst:dir:`@exports` to document the module’s name. JSDoc"
+" will automatically detect that the object’s properties are members of "
+"the module."
+msgstr ""
+"如果将AMD模块定义为返回对象文字的函数，请使用 ``@exports tag <tags-exports.html>`__ 来记录模块的名称。 "
+"JSDoc将自动检测对象的属性是否为模块的成员。"
 
-#: ../../source/howto/howto-amd-modules.rst:86
+#: ../../source/howto/amd-modules.rst:85
 msgid "Function that returns another function"
 msgstr "返回另一个函数的函数"
 
-#: ../../source/howto/howto-amd-modules.rst:88
+#: ../../source/howto/amd-modules.rst:87
 msgid ""
 "If you define your module as a function that exports another function, "
-"such as a constructor, you can use a standalone comment with a `@module  "
-"tag <tags-module.html>`__ to document the module. You can then use an "
-"`@alias  tag <tags-alias.html>`__ to tell JSDoc that the function uses "
-"the same longname as the module."
+"such as a constructor, you can use a standalone comment with a "
+":rst:dir:`@module` to document the module. You can then use an "
+":rst:dir:`@alias` to tell JSDoc that the function uses the same longname "
+"as the module."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:94
+#: ../../source/howto/amd-modules.rst:93
 #, fuzzy
 msgid "Function that returns a constructor"
 msgstr "Function that returns a constructor"
 
-#: ../../source/howto/howto-amd-modules.rst:120
-#: ../../source/howto/howto-amd-modules.rst:128
+#: ../../source/howto/amd-modules.rst:119
+#: ../../source/howto/amd-modules.rst:125
 msgid "Module declared in a return statement"
 msgstr "模块在return语句中声明"
 
-#: ../../source/howto/howto-amd-modules.rst:122
+#: ../../source/howto/amd-modules.rst:121
 msgid ""
 "If you declare your module object in a function’s ``return`` statement, "
-"you can use a standalone comment with a `@module tag <tags-"
-"module.html>`__ to document the module. You can then add an `@alias tag "
-"<tags-alias.html>`__ to tell JSDoc that the module object has the same "
-"longname as the module."
+"you can use a standalone comment with a :rst:dir:`@module` to document "
+"the module. You can then add an :rst:dir:`@alias` to tell JSDoc that the "
+"module object has the same longname as the module."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:148
-#: ../../source/howto/howto-amd-modules.rst:155
+#: ../../source/howto/amd-modules.rst:145
+#: ../../source/howto/amd-modules.rst:151
 msgid "Module object passed to a function"
 msgstr "传递给函数的模块对象"
 
-#: ../../source/howto/howto-amd-modules.rst:150
+#: ../../source/howto/amd-modules.rst:147
 msgid ""
 "If the module object is passed into the function that defines your "
-"module, you can document the module by adding an `@exports tag <tags-"
-"exports.html>`__ to the function parameter. This pattern is supported in "
-"JSDoc 3.3.0 and later."
+"module, you can document the module by adding an :rst:dir:`@exports` to "
+"the function parameter. This pattern is supported in JSDoc 3.3.0 and "
+"later."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:175
+#: ../../source/howto/amd-modules.rst:171
 msgid "Multiple modules defined in one file"
 msgstr "在一个文件中定义多个模块"
 
-#: ../../source/howto/howto-amd-modules.rst:177
+#: ../../source/howto/amd-modules.rst:173
 msgid ""
 "If you define more than one AMD module in a single JavaScript file, use "
-"the `@exports tag <tags-exports.html>`__ to document each module object."
+"the :rst:dir:`@exports` to document each module object."
 msgstr ""
 
-#: ../../source/howto/howto-amd-modules.rst:181
+#: ../../source/howto/amd-modules.rst:176
 #, fuzzy
 msgid "Multiple AMD modules defined in one file"
 msgstr "在一个文件中定义多个模块"
 
-#: ../../source/howto/howto-commonjs-modules.rst:2
+#: ../../source/howto/commonjs-modules.rst:4
 msgid "CommonJS Modules"
 msgstr "CommonJS 模块"
 
-#: ../../source/howto/howto-commonjs-modules.rst:7
+#: ../../source/howto/commonjs-modules.rst:9
 msgid ""
 "To help you document `CommonJS modules "
-"<http://wiki.commonjs.org/wiki/Modules/1.1>`__, JSDoc 3 understands many "
+"<http://wiki.commonjs.org/wiki/Modules/1.1>`_, JSDoc 3 understands many "
 "of the conventions used in the CommonJS specification (for example, "
 "adding properties to the ``exports`` object). In addition, JSDoc "
 "recognizes the conventions of `Node.js modules "
-"<http://nodejs.org/api/modules.html>`__, which extend the CommonJS "
+"<http://nodejs.org/api/modules.html>`_, which extend the CommonJS "
 "standard (for example, assigning a value to ``module.exports``). "
 "Depending on the coding conventions you follow, you may need to provide "
 "some additional tags to help JSDoc understand your code."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:18
+#: ../../source/howto/commonjs-modules.rst:16
 msgid ""
 "This page explains how to document CommonJS and Node.js modules that use "
 "several different coding conventions. If you’re documenting Asynchronous "
 "Module Definition (AMD) modules (also known as “RequireJS modules”), see "
-"`AMD Modules <howto-amd-modules.html>`__."
+":rst:dir:`amd-modules`."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:26
+#: ../../source/howto/commonjs-modules.rst:23
 msgid ""
 "In most cases, your CommonJS or Node.js module should include a "
-"standalone JSDoc comment that contains a `@module tag <tags-"
-"module.html>`__. The ``@module`` tag’s value should be the module "
-"identifier that’s passed to the ``require()`` function. For example, if "
-"users load the module by calling ``require('my/shirt')``, your JSDoc "
-"comment would contain the tag ``@module my/shirt``."
+"standalone JSDoc comment that contains a :rst:dir:`@module`. The "
+":rst:dir:`@module` tag’s value should be the module identifier that’s "
+"passed to the ``require()`` function. For example, if users load the "
+"module by calling ``require('my/shirt')``, your JSDoc comment would "
+"contain the tag ``@module my/shirt``."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:33
-#: ../../source/howto/howto-es2015-modules.rst:18
+#: ../../source/howto/commonjs-modules.rst:29
+#: ../../source/howto/es2015-modules.rst:18
 msgid ""
-"If you use the ``@module`` tag without a value, JSDoc will try to guess "
-"the correct module identifier based on the filepath."
+"If you use the :rst:dir:`@module` tag without a value, JSDoc will try to "
+"guess the correct module identifier based on the filepath."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:57
+#: ../../source/howto/commonjs-modules.rst:32
+msgid ""
+"When you use a JSDoc :ref:`namepaths` to refer to a module from another "
+"JSDoc comment, you must add the prefix ``module:``. For example, if you "
+"want the documentation for the module ``my/pants`` to link to the module "
+"``my/shirt``, you could use the :rst:dir:`@see` to document ``my/pants`` "
+"as follows:"
+msgstr ""
+
+#: ../../source/howto/commonjs-modules.rst:52
 msgid "Properties of the ‘exports’ object"
 msgstr "‘exports’ 对象的属性"
 
-#: ../../source/howto/howto-commonjs-modules.rst:59
+#: ../../source/howto/commonjs-modules.rst:54
 msgid ""
 "It’s easiest to document symbols that are directly assigned to a property"
 " of the ``exports`` object. JSDoc will automatically recognize that the "
 "module exports these symbols."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:63
+#: ../../source/howto/commonjs-modules.rst:58
 msgid ""
 "In the following example, the ``my/shirt`` module exports the methods "
 "``button`` and ``unbutton``. JSDoc will automatically detect that the "
 "module exports these methods."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:67
+#: ../../source/howto/commonjs-modules.rst:62
 #, fuzzy
 msgid "Methods added to the exports object"
 msgstr "Methods added to the exports object"
 
-#: ../../source/howto/howto-commonjs-modules.rst:85
+#: ../../source/howto/commonjs-modules.rst:80
 msgid "## Values assigned to local variables"
 msgstr "## 分配给局部变量的值"
 
-#: ../../source/howto/howto-commonjs-modules.rst:87
+#: ../../source/howto/commonjs-modules.rst:82
 msgid ""
 "In some cases, an exported symbol may be assigned to a local variable "
 "before it’s added to the ``exports`` object. For example, if your module "
@@ -236,55 +245,54 @@ msgid ""
 " method, you might write the module as follows:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:92
+#: ../../source/howto/commonjs-modules.rst:87
 #, fuzzy
 msgid "Method assigned to a local variable and added to the exports object"
 msgstr "Methods added to the exports object"
 
-#: ../../source/howto/howto-commonjs-modules.rst:105
+#: ../../source/howto/commonjs-modules.rst:100
 msgid ""
 "In this case, JSDoc will *not* automatically document ``wash`` as an "
 "exported method, because the JSDoc comment appears immediately before the"
 " local variable ``wash`` rather than ``exports.wash``. One solution is to"
-" add an `@alias tag <tags-alias.html>`__ that defines the correct "
-"longname for the method. In this case, the method is a static member of "
-"the module ``my/shirt``, so the correct longname is "
-"``module:my/shirt.wash``:"
+" add an :rst:dir:`@alias` that defines the correct longname for the "
+"method. In this case, the method is a static member of the module "
+"``my/shirt``, so the correct longname is ``module:my/shirt.wash``:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:113
+#: ../../source/howto/commonjs-modules.rst:108
 #, fuzzy
 msgid "Longname defined in an @alias tag"
 msgstr "Longname defined in an @alias tag"
 
-#: ../../source/howto/howto-commonjs-modules.rst:129
+#: ../../source/howto/commonjs-modules.rst:124
 msgid ""
 "Another solution is to move the method’s JSDoc comment so it comes "
 "immediately before ``exports.wash``. This change allows JSDoc to detect "
 "that ``wash`` is exported by the module ``my/shirt``:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:133
+#: ../../source/howto/commonjs-modules.rst:128
 #, fuzzy
 msgid "JSDoc comment immediately before exports.wash"
 msgstr "JSDoc comment immediately before exports.wash"
 
-#: ../../source/howto/howto-commonjs-modules.rst:148
+#: ../../source/howto/commonjs-modules.rst:143
 msgid "Values assigned to ‘module.exports’"
 msgstr "分配给 ‘module.exports’ 的值"
 
-#: ../../source/howto/howto-commonjs-modules.rst:150
+#: ../../source/howto/commonjs-modules.rst:145
 msgid ""
 "In a Node.js module, you can assign a value directly to "
 "``module.exports``. This section explains how to document different types"
 " of values when they are assigned to ``module.exports``."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:155
+#: ../../source/howto/commonjs-modules.rst:150
 msgid "Object literal assigned to ‘module.exports’"
 msgstr "分配给 ‘module.exports’ 的对象文字"
 
-#: ../../source/howto/howto-commonjs-modules.rst:157
+#: ../../source/howto/commonjs-modules.rst:152
 msgid ""
 "If a module assigns an object literal to ``module.exports``. JSDoc "
 "automatically recognizes that the module exports only this value. In "
@@ -292,171 +300,170 @@ msgid ""
 "property:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:162
+#: ../../source/howto/commonjs-modules.rst:157
 #, fuzzy
 msgid "Object literal assigned to module.exports"
 msgstr "分配给 ‘module.exports’ 的对象文字"
 
-#: ../../source/howto/howto-commonjs-modules.rst:192
+#: ../../source/howto/commonjs-modules.rst:187
 msgid ""
 "You can also use this pattern if you add properties to ``module.exports``"
 " outside of the object literal:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:195
+#: ../../source/howto/commonjs-modules.rst:189
 msgid "Assignment to module.exports followed by property definition"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:226
-#: ../../source/howto/howto-commonjs-modules.rst:231
+#: ../../source/howto/commonjs-modules.rst:220
+#: ../../source/howto/commonjs-modules.rst:225
 msgid "Function assigned to ‘module.exports’"
 msgstr "分配给 ‘module.exports’ 的函数"
 
-#: ../../source/howto/howto-commonjs-modules.rst:228
+#: ../../source/howto/commonjs-modules.rst:222
 msgid ""
 "If you assign a function to ``module.exports``, JSDoc will automatically "
 "set the correct longname for the function:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:249
+#: ../../source/howto/commonjs-modules.rst:243
 msgid "The same pattern works for constructor functions:"
 msgstr "相同的模式适用于构造函数:"
 
-#: ../../source/howto/howto-commonjs-modules.rst:251
+#: ../../source/howto/commonjs-modules.rst:245
 #, fuzzy
 msgid "Constructor assigned to ‘module.exports’"
 msgstr "Constructor assigned to ‘module.exports’"
 
-#: ../../source/howto/howto-commonjs-modules.rst:265
+#: ../../source/howto/commonjs-modules.rst:259
 msgid "String, number, or boolean assigned to ‘module.exports’"
 msgstr "分配给 'module.exports' 的字符串，数字或布尔值"
 
-#: ../../source/howto/howto-commonjs-modules.rst:267
+#: ../../source/howto/commonjs-modules.rst:261
 msgid ""
 "For value types (strings, numbers, and booleans) assigned to "
 "``module.exports``, you must document the exported value’s type by using "
-"the `@type tag <tags-type.html>`__ in the same JSDoc comment as the "
-"``@module`` tag:"
+"the :rst:dir:`@type` in the same JSDoc comment as the :rst:dir:`@module` "
+"tag:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:272
+#: ../../source/howto/commonjs-modules.rst:264
 #, fuzzy
 msgid "String assigned to module.exports"
 msgstr "分配给 ‘module.exports’ 的值"
 
-#: ../../source/howto/howto-commonjs-modules.rst:284
+#: ../../source/howto/commonjs-modules.rst:276
 msgid "Values assigned to ‘module.exports’ and local variables"
 msgstr "分配给 ‘module.exports’ 和局部变量的值"
 
-#: ../../source/howto/howto-commonjs-modules.rst:286
+#: ../../source/howto/commonjs-modules.rst:278
 msgid ""
 "If your module exports symbols that are not directly assigned to "
-"``module.exports``, you can use the `@exports tag <tags-exports.html>`__ "
-"in place of the ``@module`` tag. The ``@exports`` tag tells JSDoc that a "
+"``module.exports``, you can use the :rst:dir:`@exports` in place of the "
+":rst:dir:`@module` tag. The :rst:dir:`@exports` tag tells JSDoc that a "
 "symbol represents the value exported by a module."
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:293
+#: ../../source/howto/commonjs-modules.rst:283
 #, fuzzy
 msgid "Object literal assigned to a local variable and module.exports"
 msgstr "分配给 ‘module.exports’ 的对象文字"
 
-#: ../../source/howto/howto-commonjs-modules.rst:313
+#: ../../source/howto/commonjs-modules.rst:303
 msgid "Properties added to ‘this’"
 msgstr "添加到 'this' 的属性"
 
-#: ../../source/howto/howto-commonjs-modules.rst:315
+#: ../../source/howto/commonjs-modules.rst:305
 msgid ""
 "When a module adds a property to its ``this`` object, JSDoc 3 "
 "automatically recognizes that the new property is exported by the module:"
 msgstr ""
 
-#: ../../source/howto/howto-commonjs-modules.rst:319
+#: ../../source/howto/commonjs-modules.rst:308
 #, fuzzy
 msgid "Properties added to a module’s ‘this’ object"
 msgstr "Properties added to a module’s ‘this’ object"
 
-#: ../../source/howto/howto-es2015-classes.rst:2
+#: ../../source/howto/es2015-classes.rst:4
 msgid "ECMAScript 2015 Classes"
 msgstr "ECMAScript 2015 类"
 
-#: ../../source/howto/howto-es2015-classes.rst:4
+#: ../../source/howto/es2015-classes.rst:6
 msgid ""
 "SDoc 3 makes it easy to document classes that follow the `ECMAScript 2015"
 " specification <http://www.ecma-international.org/ecma-262/6.0/#sec-"
-"class-definitions>`__. You don’t need to use tags such as ``@class`` and "
-"``@constructor`` with ES 2015 classes—JSDoc automatically identifies "
-"classes and their constructors simply by parsing your code. ES 2015 "
-"classes are supported in JSDoc 3.4.0 and later."
+"class-definitions>`_. You don’t need to use tags such as "
+":rst:dir:`@class` and :rst:dir:`@constructor` with ES 2015 classes—JSDoc "
+"automatically identifies classes and their constructors simply by parsing"
+" your code. ES 2015 classes are supported in JSDoc 3.4.0 and later."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:13
+#: ../../source/howto/es2015-classes.rst:13
 msgid "Documenting a simple class"
 msgstr "记录一个简单的类"
 
-#: ../../source/howto/howto-es2015-classes.rst:15
+#: ../../source/howto/es2015-classes.rst:15
 msgid ""
 "The following example shows how to document a simple class with a "
 "constructor, two instance methods, and one static method:"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:18
+#: ../../source/howto/es2015-classes.rst:17
 #, fuzzy
 msgid "Simple ES 2015 class"
 msgstr "Simple ES 2015 class"
 
-#: ../../source/howto/howto-es2015-classes.rst:58
+#: ../../source/howto/es2015-classes.rst:57
 msgid ""
 "You can also document classes that are defined in a class expression, "
 "which assigns the class to a variable or constant:"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:61
+#: ../../source/howto/es2015-classes.rst:60
 #, fuzzy
 msgid "ES 2015 class expression"
 msgstr "ES 2015 class expression"
 
-#: ../../source/howto/howto-es2015-classes.rst:70
+#: ../../source/howto/es2015-classes.rst:69
 msgid "Extending classes"
 msgstr "扩展类"
 
-#: ../../source/howto/howto-es2015-classes.rst:72
+#: ../../source/howto/es2015-classes.rst:71
 msgid ""
 "When you use the ``extends`` keyword to extend an existing class, you "
 "also need to tell JSDoc which class you’re extending. You do this with "
-"the `@augments  (or ``@extends``) tag <tags-augments.html>`__."
+"the :rst:dir:`@augments` (or :rst:dir:`@extends`)。"
 msgstr ""
 
-#: ../../source/howto/howto-es2015-classes.rst:76
+#: ../../source/howto/es2015-classes.rst:75
 msgid "For example, to extend the ``Point`` class shown above:"
 msgstr "例如，扩展上面显示的 ``Point`` 类:"
 
-#: ../../source/howto/howto-es2015-classes.rst:78
+#: ../../source/howto/es2015-classes.rst:77
 #, fuzzy
 msgid "Extending an ES 2015 class"
 msgstr "扩展ES 2015类"
 
-#: ../../source/howto/howto-es2015-modules.rst:2
+#: ../../source/howto/es2015-modules.rst:4
 msgid "ECMAScript 2015 Modules"
 msgstr "ECMAScript 2015模块"
 
-#: ../../source/howto/howto-es2015-modules.rst:4
+#: ../../source/howto/es2015-modules.rst:6
 msgid ""
 "JSDoc 3 makes it possible to document modules that follow the `ECMAScript"
 " 2015 specification <http://www.ecma-international.org/ecma-262/6.0/#sec-"
 "modules>`__. ES 2015 modules are supported in JSDoc 3.4.0 and later."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-modules.rst:12
+#: ../../source/howto/es2015-modules.rst:14
 msgid ""
-"When you document an ES 2015 module, you’ll use a `@module tag <tags-"
-"module.html>`__ to document the identifier for the module. For example, "
-"if users load the module by calling ``import * as myShirt from "
-"'my/shirt'``, you’ll write a JSDoc comment that contains the tag "
-"``@module my/shirt``."
+"When you document an ES 2015 module, you’ll use a :rst:dir:`@module` to "
+"document the identifier for the module. For example, if users load the "
+"module by calling ``import * as myShirt from 'my/shirt'``, you’ll write a"
+" JSDoc comment that contains the tag ``@module my/shirt``."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-modules.rst:35
+#: ../../source/howto/es2015-modules.rst:32
 msgid ""
 "Similarly, the namepath for each member of the module will start with "
 "``module:``, followed by the module name. For example, if your "
@@ -465,11 +472,11 @@ msgid ""
 "``module:my/pants.Jeans#hem``."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-modules.rst:42
+#: ../../source/howto/es2015-modules.rst:39
 msgid "Exported values"
 msgstr "导出的值"
 
-#: ../../source/howto/howto-es2015-modules.rst:44
+#: ../../source/howto/es2015-modules.rst:41
 msgid ""
 "The following example shows how to document different kinds of exported "
 "values in an ES 2015 module. In most cases, you can simply add a JSDoc "
@@ -478,7 +485,7 @@ msgid ""
 "exported value within its ``export`` block."
 msgstr ""
 
-#: ../../source/howto/howto-es2015-modules.rst:50
+#: ../../source/howto/es2015-modules.rst:47
 #, fuzzy
 msgid "Documenting values exported by a module"
 msgstr "Documenting values exported by a module"
@@ -676,5 +683,265 @@ msgstr "JSDoc示例"
 #~ " ``@exports`` tag tells JSDoc that a"
 #~ " symbol represents the value exported "
 #~ "by a module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you use the ``@exports`` or "
+#~ "``@module`` tag without a value, JSDoc"
+#~ " will try to guess the correct "
+#~ "module identifier based on the filepath."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In most cases, your CommonJS or "
+#~ "Node.js module should include a "
+#~ "standalone JSDoc comment that contains a"
+#~ " `@module tag <tags-module.html>`__. The"
+#~ " ``@module`` tag’s value should be "
+#~ "the module identifier that’s passed to"
+#~ " the ``require()`` function. For example,"
+#~ " if users load the module by "
+#~ "calling ``require('my/shirt')``, your JSDoc "
+#~ "comment would contain the tag ``@module"
+#~ " my/shirt``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you use the ``@module`` tag "
+#~ "without a value, JSDoc will try to"
+#~ " guess the correct module identifier "
+#~ "based on the filepath."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For value types (strings, numbers, and"
+#~ " booleans) assigned to ``module.exports``, "
+#~ "you must document the exported value’s"
+#~ " type by using the `@type tag "
+#~ "<tags-type.html>`__ in the same JSDoc "
+#~ "comment as the ``@module`` tag:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your module exports symbols that "
+#~ "are not directly assigned to "
+#~ "``module.exports``, you can use the "
+#~ "`@exports tag <tags-exports.html>`__ in "
+#~ "place of the ``@module`` tag. The "
+#~ "``@exports`` tag tells JSDoc that a "
+#~ "symbol represents the value exported by"
+#~ " a module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SDoc 3 makes it easy to document"
+#~ " classes that follow the `ECMAScript "
+#~ "2015 specification <http://www.ecma-"
+#~ "international.org/ecma-262/6.0/#sec-class-definitions>`__."
+#~ " You don’t need to use tags "
+#~ "such as ``@class`` and ``@constructor`` "
+#~ "with ES 2015 classes—JSDoc automatically "
+#~ "identifies classes and their constructors "
+#~ "simply by parsing your code. ES "
+#~ "2015 classes are supported in JSDoc "
+#~ "3.4.0 and later."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you use the ``extends`` keyword "
+#~ "to extend an existing class, you "
+#~ "also need to tell JSDoc which "
+#~ "class you’re extending. You do this "
+#~ "with the `@augments  (or ``@extends``) "
+#~ "tag <tags-augments.html>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you’re documenting CommonJS or "
+#~ "Node.js modules, see `CommonJS Modules "
+#~ "<howto-commonjs-modules.html>`__ for "
+#~ "instructions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you document an AMD module, "
+#~ "you’ll use an `@exports tag <tags-"
+#~ "exports.html>`__ or `@module tag <tags-"
+#~ "module.html>`__ to document the identifier "
+#~ "that’s passed to the ``require()`` "
+#~ "function. For example, if users load "
+#~ "the module by calling ``require('my/shirt',"
+#~ " /* callback */)``, you’ll write a"
+#~ " JSDoc comment that contains the tag"
+#~ " ``@exports my/shirt`` or ``@module "
+#~ "my/shirt``. The examples below can help"
+#~ " you decide which of these tags "
+#~ "to use."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you use a JSDoc `namepath "
+#~ "<about-namepaths.html>`__ to refer to a "
+#~ "module from another JSDoc comment, you"
+#~ " must add the prefix ``module:``. For"
+#~ " example, if you want the "
+#~ "documentation for the module ``my/pants`` "
+#~ "to link to the module ``my/shirt``, "
+#~ "you could use the `@see tag "
+#~ "<tags-see.html>`__ to document ``my/pants`` "
+#~ "as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you define your module as a "
+#~ "function that exports another function, "
+#~ "such as a constructor, you can use"
+#~ " a standalone comment with a `@module"
+#~ "  tag <tags-module.html>`__ to document "
+#~ "the module. You can then use an"
+#~ " `@alias  tag <tags-alias.html>`__ to "
+#~ "tell JSDoc that the function uses "
+#~ "the same longname as the module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you declare your module object "
+#~ "in a function’s ``return`` statement, "
+#~ "you can use a standalone comment "
+#~ "with a `@module tag <tags-"
+#~ "module.html>`__ to document the module. "
+#~ "You can then add an `@alias tag"
+#~ " <tags-alias.html>`__ to tell JSDoc "
+#~ "that the module object has the "
+#~ "same longname as the module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the module object is passed "
+#~ "into the function that defines your "
+#~ "module, you can document the module "
+#~ "by adding an `@exports tag <tags-"
+#~ "exports.html>`__ to the function parameter."
+#~ " This pattern is supported in JSDoc"
+#~ " 3.3.0 and later."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you define more than one AMD"
+#~ " module in a single JavaScript file,"
+#~ " use the `@exports tag <tags-"
+#~ "exports.html>`__ to document each module "
+#~ "object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To help you document `CommonJS modules"
+#~ " <http://wiki.commonjs.org/wiki/Modules/1.1>`__, JSDoc "
+#~ "3 understands many of the conventions"
+#~ " used in the CommonJS specification "
+#~ "(for example, adding properties to the"
+#~ " ``exports`` object). In addition, JSDoc"
+#~ " recognizes the conventions of `Node.js "
+#~ "modules <http://nodejs.org/api/modules.html>`__, which "
+#~ "extend the CommonJS standard (for "
+#~ "example, assigning a value to "
+#~ "``module.exports``). Depending on the coding"
+#~ " conventions you follow, you may need"
+#~ " to provide some additional tags to"
+#~ " help JSDoc understand your code."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This page explains how to document "
+#~ "CommonJS and Node.js modules that use"
+#~ " several different coding conventions. If"
+#~ " you’re documenting Asynchronous Module "
+#~ "Definition (AMD) modules (also known as"
+#~ " “RequireJS modules”), see `AMD Modules "
+#~ "<howto-amd-modules.html>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In most cases, your CommonJS or "
+#~ "Node.js module should include a "
+#~ "standalone JSDoc comment that contains a"
+#~ " `@module tag <tags-module.html>`__. The"
+#~ " :rst:dir:`@module` tag’s value should be"
+#~ " the module identifier that’s passed "
+#~ "to the ``require()`` function. For "
+#~ "example, if users load the module "
+#~ "by calling ``require('my/shirt')``, your JSDoc"
+#~ " comment would contain the tag "
+#~ "``@module my/shirt``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this case, JSDoc will *not* "
+#~ "automatically document ``wash`` as an "
+#~ "exported method, because the JSDoc "
+#~ "comment appears immediately before the "
+#~ "local variable ``wash`` rather than "
+#~ "``exports.wash``. One solution is to add"
+#~ " an `@alias tag <tags-alias.html>`__ "
+#~ "that defines the correct longname for"
+#~ " the method. In this case, the "
+#~ "method is a static member of the"
+#~ " module ``my/shirt``, so the correct "
+#~ "longname is ``module:my/shirt.wash``:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For value types (strings, numbers, and"
+#~ " booleans) assigned to ``module.exports``, "
+#~ "you must document the exported value’s"
+#~ " type by using the `@type tag "
+#~ "<tags-type.html>`__ in the same JSDoc "
+#~ "comment as the :rst:dir:`@module` tag:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your module exports symbols that "
+#~ "are not directly assigned to "
+#~ "``module.exports``, you can use the "
+#~ "`@exports tag <tags-exports.html>`__ in "
+#~ "place of the :rst:dir:`@module` tag. The"
+#~ " :rst:dir:`@exports` tag tells JSDoc that"
+#~ " a symbol represents the value "
+#~ "exported by a module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SDoc 3 makes it easy to document"
+#~ " classes that follow the `ECMAScript "
+#~ "2015 specification <http://www.ecma-"
+#~ "international.org/ecma-262/6.0/#sec-class-definitions>`__."
+#~ " You don’t need to use tags "
+#~ "such as :rst:dir:`@class` and "
+#~ ":rst:dir:`@constructor` with ES 2015 "
+#~ "classes—JSDoc automatically identifies classes "
+#~ "and their constructors simply by parsing"
+#~ " your code. ES 2015 classes are "
+#~ "supported in JSDoc 3.4.0 and later."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you use the ``extends`` keyword "
+#~ "to extend an existing class, you "
+#~ "also need to tell JSDoc which "
+#~ "class you’re extending. You do this "
+#~ "with the `@augments  (or :rst:dir:`@extends`)"
+#~ " tag <tags-augments.html>`__."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you document an ES 2015 "
+#~ "module, you’ll use a `@module tag "
+#~ "<tags-module.html>`__ to document the "
+#~ "identifier for the module. For example,"
+#~ " if users load the module by "
+#~ "calling ``import * as myShirt from "
+#~ "'my/shirt'``, you’ll write a JSDoc "
+#~ "comment that contains the tag ``@module"
+#~ " my/shirt``."
 #~ msgstr ""
 

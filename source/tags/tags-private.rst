@@ -3,25 +3,18 @@
 
 .. rst:directive:: @private
 
-   :Syntax:
-
-   With the JSDoc tag dictionary (enabled by default):
-
-   :rst:dir:`@private`
-
-      With the `Closure
-      Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
-      tag dictionary:
-
-      ``@private [{typeExpression}]``
-
+   :Syntax: ``@private [{typeExpression}]``
    :Overview:
+
+      With the JSDoc tag dictionary (enabled by default):
+
+      :rst:dir:`@private` With the `Closure Compiler <https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags>`_
+      tag dictionary:
 
       The :rst:dir:`@private` tag marks a symbol as private, or not meant for general
       use. Private members are not shown in the generated output unless JSDoc
       is run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and
-      later, you can also use the ``-a/--access`` `command-line
-      option <about-commandline.html>`_ to change this behavior.
+      later, you can also use the ``-a/--access`` `command-line`_ to change this behavior.
 
       The :rst:dir:`@private` tag is not inherited by child members. For example, if
       the :rst:dir:`@private` tag is added to a namespace, members of the namespace

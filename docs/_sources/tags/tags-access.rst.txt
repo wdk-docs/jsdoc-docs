@@ -3,25 +3,21 @@
 
 .. rst:directive:: @access
 
-   :Syntax:
-
-      ``@access <package|private|protected|public>``
-
+   :Syntax: ``@access <package|private|protected|public>``
    :Overview:
 
       The :rst:dir:`@access` tag specifies the access level of a member. You can use
       the :rst:dir:`@access` tag as a synonym for other tags:
 
-      -  ``@access package`` is the same as :rst:dir:`@package`. This option is
-         available in JSDoc 3.5.0 and later.
+      -  ``@access package`` is the same as :rst:dir:`@package`.
+         This option is available in JSDoc 3.5.0 and later.
       -  ``@access private`` is the same as :rst:dir:`@private`.
       -  ``@access protected`` is the same as :rst:dir:`@protected`.
       -  ``@access public`` is the same as :rst:dir:`@public`.
 
       Private members are not shown in the generated output unless JSDoc is
       run with the ``-p/--private`` command-line option. In JSDoc 3.3.0 and
-      later, you can also use the ``-a/--access`` `command-line
-      option <about-commandline.html>`__ to change this behavior.
+      later, you can also use the ``-a/--access`` :ref:`command-line` to change this behavior.
 
       Note that a doclet’s *access level* is different from its *scope*. For
       example, if ``Parent`` has an inner variable named ``child`` that is

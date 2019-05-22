@@ -1,8 +1,9 @@
-@throws
-=============================
+@throws (synonyms: @exception)
+===================================
 
 .. rst:directive:: @throws
 
+   :Synonyms: :rst:dir:`@exception`
    :Syntax:
 
       -  ``@throws free-form description``
@@ -40,3 +41,8 @@
           * @throws {DivideByZero} Argument x must be non-zero.
           */
          function baz(x) {}
+
+
+.. rst:directive:: @exception
+
+   :Synonyms: :rst:dir:`@throws`

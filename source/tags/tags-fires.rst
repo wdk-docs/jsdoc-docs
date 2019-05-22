@@ -1,12 +1,10 @@
-@fires
+@fires (synonyms: @emits)
 =============================
 
 .. rst:directive:: @fires
 
-   :Syntax:
-
-         ``@fires <className>#[event:]<eventName>``
-
+   :Synonyms: :rst:dir:`@emits`
+   :Syntax: ``@fires <className>#[event:]<eventName>``
    :Overview:
 
       The @fires tag indicates that a method can fire a specified type of
@@ -26,3 +24,7 @@
          Milkshake.prototype.drink = function() {
              // ...
          };
+
+.. rst:directive:: @emits
+
+   :Synonyms: :rst:dir:`@fires`

@@ -3,10 +3,7 @@
 
 .. rst:directive:: @variation
 
-   :Syntax:
-
-      ``@variation <variationNumber>``
-
+   :Syntax: ``@variation <variationNumber>``
    :Overview:
 
       Sometimes your code may include multiple symbols with the same longname.
@@ -20,9 +17,8 @@
       comment for the Widget class, “{@link Widget(2)}” will refer to the
       class, and “{@link Widget}” will refer to the namespace. Alternatively,
       you can include the variation when you specify the symbol’s with tags
-      such as [@alias]\ `alias-tag <tags-alias.html>`__ or
-      [@name]\ `name-tag <tags-name.html>`__ (for example, “@alias
-      Widget(2)”).
+      such as [@alias]\ :rst:dir:`alias` or [@name]\ :rst:dir:`name`
+      (for example, “@alias Widget(2)”).
 
       You can provide any value with the @variation tag, as long as the
       combination of the value and the longname results in a globally unique

@@ -3,21 +3,18 @@
 
 .. rst:directive:: @mixin
 
-   :Syntax:
-
-      ``@mixin [<MixinName>]``
-
+   :Syntax: ``@mixin [<MixinName>]``
    :Overview:
 
       A mixin provides functionality that is intended to be added to other
       objects. If desired, you can use the @mixin tag to indicate that an
-      object is a mixin. You can then add the @mixes tag to objects that use
+      object is a mixin. You can then add the :rst:dir:`@mixes` tag to objects that use
       the mixin.
 
    :Examples:
 
       .. code-block:: js
-         :caption: Using @mixin
+         :caption: Using :rst:dir:`@mixin`
 
          /**
           * This provides methods used for event handling. It's not meant to

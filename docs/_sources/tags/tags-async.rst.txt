@@ -3,13 +3,10 @@
 
 .. rst:directive:: @async
 
-   :Syntax:
-
-      ``@async``
-
+   :Syntax: ``@async``
    :Overview:
 
-      The ``@async`` tag indicates that a function is
+      The :rst:dir:`@async` tag indicates that a function is
       `asynchronous <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>`_,
       meaning that it was declared using the syntax
       ``async function foo() {}``. Do not use this tag for other types of
@@ -24,11 +21,10 @@
 
    :Example:
 
-      The following example shows a virtual comment that uses the ``@async``
-      tag:
+      The following example shows a virtual comment that uses the :rst:dir:`@async` tag:
 
       .. code-block:: js
-         :caption: Virtual comment with @async tag
+         :caption: Virtual comment with :rst:dir:`@async` tag
 
          /**
           * Download data from the specified URL.

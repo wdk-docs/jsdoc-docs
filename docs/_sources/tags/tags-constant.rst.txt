@@ -1,12 +1,10 @@
-@constant
+@constant (synonyms: @const)
 =============================
 
 .. rst:directive:: @constant
 
-   :Syntax:
-
-      ``@constant [<type> <name>]``
-
+   :Synonyms: :rst:dir:`@const`
+   :Syntax: ``@constant [<type> <name>]``
    :Overview:
 
       The @constant tag is used to mark the documentation as belonging to a
@@ -36,3 +34,7 @@
       optional. Also the optional @default tag is used here too, this will
       automatically add whatever the assigned value is (for example ‘FF0000’)
       to the documentation.
+
+.. rst:directive:: @const
+
+   :Synonyms: :rst:dir:`@constant`

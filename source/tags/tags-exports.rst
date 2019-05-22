@@ -3,14 +3,11 @@
 
 .. rst:directive:: @exports
 
-   :Syntax:
-
-      ``@exports <moduleName>``
+   :Syntax: ``@exports <moduleName>``
+   :Overview:
 
       In JSDoc 3.3.0 and later, ``<moduleName>`` may include the ``module:``
       prefix. In previous versions, you must omit this prefix.
-
-   :Overview:
 
       Use the @exports tag when documenting JavaScript modules that export
       anything other than the “exports” object or the “module.exports”

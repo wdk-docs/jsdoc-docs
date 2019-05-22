@@ -1,3 +1,5 @@
+.. _including-package:
+
 Including a Package File
 =================================
 
@@ -21,8 +23,7 @@ The ``-P/--package`` command-line option takes precedence over your
 source paths. If you use the ``-P/--package`` command-line option, JSDoc
 will ignore any ``package.json`` files in your source paths.
 
-The ``package.json`` file must use `npm’s package
-format <https://docs.npmjs.com/files/package.json>`__.
+The ``package.json`` file must use `npm’s package format`_.
 
 Examples
 --------
@@ -36,3 +37,5 @@ Examples
    :caption: Using the -P/–package option
 
    jsdoc --package path/to/package/package-docs.json path/to/js
+
+.. _npm’s package format: https://docs.npmjs.com/files/package.json

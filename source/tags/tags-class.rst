@@ -1,14 +1,13 @@
-@class
-=============================
+@class (synonyms: @constructor)
+==================================
 
 .. rst:directive:: @class
 
-   :Syntax:
-
-      ``@class [<type> <name>]``
-
-   :Overview: The @class tag marks a function as being a constructor, meant to be
-      called with the new keyword to return an instance.
+   :Synonyms: :rst:dir:`@constructor`
+   :Syntax: ``@class [<type> <name>]``
+   :Overview:
+      The @class tag marks a function as being a constructor,
+      meant to be called with the new keyword to return an instance.
 
    :Examples:
 
@@ -23,3 +22,7 @@
         }
 
         var p = new Person();
+
+.. rst:directive:: @constructor
+
+   :Synonyms: :rst:dir:`@class`

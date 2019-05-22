@@ -3,6 +3,7 @@
 
 .. rst:directive:: @example
 
+   :Syntax: ``@example``
    :Overview:
 
       Provide an example of how to use a documented item. The text that
@@ -29,8 +30,7 @@
              return b / a;
          };
 
-      Examples can also be captioned using ``<caption></caption>`` after the
-      @example tag.
+      Examples can also be captioned using ``<caption></caption>`` after the @example tag.
 
       .. code-block:: js
          :caption: Documenting examples with a caption

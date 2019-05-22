@@ -3,10 +3,7 @@
 
 .. rst:directive:: @since
 
-   :Syntax:
-
-      ``@since <versionDescription>``
-
+   :Syntax: ``@since <versionDescription>``
    :Overview:
 
       The @since tag indicates that a class, method, or other symbol was added

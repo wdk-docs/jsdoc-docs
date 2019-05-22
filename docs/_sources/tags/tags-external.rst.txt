@@ -1,12 +1,10 @@
-@external
+@external (synonyms: @host)
 =============================
 
 .. rst:directive:: @external
 
-   :Syntax:
-
-         ``@external <NameOfExternal>``
-
+   :Synonyms: :rst:dir:`@host`
+   :Syntax: ``@external <NameOfExternal>``
    :Overview:
 
       The :rst:dir:`@external` tag identifies a class, namespace, or module that is
@@ -20,15 +18,15 @@
       (for example, ``{@link external:Foo}`` or ``@augments external:Foo``).
       However, you can omit this prefix from the :rst:dir:`@external` tag.
 
-      **Note**: You should only add the :rst:dir:`@external` tag to the highest-level
-      symbol that is defined outside of your project. See “`Documenting a
-      nested external symbol <#nested-external-symbol>`__” for an example.
+      .. attention::
+         You should only add the :rst:dir:`@external` tag to the highest-level
+         symbol that is defined outside of your project. See “`Documenting a
+         nested external symbol <#nested-external-symbol>`__” for an example.
 
    :Examples:
 
       The following example shows how to document the built-in ``String``
-      object as an external, along with the new instance method
-      ``external:String#rot13``:
+      object as an external, along with the new instance method ``external:String#rot13``:
 
       .. code-block:: js
          :caption: Documenting methods added to built-in classes
@@ -47,8 +45,7 @@
           * console.log( greeting.rot13() ); // uryyb jbeyq
           */
 
-      The following example documents a new ``starfairy`` function added to
-      the external namespace ``"jQuery.fn"``:
+      The following example documents a new ``starfairy`` function added to the external namespace ``"jQuery.fn"``:
 
       .. code-block:: js
          :caption: Documenting external namespaces
@@ -86,8 +83,7 @@
       that is defined outside of your project. In the following example, the
       documentation refers to the external class ``security.TLS``. As a
       result, the :rst:dir:`@external` tag is used to document the external namespace
-      ``external:security``, but *not* the external class
-      ``external:security.TLS``.
+      ``external:security``, but *not* the external class ``external:security.TLS``.
 
       .. code-block:: js
          :caption: Documenting a nested external symbol
@@ -103,3 +99,7 @@
           * @class TLS
           * @memberof external:security
           */
+
+.. rst:directive:: @host
+
+   :Synonyms: :rst:dir:`@external`

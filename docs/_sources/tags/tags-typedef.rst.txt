@@ -3,19 +3,15 @@
 
 .. rst:directive:: @typedef
 
-   :Syntax:
-
-      ``@typedef [<type>] <namepath>``
-
+   :Syntax: ``@typedef [<type>] <namepath>``
    :Overview:
 
       The @typedef tag is useful for documenting custom types, particularly if
       you wish to refer to them repeatedly. These types can then be used
       within other tags expecting a type, such as
-      [@type]\ `type-tag <tags-type.html>`__ or
-      [@param]\ `param-tag <tags-param.html>`__.
+      [@type]\ :rst:dir:`type` or [@param]\ :rst:dir:`param`.
 
-      Use the [@callback]\ `callback-tag <tags-callback.html>`__ tag to
+      Use the [@callback]\ :rst:dir:`callback` tag to
       document the type of callback functions.
 
    :Examples:
