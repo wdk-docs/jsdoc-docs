@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 23:46+0800\n"
+"POT-Creation-Date: 2019-05-24 17:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,17 +132,19 @@ msgid ""
 "Additionally, one may provide the path to a `Markdown file`_ (ending in "
 "“.md”) or a file named “README”, and this will be added to the "
 "documentation on the front page. See :ref:`including-readme`."
-msgstr "另外, 可以提供 `Markdown file`_ (以 `.md` 结尾)或名为 `README` 的文件的路径, 这将被添加到首页上的文档. 请参阅 `including-readme`_. "
+msgstr ""
+"另外, 可以提供 `Markdown file`_ (以 `.md` 结尾)或名为 `README` 的文件的路径, 这将被添加到首页上的文档. "
+"请参阅 `including-readme`_. "
 
 #: ../../source/about/commandline.rst:18
 #, fuzzy
 msgid ""
 "JSDoc supports a number of command-line options, many of which have both "
-"long and short forms. Alternatively, the command-line options may be "
-":rst:dir:`configuring-jsdoc` given to JSDoc. The command-line options "
-"are:"
+"long and short forms. Alternatively, the command-line options may be :ref"
+":`configuring-jsdoc` given to JSDoc. The command-line options are:"
 msgstr ""
-"JSDoc支持许多命令行选项, 其中许多选项都有长和短格式. 或者, 可以在给予 :ref:`configurations-jsdoc` 中指定命令行选项. 命令行选项是: "
+"JSDoc支持许多命令行选项, 其中许多选项都有长和短格式. 或者, 可以在给予 :ref:`configurations-jsdoc` "
+"中指定命令行选项. 命令行选项是: "
 
 #: ../../source/about/commandline.rst:23
 msgid "Option"
@@ -1098,7 +1100,6 @@ msgstr ""
 "``/***`` 或超过3星开头的注释将被忽略. 这是一个允许您禁止解析注释块的功能. "
 
 #: ../../source/about/getting-started.rst:25
-#, fuzzy
 msgid "The simplest documentation is just a description"
 msgstr "最简单的文档只是一个描述"
 
@@ -1109,7 +1110,6 @@ msgid ""
 msgstr "添加描述很简单 - 只需在文档注释中键入所需的描述即可. "
 
 #: ../../source/about/getting-started.rst:35
-#, fuzzy
 msgid ""
 "Special “JSDoc tags” can be used to give more information. For example, "
 "if the function is a constructor for a class, you can indicate this by "
@@ -1119,19 +1119,16 @@ msgstr ""
 "标记来指示它. "
 
 #: ../../source/about/getting-started.rst:39
-#, fuzzy
 msgid "Use a JSDoc tag to describe your code"
 msgstr "使用JSDoc标记来描述您的代码"
 
 #: ../../source/about/getting-started.rst:49
-#, fuzzy
 msgid ""
 "More tags can be used to add more information. See the `home page <index"
 "#block-tags>` for a complete list of tags that are recognized by JSDoc 3."
 msgstr "更多标签可用于添加更多信息. 有关JSDoc 3识别的标记的完整列表, 请参阅 `主页 <index.html＃block-tags>`__. "
 
 #: ../../source/about/getting-started.rst:52
-#, fuzzy
 msgid "Adding more information with tags"
 msgstr "使用标签添加更多信息"
 
@@ -1146,7 +1143,6 @@ msgid ""
 msgstr "一旦您的代码被注释, 您就可以使用JSDoc 3工具从源文件生成HTML网站. "
 
 #: ../../source/about/getting-started.rst:70
-#, fuzzy
 msgid ""
 "By default, JSDoc uses the built-in “default” template to turn the "
 "documentation into HTML. You can edit this template to suit your own "
@@ -1156,7 +1152,6 @@ msgstr ""
 "或者根据您的喜好创建一个全新的模板. "
 
 #: ../../source/about/getting-started.rst:74
-#, fuzzy
 msgid "Running the documentation generator on the command line"
 msgstr "在命令行上运行文档生成器"
 
@@ -1216,19 +1211,14 @@ msgstr ""
 "JSDoc将忽略源路径中的任何 ``package.json`` 文件. "
 
 #: ../../source/about/including-package.rst:26
-#, fuzzy
 msgid "The ``package.json`` file must use `npm’s package format`_."
-msgstr ""
-"``package.json`` 文件必须使用 `npm的包格式 "
-"<https://docs.npmjs.com/files/package.json>`__. "
+msgstr "``package.json`` 文件必须使用 `npm’s package format`_."
 
 #: ../../source/about/including-package.rst:31
-#, fuzzy
 msgid "Including a package file in your source paths"
 msgstr "在源路径中包含包文件"
 
 #: ../../source/about/including-package.rst:36
-#, fuzzy
 msgid "Using the -P/–package option"
 msgstr "使用 ``-P/-package`` 选项"
 
@@ -1280,14 +1270,13 @@ msgstr ""
 "文件中以HTML格式呈现. "
 
 #: ../../source/about/including-readme.rst:28
-#, fuzzy
 msgid "Including a README file in your source paths"
-msgstr "在源路径中包含包文件"
+msgstr "在源路径中包含包 README 文件"
 
 #: ../../source/about/including-readme.rst:35
 #, fuzzy
 msgid "Using the -R/–readme option"
-msgstr "使用-P/-package选项"
+msgstr "使用  -R/–readme 选项"
 
 #: ../../source/about/index.rst:4
 msgid "Getting started"
@@ -1298,7 +1287,6 @@ msgid "License"
 msgstr ""
 
 #: ../../source/about/license-jsdoc3.rst:6
-#, fuzzy
 msgid ""
 "JSDoc 3 is free software, licensed under the `Apache License, Version "
 "2.0`_. Commercial and non-commercial use are permitted in compliance with"
@@ -1339,7 +1327,7 @@ msgstr ""
 #: ../../source/about/namepaths.rst:15
 #, fuzzy
 msgid "Basic Syntax Examples of Namepaths in JSDoc 3"
-msgstr "JSDoc 3中Namepath的基本语法示例"
+msgstr "JSDoc 3 中 Namepaths 的基本语法示例"
 
 #: ../../source/about/namepaths.rst:24
 #, fuzzy
@@ -1353,7 +1341,6 @@ msgstr ""
 
 #: ../../source/about/namepaths.rst:28 ../../source/about/namepaths.rst:53
 #: ../../source/about/namepaths.rst:70
-#, fuzzy
 msgid "Use a documentation tag to describe your code."
 msgstr "使用文档标记来描述您的代码. "
 
@@ -1364,7 +1351,6 @@ msgid ""
 msgstr "您将使用三种不同的名称路径语法来引用三种不同的方法: "
 
 #: ../../source/about/namepaths.rst:60
-#, fuzzy
 msgid ""
 "You might wonder why there is a syntax to refer to an inner method when "
 "that method isn’t directly accessible from outside the function it is "
@@ -1373,7 +1359,7 @@ msgid ""
 "method inside that container, so it is possible that some object "
 "elsewhere in your code might borrow an inner method."
 msgstr ""
-"您可能想知道为什么有一种语法可以引用内部方法, 因为该方法不能从定义的函数外部直接访问. 虽然这是真的, 因此很少使用 `~ ` 语法, 它 "
+"您可能想知道为什么有一种语法可以引用内部方法, 因为该方法不能从定义的函数外部直接访问. 虽然这是真的, 因此很少使用 “~” 语法, 它 "
 "*是* 可以从该容器内的另一个方法返回对内部方法的引用, 因此代码中其他位置的某个对象可能会借用内部方法. "
 
 #: ../../source/about/namepaths.rst:67
@@ -1384,11 +1370,10 @@ msgid ""
 msgstr "请注意, 如果构造函数的实例成员也是构造函数, 则可以将名称路径链接在一起以形成更长的名称路径: "
 
 #: ../../source/about/namepaths.rst:87
-#, fuzzy
 msgid ""
 "In this case, to refer to the method named “consider,” you would use the "
 "following namepath: ``Person#Idea#consider``"
-msgstr "在这种情况下, 要引用名为 `考虑 `的方法, 您将使用以下名称路径: ``Person＃Idea #care``"
+msgstr "在这种情况下, 要引用名为 “consider,” 的方法, 您将使用以下名称路径: ``Person#Idea#consider``"
 
 #: ../../source/about/namepaths.rst:90
 msgid ""
@@ -1397,39 +1382,29 @@ msgid ""
 msgstr "这种链接可以与连接符号的任何组合一起使用:  ``# . ~``"
 
 #: ../../source/about/namepaths.rst:92
-#, fuzzy
 msgid "Special cases: modules, externals and events."
 msgstr "特殊情况: 模块, 外部和事件. "
 
 #: ../../source/about/namepaths.rst:105
-#, fuzzy
 msgid ""
 "There are some special cases with namepaths: [:rst:dir:`@module`]\\ "
 "module names are prefixed by “module:”, [:rst:dir:`@external`]\\ external"
 " names are prefixed by “external:”, and [:rst:dir:`@event`]\\ event names"
 " are prefixed by “event:”."
-msgstr ""
-"名称路径有一些特殊情况: [@module] \\`module-tag <tags-module.html>`__名称前缀为 `module:"
-"  `, [@ external] \\`external-tag <tags-external .html>`__名称以 `external:"
-"  `为前缀, [@event] \\`event-tag <tags-event.html>`__名称以 `event:  `为前缀. "
+msgstr "名称路径有一些特殊情况: [:rst:dir:`@module`]\\ 模块名称以 “module:” 为前缀, [:rst:dir:`@external`]\\ 外部名称以为前缀 “external:” 和 [:rst:dir:`@event`]\\ 事件名称以 “event:” 为前缀. "
 
 #: ../../source/about/namepaths.rst:110
-#, fuzzy
 msgid "Namepaths of objects with special characters in the name."
-msgstr "名称中包含特殊字符的对象的名称路径. "
+msgstr "中包含特殊字符的对象的 Namepaths .  "
 
 #: ../../source/about/namepaths.rst:139
-#, fuzzy
 msgid ""
 "Above is an example of a namespace with “unusual” characters in its "
 "member names (the hash character, dashes, even quotes). To refer to these"
 " you just need quote the names: chat.“#channel”, chat.“#channel”.“op"
 ":announce-motd”, and so on. Internal quotes in names should be escaped "
 "with backslashes: chat.“#channel”.“say-\"hello\"”."
-msgstr ""
-"上面是一个名称空间的示例, 其成员名称中包含 `异常 `字符(哈希字符, 短划线, 偶数引号). 要参考这些, 你只需要引用名称: chat.  "
-"`＃channel `, chat.  `＃channel `.  `op: announce-motd `, 依此类推. "
-"名称中的内部引号应使用反斜杠转义: chat.  `＃channel `.  `say  -  \\ `hello \\ ` `. "
+msgstr "上面是一个名称空间的示例, 其成员名称中包含 “unusual” 字符(哈希字符, 短划线, 偶数引号).  要参考这些, 你只需要引用名称: chat. “#channel”, chat.“＃channel”. “op:announce-motd”, 依此类推. 名称中的内部引号应使用反斜杠转义: chat.“#channel”.“say-\"hello\"”."
 
 #: ../../source/about/plugins.rst:4
 msgid "About JSDoc plugins"
@@ -1454,7 +1429,7 @@ msgid ""
 "path, JSDoc searches for the plugin in the current working directory; the"
 " directory where the configuration file is located; and the JSDoc "
 "directory, in that order."
-msgstr ""
+msgstr "将该模块包含在 ``plugins`` 数组中 :ref:`configured-jsdoc`. 您可以指定绝对路径或相对路径。如果使用相对路径，JSDoc将在当前工作目录中搜索插件;配置文件所在的目录;和JSDoc目录，按此顺序。"
 
 #: ../../source/about/plugins.rst:18
 msgid ""
@@ -1462,14 +1437,11 @@ msgid ""
 "in the current working directory, you would add the string "
 "``plugins/shout`` to the ``plugins`` array in your JSDoc configuration "
 "file:"
-msgstr ""
-"例如, 如果您的插件是在当前工作目录的 ``plugins/shout.js`` 文件中定义的, 那么您应该将字符串 "
-"``plugins/shout`` 添加到JSDoc配置中的 ``plugins`` 数组中文件: "
+msgstr "例如, 如果您的插件是在当前工作目录的 ``plugins/shout.js`` 文件中定义的, 那么您应该将字符串 ``plugins/shout`` 添加到JSDoc配置中的 ``plugins`` 数组中文件:"
 
 #: ../../source/about/plugins.rst:24
-#, fuzzy
 msgid "Adding a plugin to JSDoc’s configuration file"
-msgstr "将插件添加到JSDoc的配置文件中"
+msgstr "将插件添加到 JSDoc 的配置文件中"
 
 #: ../../source/about/plugins.rst:31
 msgid ""
@@ -1486,7 +1458,7 @@ msgid ""
 "JSDoc 3’s plugin system offers extensive control over the parsing "
 "process. A plugin can affect the parse results by doing any of the "
 "following:"
-msgstr "JSDoc 3的插件系统提供了对解析过程的广泛控制. 插件可以通过执行以下任一操作来影响解析结果: "
+msgstr "JSDoc 3 的插件系统提供了对解析过程的广泛控制. 插件可以通过执行以下任一操作来影响解析结果: "
 
 #: ../../source/about/plugins.rst:41
 msgid "Defining event handlers"
@@ -1515,9 +1487,8 @@ msgstr ""
 "你的插件模块应该导出一个包含你的处理程序的 ``handlers`` 对象, 如下所示: "
 
 #: ../../source/about/plugins.rst:53
-#, fuzzy
 msgid "Event-handler plugin for ‘newDoclet’ events"
-msgstr "Event-handler plugin for ‘newDoclet’ events"
+msgstr "'newDoclet' 事件的事件处理程序插件"
 
 #: ../../source/about/plugins.rst:62
 msgid "JSDoc fires events in the same order as the underlying code."
@@ -1611,7 +1582,6 @@ msgstr ""
 
 #: ../../source/about/plugins.rst:112 ../../source/about/plugins.rst:216
 #: ../../source/about/plugins.rst:279 ../../source/about/plugins.rst:363
-#, fuzzy
 msgid "Example"
 msgstr "示例"
 
@@ -1832,13 +1802,12 @@ msgid "``sourcefiles``: An array of paths to source files that were parsed."
 msgstr "``sourcefiles``: 解析源文件的路径数组. "
 
 #: ../../source/about/plugins.rst:251
-#, fuzzy
 msgid ""
 "``doclets``: An array of doclet objects. See the `newDoclet event "
 "<#event-newdoclet>`_ for details about the properties that each doclet "
 "can contain. Available in JSDoc 3.2.1 and later."
 msgstr ""
-"``doclets``: 一组doclet对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 ``newDoclet`` `事件 "
+"``doclets``: 一组 doclet 对象. 有关每个doclet可以包含的属性的详细信息, 请参阅 `newDoclet 事件 "
 "<＃event-newdoclet>`_. 可在JSDoc 3.2.1及更高版本中使用. "
 
 #: ../../source/about/plugins.rst:254

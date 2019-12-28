@@ -19,5 +19,5 @@ msgstr ""
 
 #: ../../source/todo-list.rst:2
 msgid "Todo List"
-msgstr "Todo List"
+msgstr "待办清单"
 

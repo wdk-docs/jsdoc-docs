@@ -104,7 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../howto/index.html">JSDoc示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">待办清单</a></li>
 </ul>
 
             
@@ -179,7 +179,7 @@
 <p>JSDoc的目的是记录JavaScript应用程序或库的API. 假设您需要记录模块, 命名空间, 类, 方法, 方法参数等内容.</p>
 <p>通常应该在记录代码之前放置JSDoc注释. 每个注释必须以 <code class="docutils literal notranslate"><span class="pre">/**</span></code> 序列开头, 以便被JSDoc解析器识别. 以 <code class="docutils literal notranslate"><span class="pre">/*</span></code>, <code class="docutils literal notranslate"><span class="pre">/***</span></code> 或超过3星开头的注释将被忽略. 这是一个允许您禁止解析注释块的功能.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">The simplest documentation is just a description</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">最简单的文档只是一个描述</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/** This is a description of the foo function. */</span>
 <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
@@ -187,11 +187,9 @@
 </div>
 </div>
 <p>添加描述很简单 - 只需在文档注释中键入所需的描述即可.</p>
-<p>Special “JSDoc tags” can be used to give more information. For example,
-if the function is a constructor for a class, you can indicate this by
-adding a <a class="reference internal" href="../tags/tags-class.html#directive-&#64;constructor" title="&#64;constructor directive"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">&#64;constructor</span></code></a> tag.</p>
+<p>特殊的 “JSDoc tags” 可用于提供更多信息. 例如, 如果函数是类的构造函数, 则可以通过添加 <code class="docutils literal notranslate"><span class="pre">&#64;constructor</span></code> 标记来指示它.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Use a JSDoc tag to describe your code</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">使用JSDoc标记来描述您的代码</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Represents a book.</span>
 <span class="cm"> * @constructor</span>
@@ -201,10 +199,9 @@ adding a <a class="reference internal" href="../tags/tags-class.html#directive-&
 </pre></div>
 </div>
 </div>
-<p>More tags can be used to add more information.
-See the <cite>home page &lt;index#block-tags&gt;</cite> for a complete list of tags that are recognized by JSDoc 3.</p>
+<p>更多标签可用于添加更多信息. 有关JSDoc 3识别的标记的完整列表, 请参阅 <a class="reference external" href="index.html＃block-tags">主页</a>.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Adding more information with tags</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">使用标签添加更多信息</span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Represents a book.</span>
 <span class="cm"> * @constructor</span>
@@ -220,11 +217,9 @@ See the <cite>home page &lt;index#block-tags&gt;</cite> for a complete list of t
 <div class="section" id="generating-a-website">
 <h2>生成一个网站<a class="headerlink" href="#generating-a-website" title="永久链接至标题">¶</a></h2>
 <p>一旦您的代码被注释, 您就可以使用JSDoc 3工具从源文件生成HTML网站.</p>
-<p>By default, JSDoc uses the built-in “default” template to turn the
-documentation into HTML. You can edit this template to suit your own
-needs or create an entirely new template if that is what you prefer.</p>
+<p>默认情况下, JSDoc使用内置的 “default” 模板将文档转换为HTML. 您可以编辑此模板以满足您自己的需要, 或者根据您的喜好创建一个全新的模板.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Running the documentation generator on the command line</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">在命令行上运行文档生成器</span><a class="headerlink" href="#id4" title="永久链接至代码">¶</a></div>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc book.js
 </pre></div>
 </div>

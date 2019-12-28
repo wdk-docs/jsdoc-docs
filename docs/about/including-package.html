@@ -103,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tags/index.html">标签</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../howto/index.html">JSDoc示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo-list.html">待办清单</a></li>
 </ul>
 
             
@@ -179,17 +179,17 @@
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">-P/--package</span></code> 命令行选项运行JSDoc, 指定 <code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件的路径.  JSDoc 3.3.0及更高版本中提供了此选项.</p></li>
 </ol>
 <p><code class="docutils literal notranslate"><span class="pre">-P/</span> <span class="pre">-</span>&#160; <span class="pre">package</span></code> 命令行选项优先于源路径. 如果使用 <code class="docutils literal notranslate"><span class="pre">-P/-package</span></code> 命令行选项, JSDoc将忽略源路径中的任何 <code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file must use <a class="reference external" href="https://docs.npmjs.com/files/package.json">npm’s package format</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">package.json</span></code> 文件必须使用 <a class="reference external" href="https://docs.npmjs.com/files/package.json">npm’s package format</a>.</p>
 <div class="section" id="examples">
 <h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">Including a package file in your source paths</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">在源路径中包含包文件</span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc path/to/js path/to/package/package.json
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Using the -P/–package option</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">使用 <code class="docutils literal notranslate"><span class="pre">-P/-package</span></code> 选项</span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>jsdoc --package path/to/package/package-docs.json path/to/js
 </pre></div>
 </div>

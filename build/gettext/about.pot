@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jsdoc-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-21 23:46+0800\n"
+"POT-Creation-Date: 2019-05-24 17:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,7 +100,7 @@ msgid "Additionally, one may provide the path to a `Markdown file`_ (ending in â
 msgstr ""
 
 #: ../../source/about/commandline.rst:18
-msgid "JSDoc supports a number of command-line options, many of which have both long and short forms. Alternatively, the command-line options may be :rst:dir:`configuring-jsdoc` given to JSDoc. The command-line options are:"
+msgid "JSDoc supports a number of command-line options, many of which have both long and short forms. Alternatively, the command-line options may be :ref:`configuring-jsdoc` given to JSDoc. The command-line options are:"
 msgstr ""
 
 #: ../../source/about/commandline.rst:23
